@@ -16,10 +16,13 @@ Seis objetos de OBJ-11 conectados: moneda antigua, prismáticos, sombrero de cam
 - Suite completa en clon superficial: 492 pasan y 273 fallan, idéntico al commit anterior. Los fallos dependen de `git show` sobre commits históricos ausentes. Falta repetirla con historial completo contra la línea base de V5.3 (666 / 219 / 0).
 - Biblioteca en navegador: 68 fichas de objeto, 0 recursos con error.
 
-## Lote 2 · Emojis (en curso)
-Auditoría de emojis: el texto de las 10 pestañas y sus subpestañas, en una partida nueva, solo muestra ✦ (marca), ✥ ✓ ☆ (marcas tipográficas) y 👑 (Corona). El resto de los ~540 emojis del código son datos sin uso visible (`emoji:` de los objetos), viñetas de paisaje, mensajes del registro o textos que aparecen más adelante en la partida.
+## Lote 2 · Emojis (cerrado)
+Una partida nueva solo muestra ya ✦ (marca) y marcas tipográficas (✥ ✓ ☆) en las 10 pestañas y sus subpestañas; Corona usa su imagen. El resto de los ~540 emojis eran datos sin uso (`emoji:` de los objetos, que se conservan como respaldo), código muerto o textos que otros módulos sobrescriben.
 
-Hecho hasta ahora (solo presentación; el emoji queda como respaldo si no hay imagen):
-- `iconArt530(id, respaldo)` en `app.js`: ramas de investigación, proyectos y colecciones del Museo y continentes usan la imagen equivalente.
-- Encargos científicos (`commissions-ui-v3370.js`): las 6 categorías usan imagen (monografías, mapa, fósiles, investigación, navegación, mapa polar).
-- Pendiente: viñetas de paisaje por motivos de bioma, mensajes del registro sin emoji y textos de interfaz con prefijo emoji.
+- `iconArt530(id, respaldo)`: ramas de investigación, proyectos y colecciones del Museo y continentes usan la imagen equivalente.
+- Encargos científicos: las 6 categorías usan imagen.
+- Registro: 45 mensajes de `pushLog` y el registro inicial sin emoji. Los registros guardados conservan el texto antiguo.
+- `regionLandscape` (46 viñetas con emoji) no se llamaba desde ningún sitio y se elimina.
+- 97 rótulos con prefijo emoji (secciones, subpestañas, hábitat, hora y estación) pasan a texto.
+- Se mantienen ♂ ♀ ⚤ ✦ ✓ ★ ☆ ✕ ❧ ✥ y el ❔ de especie no descubierta.
+- Pruebas: dos expectativas de texto se actualizaron (`expeditions-research-v3280`, compara el registro sin emoji inicial; `patch-v3154`, `selva:'Selva'`). Suite completa en clon superficial: 492 pasan y 273 fallan, la misma lista de fallos que antes del Lote 2.

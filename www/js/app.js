@@ -2625,8 +2625,8 @@ function fieldBuffSummaryMarkup(cap=automaticSearchCapacity()){
  const group=state.upgrades.groupTier||0;
  const manualGroup=group===3?'25 % de 2 / 5 % de 3 especies':group===2?'20 % de 2 especies':group===1?'10 % de 2 especies':'1 especie por encuentro';
  const autoGroup=state.upgrades.autoGroup?'12 % de 2 / 2 % de 3 especies':'1 especie por encuentro';
- return `<div class="field-buff-row"><span>🔭 Manual <strong>${pctBuff(manualSearchChance())}</strong> · censo ×${manualCensusRate()} · ${manualGroup}</span>
- <span>👨‍🔬 Equipo <strong>${state.helpers?pctBuff(automaticSearchChance()):'sin naturalistas'}</strong> · búsqueda cada ${autoInterval()} s · censo ×${automaticCensusRate()}</span></div>
+ return `<div class="field-buff-row"><span>Manual <strong>${pctBuff(manualSearchChance())}</strong> · censo ×${manualCensusRate()} · ${manualGroup}</span>
+ <span>Equipo <strong>${state.helpers?pctBuff(automaticSearchChance()):'sin naturalistas'}</strong> · búsqueda cada ${autoInterval()} s · censo ×${automaticCensusRate()}</span></div>
  <div class="field-buff-row secondary"><span>Manual: ${manualChoices} especies compatibles con filtros</span><span>Automático: ${cap.remaining}/${cap.total} especies con cupo · ${autoGroup}</span></div>
  <div class="field-buff-note">Probabilidades por intento con fauna disponible. Las búsquedas automáticas se pausan al agotar 100 registros por especie y hora.</div>`;
 }
@@ -2691,65 +2691,8 @@ function renderSexComparison(id){
   return `<div class="req sex-section"><strong>Dimorfismo sexual · ${dimorphismProgress(id)}/2</strong>
      <div class="small">Registra macho y hembra por separado durante las exploraciones.</div>
      <div class="sex-grid">${cards}</div>
-     ${hasDimorphism(id)?'<div class="small">✅ Comparación completa</div>':''}
+     ${hasDimorphism(id)?'<div class="small">Comparación completa</div>':''}
    </div>`;
-}
-
-function regionLandscape(regionId){
-  if(regionId==='HX-01-05')return ['#dbe0da','#eff2ea','#9ca9a3','❄️  🐻  🌲  🦌'];
-   if(regionId==='HX-02-02')return ['#adc3ae','#dce4d4','#789781','🌲  🦅  🌊  🐻'];
-   if(regionId==='HX-06-07')return ['#ddc79c','#f2dcaa','#ad9363','🏜️  🦊  🐍  ☀️'];
-   if(regionId==='HX-07-11')return ['#c9c48f','#e0d5aa','#a8a16e','🌾  🐆  🐦  🌿'];
-   if(regionId==='HX-09-12')return ['#b5cdb9','#dce5c5','#6a9b86','🪷  🌾  🐦  💧'];
-  if(regionId==='HX-11-10')return ['#d2c59f','#e7dbb3','#8e9f6f','🌳  🦌  🦏  🌾'];
-  if(regionId==='HX-08-12')return ['#e4d9bb','#bbd5ca','#819e88','🦩  🌊  🌾  🐦'];
-  if(regionId==='HX-07-14')return ['#a9d4c5','#e0e5c1','#6aafa4','🏝️  🐢  🌊  🌳'];
-  if(regionId==='HX-06-08')return ['#b8b6a0','#e3d5b8','#81785e','⛰️  🌲  🐒  🪨'];
-  if(regionId==='HX-09-09')return ['#a3c091','#e0dbac','#70835b','🌳  🦌  🍂  🌾'];
-  if(regionId==='HX-10-12')return ['#a0cbd2','#d5e6dc','#5a9fb0','🌊  🐬  🐠  🏝️'];
-  if(regionId==='HX-07-13')return ['#c2c9b2','#dce0bd','#8c977a','⛰️  🐺  🦅  🌿'];
-  if(regionId==='HX-11-08')return ['#e4cfa9','#f3e3c0','#b69a6a','🏜️  🦎  🌾  ☀️'];
-  if(regionId==='HX-07-12')return ['#e8d5ad','#f0dfb8','#be9e69','🏜️  🌾  🐐  🪨'];
-  if(regionId==='HX-10-09')return ['#afccba','#d9e5d4','#7a9b87','🌾  🐘  🌊  🐦'];
-  if(regionId==='HX-08-10')return ['#94bda0','#b9d5ac','#507b59','🌳  🌿  🐒  🌧️'];
-  const V22_SCENES={
-    'HX-02-15':['#bed1c5','#e5e9d7','#879e86','🌲  🪨  🌲  ⛰️  🍃'],
-    'HX-03-16':['#cbd8df','#e5ede9','#8c9e94','🌲  ❄️  🐅  🌲  🏔️'],
-    'HX-03-18':['#c2d6df','#eaf0e8','#8fa9a1','🌊  🌋  🦅  🌲  ❄️'],
-    'HX-04-14':['#e9d8b9','#f5e5bf','#ae946c','🏜️  ☀️  🦎  🐪  🪨'],
-    'HX-04-15':['#c7d5d9','#e4e8df','#8fa19b','🏔️  ❄️  🐆  🌲  ⛰️']
-  };
-  if(V22_SCENES[regionId])return V22_SCENES[regionId];
-
-  if(regionId==='HX-06-11')return ['#e3cfaa','#f1e3c5','#9db8ac','🐊  🌊  🦛  🌾'];
-  if(regionId==='HX-07-08')return ['#eddbb1','#d8bb8f','#beab79','🏜️  🌾  🐫  🦊'];
-  if(regionId==='HX-08-08')return ['#9ac49e','#cce0b9','#4c8c5e','🌴  🐒  🌳  🐦'];
-  if(regionId==='HX-09-11')return ['#b0d0b0','#dce7cc','#729a7c','🌿  🦍  🌊  🐦'];
-  if(regionId==='HX-10-10')return ['#e1caa0','#dfd7a9','#9e9966','🌵  🦓  🐆  ☀️'];
-  if(regionId==='HX-11-11')return ['#c9d5d4','#e7e1c9','#98ab9b','🌊  🐧  🦭  🌅'];
-  if(regionId==='HX-09-14')return ['#a9c6a7','#cad9ad','#638e64','🌴  🦎  🐒  🌊'];
-  if(regionId==='HX-06-09')return ['#e5d6ae','#eadbbd','#c4ad7b','🏜️  🐪  🌵  🦊'];
-  if(regionId==='HX-07-10')return ['#e8d6a3','#e3cb95','#a3a36e','🌾  🦁  🐘  🌳'];
-  if(regionId==='HX-08-11')return ['#b2d0ae','#b8d8bc','#5d8f65','🌿  🦍  🌳  🦜'];
-  if(regionId==='HX-02-13')return ['#bcd0cc','#e1ebde','#8b9d81','🌲  🐿️  🌊  ❄️  🌲'];
-  if(regionId==='HX-03-14')return ['#bdc9ce','#e3e7de','#919b81','🌲  ❄️  🪶  🌲  🏔️'];
-  if(regionId==='HX-04-13')return ['#dbd4b7','#eee4cb','#a9a178','🐎  🌾  🐈  ⛰️  🌾'];
-  if(regionId==='HX-03-13')return ['#becfc3','#e4e5d5','#8f9f80','⛰️  🪨  🌲  🦅  🌄'];
-  if(regionId==='HX-03-15')return ['#e4d4b2','#f3e5c8','#b3a17e','🌿  🐈  🌾  ⛰️  ☀️'];
-
-  const map={
-    'HX-01-09':['#bad6c3','#dbe6c5','#7fa179','🌳  🌊  🌿  🌾  🪶'],
-    'HX-01-11':['#d9e1e8','#edf3f6','#9db5c0','🌲  ❄️  🦌  🌨️  🌲'],
-    'HX-02-09':['#d8dee5','#ecece1','#98a08f','🏔️  🪨  🌲  ❄️  ⛰️'],
-    'HX-02-10':['#bcd0d9','#e4eadb','#89a077','🌳  🌾  🌊  🌲  🪶'],
-    'HX-02-11':['#c9d8cb','#e8eedf','#90a67d','🌲  🌿  🌊  🦌  🌾'],
-    'HX-02-12':['#d4d8c5','#ebe0c5','#a08e68','🌞  🌵  ⛰️  🌾  🦅'],
-    'HX-03-09':['#c9d3cc','#e7e6d9','#97a384','🌲  🌾  🌊  🦬  🌲'],
-    'HX-03-10':['#cfd8d0','#efe4cf','#9dad86','🌞  🌿  🌊  🪨  🌲'],
-    'HX-03-11':['#cfdae2','#eef4f5','#92a9b0','🌊  🌲  🦢  reeds  🌫️'],
-    'HX-03-12':['#d4d2c4','#ece6d1','#9a987d','⛰️  🌲  🪨  🌿  🦅']
-  };
-  return map[regionId] || ['#c9d8e2','#e8edf1','#9fb0b7','🌲  ⛰️  ❄️  🌊  🌲'];
 }
 
 // Ajuste 3.14: los encuentros raros siguen siendo posibles, pero su frecuencia relativa se reduce sin cambiar la probabilidad base de búsqueda.
@@ -3148,7 +3091,7 @@ function updateFieldOutput(){
 function render(){ renderCounters(); renderPanel(); persist(); }
 function renderCrown(){
   const coins=Math.floor(Math.max(0,state.crownCoins||0));
-  return `<section class="card crown-card stack"><div class="big">👑</div><h3 class="section">Corona</h3>
+  return `<section class="card crown-card stack"><div class="big">${uiIcon530('corona','👑')}</div><h3 class="section">Corona</h3>
     <div class="req"><strong>Saldo histórico: ${fmt(coins)} coronas</strong></div>
   </section>`;
 }
@@ -3202,7 +3145,7 @@ function renderPanel(){
   try{ panel.innerHTML=(renderers[tab]||renderField)(); }
   catch(err){
     console.error('El Gran Atlas: error en el módulo '+tab,err);
-    panel.innerHTML='<section class="card stack"><h3>⚠️ No se pudo abrir este módulo</h3><p class="small">Puedes utilizar otra pestaña. Si el problema persiste, informa el nombre de la sección.</p></section>';
+    panel.innerHTML='<section class="card stack"><h3>No se pudo abrir este módulo</h3><p class="small">Puedes utilizar otra pestaña. Si el problema persiste, informa el nombre de la sección.</p></section>';
   }
   bindPanel();
   if(tab==='field')lastPanelSignature=fieldEncounterSignature(state.lastEncounter);
@@ -3409,7 +3352,7 @@ function renderJournal(){
     ? [...ids].sort((a,b)=>sight(b)-sight(a)||ids.indexOf(a)-ids.indexOf(b))
     : ids;
   return `<div class="journal-v31 journal-v311">
-    <div class="journal-index journal-v311-heading"><span>📖 Cuaderno de campo</span><span class="small">${currentRegion().name} · ${regionIdentifiedCount(state.currentRegion)}/${ids.length} identificadas</span></div>
+    <div class="journal-index journal-v311-heading"><span>Cuaderno de campo</span><span class="small">${currentRegion().name} · ${regionIdentifiedCount(state.currentRegion)}/${ids.length} identificadas</span></div>
     <div class="journal-grid journal-v311-layout">
       <aside class="journal-v311-directory" aria-label="Catálogo de especies de la región">
         <div class="journal-v311-filters">
@@ -3441,11 +3384,11 @@ function renderJournal(){
         <section class="journal-collection"><div class="journal-block-heading"><strong>◈ Variantes observadas</strong></div><div class="journal-variants">${specialBadges(id)}</div></section>
         ${SEXUAL_DIMORPHISM[id]?`<section class="journal-collection"><div class="journal-block-heading"><strong>⚤ Dimorfismo sexual</strong><span>${dimorphismProgress(id)}/2</span></div>${renderSexComparison(id)}</section>`:''}
         <section class="journal-milestone ${next?.allOk?'milestone-ready':''}">
-          ${next?`<div class="journal-block-heading"><strong>✒️ Próximo estudio · ${next.label}</strong><span>${st+1}/5</span></div>
+          ${next?`<div class="journal-block-heading"><strong>Próximo estudio · ${next.label}</strong><span>${st+1}/5</span></div>
           <div class="journal-milestone-meter"><span style="width:${Math.min(100,sight(id)/Math.max(1,next.needSight)*100)}%"></span></div>
           <p>Se necesitan <b>${next.needSight} avistamientos</b>, £${next.money} y ${next.knowledge} puntos de conocimiento.</p><p class="small">${next.extra}</p>
           <button class="btn ${next.allOk?'':'alt'}" data-action="advance-species" data-id="${id}" ${next.allOk?'':'disabled'}>${next.allOk?'✦ Investigar etapa '+(st+1):'Estudio aún no disponible'}</button>`:
-          `<div class="journal-block-heading"><strong>🏛️ Monografía completa</strong><span>Sello V</span></div><p>La especie puede publicarse en Sociedad si aún no lo has hecho.</p>`}
+          `<div class="journal-block-heading"><strong>Monografía completa</strong><span>Sello V</span></div><p>La especie puede publicarse en Sociedad si aún no lo has hecho.</p>`}
         </section>
         <details class="journal-reference"><summary><span>▤ Clasificación científica</span><span>Consultar ficha</span></summary><div class="journal-reference-content">${taxonomyText(id)}</div></details>
         <details class="journal-reference"><summary><span>⌁ Ecología y condiciones conocidas</span><span>Consultar ficha</span></summary><div class="journal-reference-content mini-conditions"><div><b>Hábitats:</b> ${st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos'}</div><div><b>Horarios:</b> ${st>=3?sp.times.map(timeLabel).join(', '):'por estudiar'}</div><div><b>Estaciones:</b> ${st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio'}</div></div></details>
@@ -3519,20 +3462,20 @@ function renderResearch(){
    </article>`;
  }).join('');
  return `<section class="card stack research-v315">
-   <h3 class="section">🔬 Instituto de Historia Natural</h3>
+   <h3 class="section">Instituto de Historia Natural</h3>
    <p class="small">Cinco ramas de investigación. Los descubrimientos y las compras de versiones anteriores se conservan. Los costes nuevos son provisionales para pruebas.</p>
    <nav class="research-branch-tabs" aria-label="Ramas de investigación">${tabs}</nav>
    <div class="research-branch-header"><strong>${iconArt530(branch.id,branch.icon)} ${branch.name}</strong><span class="small">${branch.description}</span></div>
    <div class="research-node-grid">${cards}</div>
-   <div class="research-live-buffs"><strong>📊 Bonificaciones actuales de tu equipo</strong>
+   <div class="research-live-buffs"><strong>Bonificaciones actuales de tu equipo</strong>
      <div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} (${pctBuff(0.50)} de base). Automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo: requiere naturalista'} (${pctBuff(0.38)} de base). Los porcentajes son por búsqueda, con fauna y cupo disponible.</div>
      <div class="small">Equipo automático: ${state.helpers||0} naturalistas · búsqueda cada ${autoInterval()} s · bono de ayudantes/capacitación ${pctBuff(Math.min(0.45,(state.helpers||0)*0.03+(state.upgrades.training||0)*0.08))} (máximo 45 %), más objetos equipados.</div>
      <div class="small">Censo manual ×${manualCensusRate()} · censo automático ×${automaticCensusRate()} · especializaciones aumentan el peso relativo de las especies poco comunes y raras, no la probabilidad base de encuentro.</div>
    </div>
    <section class="research-progress-summary">
-     <div><strong>🔭 Exploración</strong><span class="small">Grupos: nivel ${state.upgrades.groupTier||0}/3 · Censo: ${state.upgrades.censusTier>=2?'×3':state.upgrades.censusTier?'×2':'×1'} · Automático: ${state.upgrades.autoGroup?'grupos activos':'sin grupos'} / ${state.upgrades.autoCensus?'censo ×2':'sin multiplicador'}</span></div>
-     <div><strong>🦉 Naturalismo</strong><span class="small">Mamíferos ${state.upgrades.mammalogy||0}/2 · Aves ${state.upgrades.ornithology||0}/2 · Herpetología ${state.upgrades.herpetology||0}/2 · Peces ${state.upgrades.ichthyology||0}/2 · Etología ${state.upgrades.ethology||0}/2</span></div>
-     <div><strong>🦴 Museología</strong><span class="small">Paleontología ${state.upgrades.paleoTier||0}/3 · Ingresos del Museo ${state.upgrades.museumIncomeTier?'+15 %':'sin mejora'}</span></div>
+     <div><strong>Exploración</strong><span class="small">Grupos: nivel ${state.upgrades.groupTier||0}/3 · Censo: ${state.upgrades.censusTier>=2?'×3':state.upgrades.censusTier?'×2':'×1'} · Automático: ${state.upgrades.autoGroup?'grupos activos':'sin grupos'} / ${state.upgrades.autoCensus?'censo ×2':'sin multiplicador'}</span></div>
+     <div><strong>Naturalismo</strong><span class="small">Mamíferos ${state.upgrades.mammalogy||0}/2 · Aves ${state.upgrades.ornithology||0}/2 · Herpetología ${state.upgrades.herpetology||0}/2 · Peces ${state.upgrades.ichthyology||0}/2 · Etología ${state.upgrades.ethology||0}/2</span></div>
+     <div><strong>Museología</strong><span class="small">Paleontología ${state.upgrades.paleoTier||0}/3 · Ingresos del Museo ${state.upgrades.museumIncomeTier?'+15 %':'sin mejora'}</span></div>
    </section>
  </section>`;
 }
@@ -3622,12 +3565,12 @@ function renderSociety(){
   if(globalThis.AtlasSociety3360){const content=state.societyView==='achievements'?globalThis.AtlasSociety3360.render(state,achievementContext3360()):state.societyView==='grants'?grants:state.societyView==='publications'?publicationsPane:missions;return globalThis.AtlasSociety3360.layout(state,achievementContext3360(),content);}
   return `<div class="grid-2">
     <section class="card stack">
-      <h3 class="section">🏛️ Real Sociedad de Historia Natural</h3>
-      <div class="subtabs">${[['grants','💷 Subvenciones'],['publications','📚 Publicaciones'],['missions','🎯 Misiones']].map(([id,label])=>`<button class="subtab ${state.societyView===id?'active':''}" data-action="society-tab" data-id="${id}">${label}</button>`).join('')}</div>
+      <h3 class="section">Real Sociedad de Historia Natural</h3>
+      <div class="subtabs">${[['grants','Subvenciones'],['publications','Publicaciones'],['missions','Misiones']].map(([id,label])=>`<button class="subtab ${state.societyView===id?'active':''}" data-action="society-tab" data-id="${id}">${label}</button>`).join('')}</div>
       ${state.societyView==='grants'?grants:state.societyView==='publications'?publicationsPane:missions}
     </section>
     <section class="card stack">
-      <h3 class="section">📊 Registro científico</h3>
+      <h3 class="section">Registro científico</h3>
       <div class="req"><strong>Prestigio acumulado</strong><div class="small">${fmt(state.prestige)} · no se consume al viajar.</div></div>
       <div class="req"><strong>Monografías</strong><div class="small">${publications} publicadas</div></div>
       <div class="req"><strong>Descubrimientos</strong><div class="small">${identified} / ${Object.keys(SPECIES).length} especies</div></div>
@@ -3846,11 +3789,11 @@ function renderExcavations(){
   const site=MUSEUM_DIG_SITES.find(x=>x.id===job.site),ready=Date.now()>=job.endAt;
   if(!site)return '';
   return '<div class="museum-v317-dig"><div><strong>'+site.name+'</strong>'+
-   '<div class="small">'+(ready?'✅ Excavación concluida · Lista para recoger':'Tiempo restante: <span data-excavation-remaining="'+job.id+'">'+formatMuseumTimeRemaining(job.endAt)+'</span>')+'</div></div>'+
+   '<div class="small">'+(ready?'Excavación concluida · Lista para recoger':'Tiempo restante: <span data-excavation-remaining="'+job.id+'">'+formatMuseumTimeRemaining(job.endAt)+'</span>')+'</div></div>'+
    '<button class="btn '+(ready?'gold':'alt')+'" data-action="collect-excavation" data-id="'+job.id+'" '+(ready?'':'disabled')+'>'+
    (ready?'Recoger fósiles':'En curso')+'</button></div>';
  }).join('');
- return '<section class="museum-v317-section"><h3 class="section">⛏️ Excavaciones</h3>'+
+ return '<section class="museum-v317-section"><h3 class="section">Excavaciones</h3>'+
   '<p class="small">Inicia prospecciones en las regiones desbloqueadas. Prosiguen mientras la app está cerrada; debes recoger los hallazgos al volver. No son búsquedas de animales ni modifican la economía de expediciones.</p>'+
   '<div class="small"><b>Equipos activos:</b> '+active.length+'/'+cap+' · Excavaciones completadas: '+(state.museum.excavationsCompleted||0)+'</div>'+
   (running?'<h4>Campañas activas</h4><div class="museum-v317-digs">'+running+'</div>':'')+
@@ -3881,7 +3824,7 @@ function renderMuseumCuration(){
    '<div class="small">'+req+'</div><div class="small">+'+project.knowledge+' conocimiento · +'+project.points+' punto(s) de conservación, hasta 20.</div></div>'+
    '<button class="btn" data-action="curate-museum" data-id="'+project.id+'" '+(canCurateMuseum(project.id)?'':'disabled')+'>Investigar</button></div>';
  }).join('');
- return '<section class="museum-v317-section"><h3 class="section">📚 Colecciones y conservación</h3>'+
+ return '<section class="museum-v317-section"><h3 class="section">Colecciones y conservación</h3>'+
   '<div class="small">Los esqueletos reunidos activan colecciones temáticas. Las piezas reconstruidas no producen dinero por sí solas, pero completarlas permite mejorar los ingresos de las muestras animales.</div>'+
   '<div class="museum-v317-digs">'+sets+'</div><div class="divider"></div>'+
   '<div class="small"><b>Conservación científica:</b> '+points+'/20 puntos · +'+Math.round(museumCurationBonus()*100)+' % de ingresos del Museo.</div>'+
@@ -4272,9 +4215,9 @@ function renderFossilWorkshop(){
  return renderExcavations()+'<div class="small">Recoge fragmentos, cráneos y dientes fósiles mediante viajes, encargos y excavaciones. Fabrica huesos en tandas: los dinosaurios no suman al Atlas zoológico.</div>'+
   '<div class="req"><strong>Materiales paleontológicos</strong><div class="small">'+
   ['fossil_fragment','fossil_skull','fossil_tooth','animal_trace'].map(id=>itemArtInline(id)+' '+itemName(id)+': '+(state.inventory?.[id]||0)).join(' · ')+
-  '</div></div><h3 class="section">🦴 Taller de reconstrucción</h3>'+
+  '</div></div><h3 class="section">Taller de reconstrucción</h3>'+
   '<div class="museum-v311-worklist">'+craft+'</div><div class="divider"></div>'+
-  '<h3 class="section">📜 Registros y huellas fósiles</h3>'+renderMuseumCollections('fossils')+renderMuseumCuration();
+  '<h3 class="section">Registros y huellas fósiles</h3>'+renderMuseumCollections('fossils')+renderMuseumCuration();
 }
 function renderMuseumRelicts(){
  const owned=relicMuseumCount(),active=state.museum.relictSurveys||[];
@@ -4282,7 +4225,7 @@ function renderMuseumRelicts(){
   const r=MUSEUM_RELICTS.find(x=>x.id===job.relict),ready=Date.now()>=job.endAt;
   if(!r)return '';
   return '<div class="museum-v318-mission"><div><strong>🔎 '+r.name+'</strong>'+
-   '<div class="small">'+(ready?'✅ Investigación terminada':'Restan <span data-relict-survey-remaining="'+job.id+'">'+formatMuseumTimeRemaining(job.endAt)+'</span>')+'</div></div>'+
+   '<div class="small">'+(ready?'Investigación terminada':'Restan <span data-relict-survey-remaining="'+job.id+'">'+formatMuseumTimeRemaining(job.endAt)+'</span>')+'</div></div>'+
    '<button class="btn '+(ready?'gold':'alt')+'" data-action="collect-relict-survey" data-id="'+job.id+'" '+(ready?'':'disabled')+'>'+(ready?'Recoger indicios':'En curso')+'</button></div>';
  }).join('');
  const setRows=MUSEUM_RELICT_SETS.map(set=>{
@@ -4315,23 +4258,23 @@ function renderMuseumRelicts(){
    (entry.material?' · +'+ITEMS[entry.material].name:'')+'</div></div></div>';
  }).join('');
  return '<div class="museum-v318-root"><section class="museum-v318-summary">'+
-  '<h3 class="section">🗿 Investigación de relictos</h3>'+
+  '<h3 class="section">Investigación de relictos</h3>'+
   '<p class="small">Los relictos son registros históricos, linajes antiguos o poblaciones singulares. Puedes obtener pistas en Campo o enviar estudios documentales. Ningún relicto aumenta directamente los avistamientos ni el prestigio del Atlas.</p>'+
   '<div class="museum-v318-stats"><span><strong>'+owned+'/'+MUSEUM_RELICTS.length+'</strong> catalogados</span>'+
   '<span><strong>'+active.length+'/'+maxRelictSurveys()+'</strong> misiones</span>'+
   '<span><strong>'+((museumRelictSetBonus()+0)*100).toFixed(1).replace('.',',')+' %</strong> bonus colecciones</span></div>'+
   (activeRows?'<h4>Misiones en curso</h4><div class="museum-v318-missions">'+activeRows+'</div>':'')+
   '<div class="small">Con <b>Archivos de historia natural</b> puedes realizar dos misiones y obtener dos indicios al concluir. <b>Rastreo de poblaciones singulares</b> duplica los indicios de Campo.</div></section>'+
-  '<h3 class="section">🔍 Expedientes patrimoniales</h3><div class="showcase-grid museum-v33-showcases">'+pieces+'</div>'+
-  '<section class="museum-v318-summary"><h3 class="section">📚 Colecciones especiales</h3>'+
+  '<h3 class="section">Expedientes patrimoniales</h3><div class="showcase-grid museum-v33-showcases">'+pieces+'</div>'+
+  '<section class="museum-v318-summary"><h3 class="section">Colecciones especiales</h3>'+
   '<div class="museum-v318-missions">'+setRows+'</div>'+
-  '<h3 class="section">🏅 Logros de investigación</h3><div class="museum-v318-missions">'+awards+'</div>'+
-  '<h3 class="section">🧬 Análisis comparativo</h3>'+
+  '<h3 class="section">Logros de investigación</h3><div class="museum-v318-missions">'+awards+'</div>'+
+  '<h3 class="section">Análisis comparativo</h3>'+
   '<p class="small">Consume 2 muestras de huellas, 1 tinta y 100 conocimiento. Cada estudio suma +1 % de conocimiento en Campo (máximo +12 %). Los logros otorgan bonificaciones adicionales.</p>'+
   '<div class="museum-v318-mission"><div><strong>Archivo de naturalistas · '+(state.museum.relictResearchPoints||0)+'/12 niveles</strong>'+
   '<div class="small">Bonificación actual: +'+(relictResearchBonus()*100).toFixed(0)+' % conocimiento; logros +'+(relictAchievementBonus()*100).toFixed(0)+' %</div></div>'+
   '<button class="btn" data-action="research-relict" '+(canResearchRelict()?'':'disabled')+'>Analizar</button></div>'+
-  '<h3 class="section">📜 Últimas investigaciones</h3><div class="museum-v318-missions">'+
+  '<h3 class="section">Últimas investigaciones</h3><div class="museum-v318-missions">'+
   (archive||'<div class="small">Aún no has completado misiones documentales.</div>')+
   '</div></section></div>';
 }
@@ -4343,7 +4286,7 @@ function renderMuseumArtifacts(){
  (museumIsDisplayed('collection',p.id)?'Retirar vitrina':'Exponer')+'</button></div></div></div>').join('');
  return '<div class="small">Piezas históricas del gabinete anterior, conservando tus registros y los costes originales.</div>'+
   renderMuseumCollections('artifacts')+
-  (cards?'<h3 class="section">🗺️ Artefactos catalogados</h3><div class="museum-v311-worklist">'+cards+'</div>':'');
+  (cards?'<h3 class="section">Artefactos catalogados</h3><div class="museum-v311-worklist">'+cards+'</div>':'');
 }
 
 const MUSEUM_WINGS = [
@@ -4378,9 +4321,9 @@ function renderMuseum(){
  const next=MUSEUM_WINGS[state.museum.wing];
  return renderLegendaryCollection()+`<div class="grid-2 museum-v33">
  <section class="card stack museum-v33-hall">
-   <header class="museum-v33-heading"><span class="museum-v33-eyebrow">GABINETE DE HISTORIA NATURAL · 1842</span><h3 class="section">🏛️ Museo de Historia Natural</h3><p class="small">Colección científica · ${count} vitrinas ocupadas de ${museumCapacity()}</p></header>
+   <header class="museum-v33-heading"><span class="museum-v33-eyebrow">GABINETE DE HISTORIA NATURAL · 1842</span><h3 class="section">Museo de Historia Natural</h3><p class="small">Colección científica · ${count} vitrinas ocupadas de ${museumCapacity()}</p></header>
    <div class="museum-v33-scene" aria-hidden="true"><span>🌿</span><span>🏛️</span><span>🪴</span></div>
-  <div class="subtabs museum-v311-tabs" role="tablist" aria-label="Salas del Museo">${[['exhibitions','🖼️ Exposiciones'],['samples','🐾 Muestras'],['fossils','🦴 Fósiles'],['relicts','🗿 Relictos'],['artifacts','🗺️ Artefactos']].map(([id,label])=>`<button class="subtab ${state.museumView===id?'active':''}" data-action="museum-tab" data-id="${id}">${label}</button>`).join('')}</div>
+  <div class="subtabs museum-v311-tabs" role="tablist" aria-label="Salas del Museo">${[['exhibitions','Exposiciones'],['samples','Muestras'],['fossils','Fósiles'],['relicts','Relictos'],['artifacts','Artefactos']].map(([id,label])=>`<button class="subtab ${state.museumView===id?'active':''}" data-action="museum-tab" data-id="${id}">${label}</button>`).join('')}</div>
   ${state.museumView==='exhibitions' ? `
     <div class="small">Galería de muestras, fósiles, relictos y artefactos en exposición. Las muestras animales conservan sus ingresos habituales.</div>
     <div class="req"><strong>Galería nivel ${state.museum.wing}</strong>
@@ -4389,10 +4332,10 @@ function renderMuseum(){
     </div>
     ${next?`<button class="btn" data-action="expand-museum" ${state.prestige<next.prestige||state.money<next.cost?'disabled':''}>Ampliar: ${next.name} · £${next.cost} y ${next.prestige} prestigio</button>`:`<div class="badge">Nivel máximo del prototipo</div>`}
     <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${animalMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare} · muestra £${exhibitPrice(id)}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
-    <div class="divider"></div><h3 class="section">🦴 Otras colecciones en exposición</h3>
+    <div class="divider"></div><h3 class="section">Otras colecciones en exposición</h3>
     ${renderMuseumExtraGallery()}
   ` : state.museumView==='samples' ? renderMuseumSamples(exhibits,count) : state.museumView==='fossils' ? renderFossilWorkshop() : state.museumView==='relicts' ? renderMuseumRelicts() : renderMuseumArtifacts()}
- </section><section class="card stack museum-v33-ledger"><h3 class="section">📊 Registro del museo</h3>
+ </section><section class="card stack museum-v33-ledger"><h3 class="section">Registro del museo</h3>
    <div class="req"><strong>Exposiciones activas</strong><div class="small">${count}</div></div>
    <div class="req"><strong>Capacidad de muestras animales</strong><div class="small">${museumCapacity()}</div></div>
    <div class="req"><strong>Colecciones científicas</strong><div class="small">${Object.values(state.museum.collections||{}).filter(Boolean).length} piezas · ${Object.values(state.museum.relicts||{}).filter(Boolean).length} relictos</div></div>
@@ -4818,7 +4761,7 @@ function renderEmptyItemSlot(slot){
  return globalThis.AtlasItemArt?globalThis.AtlasItemArt.renderEmptySlot(slot):'<svg viewBox="0 0 100 100" aria-hidden="true"></svg>';
 }
 function renderObjects(){
- const sections=[['equipo','🎽 Equipo'],['animales','🐾 Animales'],['expedicion','🧭 Expedición'],['coleccionables','🏛️ Coleccionables'],['taller','🛠️ Taller']];
+ const sections=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
  const selected=sections.some(([id])=>id===state.inventoryView)?state.inventoryView:'equipo';
  const equippedNames={instrument:'Instrumento',hat:'Gorro',necklace:'Collar'};
  const slots=Object.entries(equippedNames).map(([slot,label])=>{
@@ -4843,11 +4786,11 @@ function renderObjects(){
  const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail','fossil_amber','river_pearl','fossil_track','fossil_claw','fossil_rib','fossil_horn','hard_bone']);
  let content='';
  if(selected==='equipo'){
-   content=`<section class="inventory-block"><h4>📊 Bonificaciones efectivas</h4><div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} · Encuentro automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo (sin naturalistas)'} · Búsqueda automática cada ${autoInterval()} s.</div><div class="small">La probabilidad de botín de expedición parte en 35 %. El gorro emplumado añade 6 puntos porcentuales y el morral reforzado 3 puntos porcentuales. Los objetos solo dan su bono cuando están equipados.</div></section><div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
+   content=`<section class="inventory-block"><h4>Bonificaciones efectivas</h4><div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} · Encuentro automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo (sin naturalistas)'} · Búsqueda automática cada ${autoInterval()} s.</div><div class="small">La probabilidad de botín de expedición parte en 35 %. El gorro emplumado añade 6 puntos porcentuales y el morral reforzado 3 puntos porcentuales. Los objetos solo dan su bono cuando están equipados.</div></section><div class="inventory-equipment-layout"><section class="inventory-block"><h4>Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
  }else if(selected==='animales'){
-   content=`<section class="inventory-block"><h4>🐾 Materiales de animales</h4><div class="small">Hallazgos acumulables obtenidos mediante avistamientos. No ocupan slots.</div><div class="inventory-items">${all.filter(([,i])=>i.kind==='animal').map(([id,i])=>card(id,i)).join('')}</div></section>`;
+   content=`<section class="inventory-block"><h4>Materiales de animales</h4><div class="small">Hallazgos acumulables obtenidos mediante avistamientos. No ocupan slots.</div><div class="inventory-items">${all.filter(([,i])=>i.kind==='animal').map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else if(selected==='expedicion'){
-   content=`<section class="inventory-block"><h4>🧭 Botín de expedición</h4><div class="small">Materiales, herramientas y fragmentos de mapa encontrados en viajes.</div><div class="inventory-items">${all.filter(([id,i])=>(i.kind==='voyage'||i.kind==='artifact_material')&&!collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div></section>`;
+   content=`<section class="inventory-block"><h4>Botín de expedición</h4><div class="small">Materiales, herramientas y fragmentos de mapa encontrados en viajes.</div><div class="inventory-items">${all.filter(([id,i])=>(i.kind==='voyage'||i.kind==='artifact_material')&&!collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else if(selected==='taller'){
   const projects=Object.entries(V316_MATERIAL_STUDIES).map(([id,project])=>{
    const requirements=Object.entries(project.requires).map(([item,qty])=>
@@ -4863,19 +4806,19 @@ function renderObjects(){
     '<button class="btn alt" data-action="process-materials" data-id="'+id+':5" '+
     (canProcessMaterials(id,5)?'':'disabled')+'>Estudiar ×5</button></div></div></div>';
   }).join('');
-  content='<section class="inventory-block"><h4>🛠️ Taller de herramientas</h4>'+
+  content='<section class="inventory-block"><h4>Taller de herramientas</h4>'+
    '<p class="small">Las mejoras consumen materiales y herramientas anteriores si están en su receta. Cuando se consume un instrumento equipado, su ranura se vacía y puedes colocar el nuevo.</p>'+
    '<div class="inventory-items">'+Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,r])=>recipeCard(id,r)).join('')+'</div></section>'+
-   '<section class="inventory-block"><h4>📚 Estudios de materiales repetidos</h4>'+
+   '<section class="inventory-block"><h4>Estudios de materiales repetidos</h4>'+
    '<p class="small">Convierte excedentes en conocimiento o financiación. Reserva fósiles y piezas cartográficas que necesites para el Museo y las investigaciones.</p>'+
    '<div class="inventory-items">'+projects+'</div></section>';
  }else{
    const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0,namerica=state.inventory.north_america_map_piece||0;
-   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map','oceanic_quadrant','north_america_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa africano permite investigar África. Ruta al Nuevo Mundo: cuadrante transatlántico → navegación atlántica → mapa de Norteamérica ${Math.min(8,namerica)}/8 piezas → investigación de Norteamérica.</div></section>`;
+   content=`<section class="inventory-block"><h4>Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map','oceanic_quadrant','north_america_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa africano permite investigar África. Ruta al Nuevo Mundo: cuadrante transatlántico → navegación atlántica → mapa de Norteamérica ${Math.min(8,namerica)}/8 piezas → investigación de Norteamérica.</div></section>`;
  }
  const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
  const equipped=Object.values(state.equipment).filter(Boolean).length;
- return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><a class="small" href="./laboratorio-objetos.html" target="_blank" rel="noopener">Ver láminas del gabinete</a><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cinco pestañas. Solo el Equipo utiliza los tres slots activos; el Taller permite aprovechar excedentes.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
+ return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">Inventario</h3><a class="small" href="./laboratorio-objetos.html" target="_blank" rel="noopener">Ver láminas del gabinete</a><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cinco pestañas. Solo el Equipo utiliza los tres slots activos; el Taller permite aprovechar excedentes.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
 }
 
 
@@ -5035,11 +4978,11 @@ function renderExpeditions(){
  // E-3280 END expeditions-render
  const active=state.voyages||[];
  const shown=availableVoyages();
- return `<div class="grid-2"><section class="card stack"><h3 class="section">⛵ Expediciones y astillero</h3>
+ return `<div class="grid-2"><section class="card stack"><h3 class="section">Expediciones y astillero</h3>
  <div class="small">Los viajes consumen libras y conocimiento, y regresan con financiación, apuntes científicos y objetos. Los reconocimientos africanos requieren el Mapa de África y cartografía II; dan una muestra garantizada, pero no desbloquean regiones ni generan avistamientos.</div>
- <div class="req"><strong>⚒️ Astillero</strong><div class="small">${state.upgrades.shipyard?'Construido. Capacidad actual: '+maxVoyages()+' expediciones simultáneas.':'Bloqueado. Desbloquéalo desde Investigación → Astillero básico.'}</div></div>
+ <div class="req"><strong>Astillero</strong><div class="small">${state.upgrades.shipyard?'Construido. Capacidad actual: '+maxVoyages()+' expediciones simultáneas.':'Bloqueado. Desbloquéalo desde Investigación → Astillero básico.'}</div></div>
  ${shown.map(v=>`<div class="atlas-region"><div><strong>${v.name}</strong><div class="small">${Math.round(voyageDuration(v.seconds)/6)/10} min · Coste £${v.cost} + ${v.knowledge} conocimiento</div><div class="small">Regreso: £${voyageMoneyReward(v)} + ${voyageKnowledgeReward(v)} conocimiento · prestigio requerido ${v.required}${v.routeReq?` · cartografía ${v.routeReq}`:''}${v.sample?' · muestra: '+ITEMS[v.sample].name:''}</div></div><button class="btn" data-action="sail" data-id="${v.id}" ${!state.upgrades.shipyard||active.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge||(v.mapItem&&!(state.inventory?.[v.mapItem]>0))?'disabled':''}>Enviar</button></div>`).join('')}
- </section><section class="card"><h3 class="section">🧭 Viajes en curso</h3>
+ </section><section class="card"><h3 class="section">Viajes en curso</h3>
  ${active.length?active.map(job=>{const v=VOYAGES.find(x=>x.id===job.type);return `<div class="req"><strong>${v.name}</strong><div class="small">Regresa en aprox. ${Math.max(0,Math.ceil((job.endAt-Date.now())/1000))} segundos.</div><button class="btn alt" data-action="finish-voyage" data-id="${job.id}">Finalizar ahora</button></div>`}).join(''):'<div class="small">No hay expediciones activas.</div>'}
  <div class="divider"></div><div class="small">Las expediciones continúan durante tu ausencia hasta un máximo de ocho horas contabilizadas.</div></section></div>`;
 }
@@ -5157,8 +5100,8 @@ function renderBestiary(){
   const pagination=`<nav data-bestiary-pager data-page="${bestiaryPage}" data-pages="${pages}" data-total="${ids.length}" aria-label="Páginas del Bestiario" style="display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:center;margin-top:10px"><button class="btn alt" data-action="bestiary-page" data-id="${bestiaryPage-1}" ${bestiaryPage===0?'disabled':''} aria-label="Página anterior del Bestiario" style="padding:8px 6px;font-size:11px">← Anterior</button><span class="small" role="status" style="text-align:center">Página ${bestiaryPage+1}/${pages}<br>${ids.length?start+1:0}–${end} de ${ids.length}</span><button class="btn alt" data-action="bestiary-page" data-id="${bestiaryPage+1}" ${bestiaryPage===pages-1?'disabled':''} aria-label="Página siguiente del Bestiario" style="padding:8px 6px;font-size:11px">Siguiente →</button></nav>`;
 // AM-06 END bestiary-pagination
   return `<section class="card">
-    <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
-    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-especiales.html" target="_blank" rel="noopener">Especímenes 3.19.7</a> · <a href="./laboratorio-pulido-v3199.html" target="_blank" rel="noopener">Pulido artístico 3.19.9</a> · <a href="./laboratorio-pigmentacion.html" target="_blank" rel="noopener">Pigmentación 3.19.6</a> · <a href="./laboratorio-dimorfismo.html" target="_blank" rel="noopener">⚤ Dimorfismo 3.19.5</a> · <a href="./laboratorio-mamiferos.html" target="_blank" rel="noopener">Mamíferos 3.19.4</a> · <a href="./laboratorio-aves.html" target="_blank" rel="noopener">Aviario 3.19.3</a> · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">🦎 Herpetario 3.19.2b</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
+    <div class="bestiary-head"><h3 class="section">Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
+    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-especiales.html" target="_blank" rel="noopener">Especímenes 3.19.7</a> · <a href="./laboratorio-pulido-v3199.html" target="_blank" rel="noopener">Pulido artístico 3.19.9</a> · <a href="./laboratorio-pigmentacion.html" target="_blank" rel="noopener">Pigmentación 3.19.6</a> · <a href="./laboratorio-dimorfismo.html" target="_blank" rel="noopener">⚤ Dimorfismo 3.19.5</a> · <a href="./laboratorio-mamiferos.html" target="_blank" rel="noopener">Mamíferos 3.19.4</a> · <a href="./laboratorio-aves.html" target="_blank" rel="noopener">Aviario 3.19.3</a> · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">Herpetario 3.19.2b</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">Comprobar sprites 3.19.1c</a></div>
     <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
     ${/* AM-06 BEGIN top-controls */pagination/* AM-06 END top-controls */}<div class="species-grid" style="margin-top:10px">${ids/* AM-06 BEGIN visible-slice */.slice(start,end)/* AM-06 END visible-slice */.map(id=>'<div class="bestiary-specimen-entry">'+speciesCard(id,false,true)+'<details data-specimen-collection="'+id+'"><summary>Colección de especímenes</summary><div data-specimen-content></div></details></div>').join('')}</div>${/* AM-06 BEGIN bottom-controls */pagination/* AM-06 END bottom-controls */}
@@ -5288,9 +5231,9 @@ function bestiaryCollection3260(slot){
  return found.includes('variant-card seen')?globalThis.AtlasBestiaryUI.illustration(found.replaceAll(SPECIES[id].name,visibleName(id))):'<p class="small">Sin variantes observadas.</p>';
 }
 // B-3260 END presentation
-function habitatLabel(h){return ({selva:'🌴 Selva',sabana:'🌾 Sabana',bosque:'🌳 Bosque',pradera:'🌾 Pradera',rio:'🌊 Río',costa:'⛵ Costa',tundra:'❄️ Tundra',montana:'⛰️ Montaña',estepa:'🌾 Estepa',mediterraneo:'🌿 Mediterráneo',desierto:'🏜️ Desierto',humedal:'🪷 Humedal'}[h]||h)}
-function timeLabel(t){return ({amanecer:'🌅 Amanecer',dia:'☀️ Día',atardecer:'🌇 Tarde',noche:'🌙 Noche'}[t]||t)}
-function seasonLabel(s){return ({primavera:'🌱 Primavera',verano:'☀️ Verano',otono:'🍂 Otoño',invierno:'❄️ Invierno'}[s]||s)}
+function habitatLabel(h){return ({selva:'Selva',sabana:'Sabana',bosque:'Bosque',pradera:'Pradera',rio:'Río',costa:'Costa',tundra:'Tundra',montana:'Montaña',estepa:'Estepa',mediterraneo:'Mediterráneo',desierto:'Desierto',humedal:'Humedal'}[h]||h)}
+function timeLabel(t){return ({amanecer:'Amanecer',dia:'Día',atardecer:'Tarde',noche:'Noche'}[t]||t)}
+function seasonLabel(s){return ({primavera:'Primavera',verano:'Verano',otono:'Otoño',invierno:'Invierno'}[s]||s)}
 
 function speciesCard(id, selected=false, bestiary=false){
   const sp=SPECIES[id];
@@ -7105,13 +7048,13 @@ migratePolar3310(state);
 const regionBefore3310=regionRequirementsMet,statusBefore3310=continentStatus,modelBefore3310=atlasRegionModel;
 regionRequirementsMet=function(r){if(r?.continent!=='Polos')return regionBefore3310(r);return !!state.regionUnlocked[r.id]||r.id===state.currentRegion||!!(state.upgrades.polarUnlocked&&craftedReady3300('Polos')&&state.prestige>=r.unlock.prestige);};
 continentStatus=function(c){return c==='Polos'?(state.upgrades.polarUnlocked?'available':'unlockable'):statusBefore3310(c);};
-atlasRegionModel=function(r){const m=modelBefore3310(r);if(r.continent==='Polos'){m.name=(r.pole==='Ártico'?'❄ Ártico · ':'🐧 Antártida · ')+r.name.replace(/^Hielo (ártico|antártico) /,'');m.requirements.unshift({label:'Investigación de exploración polar',met:!!state.upgrades.polarUnlocked});if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
+atlasRegionModel=function(r){const m=modelBefore3310(r);if(r.continent==='Polos'){m.name=(r.pole==='Ártico'?'Ártico · ':'Antártida · ')+r.name.replace(/^Hielo (ártico|antártico) /,'');m.requirements.unshift({label:'Investigación de exploración polar',met:!!state.upgrades.polarUnlocked});if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
 const eligibleBefore3310=eligibleSpecies,autoBefore3310=automaticEligibleSpecies;
 function polarPresence3310(region,id){return polar3310.presences.find(p=>p.regionId===region&&p.speciesId===id);}
 eligibleSpecies=function(region,habitat,time,season){if(!region.startsWith('polar_'))return eligibleBefore3310(region,habitat,time,season);return REGIONS.find(r=>r.id===region)?.species.filter(id=>polarPresence3310(region,id).habitats.includes(habitat)&&SPECIES[id].times.includes(time)&&SPECIES[id].seasons.includes(season))||[];};
 automaticEligibleSpecies=function(region,season){if(!region.startsWith('polar_'))return autoBefore3310(region,season);return REGIONS.find(r=>r.id===region)?.species.filter(id=>SPECIES[id].seasons.includes(season)&&SPECIES[id].times.length&&polarPresence3310(region,id).habitats.length)||[];};
 const habitatBefore3310=habitatLabel;
-habitatLabel=function(h){return ({agua_polar:'🌊 Aguas junto al hielo',banquisa_artica:'❄ Banquisa ártica',banquisa_antartica:'🧊 Banquisa antártica',costa_antartica:'🐧 Costa antártica',hielo_interior:'🏔 Enclaves rocosos interiores'}[h]||habitatBefore3310(h));};
+habitatLabel=function(h){return ({agua_polar:'Aguas junto al hielo',banquisa_artica:'Banquisa ártica',banquisa_antartica:'Banquisa antártica',costa_antartica:'Costa antártica',hielo_interior:'Enclaves rocosos interiores'}[h]||habitatBefore3310(h));};
 const objectsBefore3310=renderObjects;
 renderObjects=function(){return objectsBefore3310()+`<section class="card"><h3>Preparación polar · quinta herramienta</h3><p class="small">Abrigo de expedición polar: Capucha impermeable ×1 + Morral reforzado ×1 + Madera tallada ×3 + Pergamino antiguo ×2. Acreditación permanente; no se consume al abrir regiones.</p><button class="btn" data-action="craft-item" data-id="polar_coat" ${canCraft('polar_coat')?'':'disabled'}>Fabricar abrigo polar</button><p class="small">La capucha y el morral se fabrican en Taller. Sus materiales se obtienen en Europa. Los suministros comerciales actuales apoyan la preparación sin cambiar sus cuatro rutas.</p></section>`;};
 const fieldBefore3310=fieldBackdropMarkup,polarScenes3310=new Map();
@@ -7132,7 +7075,7 @@ const eligibleBefore3320=eligibleSpecies,autoBefore3320=automaticEligibleSpecies
 eligibleSpecies=function(region,habitat,time,season){const ps=presenceIndex3320.get(region);return ps?ps.filter(p=>p.habitats.includes(habitat)&&p.times.includes(time)&&p.seasons.includes(season)).map(p=>p.speciesId):eligibleBefore3320(region,habitat,time,season);};
 automaticEligibleSpecies=function(region,season){const ps=presenceIndex3320.get(region);return ps?ps.filter(p=>p.seasons.includes(season)&&p.times.length&&p.habitats.length).map(p=>p.speciesId):autoBefore3320(region,season);};
 const habitatBefore3320=habitatLabel;
-habitatLabel=function(h){return ({costa_marina:'⛵ Costa y praderas marinas',arrecife:'🪸 Arrecife',archipielago:'🏝 Archipiélago',oceano_abierto:'🌊 Océano abierto',mar_austral:'🌬 Mar austral',plataforma_marina:'🐟 Plataforma marina'}[h]||habitatBefore3320(h));};
+habitatLabel=function(h){return ({costa_marina:'Costa y praderas marinas',arrecife:'Arrecife',archipielago:'Archipiélago',oceano_abierto:'Océano abierto',mar_austral:'Mar austral',plataforma_marina:'Plataforma marina'}[h]||habitatBefore3320(h));};
 const bucketBefore3320=bestiaryTypeBucket;
 bestiaryTypeBucket=function(id){return taxonomyInfo(id).className==='Cephalopoda'?'Pez':bucketBefore3320(id);};
 const fieldBefore3320=fieldBackdropMarkup,marineScenes3320=new Map();
@@ -7178,7 +7121,7 @@ automaticEligibleSpecies=function(region,season,conditions=state){
  return deepReady3330(region)?deepChoices3330(region,conditions.habitat,conditions.time,season,true,conditions.method):[];
 };
 const habitatBefore3330=habitatLabel;
-habitatLabel=function(h){return ({columna_mesopelagica:'⚓ Columna mesopelágica',columna_batial:'⚓ Aguas batiales',columna_profunda_fria:'❄ Columna profunda fría',fondo_batial:'⚓ Fondo batial',fondo_profundo_frio:'❄ Fondo profundo frío'}[h]||habitatBefore3330(h));};
+habitatLabel=function(h){return ({columna_mesopelagica:'Columna mesopelágica',columna_batial:'Aguas batiales',columna_profunda_fria:'Columna profunda fría',fondo_batial:'Fondo batial',fondo_profundo_frio:'Fondo profundo frío'}[h]||habitatBefore3330(h));};
 let deepResolving3330=false;
 const encounterBefore3330=encounter;
 encounter=function(source='manual',at=Date.now(),guaranteed=false,automatic=null){

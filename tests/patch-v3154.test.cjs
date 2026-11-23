@@ -122,5 +122,5 @@ test('Selva y sabana presentan filtros y estilos propios',()=>{
  const scene=require('../www/js/field-scene-v3210.js');assert.ok(scene.habitats.includes('selva'));assert.ok(scene.habitats.includes('sabana'));assert.notEqual(scene.render('selva'),scene.render('sabana'));
  assert.match(css,/\.scene\.biome-selva/);
  assert.match(css,/\.scene\.biome-sabana/);
- assert.match(src,/selva:'🌴 Selva'/);
+ assert.match(src,/selva:'Selva'/);
 });
