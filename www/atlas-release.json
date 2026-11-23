@@ -1,7 +1,7 @@
 {
-  "version": "5.4.0",
+  "version": "5.4.1",
   "atlas": "simple",
-  "v540": {"objectIcons": 65, "biomeHexTint": true, "emojiFreeLog": true},
+  "v540": {"objectIcons": 68, "biomeHexTint": true, "emojiFreeLog": true},
   "v530": {"iconography": true, "relictCases": 20, "illustratedBiomes": 16},
   "v520": {
     "activeTaxa": 1000,

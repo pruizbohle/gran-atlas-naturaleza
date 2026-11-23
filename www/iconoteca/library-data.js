@@ -1105,12 +1105,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_tooth"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_tooth",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-bone_short",
@@ -1357,12 +1357,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "parchment_scrap"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "parchment_scrap",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-river_pebble",
@@ -1539,12 +1539,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "field_telescope"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "field_telescope",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-scholar_hat",

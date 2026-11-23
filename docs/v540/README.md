@@ -33,3 +33,6 @@ Una partida nueva solo muestra ya ✦ (marca) y marcas tipográficas (✥ ✓ �
 - El estado se sigue leyendo igual: la región actual conserva su verde oscuro, las bloqueadas se atenúan, las disponibles mantienen el borde discontinuo y las abiertas usan el color pleno del bioma.
 - La biblioteca de iconografía carga la misma hoja de estilos, así que su vista previa de hexágonos muestra el mismo diseño.
 - Los dibujos de los motivos no cambian. Pendiente de revisar con una partida avanzada: contraste del nombre de región sobre los biomas más oscuros (profundo, hadal) y 125 regiones juntas.
+
+## V5.4.1 · Tres objetos pendientes
+`fossil_tooth`, `field_telescope` y `parchment_scrap` pasan a usar su ilustración de OBJ-11 (68 objetos con icono propio). La revisión preliminar pedía diferenciarlos de piezas coleccionables (FOS-05, FOS-12, INS-08); esos coleccionables todavía no están en el juego, así que la comparación queda para cuando se incorporen. Pendientes: `misiones` y `comparativo`.

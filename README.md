@@ -2,11 +2,11 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión actual: 5.4.0**
+**Versión actual: 5.4.1**
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## Estado actual (V5.4.0)
+## Estado actual (V5.4.1)
 
 | Contenido | Cantidad |
 | --- | --- |
@@ -16,11 +16,11 @@ Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el na
 | Láminas zoológicas | 1.690 |
 | Legendarios | 30 |
 | Relictos (registro propio en el Museo) | 20 |
-| Iconos de objetos ilustrados | 65 |
+| Iconos de objetos ilustrados | 68 |
 
 - **V5.2** añadió la Guía del naturalista, que se abre dentro de cada módulo, y retiró las ayudas ficticias de prueba. Detalles en el [informe de V5.2.0](docs/v520/README.md) y en la [auditoría de integración](docs/v520/auditoria.md).
 - **V5.3** introdujo la iconografía naturalista: 63 iconos en WebP, pestañas, motivos de bioma y la [Biblioteca visual](https://pruizbohle.github.io/gran-atlas-naturaleza/iconoteca/biblioteca.html). Informe en [docs/v530](docs/v530/README.md).
-- **V5.4** cierra la iconografía: 61 objetos jugables más con ilustración científica (OBJ-11), hexágonos del mapa con el color de su bioma, y la interfaz y el registro sin emojis. Informe en [docs/v540](docs/v540/README.md).
+- **V5.4** cierra la iconografía: 64 objetos jugables más con ilustración científica (OBJ-11), hexágonos del mapa con el color de su bioma, y la interfaz y el registro sin emojis. Informe en [docs/v540](docs/v540/README.md).
 
 ## Estructura del repositorio
 
@@ -44,7 +44,7 @@ npm ci
 npm run release:verify
 ```
 
-`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.0. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
+`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.1. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
 
 Cada envío a `main` despliega el sitio mediante `.github/workflows/static.yml`.
 

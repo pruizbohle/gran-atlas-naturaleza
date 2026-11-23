@@ -19,16 +19,16 @@
   "counts": {
     "rows": 138,
     "roles": {
-      "existente": 6,
+      "existente": 3,
       "nuevo": 28,
-      "corregido": 102,
+      "corregido": 105,
       "pendiente": 2
     },
-    "files": 118,
-    "bytes": 773564,
-    "totalBytes": 133710543,
+    "files": 121,
+    "bytes": 785466,
+    "totalBytes": 133722445,
     "baselineBytes": 132854722,
-    "offlineFiles": 7221
+    "offlineFiles": 7224
   },
   "emoji": {
     "initial": {
@@ -3908,6 +3908,42 @@
       "sha256": "f4132b4fbf83561dc4b249575956dffd6427cb24fdc5de84968d38a2bb37fa91",
       "uses": [
         "obj-polar_geology_record"
+      ]
+    },
+    {
+      "id": "fossil_tooth",
+      "path": "iconoteca/arte/fossil_tooth.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4078,
+      "sha256": "b28ef385c8ce84ce0812613e318c944622d0d2a11b01147e949e6a2b771eb6e6",
+      "uses": [
+        "obj-fossil_tooth"
+      ]
+    },
+    {
+      "id": "field_telescope",
+      "path": "iconoteca/arte/field_telescope.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3260,
+      "sha256": "0e94a5b5962d52753dfc500338c405026d625f3aae1ef4490607e6519b2bf7ed",
+      "uses": [
+        "obj-field_telescope"
+      ]
+    },
+    {
+      "id": "parchment_scrap",
+      "path": "iconoteca/arte/parchment_scrap.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4564,
+      "sha256": "25342b2f9c7817ca0fbd1e385463f7a54a6e3d25661cf5575beb043164924256",
+      "uses": [
+        "obj-parchment_scrap"
       ]
     }
   ]
