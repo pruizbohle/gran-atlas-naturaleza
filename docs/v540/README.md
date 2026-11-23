@@ -15,3 +15,11 @@ Seis objetos de OBJ-11 conectados: moneda antigua, prismáticos, sombrero de cam
 - `tests/iconography-v530.test.cjs`: 2 de 2.
 - Suite completa en clon superficial: 492 pasan y 273 fallan, idéntico al commit anterior. Los fallos dependen de `git show` sobre commits históricos ausentes. Falta repetirla con historial completo contra la línea base de V5.3 (666 / 219 / 0).
 - Biblioteca en navegador: 68 fichas de objeto, 0 recursos con error.
+
+## Lote 2 · Emojis (en curso)
+Auditoría de emojis: el texto de las 10 pestañas y sus subpestañas, en una partida nueva, solo muestra ✦ (marca), ✥ ✓ ☆ (marcas tipográficas) y 👑 (Corona). El resto de los ~540 emojis del código son datos sin uso visible (`emoji:` de los objetos), viñetas de paisaje, mensajes del registro o textos que aparecen más adelante en la partida.
+
+Hecho hasta ahora (solo presentación; el emoji queda como respaldo si no hay imagen):
+- `iconArt530(id, respaldo)` en `app.js`: ramas de investigación, proyectos y colecciones del Museo y continentes usan la imagen equivalente.
+- Encargos científicos (`commissions-ui-v3370.js`): las 6 categorías usan imagen (monografías, mapa, fósiles, investigación, navegación, mapa polar).
+- Pendiente: viñetas de paisaje por motivos de bioma, mensajes del registro sin emoji y textos de interfaz con prefijo emoji.

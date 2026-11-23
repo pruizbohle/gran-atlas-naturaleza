@@ -3496,7 +3496,7 @@ function renderResearch(){
  const tabs=RESEARCH_BRANCHES.map(b=>{
   const all=RESEARCH_NODES.filter(n=>researchBranchOf(n)===b.id);
   const done=all.filter(n=>n.once?!!state.purchases[n.id]:n.max?(state.purchases[n.id]||0)>=n.max:!!state.purchases[n.id]).length;
-  return `<button type="button" class="research-branch-tab ${selected===b.id?'active':''}" data-action="research-branch" data-id="${b.id}" aria-pressed="${selected===b.id}"><span>${b.icon} ${b.name}</span><small>${done}/${all.length}</small></button>`;
+  return `<button type="button" class="research-branch-tab ${selected===b.id?'active':''}" data-action="research-branch" data-id="${b.id}" aria-pressed="${selected===b.id}"><span>${iconArt530(b.id,b.icon)} ${b.name}</span><small>${done}/${all.length}</small></button>`;
  }).join('');
  const cards=branchNodes.map(node=>{
   const bought=state.purchases[node.id]||0;
@@ -3522,7 +3522,7 @@ function renderResearch(){
    <h3 class="section">🔬 Instituto de Historia Natural</h3>
    <p class="small">Cinco ramas de investigación. Los descubrimientos y las compras de versiones anteriores se conservan. Los costes nuevos son provisionales para pruebas.</p>
    <nav class="research-branch-tabs" aria-label="Ramas de investigación">${tabs}</nav>
-   <div class="research-branch-header"><strong>${branch.icon} ${branch.name}</strong><span class="small">${branch.description}</span></div>
+   <div class="research-branch-header"><strong>${iconArt530(branch.id,branch.icon)} ${branch.name}</strong><span class="small">${branch.description}</span></div>
    <div class="research-node-grid">${cards}</div>
    <div class="research-live-buffs"><strong>📊 Bonificaciones actuales de tu equipo</strong>
      <div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} (${pctBuff(0.50)} de base). Automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo: requiere naturalista'} (${pctBuff(0.38)} de base). Los porcentajes son por búsqueda, con fauna y cupo disponible.</div>
@@ -3872,12 +3872,12 @@ function renderMuseumCuration(){
  const count=museumFossilMountCount(),points=state.museum?.curationPoints||0;
  const sets=MUSEUM_FOSSIL_SETS.map(set=>{
   const done=set.requires.filter(id=>state.museum?.collections?.[id]).length;
-  return '<div class="museum-v317-dig"><strong>'+set.icon+' '+set.name+'</strong>'+
+  return '<div class="museum-v317-dig"><strong>'+iconArt530(set.id,set.icon)+' '+set.name+'</strong>'+
    '<div class="small">'+done+'/'+set.requires.length+' esqueletos completados · '+(done===set.requires.length?'+'+(set.bonus*100).toFixed(1).replace('.',',')+' % de ingresos aplicado':'+'+(set.bonus*100).toFixed(1).replace('.',',')+' % al completar la colección')+'</div></div>';
  }).join('');
  const studies=MUSEUM_CURATORIAL_PROJECTS.map(project=>{
   const req=Object.entries(project.requires).map(([id,qty])=>itemArtInline(id)+' '+ITEMS[id].name+' '+(state.inventory[id]||0)+'/'+qty).join(' · ');
-  return '<div class="museum-v317-dig"><div><strong>'+project.icon+' '+project.name+'</strong>'+
+  return '<div class="museum-v317-dig"><div><strong>'+iconArt530(project.id,project.icon)+' '+project.name+'</strong>'+
    '<div class="small">'+req+'</div><div class="small">+'+project.knowledge+' conocimiento · +'+project.points+' punto(s) de conservación, hasta 20.</div></div>'+
    '<button class="btn" data-action="curate-museum" data-id="'+project.id+'" '+(canCurateMuseum(project.id)?'':'disabled')+'>Investigar</button></div>';
  }).join('');
@@ -4090,7 +4090,7 @@ function renderMuseumCollections(tab){
   '<div class="list">'+pieces.map(p=>{
    const saved=!!state.museum?.collections?.[p.id],ready=museumCollectionReady(p);
    const materials=Object.entries(p.requires).map(([id,qty])=>itemArtInline(id)+' '+ITEMS[id].name+' '+(state.inventory?.[id]||0)+'/'+qty).join(' · ');
-   return '<div class="atlas-region"><div><strong>'+p.icon+' '+p.name+'</strong><div class="small">'+
+   return '<div class="atlas-region"><div><strong>'+iconArt530(p.id,p.icon)+' '+p.name+'</strong><div class="small">'+
      p.description+'</div><div class="small">'+materials+' · Conocimiento '+state.knowledge+'/'+p.knowledge+
      '</div></div><div class="museum-v311-workactions"><button class="btn '+(saved?'alt':ready?'gold':'alt')+'" data-action="catalog-museum" data-id="'+p.id+
      '" '+(ready?'':'disabled')+'>'+(saved?'Catalogada':ready?'Catalogar':'Pendiente')+'</button>'+
@@ -4287,7 +4287,7 @@ function renderMuseumRelicts(){
  }).join('');
  const setRows=MUSEUM_RELICT_SETS.map(set=>{
   const count=set.requires.filter(id=>museumRelictOwned(id)).length,complete=count===set.requires.length;
-  return '<div class="museum-v318-mission"><div><strong>'+set.icon+' '+set.name+'</strong>'+
+  return '<div class="museum-v318-mission"><div><strong>'+iconArt530(set.id,set.icon)+' '+set.name+'</strong>'+
    '<div class="small">'+count+'/'+set.requires.length+' relictos · '+(complete?'Bonificación activa':'Por completar')+
    ' · +'+(set.bonus*100).toFixed(1).replace('.',',')+' % de ingresos del Museo</div></div></div>';
  }).join('');
@@ -4800,6 +4800,19 @@ function renderItemArt(id){
  return globalThis.AtlasItemArt?globalThis.AtlasItemArt.renderItemArt(id):'<svg viewBox="0 0 100 100" aria-hidden="true"></svg>';
 }
 function uiIcon530(id,fallback=''){return globalThis.AtlasIcons530?.image(id)||fallback;}
+// Presentation only: ids whose emoji has an equivalent drawn icon; anything else keeps its emoji.
+const ICON530_BY_ID=Object.freeze({
+ exploracion:'exploracion',naturalismo:'naturalistas',expediciones:'expediciones',museologia:'museo',sociedad:'sociedad',
+ 'Asia':'asia_map','África':'africa_map','Norteamérica':'north_america_map','Sudamérica':'south_america_map','Oceanía':'oceania_map','Polos':'polar_map','Océanos':'biome-oceano',
+ fosil_catalogado:'fossil_fragment',huella_paleontologica:'fossil_track',huellas_teropodos:'fossil_track',sedimentos_estratos:'fossil_plate',
+ carta_historica:'map_fragment',medallon_viajero:'museum_medallion',astrolabio_laton:'brass_compass',diario_explorador:'old_ink',globo_cartografico:'world_map',
+ bone_short:'bone_short',bone_long:'bone_long',carnivore_skull:'carnivore_skull',herbivore_skull:'herbivore_skull',fossil_horn:'fossil_horn',hard_bone:'hard_bone',
+ fossil_plate:'fossil_plate',fossil_sail:'fossil_sail',fossil_rib:'fossil_rib',
+ trex_mount:'carnivore_skull',spinosaurus_mount:'carnivore_skull',carnotaurus_mount:'carnivore_skull',
+ triceratops_mount:'herbivore_skull',stegosaurus_mount:'herbivore_skull',ankylosaurus_mount:'herbivore_skull',iguanodon_mount:'herbivore_skull',pachycephalosaurus_mount:'herbivore_skull',
+ cleaning:'conservacion',tracks:'fossil_track',restoration:'fosiles',skull_lab:'fossil_skull',armored:'fossil_plate'
+});
+function iconArt530(id,fallback='',size=24){const art=Object.hasOwn(ICON530_BY_ID,id)?ICON530_BY_ID[id]:'';return (art&&globalThis.AtlasIcons530?.image(art,size))||fallback;}
 function itemArtInline(id){return '<span class="item-art-inline">'+renderItemArt(id)+'</span>';}
 function renderEmptyItemSlot(slot){
  return globalThis.AtlasItemArt?globalThis.AtlasItemArt.renderEmptySlot(slot):'<svg viewBox="0 0 100 100" aria-hidden="true"></svg>';
