@@ -965,12 +965,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "brass_compass"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "brass_compass",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-sturdy_pack",
@@ -979,12 +979,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "sturdy_pack"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "sturdy_pack",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-field_hat",
@@ -1007,12 +1007,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "feather_cap"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "feather_cap",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-rain_hood",
@@ -1021,12 +1021,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "rain_hood"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "rain_hood",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-amulet",
@@ -1035,12 +1035,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "amulet"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "amulet",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-amber_charm",
@@ -1049,12 +1049,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "amber_charm"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "amber_charm",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-shell_necklace",
@@ -1063,12 +1063,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "shell_necklace"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "shell_necklace",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_fragment",
@@ -1091,12 +1091,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_skull"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_skull",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_tooth",
@@ -1119,12 +1119,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "bone_short"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "bone_short",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-bone_long",
@@ -1133,12 +1133,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "bone_long"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "bone_long",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-carnivore_skull",
@@ -1147,12 +1147,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "carnivore_skull"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "carnivore_skull",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-herbivore_skull",
@@ -1161,12 +1161,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "herbivore_skull"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "herbivore_skull",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_plate",
@@ -1175,12 +1175,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_plate"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_plate",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_sail",
@@ -1189,12 +1189,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_sail"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_sail",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-animal_trace",
@@ -1203,12 +1203,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "animal_trace"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "animal_trace",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-pressed_flower",
@@ -1245,12 +1245,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "map_fragment"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "map_fragment",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-asia_map_piece",
@@ -1259,12 +1259,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "asia_map_piece"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "asia_map_piece",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-asia_map",
@@ -1273,12 +1273,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "asia_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "asia_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-africa_map_piece",
@@ -1287,12 +1287,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "africa_map_piece"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "africa_map_piece",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-africa_map",
@@ -1301,12 +1301,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "africa_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "africa_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-north_america_map_piece",
@@ -1315,12 +1315,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "north_america_map_piece"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "north_america_map_piece",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-north_america_map",
@@ -1329,12 +1329,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "north_america_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "north_america_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-oceanic_quadrant",
@@ -1385,12 +1385,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "heron_feather"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "heron_feather",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-polished_lens",
@@ -1413,12 +1413,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "brass_shard"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "brass_shard",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-old_ink",
@@ -1427,12 +1427,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "old_ink"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "old_ink",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-carved_wood",
@@ -1441,12 +1441,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "carved_wood"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "carved_wood",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-wolf_tooth",
@@ -1455,12 +1455,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "wolf_tooth"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "wolf_tooth",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-owl_feather",
@@ -1469,12 +1469,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "owl_feather"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "owl_feather",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-antler_fragment",
@@ -1483,12 +1483,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "antler_fragment"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "antler_fragment",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-otter_whisker",
@@ -1497,12 +1497,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "otter_whisker"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "otter_whisker",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-boar_tusk",
@@ -1511,12 +1511,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "boar_tusk"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "boar_tusk",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-beaver_tail_scale",
@@ -1525,12 +1525,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "beaver_tail_scale"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "beaver_tail_scale",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-field_telescope",
@@ -1553,12 +1553,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "scholar_hat"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "scholar_hat",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-museum_medallion",
@@ -1567,12 +1567,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "museum_medallion"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "museum_medallion",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_amber",
@@ -1595,12 +1595,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "river_pearl"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "river_pearl",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_track",
@@ -1609,12 +1609,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_track"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_track",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_claw",
@@ -1623,12 +1623,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_claw"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_claw",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_rib",
@@ -1637,12 +1637,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_rib"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_rib",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-fossil_horn",
@@ -1651,12 +1651,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "fossil_horn"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "fossil_horn",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-hard_bone",
@@ -1665,12 +1665,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "hard_bone"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "hard_bone",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-polar_coat",
@@ -1679,12 +1679,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "polar_coat"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "polar_coat",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-sounding_kit",
@@ -1707,12 +1707,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "south_america_map_piece"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "south_america_map_piece",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-south_america_map",
@@ -1721,12 +1721,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "south_america_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "south_america_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-oceania_map_piece",
@@ -1735,12 +1735,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "oceania_map_piece"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "oceania_map_piece",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-oceania_map",
@@ -1749,12 +1749,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "oceania_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "oceania_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-polar_map_piece",
@@ -1763,12 +1763,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "polar_map_piece"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "polar_map_piece",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-polar_map",
@@ -1777,12 +1777,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "polar_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "polar_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-world_map",
@@ -1791,12 +1791,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "world_map"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "world_map",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-asian_spices",
@@ -1805,12 +1805,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "asian_spices"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "asian_spices",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-asian_trade_folio",
@@ -1819,12 +1819,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "asian_trade_folio"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "asian_trade_folio",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-african_textile_sample",
@@ -1833,12 +1833,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "african_textile_sample"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "african_textile_sample",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-north_american_trade_document",
@@ -1847,12 +1847,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "north_american_trade_document"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "north_american_trade_document",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-south_american_cacao",
@@ -1861,12 +1861,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "south_american_cacao"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "south_american_cacao",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-oceanian_nacre",
@@ -1875,12 +1875,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "oceanian_nacre"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "oceanian_nacre",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
     {
       "id": "obj-polar_geology_record",
@@ -1889,12 +1889,12 @@ globalThis.AtlasIconLibrary530 = {
       "old": {
         "object": "polar_geology_record"
       },
-      "icon": "",
-      "source": "AtlasItemArt · SVG vigente",
+      "icon": "polar_geology_record",
+      "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "existente",
+      "status": "corregido",
       "size": 32,
-      "detail": "Objeto jugable con el mismo identificador. Se conserva su lámina nativa."
+      "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     }
   ]
 };

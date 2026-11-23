@@ -19,16 +19,16 @@
   "counts": {
     "rows": 138,
     "roles": {
-      "existente": 61,
+      "existente": 6,
       "nuevo": 28,
-      "corregido": 47,
+      "corregido": 102,
       "pendiente": 2
     },
-    "files": 63,
-    "bytes": 493132,
-    "totalBytes": 133430111,
+    "files": 118,
+    "bytes": 773564,
+    "totalBytes": 133710543,
     "baselineBytes": 132854722,
-    "offlineFiles": 7166
+    "offlineFiles": 7221
   },
   "emoji": {
     "initial": {
@@ -3248,6 +3248,666 @@
       "sha256": "5ad374ac5b56c95b9dd7912af836b48ce559c3e301316737822f6adec0d5e33d",
       "uses": [
         "tomos"
+      ]
+    },
+    {
+      "id": "brass_compass",
+      "path": "iconoteca/arte/brass_compass.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5682,
+      "sha256": "d16e13279e486cc972a4d34921e7ef0392342c98f22f77c3b866e682d2bcdd57",
+      "uses": [
+        "obj-brass_compass"
+      ]
+    },
+    {
+      "id": "sturdy_pack",
+      "path": "iconoteca/arte/sturdy_pack.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5894,
+      "sha256": "976fa6316b58a97d11005970dd0a1f8e18b6d4634537a3dad9e0c479e3ebbf3f",
+      "uses": [
+        "obj-sturdy_pack"
+      ]
+    },
+    {
+      "id": "feather_cap",
+      "path": "iconoteca/arte/feather_cap.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4236,
+      "sha256": "6c72349aaa27d240cf373a863d2582be103584be758a6cf3b19df4f2dc5bce5d",
+      "uses": [
+        "obj-feather_cap"
+      ]
+    },
+    {
+      "id": "rain_hood",
+      "path": "iconoteca/arte/rain_hood.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6142,
+      "sha256": "3dd048044a8a03f634e92e8dcb81fbc05b97d00fda9a035fdedbb2f58b6edb87",
+      "uses": [
+        "obj-rain_hood"
+      ]
+    },
+    {
+      "id": "amulet",
+      "path": "iconoteca/arte/amulet.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5014,
+      "sha256": "3214f7486ba4057b534be18879ae1ef3fb3888a6fb99dcbbd278231b21297cac",
+      "uses": [
+        "obj-amulet"
+      ]
+    },
+    {
+      "id": "amber_charm",
+      "path": "iconoteca/arte/amber_charm.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4784,
+      "sha256": "a67fcf1db7fe9af04381c8ca5a9fff983832058e3ffb45bed96e7b8d4d8eda1d",
+      "uses": [
+        "obj-amber_charm"
+      ]
+    },
+    {
+      "id": "shell_necklace",
+      "path": "iconoteca/arte/shell_necklace.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6712,
+      "sha256": "cc26809c56d1bfa1b79f10a886a9d3acf04085b412c728310b758ee9832dc8f5",
+      "uses": [
+        "obj-shell_necklace"
+      ]
+    },
+    {
+      "id": "fossil_skull",
+      "path": "iconoteca/arte/fossil_skull.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5894,
+      "sha256": "fdac3d0ea027a674c5297c282a7bfbdf541700c9603a295021343a9e4a63cec1",
+      "uses": [
+        "obj-fossil_skull"
+      ]
+    },
+    {
+      "id": "bone_short",
+      "path": "iconoteca/arte/bone_short.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4858,
+      "sha256": "c0abe4abfa1e21a2346ab3ad92b91504615311716b9f34ad57f97837f85fae0c",
+      "uses": [
+        "obj-bone_short"
+      ]
+    },
+    {
+      "id": "bone_long",
+      "path": "iconoteca/arte/bone_long.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 2946,
+      "sha256": "522721c0de9bd62f5526cad663f8d1ec9fe97c75ae244a22bb5c3831c387a9af",
+      "uses": [
+        "obj-bone_long"
+      ]
+    },
+    {
+      "id": "carnivore_skull",
+      "path": "iconoteca/arte/carnivore_skull.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6620,
+      "sha256": "a1d13bd68db869226eea4afa961fb786d0d97e2c1524e8ab8a17a46102d94181",
+      "uses": [
+        "obj-carnivore_skull"
+      ]
+    },
+    {
+      "id": "herbivore_skull",
+      "path": "iconoteca/arte/herbivore_skull.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5324,
+      "sha256": "59233a171b4e09060cc4a5c2a85eca9ee1851e4f03a1ccadc9e5167c5d9416a7",
+      "uses": [
+        "obj-herbivore_skull"
+      ]
+    },
+    {
+      "id": "fossil_plate",
+      "path": "iconoteca/arte/fossil_plate.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6812,
+      "sha256": "7f8cdbfc4bc34a55441545df425e3a9a24d9d7030f9e1118ab8ac2c08dfee518",
+      "uses": [
+        "obj-fossil_plate"
+      ]
+    },
+    {
+      "id": "fossil_sail",
+      "path": "iconoteca/arte/fossil_sail.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3170,
+      "sha256": "1540311f27d4b4e2c709d7c39b0425ceb8c8a9397c522c51288aa086b401574a",
+      "uses": [
+        "obj-fossil_sail"
+      ]
+    },
+    {
+      "id": "animal_trace",
+      "path": "iconoteca/arte/animal_trace.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7846,
+      "sha256": "e301261d0d23a587c546ecc1251b9a9260197b119eb419ff3cd6315d1e4b046c",
+      "uses": [
+        "obj-animal_trace"
+      ]
+    },
+    {
+      "id": "map_fragment",
+      "path": "iconoteca/arte/map_fragment.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6414,
+      "sha256": "7e0d1eb59eb0cc512fc5c551c1c95cac6afb1387722d1fb0fda984d1d949bea5",
+      "uses": [
+        "obj-map_fragment"
+      ]
+    },
+    {
+      "id": "asia_map_piece",
+      "path": "iconoteca/arte/asia_map_piece.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3948,
+      "sha256": "cf32e0a319a477d4385d56ba1d43bc9998e3649e22a91a3a4cf29dad928172cb",
+      "uses": [
+        "obj-asia_map_piece"
+      ]
+    },
+    {
+      "id": "asia_map",
+      "path": "iconoteca/arte/asia_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 2672,
+      "sha256": "c79afa4a4008aa4b124e5c3b4b1d444bbbc021963d4cfa29fc087ef239bf9386",
+      "uses": [
+        "obj-asia_map"
+      ]
+    },
+    {
+      "id": "africa_map_piece",
+      "path": "iconoteca/arte/africa_map_piece.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3278,
+      "sha256": "b958f9961ac41ab4e961742d6adf3c87e20e16f1f711acd39666646992211c84",
+      "uses": [
+        "obj-africa_map_piece"
+      ]
+    },
+    {
+      "id": "africa_map",
+      "path": "iconoteca/arte/africa_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3024,
+      "sha256": "7c1af365d1bcb865d0abcc99df5ee1f9d7dfd269e4fe424afb061bc67f7cc4e2",
+      "uses": [
+        "obj-africa_map"
+      ]
+    },
+    {
+      "id": "north_america_map_piece",
+      "path": "iconoteca/arte/north_america_map_piece.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3642,
+      "sha256": "e5752d80f6c52576219f5c7fc84198623445a8a4659f77ee33eb2751d69d43f3",
+      "uses": [
+        "obj-north_america_map_piece"
+      ]
+    },
+    {
+      "id": "north_america_map",
+      "path": "iconoteca/arte/north_america_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3344,
+      "sha256": "d8c7e2d75d9e80eed4429b9a5989fcb1b7ad791cba7e22acaf37003da302b774",
+      "uses": [
+        "obj-north_america_map"
+      ]
+    },
+    {
+      "id": "heron_feather",
+      "path": "iconoteca/arte/heron_feather.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4346,
+      "sha256": "64edb3e6e38225d813b3c956a6b433d5b7c4cbe6a3b6205feed2dc799b3a2e19",
+      "uses": [
+        "obj-heron_feather"
+      ]
+    },
+    {
+      "id": "brass_shard",
+      "path": "iconoteca/arte/brass_shard.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6514,
+      "sha256": "2c63e8ed29ab54b18702ec20a62faa6a2b0814f4675bdd9a1573230e79f53f91",
+      "uses": [
+        "obj-brass_shard"
+      ]
+    },
+    {
+      "id": "old_ink",
+      "path": "iconoteca/arte/old_ink.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6604,
+      "sha256": "31c949391b5c0179087ef3101498d8b9d22c1c53fb340ddc437d5d9eca940c8c",
+      "uses": [
+        "obj-old_ink"
+      ]
+    },
+    {
+      "id": "carved_wood",
+      "path": "iconoteca/arte/carved_wood.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6086,
+      "sha256": "79becbf5abe7764622c18dd9db2c17ae8aad1d1e8c0b87f9183253ea130c31d6",
+      "uses": [
+        "obj-carved_wood"
+      ]
+    },
+    {
+      "id": "wolf_tooth",
+      "path": "iconoteca/arte/wolf_tooth.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3282,
+      "sha256": "8c3e115cf0ff5f35c12092543e1f7913a3ef3ca658b6a9eb55de227dbc10331d",
+      "uses": [
+        "obj-wolf_tooth"
+      ]
+    },
+    {
+      "id": "owl_feather",
+      "path": "iconoteca/arte/owl_feather.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5878,
+      "sha256": "717632b8e62f6f04b9f0d945da74de3dac8330cd37e5ac312ff446efcc233ee1",
+      "uses": [
+        "obj-owl_feather"
+      ]
+    },
+    {
+      "id": "antler_fragment",
+      "path": "iconoteca/arte/antler_fragment.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4452,
+      "sha256": "dfa62dcf651b32760c95743a5d76418e10beb8407d8e29924e19b9e9d7279ae7",
+      "uses": [
+        "obj-antler_fragment"
+      ]
+    },
+    {
+      "id": "otter_whisker",
+      "path": "iconoteca/arte/otter_whisker.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3308,
+      "sha256": "ec851501a204806b9684d29eb72e20d27b3e9b793b301d2dd2989ea4e5752587",
+      "uses": [
+        "obj-otter_whisker"
+      ]
+    },
+    {
+      "id": "boar_tusk",
+      "path": "iconoteca/arte/boar_tusk.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5104,
+      "sha256": "07148b5495151e5812230a1849e82216d221c30f82599de3bef58b4a9efcf15a",
+      "uses": [
+        "obj-boar_tusk"
+      ]
+    },
+    {
+      "id": "beaver_tail_scale",
+      "path": "iconoteca/arte/beaver_tail_scale.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6260,
+      "sha256": "8e4e944b203b39ab48e3ec143d662c460c31f337cfb8952baa6f17a2184a4de5",
+      "uses": [
+        "obj-beaver_tail_scale"
+      ]
+    },
+    {
+      "id": "scholar_hat",
+      "path": "iconoteca/arte/scholar_hat.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3662,
+      "sha256": "b23ed77c459c9046f482a359f1dee8526f4c30dab2775b24e258c17e6d0012b6",
+      "uses": [
+        "obj-scholar_hat"
+      ]
+    },
+    {
+      "id": "museum_medallion",
+      "path": "iconoteca/arte/museum_medallion.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5276,
+      "sha256": "20eee2ff05d58c4779f73deda38e76fc79a1943c5f24532227a801d925b095a9",
+      "uses": [
+        "obj-museum_medallion"
+      ]
+    },
+    {
+      "id": "river_pearl",
+      "path": "iconoteca/arte/river_pearl.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6066,
+      "sha256": "a0bbb947397f5ed7916b4ed0bf3ce325da24555141e59e1c0534ead2063201fd",
+      "uses": [
+        "obj-river_pearl"
+      ]
+    },
+    {
+      "id": "fossil_track",
+      "path": "iconoteca/arte/fossil_track.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7314,
+      "sha256": "911a4648a2377577df26e5236347cb3801ff21d59b07dc3e40ef167a72a6643c",
+      "uses": [
+        "obj-fossil_track"
+      ]
+    },
+    {
+      "id": "fossil_claw",
+      "path": "iconoteca/arte/fossil_claw.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5254,
+      "sha256": "edb71dea5113cc8ac0c5266107d85d63c6adb31473d1bf32c6b29b4351424a6a",
+      "uses": [
+        "obj-fossil_claw"
+      ]
+    },
+    {
+      "id": "fossil_rib",
+      "path": "iconoteca/arte/fossil_rib.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3970,
+      "sha256": "421dddb75dd2322c18c06bac5e5b9182f9f1d7a8a0bae1a470feacd7e30f2529",
+      "uses": [
+        "obj-fossil_rib"
+      ]
+    },
+    {
+      "id": "fossil_horn",
+      "path": "iconoteca/arte/fossil_horn.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5526,
+      "sha256": "31afba98a2fe4a1ee0e97b484e5b81aed9da02b284818fa51ebfeee105a8d1af",
+      "uses": [
+        "obj-fossil_horn"
+      ]
+    },
+    {
+      "id": "hard_bone",
+      "path": "iconoteca/arte/hard_bone.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7490,
+      "sha256": "7e367d4b82e87206885f7ba894d7f67159ff589c39051b792d9bc84fef35416d",
+      "uses": [
+        "obj-hard_bone"
+      ]
+    },
+    {
+      "id": "polar_coat",
+      "path": "iconoteca/arte/polar_coat.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5316,
+      "sha256": "80067b9c7063f87c056bdcdee4d321b03ec88df4de28ea60c4f71d307ab2a8e8",
+      "uses": [
+        "obj-polar_coat"
+      ]
+    },
+    {
+      "id": "south_america_map_piece",
+      "path": "iconoteca/arte/south_america_map_piece.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3744,
+      "sha256": "f807da48a6367eeb621dd5004d2f780a8263494092d20db6de1e1c590d309288",
+      "uses": [
+        "obj-south_america_map_piece"
+      ]
+    },
+    {
+      "id": "south_america_map",
+      "path": "iconoteca/arte/south_america_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 2234,
+      "sha256": "0207e6072e8bcc979cd41d3fe3275d4d7b843a178cab2db17c8b0940e1c15a68",
+      "uses": [
+        "obj-south_america_map"
+      ]
+    },
+    {
+      "id": "oceania_map_piece",
+      "path": "iconoteca/arte/oceania_map_piece.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3328,
+      "sha256": "22dd892ae439fcdf83512f161662634a08dba957ba6a60003347fc11d731ad1a",
+      "uses": [
+        "obj-oceania_map_piece"
+      ]
+    },
+    {
+      "id": "oceania_map",
+      "path": "iconoteca/arte/oceania_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 2696,
+      "sha256": "ed8d0074b6aabb037bf12a231d7348e5ab2126aacfde64e8586373508965773d",
+      "uses": [
+        "obj-oceania_map"
+      ]
+    },
+    {
+      "id": "polar_map_piece",
+      "path": "iconoteca/arte/polar_map_piece.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4806,
+      "sha256": "ac0bb8563fbad51c66915af502041191445bc2869f7fe3b2abed4f90d56c4b38",
+      "uses": [
+        "obj-polar_map_piece"
+      ]
+    },
+    {
+      "id": "polar_map",
+      "path": "iconoteca/arte/polar_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 2572,
+      "sha256": "fb0baa3b4768228dd06fa6a601cd78c6ef20c0d96af7e60612623a0f57065a8c",
+      "uses": [
+        "obj-polar_map"
+      ]
+    },
+    {
+      "id": "world_map",
+      "path": "iconoteca/arte/world_map.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5312,
+      "sha256": "3fadd8e70f2310380e794904c9b054d454217029a5dc5da0fea79ec5f1d990c4",
+      "uses": [
+        "obj-world_map"
+      ]
+    },
+    {
+      "id": "asian_spices",
+      "path": "iconoteca/arte/asian_spices.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6128,
+      "sha256": "b8741d2daaf65a98a4b3703447b3b15d9442bf3098aecf989eb1d0781f7a7d10",
+      "uses": [
+        "obj-asian_spices"
+      ]
+    },
+    {
+      "id": "asian_trade_folio",
+      "path": "iconoteca/arte/asian_trade_folio.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7252,
+      "sha256": "c5122bd1f756e59dff5f6e16dfad4b1a23004c4f798916dc9ac3aeff6c23c025",
+      "uses": [
+        "obj-asian_trade_folio"
+      ]
+    },
+    {
+      "id": "african_textile_sample",
+      "path": "iconoteca/arte/african_textile_sample.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8200,
+      "sha256": "a7ae1f77b257ac383f2574cd7dae536baa3915a51d04823e88049cafdf79aba7",
+      "uses": [
+        "obj-african_textile_sample"
+      ]
+    },
+    {
+      "id": "north_american_trade_document",
+      "path": "iconoteca/arte/north_american_trade_document.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5284,
+      "sha256": "6b7695ed0559964896169957da43a25189604e1b671b78670cb046c689ac6f95",
+      "uses": [
+        "obj-north_american_trade_document"
+      ]
+    },
+    {
+      "id": "south_american_cacao",
+      "path": "iconoteca/arte/south_american_cacao.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7570,
+      "sha256": "987b3350494df5cecc7485e5594d0ae6ea188a2d05403d873170b321f274f068",
+      "uses": [
+        "obj-south_american_cacao"
+      ]
+    },
+    {
+      "id": "oceanian_nacre",
+      "path": "iconoteca/arte/oceanian_nacre.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5102,
+      "sha256": "13e5fe44948e822e55846bafa094d2ea4972833409a36ced29185cc54b622c15",
+      "uses": [
+        "obj-oceanian_nacre"
+      ]
+    },
+    {
+      "id": "polar_geology_record",
+      "path": "iconoteca/arte/polar_geology_record.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6240,
+      "sha256": "f4132b4fbf83561dc4b249575956dffd6427cb24fdc5de84968d38a2bb37fa91",
+      "uses": [
+        "obj-polar_geology_record"
       ]
     }
   ]
