@@ -1,78 +1,41 @@
-# El Gran Atlas — cronograma vivo (1 de noviembre de 2026)
+# El Gran Atlas — hoja de ruta (23 de noviembre de 2026)
 
-| Etapa | Alcance | Estado |
+Estado de partida: **V5.2.0**. Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
+
+## Completado
+
+| Etapa | Versiones | Resultado |
 | --- | --- | --- |
-| Android Alpha / móvil | Navegación vertical, offline y persistencia local | Completado |
-| Beta 3.0–3.5 | Respaldo JSON, restauración sincronizada, Europa + Asia + África parcial | Implementado; seguir validando con respaldos reales |
-| Beta 3.6 | Fondos IV x1000, 5.000 coronas, ayudas Campo +50/+500, tres encargos científicos | Implementado en código; sujeto a pruebas Android |
-| Próxima iteración | Más encargos científicos regionales y progresión | Propuesto |
-| Próxima fase | Expediciones dirigidas, colecciones científicas y Museo | Propuesto |
-| Expansión | África restante, Norteamérica, Sudamérica y Oceanía; completar objetivo de 900 especies | Propuesto |
-| Experiencia naturalista | Rastros, estaciones, clima, migraciones y sprites | Propuesto |
-| Estabilización | Firma Android estable, actualización sin reinstalar, migraciones y pruebas prolongadas | Prioritario antes de distribución |
+| Android Alpha y móvil | 2.5 – 3.0 | Navegación vertical, uso sin conexión y persistencia local |
+| Europa, Asia y África | 2.1 – 3.12 | Europa y Asia completas; África en etapas |
+| Américas | 3.22 – 3.23 | Norteamérica completa y Sudamérica pulida |
+| Oceanía, Polos y mares | 3.29 – 3.32 | Oceanía, regiones polares y doce mares superficiales |
+| Océanos profundos | 3.33 – 3.34 | Regiones profundas y fosas abisales |
+| Consolidación mundial | 3.35 – 3.44 | 997 especies y 125 regiones, con cartografía del naturalista |
+| Módulos del juego | 3.24 – 3.43 | Bestiario, Museo, Expediciones, Sociedad, Inventario, Campamento y perfil |
+| Catálogo mundial ilustrado | 4.2 – 4.9.6 | 1.000 fichas activas con láminas científicas de todos los grupos |
+| Auditoría y arte | 5.0.1 – 5.0.12 | Auditoría global, rendimiento de arranque y repintado de variantes pigmentarias |
+| Legendarios, relictos y guía | 5.1.2 – 5.2.0 | 30 legendarios, 20 relictos y Guía del naturalista |
 
-## Compatibilidad
-- No modificar gran_atlas_v05 ni el-gran-atlas-save formato 1 sin migración.
-- Las coronas son ficticias y exclusivas del laboratorio de pruebas.
-- Los guardados deben persistir tras reiniciar la app; se preserva la prueba de motor y tick.
-- Android Beta 3.6 se instala de forma independiente de Beta 3.5; transferir por JSON.
+## Pendiente según los informes del repositorio
+
+| Tema | Estado | Fuente |
+| --- | --- | --- |
+| Android estable | APK sin generar. Faltan el certificado real y la prueba en un dispositivo físico | [Informe V5.2.0](docs/v520/README.md), [informe 3.42.0](README_V3420.md) |
+| Pruebas históricas | 219 de 883 pruebas fallan desde antes de V5.2.0. Hay que revisar cuáles son obsoletas y cuáles esconden errores | [Regresión V5.2.0](docs/v520/regresion.json) |
+| Arte pigmentario | Siguiente lote propuesto: 20 animales con variante albina o melánica mejorable | [Próximo lote ART-08](docs/arte-v5012/proximo-lote.md) |
+| Coleccionables e iconos | El desarrollo de coleccionables quedó fuera de la integración de V5.2 | [Auditoría de integración](docs/v520/auditoria.md) |
+
+## Propuestas
+
+Son ideas mías para ordenar el proyecto. No están decididas en ningún informe:
+
+- Mover los más de 60 `README_V*.md` de la raíz a `docs/` y actualizar los enlaces.
+- Crear un `CLAUDE.md` con las reglas del proyecto: no tocar `gran_atlas_v05`, ejecutar `npm run release:verify` antes de publicar y no generar APK sin autorización.
+- Dejar una sola fuente de la versión vigente, ya que hoy aparece en `package.json` y en `www/atlas-release.json`.
+
+## Reglas de compatibilidad
+
+- No modificar `gran_atlas_v05` ni el formato de respaldo `el-gran-atlas-save` versión 1 sin una migración.
 - El prestigio es acumulado y no se consume al viajar.
-
-
-## Beta 3.7 — Misiones, África y Museo
-- África: tres zonas nuevas (Cuerno 83, Okavango 86 y Gabón 89 de prestigio), diez especies nuevas. 13 zonas africanas y 355 especies globales.
-- Sociedad: siete nuevas misiones, incluyendo visitas reales a regiones africanas y colecciones del Museo. Premios únicos.
-- Museo: galería y candidatas ordenadas según mayor precio de muestra, sin modificar valores de renta/coste.
-- Melánicos: paleta negra carbón global y contornos legibles, sin modificar siluetas ni rarezas.
-- Se conserva gran_atlas_v05, formato JSON versión 1. Beta 3.7 usa ID Android independiente para proteger la instalación Beta 3.6.1.
-- Próximos avances: Expediciones dirigidas, Fósiles/Relictos y expansión continental.
-
-
-## Beta 3.8 — África en etapas y expediciones dirigidas
-- Dos regiones: Tierras altas de Etiopía (prestigio 92) y Desierto del Namib (95); África llega a 15 regiones.
-- Diez especies nuevas; catálogo mundial pasa de 355 a 365.
-- Dos reconocimientos dirigidos dentro de Expediciones: con Astillero, Cartografía naval II, Mapa de África y prestigio suficiente. Muestra garantizada, sin visitas ni avistamientos inventados.
-- Se conserva formato el-gran-atlas-save v1 y clave gran_atlas_v05; Beta 3.8 se instala de forma independiente en Android.
-- Próximos avances: expansión africana gradual y prototipo controlado de fósiles/relictos, sin romper la colección.
-
-
-## Beta 3.9 — África gradual y eliminación de círculos
-- Tres áreas: Montañas del Atlas (98), Bosques de miombo (101) y Costa de Mozambique (104), sujetas al mapa de África.
-- 12 especies nuevas: África alcanza 18 regiones, el catálogo mundial 377 animales.
-- Se elimina el círculo como sprite de último recurso. Familias sin retrato particular pasan a siluetas genéricas anatómicas. Ocho nuevos animales reciben retratos diferenciados.
-- La actualización no toca la economía, guardado gran_atlas_v05, JSON v1 ni progreso acumulado.
-- Siguiente versión: completar regiones africanas restantes, refinar sprites basados en familias y primer prototipo de colecciones de fósiles/relictos.
-
-
-## Beta 3.10 — África y primer gabinete de colecciones
-- Dos regiones: Lagos del Rift (prestigio 107) e Islas Seychelles y Aldabra (110); África pasa a 20 regiones.
-- Ocho animales adicionales, catálogo mundial de 385 especies. Cinco nuevos retratos SVG propios.
-- Museo: Fósiles y Relictos ya permiten catalogar cuatro piezas utilizando materiales de expediciones y conocimiento; premio único por pieza, sin ingresos pasivos.
-- Compatible con `gran_atlas_v05`, exportación JSON formato 1 y demás avances; appId Android independiente `com.elgranatlas.naturaleza.beta310`.
-- Siguiente: continuar África de manera gradual, mejorar la presentación de colecciones y revisar equilibrio de expediciones.
-
-## Beta 3.10.1 — Ecología de Rift y Seychelles
-- Corrección de normalización de hábitats y horarios de las 17 especies de las dos regiones nuevas. Se mantienen intactas las fichas originales ya definidas para esas especies.
-- Evita que león y guepardo queden inaccesibles y restaura la distribución correcta del flamenco, pelícano y rapaces, incluso en invierno.
-- Sin cambios de rareza, economía, guardado, inventario ni nuevas mecánicas. APK Android independiente, traslado de JSON.
-
-
-## Beta 3.11 — Cinco salas del Museo
-- Cinco pestañas: Exposiciones (vitrinas visuales de todos los tipos), Muestras (especies con monografía 5/5 ordenadas por ingreso/segundo), Fósiles (taller), Relictos (hallazgos excepcionales sin Atlas) y Artefactos (colecciones históricas).
-- Los antiguos IDs carta_historica y medallon_viajero se presentan en Artefactos, conservando su registro y sin exigir recompra.
-- Materiales: diente fósil y cráneo fósil encontrados por expediciones, misiones y avistamientos; huesos cortos y largos y cráneo carnívoro en el taller.
-- Reconstrucción de T. rex: 10 huesos largos + 25 huesos cortos + 1 cráneo carnívoro. Requiere en total 90 fragmentos fósiles, un cráneo fósil y 10 dientes fósiles. Montaje único y exhibible, no figura en Atlas.
-- Cuatro relictos regionales de hallazgo muy raro: celacanto, león del Atlas, murciélago de Seychelles y cocodrilo enano de Gabón. No suman avistamientos ni especies a la colección principal.
-- Dos encargos científicos de prospección con materiales, una sola vez; botines nuevos en viajes/avistamientos conservan recompensas existentes.
-- Continúa sin alterar gran_atlas_v05, JSON v1, cap. de 12 exposiciones animales, ganancias previas y sprites originales. Android Beta 3.11 tiene appId independiente.
-- Próximo: ampliar fósiles (especies paleontológicas), mejorar dibujos de relictos y progreso de África.
-
-
-## Beta 3.12 — Dinosaurios, artefactos, relictos y dos regiones africanas
-- 3 reconstrucciones nuevas: Triceratops, Estegosaurio y Espinosaurio, cada una con silueta SVG propia y receta única. Se añaden los componentes reutilizables: cráneo herbívoro, placa dorsal y espina de vela.
-- 3 artefactos con materiales encontrados en expediciones y misiones: Astrolabio de latón (piezas de latón, lente, moneda), Diario de explorador (tintero, pergaminos, mapas), Globo cartográfico (latón, madera tallada, mapas). Los artefactos anteriores permanecen intactos.
-- 2 relictos exclusivos del Museo: tortuga angonoka (Madagascar) y pez pulmonado africano (Grandes Lagos). Son extremadamente raros y nunca cuentan en Atlas.
-- 2 zonas africanas: Humedales de Bangweulu (113 prestigio) y Lowveld y Kruger (116), con 8 especies nuevas. Total África: 22; fauna mundial: 393. Meta orientativa de primera etapa: 24 regiones africanas, **2 por agregar** (no es un límite definitivo de expansión).
-- Pruebas ampliadas de recetas, persistencia, muestras, artefactos, nueva fauna/ecología y separación de estadísticas.
-- Retrocompatibilidad: clave gran_atlas_v05 y respaldo JSON v1. Android Beta 3.12 con identificador independiente para mantener Betas anteriores.
-- Próximo: 2 regiones africanas para cerrar la primera etapa, revisar sprites por familia y enriquecer piezas fósiles.
+- Cada cambio visual conserva rutas, etiquetas de juego e identificadores de guardado.

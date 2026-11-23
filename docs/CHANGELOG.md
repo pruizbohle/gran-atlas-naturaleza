@@ -1,0 +1,368 @@
+# Historial de versiones
+
+Archivo del antiguo `README.md`, movido aquí para que el README principal describa solo el estado actual del proyecto. Va de la versión más reciente a la más antigua: serie 4 (4.9.6 a 4.2.1), serie 3 (3.44.0 a 3.19.2b) y las primeras versiones 2.x y 1.x. Los informes de la serie 5 están en [`v520/`](v520/README.md), [`relictos-v50/`](relictos-v50/README.md), [`auditoria-v501/`](auditoria-v501/README.md) y [`arte-v505/`](arte-v505/README.md) en adelante.
+
+## El Gran Atlas · Catálogo mundial ilustrado (V4.9.6)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.6](cientifica-v496/README.md) · [Auditoría V5.0](cientifica-v496/auditoria-v50.md)
+
+## Serie 4 · Fauna de las profundidades (V4.9.5)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.5](cientifica-v495/README.md) · [Plan V4.9.6](cientifica-v495/plan-v496.md)
+
+## Serie 4 · Peces de arrecife y cierre del catálogo mundial (V4.9.3)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.3](cientifica-v493/README.md) · [Plan V4.9.5](cientifica-v493/plan-v495.md)
+
+## Serie 4 · Peces dulceacuícolas y estuarinos (V4.9.2)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.2](cientifica-v492/README.md) · [Plan V4.9.3](cientifica-v492/plan-v493.md).
+
+## Serie 4 · Salmónidos y Remonte (V4.9.1)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.1](cientifica-v491/README.md) · [Plan V4.9.2](cientifica-v491/plan-v492.md).
+
+## Serie 4 · Tiburones, rayas y actualización de la PWA (V4.9.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.0](cientifica-v490/README.md) · [Plan V4.9.1](cientifica-v490/plan-v491.md).
+
+## Serie 4 · Anfibios (V4.8.2)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.2](cientifica-v482/README.md) · [Plan V4.9](cientifica-v482/plan-v49.md).
+
+## Serie 4 · Tortugas, crocodilianos y tuátara (V4.8.1)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.1](cientifica-v481/README.md) · [Inventario V4.8.2](cientifica-v481/plan-v482.md).
+
+## Serie 4 · Serpientes y lagartos (V4.8.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.0](cientifica-v480/README.md) · [Inventario V4.8.1](cientifica-v480/plan-v481.md).
+
+## Serie 4 · Paseriformes y cierre de aves (V4.7.4)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.4](cientifica-v474/README.md) · [Inventario de reptiles y anfibios](cientifica-v474/plan-herpetologia.md).
+
+## Serie 4 · Aves arborícolas, chucao y sapo pulga (V4.7.3)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.3](cientifica-v473/README.md) · [Inventario V4.7.4](cientifica-v473/plan-v474.md).
+
+## Serie 4 · Aves terrestres, corredoras y galliformes (V4.7.2)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.2](cientifica-v472/README.md) · [Inventario V4.7.3](cientifica-v472/plan-v473.md).
+
+## Serie 4 · Aves acuáticas y marinas (V4.7.1)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.1](cientifica-v471/README.md) · [Preparación de V4.7.2](cientifica-v471/plan-v472.md).
+
+## Serie 4 · Rapaces diurnas y nocturnas (V4.7.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.0](cientifica-v470/README.md) · [Preparación de V4.7.1](cientifica-v470/plan-v471.md).
+
+## Serie 4 · Mamíferos acuáticos (V4.6.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Cierre de Mammalia](cientifica-v460/README.md) · [Plan de aves](cientifica-v460/plan-aves.md).
+
+## Serie 4 · Mamíferos terrestres restantes (V4.5.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.5.0](cientifica-v450/README.md).
+
+## Serie 4 · Ilustración científica clásica y ungulados (V4.4.0)
+
+[Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.4.0](cientifica-v440/README.md) · [Estándar artístico](cientifica-v440/estandar.md).
+
+## Serie 4 · Primates (V4.3.0)
+
+[Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.3.0](naturalista-v430/README.md).
+
+
+## Serie 4 · Consolidación naturalista (V4.2.1)
+
+[Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Estándar artístico](naturalista-v421/estandar.md) · [Informe V4.2.1](naturalista-v421/README.md).
+
+
+## 3.44.0 · Cartografía del naturalista
+
+997 especies, 125 regiones y 1.829 asociaciones zoológicas. Patagonia reorganizada y nuevos bosques templados e islas, conservando IDs y progreso. Rapa Nui es un expediente especial.
+
+[Laboratorio GM-06](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-cartografia-gm06.html) · [Informe](gm06/cierre-validacion.md)
+
+## 3.43.0 · Campamento y perfil del naturalista
+
+Campamento reúne Astillero, Caravana, Taller, Excavaciones y Prospecciones, con botón **Volver al Campamento** en cada instalación. El avatar agrupa Perfil, Estadísticas, Guardar y restaurar, y Sobre; incluye ocho retratos y perfil opcional compatible con los respaldos existentes. Se mantienen catálogo, economía, trabajos pendientes y guardado local. [Informe 3.43.0](../README_V3430.md).
+
+## 3.42.0 · Android preparado y continuidad de partidas
+
+Respaldo e importación reforzados, dependencias fijas y candidato vinculado a firma, contenido, run y commit. Android sigue pendiente del certificado real y la prueba física; no hay APK 3.42.0 publicado. [Informe y pasos del propietario](../README_V3420.md).
+
+## 3.41.0 · Experiencia del naturalista y estabilidad móvil
+
+Brújula opcional en Atlas, atajos informativos con retorno, Sociedad paginada y avisos agrupados. Sin cambios de catálogos, economía ni partidas. [Informe, mediciones y estado Android](../README_V3410.md).
+
+## 3.40.0 · Inventario, Cartografía y Trueques Regionales
+
+Inventario con buscador, filtros y planificador; mapas de Sudamérica, Oceanía y Polos; Mapamundi no destructivo y siete mercancías exclusivas de trueques regionales. Se conservan los accesos históricos y el guardado. [Informe, campañas y validación](../README_V3400.md).
+
+## 3.39.0 · Expediciones y Comercio II
+
+Diez contratos científicos y cuatro manifiestos opcionales, con reserva de progresión, confirmaciones y recibos permanentes. Se conservan los retornos originales, el catálogo mundial y las partidas. [Informe y validación](../README_V3390.md).
+
+## 3.38.0 · Museo avanzado
+
+Doce exposiciones temáticas dentro de las cinco salas originales, con diplomas permanentes y montaje actual diferenciado. Sin premios económicos ni cambios de renta. [Informe y validación](../README_V3380.md).
+
+## 3.37.0 · Encargos del naturalista
+
+Sociedad → Misiones: 24 encargos nuevos y 13 originales, cadenas, tres destacados y premios únicos. Se conservan los 80 logros y las partidas anteriores. [Informe y validación](../README_V3370.md).
+
+## 3.36.0 · Logros y Sociedad
+
+80 reconocimientos permanentes, seis categorías y cuatro pestañas internas de Sociedad. Se conservan las misiones y las partidas anteriores. [Informe y validación](../README_V3360.md).
+
+## El Gran Atlas 3.35.0 · Consolidación mundial
+
+945 identidades, 113 regiones y 1744 presencias. Tres clasificaciones corregidas, cuatro tiburones diferenciados y laboratorio mundial; sin altas, eliminaciones ni cambios globales de economía. Guardado `gran_atlas_v05` conservado. [Diagnóstico completo, pruebas y límites](../README_V3350.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualización PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3350.html) · [Laboratorio mundial](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-mundial-v3350.html).
+
+## El Gran Atlas 3.34.0 — Fosas abisales
+
+GM-04 queda completo con dos fosas, sondeo extraordinario y tres presencias trazadas: **945 especies, 113 regiones y 1744 presencias**. El Atlas oceánico reúne 12 mares superficiales, 5 sectores profundos y 2 fosas. Se reutilizan el pez trípode y el equipo científico; las muestras hadales son reconstrucciones lúdicas que exceden las capacidades históricas de 1842. Las partidas y operaciones de 3.33.0 siguen siendo compatibles.
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.34.0](../README_V3340.md) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3340.html) · [Laboratorio abisal](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-abisal-v3340.html)
+
+Prestigio 475/485, sin consumirlo. No se genera APK ni se interviene la firma Android. [Diagnóstico de cierre GM-01–GM-04](gm04c/world-closure.md): totales, cobertura e incidencias para priorizar GM-05, sin iniciarlo automáticamente.
+
+
+## 3.33.0 — Océanos profundos
+
+Cinco regiones profundas, 44 presencias y 20 identidades nuevas: 943 especies, 111 regiones y 1741 presencias. Sondeo y muestreo científico con operaciones persistentes, equipo de sondeo y progresión +9 hasta 465. [Informe 3.33.0](../README_V3330.md).
+
+## El Gran Atlas 3.32.0 — Mares superficiales
+
+Doce mares jugables, 192 registros originales y 95 identidades nuevas: **923 especies, 106 regiones y 1.697 presencias**. Incluye todos los continentes y Polos, Comercio offline y prestigio +8 sin consumirlo. Las cinco preparaciones anteriores y el Cuadrante transatlántico siguen siendo útiles.
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.32.0](../README_V3320.md) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3320.html) · [Laboratorio marino](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-marino-v3320.html)
+
+Android y su firma estable permanecen independientes. No se generan APK debug. Las regiones profundas y abisales siguen fuera de esta versión.
+
+
+## El Gran Atlas 3.31.0 — Regiones polares
+
+Siete regiones jugables separadas entre Ártico y Antártida, 21 identidades nuevas y 45 presencias. Catálogo mundial: **828 especies, 94 regiones y 1.505 presencias**. Incluye Comercio 3.30.0, preparación polar fabricada y prestigio +7 sin consumirlo. Partidas y viajes pendientes compatibles.
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.31.0](../README_V3310.md) · [Actualización con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3310.html) · [Laboratorio polar](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-polar-v3310.html)
+
+Android y su firma permanente continúan como trabajo independiente; no se genera APK debug.
+
+
+## El Gran Atlas v3.29.0 — Oceanía
+
+Ocho regiones, 97 identidades y 131 presencias nuevas; catálogo mundial de 807 identidades y 87 regiones. Guardados compatibles, PWA con actualización segura y funcionamiento offline. [Informe y pruebas](../README_V3290.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3290.html) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-arte-oceania-v3290.html).
+
+Android adopta una firma permanente nueva y una migración manual con respaldo/restauración. La web se publica independientemente; el APK final espera clave y validación en dispositivo. [Pasos desde tu PC](../README_ANDROID_FIRMA_PERMANENTE.md).
+
+## El Gran Atlas v3.28.0 — Expediciones del naturalista
+
+Mesa de navegación e Instituto renovados, con ocho rutas, cinco ramas y correcciones de finalización anticipada y dependencias múltiples. Mantiene 710 especies, 79 regiones, recompensas y partidas. [Informe, capturas y pruebas](../README_V3280.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-expediciones-investigaciones-v3280.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3280.html).
+
+## El Gran Atlas v3.27.0 — Museo de Historia Natural
+
+Cinco salas renovadas con vitrinas ilustradas, fichas interactivas y Muestras paginadas. Se conservan 710 especies, 79 regiones, economía y partidas. [Informe, capturas y pruebas](../README_V3270.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-museo-v3270.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3270.html).
+
+## El Gran Atlas v3.26.0 — Bestiario del naturalista
+
+Colección ilustrada con búsqueda de nombres conocidos, filtros combinables, avistamientos, fichas emergentes y rutas seguras a Atlas/Campo. Mantiene 710 especies, 79 regiones y 32 tarjetas por página. [Informe y capturas](../README_V3260.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-bestiario-v3260.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3260b.html).
+
+## El Gran Atlas v3.25.0 — Cuaderno del naturalista
+
+Cuaderno renovado como diario naturalista: lámina protagonista, selector móvil compacto y cinco sellos con objetivos reales de investigación. Se conservan las 710 especies, 79 regiones, reglas y partidas. [Informe, comparación y pruebas](../README_V3250.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-cuaderno-v3250.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3250.html).
+
+## El Gran Atlas v3.24.0 — Estabilización global
+
+Cierre de AM-01 a AM-06: 710 especies, 79 regiones y cinco continentes. Bestiario de 32 tarjetas por página, con una reducción medida del 91,9 % en apertura y 95,5 % en reapertura bajo CPU ×4. 294 pruebas de regresión aprobadas. [Informe y evidencia](../README_V3240.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3240.html).
+
+## El Gran Atlas v3.23.1 — Sudamérica pulida
+
+131 especies auditadas, 36 ilustraciones conservadas y 95 intervenidas. Se mantienen las diez regiones, las 192 presencias y el catálogo mundial de 710 especies. [Informe y evidencia visual](../README_V3231.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio comparativo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-sudamerica-v3230.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3231.html).
+
+## El Gran Atlas v3.22.0 — Norteamérica completa
+
+14 regiones jugables, 206 asignaciones del Excel y 128 identidades taxonómicas (129 binomios de origen, con Pecari/Dicotyles como sinónimos). [Informe y validación](../README_V3220.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-norteamerica-v3220.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3220.html).
+
+## Auditoría AM-01 · Preparación de las Américas
+
+[Informe de fauna, regiones e ilustraciones](americas-audit.md) · [Plan AM-02 a AM-06](americas-implementation-plan.md). Fase documental: no incorpora especies ni cambia la versión jugable.
+
+## El Gran Atlas v3.21.2 — Actualización de navegador y PWA
+
+Corrige las instalaciones que seguían mostrando la malla anterior desde su caché. [Actualizar conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar.html?version=3.21.2) · [Diagnóstico y verificación](../README_V3212.md).
+
+## El Gran Atlas v3.21.1b — Atlas continental simple
+
+Corrección de alcance: 73 celdas en lugar de 406, siluetas compactas y las 57 regiones conservadas. [Informe de la corrección](../README_ATLAS_SIMPLE.md) · [Comparación cartográfica](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-atlas-v3211b.html) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/).
+
+## El Gran Atlas v3.21.1 — Atlas interactivo
+
+Cartografía jugable con selección parcial de hexágonos, desplazamiento táctil, zoom y ficha compacta. [Informe, medidas y archivos](../README_V3211.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio del Atlas](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-atlas-v3211.html).
+
+## El Gran Atlas v3.21.0 — Campo jugable
+
+Escenas de exploración para doce biomas, encuentros protagonistas y acción, progreso y naturalistas visibles en el primer pantallazo móvil. [Informe, mediciones y archivos](../README_V3210.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio de Campo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-campo-v3210.html).
+
+## El Gran Atlas v3.20.0 — Optimización y estabilidad
+
+Bestiario más ligero, caché de categorías, recuperación de guardados y actualización offline coherente. [Diagnóstico, mediciones y validación](../README_V3200.md).
+
+## El Gran Atlas v3.19.9 — Pulido artístico definitivo
+
+Mamíferos, peces, Legendarios y relictos refinados. [Informe y validación](../README_V3199.md) · [Laboratorio comparativo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-pulido-v3199.html).
+
+## El Gran Atlas v3.19.8 — Inventario ilustrado
+
+52 objetos y 8 estudios con láminas SVG originales. [Informe y validación](../README_V3198.md) · [Laboratorio de objetos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-objetos.html).
+
+## El Gran Atlas v3.19.7 — Especímenes excepcionales
+
+Cuatro categorías visuales, 12 individuos legendarios con ilustraciones propias y aparición única por partida. [Informe y probabilidades](../README_V3197.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-especiales.html).
+
+## El Gran Atlas v3.19.6 — Albinismo y melanismo
+
+Pigmentación centralizada, conservación de anatomía y migración segura de descubrimientos históricos. [Informe de versión](../README_V3196.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-pigmentacion.html).
+
+## El Gran Atlas v3.19.2b · Herpetario ilustrado
+
+Pulido artístico de 45 especies del catálogo. [Cambios, revisión visual y validación](../README_V3192b.md).
+
+## v2.5.1 — Diseño móvil compacto y economía de pruebas
+- Menor altura de cabecera, barra inferior, estadísticas y tarjetas.
+- Filtros de Campo plegables, Cuaderno con selector de especie, Inventario compacto.
+- Nuevas partidas parten con £420 de prueba; el saldo de partidas existentes se conserva.
+- Coronas simuladas canjeables 1:1 por libras, sin pagos reales.
+- Caché PWA actualizado y clave de partida local sin cambios.
+
+## v2.4.2
+- Mejora exclusiva de sprites.
+- Corrección del Cálao rinoceronte (ya no usa silueta de rinoceronte).
+- Corrección del Desmán ibérico (ya no usa silueta de tortuga).
+- Nuevo Frailecillo atlántico, más cercano al frailecillo corniculado.
+- Erizos renovados.
+- Familias homologadas: gatos, jabalíes, liebres/conejos y zorros, con mejor color y patrón.
+- Ajustes visuales adicionales de detalle y color.
+
+## v2.4.1 — Corrección de carga
+- Restaurados datos y funciones de Inventario y Expediciones (ITEMS, VOYAGES, recetas y botín).
+- Renderizado diferido por pestaña para impedir que un fallo en una sección bloquee toda la interfaz.
+- Sociedad actualizada con sus tres pestañas y Publicaciones con subpestañas.
+- Se conserva almacenamiento local `gran_atlas_v05` y el progreso de partidas anteriores.
+- Pruebas de humo en Chromium: 10 módulos y subpestañas, nueva partida y partida previa, viajes, intercambio de libras por conocimiento.
+
+## v2.4
+- Ayudas de campo para acelerar avistamientos y conocimiento.
+- Atlas por continentes con estados candado / desbloquear / viajar.
+- Investigación rediseñada como árbol de habilidades.
+- Museo con submódulos de exposiciones, fósiles y relictos.
+- Sociedad con Subvenciones, Publicaciones y Misiones.
+- Bestiario con ordenamiento por abecedario, rareza y tipo.
+- Corona con adquisición estética de moneda premium.
+
+## El Gran Atlas v2.3 — Asia completa / Inventario por pestañas
+
+- 11 zonas nuevas de Asia basadas en el Excel original: 21 regiones de Asia (31 regiones totales contando Europa).
+- 103 especies únicas nuevas; se conserva el identificador y progreso de especies compartidas.
+- Prestigio mínimo 10, 12, 14… 50; **no se consume** y sigue requiriendo Cartografía de Asia.
+- Inventario: Equipo (3 slots y fabricación), Animales, Expedición y Coleccionables (mapas y fósiles).
+- Preservación de la clave del guardado local y compatibilidad de partidas anteriores.
+- Dimorfismo ilustrado en 7 especies asiáticas nuevas con diferencias visuales notorias (pavo real, pato mandarín, faisanes, antílope negro y ciervo sika).
+- Los sprites nuevos utilizan siluetas SVG específicas para varias familias (elefantes, pangolines, cobras, rinocerontes, pavos reales, cálaos, etc.). Algunos animales comparten forma base, con color y detalles de especie.
+
+### Instalación
+
+Sube el contenido de `www/` reemplazando los archivos correspondientes del sitio anterior, sin alterar los datos guardados en el navegador. Es recomendable respaldar la partida antes de publicar.
+
+## v2.2 — Cinco regiones más y herpetofauna
+- Cinco hexágonos oficiales del Excel de 900 especies: Urales, Siberia Oriental, Kamchatka, Gobi, Himalaya.
+- 57 registros regionales; 29 especies nuevas sin duplicar nombre científico.
+- Prestigio mínimo asiático: 10/12/14/16/18/20/22/24/26/28 (sin gastar prestigio).
+- Migración automática: las primeras cinco zonas que ya eran accesibles en v2.1 siguen accesibles.
+- Mejoras visuales de lagartos, sapos, salamandras y tortugas; sprites específicos adicionales para nuevos animales asiáticos.
+- Objetos: Parte de mapa de África (botín de expediciones) y receta de Mapa de África con 10 fragmentos. África aún no está disponible.
+- El guardado conserva la misma clave local.
+
+## v2.1 — Tres nuevas zonas asiáticas
+
+- Siberia Occidental (HX-02-13), Siberia Central (HX-03-14) y Mongolia (HX-04-13), extraídas del atlas de fauna Excel.
+- Se comparten especies por nombre científico para conservar avistamientos, investigación y variantes.
+- Las cinco regiones asiáticas requieren Cartografía de Asia y un prestigio mínimo acumulado de 1/2/3/4/5 puntos, respectivamente. **No se gastan puntos de prestigio al viajar ni al habilitar una región**.
+- Regiones asiáticas ya abiertas en v2.0 se mantienen por compatibilidad, incluso si el prestigio actual es inferior al nuevo mínimo.
+- Nuevas siluetas SVG y variantes por especie, incluidos dimorfismos del gallo lira y la gacela de Mongolia.
+
+### Regla de acceso a Asia (definitiva v2.1)
+- Cartografía de Asia es obligatoria.
+- Tener como mínimo 1/2/3/4/5 de prestigio acumulado habilita respectivamente Cáucaso, Anatolia, Siberia Occidental, Siberia Central y Mongolia.
+- **El prestigio nunca se descuenta al acceder a las regiones asiáticas.**
+- Partidas antiguas que ya tenían regiones asiáticas habilitadas conservan el acceso.
+
+## v2.0 — Comienzo de Asia
+
+- Europa permanece íntegra (10 hexágonos). Se suman 2 regiones del atlas de 900 especies:
+  - **HX-03-13 — Cáucaso**: 10 especies.
+  - **HX-03-15 — Anatolia**: 10 especies.
+- Se incorporan 6 especies nuevas (leopardo persa, tur del Cáucaso oriental, gamo, lagarto de cristal oriental, caracal y cabra salvaje); las restantes comparten sus identificadores e investigación con Europa.
+- Sprites SVG específicos para las 6 especies nuevas y un nuevo sprite de tortuga griega que también aparece en Europa.
+- Dimorfismo sexual: tur, gamo y cabra salvaje (observación macho/hembra mediante el sistema 1.9.3).
+- **Desbloquear Asia**: reunir 10 «Partes de mapa de Asia» en expediciones, fabricar «Mapa de Asia» en Inventario e investigar «Cartografía de Asia» (requiere «Cartografía naval II», £800 y 650 conocimiento). Una vez desbloqueado, Cáucaso y Anatolia son accesibles desde Atlas. El prestigio europeo no salta este requisito.
+- Se conservan guardado y progreso; los cambios no reinician la partida.
+
+### Comprobaciones recomendadas
+1. Antes de la cartografía, Asia debe aparecer cerrada en Atlas.
+2. Tras comprarla, ambas regiones deben habilitarse y permitir avistamientos manuales y automáticos.
+3. Las especies comunes con Europa deben conservar los contadores previos.
+4. En Cuaderno, las nuevas especies con dimorfismo deben revelar macho y hembra por separado.
+
+## v2.0 — Dimorfismo sexual
+- Registro de observaciones de macho y hembra para 12 especies con dimorfismo visual evidente.
+- En el Cuaderno, dos sprites diferenciados aparecen al observar cada sexo; el ejemplar pendiente permanece oculto.
+- La investigación 4/5 puede seguir requiriendo alimentación o dimorfismo completo (ambos sexos).
+- Los especímenes raros (leucístico, melánico, notable) son independientes de este mecanismo.
+- Guardado local compatible con partidas anteriores: logros antiguos de dimorfismo se migran a comparación completa.
+- Sin áreas nuevas ni cambios a Asia, economía, avistamientos o Museo.
+
+## v1.9.2 · Pulido gráfico
+- Nuevos sprites diferenciados por especie o familia (aves pequeñas, acuáticas, rapaces, topillos, lirones, mustélidos y anfibios).
+- Variante melánica: recoloración consistente del SVG final, incluyendo los colores escritos directamente en las siluetas. Los ojos conservan brillo ámbar.
+- Se mantienen intactos los datos de partida, mecanismos de progresión, expediciones y economía.
+
+## Novedades v1.9.1
+- Corrección reforzada de sprites melánicos para que se vean negros/grises oscuros.
+- Variantes observadas ahora en disposición horizontal.
+- Diferenciación cromática adicional en topillos y aves pequeñas.
+- Salamandras sin variante melánica; pasan a Leucística/Notable.
+- Nuevo objeto Parte de mapa de Asia + receta de Mapa de Asia.
+- Nueva investigación Cartografía de Asia.
+- Botón de prueba para finalizar expediciones al hacer clic.
+
+## Novedades v1.9
+- Pasada centrada solo en sprites.
+- Revisión premium de mamíferos, aves, reptiles y anfibios.
+- Variantes melánicas reforzadas con siluetas oscuras y contraste interno.
+- Mayor diferenciación entre especies frecuentes del atlas europeo.
+
+## Novedades v1.8
+- Redistribución ecológica de fauna por bioma, horario y estación.
+- Máximo 4 biomas jugables por hexágono.
+- Clasificación en Bestiario: clase y grupo, revelada con la investigación.
+- Revisión premium de sprites y melánicos más oscuros.
+- Biomas globales previstos a futuro: bosque, pradera, río, costa, tundra, montaña, humedal, mar abierto, estepa, mediterráneo, desierto, selva y sabana.
+
+## Novedades v1.7
+- Revisión amplia de sprites con mejores siluetas base por familia.
+- Cuaderno más compacto y con la ficha de especie más visible.
+- Resumen de acciones automáticas en el Diario.
+- Reincorporación de biomas faltantes en las regiones europeas.
+
+## El Gran Atlas v2.1
+
+- Datos europeos desde Excel: 10 hexágonos, 118 especies únicas y 250 asignaciones regionales.
+- Conserva avistamientos de especies anteriores por identificador; migra la selección de zona antigua al hexágono oficial más cercano.
+- Avistamientos automáticos ahora visibles en la escena.
+- No se reinicia almacenamiento local.
+
+Abrir www/index.html desde Live Server.
