@@ -4299,7 +4299,7 @@ function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34
 function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0)+(state.equipment.necklace==='museum_medallion'?0.10:0)+museumFossilSetBonus()+museumCurationBonus()+museumRelictSetBonus());}
 // Orden de mayor precio de muestra a menor, sin cambiar la economía.
 function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
-function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
+function museumCapacity(){return [0,3,7,12,18,25][state.museum.wing] || 12;}
 function expandMuseum(){
  const next=MUSEUM_WINGS[state.museum.wing];
  if(!next || state.prestige<next.prestige || state.money<next.cost)return;
@@ -5366,6 +5366,7 @@ function handlePanelAction(e){
       if(el.dataset.m27Token!==undefined||act.startsWith('m27-')){museumAction3270(act,el.dataset.m27Token,el.dataset.m27Qty,el);return;}
     }
     // M-3270 END actions
+    if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle(id);return;}
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
       if(act==='b26-open'){openBestiaryModal3260(Number(el.dataset.b26Slot),el);return;}
@@ -7890,6 +7891,49 @@ if(globalThis.AtlasMuseumCuration3380){
   renderSociety=function(){
    if(state.societyView!=='rank')return societyBefore560();
    return globalThis.AtlasSociety3360?globalThis.AtlasSociety3360.layout(state,achievementContext3360(),rankPanel560()):'<section class="card stack">'+rankPanel560()+'</section>';
+  };
+ }
+
+ // Beta 5.6.0 · Museo: niveles 4 y 5 y gabinetes de colección (sustituyen a la sala "Muestras").
+ if(B){
+  MUSEUM_WINGS.push({level:4,name:'Pabellón de ciencias (BETA)',cost:50000,prestige:60},{level:5,name:'Gabinete de maravillas (BETA)',cost:500000,prestige:150});
+  const CABINETS=['Botánica','Geología','Oceanografía','Historia','Historia natural y exploración'];
+  const SLOTS=[0,4,8,12,16,20];
+  const cabOf=new Map();
+  for(const it of B.items)if(it[2]===0||it[2]===2)cabOf.set(it[0],it[3]);
+  const cabState=()=>{state.museum.cabinets=state.museum.cabinets&&typeof state.museum.cabinets==='object'?state.museum.cabinets:{};return state.museum.cabinets;};
+  const slots560=()=>SLOTS[state.museum.wing]||SLOTS[SLOTS.length-1];
+  const toggle=id=>{
+   const gab=cabOf.get(id);if(!gab||!ITEMS[id])return;
+   const cab=cabState(),list=cab[gab]=Array.isArray(cab[gab])?cab[gab]:[];
+   const at=list.indexOf(id);
+   if(at>=0){list.splice(at,1);pushLog('Gabinete · retirada: '+ITEMS[id].name);}
+   else{
+    if(!(state.inventory[id]>0)||list.length>=slots560())return;
+    list.push(id);pushLog('Gabinete · expuesta: '+ITEMS[id].name);
+   }
+   render();
+  };
+  globalThis.AtlasBeta560Actions={toggle};
+  const rarName=['Común','Poco común','Raro','Muy raro'];
+  const rarOf=new Map(B.items.map(it=>[it[0],it[5]]));
+  const piece560=(id,shown,full)=>'<article class="m27-piece owned"><div class="m27-plate"><span class="m27-art">'+renderItemArt(id)+'</span><strong>'+esc(ITEMS[id].name)+'</strong><span class="m27-tag">'+(shown?'Expuesta · ':'')+rarName[rarOf.get(id)]+'</span></div><div class="m27-actions"><button type="button" class="btn alt" data-action="beta-cab-toggle" data-id="'+esc(id)+'" '+(!shown&&full?'disabled':'')+'>'+(shown?'Retirar':'Exponer')+'</button></div></article>';
+  const cabinetsHtml=()=>{
+   const cab=cabState(),n=slots560();
+   return '<div class="m27-room-heading"><h3>Gabinetes de colección · BETA</h3><small>'+n+' casillas por gabinete · nivel '+state.museum.wing+' del museo</small></div>'+
+    '<p class="m27-note">Aquí se exponen las piezas de colección que tengas en la bolsa. Por ahora solo se muestran: no dan ingresos ni bonificaciones.</p>'+
+    CABINETS.map(g=>{
+     const shown=(cab[g]||[]).filter(id=>ITEMS[id]&&state.inventory[id]>0);
+     const owned=[...cabOf.keys()].filter(id=>cabOf.get(id)===g&&state.inventory[id]>0&&!shown.includes(id)).sort((x,y)=>ITEMS[x].name.localeCompare(ITEMS[y].name,'es'));
+     const full=shown.length>=n,list=owned.slice(0,12);
+     return '<details class="m27-section" '+(shown.length||owned.length?'open':'')+'><summary>'+esc(g)+' · '+shown.length+'/'+n+' expuestas · '+owned.length+' en bolsa</summary><div class="m27-fold-body"><div class="m27-grid">'+shown.map(id=>piece560(id,true,full)).join('')+list.map(id=>piece560(id,false,full)).join('')+'</div>'+(shown.length+owned.length===0?'<p class="m27-empty">Aún no tienes piezas de este gabinete. Caen de los animales con el Gabinete de especímenes.</p>':'')+(owned.length>12?'<p class="m27-note">Y '+(owned.length-12)+' piezas más en tu bolsa.</p>':'')+'</div></details>';
+    }).join('');
+  };
+  const museumViewBefore560=museumViewModel3270;
+  museumViewModel3270=function(...args){
+   const m=museumViewBefore560.apply(this,args);
+   if(m&&m.room==='samples'&&m.view)m.view.cabinets=cabinetsHtml();
+   return m;
   };
  }
 

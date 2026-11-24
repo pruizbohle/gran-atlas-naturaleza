@@ -45,7 +45,7 @@ Cada elemento lleva `beta: true` en los datos y debe mostrar una insignia "BETA"
 | 1. Objetos nuevos en el inventario (470 piezas), imagen genérica "?" con cinta BETA y drops de prueba | **Integrado** en la rama `feat/v560-beta` (`www/js/beta-v560-data.js` y bloque "Beta 5.6.0" al final de `app.js`) |
 | 2. 6 materiales nuevos con receta en el Taller y 15 artefactos nuevos en el Museo (sala Artefactos) | **Integrado** en la rama. Los artefactos no dan bonificación; no se ha fijado ninguna |
 | 3. Niveles de la Sociedad (20) | **Integrado** como pestaña *Rango* en la Sociedad. Muestra el rango, el avance hacia el siguiente y la lista de los 20. Por ahora **no bloquea ninguna mecánica**; el dinero acumulado se cuenta desde esta versión (`state.beta560`) |
-| 4. Museo: 5 niveles y gabinetes con exhibición de animales | Pendiente |
+| 4. Museo: 5 niveles y gabinetes | **Integrado.** Los niveles 1–3 no cambian (3, 7 y 12 vitrinas animales); se añaden el 4 (£50.000, prestigio 60, 18 vitrinas) y el 5 (£500.000, prestigio 150, 25 vitrinas). La sala *Muestras* pasa a llamarse *Gabinetes*: arriba se eligen las vitrinas animales y debajo están los 5 gabinetes de colección (4, 8, 12, 16 o 20 casillas por gabinete según el nivel). Exponer piezas no da ingresos ni bonificaciones todavía |
 | 5. Hito de velocidad del guepardo | Pendiente |
 | 6. Colecciones privadas en el Campamento | Pendiente |
 
