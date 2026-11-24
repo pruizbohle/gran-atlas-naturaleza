@@ -11,13 +11,17 @@ const ROMAN=['','I','II','III','IV','V'];
 /* Requisitos comunes (provisionales). societyRank queda preparado para MEC-04 y no se exige. */
 const COST=[null,{money:0,knowledge:0},{money:500,knowledge:300},{money:2000,knowledge:1200},{money:8000,knowledge:4000},{money:25000,knowledge:12000}];
 const PRESTIGE=[0,0,2,5,10,20];
+// MEC-04: el rango de Sociedad por instalación y nivel sale de AtlasMEC04.FACILITY_RANKS
+// (mec04-society.js se carga antes). Sin ese módulo el campo queda preparado e inactivo.
+let facilityId=null;
+const rankFor=level=>root.AtlasMEC04?.FACILITY_RANKS?.[facilityId]?.[level]??null;
 const stage=(level,name,effects,functions,extra={})=>Object.freeze({
  level,name,cost:Object.freeze({...COST[level]}),
- requires:Object.freeze({prestige:PRESTIGE[level],previousLevel:level-1,societyRank:extra.societyRank??null,societyRankActive:false}),
+ requires:Object.freeze({prestige:PRESTIGE[level],previousLevel:level-1,societyRank:rankFor(level),societyRankActive:rankFor(level)!=null}),
  effects:Object.freeze(effects),functions:Object.freeze(functions),provisional:true,...extra});
 
 const FACILITIES=Object.freeze([
- Object.freeze({id:'shipyard',name:'Astillero',engine:'voyages',description:'Expediciones científicas',
+ (facilityId='shipyard',Object.freeze({id:'shipyard',name:'Astillero',engine:'voyages',description:'Expediciones científicas',
   unlock:{flag:'shipyard',research:'astillero',label:'Investigación «Astillero básico»'},
   reuses:['VOYAGES','sail','processVoyages','resolveVoyageReward','maxVoyages','voyageDuration','state.voyages'],
   levels:[
@@ -26,8 +30,8 @@ const FACILITIES=Object.freeze([
    stage(3,'Astillero',{capacityBonus:1,durationFactor:0.9,modalities:['normal']},['Preparación de expediciones: −10 % de duración en las nuevas salidas (provisional).','MEC-03: expediciones oceanográficas.']),
    stage(4,'Dársena',{capacityBonus:2,durationFactor:0.9,modalities:['normal']},['+1 expedición simultánea (+2 en total).','MEC-03: expediciones arqueológicas.']),
    stage(5,'Puerto científico',{capacityBonus:2,durationFactor:0.9,modalities:['normal','ampliada']},['Modalidad especial «Expedición ampliada»: misma ruta, doble duración y doble costo, con una tirada adicional de hallazgos (provisional).','MEC-03: exploración extraordinaria.'])
-  ]}),
- Object.freeze({id:'caravan',name:'Caravana',engine:'commerce',description:'Comercio, suministros, contratos y trueques',
+  ]})),
+ (facilityId='caravan',Object.freeze({id:'caravan',name:'Caravana',engine:'commerce',description:'Comercio, suministros, contratos y trueques',
   unlock:{flag:'shipyard',research:'astillero',label:'Investigación «Astillero básico» (habilita el comercio)'},
   reuses:['TRADE_ROUTES','startTrade3300','settleTrade3300','tradeCanStart3300','TRADE_MARKET','buyTrade3300','TRADE_BARTERS','SUPPLY_CONTRACTS3390','CARGO_MANIFESTS3390','REGIONAL_BARTERS3400','state.commerce'],
   levels:[
@@ -36,8 +40,8 @@ const FACILITIES=Object.freeze([
    stage(3,'Convoy',{routeCapacity:2,marketLot:5,collectibleExchange:'regionales'},['Capacidad logística: compra por lotes de 5 unidades en el mercado, con una sola confirmación.','MEC-03: comerciantes regionales y piezas poco comunes.']),
    stage(4,'Estación comercial',{routeCapacity:3,marketLot:5,collectibleExchange:'raras'},['3 rutas comerciales simultáneas.','MEC-03: piezas raras y solicitudes especializadas.']),
    stage(5,'Central comercial',{routeCapacity:4,marketLot:5,collectibleExchange:'especializados'},['4 rutas comerciales simultáneas.','MEC-03: coleccionistas especializados y piezas muy raras.'])
-  ]}),
- Object.freeze({id:'workshop',name:'Taller',engine:'workshop',description:'Fabricación, componentes y procesamiento de materiales',
+  ]})),
+ (facilityId='workshop',Object.freeze({id:'workshop',name:'Taller',engine:'workshop',description:'Fabricación, componentes y procesamiento de materiales',
   unlock:null,
   reuses:['RECIPES','canCraft','craftItem','recipePlan3400','V316_MATERIAL_STUDIES','canProcessMaterials','processMaterials'],
   levels:[
@@ -46,8 +50,8 @@ const FACILITIES=Object.freeze([
    stage(3,'Taller científico',{recipeLevel:3,craftBatches:[1,5],studyBatches:[1,5,10],componentCrafting:false},['Fabricación múltiple: ×5 con una sola confirmación.','Recetas de nivel 3 (preparado).']),
    stage(4,'Taller especializado',{recipeLevel:4,craftBatches:[1,5],studyBatches:[1,5,10],componentCrafting:true},['Fabricación con subcomponentes: fabrica primero los componentes intermedios que falten.','Recetas de nivel 4 (preparado).']),
    stage(5,'Laboratorio',{recipeLevel:5,craftBatches:[1,5,10],studyBatches:[1,5,10,25],componentCrafting:true},['Fabricación ×10 y estudios ×25.','Recetas de laboratorio (nivel 5, preparado).'])
-  ]}),
- Object.freeze({id:'excavations',name:'Excavaciones',engine:'excavations',description:'Yacimientos y materiales fósiles',
+  ]})),
+ (facilityId='excavations',Object.freeze({id:'excavations',name:'Excavaciones',engine:'excavations',description:'Yacimientos y materiales fósiles',
   unlock:null,
   reuses:['MUSEUM_DIG_SITES','canStartExcavation','startExcavation','collectExcavation','maxExcavations','state.museum.excavations'],
   levels:[
@@ -56,8 +60,8 @@ const FACILITIES=Object.freeze([
    stage(3,'Yacimiento',{capacityBonus:1,modes:['normal','profunda'],collectAll:false},['Excavación profunda: doble duración y doble costo; +2 fragmentos y una segunda tirada de diente fósil (provisional).']),
    stage(4,'Complejo paleontológico',{capacityBonus:2,modes:['normal','profunda'],collectAll:true},['+1 excavación simultánea (+2 en total).','Recoger de una vez todas las excavaciones terminadas.']),
    stage(5,'Instituto paleontológico',{capacityBonus:2,modes:['normal','profunda','especial'],collectAll:true},['Excavación especial: 1,5 × duración y costo; garantiza una huella fosilizada (provisional).','MEC-03: incluye las siete maravillas y las piezas muy raras de yacimiento.'])
-  ]}),
- Object.freeze({id:'surveys',name:'Prospecciones',engine:'surveys',description:'Indicios de relictos y estudios de campo',
+  ]})),
+ (facilityId='surveys',Object.freeze({id:'surveys',name:'Prospecciones',engine:'surveys',description:'Indicios de relictos y estudios de campo',
   unlock:null,
   reuses:['MUSEUM_RELICTS','relictSurveySpec','canStartRelictSurvey','startRelictSurvey','collectRelictSurvey','maxRelictSurveys','addRelictLead','state.museum.relictSurveys'],
   levels:[
@@ -66,7 +70,7 @@ const FACILITIES=Object.freeze([
    stage(3,'Estación topográfica',{capacityBonus:1,extraLead:1,durationFactor:1,collectAll:false},['+1 indicio al completar una prospección (sin superar el máximo de 3; nunca entrega un relicto).']),
    stage(4,'Centro de estudios',{capacityBonus:1,extraLead:1,durationFactor:0.8,collectAll:true},['−20 % de duración en las nuevas prospecciones documentales (provisional).','Recoger de una vez todas las prospecciones terminadas.','MEC-03: prospecciones especializadas (todas las rarezas geológicas).']),
    stage(5,'Centro de prospección',{capacityBonus:2,extraLead:1,durationFactor:0.8,collectAll:true},['+1 prospección simultánea (+2 en total).','Hallazgos científicos extraordinarios (preparado).'])
-  ]})
+  ]}))
 ]);
 const BY_ID=new Map(FACILITIES.map(f=>[f.id,f]));
 // Tienda del naturalista: sexta zona, sin niveles productivos en MEC-02.
@@ -128,7 +132,8 @@ function check(state,id){
  if((Number(state.prestige)||0)<next.requires.prestige)reasons.push('Prestigio '+next.requires.prestige);
  if((Number(state.money)||0)<next.cost.money)reasons.push('£'+next.cost.money);
  if((Number(state.knowledge)||0)<next.cost.knowledge)reasons.push(next.cost.knowledge+' de conocimiento');
- // MEC-04: if(next.requires.societyRankActive&&rank<next.requires.societyRank) …
+ // MEC-04: rango de Sociedad para los niveles avanzados (IV y V). Los niveles I–III no lo exigen.
+ if(next.requires.societyRankActive){const have=root.AtlasMEC04?root.AtlasMEC04.rank(state):1;if(have<next.requires.societyRank)reasons.push('Rango de Sociedad «'+(root.AtlasMEC04?.RANKS?.[next.requires.societyRank-1]?.name||next.requires.societyRank)+'» ('+next.requires.societyRank+')');}
  return {ok:reasons.length===0,reasons,next,level:lv};
 }
 function upgrade(state,id,now=Date.now()){

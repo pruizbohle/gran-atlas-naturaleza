@@ -2,11 +2,17 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.3 Beta — MEC-03**, canal beta (rama `mec-03/v5.6.3-beta`, sobre MEC-02, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.4 Beta — MEC-04**, canal beta (rama `mec-04/v5.6.4-beta`, sobre MEC-03, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.3 Beta — MEC-03 (en revisión)
+## V5.6.4 Beta — MEC-04 (en revisión)
+
+La Sociedad tiene 20 rangos con requisitos variados (prestigio, especies, monografías, coleccionables, expediciones, investigaciones, ingresos históricos del libro, regiones y colecciones). El ascenso es explícito, permanente y paga una recompensa única. Los rangos desbloquean los niveles IV y V del Campamento (I–III siguen libres), ofertas de la Caravana, encargos y cuatro categorías de financiación sin cobros dobles; el Museo queda preparado para MEC-05. Las partidas anteriores reciben el rango que sus registros justifican, sin pagos inventados.
+
+También corrige MEC-03 (hallazgos ambientales sin avistamiento, contexto manual, automático y offline, ofertas regionales con piezas «Mundial», cobertura real del comercio) y separa origen, hallazgo y compra de cada pieza: 110 de las 131 piezas «Mundial» tienen ahora origen concreto, y hay 5 destinos de expedición y 3 yacimientos nuevos en Asia, Sudamérica, Oceanía y Polos. Valores provisionales para BAL-01. Informe en [docs/mec04](docs/mec04/README.md).
+
+## V5.6.3 Beta — MEC-03 (auditada; observaciones corregidas en MEC-04)
 
 Retira el drop experimental de coleccionables por especie y da a cada una de las 431 piezas fuentes según su naturaleza:
 
@@ -89,6 +95,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.4 Beta | MEC-04: Sociedad científica, rangos y desbloqueos | [docs/mec04](docs/mec04/README.md) |
 | 5.6.3 Beta | MEC-03: obtención híbrida de coleccionables e intercambio | [docs/mec03](docs/mec03/README.md) |
 | 5.6.2 Beta | MEC-02: Campamento evolutivo, 5 instalaciones × 5 niveles | [docs/mec02](docs/mec02/README.md) |
 | 5.6.1 Beta | MEC-01: consolidación de drops, colecciones, ingresos, gabinetes e hitos de la V5.6.0 Beta | [docs/mec01](docs/mec01/README.md) |

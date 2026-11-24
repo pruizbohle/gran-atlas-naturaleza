@@ -2797,8 +2797,10 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   searchRelictInField(source,at,relicConditions);
   const k=Math.round((manual?3:1.5)*knowledgeBonus());
   state.knowledge+=k;
-  if(manual)state.lastEncounter={title:'Sin avistamiento',subtitle:`Se encontraron rastros. +${k} conocimiento`,sprite:null};
-  if(manual)pushLog(`Búsqueda sin avistamiento · +${k} conocimiento.`);
+  // MEC-04: también una búsqueda sin avistamiento permite un hallazgo ambiental (una tirada).
+  const ambientNoSighting=mec03AmbientFinds(ambientContextMEC04(source,automatic));
+  if(manual)state.lastEncounter={title:'Sin avistamiento',subtitle:`Se encontraron rastros. +${k} conocimiento`+(ambientNoSighting.length?' · hallazgo: '+ambientNoSighting.map(i=>ITEMS[i].name).join(', '):''),sprite:null};
+  if(manual)pushLog(`Búsqueda sin avistamiento · +${k} conocimiento${ambientNoSighting.length?' · hallazgo: '+ambientNoSighting.map(i=>ITEMS[i].name).join(', '):''}.`);
   if(!batchingOffline){renderCounters();updateFieldOutput();}
   return;
  }
@@ -2854,7 +2856,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
    // MEC-01: canales nuevos (materiales, coleccionables, rarezas), independientes del histórico.
    for(const extra of mec01FieldDrops(chosen,manual))note.push(`muestra obtenida: ${ITEMS[extra].name}`);
    // MEC-03: hallazgo ambiental según región y bioma, independiente de la especie observada.
-   for(const extra of mec03AmbientFinds(manual))note.push(`hallazgo: ${ITEMS[extra].name}`);
+   for(const extra of mec03AmbientFinds(ambientContextMEC04(source,automatic)))note.push(`hallazgo: ${ITEMS[extra].name}`);
    if(museumFinds.length)note.push(...museumFinds);
   }
   entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
@@ -3658,6 +3660,8 @@ const MUSEUM_DIG_SITES=[
  {id:'namib_rocks',name:'Estratos del desierto del Namib',region:'HX-11-08',seconds:540,money:550,knowledge:160,fragments:[5,8],tooth:0.30,track:0.43,claw:0.13,skull:0.025,reqResearch:'africa_1'},
  {id:'canadian_rocks',name:'Sedimentos de Columbia Británica',region:'HX-02-02',seconds:660,money:750,knowledge:225,fragments:[6,9],tooth:0.32,track:0.50,claw:0.16,skull:0.035,reqResearch:'norteamerica_1'}
 ];
+// MEC-04 · yacimientos nuevos (Asia, Sudamérica, Oceanía); solo con el módulo MEC-04. Se añaden antes de normalizar la partida.
+for(const site of globalThis.AtlasMEC04Content?.digSites||[])if(!MUSEUM_DIG_SITES.some(x=>x.id===site.id))MUSEUM_DIG_SITES.push({...site,fragments:[...site.fragments]});
 const MUSEUM_RELICT_SETS=[
  {id:'ancient_fishes',name:'Linajes acuáticos antiguos',icon:'🐟',requires:['coelacanth_indic','african_lungfish','white_sturgeon'],bonus:0.025},
  {id:'island_survivors',name:'Biodiversidad insular singular',icon:'🏝️',requires:['seychelles_sheathbat','angonoka'],bonus:0.02},
@@ -4525,6 +4529,8 @@ const VOYAGES=[
   {id:'namib_survey',name:'Reconocimiento del desierto del Namib',seconds:720,cost:1250,knowledge:460,prize:1750,notes:900,required:95,routeReq:2,mapItem:'africa_map',sample:'fossil_fragment'},
   {id:'atlantic_survey',name:'Reconocimiento del Atlántico',seconds:720,cost:1700,knowledge:650,prize:2050,notes:850,required:116,routeReq:2,reqResearch:'nuevo_mundo_1',sample:'north_america_map_piece'}
 ];
+// MEC-04 · destinos nuevos de expedición (Asia, Sudamérica, Oceanía, Polos, Mesoamérica); solo con el módulo MEC-04.
+for(const v of globalThis.AtlasMEC04Content?.voyages||[])if(!VOYAGES.some(x=>x.id===v.id))VOYAGES.push({...v});
 const ITEMS={
  binoculars:{name:'Prismáticos de viaje',emoji:'🔭',slot:'instrument',bonus:'+12 % relativo de probabilidad de encuentro manual',kind:'equip'},
  brass_compass:{name:'Brújula de latón',emoji:'🧭',slot:'instrument',bonus:'+4 % de conocimiento de expediciones (redondeado)',kind:'equip'},
@@ -4649,6 +4655,14 @@ function studyBatchesMEC02(){return [1,5];}
 function mec02Action(act,id){}
 // MEC-03 · exploración ambiental: una tirada por búsqueda (la instala el bloque MEC-03).
 function mec03AmbientFinds(manual){return [];}
+// MEC-04 · contexto ambiental efectivo de una búsqueda. Manual: región actual y bioma
+// seleccionado. Automática: región del tramo (también el histórico de los tramos offline
+// pendientes) y todos los biomas de la región, como el equipo automático.
+function ambientContextMEC04(source,automatic){
+ if(source==='manual')return {manual:true,regionId:state.currentRegion,habitats:[state.habitat]};
+ const seg=automatic?.segment;
+ return {manual:false,regionId:seg?.currentRegion??state.currentRegion,habitats:null,at:seg?.at??null};
+}
 // MEC-01 · única entrada de dinero ganado: suma al saldo y lo anota en el libro de ingresos por procedencia.
 // Los gastos siguen restando directamente de state.money y no tocan el libro.
 function earnMoney(amount,source){const n=Number(amount);if(!Number.isFinite(n)||n<=0)return 0;state.money+=n;globalThis.AtlasMEC01?.credit(state,n,source);return n;}
@@ -5394,7 +5408,7 @@ function handlePanelAction(e){
     }
     // M-3270 END actions
     if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle?.(id);return;}
-    if(act.startsWith('mec02-')||act.startsWith('mec03-')){mec02Action(act,id);return;}
+    if(act.startsWith('mec02-')||act.startsWith('mec03-')||act.startsWith('mec04-')){mec02Action(act,id);return;}
     if(act.startsWith('mec01-')){globalThis.AtlasBeta560Actions?.mec01?.(act,id,el);return;}
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
@@ -7986,40 +8000,8 @@ if(globalThis.AtlasMuseumCuration3380){
  };
  normalizeMEC01(state);
 
- // Beta 5.6.0 · rango en la Sociedad (20 niveles). Por ahora solo informa; no bloquea ninguna mecánica.
- // MEC-01: el dinero acumulado sale del libro de ingresos y los coleccionables, del registro histórico.
- if(B?.sociedad){
-  const stats560=()=>({prestige:Math.floor(state.prestige||0),
-   money:Math.floor(M?(state.moneyLedger?.total||0):Math.max(Number(state.beta560?.moneyEarned)||0,Number(state.money)||0)),
-   items:CAT?M.discoveredCount(state,CAT):B.items.filter(it=>(it[2]===0||it[2]===2)&&(state.inventory[it[0]]||0)>0).length});
-  const level560=st=>{
-   let lv=1;
-   B.sociedad.forEach((r,i)=>{if(st.prestige>=r[1]&&st.money>=r[2]&&st.items>=r[3])lv=Math.max(lv,i+1);});
-   return lv;
-  };
-  const bar560=(label,have,need)=>'<div class="req"><strong>'+label+'</strong><div class="small">'+fmt(have)+' / '+fmt(need)+'</div><div class="progress"><div style="width:'+Math.min(100,need?Math.round(100*have/need):100)+'%"></div></div></div>';
-  const income560=()=>{
-   const l=state.moneyLedger;if(!M||!l)return '';
-   const rows=Object.entries(l.bySource).filter(([,n])=>n>0).sort((a,b)=>b[1]-a[1]);
-   return '<details class="mec01-income"><summary>Ingresos acumulados por procedencia · £'+fmt(l.total)+'</summary><ul class="small">'+rows.map(([k,n])=>'<li>'+esc(M.INCOME_SOURCES[k]||k)+': £'+fmt(n)+'</li>').join('')+'</ul>'+
-    (l.migration&&l.migration.method!=='partida-nueva'?'<p class="small">Partida anterior a MEC-01: £'+fmt(l.migration.baseline)+' quedan como ingresos sin desglose. Es una estimación, no un historial exacto: el acumulado de la beta 5.6.0 era experimental.</p>':'')+
-    '<p class="small">Solo cuentan los ingresos reales; los gastos no reducen este total.</p></details>';
-  };
-  const rankPanel560=()=>{
-   const st=stats560(),lv=level560(st),cur=B.sociedad[lv-1],next=B.sociedad[lv];
-   return '<div class="req"><strong>Rango en la Sociedad · BETA</strong><div class="small">'+esc(cur[0])+' · nivel '+lv+' de '+B.sociedad.length+'</div></div>'+
-    (next?'<div class="small">Próximo rango: <b>'+esc(next[0])+'</b>. Hay que cumplir los tres requisitos a la vez.</div>'+bar560('Prestigio',st.prestige,next[1])+bar560('Dinero acumulado (£)',st.money,next[2])+bar560('Coleccionables descubiertos',st.items,next[3])+(next[4]?'<div class="small">Al subir: '+esc(next[4])+' (propuesta).</div>':''):'<div class="small">Alcanzaste el rango más alto.</div>')+
-    income560()+
-    '<div class="small">BETA: el rango todavía no bloquea mecánicas y sus umbrales son provisionales.</div>'+
-    '<details><summary>Los '+B.sociedad.length+' rangos</summary><ol class="small">'+B.sociedad.map((r,i)=>'<li>'+(i<lv?'✓ ':'')+esc(r[0])+' · prestigio '+fmt(r[1])+' · £'+fmt(r[2])+' · '+fmt(r[3])+' coleccionables'+(r[4]?' · '+esc(r[4]):'')+'</li>').join('')+'</ol></details>';
-  };
-  const societyBefore560=renderSociety;
-  renderSociety=function(){
-   if(state.societyView!=='rank')return societyBefore560();
-   return globalThis.AtlasSociety3360?globalThis.AtlasSociety3360.layout(state,achievementContext3360(),rankPanel560()):'<section class="card stack">'+rankPanel560()+'</section>';
-  };
-  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{societyStats:stats560,societyLevel:()=>level560(stats560())});
- }
+ // MEC-04: el rango de la Sociedad (antes, un panel informativo basado en AtlasBeta560.sociedad)
+ // vive ahora en una única configuración: www/js/mec04-society.js y el bloque MEC-04 de este archivo.
  // El registro también recoge piezas que otros módulos escriben directamente en el inventario
  // (por ejemplo, recompensas de encargos): se reconcilia antes de cada guardado visible.
  if(CAT){
@@ -8526,9 +8508,11 @@ if(globalThis.AtlasMuseumCuration3380){
    }
    return out;
   };
-  mec03AmbientFinds=function(manual){
-   const region=currentRegion(),out=[];
-   for(const got of E.roll(E.ambient(region),{rolls:1,chance:X.RATES.ambiental[manual?'manual':'auto']}))if(grant(got,1,'campo','campo:ambiental',region?.id))out.push(got);
+  mec03AmbientFinds=function(ctx){
+   // MEC-04: contexto explícito {manual, regionId, habitats}; un booleano conserva el uso anterior.
+   const c=typeof ctx==='boolean'||ctx==null?{manual:!!ctx}:ctx;
+   const region=c.regionId?regionById(c.regionId):currentRegion(),out=[];
+   for(const got of E.roll(E.ambient(region,c.habitats),{rolls:1,chance:X.RATES.ambiental[c.manual?'manual':'auto']}))if(grant(got,1,'campo','campo:ambiental',region?.id))out.push(got);
    return out;
   };
 
@@ -8611,9 +8595,24 @@ if(globalThis.AtlasMuseumCuration3380){
    const period=Math.floor(now/X.MARKET.renewMs),level=lvl('caravan');
    if(m.period!==period){m.period=period;m.level=1;m.offers=[];m.renewedAt=now;}
    if(level>(m.level||1)){m.offers.push(...E.generateOffers({seed:m.seed,period,fromLevel:m.level||1,toLevel:level,continents:unlockedContinents(),state,reserved,exclude:m.offers.map(o=>o.piece)}));m.level=level;}
+   if(S4&&level>=5&&m.extraPeriod!==period){
+    const rnd=X.seeded(X.hash(m.seed+':'+period+':extra')),used=new Set(m.offers.map(o=>o.piece));
+    const pool=E.commerce(5,unlockedContinents(),3).filter(id=>P[id].rarity>=2&&!used.has(id));
+    const take=()=>{const id=pool.length?E.pick(pool,rnd):null;if(id)pool.splice(pool.indexOf(id),1);return id;};
+    const a=take(),b=take(),c=take();
+    if(a)m.offers.push({id:'P'+period+'-X-0',period,level:5,tier:'extra',kind:'compra',merchant:'Casa de subastas extraordinaria',piece:a,price:Math.round(X.PRICE[P[a].rarity]*1.5),done:false});
+    if(b)m.offers.push({id:'P'+period+'-X-1',period,level:5,tier:'extra',kind:'intercambio',merchant:'Coleccionista prestigioso',piece:b,give:{cabinet:P[b].cabinet,minRarity:2,count:4},done:false});
+    if(c)m.offers.push({id:'P'+period+'-X-2',period,level:5,tier:'extra',kind:'solicitud',merchant:'Solicitud científica de la Sociedad',piece:c,reward:Math.round(X.PRICE[P[c].rarity]*0.8),done:false});
+    m.extraPeriod=period;
+   }
    return m;
   };
   const stock=id=>E.stock(state,id,reserved);
+  // MEC-04: rango de Sociedad exigido por una oferta (nivel IV–V de la Caravana y extraordinarias).
+  const S4=globalThis.AtlasMEC04;
+  const offerRank=o=>!S4?0:o.tier==='extra'?S4.COMMERCE_RANKS.extra:(S4.COMMERCE_RANKS[o.level]||0);
+  const rankNow=()=>S4?S4.rank(state):20;
+  const offerBlock=o=>{const need=offerRank(o);return need&&rankNow()<need?'Requiere rango «'+S4.RANKS[need-1].name+'» ('+need+')':'';};
   const offerPlan=offer=>{
    const p=P[offer.piece];if(!p)return null;
    if(offer.kind==='compra')return {give:{},money:offer.price,get:{[offer.piece]:1}};
@@ -8628,7 +8627,7 @@ if(globalThis.AtlasMuseumCuration3380){
   };
   const executeOffer=(offerId,now=Date.now())=>{
    const m=market(now),offer=m.offers.find(o=>o.id===offerId);
-   if(!offer||offer.done||lvl('caravan')<offer.level)return false;
+   if(!offer||offer.done||lvl('caravan')<offer.level||offerBlock(offer))return false;
    const plan=offerPlan(offer);if(!plan||plan.money>0&&state.money<plan.money)return false;
    if(!window.confirm(describePlan(offer,plan)))return false;
    return tradeTransaction3300(()=>{
@@ -8646,8 +8645,12 @@ if(globalThis.AtlasMuseumCuration3380){
 
   // 8. Encargos de coleccionistas (se suman a los encargos históricos, que no cambian).
   const claims=()=>{const c=state.collectorCommissions=state.collectorCommissions&&typeof state.collectorCommissions==='object'?state.collectorCommissions:{};c.claims=c.claims&&typeof c.claims==='object'?c.claims:{};return c;};
+  const commissionList=()=>[...X.COMMISSIONS,...(S4?.NEW_COMMISSIONS||[])];
   const commissionPlan=(def,now=Date.now())=>{
    const r=def.requires,last=claims().claims[def.id]?.last||0,reasons=[];
+   const needRank=S4?.COMMISSION_RANKS?.[def.id]||0;
+   if(needRank&&rankNow()<needRank)reasons.push('rango «'+S4.RANKS[needRank-1].name+'» ('+needRank+')');
+   if(r.monographs&&monographCount()<r.monographs)reasons.push(r.monographs+' monografías');
    if(now-last<def.cooldownHours*3600e3)reasons.push('disponible de nuevo en '+Math.ceil((def.cooldownHours*3600e3-(now-last))/60000)+' min');
    for(const [i,n] of Object.entries(r.items||{}))if((state.inventory[i]||0)<n)reasons.push(ITEMS[i].name+' ×'+n);
    if(r.money&&state.money<r.money)reasons.push('£'+r.money);
@@ -8658,7 +8661,7 @@ if(globalThis.AtlasMuseumCuration3380){
    return {ok:!reasons.length,reasons,give,pool};
   };
   const claimCommission=(id,now=Date.now())=>{
-   const def=X.COMMISSIONS.find(d=>d.id===id);if(!def)return null;
+   const def=commissionList().find(d=>d.id===id);if(!def)return null;
    const plan=commissionPlan(def,now);if(!plan.ok)return null;
    if(!window.confirm(def.label+'\nEntregas: '+(tradeMaterials3300(plan.give)||'nada')+(def.requires.money?' y £'+def.requires.money:'')+'.\nRecibes: una pieza de «'+def.reward+'». ¿Confirmar?'))return null;
    let out=null;
@@ -8722,11 +8725,12 @@ if(globalThis.AtlasMuseumCuration3380){
     const offers=m.offers.map(o=>{const p=P[o.piece],plan=offerPlan(o),st=stock(o.piece);
      const what=o.kind==='compra'?'Compra · £'+o.price:o.kind==='intercambio'?'Intercambio · '+o.give.count+' repetidas'+(o.give.collection?' de «'+o.give.collection+'»':' de '+o.give.cabinet)+(o.give.minRarity?' ('+RAR[o.give.minRarity]+' o más)':''):'Solicitud · te pagan £'+o.reward;
      const name=M.discovered(state,o.piece)||o.kind!=='intercambio'?ITEMS[o.piece].name:'Pieza sin descubrir';
-     return '<div class="mec02-row"><span><b>'+U.esc(o.merchant)+'</b> · '+U.esc(what)+' · '+U.esc(name)+' ('+U.esc(RAR[p.rarity])+', '+U.esc(p.collection)+')'+(o.kind==='solicitud'?' · tienes '+st.tradable+' para intercambio':'')+'</span>'+b('mec03-offer',o.id,o.done?'Completada':'Ver y confirmar',!o.done&&!!plan&&(plan.money<=0||state.money>=plan.money))+'</div>';}).join('');
+     const blocked=offerBlock(o);
+     return '<div class="mec02-row"><span><b>'+U.esc(o.merchant)+'</b> · '+U.esc(what)+' · '+U.esc(name)+' ('+U.esc(RAR[p.rarity])+', '+U.esc(p.collection)+')'+(o.kind==='solicitud'?' · tienes '+st.tradable+' para intercambio':'')+(blocked?' · <b>'+U.esc(blocked)+'</b>':'')+'</span>'+b('mec03-offer',o.id,o.done?'Completada':'Ver y confirmar',!o.done&&!blocked&&!!plan&&(plan.money<=0||state.money>=plan.money))+'</div>';}).join('');
     out.push('<section class="mec02-controls mec03-collectors"><h4>Comerciantes y coleccionistas <span class="mec01-beta">BETA</span></h4>'+(lvl('caravan')<2?'<p class="small">Se abre con la Caravana equipada (II): coleccionables comunes. III: comerciantes regionales y piezas poco comunes · IV: piezas raras y solicitudes · V: coleccionistas especializados y piezas muy raras.</p>':offers||'<p class="small">No hay ofertas en este periodo.</p>')+
      '<p class="small">Las ofertas se renuevan cada 24 horas de juego (provisional) y se guardan en la partida. Solo aparecen piezas de continentes ya accesibles.</p>'+
      '<label class="mec01-field"><span><input type="checkbox" data-mec03-protect'+(prefs.protectLast?' checked':'')+'> Proteger la última unidad de cada pieza</span></label><p class="small">Las piezas expuestas en el Museo nunca se venden ni se intercambian sin retirarlas antes.</p>'+
-     '<details><summary>Encargos de coleccionistas</summary>'+X.COMMISSIONS.map(d=>{const pl=commissionPlan(d);return '<div class="mec02-row"><span><b>'+U.esc(d.label)+'</b> · '+U.esc(d.text)+' → pieza de «'+U.esc(d.reward)+'»'+(pl.ok?'':' · falta: '+U.esc(pl.reasons.join(', ')))+'</span>'+b('mec03-commission',d.id,'Entregar',pl.ok)+'</div>';}).join('')+'</details>'+
+     '<details><summary>Encargos de coleccionistas</summary>'+commissionList().map(d=>{const pl=commissionPlan(d);return '<div class="mec02-row"><span><b>'+U.esc(d.label)+'</b> · '+U.esc(d.text)+' → pieza de «'+U.esc(d.reward)+'»'+(pl.ok?'':' · falta: '+U.esc(pl.reasons.join(', ')))+'</span>'+b('mec03-commission',d.id,'Entregar',pl.ok)+'</div>';}).join('')+'</details>'+
      findsHtml('piezas de comerciantes regionales y coleccionistas',['comercio','encargos'])+'</section>');
    }
    return out.join('');
@@ -8781,7 +8785,126 @@ if(globalThis.AtlasMuseumCuration3380){
    return list;
   };
 
-  globalThis.AtlasMEC03Actions={engine:E,grant,startProspection,collectProspection,canProspect,prospections:pros,prepare,canPrepare,market,executeOffer,offerPlan,stock,setProtection,claimCommission,commissionPlan,deliverEvent,sourceText,hint,archivedChannels,unlockedContinents};
+  globalThis.AtlasMEC03Actions={engine:E,offerBlock,offerRank,commissionList,grant,startProspection,collectProspection,canProspect,prospections:pros,prepare,canPrepare,market,executeOffer,offerPlan,stock,setProtection,claimCommission,commissionPlan,deliverEvent,sourceText,hint,archivedChannels,unlockedContinents};
+ }
+}
+// MEC-04 (V5.6.4 Beta) · Sociedad científica: rangos efectivos, ascensos y desbloqueos.
+// La configuración de los 20 rangos, la matriz de instalaciones, las ofertas y encargos con
+// rango y la financiación viven en www/js/mec04-society.js. Aquí se calculan los indicadores,
+// se reconoce el rango, se asciende (acción explícita y atómica) y se pinta la pestaña Rango.
+// Los beneficios pasivos se derivan del rango reconocido en cada comprobación: nunca se aplican
+// durante el repintado ni la carga. Ver docs/mec04/README.md.
+{
+ const S=globalThis.AtlasMEC04,M=globalThis.AtlasMEC01,A1=globalThis.AtlasBeta560Actions;
+ if(S){
+  const CAT=A1?.catalog||null;
+  const collectionsDone=()=>{if(!CAT||!M)return 0;let n=0;for(const c of CAT.collections.values())if(c.ids.every(id=>M.discovered(state,id)))n++;return n;};
+  // Indicadores de trayectoria. El dinero disponible nunca sustituye a los ingresos históricos.
+  const metrics=()=>({
+   prestige:Math.floor(Number(state.prestige)||0),
+   species:Object.keys(state.discovered||{}).filter(id=>state.discovered[id]).length,
+   monographs:monographCount(),
+   collectibles:CAT&&M?M.discoveredCount(state,CAT):0,
+   voyages:Math.floor(Number(state.museum?.voyagesCompleted)||0),
+   research:Object.values(state.purchases||{}).filter(n=>Number(n)>0).length,
+   income:Math.floor(Number(state.moneyLedger?.total)||0),
+   regions:Object.values(state.regionUnlocked||{}).filter(Boolean).length,
+   collections:collectionsDone()
+  });
+  const ensure=()=>S.migrate(state,metrics());
+  const normalizeBefore604=normalizeMEC01;
+  normalizeMEC01=function(s){
+   const r=normalizeBefore604(s);
+   if(s===state){ensure();const g=state.society.grants;
+    // Financiación por expediciones y proyectos: solo cuenta lo posterior a la migración.
+    g.expediciones??={funded:metrics().voyages,count:0};g.proyectos??={paid:Math.floor(monographCount()/S.FUNDING.proyectos.everyMonographs),count:0};}
+   return r;
+  };
+  normalizeMEC01(state);
+
+  const payReward=(reward,def)=>{
+   if(reward.money)earnMoney(reward.money,'recompensas');
+   if(reward.knowledge)state.knowledge+=reward.knowledge;
+   pushLog('Sociedad · ascenso a «'+def.name+'»: '+[reward.money?'£'+reward.money:'',reward.knowledge?reward.knowledge+' conocimiento':''].filter(Boolean).join(' y ')+'.');
+  };
+  const ascend=()=>{
+   ensure();const e=S.eligibility(state,metrics());if(!e.ok)return null;
+   if(!window.confirm('Ascender a «'+e.next.name+'» (rango '+e.next.level+' de 20)\n'+(e.next.reward?'Recompensa única: £'+e.next.reward.money+' y '+e.next.reward.knowledge+' de conocimiento.\n':'')+'El rango alcanzado es permanente. ¿Confirmar?'))return null;
+   let out=null;
+   const ok=tradeTransaction3300(()=>{const r=S.ascend(state,metrics(),Date.now(),payReward);if(!r.ok)return false;out=r.rank;return true;});
+   if(ok){renderCounters();renderPanel();}
+   return ok?out:null;
+  };
+
+  // Financiación científica. Cada cobro queda registrado y es atómico; no se repite al recargar.
+  const funding=(key,now=Date.now())=>{
+   const f=S.FUNDING[key],g=state.society.grants,m=metrics();
+   if(!f||!S.unlocked(state,f.benefit))return {ok:false,reason:'Requiere rango «'+S.RANKS[S.benefitRank(f.benefit)-1].name+'» ('+S.benefitRank(f.benefit)+')'};
+   if(key==='campo'||key==='patrocinio'){
+    const last=g[key]?.last||0,wait=f.cooldownHours*3600e3-(now-last);
+    if(wait>0)return {ok:false,reason:'Disponible en '+Math.ceil(wait/60000)+' min'};
+    const amount=key==='campo'?f.base+f.perRegion*m.regions:f.base+f.perPrestige*m.prestige;
+    return {ok:true,amount,apply:()=>{g[key]={last:now,count:(g[key]?.count||0)+1};}};
+   }
+   if(key==='expediciones'){
+    const unpaid=Math.max(0,m.voyages-(g.expediciones?.funded||0)),n=Math.min(unpaid,f.maxVoyages);
+    if(!n)return {ok:false,reason:'Sin expediciones nuevas que financiar'};
+    return {ok:true,amount:n*f.perVoyage,apply:()=>{g.expediciones.funded=(g.expediciones.funded||0)+n;g.expediciones.count++;}};
+   }
+   if(key==='proyectos'){
+    const done=Math.floor(m.monographs/f.everyMonographs),n=done-(g.proyectos?.paid||0);
+    if(n<=0)return {ok:false,reason:'Próximo proyecto con '+(done+1)*f.everyMonographs+' monografías'};
+    return {ok:true,amount:n*f.perMilestone,apply:()=>{g.proyectos.paid=done;g.proyectos.count++;}};
+   }
+   return {ok:false,reason:'Desconocida'};
+  };
+  const claimFunding=key=>{
+   const p=funding(key);if(!p.ok)return 0;
+   const ok=tradeTransaction3300(()=>{const q=funding(key);if(!q.ok)return false;q.apply();earnMoney(q.amount,S.FUNDING[key].source);pushLog('Sociedad · '+S.FUNDING[key].label+': £'+q.amount+'.');return true;});
+   if(ok){renderCounters();renderPanel();}
+   return ok?p.amount:0;
+  };
+
+  // Pestaña Rango.
+  const esc2=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const bar=(have,need)=>'<div class="progress"><div style="width:'+Math.min(100,need?Math.round(100*have/need):100)+'%"></div></div>';
+  const benefitsUpTo=lv=>S.RANKS.filter(r=>r.level<=lv).flatMap(r=>r.unlocks);
+  const rankPanel=()=>{
+   ensure();const m=metrics(),e=S.eligibility(state,m),cur=e.current,lv=cur.level;
+   const icon=globalThis.AtlasIcons530?.image?.('sociedad',72)||'';
+   const reqs=e.next?e.progress.map(p=>'<div class="req mec04-req'+(p.ok?' ok':'')+'"><strong>'+(p.ok?'✓ ':'')+esc2(p.label)+'</strong><div class="small">'+fmt(p.have)+' / '+fmt(p.need)+(p.ok?'':' · <button type="button" class="btn alt mec04-go" data-action="mec04-go" data-id="'+esc2(p.go)+'">Ir</button>')+'</div>'+bar(p.have,p.need)+'</div>').join(''):'';
+   const benefits=benefitsUpTo(lv).map(b=>'<li>'+esc2(S.BENEFITS[b]?.label||b)+(S.BENEFITS[b]?.prepared?' (preparado)':'')+'</li>').join('');
+   const nextBenefits=e.next?e.next.unlocks.map(b=>'<li>'+esc2(S.BENEFITS[b]?.label||b)+'</li>').join(''):'';
+   const funds=Object.keys(S.FUNDING).map(k=>{const f=funding(k);return '<div class="mec02-row"><span>'+esc2(S.FUNDING[k].label)+(f.ok?' · £'+fmt(f.amount):' · '+esc2(f.reason))+'</span><button type="button" class="btn alt" data-action="mec04-fund" data-id="'+k+'"'+(f.ok?'':' disabled')+'>Solicitar</button></div>';}).join('');
+   const hist=state.society.history.slice().reverse().map(h=>'<li>'+esc2(S.RANKS[h.rank-1].name)+' · '+new Date(h.at).toLocaleDateString('es-CL')+(h.migrated?' (reconocido al migrar)':'')+'</li>').join('');
+   const l=state.moneyLedger;
+   return '<section class="card stack mec04-rank" data-art-ref="'+esc2(cur.art.key)+'">'+
+    '<header class="mec04-head"><span class="mec02-art" title="Representación provisional">'+icon+'</span><div><span class="mec02-kicker">RANGO '+lv+' DE 20 <span class="mec01-beta">BETA</span></span><h3>'+esc2(cur.name)+'</h3><p class="small">'+esc2(cur.description)+'</p></div></header>'+
+    (e.next?'<h4>Próximo rango: '+esc2(e.next.name)+'</h4>'+reqs+(e.next.unlocks.length?'<p class="small">Desbloqueará:</p><ul class="small">'+nextBenefits+'</ul>':'')+(e.next.reward?'<p class="small">Recompensa única de ascenso: £'+fmt(e.next.reward.money)+' y '+fmt(e.next.reward.knowledge)+' de conocimiento.</p>':'')+
+     '<button type="button" class="btn'+(e.ok?' gold':' alt')+'" data-action="mec04-ascend"'+(e.ok?'':' disabled')+'>'+(e.ok?'Ascender a '+esc2(e.next.name):'Faltan requisitos para ascender')+'</button>':'<p>Alcanzaste el rango más alto.</p>')+
+    '<details open><summary>Funciones desbloqueadas</summary><ul class="small">'+benefits+'</ul></details>'+
+    '<details><summary>Financiación científica</summary><div class="mec02-row"><span>Apoyo inicial · subvención de la pestaña Subvenciones</span></div>'+funds+'</details>'+
+    (l?'<details><summary>Ingresos acumulados · £'+fmt(l.total)+'</summary><p class="small">Requisito complementario. Cuentan solo los ingresos registrados'+(l.bySource.sinDesglose?'; £'+fmt(l.bySource.sinDesglose)+' son una estimación sin desglose de una partida anterior a MEC-01':'')+'. Gastar no reduce el rango ni el acumulado.</p></details>':'')+
+    '<details><summary>Historial de ascensos</summary><ul class="small">'+(hist||'<li>Sin ascensos todavía.</li>')+'</ul></details>'+
+    '<details><summary>Los 20 rangos</summary><ol class="small">'+S.RANKS.map(r=>'<li>'+(r.level<=lv?'✓ ':'')+esc2(r.name)+' · '+Object.entries(r.requires).filter(([,v])=>v).map(([k,v])=>esc2(S.METRICS[k].label.toLowerCase())+' '+fmt(v)).join(', ')+'</li>').join('')+'</ol><p class="small">Umbrales provisionales (BAL-01).</p></details></section>';
+  };
+  const societyBefore604=renderSociety;
+  renderSociety=function(){
+   if(state.societyView!=='rank')return societyBefore604();
+   return globalThis.AtlasSociety3360?globalThis.AtlasSociety3360.layout(state,achievementContext3360(),rankPanel()):rankPanel();
+  };
+  const actionBefore604=mec02Action;
+  mec02Action=function(act,id){
+   if(act==='mec04-ascend'){ascend();return;}
+   if(act==='mec04-fund'){claimFunding(id);return;}
+   if(act==='mec04-go'){if(['field','journal','objects','expeditions','research','atlas','society','museum','bestiary'].includes(id)){tab=id;renderPanel();}return;}
+   return actionBefore604(act,id);
+  };
+  // Compatibilidad con MEC-01: mismos nombres, ahora con los indicadores de MEC-04.
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{
+   societyStats:()=>{const m=metrics();return {...m,money:m.income,items:m.collectibles};},
+   societyLevel:()=>S.rank(state)});
+  globalThis.AtlasMEC04Actions={metrics,ascend,funding,claimFunding,rankPanel,eligibility:()=>S.eligibility(state,metrics())};
  }
 }
 render();

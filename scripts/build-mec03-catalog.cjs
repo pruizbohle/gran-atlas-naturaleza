@@ -71,7 +71,13 @@ const VOYAGE_DEST={
  ethiopia_survey:{continents:['África'],land:true,marine:false},
  namib_survey:{continents:['África'],land:true,marine:false},
  // Excepción justificada: el Atlántico abierto da acceso a piezas marinas de las cuatro costas atlánticas.
- atlantic_survey:{continents:['Océanos','Europa','Norteamérica','Sudamérica','África'],land:false,marine:true}
+ atlantic_survey:{continents:['Océanos','Europa','Norteamérica','Sudamérica','África'],land:false,marine:true},
+ // MEC-04 · destinos nuevos (www/js/mec04-society.js · AtlasMEC04Content.voyages).
+ mesoamerica_survey:{continents:['Norteamérica'],land:true,marine:false},
+ asia_survey:{continents:['Asia'],land:true,marine:false},
+ andes_survey:{continents:['Sudamérica'],land:true,marine:false},
+ pacific_survey:{continents:['Oceanía','Océanos','Asia'],land:true,marine:true},
+ polar_survey:{continents:['Polos','Océanos'],land:true,marine:true}
 };
 /* Observación animal: tipos de animal (SPECIES.kind) en cuya observación puede hallarse
  * cada pieza. Sin entrada = no se obtiene observando (por ejemplo, insectos sin especie en el
@@ -89,7 +95,9 @@ const OBS_KINDS={
  'RAR-05':['snake'],'RAR-06':['raptor'],'RAR-07':['ray','shark','requiem_shark'],'RAR-08':['thresher','mako','shark'],'RAR-09':['deer'],
  'RAR-10':['lizard'],'RAR-11':['reptile','lizard'],'RAR-12':['boar','hippo','elephant','walrus','narwhal']
 };
-const DIG_SITE_CONT={british_cliffs:'Europa',alpine_basin:'Europa',namib_rocks:'África',canadian_rocks:'Norteamérica'};
+const DIG_SITE_CONT={british_cliffs:'Europa',alpine_basin:'Europa',namib_rocks:'África',canadian_rocks:'Norteamérica',
+ // MEC-04 · yacimientos nuevos.
+ anatolia_strata:'Asia',andes_strata:'Sudamérica',australia_strata:'Oceanía'};
 const EXP_MIN={normal:1,botanica:2,reconocimiento:2,oceanografica:3,arqueologica:4,extraordinaria:5};
 
 /* Coherencia con 1842 y con la geografía: se documenta, no se corrige (sección 15). */
@@ -127,25 +135,75 @@ const NOTES={
  'DAG-01':'Geografía: los 20 daguerrotipos muestran lugares concretos y figuran como «Mundial».'
 };
 
+/* MEC-04 · origen real de las piezas que figuraban como «Mundial» y cuya procedencia es
+ * clara. [continente, lugar]. Las que siguen como «Mundial» tienen distribución amplia
+ * o un origen incierto (UNCERTAIN). Sin procedencias inventadas. */
+const ORIGIN={
+ 'BOT-13':['Sudamérica','Chile'],'BOT-14':['Norteamérica','México'],'BOT-15':['Sudamérica','Brasil'],'BOT-16':['África','Sudáfrica'],
+ 'BOT-17':['Asia','Japón'],'BOT-18':['Norteamérica','Mesoamérica y Caribe'],'BOT-19':['Asia','Himalaya'],'BOT-20':['Norteamérica','Sudeste de Norteamérica'],
+ 'GEM-14':['Sudamérica','Brasil'],'GEM-15':['Asia','Birmania'],'GEM-16':['Asia','Ceilán'],'GEM-17':['Sudamérica','Brasil'],
+ 'GEM-18':['Asia','Ceilán'],'GEM-19':['Norteamérica','México'],'GEM-20':['Asia','Ceilán'],
+ 'CON-13':['Océanos','Indo-Pacífico'],'CON-14':['Océanos','Indo-Pacífico'],'CON-15':['Océanos','Indo-Pacífico'],'CON-17':['Océanos','Índico'],
+ 'CON-18':['Océanos','Indo-Pacífico'],'CON-19':['Océanos','Indo-Pacífico'],
+ 'COR-13':['Océanos','Indo-Pacífico'],'COR-14':['Océanos','Indo-Pacífico'],'COR-16':['Océanos','Indo-Pacífico'],'COR-17':['Océanos','Indo-Pacífico'],
+ 'COR-18':['Océanos','Indo-Pacífico'],'COR-19':['Océanos','Indo-Pacífico'],'COR-20':['Océanos','Indo-Pacífico'],
+ 'NUM-09':['Asia','Lidia (Anatolia)'],'NUM-14':['Europa','Constantinopla'],'NUM-15':['Asia','Bagdad'],'NUM-16':['Europa','Venecia'],
+ 'NUM-17':['Europa','Suecia'],'NUM-18':['Europa','Rusia'],'NUM-19':['Asia','Anatolia'],'NUM-20':['Sudamérica','Potosí'],
+ 'CIV-13':['Asia','Mesopotamia'],'CIV-14':['Europa','Etruria'],'CIV-15':['Asia','Levante'],'CIV-16':['Asia','Persia'],
+ 'CIV-17':['Asia','Japón'],'CIV-18':['Oceanía','Polinesia'],'CIV-19':['Norteamérica','Valle del Misisipi'],'CIV-20':['Asia','Camboya'],
+ 'HUE-13':['Europa','Norte de Europa'],'HUE-14':['Europa','Atlántico norte'],'HUE-15':['Europa','Atlántico norte'],'HUE-16':['Océanos','Océano Austral'],
+ 'HUE-17':['Sudamérica','Sudamérica'],'HUE-18':['África','África subsahariana'],'HUE-19':['Asia','Sudeste asiático'],'HUE-20':['Sudamérica','Brasil'],
+ 'MAD-01':['Norteamérica','Cuba'],'MAD-02':['Norteamérica','Honduras'],'MAD-03':['África','África occidental'],'MAD-04':['Asia','Ceilán'],
+ 'MAD-05':['Sudamérica','Brasil'],'MAD-06':['Asia','India'],'MAD-07':['Asia','Birmania'],'MAD-08':['Europa','Europa'],
+ 'MAD-09':['Norteamérica','Centroamérica'],'MAD-10':['Asia','India'],'MAD-11':['Norteamérica','Caribe'],'MAD-12':['Europa','Turberas europeas'],
+ 'HEL-05':['Asia','Asia tropical'],'HEL-06':['Oceanía','Australia'],'HEL-08':['Oceanía','Nueva Zelanda'],'HEL-11':['Sudamérica','Sudamérica tropical'],'HEL-12':['Oceanía','Nueva Zelanda'],
+ 'MTR-01':['Sudamérica','Chocó (Nueva Granada)'],'MTR-10':['Norteamérica','Zimapán (México)'],'MTR-11':['Norteamérica','Connecticut'],'MTR-12':['Europa','Finlandia'],
+ 'MUN-01':['África','Egipto'],'MUN-02':['Asia','Babilonia'],'MUN-03':['Europa','Olimpia'],'MUN-04':['Asia','Éfeso'],
+ 'MUN-05':['Asia','Halicarnaso'],'MUN-06':['Europa','Rodas'],'MUN-07':['África','Alejandría'],
+ 'DAG-01':['Europa','Londres'],'DAG-02':['Europa','París'],'DAG-03':['Europa','Roma'],'DAG-04':['Europa','Atenas'],'DAG-05':['Europa','Granada'],
+ 'DAG-06':['Europa','Moscú'],'DAG-07':['África','Egipto'],'DAG-08':['África','Egipto'],'DAG-09':['África','Cabo'],'DAG-10':['Europa','Constantinopla'],
+ 'DAG-11':['Asia','Petra'],'DAG-12':['Asia','Agra'],'DAG-13':['Asia','China'],'DAG-14':['Asia','Pekín'],'DAG-15':['Asia','Japón'],
+ 'DAG-16':['Asia','Camboya'],'DAG-17':['Norteamérica','México'],'DAG-18':['Norteamérica','Yucatán'],'DAG-19':['Sudamérica','Cusco'],'DAG-20':['Oceanía','Rapa Nui'],
+ 'RAR-02':['Polos','Ártico'],'RAR-03':['Océanos','Océanos'],'RAR-04':['Europa','Europa'],'RAR-06':['Europa','Europa'],'RAR-07':['Europa','Malta'],
+ 'RAR-08':['Océanos','Atlántico'],'RAR-09':['Asia','Asia central'],'RAR-10':['Europa','Europa'],'RAR-11':['África','Socotra'],'RAR-05':['Asia','India']
+};
+const UNCERTAIN={
+ 'GEM-13':'Diamante: en 1842 procedía de la India y de Brasil; se mantiene «Mundial».',
+ 'CON-16':'Caracol oliva: género de distribución tropical amplia.','CON-20':'Tellina violeta: especie no identificada con certeza.',
+ 'COR-15':'Coral sol: distribución tropical amplia.',
+ 'HEL-01':'Helecho macho: distribución holártica.','HEL-02':'Helecho hembra: casi cosmopolita.','HEL-03':'Helecho real: casi cosmopolita.',
+ 'HEL-04':'Helecho águila: cosmopolita.','HEL-07':'Helecho espada: tropical amplio.','HEL-09':'Helecho película: tropical amplio.','HEL-10':'Azolla: casi cosmopolita.',
+ 'MTR-02':'Paladio, rodio, iridio y osmio: en 1842 se obtenían del platino de Nueva Granada y de los Urales.','MTR-03':'Ver MTR-02.','MTR-04':'Ver MTR-02.','MTR-05':'Ver MTR-02.',
+ 'MTR-06':'Oro nativo: distribución mundial.','MTR-07':'Plata nativa: distribución mundial.','MTR-08':'Bismuto: varias procedencias europeas y americanas.','MTR-09':'Wolframita: varias procedencias.',
+ 'RAR-01':'Bezoar: tradición de Persia, India y América.','RAR-12':'Colmillo apócrifo: sin procedencia concreta.'
+};
+// Comercio europeo de 1842: Londres y París centralizaban el mercado de antigüedades, monedas,
+// huevos, instrumentos y curiosidades de cualquier origen (excepción configurada expresamente).
+const EUROPEAN_MARKET=new Set(['Numismática','Objetos de civilizaciones','Armería histórica','Máscaras y figurillas','Cartografía antigua','Medallas y condecoraciones históricas','Curiosidades de marineros','Instrumentos de exploración','Imágenes daguerrotipadas','Gabinete de maravillas','Huevos de aves','Piedras preciosas','Pigmentos del mundo']);
 const RAR=['Común','Poco común','Raro','Muy raro'];
 const pieces=[];
 const items=B.items.filter(r=>r[2]===0||r[2]===2);
 for(const [id,name,tipo,gab,col,rar] of items){
  const rule=RULES[col];if(!rule)throw new Error('Sin regla: '+col);
- const origin=META.cont[id]||'Mundial';
+ const metaOrigin=META.cont[id]||'Mundial',fix=metaOrigin==='Mundial'?ORIGIN[id]:null;
+ const origin=fix?fix[0]:metaOrigin,place=fix?fix[1]:null;
  const world=origin==='Mundial';
- let continents=world?(rule.marine?ALL:LAND):[origin];
- if(rule.marine&&!world&&!continents.includes('Océanos'))continents=[...continents,'Océanos'];
+ // Rarezas: el origen es la tradición o el animal, pero pueden hallarse donde viva el animal.
+ const findWorld=world||col==='Rarezas y mitos';
+ let continents=findWorld?(rule.marine?ALL:LAND):[origin];
+ if(rule.marine&&!findWorld&&!continents.includes('Océanos'))continents=[...continents,'Océanos'];
+ // Piezas marinas del Indo-Pacífico: también en las costas de Asia y Oceanía.
+ if(origin==='Océanos'&&rule.marine)continents=[...new Set([...continents,'Asia','Oceanía'])];
  const sources={};
  const want=new Set([rule.primary,...rule.alt]);
  if(want.has('campo')&&rule.biomes)sources.campo={biomes:rule.biomes,continents};
- if(want.has('observacion')&&OBS_KINDS[id]){const o=OBS_KINDS[id];sources.observacion=Array.isArray(o)?{kinds:o,continents:world?ALL:[origin],requires:'specimenDrops'}:{kinds:[],species:o.species,continents:ALL,requires:'specimenDrops'};}
+ if(want.has('observacion')&&OBS_KINDS[id]){const o=OBS_KINDS[id];sources.observacion=Array.isArray(o)?{kinds:o,continents:findWorld?ALL:[...new Set([origin,...(origin==='Océanos'?['Polos']:[])])],requires:'specimenDrops'}:{kinds:[],species:o.species,continents:ALL,requires:'specimenDrops'};}
  if(want.has('expediciones')&&rule.exp){
-  const routes=Object.entries(VOYAGE_DEST).filter(([,d])=>(rule.marine?d.marine:d.land)&&(world||d.continents.includes(origin))).map(([k])=>k);
+  const routes=Object.entries(VOYAGE_DEST).filter(([,d])=>(rule.marine?d.marine:d.land)&&(findWorld||continents.some(c=>d.continents.includes(c)))).map(([k])=>k);
   if(routes.length)sources.expediciones={modalities:rule.exp,routes,minShipyard:Math.min(...rule.exp.map(m=>EXP_MIN[m]))};
  }
  if(want.has('excavaciones')&&rule.dig){
-  const sites=Object.entries(DIG_SITE_CONT).filter(([,c])=>world||c===origin).map(([k])=>k);
+  const sites=Object.entries(DIG_SITE_CONT).filter(([,c])=>findWorld||continents.includes(c)).map(([k])=>k);
   const modes=rule.dig==='especial'?['especial']:rar<=1?['normal','profunda','especial']:rar===2?['profunda','especial']:['especial'];
   if(sites.length)sources.excavaciones={sites,modes,minExcavations:modes.includes('normal')?1:modes.includes('profunda')?3:5};
  }
@@ -160,19 +218,21 @@ for(const [id,name,tipo,gab,col,rar] of items){
  // Accesibilidad: si ninguna fuente activa llega a la procedencia de la pieza, se añade el comercio.
  const reach=Object.keys(sources).filter(k=>k!=='taller'&&k!=='encargos');
  const addedCommerce=!commerce&&!reach.length&&!sources.encargos;
- if(commerce||addedCommerce)sources.comercio={continents,minCaravan:rar+2,added:addedCommerce||undefined};
+ // Dónde se compra: el continente de origen y, para el comercio europeo de colecciones, Europa.
+ const markets=world?ALL:[...new Set([...continents,...(EUROPEAN_MARKET.has(col)?['Europa']:[])])];
+ if(commerce||addedCommerce)sources.comercio={continents:markets,minCaravan:rar+2,added:addedCommerce||undefined};
  const primary=sources[rule.primary]?rule.primary:Object.keys(sources)[0];
  if(!primary)throw new Error('Pieza sin fuente: '+id);
- pieces.push({id,name,collection:col,cabinet:gab,rarity:rar,origin,continents,primary,alt:Object.keys(sources).filter(k=>k!==primary),sources,
-  weight:B.pesos[rar],note:NOTES[id]||undefined});
+ pieces.push({id,name,collection:col,cabinet:gab,rarity:rar,origin,place:place||undefined,originBefore:fix?'Mundial':undefined,continents,findIn:continents,buyIn:sources.comercio?.continents,primary,alt:Object.keys(sources).filter(k=>k!==primary),sources,
+  weight:B.pesos[rar],note:[NOTES[id],UNCERTAIN[id]].filter(Boolean).join(' ')||undefined});
 }
 // Catálogo y validaciones.
 const byId=Object.fromEntries(pieces.map(p=>[p.id,p]));
 if(pieces.length!==431)throw new Error('Se esperaban 431 piezas: '+pieces.length);
-const js='/* El Gran Atlas · V5.6.3 Beta — MEC-03 · configuración de obtención por pieza.\n * GENERADO por scripts/build-mec03-catalog.cjs: edita las reglas allí, no este archivo.\n * Probabilidades y pesos provisionales (pesos por rareza de la beta 5.6.0). */\n'+
- "(function(root){'use strict';root.AtlasMEC03Catalog=Object.freeze({version:'5.6.3-beta',rarities:"+JSON.stringify(RAR)+",voyageDestinations:"+JSON.stringify(VOYAGE_DEST)+",digSites:"+JSON.stringify(DIG_SITE_CONT)+",expeditionMinLevel:"+JSON.stringify(EXP_MIN)+",pieces:"+JSON.stringify(byId)+"});})(typeof globalThis!=='undefined'?globalThis:window);\n";
+const js='/* El Gran Atlas · V5.6.4 Beta — MEC-03/MEC-04 · configuración de obtención por pieza.\n * GENERADO por scripts/build-mec03-catalog.cjs: edita las reglas allí, no este archivo.\n * Probabilidades y pesos provisionales (pesos por rareza de la beta 5.6.0). */\n'+
+ "(function(root){'use strict';root.AtlasMEC03Catalog=Object.freeze({version:'5.6.4-beta',rarities:"+JSON.stringify(RAR)+",voyageDestinations:"+JSON.stringify(VOYAGE_DEST)+",digSites:"+JSON.stringify(DIG_SITE_CONT)+",expeditionMinLevel:"+JSON.stringify(EXP_MIN)+",pieces:"+JSON.stringify(byId)+"});})(typeof globalThis!=='undefined'?globalThis:window);\n";
 const q=v=>{const s=String(v??'');return /[",;\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;};
-const header=['id','nombre','coleccion','gabinete','rareza','procedencia','continentes_compatibles','biomas','fuente_principal','fuentes_alternativas','actividades','requisitos','nivel_minimo','peso','observaciones'];
+const header=['id','nombre','coleccion','gabinete','rareza','procedencia','lugar_de_origen','antes_mec04','se_encuentra_en','se_compra_en','biomas','fuente_principal','fuentes_alternativas','actividades','requisitos','nivel_minimo','peso','observaciones'];
 const rows=pieces.map(p=>{
  const acts=[],req=[],lv=[];
  const s=p.sources;
@@ -184,11 +244,12 @@ const rows=pieces.map(p=>{
  if(s.comercio){acts.push('comercio:comerciantes');req.push('continente accesible'+(s.comercio.added?' (fuente añadida por accesibilidad)':''));lv.push('Caravana '+s.comercio.minCaravan);}
  if(s.taller){acts.push('taller:'+s.taller.recipe);lv.push('Taller (receta)');}
  if(s.encargos){acts.push('encargo:coleccionistas');}
- return [p.id,p.name,p.collection,p.cabinet,RAR[p.rarity],p.origin,p.continents.join(' '),(s.campo?.biomes||s.prospecciones?.biomes||[]).join(' '),p.primary,p.alt.join(' '),acts.join(' '),req.join(' · '),lv.join(' · '),p.weight,p.note||''].map(q).join(';');
+ return [p.id,p.name,p.collection,p.cabinet,RAR[p.rarity],p.origin,p.place||'',p.originBefore||'',p.continents.join(' '),(p.buyIn||[]).join(' '),(s.campo?.biomes||s.prospecciones?.biomes||[]).join(' '),p.primary,p.alt.join(' '),acts.join(' '),req.join(' · '),lv.join(' · '),p.weight,p.note||''].map(q).join(';');
 });
 const csv='﻿'+header.join(';')+'\n'+rows.join('\n')+'\n';
 const out=[['www/js/mec03-catalog.js',js],['docs/mec03/matriz-coleccionables.csv',csv]];
 if(process.argv.includes('--write')){fs.mkdirSync(path.join(root,'docs/mec03'),{recursive:true});for(const [f,c] of out)fs.writeFileSync(path.join(root,f),c);}
 else for(const [f,c] of out)if(!fs.existsSync(path.join(root,f))||fs.readFileSync(path.join(root,f),'utf8')!==c){console.error('Desactualizado: '+f+' · ejecuta node scripts/build-mec03-catalog.cjs --write');process.exit(1);}
 const count=k=>pieces.filter(p=>p.sources[k]).length;
-console.log(JSON.stringify({pieces:pieces.length,campo:count('campo'),observacion:count('observacion'),expediciones:count('expediciones'),comercio:count('comercio'),comercioAñadido:pieces.filter(p=>p.sources.comercio?.added).length,excavaciones:count('excavaciones'),prospecciones:count('prospecciones'),taller:count('taller'),encargos:count('encargos'),notas:pieces.filter(p=>p.note).length}));
+const onlyCommerce=pieces.filter(p=>Object.keys(p.sources).filter(k=>k!=='encargos'&&k!=='taller').every(k=>k==='comercio')).map(p=>p.id);
+console.log(JSON.stringify({soloComercio:onlyCommerce.length,mundial:pieces.filter(p=>p.origin==='Mundial').length,pieces:pieces.length,campo:count('campo'),observacion:count('observacion'),expediciones:count('expediciones'),comercio:count('comercio'),comercioAñadido:pieces.filter(p=>p.sources.comercio?.added).length,excavaciones:count('excavaciones'),prospecciones:count('prospecciones'),taller:count('taller'),encargos:count('encargos'),notas:pieces.filter(p=>p.note).length}));

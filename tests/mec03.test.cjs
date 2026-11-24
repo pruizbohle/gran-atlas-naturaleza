@@ -10,7 +10,8 @@ function game(o={}){const rng=o.rng||rngWith(o.seed);const h=make({now:T0,headle
 const saved=h=>{h.g.persist();return h.store[KEY];};
 const reopen=(h,o={})=>game({store:{[KEY]:saved(h)},now:h.now,...o});
 const Cm=h=>h.x.AtlasCampMEC02,A2=h=>h.x.AtlasCampMEC02Actions,A3=h=>h.x.AtlasMEC03Actions,K=h=>h.x.AtlasMEC03Catalog,X=h=>h.x.AtlasMEC03;
-function rich(h,{levels=5,regions=true}={}){const s=h.g.state;Object.assign(s,{money:1e7,knowledge:1e7,prestige:500});s.upgrades.shipyard=1;s.purchases.astillero=1;
+// MEC-04: rango máximo para poder llegar a los niveles IV–V (la exigencia de rango se prueba en MEC-04).
+function rich(h,{levels=5,regions=true}={}){const s=h.g.state;Object.assign(s,{money:1e7,knowledge:1e7,prestige:500});if(s.society)s.society.rank=20;s.upgrades.shipyard=1;s.purchases.astillero=1;
  if(regions)for(const r of h.g.REGIONS)s.regionUnlocked[r.id]=true;if(Cm(h))for(const f of Cm(h).FACILITIES)while(Cm(h).level(s,f.id)<levels)Cm(h).upgrade(s,f.id,h.now);return s;}
 const reg=(h,id)=>h.g.state.collectionRegistry.pieces[id];
 const failWrites=h=>{const ls=h.localStorage,set=ls.setItem;ls.setItem=()=>{throw new Error('QuotaExceededError');};return ()=>{ls.setItem=set;};};
@@ -121,9 +122,10 @@ test('MEC-03 · 6. coherencia geográfica y temática; anacronismos documentados
  for(const m of ['normal','botanica','arqueologica'])assert.ok(E.expedition('alps',m).every(id=>!marine.has(P[id].collection)));
  assert.ok(E.expedition('atlantic_survey','oceanografica').every(id=>marine.has(P[id].collection)));
  // El comercio solo ofrece piezas de continentes ya accesibles (aquí, solo Europa) o «Mundial».
- Object.assign(s,{money:1e7,knowledge:1e7,prestige:500});s.upgrades.shipyard=1;while(Cm(h).level(s,'caravan')<5)Cm(h).upgrade(s,'caravan');
+ Object.assign(s,{money:1e7,knowledge:1e7,prestige:500});s.upgrades.shipyard=1;s.society.rank=20;while(Cm(h).level(s,'caravan')<5)Cm(h).upgrade(s,'caravan');
  const conts=a.unlockedContinents();deq([...conts],['Europa']);
- for(const o of a.market().offers)assert.ok(P[o.piece].continents.includes('Europa'),o.piece+' '+P[o.piece].origin);
+ // MEC-04: se distingue origen, lugar de hallazgo y lugar de compra; se comprueba el lugar de compra.
+ for(const o of a.market().offers)assert.ok(P[o.piece].sources.comercio.continents.includes('Europa'),o.piece+' '+P[o.piece].origin);
  // Matriz CSV para auditoría con las 431 piezas y anacronismos señalados.
  const csv=fs.readFileSync('docs/mec03/matriz-coleccionables.csv','utf8').replace(/^﻿/,'').trim().split('\n');
  assert.equal(csv.length,432);assert.ok(csv[0].startsWith('id;nombre;coleccion;gabinete;rareza;procedencia'));
@@ -297,7 +299,7 @@ test('MEC-03 · 17. compatibilidad con partidas anteriores (MEC-02 y beta)',()=>
  assert.equal(s.collectionPrefs.protectLast,true);assert.equal(s.inventory['BOT-01'],2);
  assert.ok(h.M.discovered(s,'RAR-01'),'las piezas obtenidas en la beta se conservan');
  // Mejorar después no cambia las condiciones ya registradas (punto 8 de la sección 4).
- Object.assign(s,{money:1e7,knowledge:1e7,prestige:500});while(Cm(h).level(s,'surveys')<5)Cm(h).upgrade(s,'surveys');
+ Object.assign(s,{money:1e7,knowledge:1e7,prestige:500});s.society.rank=20;while(Cm(h).level(s,'surveys')<5)Cm(h).upgrade(s,'surveys');
  assert.equal(s.museum.relictSurveys[0].mec.extraLead,1);
 });
 
@@ -316,10 +318,11 @@ test('MEC-03 · 18 y 19. offline, exportación e importación',()=>{
  const t=game({now:r.now});t.window.AtlasSaveBridge.restoreGame(data);const ts=t.g.state;
  for(const k of ['collectorMarket','prospections','collectionPrefs','collectibleFinds','collectionRegistry','voyageHistory'])deq(ts[k],data[k],k);
  assert.equal(A3(t).collectProspection(job.id),false,'importar no reabre una liquidación');
- assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '5.6.3'"));
+ assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '"+require('../package.json').version+"'"));
 });
 
 test('MEC-03 · 20. MEC-01 y MEC-02 se conservan; versión y verificación',()=>{
+ // MEC-04: la versión se compara con package.json (antes, el literal 5.6.3 / MEC-03).
  const h=game(),g=h.g;
  // MEC-01: el canal histórico sigue primero y con su tasa; el libro y el registro siguen activos.
  deq(h.A.drops.channels()[0].rates.campo,{manual:0.02,auto:0.005});assert.ok(g.state.moneyLedger&&g.state.collectionRegistry);
@@ -327,7 +330,7 @@ test('MEC-03 · 20. MEC-01 y MEC-02 se conservan; versión y verificación',()=>
  const plain=game({noCamp:true});for(const x of [h,plain])rich(x,{levels:1});
  for(const fn of ['maxVoyages','maxExcavations','maxRelictSurveys'])assert.equal(h.g[fn](),plain.g[fn](),fn);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.equal(pkg.version,'5.6.3');assert.equal(rel.version,'5.6.3');assert.equal(rel.build,'MEC-03');assert.equal(rel.channel,'beta');
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec03.test.cjs'));
  const sw=fs.readFileSync('www/sw.js','utf8');for(const f of ['js/mec03-catalog.js','js/mec03-collect.js'])assert.ok(sw.includes("'./"+f+"'"),f);
  // La configuración generada está al día con su script.

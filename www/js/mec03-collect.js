@@ -69,7 +69,8 @@ function create(catalog,options={}){
   let r=random()*total;for(const id of list){r-=weight(id);if(r<0)return id;}return list[list.length-1];
  }
  const has=(list,x)=>Array.isArray(list)&&list.includes(x);
- const ambient=region=>!region?[]:ids.filter(id=>{const s=P[id].sources.campo;return s&&has(s.continents,region.continent)&&s.biomes.some(b=>has(region.habitats,b));});
+ // MEC-04: habitats acota el bioma de la búsqueda (manual: el seleccionado; automática: todos los de la región).
+ const ambient=(region,habitats)=>!region?[]:ids.filter(id=>{const s=P[id].sources.campo,hs=(habitats||region.habitats).filter(h=>has(region.habitats,h));return s&&has(s.continents,region.continent)&&s.biomes.some(b=>hs.includes(b));});
  const regional=region=>!region?[]:ids.filter(id=>{const p=P[id],s=p.sources.prospecciones,c=p.sources.campo;
   return (s&&s.types.includes('regional')&&has(s.continents,region.continent)&&(s.biomes||[]).some(b=>has(region.habitats,b)))||(c&&has(c.continents,region.continent)&&c.biomes.some(b=>has(region.habitats,b)));});
  const geological=(region,type)=>!region?[]:ids.filter(id=>{const s=P[id].sources.prospecciones;
@@ -139,7 +140,9 @@ function create(catalog,options={}){
    if(level===3){
     const conts=[...continents].filter(c=>c!=='Mundial').slice(0,8);
     for(const c of take(conts.map(x=>'#'+x),3,false).map(x=>x.slice(1))){
-     const local=commerce(3,new Set([c]),1).filter(id=>P[id].origin===c);
+     // MEC-04: el comerciante vende lo que se compra en su continente, sea de allí, de
+     // distribución mundial o del comercio europeo de colecciones (sources.comercio.continents).
+     const local=commerce(3,new Set([c]),1);
      for(const id of take(local,2))add({kind:'compra',merchant:'Comerciante regional · '+c,continent:c,piece:id,price:PRICE[P[id].rarity]});
      const t=take(local,1)[0];if(t)add({kind:'intercambio',merchant:'Comerciante regional · '+c,continent:c,piece:t,give:{collection:P[t].collection,minRarity:P[t].rarity,count:MARKET.exchangeCount[1]}});
     }

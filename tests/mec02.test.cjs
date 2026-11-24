@@ -10,8 +10,10 @@ function game(options={}){const rng=options.rng||rngWith(options.seed);const h=m
 const saved=h=>{h.g.persist();return h.store[KEY];};
 const reopen=(h,options={})=>game({store:{[KEY]:saved(h)},now:h.now,...options});
 // Partida con recursos para comprar mejoras y con el astillero habilitado.
-function rich(h){const s=h.g.state;Object.assign(s,{money:5e6,knowledge:5e6,prestige:200});s.upgrades.shipyard=1;s.purchases.astillero=1;for(const r of h.g.REGIONS)s.regionUnlocked[r.id]=true;return s;}
-const up=(h,id,to)=>{const C=h.x.AtlasCampMEC02;while(C.level(h.g.state,id)<to)assert.equal(C.upgrade(h.g.state,id,h.now).ok,true,id+' → '+to);};
+// MEC-04: los niveles IV y V exigen rango de Sociedad; estas pruebas de MEC-02 parten del rango máximo
+// (la exigencia de rango se prueba en tests/mec04.test.cjs).
+function rich(h){const s=h.g.state;Object.assign(s,{money:5e6,knowledge:5e6,prestige:200});if(s.society)s.society.rank=20;s.upgrades.shipyard=1;s.purchases.astillero=1;for(const r of h.g.REGIONS)s.regionUnlocked[r.id]=true;return s;}
+const up=(h,id,to)=>{const C=h.x.AtlasCampMEC02;if(h.g.state.society)h.g.state.society.rank=20;while(C.level(h.g.state,id)<to)assert.equal(C.upgrade(h.g.state,id,h.now).ok,true,id+' → '+to);};
 const A=h=>h.x.AtlasCampMEC02Actions,C=h=>h.x.AtlasCampMEC02;
 
 test('MEC-02 · cinco instalaciones con cinco niveles; cada nivel cambia algo verificable',()=>{
@@ -29,7 +31,10 @@ test('MEC-02 · cinco instalaciones con cinco niveles; cada nivel cambia algo ve
   f.levels.forEach((l,i)=>{
    stages++;
    assert.equal(l.level,i+1);assert.ok(l.functions.length>0);assert.ok(c.ART[f.id+'-'+l.level]);
-   assert.ok('societyRank' in l.requires&&l.requires.societyRankActive===false,'rango de Sociedad preparado, no activo');
+   // MEC-02 lo dejó preparado; MEC-04 lo activa solo en los niveles IV y V.
+   assert.ok('societyRank' in l.requires);
+   if(l.level<=3)assert.equal(l.requires.societyRankActive,false,'niveles I–III sin rango');
+   else assert.ok(l.requires.societyRankActive===true&&l.requires.societyRank>=5,'niveles IV–V con rango (MEC-04)');
    if(i)assert.notDeepEqual(J(l.effects),J(f.levels[i-1].effects),f.id+' nivel '+l.level+' debe cambiar un efecto');
    if(i){assert.ok(l.cost.money>f.levels[i-1].cost.money);assert.equal(l.requires.previousLevel,i);}
   });
