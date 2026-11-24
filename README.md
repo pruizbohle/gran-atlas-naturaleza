@@ -2,11 +2,29 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.4 Beta — MEC-04**, canal beta (rama `mec-04/v5.6.4-beta`, sobre MEC-03, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.5 Beta — MEC-05**, canal beta (rama `mec-05/v5.6.5-beta`, sobre MEC-04, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.4 Beta — MEC-04 (en revisión)
+## V5.6.5 Beta — MEC-05 (en revisión)
+
+El Museo pasa a ser un sistema de especialización. Cada uno de los cinco gabinetes de coleccionables da beneficios propios en actividades del Atlas:
+
+- **Botánica**: hallazgos y expediciones botánicas.
+- **Geología**: prospecciones geológicas y especializadas.
+- **Oceanografía**: hallazgos marinos y expediciones oceanográficas.
+- **Historia**: descuento en piezas históricas y expediciones arqueológicas.
+- **Historia natural y exploración**: conocimiento y reconocimientos.
+
+Las 32 colecciones forman exposiciones temáticas con cuatro hitos. Las bonificaciones son aditivas, tienen tope y dependen de las piezas expuestas ahora: desaparecen al retirarlas. Las actividades temporizadas las fijan al iniciar.
+
+Los niveles IV y V del Museo exigen los rangos 11 y 14; las partidas que ya los tenían los conservan. El ingreso zoológico no cambia y se muestra desglosado.
+
+También corrige MEC-04: el indicador de investigaciones cuenta solo el catálogo, la Sociedad usa regiones visitadas (con cuatro estados de región) y la auditoría de dependencias exige fuentes reales. Explica, además, la diferencia entre 113 y 125 regiones: los catálogos GM-06/GM-07 no se cargaban en el arnés de pruebas.
+
+Configuración en `www/js/mec05-museum.js`; informe en [docs/mec05](docs/mec05/README.md). Valores provisionales para BAL-01.
+
+## V5.6.4 Beta — MEC-04 (aprobada en auditoría externa)
 
 La Sociedad tiene 20 rangos con requisitos variados (prestigio, especies, monografías, coleccionables, expediciones, investigaciones, ingresos históricos del libro, regiones y colecciones). El ascenso es explícito, permanente y paga una recompensa única. Los rangos desbloquean los niveles IV y V del Campamento (I–III siguen libres), ofertas de la Caravana, encargos y cuatro categorías de financiación sin cobros dobles; el Museo queda preparado para MEC-05. Las partidas anteriores reciben el rango que sus registros justifican, sin pagos inventados.
 
@@ -95,6 +113,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.5 Beta | MEC-05: Museo evolutivo, gabinetes y exposiciones funcionales | [docs/mec05](docs/mec05/README.md) |
 | 5.6.4 Beta | MEC-04: Sociedad científica, rangos y desbloqueos | [docs/mec04](docs/mec04/README.md) |
 | 5.6.3 Beta | MEC-03: obtención híbrida de coleccionables e intercambio | [docs/mec03](docs/mec03/README.md) |
 | 5.6.2 Beta | MEC-02: Campamento evolutivo, 5 instalaciones × 5 niveles | [docs/mec02](docs/mec02/README.md) |

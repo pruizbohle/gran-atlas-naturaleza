@@ -1,20 +1,87 @@
 'use strict';
-// MEC-04 · auditoría estructural de dependencias y accesibilidad.
-// Recorre la progresión con las funciones reales del motor (desbloqueo de regiones,
-// investigaciones, fabricación de mapas, mejoras de instalaciones con su rango, ascensos)
-// y, en cada estado, calcula qué piezas, rutas, yacimientos, prospecciones, ofertas,
-// recetas y encargos están efectivamente disponibles. No es una simulación de tiempo:
-//  · el dinero y el conocimiento se suponen suficientes (recursos, no desbloqueos);
-//  · el prestigio y las monografías se limitan a las especies de las regiones accesibles;
-//  · las partes de mapas continentales históricos se suponen obtenibles (contenido histórico)
-//    y el mapa se fabrica con su receta real;
-//  · un rango solo se reconoce si sus requisitos caben en lo que el estado permite obtener.
+// MEC-04 · auditoría estructural de dependencias y accesibilidad (ampliada en MEC-05).
+// Recorre la progresión con las funciones reales del motor (desbloqueo y visita de regiones,
+// investigaciones, fabricación de mapas y preparaciones, mejoras de instalaciones con su rango,
+// ascensos) y, en cada estado, calcula qué piezas, rutas, yacimientos, prospecciones, ofertas,
+// recetas y encargos están efectivamente disponibles. No es una simulación de duración.
+//
+// SUPUESTOS SINTÉTICOS (documentados en docs/mec05/README.md, sección 2):
+//  S1. Dinero y conocimiento se suponen suficientes para pagar costos: son recursos, no
+//      desbloqueos. Nunca cuentan como prueba de que un requisito de ingresos se cumple.
+//  S2. Ingresos históricos (requisito «income») y expediciones completadas: no se simula su
+//      duración. Se exige, como prueba, al menos una fuente RENOVABLE de ingresos ejecutable
+//      en ese estado (premios de expediciones, ingreso del Museo, monografías) y una expedición
+//      disponible; sin ella el requisito queda bloqueado.
+//  S3. Monografías: solo especies de regiones accesibles que pueden avistarse en algún
+//      hábitat, hora y estación de su región (eligibleSpecies), o, en regiones profundas y
+//      abisales, por sondeo con su investigación comprada; es decir, que pueden llegar a la etapa 5. El prestigio se limita a esas monografías (+1 cada una); otras fuentes de prestigio
+//      no se cuentan.
+//  S4. Materiales: un mapa o una preparación solo se fabrica si cada material base tiene una
+//      fuente real accesible en ese estado (botín de una expedición disponible, capa cartográfica
+//      de una ruta disponible, mercado con Astillero, gabinete de especímenes de una especie
+//      accesible o receta con materiales accesibles). La cantidad se supone reunible con
+//      repeticiones (S2); si falta la fuente, la fabricación queda bloqueada y se informa.
+//  S5. Coleccionables: una pieza cuenta si alguna actividad ejecutable la entrega; el comercio
+//      se comprueba generando ofertas reales del mercado durante varios periodos con el rango y
+//      la Caravana del estado.
+//  S6. Las regiones se visitan con setRegion (regionsVisited) al desbloquearse.
 // Si existe una dependencia circular o imposible, la progresión se detiene y se informa.
 const LEVEL_NAMES=['shipyard','caravan','workshop','excavations','surveys'];
+const ASSUMPTIONS=Object.freeze({
+ S1:'Dinero y conocimiento suficientes para costos (no prueban ingresos).',
+ S2:'Ingresos y expediciones: se exige una fuente renovable ejecutable; no se simula la duración.',
+ S3:'Monografías y prestigio limitados a especies avistables de regiones accesibles (+1 prestigio por monografía).',
+ S4:'Mapas y preparaciones: cada material base necesita una fuente real accesible en ese estado.',
+ S5:'Coleccionables: actividad ejecutable que los entrega; comercio verificado con ofertas reales generadas.',
+ S6:'Regiones visitadas con setRegion al desbloquearse.'
+});
+
+function voyagesOpen(h){const g=h.g,s=g.state;return g.VOYAGES.filter(v=>s.upgrades.shipyard&&g.voyageConditions3280(v).every(c=>c.met));}
+
+// Fuentes reales de un material en el estado actual (S4). Devuelve pruebas; [] si no hay.
+function materialSources(h,id,ctx=null,seen=new Set()){
+ const g=h.g,s=g.state;
+ if(seen.has(id))return [];seen.add(id);
+ const c=ctx||{voyages:voyagesOpen(h),regions:g.REGIONS.filter(r=>s.regionUnlocked[r.id])};
+ const out=[];
+ for(const v of c.voyages){
+  const table=g.V316_LOOT_BASE.concat(g.V316_LOOT_BY_ROUTE[v.id]||[]);
+  if(table.some(([x])=>x===id))out.push('botín · '+v.id);
+  if(v.sample===id)out.push('muestra · '+v.id);
+ }
+ for(const d of g.CARTOGRAPHY3400)if(d.piece===id&&d.routes&&(!d.sourceResearch||s.purchases[d.sourceResearch]>0)){const r=d.routes.find(x=>c.voyages.some(v=>v.id===x));if(r)out.push('capa cartográfica · '+r);}
+ if(s.upgrades.shipyard&&Object.hasOwn(g.TRADE_MARKET,id))out.push('mercado · £'+g.TRADE_MARKET[id]);
+ if(s.upgrades.specimenDrops){const sp=Object.entries(g.SPECIES_DROPS).find(([sid,item])=>item===id&&c.regions.some(r=>(r.species||[]).includes(sid)));if(sp)out.push('gabinete de especímenes · '+sp[0]);}
+ const rec=g.RECIPES[id];
+ if(rec&&Object.keys(rec.requires||{}).every(m=>materialSources(h,m,c,new Set(seen)).length))out.push('receta');
+ return out;
+}
+
+// Especies que pueden llegar a monografía en las regiones accesibles (S3).
+function publishable(h){
+ const g=h.g,s=g.state,set=new Set();
+ const times=new Set(),seasons=new Set();for(const sp of Object.values(g.SPECIES)){for(const t of sp.times||[])times.add(t);for(const x of sp.seasons||[])seasons.add(x);}
+ for(const r of g.REGIONS)if(s.regionUnlocked[r.id])for(const hab of r.habitats)for(const t of times)for(const x of seasons)for(const id of g.eligibleSpecies(r.id,hab,t,x))set.add(id);
+ // Especies de regiones profundas y abisales: se obtienen por sondeo (motor GM3330/GM3340), no en el
+ // campo; cuentan si la región está accesible y su investigación de sondeo está comprada.
+ const deep={profundo:'exploracion_profunda_1',abisal:'exploracion_abisal_1'};
+ for(const r of g.REGIONS)if(s.regionUnlocked[r.id]&&deep[r.depthTier]&&s.purchases[deep[r.depthTier]]>0)for(const id of r.species||[])if(g.SPECIES[id])set.add(id);
+ return set;
+}
+
+// Piezas que aparecen en ofertas reales y ejecutables con el rango y la Caravana actuales (S5).
+function commerceReach(h,periods=40){
+ const g=h.g,s=g.state,a3=h.x.AtlasMEC03Actions,C=h.x.AtlasCampMEC02,out=new Set();
+ if(C.level(s,'caravan')<2)return out;
+ const saved=JSON.stringify(s.collectorMarket||null),now0=h.now;
+ for(let p=0;p<periods;p++){h.now=now0+p*24*3600e3;for(const o of a3.market(h.now).offers)if(o.kind!=='solicitud'&&C.level(s,'caravan')>=o.level&&!a3.offerBlock(o))out.add(o.piece);}
+ h.now=now0;s.collectorMarket=JSON.parse(saved);if(s.collectorMarket===null)delete s.collectorMarket;
+ return out;
+}
 
 function availability(h){
- const g=h.g,s=g.state,X=h.x.AtlasMEC03,K=h.x.AtlasMEC03Catalog,E=h.x.AtlasMEC03Actions.engine,C=h.x.AtlasCampMEC02,S=h.x.AtlasMEC04,a3=h.x.AtlasMEC03Actions;
- const P=K.pieces,lvl=id=>C.level(s,id),rank=S.rank(s),fx=id=>C.stageOf(id,lvl(id)).effects;
+ const g=h.g,s=g.state,X=h.x.AtlasMEC03,E=h.x.AtlasMEC03Actions.engine,C=h.x.AtlasCampMEC02,S=h.x.AtlasMEC04,a3=h.x.AtlasMEC03Actions;
+ const lvl=id=>C.level(s,id),rank=S.rank(s),fx=id=>C.stageOf(id,lvl(id)).effects;
  const regions=g.REGIONS.filter(r=>s.regionUnlocked[r.id]);
  const conts=new Set(regions.map(r=>r.continent));
  const reach=new Map(),mark=(id,how)=>{if(!reach.has(id))reach.set(id,new Set());reach.get(id).add(how);};
@@ -23,67 +90,95 @@ function availability(h){
   for(const t of Object.keys(X.PROSPECTIONS))if(lvl('surveys')>=X.PROSPECTIONS[t].minLevel)for(const id of(t==='regional'?E.regional(r):E.geological(r,t)))mark(id,'prospecciones');
  }
  if(s.upgrades.specimenDrops){const seen=new Set();for(const r of regions)for(const sp of r.species||[])if(!seen.has(sp)){seen.add(sp);for(const id of E.observation(sp))mark(id,'observacion');}}
- const voyages=g.VOYAGES.filter(v=>s.upgrades.shipyard&&g.voyageConditions3280(v).every(c=>c.met));
+ const voyages=voyagesOpen(h);
  const hk=h.x.AtlasCampMEC02Hooks;
  for(const v of voyages)for(const m of ['normal',...Object.keys(X.VOYAGE_MODALITIES)])if(m==='normal'||hk.modalityAllowed(v,m))for(const id of E.expedition(v.id,m))mark(id,'expediciones');
  const sites=g.MUSEUM_DIG_SITES.filter(x=>s.regionUnlocked[x.region]&&(!x.reqResearch||s.purchases[x.reqResearch]));
  for(const site of sites)for(const m of fx('excavations').modes)for(const id of E.dig(site.id,m))mark(id,'excavaciones');
- // Comercio: piezas que pueden aparecer en una oferta que el rango actual permite completar.
- const cl=lvl('caravan'),maxR=Math.min(3,cl-2);
- const rankFor=level=>S.COMMERCE_RANKS[level]||0;
- if(cl>=2)for(const id of E.commerce(cl,conts,maxR)){const r=P[id].rarity,offerLevel=r+2;if(rank>=rankFor(offerLevel)||(r<=1))mark(id,'comercio');}
+ for(const id of commerceReach(h))mark(id,'comercio');
  for(const [k,t] of Object.entries(X.PREPARATIONS))if(lvl('workshop')>=t.minWorkshop)for(const id of E.preparation(k,conts,lvl('workshop')>=4?2:1))mark(id,'taller');
  for(const c of a3.commissionList()){const need=S.COMMISSION_RANKS[c.id]||0;if(rank>=need)for(const id of E.reward(c.reward,conts))mark(id,'encargos');}
  return {reach,voyages:voyages.map(v=>v.id),sites:sites.map(x=>x.id),regions:regions.length,
+  visited:g.REGIONS.filter(r=>s.regionsVisited?.[r.id]).length,
   prospections:Object.keys(X.PROSPECTIONS).filter(t=>lvl('surveys')>=X.PROSPECTIONS[t].minLevel),
   preparations:Object.keys(X.PREPARATIONS).filter(k=>lvl('workshop')>=X.PREPARATIONS[k].minWorkshop),
   commissions:a3.commissionList().filter(c=>rank>=(S.COMMISSION_RANKS[c.id]||0)).map(c=>c.id)};
 }
 
+// Fuentes renovables de ingresos ejecutables en el estado (S2).
+function incomeSources(h,av){
+ const g=h.g,s=g.state,out=[];
+ if(av.voyages.length)out.push('premios de expediciones ('+av.voyages.length+' rutas)');
+ if(publishable(h).size)out.push('monografías (£90 cada una)');
+ if(Object.keys(s.museum.exhibits||{}).length||publishable(h).size)out.push('ingreso del Museo por muestras expuestas');
+ return out;
+}
+
 function caps(h,av){
- const g=h.g,s=g.state,K=h.x.AtlasMEC03Catalog,CAT=h.A.catalog;
- const species=new Set();for(const r of g.REGIONS)if(s.regionUnlocked[r.id])for(const sp of r.species||[])if(g.SPECIES[sp])species.add(sp);
- let collections=0;for(const c of CAT.collections.values())if(c.ids.every(id=>av.reach.has(id)))collections++;
- return {prestige:s.prestige,species:species.size,monographs:species.size,collectibles:av.reach.size,
-  voyages:av.voyages.length?Infinity:0,research:Object.values(s.purchases).filter(n=>n>0).length,income:Infinity,regions:av.regions,collections};
+ const g=h.g,s=g.state,CAT=h.A.catalog;
+ const pub=publishable(h);
+ let collections=0;const completable=[];
+ for(const c of CAT.collections.values())if(c.ids.every(id=>av.reach.has(id))){collections++;completable.push(c.name);}
+ const income=incomeSources(h,av);
+ return {prestige:s.prestige,species:pub.size,monographs:pub.size,collectibles:av.reach.size,
+  voyages:av.voyages.length?Infinity:0,research:g.RESEARCH_NODES.filter(n=>s.purchases[n.id]>0).length,
+  income:income.length?Infinity:0,regions:av.visited,collections,
+  evidence:{income,completable}};
 }
 
 function run(h,{maxSteps=80}={}){
- const g=h.g,s=g.state,C=h.x.AtlasCampMEC02,S=h.x.AtlasMEC04,log=[];
+ const g=h.g,s=g.state,C=h.x.AtlasCampMEC02,S=h.x.AtlasMEC04,log=[],evidence={materials:{},rank10:null,blockedMaterials:{}};
  h.window.confirm=()=>true;
  const rich=()=>{s.money=1e12;s.knowledge=1e12;};
+ // S4: reúne los materiales base de una receta solo si tienen fuente real; si no, informa.
+ const gather=(item,need=1)=>{
+  const rec=g.RECIPES[item];if(!rec)return false;
+  for(const [m,q] of Object.entries(rec.requires||{})){
+   if((s.inventory[m]||0)>=q*need)continue;
+   if(g.RECIPES[m]){for(let i=0;i<q*need;i++){if(!gather(m))return false;if(!g.craftItem(m))return false;}continue;}
+   const src=materialSources(h,m);
+   if(!src.length){evidence.blockedMaterials[m]=item;return false;}
+   evidence.materials[m]=src;delete evidence.blockedMaterials[m];s.inventory[m]=Math.max(s.inventory[m]||0,q*need);
+  }
+  return true;
+ };
  let av=availability(h),steps=0,changed=true;
  while(changed&&steps++<maxSteps){
   changed=false;rich();
-  const speciesNow=caps(h,av).species;
-  if(s.prestige<speciesNow+1){s.prestige=speciesNow+1;changed=true;}
+  const pub=publishable(h).size;
+  if(s.prestige<pub){s.prestige=pub;changed=true;}
   for(const r of g.REGIONS)if(!s.regionUnlocked[r.id]&&g.regionRequirementsMet(r)){g.unlockRegion(r.id);if(s.regionUnlocked[r.id]){changed=true;log.push('región '+r.id);}}
+  // S6: visita real de cada región desbloqueada (registro histórico).
+  const here=s.currentRegion;for(const r of g.REGIONS)if(s.regionUnlocked[r.id]&&!s.regionsVisited?.[r.id]){g.setRegion(r.id);if(s.regionsVisited?.[r.id])changed=true;}
+  if(s.regionUnlocked[here])g.setRegion(here);
   for(const n of g.RESEARCH_NODES)if(!(s.purchases[n.id]>0)&&g.canBuy(n)){rich();g.buyNode(n.id);if(s.purchases[n.id]>0){changed=true;log.push('investigación '+n.id);}}
   for(const d of g.CARTOGRAPHY3400)if(!(s.inventory[d.map]>0)&&(!d.sourceResearch||s.purchases[d.sourceResearch]>0)){
-   s.inventory[d.piece]=Math.max(s.inventory[d.piece]||0,d.quantity);if(g.canCraft(d.map)&&g.craftItem(d.map)){changed=true;log.push('mapa '+d.map);}
+   if(gather(d.map)&&g.canCraft(d.map)&&g.craftItem(d.map)){changed=true;log.push('mapa '+d.map);}
   }
-  // Mapa del mundo (puerta cartográfica de los océanos): receta real, sin consumir mapas.
   if(!(s.inventory.world_map>0)&&g.canCraft('world_map')&&g.craftItem('world_map')){changed=true;log.push('mapa world_map');}
-  // Preparaciones continentales históricas (CONTINENT_RESEARCH3300): se fabrican con su receta
-  // real; sus materiales históricos se suponen obtenibles (contenido ya verificado).
   for(const c of new Set(Object.values(g.CONTINENT_RESEARCH3300)))for(const item of g.craftedRequirements3300(c)||[]){
    if(s.inventory[item]>0||!g.RECIPES[item])continue;
-   const fill=x=>{for(const [m,q] of Object.entries(g.RECIPES[x]?.requires||{})){if(g.RECIPES[m]&&!(s.inventory[m]>=q)){for(let i=0;i<q;i++){fill(m);g.craftItem(m);}}else s.inventory[m]=Math.max(s.inventory[m]||0,q);}};
-   fill(item);if(g.craftItem(item)){changed=true;log.push('preparación '+item);}
+   if(gather(item)&&g.craftItem(item)){changed=true;log.push('preparación '+item);}
   }
   for(const id of LEVEL_NAMES){rich();if(C.check(s,id).ok&&C.upgrade(s,id,h.now).ok){changed=true;log.push('instalación '+id+' '+C.level(s,id));}}
   av=availability(h);
   const cap=caps(h,av);
   const e=S.eligibility(s,cap);
-  if(e.ok){S.ascend(s,cap,h.now,null);changed=true;log.push('rango '+S.rank(s));av=availability(h);}
+  if(!evidence.firstCollection&&cap.collections>0)evidence.firstCollection={rank:S.rank(s),collections:cap.evidence.completable,levels:{...s.camp.levels}};
+  if(e.ok){
+   if(e.next.level===10)evidence.rank10={collections:cap.evidence.completable,levels:{...s.camp.levels},rankBefore:S.rank(s),
+    sources:Object.fromEntries(cap.evidence.completable.slice(0,3).map(name=>{const c=[...h.A.catalog.collections.values()].find(x=>x.name===name);return [name,Object.fromEntries(c.ids.map(id=>[id,[...av.reach.get(id)]]))];}))};
+   S.ascend(s,cap,h.now,null);changed=true;log.push('rango '+S.rank(s));av=availability(h);
+  }
  }
  const K=h.x.AtlasMEC03Catalog,final=caps(h,av),e=S.eligibility(s,final);
- return {steps,log,rank:S.rank(s),levels:{...s.camp.levels},regions:av.regions,totalRegions:g.REGIONS.length,
-  research:Object.values(s.purchases).filter(n=>n>0).length,totalResearch:g.RESEARCH_NODES.length,
+ return {steps,log,assumptions:ASSUMPTIONS,evidence,rank:S.rank(s),levels:{...s.camp.levels},regions:av.regions,visited:av.visited,totalRegions:g.REGIONS.length,
+  research:g.RESEARCH_NODES.filter(n=>s.purchases[n.id]>0).length,totalResearch:g.RESEARCH_NODES.length,
+  monographs:final.monographs,totalSpecies:Object.keys(g.SPECIES).length,incomeSources:final.evidence.income,
   pieces:av.reach.size,missingPieces:Object.keys(K.pieces).filter(id=>!av.reach.has(id)),
   voyages:av.voyages,missingVoyages:g.VOYAGES.map(v=>v.id).filter(id=>!av.voyages.includes(id)),
   sites:av.sites,missingSites:g.MUSEUM_DIG_SITES.map(x=>x.id).filter(id=>!av.sites.includes(id)),
   prospections:av.prospections,preparations:av.preparations,commissions:av.commissions,
   blockedBy:e.ok||!e.next?[]:e.missing.map(m=>m.key+' '+m.have+'/'+m.need)};
 }
-module.exports={run,availability,caps};
+module.exports={run,availability,caps,materialSources,publishable,commerceReach,ASSUMPTIONS};

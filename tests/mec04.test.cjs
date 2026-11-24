@@ -22,7 +22,8 @@ function meet(h,level){const s=h.g.state,req=S(h).RANKS[level-1].requires;
  if(req.voyages)s.museum.voyagesCompleted=Math.max(s.museum.voyagesCompleted||0,req.voyages);
  if(req.research){let n=0;for(const node of h.g.RESEARCH_NODES){if(n>=req.research)break;s.purchases[node.id]=1;n++;}}
  if(req.income&&s.moneyLedger.total<req.income)h.M.credit(s,req.income-s.moneyLedger.total,'otros');
- if(req.regions){let n=0;for(const r of h.g.REGIONS){if(n>=req.regions)break;s.regionUnlocked[r.id]=true;n++;}}
+ // MEC-05: el indicador cuenta regiones visitadas (state.regionsVisited), no desbloqueadas.
+ if(req.regions){s.regionsVisited=s.regionsVisited||{};let n=0;for(const r of h.g.REGIONS){if(n>=req.regions)break;s.regionUnlocked[r.id]=true;s.regionsVisited[r.id]=true;n++;}}
  if(req.collections){let n=0;for(const c of h.A.catalog.collections.values()){if(n>=req.collections)break;for(const id of c.ids)h.g.addInventory(id,1);n++;}}
 }
 const climb=(h,to)=>{for(let lv=S(h).rank(h.g.state)+1;lv<=to;lv++){meet(h,lv);assert.ok(A4(h).ascend(),'asciende a '+lv);}};
@@ -167,7 +168,8 @@ test('MEC-04 · 11 y 16. desbloqueos aplicados: instalaciones, comercio, encargo
  s.society.rank=12;assert.equal(a3.offerBlock(extra[0]),'');
  const lvl4=m.offers.find(o=>o.level===4);s.society.rank=5;assert.ok(a3.offerBlock(lvl4));s.society.rank=12;
  // Museo: conexión preparada, sin efecto todavía.
- assert.equal(S(h).MUSEUM_RANKS.active,false);assert.equal(S(h).BENEFITS['museum:ampliaciones'].prepared,true);
+ // MEC-05 activó la conexión con el Museo (antes: active=false y beneficio «preparado»); su prueba está en mec05.
+ assert.equal(S(h).MUSEUM_RANKS.active,true);assert.ok(S(h).BENEFITS['museum:ampliaciones']);
 });
 
 test('MEC-04 · 12. recompensas y financiación sin duplicados',()=>{
@@ -244,7 +246,7 @@ test('MEC-04 · 18 y 19. exportación, importación y operación offline',()=>{
  // Offline: volver 7 h después permite la siguiente subvención de campo, una vez.
  const r=game({store:{[KEY]:saved(h)},now:h.now+7*H});r.tick();
  assert.ok(A4(r).claimFunding('campo')>0);assert.equal(A4(r).claimFunding('campo'),0);
- assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '5.6.4'"));
+ assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '"+require('../package.json').version+"'"));
 });
 
 test('MEC-04 · 20. MEC-01, MEC-02 y MEC-03 se conservan; versión y verificación',()=>{
@@ -256,7 +258,8 @@ test('MEC-04 · 20. MEC-01, MEC-02 y MEC-03 se conservan; versión y verificaci�
  assert.equal(plain.g.VOYAGES.length,8,'sin módulos MEC no se añaden destinos');assert.equal(g.VOYAGES.length,13);assert.equal(g.MUSEUM_DIG_SITES.length,7);
  const legacy=make({now:T0,headless:true,noBeta:true});assert.equal(legacy.g.VOYAGES.length,8);assert.equal(legacy.g.MUSEUM_DIG_SITES.length,4);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.equal(pkg.version,'5.6.4');assert.equal(rel.version,'5.6.4');assert.equal(rel.build,'MEC-04');assert.equal(rel.channel,'beta');
+ // MEC-05: la versión se compara con package.json (antes, el literal 5.6.4 / MEC-04).
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec04.test.cjs'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec04-society.js'"));
  assert.equal(require('node:child_process').spawnSync(process.execPath,['scripts/build-mec03-catalog.cjs']).status,0);

@@ -1,0 +1,416 @@
+{
+ "historico": {
+  "rank": 20,
+  "regions": 113,
+  "visited": 113,
+  "totalRegions": 113,
+  "research": 57,
+  "totalResearch": 57,
+  "monographs": 945,
+  "totalSpecies": 945,
+  "pieces": 431,
+  "missingPieces": [],
+  "incomeSources": [
+   "premios de expediciones (13 rutas)",
+   "monografías (£90 cada una)",
+   "ingreso del Museo por muestras expuestas"
+  ],
+  "firstCollection": {
+   "rank": 1,
+   "collections": [
+    "Instrumentos de exploración"
+   ],
+   "levels": {
+    "shipyard": 2,
+    "caravan": 2,
+    "workshop": 2,
+    "excavations": 2,
+    "surveys": 2
+   }
+  },
+  "rank10": {
+   "rankBefore": 9,
+   "levels": {
+    "shipyard": 5,
+    "caravan": 5,
+    "workshop": 5,
+    "excavations": 4,
+    "surveys": 4
+   },
+   "collections": 32
+  },
+  "blockedMaterials": {},
+  "materials": {
+   "asia_map_piece": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "africa_map_piece": [
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "ancient_coin": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "map_fragment": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "brass_shard": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £200"
+   ],
+   "polished_lens": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £160"
+   ],
+   "parchment_scrap": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £45"
+   ],
+   "pressed_flower": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £40"
+   ],
+   "owl_feather": [
+    "gabinete de especímenes · buho_real"
+   ],
+   "old_ink": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £180"
+   ],
+   "animal_trace": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "gabinete de especímenes · lince_boreal"
+   ],
+   "beaver_tail_scale": [
+    "gabinete de especímenes · castor_europeo"
+   ],
+   "carved_wood": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £80"
+   ],
+   "north_america_map_piece": [
+    "botín · atlantic_survey",
+    "muestra · atlantic_survey"
+   ],
+   "south_america_map_piece": [
+    "capa cartográfica · atlantic_survey"
+   ],
+   "oceania_map_piece": [
+    "capa cartográfica · atlantic_survey"
+   ],
+   "polar_map_piece": [
+    "capa cartográfica · north"
+   ]
+  },
+  "hitos": [
+   "mapa asia_map",
+   "mapa africa_map",
+   "preparación brass_compass",
+   "preparación oceanic_quadrant",
+   "preparación field_telescope",
+   "preparación scholar_hat",
+   "preparación polar_coat",
+   "preparación sounding_kit",
+   "instalación shipyard 2",
+   "instalación caravan 2",
+   "instalación workshop 2",
+   "instalación excavations 2",
+   "instalación surveys 2",
+   "rango 2",
+   "mapa north_america_map",
+   "instalación shipyard 3",
+   "instalación caravan 3",
+   "instalación workshop 3",
+   "instalación excavations 3",
+   "instalación surveys 3",
+   "rango 3",
+   "mapa south_america_map",
+   "rango 4",
+   "mapa oceania_map",
+   "rango 5",
+   "mapa polar_map",
+   "mapa world_map",
+   "instalación shipyard 4",
+   "instalación workshop 4",
+   "rango 6",
+   "instalación caravan 4",
+   "instalación excavations 4",
+   "instalación surveys 4",
+   "rango 7",
+   "rango 8",
+   "rango 9",
+   "instalación shipyard 5",
+   "instalación caravan 5",
+   "instalación workshop 5",
+   "rango 10",
+   "instalación excavations 5",
+   "instalación surveys 5",
+   "rango 11",
+   "rango 12",
+   "rango 13",
+   "rango 14",
+   "rango 15",
+   "rango 16",
+   "rango 17",
+   "rango 18",
+   "rango 19",
+   "rango 20"
+  ],
+  "blockedBy": [],
+  "assumptions": {
+   "S1": "Dinero y conocimiento suficientes para costos (no prueban ingresos).",
+   "S2": "Ingresos y expediciones: se exige una fuente renovable ejecutable; no se simula la duración.",
+   "S3": "Monografías y prestigio limitados a especies avistables de regiones accesibles (+1 prestigio por monografía).",
+   "S4": "Mapas y preparaciones: cada material base necesita una fuente real accesible en ese estado.",
+   "S5": "Coleccionables: actividad ejecutable que los entrega; comercio verificado con ofertas reales generadas.",
+   "S6": "Regiones visitadas con setRegion al desbloquearse."
+  }
+ },
+ "completo": {
+  "rank": 20,
+  "regions": 125,
+  "visited": 125,
+  "totalRegions": 125,
+  "research": 57,
+  "totalResearch": 57,
+  "monographs": 1000,
+  "totalSpecies": 1000,
+  "pieces": 431,
+  "missingPieces": [],
+  "incomeSources": [
+   "premios de expediciones (13 rutas)",
+   "monografías (£90 cada una)",
+   "ingreso del Museo por muestras expuestas"
+  ],
+  "firstCollection": {
+   "rank": 1,
+   "collections": [
+    "Instrumentos de exploración"
+   ],
+   "levels": {
+    "shipyard": 2,
+    "caravan": 2,
+    "workshop": 2,
+    "excavations": 2,
+    "surveys": 2
+   }
+  },
+  "rank10": {
+   "rankBefore": 9,
+   "levels": {
+    "shipyard": 5,
+    "caravan": 5,
+    "workshop": 5,
+    "excavations": 4,
+    "surveys": 4
+   },
+   "collections": 32
+  },
+  "blockedMaterials": {},
+  "materials": {
+   "asia_map_piece": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "africa_map_piece": [
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "ancient_coin": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "map_fragment": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans"
+   ],
+   "brass_shard": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £200"
+   ],
+   "polished_lens": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £160"
+   ],
+   "parchment_scrap": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £45"
+   ],
+   "pressed_flower": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £40"
+   ],
+   "owl_feather": [
+    "gabinete de especímenes · buho_real"
+   ],
+   "old_ink": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £180"
+   ],
+   "animal_trace": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "gabinete de especímenes · lince_boreal"
+   ],
+   "beaver_tail_scale": [
+    "gabinete de especímenes · castor_europeo"
+   ],
+   "carved_wood": [
+    "botín · coast",
+    "botín · north",
+    "botín · alps",
+    "botín · carpathians",
+    "botín · balkans",
+    "mercado · £80"
+   ],
+   "north_america_map_piece": [
+    "botín · atlantic_survey",
+    "muestra · atlantic_survey"
+   ],
+   "south_america_map_piece": [
+    "capa cartográfica · atlantic_survey"
+   ],
+   "oceania_map_piece": [
+    "capa cartográfica · atlantic_survey"
+   ],
+   "polar_map_piece": [
+    "capa cartográfica · north"
+   ]
+  },
+  "hitos": [
+   "mapa asia_map",
+   "mapa africa_map",
+   "preparación brass_compass",
+   "preparación oceanic_quadrant",
+   "preparación field_telescope",
+   "preparación scholar_hat",
+   "preparación polar_coat",
+   "preparación sounding_kit",
+   "instalación shipyard 2",
+   "instalación caravan 2",
+   "instalación workshop 2",
+   "instalación excavations 2",
+   "instalación surveys 2",
+   "rango 2",
+   "mapa north_america_map",
+   "instalación shipyard 3",
+   "instalación caravan 3",
+   "instalación workshop 3",
+   "instalación excavations 3",
+   "instalación surveys 3",
+   "rango 3",
+   "mapa south_america_map",
+   "rango 4",
+   "mapa oceania_map",
+   "rango 5",
+   "mapa polar_map",
+   "mapa world_map",
+   "instalación shipyard 4",
+   "instalación workshop 4",
+   "rango 6",
+   "instalación caravan 4",
+   "instalación excavations 4",
+   "instalación surveys 4",
+   "rango 7",
+   "rango 8",
+   "rango 9",
+   "instalación shipyard 5",
+   "instalación caravan 5",
+   "instalación workshop 5",
+   "rango 10",
+   "instalación excavations 5",
+   "instalación surveys 5",
+   "rango 11",
+   "rango 12",
+   "rango 13",
+   "rango 14",
+   "rango 15",
+   "rango 16",
+   "rango 17",
+   "rango 18",
+   "rango 19",
+   "rango 20"
+  ],
+  "blockedBy": [],
+  "assumptions": {
+   "S1": "Dinero y conocimiento suficientes para costos (no prueban ingresos).",
+   "S2": "Ingresos y expediciones: se exige una fuente renovable ejecutable; no se simula la duración.",
+   "S3": "Monografías y prestigio limitados a especies avistables de regiones accesibles (+1 prestigio por monografía).",
+   "S4": "Mapas y preparaciones: cada material base necesita una fuente real accesible en ese estado.",
+   "S5": "Coleccionables: actividad ejecutable que los entrega; comercio verificado con ofertas reales generadas.",
+   "S6": "Regiones visitadas con setRegion al desbloquearse."
+  }
+ }
+}

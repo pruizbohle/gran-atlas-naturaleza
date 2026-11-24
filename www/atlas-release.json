@@ -1,7 +1,8 @@
 {
-  "version": "5.6.4",
-  "build": "MEC-04",
-  "label": "5.6.4 Beta — MEC-04",
+  "version": "5.6.5",
+  "build": "MEC-05",
+  "label": "5.6.5 Beta — MEC-05",
+  "v565": {"mec05": true, "beta": true, "museumLevels": 5, "museumRankLevels": {"4": 11, "5": 14}, "cabinets": 5, "cabinetBenefits": 11, "themeTiers": 4, "museumState": "derivado de state.museum.cabinets", "apk": false},
   "v564": {"mec04": true, "beta": true, "societyRanks": 20, "rankState": "state.society", "facilityRankLevels": [4, 5], "newVoyages": 5, "newDigSites": 3, "worldOrigins": 21, "apk": false},
   "v563": {"mec03": true, "beta": true, "pieces": 431, "collections": 32, "animalMaterials": 27, "universalDropsRetired": true, "sources": ["campo","observacion","expediciones","comercio","excavaciones","prospecciones","taller","encargos"], "eventsActive": false, "apk": false},
   "v562": {"mec02": true, "beta": true, "facilities": 5, "levelsPerFacility": 5, "stages": 25, "personalArea": "shop", "campState": "state.camp", "provisionalValues": true, "apk": false},

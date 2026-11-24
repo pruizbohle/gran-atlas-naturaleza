@@ -33,7 +33,7 @@ const METRICS=Object.freeze({
  voyages:{label:'Expediciones completadas',go:'expeditions'},
  research:{label:'Investigaciones realizadas',go:'research'},
  income:{label:'Ingresos acumulados (£)',go:'society'},
- regions:{label:'Regiones exploradas',go:'atlas'},
+ regions:{label:'Regiones visitadas',go:'atlas'},
  collections:{label:'Colecciones completadas',go:'objects'}
 });
 
@@ -55,7 +55,8 @@ const BENEFITS=Object.freeze({
  'commission:geografica':{label:'Encargo · Sociedad Geográfica',kind:'encargo'},
  'commission:estudio':{label:'Encargo · publicación de estudios',kind:'encargo'},
  'commission:institucional':{label:'Encargo · colaboración institucional',kind:'encargo'},
- 'museum:ampliaciones':{label:'Ampliaciones avanzadas del Museo (preparado para MEC-05)',kind:'museo',prepared:true}
+ 'museum:ampliaciones':{label:'Museo: Pabellón de ciencias (nivel IV)',kind:'museo',prepared:false},
+ 'museum:maravillas':{label:'Museo: Gabinete de maravillas (nivel V)',kind:'museo'}
 });
 
 const R=(level,id,name,description,requires,unlocks,reward)=>Object.freeze({
@@ -78,7 +79,7 @@ const RANKS=Object.freeze([
  R(11,'curador','Curador','Responsable de colecciones de la Sociedad.',{prestige:255,species:250,collectibles:70},['museum:ampliaciones'],{money:2500,knowledge:1000}),
  R(12,'academico','Académico','Miembro de la Academia de la Sociedad.',{prestige:295,regions:30,voyages:25},['commerce:extraordinarias','commission:institucional'],{money:3000,knowledge:1200}),
  R(13,'explorador_mayor','Explorador mayor','Dirige expediciones de largo alcance.',{prestige:335,monographs:150,research:28},[],{money:3500,knowledge:1400}),
- R(14,'consejo','Miembro del Consejo','Participa en el gobierno de la Sociedad.',{prestige:375,collectibles:110,income:500000},['grant:patrocinio'],{money:4000,knowledge:1600}),
+ R(14,'consejo','Miembro del Consejo','Participa en el gobierno de la Sociedad.',{prestige:375,collectibles:110,income:500000},['grant:patrocinio','museum:maravillas'],{money:4000,knowledge:1600}),
  R(15,'consejero_honorario','Consejero honorario','Consejero de honor por su trayectoria.',{prestige:410,species:400,collections:3},[],{money:4500,knowledge:1800}),
  R(16,'catedratico','Catedrático','Titular de una cátedra de historia natural.',{prestige:440,regions:55,voyages:50},[],{money:5000,knowledge:2000}),
  R(17,'director_seccion','Director de sección','Dirige una sección científica.',{prestige:465,monographs:250,research:36},[],{money:5500,knowledge:2200}),
@@ -107,7 +108,7 @@ const FUNDING=Object.freeze({
  proyectos:{label:'Proyectos científicos',benefit:'grant:proyectos',everyMonographs:25,perMilestone:600,source:'subvenciones'},
  patrocinio:{label:'Patrocinio institucional',benefit:'grant:patrocinio',cooldownHours:24,base:1500,perPrestige:6,source:'subvenciones'}
 });
-const MUSEUM_RANKS=Object.freeze({prepared:true,active:false,note:'MEC-05: ampliaciones avanzadas del Museo con rango Curador (11).'});
+const MUSEUM_RANKS=Object.freeze({prepared:true,active:true,note:'Activo desde MEC-05: niveles del Museo IV (rango 11) y V (rango 14); configuración en www/js/mec05-museum.js.'});
 
 function rank(state){const v=Math.floor(Number(state?.society?.rank));return Number.isFinite(v)?Math.max(1,Math.min(RANKS.length,v)):1;}
 function unlocked(state,benefit){const lv=rank(state);return RANKS.some(r=>r.level<=lv&&r.unlocks.includes(benefit));}
