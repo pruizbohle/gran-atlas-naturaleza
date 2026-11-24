@@ -2832,6 +2832,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   if(first){state.money+=15;pushLog(`Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
   const note=[];
   if(Math.random()<0.12){state.feedObs[chosen]=feed(chosen)+1;note.push('comiendo');}
+  const betaRun=globalThis.AtlasBeta560Actions?.run?.(chosen);if(betaRun)note.push(betaRun);
   const sexObservation=recordSexObservation(chosen,manual);
   if(sexObservation){
    const sexLabel=sexObservation.sex==='male'?'macho':'hembra';
@@ -7933,6 +7934,48 @@ if(globalThis.AtlasMuseumCuration3380){
   museumViewModel3270=function(...args){
    const m=museumViewBefore560.apply(this,args);
    if(m&&m.room==='samples'&&m.view)m.view.cabinets=cabinetsHtml();
+   return m;
+  };
+ }
+
+ // Beta 5.6.0 · Hitos de conducta: el guepardo corriendo (única especie por ahora).
+ {
+  const HITOS={af_guepardo:{label:'Velocidad máxima',unit:'km/h',target:100,mean:85,sd:10,min:50,max:120,chance:0.10}};
+  const rec=id=>{
+   const b=state.beta560=state.beta560&&typeof state.beta560==='object'?state.beta560:{moneyEarned:0,lastMoney:null};
+   b.hitos=b.hitos&&typeof b.hitos==='object'?b.hitos:{};
+   return b.hitos[id]=b.hitos[id]||{best:0,tries:0,approved:false};
+  };
+  const gauss=()=>{let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);};
+  const run=id=>{
+   const h=HITOS[id];if(!h||Math.random()>=h.chance)return null;
+   const r=rec(id),speed=Math.round(Math.min(h.max,Math.max(h.min,h.mean+h.sd*gauss()))*10)/10;
+   r.tries++;
+   const record=speed>r.best;if(record)r.best=speed;
+   let text='corriendo a '+speed+' '+h.unit+(record&&r.tries>1?' · nuevo récord':'');
+   if(!r.approved&&r.best>=h.target){r.approved=true;text+=' · hito aprobado: '+h.label+' ≥ '+h.target+' '+h.unit+' (BETA)';}
+   return text;
+  };
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{run,hitos:HITOS,record:rec});
+  const stageBefore560=stageRequirements;
+  stageRequirements=function(id,index){
+   const req=stageBefore560(id,index),h=HITOS[id];
+   if(h&&index===3){
+    const r=rec(id);
+    req.extra+=' BETA: también vale el hito «'+h.label+' ≥ '+h.target+' '+h.unit+'» ('+(r.best?r.best+' '+h.unit+' registrados':'sin carreras registradas')+').';
+    if(r.approved){req.extraOk=true;req.allOk=req.sightOk&&req.moneyOk&&req.knowledgeOk&&req.extraOk;}
+   }
+   return req;
+  };
+  const journalBefore560=journalViewModel3250;
+  journalViewModel3250=function(...args){
+   const m=journalBefore560.apply(this,args),s=m&&m.selected;
+   const h=s&&HITOS[state.selectedJournal||currentRegion().species[0]];
+   if(h&&s.stage===3){
+    const r=rec(state.selectedJournal||currentRegion().species[0]);
+    s.extraLabel=s.extraLabel+' o hito de velocidad';
+    s.extraProgress=s.extraProgress+' · '+(r.best?r.best+'/'+h.target+' '+h.unit:'0/'+h.target+' '+h.unit);
+   }
    return m;
   };
  }
