@@ -2832,6 +2832,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   if(first){state.money+=15;pushLog(`Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
   const note=[];
   if(Math.random()<0.12){state.feedObs[chosen]=feed(chosen)+1;note.push('comiendo');}
+  const betaRun=globalThis.AtlasBeta560Actions?.run?.(chosen);if(betaRun)note.push(betaRun);
   const sexObservation=recordSexObservation(chosen,manual);
   if(sexObservation){
    const sexLabel=sexObservation.sex==='male'?'macho':'hembra';
@@ -4299,7 +4300,7 @@ function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34
 function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0)+(state.equipment.necklace==='museum_medallion'?0.10:0)+museumFossilSetBonus()+museumCurationBonus()+museumRelictSetBonus());}
 // Orden de mayor precio de muestra a menor, sin cambiar la economía.
 function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
-function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
+function museumCapacity(){return [0,3,7,12,18,25][state.museum.wing] || 12;}
 function expandMuseum(){
  const next=MUSEUM_WINGS[state.museum.wing];
  if(!next || state.prestige<next.prestige || state.money<next.cost)return;
@@ -5366,6 +5367,7 @@ function handlePanelAction(e){
       if(el.dataset.m27Token!==undefined||act.startsWith('m27-')){museumAction3270(act,el.dataset.m27Token,el.dataset.m27Qty,el);return;}
     }
     // M-3270 END actions
+    if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle(id);return;}
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
       if(act==='b26-open'){openBestiaryModal3260(Number(el.dataset.b26Slot),el);return;}
@@ -7338,7 +7340,7 @@ const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expe
 const inventoryUI3400={query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null,filtersOpen:false};
 let inventoryActionSeq3400=0;
 function isMap3400(id){return /_map(?:_piece)?$/.test(id)||id==='world_map';}
-function inventoryCategory3400(id){const i=ITEMS[id];return isMap3400(id)?'cartography':i.kind==='regional'?'regional':i.slot?'equip':i.kind==='animal'?'animal':i.kind==='fossil'||i.kind==='rare'?'fossil':'materials';}
+function inventoryCategory3400(id){const i=ITEMS[id];return i.beta&&i.kind==='beta'?'beta':isMap3400(id)?'cartography':i.kind==='regional'?'regional':i.slot?'equip':i.kind==='animal'?'animal':i.kind==='fossil'||i.kind==='rare'?'fossil':'materials';}
 function inventorySources3400(id){
  const sources=[];
  if(RECIPES[id])sources.push('Taller: '+Object.entries(RECIPES[id].requires).map(([k,n])=>ITEMS[k].name+' ×'+n).join(' · '));
@@ -7390,7 +7392,8 @@ function inventoryQuery3400(){
  const view=state.inventoryView,ui=inventoryUI3400;
  let ids=Object.keys(view==='taller'?RECIPES:ITEMS).filter(id=>{
   const cat=inventoryCategory3400(id),i=ITEMS[id];
-  if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil'].includes(cat))return false;
+  if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil','beta'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil','beta'].includes(cat))return false;
+  if(i.beta&&view!=='taller'&&!(state.inventory[id]>0))return false;
   if(ui.query&&!ITEMS[id].name.toLocaleLowerCase('es').includes(ui.query.toLocaleLowerCase('es')))return false;
   if(ui.category!=='all'&&cat!==ui.category)return false;
   const owned=(state.inventory[id]||0)>0;
@@ -7418,7 +7421,7 @@ function inventoryDetail3400(id){
 function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${[1,5].map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
 renderObjects=function(){
  const q=inventoryQuery3400(),ui=inventoryUI3400,id=ITEMS[ui.selected]?ui.selected:q.shown[0];
- return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${uiIcon530(inventoryIcons530[key])} ${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">${globalThis.AtlasIcons530?.glyph('search')||''} Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query).replace(/"/g,'&quot;')}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>${globalThis.AtlasIcons530?.glyph('filter')||''} Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
+ return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${uiIcon530(inventoryIcons530[key])} ${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">${globalThis.AtlasIcons530?.glyph('search')||''} Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query).replace(/"/g,'&quot;')}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>${globalThis.AtlasIcons530?.glyph('filter')||''} Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['beta','Colección BETA'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
 };
 craftItem=function(id){
  if(!ITEMS[id]||!canCraft(id))return false;
@@ -7548,7 +7551,7 @@ function uxNavigate3410(type,id){
  else if(type==='museum'||type==='museum-room'){if(!['exhibitions','samples','fossils','relicts','artifacts'].includes(id))return false;tab='museum';museumSetRoom3270(id);return true;}
  else if(type==='trade'){if(!['routes','contracts','barters','market','register'].includes(id))return false;tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
  else if(type==='voyage'){if(!VOYAGES.some(v=>v.id===id))return false;tab='expeditions';navigationTab3300='expeditions';developmentUI3280.route=id;}
- else if(type==='society'){if(!['grants','missions','publications','achievements'].includes(id))return false;state.societyView=id;tab='society';}
+ else if(type==='society'){if(!['grants','missions','publications','achievements','rank'].includes(id))return false;state.societyView=id;tab='society';}
  else return false;
  renderPanel();return true;
 }
@@ -7796,6 +7799,205 @@ if(globalThis.AtlasMuseumCuration3380){
  museumSampleQuery3270=function(){const q=originalSampleQuery3380();if(!curationSampleProject3380)return q;const pool=new Set(globalThis.AtlasMuseumCuration3380.index(curationContext3380()).get(curationSampleProject3380)||[]),ids=q.ids.filter(id=>pool.has(id)),pages=Math.max(1,Math.ceil(ids.length/32));museumUI3270.samplePage=Math.max(0,Math.min(museumUI3270.samplePage,pages-1));return {...q,ids,total:ids.length,pages,page:museumUI3270.samplePage,emptyMessage:'No hay muestras de este proyecto que cumplan el filtro actual. Requieren estudio5/5 y publicación, o una exposición histórica conservada.'};};
  const mark3380=fn=>function(...args){curationDirty3380=true;return fn.apply(this,args);};
  removeExhibit=mark3380(removeExhibit);toggleMuseumDisplay=mark3380(toggleMuseumDisplay);researchRelict=mark3380(researchRelict);
+}
+// Beta 5.6.0 · objetos nuevos, drops de prueba e imagen genérica. Todo lo nuevo lleva la marca BETA.
+{
+ const B=globalThis.AtlasBeta560;
+ const betaArtifacts560=new Set();
+ if(B){
+  const betaKind=[ 'beta','animal','beta' ];
+  for(const [id,name,tipo,gab,col] of B.items){
+   if(ITEMS[id])continue;
+   ITEMS[id]={name,emoji:'?',slot:null,bonus:'BETA · '+B.tipos[tipo]+' · '+col,kind:betaKind[tipo],beta:true,betaType:tipo,betaGabinete:gab};
+  }
+  for(const m of B.materiales||[]){
+   if(ITEMS[m.id])continue;
+   ITEMS[m.id]={name:m.name,emoji:'?',slot:null,bonus:'BETA · Material de artefactos · Se fabrica en el Taller',kind:'artifact_material',beta:true,betaType:3};
+   RECIPES[m.id]={requires:m.requires};
+  }
+  for(const a of B.artefactos||[]){
+   if(MUSEUM_COLLECTIONS.some(p=>p.id===a.id))continue;
+   MUSEUM_COLLECTIONS.push({id:a.id,tab:'artifacts',name:a.name,icon:'?',description:'BETA · '+a.desc,requires:a.requires,knowledge:a.knowledge,beta:true});
+   betaArtifacts560.add(a.id);
+  }
+  const betaSpecies=new Map();
+  for(const [sid,list] of Object.entries(B.bySpecies))for(const i of list){const id=B.items[i][0];if(!betaSpecies.has(id))betaSpecies.set(id,[]);betaSpecies.get(id).push(sid);}
+  const dropBefore560=maybeSpeciesDrop;
+  maybeSpeciesDrop=function(id,manual){
+   const pool=B.bySpecies[id];
+   if(!pool||!pool.length)return dropBefore560(id,manual);
+   if(!state.upgrades.specimenDrops)return null;
+   if(Math.random()>=(manual?0.02:0.005))return null;
+   const weights=pool.map(i=>B.pesos[B.items[i][5]]);
+   let roll=Math.random()*weights.reduce((a,b)=>a+b,0),pick=pool[pool.length-1];
+   for(let k=0;k<pool.length;k++){roll-=weights[k];if(roll<=0){pick=pool[k];break;}}
+   const item=B.items[pick][0];
+   addInventory(item,1);
+   return item;
+  };
+  const sourcesBefore560=inventorySources3400;
+  inventorySources3400=function(id){
+   const list=sourcesBefore560(id),sp=betaSpecies.get(id);
+   if(sp&&ITEMS[id]?.beta)list.push('BETA · Drop de prueba: cae de '+sp.length+' especies'+(sp.length<=6?' ('+sp.map(s=>SPECIES[s]?.name||s).join(', ')+')':'')+'. Requiere el Gabinete de especímenes.');
+   return list;
+  };
+ }
+ // Imagen genérica: todo objeto sin arte propio muestra una lámina con "?".
+ const artBefore560=renderItemArt;
+ const genericArt560=id=>{
+  const it=ITEMS[id]||(betaArtifacts560.has(id)?{beta:true,betaType:3}:{}),t=it.betaType,fill=t===1?'#a9855a':t===2?'#b7a2c2':t===3?'#a8bdb8':'#e8d8ae';
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false" data-item-art="generic">'+
+   '<rect x="14" y="10" width="72" height="80" rx="6" fill="'+fill+'" stroke="#604a35" stroke-width="2.5"/>'+
+   '<rect x="21" y="17" width="58" height="66" rx="3" fill="none" stroke="#604a35" stroke-width="1" stroke-dasharray="3 3"/>'+
+   '<text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="44" font-weight="700" fill="#604a35">?</text>'+
+   (it.beta?'<rect x="26" y="70" width="48" height="13" rx="2" fill="#7b4332"/><text x="50" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#f4e7c5">BETA</text>':'')+
+   '</svg>';
+ };
+ renderItemArt=function(id){
+  const art=artBefore560(id);
+  return !art||/^<svg[^>]*><\/svg>$/.test(art)?genericArt560(id):art;
+ };
+ const museumArtBefore560=museumCardArt;
+ museumCardArt=function(kind,id){return betaArtifacts560.has(id)?genericArt560(id):museumArtBefore560(kind,id);};
+ // Beta 5.6.0 · rango en la Sociedad (20 niveles). Por ahora solo informa; no bloquea ninguna mecánica.
+ if(B?.sociedad){
+  const track560=()=>{
+   const b=state.beta560=state.beta560&&typeof state.beta560==='object'?state.beta560:{moneyEarned:0,lastMoney:null};
+   const m=Number(state.money)||0;
+   if(b.lastMoney===null||b.lastMoney===undefined)b.moneyEarned=Math.max(Number(b.moneyEarned)||0,m);
+   else if(m>b.lastMoney)b.moneyEarned=(Number(b.moneyEarned)||0)+m-b.lastMoney;
+   b.lastMoney=m;
+  };
+  const stats560=()=>{
+   track560();
+   const owned=B.items.filter(it=>(it[2]===0||it[2]===2)&&(state.inventory[it[0]]||0)>0).length;
+   return {prestige:Math.floor(state.prestige||0),money:Math.floor(state.beta560.moneyEarned||0),items:owned};
+  };
+  const level560=st=>{
+   let lv=1;
+   B.sociedad.forEach((r,i)=>{if(st.prestige>=r[1]&&st.money>=r[2]&&st.items>=r[3])lv=Math.max(lv,i+1);});
+   return lv;
+  };
+  const bar560=(label,have,need)=>'<div class="req"><strong>'+label+'</strong><div class="small">'+fmt(have)+' / '+fmt(need)+'</div><div class="progress"><div style="width:'+Math.min(100,need?Math.round(100*have/need):100)+'%"></div></div></div>';
+  const rankPanel560=()=>{
+   const st=stats560(),lv=level560(st),cur=B.sociedad[lv-1],next=B.sociedad[lv];
+   return '<div class="req"><strong>Rango en la Sociedad · BETA</strong><div class="small">'+esc(cur[0])+' · nivel '+lv+' de '+B.sociedad.length+'</div></div>'+
+    (next?'<div class="small">Próximo rango: <b>'+esc(next[0])+'</b>. Hay que cumplir los tres requisitos a la vez.</div>'+bar560('Prestigio',st.prestige,next[1])+bar560('Dinero acumulado (£)',st.money,next[2])+bar560('Coleccionables distintos',st.items,next[3])+(next[4]?'<div class="small">Al subir: '+esc(next[4])+' (propuesta).</div>':''):'<div class="small">Alcanzaste el rango más alto.</div>')+
+    '<div class="small">BETA: el rango todavía no bloquea mecánicas y sus umbrales son provisionales.</div>'+
+    '<details><summary>Los '+B.sociedad.length+' rangos</summary><ol class="small">'+B.sociedad.map((r,i)=>'<li>'+(i<lv?'✓ ':'')+esc(r[0])+' · prestigio '+fmt(r[1])+' · £'+fmt(r[2])+' · '+fmt(r[3])+' coleccionables'+(r[4]?' · '+esc(r[4]):'')+'</li>').join('')+'</ol></details>';
+  };
+  const renderBefore560=render;
+  render=function(...args){track560();return renderBefore560.apply(this,args);};
+  const societyBefore560=renderSociety;
+  renderSociety=function(){
+   if(state.societyView!=='rank')return societyBefore560();
+   return globalThis.AtlasSociety3360?globalThis.AtlasSociety3360.layout(state,achievementContext3360(),rankPanel560()):'<section class="card stack">'+rankPanel560()+'</section>';
+  };
+ }
+
+ // Beta 5.6.0 · Museo: niveles 4 y 5 y gabinetes de colección (sustituyen a la sala "Muestras").
+ if(B){
+  MUSEUM_WINGS.push({level:4,name:'Pabellón de ciencias (BETA)',cost:50000,prestige:60},{level:5,name:'Gabinete de maravillas (BETA)',cost:500000,prestige:150});
+  const CABINETS=['Botánica','Geología','Oceanografía','Historia','Historia natural y exploración'];
+  const SLOTS=[0,4,8,12,16,20];
+  const cabOf=new Map();
+  for(const it of B.items)if(it[2]===0||it[2]===2)cabOf.set(it[0],it[3]);
+  const cabState=()=>{state.museum.cabinets=state.museum.cabinets&&typeof state.museum.cabinets==='object'?state.museum.cabinets:{};return state.museum.cabinets;};
+  const slots560=()=>SLOTS[state.museum.wing]||SLOTS[SLOTS.length-1];
+  const toggle=id=>{
+   const gab=cabOf.get(id);if(!gab||!ITEMS[id])return;
+   const cab=cabState(),list=cab[gab]=Array.isArray(cab[gab])?cab[gab]:[];
+   const at=list.indexOf(id);
+   if(at>=0){list.splice(at,1);pushLog('Gabinete · retirada: '+ITEMS[id].name);}
+   else{
+    if(!(state.inventory[id]>0)||list.length>=slots560())return;
+    list.push(id);pushLog('Gabinete · expuesta: '+ITEMS[id].name);
+   }
+   render();
+  };
+  globalThis.AtlasBeta560Actions={toggle};
+  const rarName=['Común','Poco común','Raro','Muy raro'];
+  const rarOf=new Map(B.items.map(it=>[it[0],it[5]]));
+  const piece560=(id,shown,full)=>'<article class="m27-piece owned"><div class="m27-plate"><span class="m27-art">'+renderItemArt(id)+'</span><strong>'+esc(ITEMS[id].name)+'</strong><span class="m27-tag">'+(shown?'Expuesta · ':'')+rarName[rarOf.get(id)]+'</span></div><div class="m27-actions"><button type="button" class="btn alt" data-action="beta-cab-toggle" data-id="'+esc(id)+'" '+(!shown&&full?'disabled':'')+'>'+(shown?'Retirar':'Exponer')+'</button></div></article>';
+  const cabinetsHtml=()=>{
+   const cab=cabState(),n=slots560();
+   return '<div class="m27-room-heading"><h3>Gabinetes de colección · BETA</h3><small>'+n+' casillas por gabinete · nivel '+state.museum.wing+' del museo</small></div>'+
+    '<p class="m27-note">Aquí se exponen las piezas de colección que tengas en la bolsa. Por ahora solo se muestran: no dan ingresos ni bonificaciones.</p>'+
+    CABINETS.map(g=>{
+     const shown=(cab[g]||[]).filter(id=>ITEMS[id]&&state.inventory[id]>0);
+     const owned=[...cabOf.keys()].filter(id=>cabOf.get(id)===g&&state.inventory[id]>0&&!shown.includes(id)).sort((x,y)=>ITEMS[x].name.localeCompare(ITEMS[y].name,'es'));
+     const full=shown.length>=n,list=owned.slice(0,12);
+     return '<details class="m27-section" '+(shown.length||owned.length?'open':'')+'><summary>'+esc(g)+' · '+shown.length+'/'+n+' expuestas · '+owned.length+' en bolsa</summary><div class="m27-fold-body"><div class="m27-grid">'+shown.map(id=>piece560(id,true,full)).join('')+list.map(id=>piece560(id,false,full)).join('')+'</div>'+(shown.length+owned.length===0?'<p class="m27-empty">Aún no tienes piezas de este gabinete. Caen de los animales con el Gabinete de especímenes.</p>':'')+(owned.length>12?'<p class="m27-note">Y '+(owned.length-12)+' piezas más en tu bolsa.</p>':'')+'</div></details>';
+    }).join('');
+  };
+  const museumViewBefore560=museumViewModel3270;
+  museumViewModel3270=function(...args){
+   const m=museumViewBefore560.apply(this,args);
+   if(m&&m.room==='samples'&&m.view)m.view.cabinets=cabinetsHtml();
+   return m;
+  };
+ }
+
+ // Beta 5.6.0 · Hitos de conducta: el guepardo corriendo (única especie por ahora).
+ {
+  const HITOS={af_guepardo:{label:'Velocidad máxima',unit:'km/h',target:100,mean:85,sd:10,min:50,max:120,chance:0.10}};
+  const rec=id=>{
+   const b=state.beta560=state.beta560&&typeof state.beta560==='object'?state.beta560:{moneyEarned:0,lastMoney:null};
+   b.hitos=b.hitos&&typeof b.hitos==='object'?b.hitos:{};
+   return b.hitos[id]=b.hitos[id]||{best:0,tries:0,approved:false};
+  };
+  const gauss=()=>{let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);};
+  const run=id=>{
+   const h=HITOS[id];if(!h||Math.random()>=h.chance)return null;
+   const r=rec(id),speed=Math.round(Math.min(h.max,Math.max(h.min,h.mean+h.sd*gauss()))*10)/10;
+   r.tries++;
+   const record=speed>r.best;if(record)r.best=speed;
+   let text='corriendo a '+speed+' '+h.unit+(record&&r.tries>1?' · nuevo récord':'');
+   if(!r.approved&&r.best>=h.target){r.approved=true;text+=' · hito aprobado: '+h.label+' ≥ '+h.target+' '+h.unit+' (BETA)';}
+   return text;
+  };
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{run,hitos:HITOS,record:rec});
+  const stageBefore560=stageRequirements;
+  stageRequirements=function(id,index){
+   const req=stageBefore560(id,index),h=HITOS[id];
+   if(h&&index===3){
+    const r=rec(id);
+    req.extra+=' BETA: también vale el hito «'+h.label+' ≥ '+h.target+' '+h.unit+'» ('+(r.best?r.best+' '+h.unit+' registrados':'sin carreras registradas')+').';
+    if(r.approved){req.extraOk=true;req.allOk=req.sightOk&&req.moneyOk&&req.knowledgeOk&&req.extraOk;}
+   }
+   return req;
+  };
+  const journalBefore560=journalViewModel3250;
+  journalViewModel3250=function(...args){
+   const m=journalBefore560.apply(this,args),s=m&&m.selected;
+   const h=s&&HITOS[state.selectedJournal||currentRegion().species[0]];
+   if(h&&s.stage===3){
+    const r=rec(state.selectedJournal||currentRegion().species[0]);
+    s.extraLabel=s.extraLabel+' o hito de velocidad';
+    s.extraProgress=s.extraProgress+' · '+(r.best?r.best+'/'+h.target+' '+h.unit:'0/'+h.target+' '+h.unit);
+   }
+   return m;
+  };
+ }
+
+ // Beta 5.6.0 · Las colecciones viven en Inventario → Coleccionables: se añade el avance por colección.
+ if(B){
+  const cols560=new Map();
+  for(const it of B.items)if(it[2]===0||it[2]===2){
+   const c=cols560.get(it[4])||{gab:it[3],total:0,ids:[]};c.total++;c.ids.push(it[0]);cols560.set(it[4],c);
+  }
+  const objectsBefore560=renderObjects;
+  renderObjects=function(){
+   const html=objectsBefore560();
+   if(state.inventoryView!=='coleccionables')return html;
+   const rows=[...cols560.entries()].map(([name,c])=>({name,gab:c.gab,total:c.total,have:c.ids.filter(id=>state.inventory[id]>0).length}));
+   const have=rows.reduce((n,r)=>n+r.have,0),total=rows.reduce((n,r)=>n+r.total,0);
+   const panel='<details class="inv340-collections"><summary>Colecciones · BETA · '+have+'/'+total+' piezas</summary>'+rows.map(r=>'<div class="req"><strong>'+esc(r.name)+'</strong><div class="small">'+esc(r.gab)+' · '+r.have+'/'+r.total+'</div><div class="progress"><div style="width:'+Math.round(100*r.have/r.total)+'%"></div></div></div>').join('')+'</details>';
+   const mark='<p class="small" aria-live="polite">';
+   return html.includes(mark)?html.replace(mark,panel+mark):html;
+  };
+ }
+
 }
 render();
 })();

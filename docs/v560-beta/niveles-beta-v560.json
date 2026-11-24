@@ -1,0 +1,514 @@
+{
+ "schema": 1,
+ "beta": true,
+ "version": "5.6.0-beta",
+ "sociedad": [
+  {
+   "nivel": 1,
+   "rango": "Aficionado",
+   "prestigio": 0,
+   "dineroAcumulado": 0,
+   "coleccionables": 0,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 2,
+   "rango": "Corresponsal",
+   "prestigio": 5,
+   "dineroAcumulado": 500,
+   "coleccionables": 0,
+   "desbloquea": "Campamento: Astillero nivel 1",
+   "beta": true
+  },
+  {
+   "nivel": 3,
+   "rango": "Aspirante",
+   "prestigio": 12,
+   "dineroAcumulado": 2000,
+   "coleccionables": 2,
+   "desbloquea": "Museo: primer gabinete",
+   "beta": true
+  },
+  {
+   "nivel": 4,
+   "rango": "Ayudante de campo",
+   "prestigio": 25,
+   "dineroAcumulado": 6000,
+   "coleccionables": 5,
+   "desbloquea": "Taller",
+   "beta": true
+  },
+  {
+   "nivel": 5,
+   "rango": "Observador",
+   "prestigio": 45,
+   "dineroAcumulado": 15000,
+   "coleccionables": 10,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 6,
+   "rango": "Colector",
+   "prestigio": 70,
+   "dineroAcumulado": 40000,
+   "coleccionables": 20,
+   "desbloquea": "Gabinetes del Museo",
+   "beta": true
+  },
+  {
+   "nivel": 7,
+   "rango": "Socio auxiliar",
+   "prestigio": 100,
+   "dineroAcumulado": 100000,
+   "coleccionables": 35,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 8,
+   "rango": "Socio correspondiente",
+   "prestigio": 135,
+   "dineroAcumulado": 250000,
+   "coleccionables": 55,
+   "desbloquea": "Caravana y comercio",
+   "beta": true
+  },
+  {
+   "nivel": 9,
+   "rango": "Naturalista",
+   "prestigio": 175,
+   "dineroAcumulado": 500000,
+   "coleccionables": 80,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 10,
+   "rango": "Socio titular",
+   "prestigio": 215,
+   "dineroAcumulado": 1000000,
+   "coleccionables": 110,
+   "desbloquea": "Excavaciones",
+   "beta": true
+  },
+  {
+   "nivel": 11,
+   "rango": "Curador",
+   "prestigio": 255,
+   "dineroAcumulado": 2000000,
+   "coleccionables": 145,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 12,
+   "rango": "Académico",
+   "prestigio": 295,
+   "dineroAcumulado": 3500000,
+   "coleccionables": 180,
+   "desbloquea": "Prospecciones",
+   "beta": true
+  },
+  {
+   "nivel": 13,
+   "rango": "Explorador mayor",
+   "prestigio": 335,
+   "dineroAcumulado": 5000000,
+   "coleccionables": 220,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 14,
+   "rango": "Miembro del Consejo",
+   "prestigio": 375,
+   "dineroAcumulado": 8000000,
+   "coleccionables": 260,
+   "desbloquea": "Tienda y equipo avanzado",
+   "beta": true
+  },
+  {
+   "nivel": 15,
+   "rango": "Consejero honorario",
+   "prestigio": 410,
+   "dineroAcumulado": 12000000,
+   "coleccionables": 300,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 16,
+   "rango": "Catedrático",
+   "prestigio": 440,
+   "dineroAcumulado": 16000000,
+   "coleccionables": 335,
+   "desbloquea": "Expediciones polares",
+   "beta": true
+  },
+  {
+   "nivel": 17,
+   "rango": "Director de sección",
+   "prestigio": 465,
+   "dineroAcumulado": 20000000,
+   "coleccionables": 365,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 18,
+   "rango": "Vicepresidente",
+   "prestigio": 480,
+   "dineroAcumulado": 25000000,
+   "coleccionables": 395,
+   "desbloquea": "Sondeo profundo",
+   "beta": true
+  },
+  {
+   "nivel": 19,
+   "rango": "Presidente honorario",
+   "prestigio": 485,
+   "dineroAcumulado": 30000000,
+   "coleccionables": 415,
+   "desbloquea": "",
+   "beta": true
+  },
+  {
+   "nivel": 20,
+   "rango": "Gran Naturalista",
+   "prestigio": 500,
+   "dineroAcumulado": 40000000,
+   "coleccionables": 431,
+   "desbloquea": "Colección completa del Atlas",
+   "beta": true
+  }
+ ],
+ "museo": [
+  {
+   "nivel": 1,
+   "nombre": "Sala inicial",
+   "costoDinero": 0,
+   "sociedadMin": 1,
+   "casillasPorGabinete": 4,
+   "exhibicionesAnimales": 3,
+   "beta": true
+  },
+  {
+   "nivel": 2,
+   "nombre": "Galería",
+   "costoDinero": 5000,
+   "sociedadMin": 4,
+   "casillasPorGabinete": 8,
+   "exhibicionesAnimales": 6,
+   "beta": true
+  },
+  {
+   "nivel": 3,
+   "nombre": "Pabellón",
+   "costoDinero": 50000,
+   "sociedadMin": 8,
+   "casillasPorGabinete": 12,
+   "exhibicionesAnimales": 9,
+   "beta": true
+  },
+  {
+   "nivel": 4,
+   "nombre": "Gran museo",
+   "costoDinero": 500000,
+   "sociedadMin": 12,
+   "casillasPorGabinete": 16,
+   "exhibicionesAnimales": 12,
+   "beta": true
+  },
+  {
+   "nivel": 5,
+   "nombre": "Gabinete de maravillas",
+   "costoDinero": 5000000,
+   "sociedadMin": 16,
+   "casillasPorGabinete": 20,
+   "exhibicionesAnimales": 15,
+   "beta": true
+  }
+ ],
+ "hitos": [
+  {
+   "especie": "af_guepardo",
+   "nombre": "Guepardo",
+   "conducta": "correr",
+   "hito": "Velocidad máxima",
+   "unidad": "km/h",
+   "umbralAprobado": 100,
+   "distribucion": {
+    "tipo": "normal truncada",
+    "media": 85,
+    "desviacion": 10,
+    "min": 50,
+    "max": 120
+   },
+   "probRegistroPorEncuentro": 0.1,
+   "efecto": "El hito aprobado cuenta como alternativa a las 10 observaciones comiendo de la etapa 4",
+   "beta": true
+  }
+ ],
+ "materialesNuevos": [
+  {
+   "id": "engranaje",
+   "nombre": "Engranaje de latón",
+   "fuente": "Taller: 2 latón antiguo",
+   "beta": true
+  },
+  {
+   "id": "espejo",
+   "nombre": "Espejo pulido",
+   "fuente": "Taller: 1 lente pulida + 1 latón antiguo",
+   "beta": true
+  },
+  {
+   "id": "carta_estelar",
+   "nombre": "Carta estelar",
+   "fuente": "Pergamino antiguo + tintero antiguo en Taller",
+   "beta": true
+  },
+  {
+   "id": "placa_daguerrotipo",
+   "nombre": "Placa de daguerrotipo",
+   "fuente": "Taller: 1 latón antiguo + 1 lente pulida",
+   "beta": true
+  },
+  {
+   "id": "modulo_luminoso",
+   "nombre": "Módulo luminoso",
+   "fuente": "Taller: 1 lente pulida + 1 latón antiguo + 1 madera tallada",
+   "beta": true
+  },
+  {
+   "id": "componente_electrico",
+   "nombre": "Componente eléctrico",
+   "fuente": "Comercio portuario o Taller: 2 latón antiguo",
+   "beta": true
+  }
+ ],
+ "artefactos": [
+  {
+   "n": 1,
+   "id": "carta_historica",
+   "nombre": "Carta cartográfica histórica",
+   "familia": "Históricos",
+   "estado": "Existente",
+   "ingredientes": "2 fragmentos de mapa + 1 moneda antigua",
+   "unidades": 3,
+   "observacion": "Montaje y exposición; conservar receta y efecto actual",
+   "beta": false
+  },
+  {
+   "n": 2,
+   "id": "medallon_viajero",
+   "nombre": "Medallón de expedición",
+   "familia": "Históricos",
+   "estado": "Existente",
+   "ingredientes": "2 monedas antiguas + 1 pergamino",
+   "unidades": 3,
+   "observacion": "Mantener ID, coste y propiedades existentes",
+   "beta": false
+  },
+  {
+   "n": 3,
+   "id": "astrolabio_laton",
+   "nombre": "Astrolabio de latón",
+   "familia": "Históricos",
+   "estado": "Existente",
+   "ingredientes": "3 latón + 1 lente pulida + 1 moneda antigua",
+   "unidades": 5,
+   "observacion": "Conservar la receta de Museo actual",
+   "beta": false
+  },
+  {
+   "n": 4,
+   "id": "diario_explorador",
+   "nombre": "Diario de explorador",
+   "familia": "Históricos",
+   "estado": "Existente",
+   "ingredientes": "1 tintero + 3 pergaminos + 2 fragmentos de mapa",
+   "unidades": 6,
+   "observacion": "Conservar la receta de Museo actual",
+   "beta": false
+  },
+  {
+   "n": 5,
+   "id": "globo_cartografico",
+   "nombre": "Globo cartográfico antiguo",
+   "familia": "Históricos",
+   "estado": "Existente",
+   "ingredientes": "2 latón + 2 maderas talladas + 4 fragmentos de mapa",
+   "unidades": 8,
+   "observacion": "Conservar la receta de Museo actual",
+   "beta": false
+  },
+  {
+   "n": 6,
+   "id": "microscopio_compuesto",
+   "nombre": "Microscopio compuesto",
+   "familia": "Óptica",
+   "estado": "Propuesto",
+   "ingredientes": "3 latón + 2 lentes + 1 madera + 1 engranaje",
+   "unidades": 7,
+   "observacion": "Equipo de gabinete, sin bonificación acordada",
+   "beta": true
+  },
+  {
+   "n": 7,
+   "id": "telescopio_astronomico",
+   "nombre": "Telescopio refractor",
+   "familia": "Óptica",
+   "estado": "Propuesto",
+   "ingredientes": "4 latón + 3 lentes + 2 maderas + 2 engranajes",
+   "unidades": 11,
+   "observacion": "No confundir con catalejo funcional existente",
+   "beta": true
+  },
+  {
+   "n": 8,
+   "id": "globo_celeste",
+   "nombre": "Globo celeste",
+   "familia": "Astronomía",
+   "estado": "Propuesto",
+   "ingredientes": "2 latón + 2 maderas + 2 mapas + 1 carta estelar",
+   "unidades": 7,
+   "observacion": "Diferente del globo cartográfico terrestre",
+   "beta": true
+  },
+  {
+   "n": 9,
+   "id": "esfera_armilar",
+   "nombre": "Esfera armilar",
+   "familia": "Astronomía",
+   "estado": "Propuesto",
+   "ingredientes": "5 latón + 2 engranajes + 1 carta estelar",
+   "unidades": 8,
+   "observacion": "Instrumento astronómico histórico",
+   "beta": true
+  },
+  {
+   "n": 10,
+   "id": "planetario_orrery",
+   "nombre": "Planetario mecánico",
+   "familia": "Astronomía",
+   "estado": "Propuesto",
+   "ingredientes": "3 latón + 3 engranajes + 2 maderas + 1 carta estelar",
+   "unidades": 9,
+   "observacion": "Representación de las órbitas en modelo mecánico",
+   "beta": true
+  },
+  {
+   "n": 11,
+   "id": "automata_ave",
+   "nombre": "Autómata cantor",
+   "familia": "Autómatas",
+   "estado": "Propuesto",
+   "ingredientes": "2 maderas + 4 engranajes + 2 latón",
+   "unidades": 8,
+   "observacion": "Modelo mecánico histórico; objeto de exhibición",
+   "beta": true
+  },
+  {
+   "n": 12,
+   "id": "automata_escribiente",
+   "nombre": "Autómata escribiente",
+   "familia": "Autómatas",
+   "estado": "Propuesto",
+   "ingredientes": "3 maderas + 5 engranajes + 2 latón + 1 tintero + 1 pergamino",
+   "unidades": 12,
+   "observacion": "Pieza de gran complejidad para galería científica",
+   "beta": true
+  },
+  {
+   "n": 13,
+   "id": "estereoscopio_espejos",
+   "nombre": "Estereoscopio de espejos",
+   "familia": "Óptica",
+   "estado": "Propuesto",
+   "ingredientes": "2 espejos + 2 maderas + 2 latón",
+   "unidades": 6,
+   "observacion": "Modelo de Wheatstone (1838), no modelo lenticular posterior",
+   "beta": true
+  },
+  {
+   "n": 14,
+   "id": "camara_daguerrotipos",
+   "nombre": "Cámara daguerrotípica",
+   "familia": "Fotografía",
+   "estado": "Propuesto",
+   "ingredientes": "2 lentes + 2 maderas + 1 placa + 2 latón",
+   "unidades": 7,
+   "observacion": "Uso en expedientes fotográficos ficticios de 1842",
+   "beta": true
+  },
+  {
+   "n": 15,
+   "id": "linterna_magica",
+   "nombre": "Linterna mágica",
+   "familia": "Óptica",
+   "estado": "Propuesto",
+   "ingredientes": "2 lentes + 2 latón + 1 módulo luminoso + 1 madera",
+   "unidades": 6,
+   "observacion": "Proyección óptica con recursos abstractos",
+   "beta": true
+  },
+  {
+   "n": 16,
+   "id": "camara_oscura",
+   "nombre": "Cámara oscura",
+   "familia": "Fotografía",
+   "estado": "Propuesto",
+   "ingredientes": "2 maderas + 2 lentes + 1 espejo + 1 pergamino",
+   "unidades": 6,
+   "observacion": "Dispositivo óptico de dibujo y observación",
+   "beta": true
+  },
+  {
+   "n": 17,
+   "id": "maquina_electrostatica",
+   "nombre": "Máquina electrostática",
+   "familia": "Electricidad",
+   "estado": "Propuesto",
+   "ingredientes": "2 latón + 2 maderas + 2 componentes eléctricos + 1 engranaje",
+   "unidades": 7,
+   "observacion": "Gabinete de demostración histórica; solo abstracción de juego",
+   "beta": true
+  },
+  {
+   "n": 18,
+   "id": "pila_volta",
+   "nombre": "Pila de Volta",
+   "familia": "Electricidad",
+   "estado": "Propuesto",
+   "ingredientes": "2 latón + 2 maderas + 2 componentes eléctricos",
+   "unidades": 6,
+   "observacion": "Modelo museístico, no instrucciones reales de montaje",
+   "beta": true
+  },
+  {
+   "n": 19,
+   "id": "galvanometro",
+   "nombre": "Galvanómetro",
+   "familia": "Electricidad",
+   "estado": "Propuesto",
+   "ingredientes": "2 latón + 1 lente + 2 maderas + 1 componente eléctrico",
+   "unidades": 6,
+   "observacion": "Instrumento histórico de laboratorio",
+   "beta": true
+  },
+  {
+   "n": 20,
+   "id": "induccion_farad",
+   "nombre": "Demostrador de inducción",
+   "familia": "Electricidad",
+   "estado": "Propuesto",
+   "ingredientes": "3 latón + 2 engranajes + 2 componentes eléctricos + 1 madera",
+   "unidades": 8,
+   "observacion": "Inspirado en experiencias científicas de Faraday",
+   "beta": true
+  }
+ ]
+}
