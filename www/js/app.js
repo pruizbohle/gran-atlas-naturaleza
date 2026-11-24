@@ -7549,7 +7549,7 @@ function uxNavigate3410(type,id){
  else if(type==='museum'||type==='museum-room'){if(!['exhibitions','samples','fossils','relicts','artifacts'].includes(id))return false;tab='museum';museumSetRoom3270(id);return true;}
  else if(type==='trade'){if(!['routes','contracts','barters','market','register'].includes(id))return false;tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
  else if(type==='voyage'){if(!VOYAGES.some(v=>v.id===id))return false;tab='expeditions';navigationTab3300='expeditions';developmentUI3280.route=id;}
- else if(type==='society'){if(!['grants','missions','publications','achievements'].includes(id))return false;state.societyView=id;tab='society';}
+ else if(type==='society'){if(!['grants','missions','publications','achievements','rank'].includes(id))return false;state.societyView=id;tab='society';}
  else return false;
  renderPanel();return true;
 }
@@ -7857,6 +7857,42 @@ if(globalThis.AtlasMuseumCuration3380){
  };
  const museumArtBefore560=museumCardArt;
  museumCardArt=function(kind,id){return betaArtifacts560.has(id)?genericArt560(id):museumArtBefore560(kind,id);};
+ // Beta 5.6.0 · rango en la Sociedad (20 niveles). Por ahora solo informa; no bloquea ninguna mecánica.
+ if(B?.sociedad){
+  const track560=()=>{
+   const b=state.beta560=state.beta560&&typeof state.beta560==='object'?state.beta560:{moneyEarned:0,lastMoney:null};
+   const m=Number(state.money)||0;
+   if(b.lastMoney===null||b.lastMoney===undefined)b.moneyEarned=Math.max(Number(b.moneyEarned)||0,m);
+   else if(m>b.lastMoney)b.moneyEarned=(Number(b.moneyEarned)||0)+m-b.lastMoney;
+   b.lastMoney=m;
+  };
+  const stats560=()=>{
+   track560();
+   const owned=B.items.filter(it=>it[2]===0&&(state.inventory[it[0]]||0)>0).length;
+   return {prestige:Math.floor(state.prestige||0),money:Math.floor(state.beta560.moneyEarned||0),items:owned};
+  };
+  const level560=st=>{
+   let lv=1;
+   B.sociedad.forEach((r,i)=>{if(st.prestige>=r[1]&&st.money>=r[2]&&st.items>=r[3])lv=Math.max(lv,i+1);});
+   return lv;
+  };
+  const bar560=(label,have,need)=>'<div class="req"><strong>'+label+'</strong><div class="small">'+fmt(have)+' / '+fmt(need)+'</div><div class="progress"><div style="width:'+Math.min(100,need?Math.round(100*have/need):100)+'%"></div></div></div>';
+  const rankPanel560=()=>{
+   const st=stats560(),lv=level560(st),cur=B.sociedad[lv-1],next=B.sociedad[lv];
+   return '<div class="req"><strong>Rango en la Sociedad · BETA</strong><div class="small">'+esc(cur[0])+' · nivel '+lv+' de '+B.sociedad.length+'</div></div>'+
+    (next?'<div class="small">Próximo rango: <b>'+esc(next[0])+'</b>. Hay que cumplir los tres requisitos a la vez.</div>'+bar560('Prestigio',st.prestige,next[1])+bar560('Dinero acumulado (£)',st.money,next[2])+bar560('Coleccionables distintos',st.items,next[3])+(next[4]?'<div class="small">Al subir: '+esc(next[4])+' (propuesta).</div>':''):'<div class="small">Alcanzaste el rango más alto.</div>')+
+    '<div class="small">BETA: el rango todavía no bloquea mecánicas y sus umbrales son provisionales.</div>'+
+    '<details><summary>Los '+B.sociedad.length+' rangos</summary><ol class="small">'+B.sociedad.map((r,i)=>'<li>'+(i<lv?'✓ ':'')+esc(r[0])+' · prestigio '+fmt(r[1])+' · £'+fmt(r[2])+' · '+fmt(r[3])+' coleccionables'+(r[4]?' · '+esc(r[4]):'')+'</li>').join('')+'</ol></details>';
+  };
+  const renderBefore560=render;
+  render=function(...args){track560();return renderBefore560.apply(this,args);};
+  const societyBefore560=renderSociety;
+  renderSociety=function(){
+   if(state.societyView!=='rank')return societyBefore560();
+   return globalThis.AtlasSociety3360?globalThis.AtlasSociety3360.layout(state,achievementContext3360(),rankPanel560()):'<section class="card stack">'+rankPanel560()+'</section>';
+  };
+ }
+
 }
 render();
 })();
