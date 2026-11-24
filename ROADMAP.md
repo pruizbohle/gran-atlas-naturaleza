@@ -1,6 +1,6 @@
 # El Gran Atlas — hoja de ruta (23 de noviembre de 2026)
 
-Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en auditoría externa. **V5.6.2 Beta — MEC-02** en revisión en la rama `mec-02/v5.6.2-beta` (24 de noviembre de 2026). Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
+Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en auditoría externa. **V5.6.2 Beta — MEC-02** aprobada. **V5.6.3 Beta — MEC-03** en revisión en la rama `mec-03/v5.6.3-beta` (24 de noviembre de 2026). Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
 
 ## Completado
 
@@ -17,7 +17,8 @@ Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en 
 | Auditoría y arte | 5.0.1 – 5.0.12 | Auditoría global, rendimiento de arranque y repintado de variantes pigmentarias |
 | Legendarios, relictos y guía | 5.1.2 – 5.2.0 | 30 legendarios, 20 relictos y Guía del naturalista |
 | Iconografía | 5.3.0 – 5.4.2 | 63 iconos y 16 motivos de bioma, 64 objetos ilustrados más, hexágonos por bioma e interfaz sin emojis |
-| Campamento evolutivo (MEC-02, pendiente de auditoría) | 5.6.2 Beta | 5 instalaciones × 5 niveles con efectos reales en capacidades y funciones, configuración central, ficha de instalación, migración en nivel I con derechos adquiridos y canal beta explícito. [Informe MEC-02](docs/mec02/README.md) |
+| Obtención de coleccionables (MEC-03, pendiente de auditoría) | 5.6.3 Beta | Drop universal retirado; fuentes por pieza en campo, expediciones, comercio, excavaciones, prospecciones, Taller y encargos; intercambio y protección de piezas; transacciones atómicas. [Informe MEC-03](docs/mec03/README.md) |
+| Campamento evolutivo (MEC-02, aprobada) | 5.6.2 Beta | 5 instalaciones × 5 niveles con efectos reales en capacidades y funciones, configuración central, ficha de instalación, migración en nivel I con derechos adquiridos y canal beta explícito. [Informe MEC-02](docs/mec02/README.md) |
 | Mecánicas beta y consolidación (MEC-01, aprobada) | 5.6.0 Beta – 5.6.1 Beta | Drops por canal con los materiales históricos restituidos, registro permanente de coleccionables y su interfaz, libro de ingresos por procedencia, gabinetes con selector completo y reservas, niveles del Museo en una tabla y estructura de hitos naturales. Sin balance. [Informe MEC-01](docs/mec01/README.md) |
 | Marco móvil y Campamento | 5.5.0 – 5.5.1 | Cabecera, monedas, título de pestaña y barra de 9 iconos fijos; el contenido se desplaza dentro de su ventana; el Campamento tiene fondo pintado y 6 áreas |
 
@@ -29,8 +30,8 @@ Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en 
 | Pruebas históricas | 219 de 885 pruebas fallan desde antes de V5.2.0. Hay que revisar cuáles son obsoletas y cuáles esconden errores | [Regresión V5.3.0](docs/v530/regresion.json) |
 | Arte pigmentario | Siguiente lote propuesto: 20 animales con variante albina o melánica mejorable | [Próximo lote ART-08](docs/arte-v5012/proximo-lote.md) |
 | Coleccionables | 431 piezas en 32 colecciones integradas como beta (V5.6.0) y consolidadas en MEC-01. Pendiente: Filatelia, arte definitivo, descripciones y balance de tasas | [Auditoría de integración](docs/v520/auditoria.md), [MEC-01](docs/mec01/README.md) |
-| MEC-03 · coleccionables en nuevas fuentes | Intercambio en la Caravana, drops en excavaciones especiales y prospecciones de minerales, metales, meteoritos y piedras preciosas; las conexiones quedaron preparadas en MEC-02 | [MEC-02 · pendientes](docs/mec02/README.md#10-pendientes-y-decisiones-abiertas) |
-| Balance de mecánicas (MEC-04 o posterior) | Costos, capacidades y tiempos del Campamento (MEC-02) y su requisito de rango de Sociedad; tasas de los canales nuevos, umbrales de la Sociedad, niveles del Museo (propuesta frente a lo ejecutado) y si los 8 materiales históricos ganan fuentes nuevas. Activar las fuentes de drop declaradas (expediciones, comercio, excavaciones, prospecciones, encargos, eventos) | [MEC-01 · pendientes](docs/mec01/README.md#6-problemas-y-pendientes) |
+| Revisión de coherencia de coleccionables | 31 piezas con posibles anacronismos o procedencias «Mundial» discutibles, documentadas sin cambios en la matriz de MEC-03; faltan yacimientos y destinos de expedición en Asia, Oceanía y Sudamérica | [MEC-03 · coherencia](docs/mec03/README.md#8-coherencia-geográfica-e-histórica-para-revisión-externa) |
+| Balance de mecánicas (MEC-04 o posterior) | Tasas, precios y proporciones de intercambio de coleccionables (MEC-03); costos, capacidades y tiempos del Campamento (MEC-02) y su requisito de rango de Sociedad; tasas de los canales nuevos, umbrales de la Sociedad, niveles del Museo (propuesta frente a lo ejecutado) y si los 8 materiales históricos ganan fuentes nuevas. Activar las fuentes de drop declaradas (expediciones, comercio, excavaciones, prospecciones, encargos, eventos) | [MEC-01 · pendientes](docs/mec01/README.md#6-problemas-y-pendientes) |
 | Iconos restantes | Motivo `comparativo` (sin pantalla donde mostrarlo todavía) y arte de legendarios y relictos | [docs/v540](docs/v540/README.md) |
 | Arte de los niveles del Campamento | Los niveles ya funcionan (MEC-02; la Tienda quedó sin niveles productivos). Faltan las 25 ilustraciones `<instalación>-1` a `<instalación>-5`, cuyas ranuras están en `AtlasCampMEC02.ART` | [MEC-02](docs/mec02/README.md#5-interfaz-del-campamento) |
 

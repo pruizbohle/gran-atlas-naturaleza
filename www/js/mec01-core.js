@@ -250,8 +250,9 @@ function normalizeLedger(state,now=Date.now(),options={}){
  }
  // Migración. Una partida anterior no guarda su historial de ingresos. Como
  // saldo = capital inicial + ingresos − gastos, los ingresos son al menos
- // (saldo − capital inicial). Se usa esa cota inferior con el mayor de: el saldo
- // actual y el acumulado de la beta 5.6.0 (que también partía del saldo).
+ // (saldo − capital inicial). Se usa esa estimación con el mayor de: el saldo
+ // actual y el acumulado de la beta 5.6.0. MEC-03: es una estimación sin desglose, no un
+ // historial exacto; el acumulado experimental de la beta no garantiza una cota inferior.
  // Una partida sin ningún avistamiento se considera nueva: el capital no es ingreso.
  const capital=Math.max(0,Number(options.startingCapital)||0);
  const money=Math.max(0,Number(state.money)||0);

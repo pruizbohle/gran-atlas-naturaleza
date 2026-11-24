@@ -2,11 +2,26 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.2 Beta — MEC-02**, canal beta (rama `mec-02/v5.6.2-beta`, sobre MEC-01, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.3 Beta — MEC-03**, canal beta (rama `mec-03/v5.6.3-beta`, sobre MEC-02, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.2 Beta — MEC-02 (en revisión)
+## V5.6.3 Beta — MEC-03 (en revisión)
+
+Retira el drop experimental de coleccionables por especie y da a cada una de las 431 piezas fuentes según su naturaleza:
+
+- campo, separado en exploración ambiental (por región y bioma) y observación animal (por tipo de animal);
+- expediciones, con modalidades botánica, oceanográfica, arqueológica, de reconocimiento y extraordinaria;
+- comerciantes y coleccionistas de la Caravana: compra, intercambio de repetidos, solicitudes y ofertas rotativas persistentes;
+- excavaciones;
+- prospecciones geológicas, regionales y especializadas;
+- preparaciones del Taller;
+- encargos de coleccionistas;
+- eventos, preparados pero desactivados.
+
+Las piezas expuestas y la última unidad quedan protegidas. Las operaciones compuestas son ahora atómicas: correcciones de MEC-02. Configuración por pieza en `www/js/mec03-catalog.js`; informe y matriz CSV en [docs/mec03](docs/mec03/README.md). Valores provisionales; no se generó APK.
+
+## V5.6.2 Beta — MEC-02 (aprobada en auditoría externa)
 
 Convierte el Campamento en un centro de operaciones evolutivo. Astillero, Caravana, Taller, Excavaciones y Prospecciones tienen cinco niveles cada uno, definidos en una sola configuración (`www/js/mec02-camp.js`), y cada nivel cambia algo que el motor ejecuta: más expediciones, rutas, excavaciones o prospecciones simultáneas; expedición ampliada; compra por lotes; fabricación múltiple y con subcomponentes; estudios en lote; excavación profunda y especial; indicio adicional; y recogida conjunta. La Tienda sigue siendo el espacio personal. Las partidas anteriores empiezan en nivel I sin perder nada. Los valores son provisionales y no se generó APK. Informe, tabla de las 25 etapas y pruebas en [docs/mec02](docs/mec02/README.md).
 
@@ -74,6 +89,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.3 Beta | MEC-03: obtención híbrida de coleccionables e intercambio | [docs/mec03](docs/mec03/README.md) |
 | 5.6.2 Beta | MEC-02: Campamento evolutivo, 5 instalaciones × 5 niveles | [docs/mec02](docs/mec02/README.md) |
 | 5.6.1 Beta | MEC-01: consolidación de drops, colecciones, ingresos, gabinetes e hitos de la V5.6.0 Beta | [docs/mec01](docs/mec01/README.md) |
 | 5.6.0 Beta | Coleccionables, drops, Sociedad, Museo e hito del guepardo (datos beta) | [docs/v560-beta](docs/v560-beta/README.md) |

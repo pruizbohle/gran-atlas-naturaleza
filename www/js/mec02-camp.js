@@ -22,20 +22,20 @@ const FACILITIES=Object.freeze([
   reuses:['VOYAGES','sail','processVoyages','resolveVoyageReward','maxVoyages','voyageDuration','state.voyages'],
   levels:[
    stage(1,'Embarcadero',{capacityBonus:0,durationFactor:1,modalities:['normal']},['Gestiona las expediciones científicas existentes con su capacidad histórica (2 + «Segundo destacamento»).','Los viajes conservan sus requisitos de prestigio, cartografía, investigación y mapas.']),
-   stage(2,'Muelle',{capacityBonus:1,durationFactor:1,modalities:['normal']},['+1 expedición simultánea.']),
-   stage(3,'Astillero',{capacityBonus:1,durationFactor:0.9,modalities:['normal']},['Preparación de expediciones: −10 % de duración en las nuevas salidas (provisional).']),
-   stage(4,'Dársena',{capacityBonus:2,durationFactor:0.9,modalities:['normal']},['+1 expedición simultánea (+2 en total).']),
-   stage(5,'Puerto científico',{capacityBonus:2,durationFactor:0.9,modalities:['normal','ampliada']},['Modalidad especial «Expedición ampliada»: misma ruta, doble duración y doble costo, con una tirada adicional de hallazgos (provisional).'])
+   stage(2,'Muelle',{capacityBonus:1,durationFactor:1,modalities:['normal']},['+1 expedición simultánea.','MEC-03: expediciones botánicas y reconocimientos naturalistas.']),
+   stage(3,'Astillero',{capacityBonus:1,durationFactor:0.9,modalities:['normal']},['Preparación de expediciones: −10 % de duración en las nuevas salidas (provisional).','MEC-03: expediciones oceanográficas.']),
+   stage(4,'Dársena',{capacityBonus:2,durationFactor:0.9,modalities:['normal']},['+1 expedición simultánea (+2 en total).','MEC-03: expediciones arqueológicas.']),
+   stage(5,'Puerto científico',{capacityBonus:2,durationFactor:0.9,modalities:['normal','ampliada']},['Modalidad especial «Expedición ampliada»: misma ruta, doble duración y doble costo, con una tirada adicional de hallazgos (provisional).','MEC-03: exploración extraordinaria.'])
   ]}),
  Object.freeze({id:'caravan',name:'Caravana',engine:'commerce',description:'Comercio, suministros, contratos y trueques',
   unlock:{flag:'shipyard',research:'astillero',label:'Investigación «Astillero básico» (habilita el comercio)'},
   reuses:['TRADE_ROUTES','startTrade3300','settleTrade3300','tradeCanStart3300','TRADE_MARKET','buyTrade3300','TRADE_BARTERS','SUPPLY_CONTRACTS3390','CARGO_MANIFESTS3390','REGIONAL_BARTERS3400','state.commerce'],
   levels:[
    stage(1,'Carreta',{routeCapacity:1,marketLot:1,collectibleExchange:false},['1 ruta comercial simultánea, mercado, trueques, contratos de suministro y manifiestos (sin cambios).','Las mercancías regionales conservan sus condiciones de acceso.']),
-   stage(2,'Caravana equipada',{routeCapacity:2,marketLot:1,collectibleExchange:false},['2 rutas comerciales simultáneas.']),
-   stage(3,'Convoy',{routeCapacity:2,marketLot:5,collectibleExchange:false},['Capacidad logística: compra por lotes de 5 unidades en el mercado, con una sola confirmación.']),
-   stage(4,'Estación comercial',{routeCapacity:3,marketLot:5,collectibleExchange:false},['3 rutas comerciales simultáneas.']),
-   stage(5,'Central comercial',{routeCapacity:4,marketLot:5,collectibleExchange:'preparado'},['4 rutas comerciales simultáneas.','Conexión preparada para el intercambio de coleccionables (se activa en MEC-03).'])
+   stage(2,'Caravana equipada',{routeCapacity:2,marketLot:1,collectibleExchange:'comunes'},['2 rutas comerciales simultáneas.','MEC-03: comercio e intercambio de coleccionables comunes.']),
+   stage(3,'Convoy',{routeCapacity:2,marketLot:5,collectibleExchange:'regionales'},['Capacidad logística: compra por lotes de 5 unidades en el mercado, con una sola confirmación.','MEC-03: comerciantes regionales y piezas poco comunes.']),
+   stage(4,'Estación comercial',{routeCapacity:3,marketLot:5,collectibleExchange:'raras'},['3 rutas comerciales simultáneas.','MEC-03: piezas raras y solicitudes especializadas.']),
+   stage(5,'Central comercial',{routeCapacity:4,marketLot:5,collectibleExchange:'especializados'},['4 rutas comerciales simultáneas.','MEC-03: coleccionistas especializados y piezas muy raras.'])
   ]}),
  Object.freeze({id:'workshop',name:'Taller',engine:'workshop',description:'Fabricación, componentes y procesamiento de materiales',
   unlock:null,
@@ -55,17 +55,17 @@ const FACILITIES=Object.freeze([
    stage(2,'Excavación',{capacityBonus:1,modes:['normal'],collectAll:false},['+1 excavación simultánea.']),
    stage(3,'Yacimiento',{capacityBonus:1,modes:['normal','profunda'],collectAll:false},['Excavación profunda: doble duración y doble costo; +2 fragmentos y una segunda tirada de diente fósil (provisional).']),
    stage(4,'Complejo paleontológico',{capacityBonus:2,modes:['normal','profunda'],collectAll:true},['+1 excavación simultánea (+2 en total).','Recoger de una vez todas las excavaciones terminadas.']),
-   stage(5,'Instituto paleontológico',{capacityBonus:2,modes:['normal','profunda','especial'],collectAll:true},['Excavación especial: 1,5 × duración y costo; garantiza una huella fosilizada (provisional).','Conexión preparada para coleccionables históricos y geológicos (MEC-03, sin drops).'])
+   stage(5,'Instituto paleontológico',{capacityBonus:2,modes:['normal','profunda','especial'],collectAll:true},['Excavación especial: 1,5 × duración y costo; garantiza una huella fosilizada (provisional).','MEC-03: incluye las siete maravillas y las piezas muy raras de yacimiento.'])
   ]}),
  Object.freeze({id:'surveys',name:'Prospecciones',engine:'surveys',description:'Indicios de relictos y estudios de campo',
   unlock:null,
   reuses:['MUSEUM_RELICTS','relictSurveySpec','canStartRelictSurvey','startRelictSurvey','collectRelictSurvey','maxRelictSurveys','addRelictLead','state.museum.relictSurveys'],
   levels:[
-   stage(1,'Reconocimiento',{capacityBonus:0,extraLead:0,durationFactor:1,collectAll:false},['Prospección documental de indicios de relictos con su capacidad histórica (1, o 2 con «Archivos de historia natural»).','Los relictos siguen siendo hallazgos de campo.']),
-   stage(2,'Estación de reconocimiento',{capacityBonus:1,extraLead:0,durationFactor:1,collectAll:false},['+1 prospección simultánea.']),
+   stage(1,'Reconocimiento',{capacityBonus:0,extraLead:0,durationFactor:1,collectAll:false},['Prospección documental de indicios de relictos con su capacidad histórica (1, o 2 con «Archivos de historia natural»).','Los relictos siguen siendo hallazgos de campo.','MEC-03: reconocimientos regionales (muestras botánicas y ambientales).']),
+   stage(2,'Estación de reconocimiento',{capacityBonus:1,extraLead:0,durationFactor:1,collectAll:false},['+1 prospección simultánea.','MEC-03: prospecciones geológicas.']),
    stage(3,'Estación topográfica',{capacityBonus:1,extraLead:1,durationFactor:1,collectAll:false},['+1 indicio al completar una prospección (sin superar el máximo de 3; nunca entrega un relicto).']),
-   stage(4,'Centro de estudios',{capacityBonus:1,extraLead:1,durationFactor:0.8,collectAll:true},['−20 % de duración en las nuevas prospecciones (provisional).','Recoger de una vez todas las prospecciones terminadas.']),
-   stage(5,'Centro de prospección',{capacityBonus:2,extraLead:1,durationFactor:0.8,collectAll:true},['+1 prospección simultánea (+2 en total).','Tipos preparados: geológica, regional, minerales, metales, meteoritos y piedras preciosas (MEC-03).'])
+   stage(4,'Centro de estudios',{capacityBonus:1,extraLead:1,durationFactor:0.8,collectAll:true},['−20 % de duración en las nuevas prospecciones documentales (provisional).','Recoger de una vez todas las prospecciones terminadas.','MEC-03: prospecciones especializadas (todas las rarezas geológicas).']),
+   stage(5,'Centro de prospección',{capacityBonus:2,extraLead:1,durationFactor:0.8,collectAll:true},['+1 prospección simultánea (+2 en total).','Hallazgos científicos extraordinarios (preparado).'])
   ]})
 ]);
 const BY_ID=new Map(FACILITIES.map(f=>[f.id,f]));
@@ -75,22 +75,23 @@ const PERSONAL_AREA=Object.freeze({id:'shop',name:'Tienda del naturalista',level
 /* Tipos de prospección y de excavación: estructura ampliable (solo los activos funcionan). */
 const SURVEY_TYPES=Object.freeze({
  indicios:{label:'Indicios de relictos',active:true,minLevel:1},
- geologica:{label:'Prospección geológica',active:false,minLevel:3,future:'MEC-03'},
- regional:{label:'Reconocimiento regional',active:false,minLevel:3,future:'MEC-03'},
- minerales:{label:'Minerales, metales, meteoritos y piedras preciosas',active:false,minLevel:5,future:'MEC-03',collections:['Minerales extraordinarios','Metales raros','Meteoritos','Piedras preciosas']},
- extraordinarios:{label:'Hallazgos científicos extraordinarios',active:false,minLevel:5,future:'MEC-03'}
+ regional:{label:'Reconocimiento regional',active:true,minLevel:1,since:'MEC-03'},
+ geologica:{label:'Prospección geológica',active:true,minLevel:2,since:'MEC-03',collections:['Minerales extraordinarios','Metales raros','Meteoritos','Piedras preciosas','Rocas y formaciones geológicas','Ámbar y resinas fósiles','Fósiles menores']},
+ especializada:{label:'Prospección especializada',active:true,minLevel:4,since:'MEC-03'},
+ extraordinarios:{label:'Hallazgos científicos extraordinarios',active:false,minLevel:5,future:'MEC-08 o posterior'}
 });
 const DIG_MODES=Object.freeze({
  normal:{label:'Normal',minLevel:1,costFactor:1,durationFactor:1,extra:null},
  profunda:{label:'Profunda',minLevel:3,costFactor:2,durationFactor:2,extra:{fragments:2,toothRolls:1}},
- especial:{label:'Especial',minLevel:5,costFactor:1.5,durationFactor:1.5,extra:{guaranteed:{fossil_track:1}},collectiblesPrepared:['Fósiles menores','Rocas y formaciones geológicas','Objetos de civilizaciones']}
+ especial:{label:'Especial',minLevel:5,costFactor:1.5,durationFactor:1.5,extra:{guaranteed:{fossil_track:1}}}
 });
 const VOYAGE_MODALITIES=Object.freeze({
  normal:{label:'Normal',minLevel:1,costFactor:1,durationFactor:1,extraLootRolls:0},
  ampliada:{label:'Expedición ampliada',minLevel:5,costFactor:2,durationFactor:2,extraLootRolls:1}
 });
 // Conexiones preparadas para MEC-03: ninguna fuente de coleccionables se activa aquí.
-const PREPARED_SOURCES=Object.freeze({expediciones:'shipyard',comercio:'caravan',excavaciones:'excavations',prospecciones:'surveys'});
+// MEC-03: estas conexiones ya entregan coleccionables (ver www/js/mec03-collect.js).
+const PREPARED_SOURCES=Object.freeze({expediciones:'shipyard',comercio:'caravan',excavaciones:'excavations',prospecciones:'surveys',taller:'workshop'});
 
 /* Referencias artísticas: una ranura por instalación y nivel. El motor solo lee `file`;
  * mientras sea null se usa el icono provisional existente (placeholder). */

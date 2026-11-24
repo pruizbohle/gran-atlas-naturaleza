@@ -102,7 +102,7 @@ moneyLedger: {
 - Toda entrada de dinero pasa por `earnMoney(cantidad, procedencia)` en `app.js` (el único `state.money+=` que queda). Los encargos de `commissions-v3370.js` se anotan una vez al cobrarse.
 - El libro vive dentro de la partida: las transacciones que revierten el estado completo (comercio, encargos) revierten también el libro.
 - **Offline**: el ingreso del Museo se calcula solo en `tick`, a partir de `lastTick` guardado, con el tope de 8 h. Cargar no liquida nada por sí solo e importar fija `lastTick` en el momento actual, así que no hay doble conteo.
-- **Criterio de migración** (partidas sin libro): no hay forma de reconstruir los ingresos pasados. Como saldo = capital inicial + ingresos − gastos, los ingresos son al menos `saldo − 420`. Se toma `max(saldo, beta560.moneyEarned) − 420` (mínimo 0) como cota inferior, anotada como `sinDesglose`. Una partida sin ningún avistamiento se considera nueva y empieza en 0. `beta560.moneyEarned` y `lastMoney` se conservan en la partida, pero ya no se actualizan.
+- **Criterio de migración** (partidas sin libro): no hay forma de reconstruir los ingresos pasados. Como saldo = capital inicial + ingresos − gastos, los ingresos son al menos `saldo − 420`. Se toma `max(saldo, beta560.moneyEarned) − 420` (mínimo 0) como cota inferior, anotada como `sinDesglose`. Una partida sin ningún avistamiento se considera nueva y empieza en 0. `beta560.moneyEarned` y `lastMoney` se conservan en la partida, pero ya no se actualizan. *Aclaración de MEC-03:* el resultado se presenta como estimación sin desglose, no como historial exacto, y el acumulado experimental de la beta no garantiza una cota inferior fiable.
 
 ### Museo y gabinetes
 

@@ -2458,6 +2458,8 @@ function showStorageFault(message){
 }
 function persist({verify=false,skipUnchanged=false}={}){
  if(commissionClaiming3370)return !verify;
+ // MEC-03: dentro de una transacción el guardado lo hace la transacción más externa.
+ if(txDepth3300>0&&!verify)return true;
  achievementFlush3360();commissionFlush3370();curationFlush3380();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
@@ -2851,6 +2853,8 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
    if(drop)note.push(`muestra obtenida: ${ITEMS[drop].name}`);
    // MEC-01: canales nuevos (materiales, coleccionables, rarezas), independientes del histórico.
    for(const extra of mec01FieldDrops(chosen,manual))note.push(`muestra obtenida: ${ITEMS[extra].name}`);
+   // MEC-03: hallazgo ambiental según región y bioma, independiente de la especie observada.
+   for(const extra of mec03AmbientFinds(manual))note.push(`hallazgo: ${ITEMS[extra].name}`);
    if(museumFinds.length)note.push(...museumFinds);
   }
   entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
@@ -4643,6 +4647,8 @@ function normalizeMEC01(s){return s;}
 let campBridgeMEC02=null;
 function studyBatchesMEC02(){return [1,5];}
 function mec02Action(act,id){}
+// MEC-03 · exploración ambiental: una tirada por búsqueda (la instala el bloque MEC-03).
+function mec03AmbientFinds(manual){return [];}
 // MEC-01 · única entrada de dinero ganado: suma al saldo y lo anota en el libro de ingresos por procedencia.
 // Los gastos siguen restando directamente de state.money y no tocan el libro.
 function earnMoney(amount,source){const n=Number(amount);if(!Number.isFinite(n)||n<=0)return 0;state.money+=n;globalThis.AtlasMEC01?.credit(state,n,source);return n;}
@@ -5388,7 +5394,7 @@ function handlePanelAction(e){
     }
     // M-3270 END actions
     if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle?.(id);return;}
-    if(act.startsWith('mec02-')){mec02Action(act,id);return;}
+    if(act.startsWith('mec02-')||act.startsWith('mec03-')){mec02Action(act,id);return;}
     if(act.startsWith('mec01-')){globalThis.AtlasBeta560Actions?.mec01?.(act,id,el);return;}
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
@@ -6905,11 +6911,21 @@ function normalizeCommerce3300(s){
  c.jobs=c.jobs.filter(j=>!c.history.some(h=>h.id===j.id));
  s.commerce=c;return normalizeLogistics3390(s);
 }
+// MEC-03 · transacciones anidadas: una transacción dentro de otra no guarda por su cuenta.
+// Solo la más externa escribe la partida, de modo que una operación compuesta (salir con
+// una modalidad, liquidar recompensas originales y adicionales, fabricar en lote) se
+// guarda entera o no se guarda. Ver docs/mec03/README.md.
+var txDepth3300=0;
 function tradeTransaction3300(change){
  // persist() can flush missions, achievements and Museum accreditation. Roll back
  // the complete save and deferred evaluation state together on any failure.
  const before=JSON.parse(JSON.stringify(state)),runtime={ach:[...achievementNotices3360],enc:[...commissionNotices3370],dirty:[...achievementDirty3360],commission:commissionDirty3370,curation:curationDirty3380};
- try{if(change()&&persist())return true;}catch(error){showStorageFault('No se pudo completar la operación comercial. Se conservaron los recursos; puedes reintentar.');}
+ let changed=false;
+ txDepth3300++;
+ try{changed=!!change();}catch(error){changed=false;if(txDepth3300===1)showStorageFault('No se pudo completar la operación comercial. Se conservaron los recursos; puedes reintentar.');}
+ finally{txDepth3300--;}
+ if(changed&&txDepth3300>0)return true;
+ try{if(changed&&persist())return true;}catch(error){showStorageFault('No se pudo completar la operación comercial. Se conservaron los recursos; puedes reintentar.');}
  for(const key of Object.keys(state))delete state[key];Object.assign(state,before);
  achievementNotices3360=runtime.ach;commissionNotices3370=runtime.enc;achievementDirty3360.clear();for(const key of runtime.dirty)achievementDirty3360.add(key);commissionDirty3370=runtime.commission;curationDirty3380=runtime.curation;
  return false;
@@ -7882,7 +7898,9 @@ if(globalThis.AtlasMuseumCuration3380){
    }
    return out;
   };
-  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{drops:DROPS,catalog:CAT});
+  // MEC-03: incorporación con la fuente real del hallazgo (registro de procedencia).
+  const withSource=(src,fn)=>{const prev=mec01Source;mec01Source=src;try{return fn();}finally{mec01Source=prev;}};
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{drops:DROPS,catalog:CAT,withSource});
  }
  // Imagen genérica: todo objeto sin arte propio muestra una lámina con "?".
  const artBefore560=renderItemArt;
@@ -7984,7 +8002,7 @@ if(globalThis.AtlasMuseumCuration3380){
    const l=state.moneyLedger;if(!M||!l)return '';
    const rows=Object.entries(l.bySource).filter(([,n])=>n>0).sort((a,b)=>b[1]-a[1]);
    return '<details class="mec01-income"><summary>Ingresos acumulados por procedencia · £'+fmt(l.total)+'</summary><ul class="small">'+rows.map(([k,n])=>'<li>'+esc(M.INCOME_SOURCES[k]||k)+': £'+fmt(n)+'</li>').join('')+'</ul>'+
-    (l.migration&&l.migration.method!=='partida-nueva'?'<p class="small">Partida anterior a MEC-01: £'+fmt(l.migration.baseline)+' quedan como ingresos sin desglose (cota inferior tomada del '+(l.migration.method==='beta560.moneyEarned'?'acumulado de la beta 5.6.0':'saldo al migrar')+').</p>':'')+
+    (l.migration&&l.migration.method!=='partida-nueva'?'<p class="small">Partida anterior a MEC-01: £'+fmt(l.migration.baseline)+' quedan como ingresos sin desglose. Es una estimación, no un historial exacto: el acumulado de la beta 5.6.0 era experimental.</p>':'')+
     '<p class="small">Solo cuentan los ingresos reales; los gastos no reducen este total.</p></details>';
   };
   const rankPanel560=()=>{
@@ -8085,7 +8103,7 @@ if(globalThis.AtlasMuseumCuration3380){
   };
   const refocus=(selector,value)=>{const input=panel.querySelector(selector);if(input){input.focus({preventScroll:true});try{input.setSelectionRange(value.length,value.length);}catch(_){}}};
   const action=(act,id)=>{
-   if(act==='mec01-piece'){const m=detailModel(id);if(m)UI.show(UI.detail(m));return;}
+   if(act==='mec01-piece'){const m=(globalThis.AtlasBeta560Actions.detailModel||detailModel)(id);if(m)UI.show(UI.detail(m));return;}
    if(act==='mec01-cab-page'){const at=id.lastIndexOf('|'),g=id.slice(0,at);if(CAT.cabinets.includes(g)){cabUI(g).page=Number(id.slice(at+1))||0;renderPanel();}return;}
    if(act==='mec01-cab-expose'||act==='mec01-cab-withdraw'){
     const it=CAT.items.get(id);if(!it?.collectible)return;
@@ -8125,37 +8143,76 @@ if(globalThis.AtlasMuseumCuration3380){
  if(C){
   const fx=id=>C.effects(state,id);
   const normalizeBefore602=normalizeMEC01;
-  normalizeMEC01=function(s){const r=normalizeBefore602(s);if(s&&typeof s==='object')C.normalize(s);return r;};
-  C.normalize(state);
+  // MEC-03: los trabajos en curso sin condiciones registradas (iniciados antes de MEC-03)
+  // reciben una sola vez las condiciones vigentes al migrar; desde entonces no cambian.
+  const stampRunning602=s=>{
+   const lv=id=>C.level(s,id),eff=id=>C.stageOf(id,lv(id))?.effects||{},now=Date.now();
+   for(const j of Array.isArray(s.voyages)?s.voyages:[])if(j&&!j.mec)j.mec={modality:j.modality||'normal',shipyardLevel:lv('shipyard'),extraLootRolls:C.VOYAGE_MODALITIES[j.modality]?.extraLootRolls||0,migrated:true,recordedAt:now};
+   for(const j of Array.isArray(s.museum?.excavations)?s.museum.excavations:[])if(j&&!j.mec)j.mec={mode:j.mode||'normal',excavationsLevel:lv('excavations'),extra:C.DIG_MODES[j.mode||'normal']?.extra||null,migrated:true,recordedAt:now};
+   for(const j of Array.isArray(s.museum?.relictSurveys)?s.museum.relictSurveys:[])if(j&&!j.mec)j.mec={extraLead:eff('surveys').extraLead||0,surveysLevel:lv('surveys'),migrated:true,recordedAt:now};
+  };
+  normalizeMEC01=function(s){const r=normalizeBefore602(s);if(s&&typeof s==='object'){C.normalize(s);stampRunning602(s);}return r;};
+  C.normalize(state);stampRunning602(state);
 
   // Astillero · capacidad, preparación (duración) y modalidad ampliada.
+  // Toda salida registra su modalidad y las condiciones del Astillero al zarpar (MEC-03).
+  const sailBefore602=sail;
+  sail=function(id){
+   return tradeTransaction3300(()=>{const n=state.voyages.length;if(!sailBefore602(id)||state.voyages.length<=n)return false;const job=state.voyages[state.voyages.length-1];job.mec={modality:'normal',shipyardLevel:C.level(state,'shipyard'),durationFactor:fx('shipyard').durationFactor||1,extraLootRolls:0,recordedAt:Number.isFinite(job.startedAt)?job.startedAt:Date.now()};return true;});
+  };
   const maxVoyagesBefore602=maxVoyages;
   maxVoyages=function(){return maxVoyagesBefore602()+(fx('shipyard').capacityBonus||0);};
   const voyageDurationBefore602=voyageDuration;
   voyageDuration=function(seconds){const base=voyageDurationBefore602(seconds),f=fx('shipyard').durationFactor||1;return f===1?base:Math.max(30,Math.round(base*f));};
+  // MEC-03: salida con modalidad en UNA transacción (costo, modalidad, duración y registro).
+  // Las condiciones quedan fijadas en job.mec al zarpar; mejorar después no las cambia.
+  const modalityDef602=modality=>C.VOYAGE_MODALITIES[modality]||globalThis.AtlasMEC03?.VOYAGE_MODALITIES?.[modality]||null;
+  const modalityAllowed602=(v,modality)=>{
+   const m=modalityDef602(modality);if(!m)return false;
+   if(C.VOYAGE_MODALITIES[modality])return (fx('shipyard').modalities||[]).includes(modality);
+   const dest=globalThis.AtlasMEC03Catalog?.voyageDestinations?.[v.id];
+   return C.level(state,'shipyard')>=m.minLevel&&!!dest&&(m.land&&dest.land||m.marine&&dest.marine);
+  };
   const sailModality602=(id,modality)=>{
-   const v=VOYAGES.find(x=>x.id===id),m=C.VOYAGE_MODALITIES[modality];
-   if(!v||!m||!(fx('shipyard').modalities||[]).includes(modality))return false;
+   const v=VOYAGES.find(x=>x.id===id),m=modalityDef602(modality);
+   if(!v||!m)return false;
    if(modality==='normal')return !!sail(id);
+   if(!modalityAllowed602(v,modality))return false;
    const extraMoney=Math.round(v.cost*(m.costFactor-1)),extraKnowledge=Math.round(v.knowledge*(m.costFactor-1));
    if(state.money<v.cost+extraMoney||state.knowledge<v.knowledge+extraKnowledge||!voyageRoute3280(v).ready)return false;
-   if(!window.confirm(m.label+' · '+v.name+'\nCosto: £'+(v.cost+extraMoney)+' y '+(v.knowledge+extraKnowledge)+' conocimiento.\nDuración ×'+m.durationFactor+' · '+m.extraLootRolls+' tirada adicional de hallazgos (provisional).\n¿Confirmar salida?'))return false;
-   const n=state.voyages.length;
-   if(!sail(id)||state.voyages.length<=n)return false;
-   const job=state.voyages[state.voyages.length-1];
+   if(!window.confirm(m.label+' · '+v.name+'\nCosto: £'+(v.cost+extraMoney)+' y '+(v.knowledge+extraKnowledge)+' conocimiento.\nDuración ×'+m.durationFactor+(m.extraLootRolls?' · '+m.extraLootRolls+' tirada adicional de hallazgos':'')+' (provisional).\n¿Confirmar salida?'))return false;
    return tradeTransaction3300(()=>{
+    const n=state.voyages.length;
+    if(!sail(id)||state.voyages.length<=n)return false;
+    const job=state.voyages[state.voyages.length-1];
     const start=Number.isFinite(job.startedAt)?job.startedAt:Date.now(),span=job.endAt-start;
+    if(state.money<extraMoney||state.knowledge<extraKnowledge)return false;
     state.money-=extraMoney;state.knowledge-=extraKnowledge;
     job.modality=modality;job.endAt=start+Math.round(span*m.durationFactor);
+    job.mec={modality,shipyardLevel:C.level(state,'shipyard'),durationFactor:m.durationFactor,costFactor:m.costFactor,extraLootRolls:m.extraLootRolls||0,recordedAt:start};
     return true;
    });
   };
+  // MEC-03: todo hallazgo adicional se anota en el recibo de la actividad (mismo jobId).
+  const receiptAdd602=(key,job,{extra={},collectibles={},fields={}}={},owner=state)=>{
+   const list=key==='voyageHistory'?owner.voyageHistory:owner.museum?.[key];if(!Array.isArray(list))return;
+   const entry=[...list].reverse().find(e=>String(e.jobId)===String(job.id));if(!entry)return;
+   const merge=(target,src)=>{for(const [id,n] of Object.entries(src))target[id]=(target[id]||0)+n;};
+   if(Object.keys(extra).length){entry.extra=entry.extra||{};merge(entry.extra,extra);}
+   if(Object.keys(collectibles).length){entry.collectibles=entry.collectibles||{};merge(entry.collectibles,collectibles);}
+   Object.assign(entry,fields);
+  };
+  globalThis.AtlasCampMEC02Receipt=receiptAdd602;
   const resolveVoyageBefore602=resolveVoyageReward;
   resolveVoyageReward=function(job,...rest){
    const ok=resolveVoyageBefore602(job,...rest);
    // resolveVoyageReward ya impide liquidar dos veces el mismo viaje: el extra va dentro de esa única liquidación.
-   const m=ok&&C.VOYAGE_MODALITIES[job?.modality];
-   if(m&&m.extraLootRolls){const v=VOYAGES.find(x=>x.id===job.type);for(let i=0;i<m.extraLootRolls;i++){const loot=rollLoot(v);if(loot){addInventory(loot,1);pushLog('Expedición ampliada · hallazgo adicional: '+ITEMS[loot].name+'.');}}}
+   const rolls=!ok?0:Number.isFinite(job?.mec?.extraLootRolls)?job.mec.extraLootRolls:(C.VOYAGE_MODALITIES[job?.modality]?.extraLootRolls||0);
+   if(rolls){
+    const v=VOYAGES.find(x=>x.id===job.type),got={};
+    for(let i=0;i<rolls;i++){const loot=rollLoot(v);if(loot){addInventory(loot,1);got[loot]=(got[loot]||0)+1;pushLog('Expedición ampliada · hallazgo adicional: '+ITEMS[loot].name+'.');}}
+    receiptAdd602('voyageHistory',job,{extra:got});
+   }
    return ok;
   };
 
@@ -8195,30 +8252,51 @@ if(globalThis.AtlasMuseumCuration3380){
    const complexity=crafted?'avanzada':inputs.length>=3?'intermedia':'simple';
    return {id,category,complexity,minWorkshop:Math.max(1,Math.floor(Number(r.minWorkshop)||1)),inputs:inputs.length};
   };
+  // MEC-03: la fabricación múltiple entrega exactamente las unidades confirmadas o ninguna.
   const craftBatch602=(id,qty)=>{
    if(qty<2||!(fx('workshop').craftBatches||[]).includes(qty)||!canCraft(id))return 0;
-   if(!window.confirm('Fabricación múltiple · '+ITEMS[id].name+' ×'+qty+'\nSe consumen los materiales de cada unidad. ¿Confirmar?'))return 0;
-   let n=0;for(let i=0;i<qty;i++){if(!canCraft(id)||!craftItem(id))break;n++;}
-   return n;
+   const need=Object.entries(RECIPES[id].requires);
+   if(id!=='world_map'&&need.some(([mat,n])=>(state.inventory[mat]||0)<n*qty))return 0;
+   if(!window.confirm('Fabricación múltiple · '+ITEMS[id].name+' ×'+qty+'\nSe consumen: '+tradeMaterials3300(Object.fromEntries(need.map(([m,n])=>[m,n*qty])))+'.\nSe fabrican las '+qty+' unidades o ninguna. ¿Confirmar?'))return 0;
+   const show=window.confirm;window.confirm=()=>true; // el riesgo ya se aceptó en la confirmación única
+   try{return inventoryAtomicAction3400(()=>{for(let i=0;i<qty;i++)if(!canCraft(id)||!craftItem(id))return false;return true;})?qty:0;}
+   finally{window.confirm=show;}
+  };
+  // MEC-03: se valida toda la cadena (materiales, nivel de Taller de cada receta) antes de
+  // fabricar, y se ejecuta en una sola transacción: o se completa entera o no cambia nada.
+  const craftTreePlan602=id=>{
+   const stock={...state.inventory},steps=[];
+   const make=(x,depth)=>{
+    if(depth>8||!RECIPES[x]||!ITEMS[x])return false;
+    if(Math.max(1,Math.floor(Number(RECIPES[x].minWorkshop)||1))>C.level(state,'workshop'))return false;
+    for(const [mat,q] of Object.entries(RECIPES[x].requires)){
+     if(x==='world_map')continue;
+     let guard=0;while((stock[mat]||0)<q){if(++guard>50||!RECIPES[mat]||!make(mat,depth+1))return false;}
+     stock[mat]-=q;
+    }
+    stock[x]=(stock[x]||0)+1;steps.push(x);return true;
+   };
+   return make(id,0)?steps:null;
   };
   const craftTree602=id=>{
    if(!fx('workshop').componentCrafting||!RECIPES[id]||canCraft(id))return false;
-   const plan=recipePlan3400(id);if(!plan||Object.keys(plan.missing).length)return false;
-   if(!window.confirm('Fabricar '+ITEMS[id].name+' con subcomponentes\nPrimero se fabrican: '+tradeMaterials3300(plan.components)+'. ¿Confirmar?'))return false;
-   const make=(x,depth)=>{
-    if(depth>8||!RECIPES[x])return false;
-    for(const [mat,q] of Object.entries(RECIPES[x].requires)){
-     if(x==='world_map')continue;
-     let guard=0;while((state.inventory[mat]||0)<q){if(++guard>50||!make(mat,depth+1))return false;}
-    }
-    return !!craftItem(x);
-   };
-   return make(id,0);
+   const steps=craftTreePlan602(id);if(!steps||steps.length<2)return false;
+   const parts=steps.slice(0,-1).reduce((o,x)=>(o[x]=(o[x]||0)+1,o),{});
+   if(!window.confirm('Fabricar '+ITEMS[id].name+' con subcomponentes\nPrimero se fabrican: '+tradeMaterials3300(parts)+'.\nSe completa toda la cadena o ninguna parte. ¿Confirmar?'))return false;
+   const show=window.confirm;window.confirm=()=>true;
+   try{return inventoryAtomicAction3400(()=>{for(const x of steps)if(!canCraft(x)||!craftItem(x))return false;return true;});}
+   finally{window.confirm=show;}
   };
-
+  globalThis.AtlasCampMEC02Plan=craftTreePlan602;
   // Excavaciones · capacidad, modalidades y recogida conjunta. Cada recompensa se liquida una vez.
   const maxExcavationsBefore602=maxExcavations;
   maxExcavations=function(){return maxExcavationsBefore602()+(fx('excavations').capacityBonus||0);};
+  const digConditions602=mode=>({mode,excavationsLevel:C.level(state,'excavations'),extra:C.DIG_MODES[mode]?.extra||null});
+  const startExcavationBefore602=startExcavation;
+  startExcavation=function(siteId,now=Date.now()){
+   // Toda excavación registra al iniciarse su modalidad y condiciones (MEC-03).
+   return tradeTransaction3300(()=>{const n=state.museum.excavations.length;if(!startExcavationBefore602(siteId,now)||state.museum.excavations.length<=n)return false;const job=state.museum.excavations[state.museum.excavations.length-1];job.mec={...digConditions602(job.mode||'normal'),recordedAt:now};return true;});
+  };
   const digMode602=(siteId,mode)=>{
    const site=MUSEUM_DIG_SITES.find(x=>x.id===siteId),m=C.DIG_MODES[mode];
    if(!site||!m||!(fx('excavations').modes||[]).includes(mode))return false;
@@ -8226,55 +8304,82 @@ if(globalThis.AtlasMuseumCuration3380){
    const extraMoney=Math.round(site.money*(m.costFactor-1)),extraKnowledge=Math.round(site.knowledge*(m.costFactor-1));
    if(!canStartExcavation(siteId)||state.money<site.money+extraMoney||state.knowledge<site.knowledge+extraKnowledge)return false;
    if(!window.confirm('Excavación '+m.label.toLowerCase()+' · '+site.name+'\nCosto: £'+(site.money+extraMoney)+' y '+(site.knowledge+extraKnowledge)+' conocimiento · duración ×'+m.durationFactor+' (provisional).\n¿Confirmar?'))return false;
-   const now=Date.now(),n=state.museum.excavations.length;
-   if(!startExcavation(siteId,now)||state.museum.excavations.length<=n)return false;
-   const job=state.museum.excavations[state.museum.excavations.length-1];
-   return museumJobTransaction(()=>{state.money-=extraMoney;state.knowledge-=extraKnowledge;job.mode=mode;job.endAt=now+Math.round(site.seconds*m.durationFactor*1000);});
+   const now=Date.now();
+   return tradeTransaction3300(()=>{
+    const n=state.museum.excavations.length;
+    if(!startExcavationBefore602(siteId,now)||state.museum.excavations.length<=n)return false;
+    if(state.money<extraMoney||state.knowledge<extraKnowledge)return false;
+    const job=state.museum.excavations[state.museum.excavations.length-1];
+    state.money-=extraMoney;state.knowledge-=extraKnowledge;job.mode=mode;job.endAt=now+Math.round(site.seconds*m.durationFactor*1000);
+    job.mec={...digConditions602(mode),recordedAt:now};
+    return true;
+   });
   };
   const collectExcavationBefore602=collectExcavation;
+  // MEC-03: recompensa original + adicional de la modalidad + hallazgos se liquidan en UNA
+  // transacción y quedan en el mismo registro del historial. Los extras usan las condiciones
+  // registradas al iniciar (o, en trabajos antiguos, las de su modalidad guardada).
+  const excavationExtrasHooks602=[];
   collectExcavation=function(jobId,now=Date.now(),random=Math.random){
    const job=(state.museum?.excavations||[]).find(j=>String(j.id)===String(jobId));
-   const mode=job?.mode,site=job&&MUSEUM_DIG_SITES.find(x=>x.id===job.site);
-   const ok=collectExcavationBefore602(jobId,now,random);
-   const extra=ok&&C.DIG_MODES[mode]?.extra,sid=job&&scientificVoyageId(job.id);
-   if(extra&&sid!==null&&!state.museum.excavationModeSettled?.[sid]){
-    museumJobTransaction(()=>{
+   if(!job)return collectExcavationBefore602(jobId,now,random);
+   let ok=false;
+   const committed=tradeTransaction3300(()=>{
+    ok=collectExcavationBefore602(jobId,now,random);if(!ok)return false;
+    const mode=job.mec?.mode||job.mode,site=MUSEUM_DIG_SITES.find(x=>x.id===job.site),sid=scientificVoyageId(job.id);
+    const extra=job.mec?job.mec.extra:C.DIG_MODES[mode]?.extra;
+    if(extra&&sid!==null&&!state.museum.excavationModeSettled?.[sid]){
      (state.museum.excavationModeSettled??={})[sid]=true;
-     const found=[];
-     if(extra.fragments){addInventory('fossil_fragment',extra.fragments);found.push('fragmentos fósiles ×'+extra.fragments);}
-     for(let i=0;i<(extra.toothRolls||0);i++)if(random()<site.tooth){addInventory('fossil_tooth',1);found.push('diente fósil');}
-     for(const [item,q] of Object.entries(extra.guaranteed||{})){addInventory(item,q);found.push(ITEMS[item].name.toLowerCase()+' ×'+q);}
-     pushLog('Excavación '+C.DIG_MODES[mode].label.toLowerCase()+' · adicional: '+(found.join(', ')||'sin hallazgos extra')+'.');
-    });
-   }
-   return ok;
+     const got={};
+     if(extra.fragments){addInventory('fossil_fragment',extra.fragments);got.fossil_fragment=extra.fragments;}
+     for(let i=0;i<(extra.toothRolls||0);i++)if(random()<site.tooth){addInventory('fossil_tooth',1);got.fossil_tooth=(got.fossil_tooth||0)+1;}
+     for(const [item,q] of Object.entries(extra.guaranteed||{})){addInventory(item,q);got[item]=(got[item]||0)+q;}
+     receiptAdd602('excavationHistory',job,{extra:got,fields:{mode}});
+     pushLog('Excavación '+C.DIG_MODES[mode].label.toLowerCase()+' · adicional: '+(Object.entries(got).map(([i,n])=>ITEMS[i].name.toLowerCase()+' ×'+n).join(', ')||'sin hallazgos extra')+'.');
+    }
+    for(const hook of excavationExtrasHooks602)hook(job,site,mode,random);
+    return true;
+   });
+   return committed&&ok;
   };
-
   // Prospecciones · capacidad, indicio adicional, preparación y recogida conjunta.
   // Ninguna mejora entrega un relicto: solo indicios, con el máximo original de 3.
   const maxSurveysBefore602=maxRelictSurveys;
   maxRelictSurveys=function(){return maxSurveysBefore602()+(fx('surveys').capacityBonus||0);};
   const surveySpecBefore602=relictSurveySpec;
   relictSurveySpec=function(id){const s=surveySpecBefore602(id),f=fx('surveys').durationFactor||1;return s&&f!==1?{...s,seconds:Math.max(30,Math.round(s.seconds*f))}:s;};
+  const startSurveyBefore602=startRelictSurvey;
+  startRelictSurvey=function(id,now=Date.now()){
+   return tradeTransaction3300(()=>{const n=state.museum.relictSurveys.length;if(!startSurveyBefore602(id,now)||state.museum.relictSurveys.length<=n)return false;const job=state.museum.relictSurveys[state.museum.relictSurveys.length-1];job.mec={extraLead:fx('surveys').extraLead||0,surveysLevel:C.level(state,'surveys'),recordedAt:now};return true;});
+  };
   const collectSurveyBefore602=collectRelictSurvey;
   collectRelictSurvey=function(jobId,now=Date.now(),random=Math.random){
    const job=(state.museum?.relictSurveys||[]).find(j=>String(j.id)===String(jobId));
-   const ok=collectSurveyBefore602(jobId,now,random),extra=fx('surveys').extraLead||0,sid=job&&scientificVoyageId(job.id);
-   if(ok&&extra&&sid!==null&&!state.museum.relictSurveyBonusSettled?.[sid]){
-    museumJobTransaction(()=>{
+   if(!job)return collectSurveyBefore602(jobId,now,random);
+   let ok=false;
+   const committed=tradeTransaction3300(()=>{
+    ok=collectSurveyBefore602(jobId,now,random);if(!ok)return false;
+    // Trabajos sin condiciones registradas (anteriores a MEC-03) usan las de la migración.
+    const extra=Number.isFinite(job.mec?.extraLead)?job.mec.extraLead:0,sid=scientificVoyageId(job.id);
+    if(extra&&sid!==null&&!state.museum.relictSurveyBonusSettled?.[sid]){
      (state.museum.relictSurveyBonusSettled??={})[sid]=true;
      const before=relictLeadCount(job.relict);addRelictLead(job.relict,extra);
      const got=relictLeadCount(job.relict)-before;
+     const entry=[...(state.museum.relictSurveyHistory||[])].reverse().find(e=>String(e.jobId)===String(job.id));
+     if(entry){entry.leads=(entry.leads||0)+got;entry.extraLeads=got;}
      pushLog('Estación topográfica · '+(got?'+'+got+' indicio adicional.':'el expediente ya tiene el máximo de indicios.'));
-    });
-   }
-   return ok;
+    }
+    return true;
+   });
+   return committed&&ok;
   };
+  const collectAllHooks602=[];
   const collectAll602=kind=>{
    if(!fx(kind).collectAll)return 0;
    const now=Date.now(),jobs=kind==='excavations'?state.museum.excavations:state.museum.relictSurveys;
    const ready=jobs.filter(j=>Number.isFinite(j.endAt)&&j.endAt<=now).map(j=>j.id);
    let n=0;for(const id of ready)if(kind==='excavations'?collectExcavation(id,now):collectRelictSurvey(id,now))n++;
+   for(const hook of collectAllHooks602)n+=hook(kind,now)||0;
    return n;
   };
 
@@ -8284,13 +8389,13 @@ if(globalThis.AtlasMuseumCuration3380){
    if(id==='shipyard')return {...count(state.voyages,{}),settled:Object.values(state.voyageSettled||{}).filter(Boolean).length};
    if(id==='caravan')return {...count(state.commerce?.jobs||[],{}),settled:(state.commerce?.tradeReceipts||state.commerce?.history||[]).length};
    if(id==='excavations')return {...count(state.museum.excavations,{manualCollect:true}),settled:Object.keys(state.museum.excavationSettled||{}).length};
-   if(id==='surveys')return {...count(state.museum.relictSurveys,{manualCollect:true}),settled:Object.keys(state.museum.relictSurveySettled||{}).length};
+   if(id==='surveys'){const a={...count(state.museum.relictSurveys,{manualCollect:true}),settled:Object.keys(state.museum.relictSurveySettled||{}).length};for(const hook of globalThis.AtlasCampMEC02Hooks.activities){const x=hook(id,count);if(x)for(const k of Object.keys(a))a[k]+=x[k]||0;}return a;}
    return null;
   };
   const capacity602=id=>id==='shipyard'?{used:state.voyages.length,total:maxVoyages(),unit:'expediciones'}:
    id==='caravan'?{used:state.commerce?.jobs?.length||0,total:fx('caravan').routeCapacity||1,unit:'rutas'}:
    id==='excavations'?{used:state.museum.excavations.length,total:maxExcavations(),unit:'excavaciones'}:
-   id==='surveys'?{used:state.museum.relictSurveys.length,total:maxRelictSurveys(),unit:'prospecciones'}:null;
+   id==='surveys'?{used:state.museum.relictSurveys.length+(state.prospections?.jobs?.length||0),total:maxRelictSurveys(),unit:'prospecciones (documentales, geológicas y regionales)'}:null;
   const operational602=id=>{const f=C.facility(id);if(f.unlock&&!state.upgrades[f.unlock.flag])return 'Sin habilitar: '+f.unlock.label;const c=capacity602(id);return c&&c.used>=c.total?'Operativa · capacidad completa':'Operativa';};
 
   const upgrade602=id=>{
@@ -8309,7 +8414,6 @@ if(globalThis.AtlasMuseumCuration3380){
     const lot=fx(id).marketLot;
     out.push('<details class="mec02-controls"><summary>Compra por lotes ×'+lot+'</summary>'+Object.entries(TRADE_MARKET).map(([item,cost])=>'<div class="mec02-row"><span>'+CUI.esc(ITEMS[item].name)+' · £'+cost*lot+'</span>'+b('mec02-market',item+'|'+lot,'Comprar ×'+lot,!!state.upgrades.shipyard&&state.money>=cost*lot)+'</div>').join('')+'</details>');
    }
-   if(id==='caravan'&&fx(id).collectibleExchange)out.push('<p class="small">Intercambio de coleccionables: conexión preparada, se activa en MEC-03.</p>');
    if(id==='workshop'){
     const classes=Object.keys(RECIPES).map(recipeClass602).filter(Boolean),by={};for(const c of classes)by[c.category]=(by[c.category]||0)+1;
     out.push('<details class="mec02-controls"><summary>Recetas clasificadas · '+classes.length+'</summary><p class="small">'+Object.entries(by).map(([k,n])=>k.replace('-',' ')+': '+n).join(' · ')+'. Ninguna receta histórica exige nivel de Taller.</p></details>');
@@ -8324,6 +8428,7 @@ if(globalThis.AtlasMuseumCuration3380){
    }
    if((id==='excavations'||id==='surveys')&&fx(id).collectAll){const a=activities602(id);out.push('<div class="mec02-row">'+b('mec02-collect-all',id,'Recoger todas las terminadas ('+a.pending+')',a.pending>0)+'</div>');}
    if(id==='surveys'){const prepared=Object.values(C.SURVEY_TYPES).filter(t=>!t.active&&t.minLevel<=lvl);if(prepared.length)out.push('<p class="small">Tipos de prospección preparados (inactivos hasta '+prepared[0].future+'): '+prepared.map(t=>CUI.esc(t.label)).join(' · ')+'.</p>');}
+   for(const hook of globalThis.AtlasCampMEC02Hooks.controls)out.push(hook(id,{b,lvl})||'');
    return out.join('');
   };
   const cardModel602=id=>{
@@ -8333,6 +8438,7 @@ if(globalThis.AtlasMuseumCuration3380){
     functions:f.levels.slice(0,lvl).flatMap(l=>l.functions),capacity:capacity602(id),activities:activities602(id),controls:controls602(id),
     next:chk.next?{name:chk.next.name,roman:C.ROMAN[chk.next.level],functions:[...chk.next.functions],cost:chk.next.cost,prestige:chk.next.requires.prestige,reasons:chk.reasons,ok:chk.ok}:null};
   };
+  globalThis.AtlasCampMEC02Hooks={excavationExtras:excavationExtrasHooks602,collectAll:collectAllHooks602,controls:[],activities:[],capacity:[],modalityAllowed:modalityAllowed602};
   globalThis.AtlasCampMEC02Actions={upgrade:upgrade602,sail:sailModality602,market:marketLot602,craft:craftBatch602,craftTree:craftTree602,dig:digMode602,collectAll:collectAll602,activities:activities602,capacity:capacity602,card:cardModel602,recipeClass:recipeClass602};
   mec02Action=function(act,id){
    const [a,b]=String(id||'').split('|');
@@ -8370,6 +8476,312 @@ if(globalThis.AtlasMuseumCuration3380){
     return r;
    };
   }
+ }
+}
+// MEC-03 (V5.6.3 Beta) · Obtención híbrida de coleccionables e intercambio.
+// Sustituye el drop experimental universal por fuentes según la naturaleza de cada pieza:
+// campo (exploración ambiental y observación animal), expediciones con modalidades,
+// comercio de la Caravana, excavaciones, prospecciones geológicas y regionales, Taller,
+// encargos de coleccionistas y eventos (preparados, desactivados). Configuración por pieza en
+// www/js/mec03-catalog.js (generada por scripts/build-mec03-catalog.cjs). Ver docs/mec03/README.md.
+{
+ const X=globalThis.AtlasMEC03,K=globalThis.AtlasMEC03Catalog,M=globalThis.AtlasMEC01,C=globalThis.AtlasCampMEC02;
+ const A1=globalThis.AtlasBeta560Actions,HK=globalThis.AtlasCampMEC02Hooks,receipt=globalThis.AtlasCampMEC02Receipt;
+ if(X&&K&&M&&A1?.catalog&&A1?.drops&&C&&HK){
+  const CAT=A1.catalog,DROPS=A1.drops,P=K.pieces;
+  const speciesConts=new Map();for(const r of REGIONS)for(const sp of r.species||[]){if(!speciesConts.has(sp))speciesConts.set(sp,new Set());speciesConts.get(sp).add(r.continent);}
+  const E=X.create(K,{beta:globalThis.AtlasBeta560,speciesKind:id=>SPECIES[id]?.kind,speciesContinents:id=>[...(speciesConts.get(id)||[])],historicSpecies:new Set(Object.keys(SPECIES_DROPS))});
+  const lvl=id=>C.level(state,id);
+  const reserved=id=>M.reserved(state,id);
+  const RAR=K.rarities;
+  // 1. Retirada del drop experimental universal: sus tablas quedan archivadas en los datos
+  // beta, pero sus canales de coleccionables y rarezas por especie dejan de tirar.
+  DROPS.configure('coleccionables','campo',{manual:0,auto:0});
+  DROPS.configure('rarezas','campo',{manual:0,auto:0});
+  const archivedChannels=['coleccionables','rarezas'];
+
+  // Incorporación común: addInventory (registro MEC-01) con la fuente real y un registro de hallazgos.
+  const grant=(id,n,source,activity,activityId)=>{
+   if(!ITEMS[id]||!(n>0))return false;
+   A1.withSource(source,()=>addInventory(id,n));
+   const log=state.collectibleFinds=Array.isArray(state.collectibleFinds)?state.collectibleFinds:[];
+   log.push({at:Date.now(),source,activity,activityId:activityId??null,item:id,qty:n});
+   if(log.length>120)log.splice(0,log.length-120);
+   return true;
+  };
+  const unlockedContinents=()=>{const set=new Set();for(const r of REGIONS)if(state.regionUnlocked?.[r.id])set.add(r.continent);return set;};
+  const regionById=id=>REGIONS.find(r=>r.id===id)||null;
+
+  // 2. Campo. Observación animal (con el Gabinete de especímenes): materiales nuevos, ampliación
+  // de los 8 materiales históricos a especies compatibles, huevos, arquitecturas y rarezas de la
+  // especie. Exploración ambiental (sin Gabinete): según región y bioma, no según la especie.
+  // Una tirada de cada tipo por búsqueda, sin multiplicar por los avistamientos.
+  const fieldBefore603=mec01FieldDrops;
+  mec01FieldDrops=function(id,manual){
+   const out=fieldBefore603(id,manual);
+   if(!state.upgrades.specimenDrops)return out;
+   const mode=manual?'manual':'auto';
+   for(const [pool,rate] of [[E.observation(id),X.RATES.observacion[mode]],[E.historicExtra(id),X.RATES.historicosAmpliados[mode]]]){
+    for(const got of E.roll(pool,{rolls:1,chance:rate}))if(grant(got,1,'observacion','campo:observacion',id))out.push(got);
+   }
+   return out;
+  };
+  mec03AmbientFinds=function(manual){
+   const region=currentRegion(),out=[];
+   for(const got of E.roll(E.ambient(region),{rolls:1,chance:X.RATES.ambiental[manual?'manual':'auto']}))if(grant(got,1,'campo','campo:ambiental',region?.id))out.push(got);
+   return out;
+  };
+
+  // 3. Expediciones: hallazgos según destino y modalidad, dentro de la misma liquidación.
+  const resolveBefore603=resolveVoyageReward;
+  resolveVoyageReward=function(job,...rest){
+   const ok=resolveBefore603(job,...rest);
+   if(!ok)return ok;
+   const modality=job?.mec?.modality||job?.modality||'normal';
+   const kind=modality==='normal'||modality==='ampliada'?'normal':modality==='extraordinaria'?'extraordinaria':'especializada';
+   const rate=X.RATES.expedicion[kind],pool=E.expedition(job.type,modality==='ampliada'?'normal':modality);
+   const got={};
+   for(const id of E.roll(pool,rate))if(grant(id,1,'expediciones','expedicion:'+modality,job.id))got[id]=(got[id]||0)+1;
+   if(Object.keys(got).length){receipt('voyageHistory',job,{collectibles:got,fields:{modality}});pushLog('Expedición · coleccionables: '+Object.entries(got).map(([i,n])=>ITEMS[i].name+(n>1?' ×'+n:'')).join(', ')+'.');}
+   else receipt('voyageHistory',job,{fields:{modality}});
+   return ok;
+  };
+
+  // 4. Excavaciones: piezas históricas, paleontológicas y geológicas según yacimiento y modalidad,
+  // como hallazgo adicional a las recompensas fósiles originales (que no cambian).
+  HK.excavationExtras.push((job,site,mode,random)=>{
+   const m=job.mec?.mode||mode||'normal',rate=X.RATES.excavacion[m]||X.RATES.excavacion.normal,got={};
+   for(const id of E.roll(E.dig(job.site,m),{...rate,random}))if(grant(id,1,'excavaciones','excavacion:'+m,job.id))got[id]=(got[id]||0)+1;
+   if(Object.keys(got).length){receipt('excavationHistory',job,{collectibles:got});pushLog('Excavación · coleccionables: '+Object.entries(got).map(([i,n])=>ITEMS[i].name+(n>1?' ×'+n:'')).join(', ')+'.');}
+  });
+
+  // 5. Prospecciones geológicas, regionales y especializadas: actividades completas que comparten
+  // la capacidad de la instalación con las prospecciones documentales de relictos.
+  const pros=()=>{const p=state.prospections=state.prospections&&typeof state.prospections==='object'&&!Array.isArray(state.prospections)?state.prospections:{};
+   p.seq=Number.isSafeInteger(p.seq)&&p.seq>=0?p.seq:0;p.jobs=Array.isArray(p.jobs)?p.jobs.filter(j=>j&&Number.isSafeInteger(j.id)&&X.PROSPECTIONS[j.type]&&regionById(j.region)&&Number.isFinite(j.endAt)):[];
+   p.settled=p.settled&&typeof p.settled==='object'?p.settled:{};p.history=Array.isArray(p.history)?p.history.slice(-20):[];
+   p.jobs=p.jobs.filter(j=>!p.settled[j.id]);p.seq=Math.max(p.seq,...p.jobs.map(j=>j.id),...Object.keys(p.settled).map(Number).filter(Number.isSafeInteger));return p;};
+  const surveysUsed=()=>state.museum.relictSurveys.length+pros().jobs.length;
+  const canStartSurveyBefore603=canStartRelictSurvey;
+  canStartRelictSurvey=function(id){return surveysUsed()<maxRelictSurveys()&&canStartSurveyBefore603(id);};
+  const prospectionPool=(type,region)=>type==='regional'?E.regional(region):E.geological(region,type);
+  const canProspect=(type,regionId)=>{const t=X.PROSPECTIONS[type],r=regionById(regionId);
+   return !!t&&!!r&&!!state.regionUnlocked?.[r.id]&&lvl('surveys')>=t.minLevel&&surveysUsed()<maxRelictSurveys()&&state.money>=t.money&&state.knowledge>=t.knowledge&&prospectionPool(type,r).length>0;};
+  const startProspection=(type,regionId,now=Date.now())=>{
+   if(!canProspect(type,regionId))return false;const t=X.PROSPECTIONS[type];
+   if(!window.confirm(t.label+' · '+regionById(regionId).name+'\nCosto: £'+t.money+' y '+t.knowledge+' conocimiento · '+Math.round(t.seconds/60)+' min (provisional).\nHallazgos posibles: '+t.finds+'. ¿Confirmar?'))return false;
+   return tradeTransaction3300(()=>{const p=pros();state.money-=t.money;state.knowledge-=t.knowledge;
+    p.jobs.push({id:++p.seq,type,region:regionId,startedAt:now,endAt:now+t.seconds*1000,mec:{surveysLevel:lvl('surveys'),rolls:t.rolls,chance:t.chance,knowledgeReward:t.knowledgeReward,recordedAt:now}});
+    pushLog(t.label+' iniciada: '+regionById(regionId).name+'.');return true;});
+  };
+  const collectProspection=(jobId,now=Date.now(),random=Math.random)=>{
+   const p=pros(),job=p.jobs.find(j=>String(j.id)===String(jobId));
+   if(!job||p.settled[job.id]||!(job.endAt<=now))return false;
+   return tradeTransaction3300(()=>{
+    const q=pros();if(q.settled[job.id])return false;
+    q.settled[job.id]=true;q.jobs=q.jobs.filter(j=>j.id!==job.id);
+    const got={};
+    for(const id of E.roll(prospectionPool(job.type,regionById(job.region)),{rolls:job.mec.rolls,chance:job.mec.chance,random}))if(grant(id,1,'prospecciones','prospeccion:'+job.type,job.id))got[id]=(got[id]||0)+1;
+    state.knowledge+=job.mec.knowledgeReward;
+    q.history.push({jobId:job.id,type:job.type,region:job.region,at:now,knowledge:job.mec.knowledgeReward,collectibles:got});q.history=q.history.slice(-20);
+    pushLog(X.PROSPECTIONS[job.type].label+' completada · '+(Object.keys(got).map(i=>ITEMS[i].name).join(', ')||'sin piezas')+' · +'+job.mec.knowledgeReward+' conocimiento.');
+    return true;});
+  };
+  HK.collectAll.push((kind,now)=>{if(kind!=='surveys')return 0;let n=0;for(const j of pros().jobs.filter(j=>j.endAt<=now))if(collectProspection(j.id,now))n++;return n;});
+  HK.activities.push((id,count)=>id==='surveys'?{...count(pros().jobs,{manualCollect:true}),settled:Object.keys(pros().settled).length}:null);
+
+  // 6. Taller: preparaciones temáticas que consumen sus materiales y entregan una pieza.
+  const prepPool=key=>{const t=X.PREPARATIONS[key];return E.preparation(key,unlockedContinents(),lvl('workshop')>=4?2:1);};
+  const canPrepare=key=>{const t=X.PREPARATIONS[key];return !!t&&lvl('workshop')>=t.minWorkshop&&Object.entries(t.requires).every(([m,n])=>(state.inventory[m]||0)>=n)&&prepPool(key).length>0;};
+  const prepare=key=>{
+   if(!canPrepare(key))return null;const t=X.PREPARATIONS[key];
+   if(!window.confirm(t.label+'\nConsume: '+tradeMaterials3300(t.requires)+'.\nEntrega una pieza de «'+t.collection+'». ¿Confirmar?'))return null;
+   let out=null;
+   const ok=inventoryAtomicAction3400(()=>{for(const [m,n] of Object.entries(t.requires)){if((state.inventory[m]||0)<n)return false;state.inventory[m]-=n;}
+    out=E.pick(prepPool(key),Math.random);if(!out)return false;grant(out,1,'taller','taller:'+key,null);pushLog(t.label+': '+ITEMS[out].name+'.');return true;});
+   return ok?out:null;
+  };
+
+  // 7. Caravana · comerciantes y coleccionistas (sección propia, separada del mercado de
+  // suministros). Ofertas deterministas por periodo y nivel, guardadas en la partida.
+  const market=(now=Date.now())=>{
+   const m=state.collectorMarket=state.collectorMarket&&typeof state.collectorMarket==='object'&&!Array.isArray(state.collectorMarket)?state.collectorMarket:{};
+   if(!Number.isSafeInteger(m.seed))m.seed=Math.floor(Math.random()*2**31);
+   m.offers=Array.isArray(m.offers)?m.offers.filter(o=>o&&typeof o.id==='string'&&P[o.piece]):[];m.history=Array.isArray(m.history)?m.history.slice(-30):[];
+   const period=Math.floor(now/X.MARKET.renewMs),level=lvl('caravan');
+   if(m.period!==period){m.period=period;m.level=1;m.offers=[];m.renewedAt=now;}
+   if(level>(m.level||1)){m.offers.push(...E.generateOffers({seed:m.seed,period,fromLevel:m.level||1,toLevel:level,continents:unlockedContinents(),state,reserved,exclude:m.offers.map(o=>o.piece)}));m.level=level;}
+   return m;
+  };
+  const stock=id=>E.stock(state,id,reserved);
+  const offerPlan=offer=>{
+   const p=P[offer.piece];if(!p)return null;
+   if(offer.kind==='compra')return {give:{},money:offer.price,get:{[offer.piece]:1}};
+   if(offer.kind==='intercambio'){const give=E.chooseGive(state,offer.give,offer.piece,reserved);return give?{give,money:0,get:{[offer.piece]:1}}:null;}
+   if(offer.kind==='solicitud')return stock(offer.piece).tradable>=1?{give:{[offer.piece]:1},money:-offer.reward,get:{}}:null;
+   return null;
+  };
+  const describePlan=(offer,plan)=>{
+   const line=o=>Object.entries(o).map(([i,n])=>ITEMS[i].name+' ×'+n).join(', ');
+   const rest=Object.keys(plan.give).map(i=>ITEMS[i].name+': quedan '+(stock(i).owned-plan.give[i])+' ('+stock(i).exhibited+' en vitrina)').join('; ');
+   return offer.merchant+'\n'+(Object.keys(plan.give).length?'Entregas: '+line(plan.give)+'\n':'')+(plan.money>0?'Pagas: £'+plan.money+'\n':plan.money<0?'Recibes: £'+(-plan.money)+'\n':'')+(Object.keys(plan.get).length?'Recibes: '+line(plan.get)+'\n':'')+(rest?'Después: '+rest+'\n':'')+'¿Confirmar?';
+  };
+  const executeOffer=(offerId,now=Date.now())=>{
+   const m=market(now),offer=m.offers.find(o=>o.id===offerId);
+   if(!offer||offer.done||lvl('caravan')<offer.level)return false;
+   const plan=offerPlan(offer);if(!plan||plan.money>0&&state.money<plan.money)return false;
+   if(!window.confirm(describePlan(offer,plan)))return false;
+   return tradeTransaction3300(()=>{
+    const live=market(now).offers.find(o=>o.id===offerId);if(!live||live.done)return false;
+    for(const [i,n] of Object.entries(plan.give)){if(stock(i).tradable<n)return false;state.inventory[i]-=n;}
+    if(plan.money>0){if(state.money<plan.money)return false;state.money-=plan.money;}
+    if(plan.money<0)earnMoney(-plan.money,'comercio');
+    for(const [i,n] of Object.entries(plan.get))grant(i,n,'comercio','comercio:'+live.kind,live.id);
+    live.done=true;live.doneAt=now;
+    state.collectorMarket.history.push({offer:live.id,kind:live.kind,at:now,gave:plan.give,got:plan.get,money:plan.money});
+    pushLog('Caravana · '+live.merchant+': '+live.kind+' completada.');return true;
+   });
+  };
+  const setProtection=on=>{E.prefs(state).protectLast=!!on;persist();return state.collectionPrefs.protectLast;};
+
+  // 8. Encargos de coleccionistas (se suman a los encargos históricos, que no cambian).
+  const claims=()=>{const c=state.collectorCommissions=state.collectorCommissions&&typeof state.collectorCommissions==='object'?state.collectorCommissions:{};c.claims=c.claims&&typeof c.claims==='object'?c.claims:{};return c;};
+  const commissionPlan=(def,now=Date.now())=>{
+   const r=def.requires,last=claims().claims[def.id]?.last||0,reasons=[];
+   if(now-last<def.cooldownHours*3600e3)reasons.push('disponible de nuevo en '+Math.ceil((def.cooldownHours*3600e3-(now-last))/60000)+' min');
+   for(const [i,n] of Object.entries(r.items||{}))if((state.inventory[i]||0)<n)reasons.push(ITEMS[i].name+' ×'+n);
+   if(r.money&&state.money<r.money)reasons.push('£'+r.money);
+   if(r.voyages&&(state.museum.voyagesCompleted||0)<r.voyages)reasons.push(r.voyages+' expediciones completadas');
+   const give={...(r.items||{})};
+   if(r.collection){const g=E.chooseGive(state,{collection:r.collection.name,count:r.collection.count},null,reserved);if(!g)reasons.push(r.collection.count+' pieza(s) repetida(s) de «'+r.collection.name+'»');else Object.assign(give,g);}
+   const pool=E.reward(def.reward,unlockedContinents());if(!pool.length)reasons.push('ninguna pieza accesible de «'+def.reward+'»');
+   return {ok:!reasons.length,reasons,give,pool};
+  };
+  const claimCommission=(id,now=Date.now())=>{
+   const def=X.COMMISSIONS.find(d=>d.id===id);if(!def)return null;
+   const plan=commissionPlan(def,now);if(!plan.ok)return null;
+   if(!window.confirm(def.label+'\nEntregas: '+(tradeMaterials3300(plan.give)||'nada')+(def.requires.money?' y £'+def.requires.money:'')+'.\nRecibes: una pieza de «'+def.reward+'». ¿Confirmar?'))return null;
+   let out=null;
+   const ok=tradeTransaction3300(()=>{
+    for(const [i,n] of Object.entries(plan.give)){const isPiece=!!P[i];if(isPiece?stock(i).tradable<n:(state.inventory[i]||0)<n)return false;state.inventory[i]-=n;}
+    if(def.requires.money){state.money-=def.requires.money;}
+    const fresh=plan.pool.filter(i=>!M.discovered(state,i));out=E.pick(fresh.length?fresh:plan.pool,Math.random);if(!out)return false;
+    grant(out,1,'encargos','encargo:'+def.id,def.id);
+    const c=claims().claims[def.id]||(claims().claims[def.id]={count:0,last:0});c.count++;c.last=now;
+    pushLog('Encargo de coleccionista · '+def.label+': '+ITEMS[out].name+'.');return true;});
+   return ok?out:null;
+  };
+
+  // 9. Eventos: entrega funcional, pero los eventos de calendario siguen desactivados (MEC-08).
+  const deliverEvent=(id,{definition}={})=>{
+   const def=definition||X.EVENTS.find(e=>e.id===id);if(!def||!def.active)return null;
+   const ev=state.collectibleEvents=state.collectibleEvents&&typeof state.collectibleEvents==='object'?state.collectibleEvents:{};
+   if(ev[def.id])return null;
+   let out=null;
+   const ok=tradeTransaction3300(()=>{out=E.pick(E.reward(def.reward,unlockedContinents()),Math.random);if(!out)return false;ev[def.id]={at:Date.now(),item:out};grant(out,1,'eventos','evento:'+def.id,def.id);return true;});
+   return ok?out:null;
+  };
+
+  // Normalización (carga e importación).
+  const normalizeBefore603=normalizeMEC01;
+  normalizeMEC01=function(s){
+   const r=normalizeBefore603(s);
+   if(s===state){pros();E.prefs(state);if(state.collectorMarket)market();claims();}
+   return r;
+  };
+  normalizeMEC01(state);
+
+  // Interfaz del Campamento: hallazgos posibles, recibidos y controles nuevos en cada ficha.
+  const U=globalThis.AtlasCampMEC02UI;
+  const finds=(source,limit=5)=>(state.collectibleFinds||[]).filter(f=>f.source===source).slice(-limit).reverse();
+  const findsHtml=(label,sources)=>{const list=sources.flatMap(s=>finds(s,6)).sort((a,b)=>b.at-a.at).slice(0,6);
+   return '<p class="small"><b>Hallazgos posibles:</b> '+U.esc(label)+'.</p><p class="small"><b>Últimos hallazgos:</b> '+(list.map(f=>U.esc(ITEMS[f.item]?.name||f.item)).join(', ')||'todavía ninguno')+'.</p>';};
+  const regionOptions=()=>REGIONS.filter(r=>state.regionUnlocked?.[r.id]).map(r=>'<option value="'+U.esc(r.id)+'"'+(r.id===state.mec03Region?' selected':'')+'>'+U.esc(r.name+' · '+r.continent)+'</option>').join('');
+  HK.controls.push((id,{b})=>{
+   const out=[];
+   if(id==='shipyard'){
+    out.push(findsHtml('coleccionables según destino y modalidad (botánica, oceanográfica, arqueológica, reconocimiento naturalista, extraordinaria)',['expediciones']));
+    const mods=Object.entries(X.VOYAGE_MODALITIES);
+    const routes=VOYAGES.filter(v=>voyageConditions3280(v).every(c=>c.met));
+    out.push('<details class="mec02-controls"><summary>Modalidades especializadas</summary>'+(routes.map(v=>'<div class="mec02-row"><span>'+U.esc(v.name)+'</span>'+mods.filter(([k])=>HK.modalityAllowed(v,k)).map(([k,m])=>b('mec03-voyage',v.id+'|'+k,m.label+' · £'+Math.round(v.cost*m.costFactor),voyageRoute3280(v).ready&&state.money>=v.cost*m.costFactor)).join(' ')+'</div>').join('')||'<p class="small">No hay rutas habilitadas.</p>')+'<p class="small">Botánica y reconocimiento desde el nivel II, oceanográfica desde el III, arqueológica desde el IV y extraordinaria en el V. Cada modalidad respeta los requisitos de la ruta.</p></details>');
+   }
+   if(id==='excavations')out.push(findsHtml('numismática, objetos de civilizaciones, fósiles menores, armería, máscaras, ámbar, rocas y, en la modalidad especial, las siete maravillas',['excavaciones']));
+   if(id==='workshop'){
+    out.push('<details class="mec02-controls"><summary>Preparaciones de colección</summary>'+Object.entries(X.PREPARATIONS).map(([k,t])=>'<div class="mec02-row"><span>'+U.esc(t.label)+' · '+U.esc(tradeMaterials3300(t.requires))+' → «'+U.esc(t.collection)+'» (Taller '+C.ROMAN[t.minWorkshop]+')</span>'+b('mec03-prepare',k,'Preparar',canPrepare(k))+'</div>').join('')+'</details>');
+    out.push(findsHtml('herbarios, muestras de madera, minerales pulidos, fósiles reconstruidos y daguerrotipos',['taller']));
+   }
+   if(id==='surveys'){
+    const p=pros(),now=Date.now();
+    out.push('<details class="mec02-controls" open><summary>Prospecciones geológicas y regionales</summary><label class="mec01-field">Región<select data-mec03-region>'+regionOptions()+'</select></label>'+
+     Object.entries(X.PROSPECTIONS).map(([k,t])=>'<div class="mec02-row"><span>'+U.esc(t.label)+' · £'+t.money+' y '+t.knowledge+' C · '+Math.round(t.seconds/60)+' min · '+U.esc(t.finds)+' (nivel '+C.ROMAN[t.minLevel]+')</span>'+b('mec03-prospect',k,'Iniciar',canProspect(k,state.mec03Region))+'</div>').join('')+
+     (p.jobs.map(j=>'<div class="mec02-row"><span>'+U.esc(X.PROSPECTIONS[j.type].label)+' · '+U.esc(regionById(j.region).name)+' · '+(j.endAt<=now?'terminada':'termina en '+Math.ceil((j.endAt-now)/60000)+' min')+'</span>'+b('mec03-prospect-collect',String(j.id),'Recoger',j.endAt<=now)+'</div>').join(''))+'</details>');
+    out.push(findsHtml('minerales, gemas, metales, meteoritos, rocas, ámbar, fósiles menores y muestras botánicas y ambientales de la región',['prospecciones']));
+   }
+   if(id==='caravan'){
+    const m=market(),prefs=E.prefs(state);
+    const offers=m.offers.map(o=>{const p=P[o.piece],plan=offerPlan(o),st=stock(o.piece);
+     const what=o.kind==='compra'?'Compra · £'+o.price:o.kind==='intercambio'?'Intercambio · '+o.give.count+' repetidas'+(o.give.collection?' de «'+o.give.collection+'»':' de '+o.give.cabinet)+(o.give.minRarity?' ('+RAR[o.give.minRarity]+' o más)':''):'Solicitud · te pagan £'+o.reward;
+     const name=M.discovered(state,o.piece)||o.kind!=='intercambio'?ITEMS[o.piece].name:'Pieza sin descubrir';
+     return '<div class="mec02-row"><span><b>'+U.esc(o.merchant)+'</b> · '+U.esc(what)+' · '+U.esc(name)+' ('+U.esc(RAR[p.rarity])+', '+U.esc(p.collection)+')'+(o.kind==='solicitud'?' · tienes '+st.tradable+' para intercambio':'')+'</span>'+b('mec03-offer',o.id,o.done?'Completada':'Ver y confirmar',!o.done&&!!plan&&(plan.money<=0||state.money>=plan.money))+'</div>';}).join('');
+    out.push('<section class="mec02-controls mec03-collectors"><h4>Comerciantes y coleccionistas <span class="mec01-beta">BETA</span></h4>'+(lvl('caravan')<2?'<p class="small">Se abre con la Caravana equipada (II): coleccionables comunes. III: comerciantes regionales y piezas poco comunes · IV: piezas raras y solicitudes · V: coleccionistas especializados y piezas muy raras.</p>':offers||'<p class="small">No hay ofertas en este periodo.</p>')+
+     '<p class="small">Las ofertas se renuevan cada 24 horas de juego (provisional) y se guardan en la partida. Solo aparecen piezas de continentes ya accesibles.</p>'+
+     '<label class="mec01-field"><span><input type="checkbox" data-mec03-protect'+(prefs.protectLast?' checked':'')+'> Proteger la última unidad de cada pieza</span></label><p class="small">Las piezas expuestas en el Museo nunca se venden ni se intercambian sin retirarlas antes.</p>'+
+     '<details><summary>Encargos de coleccionistas</summary>'+X.COMMISSIONS.map(d=>{const pl=commissionPlan(d);return '<div class="mec02-row"><span><b>'+U.esc(d.label)+'</b> · '+U.esc(d.text)+' → pieza de «'+U.esc(d.reward)+'»'+(pl.ok?'':' · falta: '+U.esc(pl.reasons.join(', ')))+'</span>'+b('mec03-commission',d.id,'Entregar',pl.ok)+'</div>';}).join('')+'</details>'+
+     findsHtml('piezas de comerciantes regionales y coleccionistas',['comercio','encargos'])+'</section>');
+   }
+   return out.join('');
+  });
+  const actionBefore603=mec02Action;
+  mec02Action=function(act,id){
+   if(!String(act).startsWith('mec03-'))return actionBefore603(act,id);
+   const [a,b]=String(id||'').split('|');
+   if(act==='mec03-voyage')globalThis.AtlasCampMEC02Actions.sail(a,b);
+   else if(act==='mec03-prospect')startProspection(a,state.mec03Region);
+   else if(act==='mec03-prospect-collect')collectProspection(Number(a));
+   else if(act==='mec03-prepare')prepare(a);
+   else if(act==='mec03-offer')executeOffer(a);
+   else if(act==='mec03-commission')claimCommission(a);
+   renderCounters();renderPanel();
+  };
+  panel.addEventListener('change',e=>{
+   const el=e.target;if(!el?.dataset)return;
+   if('mec03Region' in el.dataset&&REGIONS.some(r=>r.id===el.value&&state.regionUnlocked?.[r.id])){state.mec03Region=el.value;persist();renderPanel();}
+   if('mec03Protect' in el.dataset){setProtection(el.checked);renderPanel();}
+  });
+  if(!state.mec03Region||!state.regionUnlocked?.[state.mec03Region])state.mec03Region=state.currentRegion||REGIONS[0].id;
+
+  // Fichas de coleccionables: fuentes desde la configuración por pieza (sin textos de drop universal).
+  const sourceText=id=>{const p=P[id];if(!p)return [];
+   const s=p.sources,out=[],L=X.SOURCE_LABELS;
+   const line=(k,txt)=>out.push((k===p.primary?'Principal · ':'Alternativa · ')+L[k]+(txt?': '+txt:''));
+   if(s.campo)line('campo','regiones de '+s.campo.continents.join(', ')+' con '+s.campo.biomes.slice(0,4).join(', ')+(s.campo.biomes.length>4?'…':''));
+   if(s.observacion)line('observacion','observando su especie, con el Gabinete de especímenes');
+   if(s.expediciones)line('expediciones',s.expediciones.modalities.map(m=>X.VOYAGE_MODALITIES[m]?.label||'expedición normal').join(', ')+' · Astillero '+C.ROMAN[s.expediciones.minShipyard]);
+   if(s.excavaciones)line('excavaciones','modalidad '+s.excavaciones.modes.join(', ')+' · Excavaciones '+C.ROMAN[s.excavaciones.minExcavations]);
+   if(s.prospecciones)line('prospecciones',s.prospecciones.types.join(', ')+' · Prospecciones '+C.ROMAN[s.prospecciones.minSurveys]);
+   if(s.comercio)line('comercio','comerciantes · Caravana '+C.ROMAN[s.comercio.minCaravan]);
+   if(s.taller)line('taller',X.PREPARATIONS[s.taller.recipe]?.label);
+   if(s.encargos)line('encargos','');
+   return out;
+  };
+  const hint=id=>{const p=P[id];if(!p)return '';return 'Pista: '+[p.primary,...p.alt].map(k=>X.SOURCE_LABELS[k]).join(' · ')+(p.origin!=='Mundial'?' · procedencia: '+p.origin:'')+'.';};
+  const detailBefore603=A1.detailModel;
+  if(detailBefore603){
+   A1.detailModel=id=>{const m=detailBefore603(id);if(!m)return m;const st=stock(id);
+    m.sources=sourceText(id);m.tradable=st.tradable;m.protected=st.protected;m.hint=hint(id);
+    m.registry=Object.entries(state.collectionRegistry?.pieces?.[id]?.sources||{}).map(([k,n])=>(X.SOURCE_LABELS[k]||k)+': '+n);
+    return m;};
+   globalThis.AtlasBeta560Actions.detailModel=A1.detailModel;
+  }
+  // inventorySources3400 ya no presenta a los animales como fuente universal.
+  const invSourcesBefore603=inventorySources3400;
+  inventorySources3400=function(id){
+   const list=invSourcesBefore603(id).filter(t=>!/^BETA · Drop de prueba/.test(t));
+   if(P[id])list.push(...sourceText(id).map(t=>'BETA · '+t));
+   return list;
+  };
+
+  globalThis.AtlasMEC03Actions={engine:E,grant,startProspection,collectProspection,canProspect,prospections:pros,prepare,canPrepare,market,executeOffer,offerPlan,stock,setProtection,claimCommission,commissionPlan,deliverEvent,sourceText,hint,archivedChannels,unlockedContinents};
  }
 }
 render();
