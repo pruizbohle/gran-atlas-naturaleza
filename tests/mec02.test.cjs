@@ -132,8 +132,10 @@ test('MEC-02 · nuevas funciones según nivel (Astillero, Caravana, Prospeccione
 
 test('MEC-02 · Taller: recetas históricas libres, lotes, subcomponentes y estudios en lote',()=>{
  const h=game(),s=rich(h),g=h.g,a=A(h);
- // Ninguna receta existente exige nivel de Taller.
- for(const id of Object.keys(g.RECIPES))assert.equal(a.recipeClass(id)?.minWorkshop??1,1,id);
+ // Ninguna receta histórica exige nivel de Taller. MEC-06 asigna nivel solo a los seis componentes de la
+ // beta (configuración en www/js/mec06-workshop.js); antes de MEC-06 esta prueba esperaba 1 para todas.
+ const C6=h.x.AtlasMEC06?.COMPONENTS||{};
+ for(const id of Object.keys(g.RECIPES))assert.equal(a.recipeClass(id)?.minWorkshop??1,C6[id]?C6[id].minWorkshop:1,id);
  const cats=new Set(Object.keys(g.RECIPES).map(id=>a.recipeClass(id)?.category).filter(Boolean));
  for(const c of ['equipamiento','cartografia','material-artefacto'])assert.ok(cats.has(c),c);
  // Requisito de nivel preparado: una receta nueva de nivel 3 queda bloqueada en I y libre en III.

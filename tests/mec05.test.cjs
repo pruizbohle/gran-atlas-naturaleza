@@ -40,7 +40,11 @@ test('MEC-05 · 2. regiones desbloqueadas, visitadas, exploradas y completadas; 
  g.setRegion(r.id);assert.equal(A4(h).metrics().regions,r0+1,'visitar sí');
  const st=A4(h).regionStates();assert.equal(st.visited,st0.visited+1);assert.ok(st.explored<=st.visited&&st.completed<=st.total);
  const sp=r.species.filter(id=>g.SPECIES[id]);for(const id of sp)s.discovered[id]=true;
- const st2=A4(h).regionStates();assert.ok(st2.explored>=st.explored+1);assert.ok(st2.completed>=st.completed+1);
+ // MEC-06: el catálogo global no explora ni completa la región (antes sí); cuentan los avistamientos
+ // registrados en ella (state.regionalRecords) y la visita.
+ const st2=A4(h).regionStates();assert.equal(st2.explored,st.explored);assert.ok(st2.globalComplete>=st0.globalComplete+1);
+ for(const id of sp)g.regionalRecordMEC06(r.id,id,h.now);
+ const st3=A4(h).regionStates();assert.ok(st3.explored>=st.explored+1);assert.ok(st3.completed>=st.completed+1);
  assert.equal(S4(h).METRICS.regions.label,'Regiones visitadas');
  // Rango reconocido antes (con regiones desbloqueadas) no se revoca aunque las visitadas no alcancen.
  const old=game();const os=old.g.state;rich(old);os.society={schema:1,rank:9,history:[{rank:9,at:T0,migrated:true}],rewards:{}};os.regionsVisited={};
@@ -225,7 +229,7 @@ test('MEC-05 · 13. sin multiplicadores duplicados',()=>{
  // Instantánea = valor vigente; la tasa de la expedición se aplica una vez.
  const snap=A5(h).snapshot(h.now);for(const [k,v] of Object.entries(snap.values))assert.equal(v,live(h,k));
  // Capas independientes en el desglose.
- const br=A5(h).breakdown('expedicion:botanica');deq(Object.keys(br.layers),['equipamiento','investigaciones','campamento','sociedad','museo']);
+ const br=A5(h).breakdown('expedicion:botanica');deq(Object.keys(br.layers).slice(0,5),['equipamiento','investigaciones','campamento','sociedad','museo']);// MEC-06 añade la capa «instrumentos»
  assert.equal(br.layers.museo.total,live(h,'expedicion:botanica'));
 });
 
@@ -356,10 +360,11 @@ test('MEC-05 · 23. MEC-01 a MEC-04 se conservan; versión y verificación',()=>
  const plain=make({now:T0,headless:true,noCamp:true});assert.equal(plain.x.AtlasMEC05Actions,undefined);
  const full=game({full:true});assert.equal(full.g.REGIONS.length,125);assert.equal(Object.keys(full.g.SPECIES).length,1000);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.equal(pkg.version,'5.6.5');assert.equal(rel.version,'5.6.5');assert.equal(rel.build,'MEC-05');assert.equal(rel.channel,'beta');
+ // MEC-06: la versión se compara con package.json (antes, el literal 5.6.5 / MEC-05).
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec05.test.cjs'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec05-museum.js'"));
- assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec05-museum.js?v=5.6.5'));
- assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '5.6.5'"));
+ assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec05-museum.js?v='+pkg.version));
+ assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '"+pkg.version+"'"));
  assert.ok(!fs.existsSync('android'));
 });

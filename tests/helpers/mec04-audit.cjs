@@ -52,6 +52,8 @@ function materialSources(h,id,ctx=null,seen=new Set()){
  for(const d of g.CARTOGRAPHY3400)if(d.piece===id&&d.routes&&(!d.sourceResearch||s.purchases[d.sourceResearch]>0)){const r=d.routes.find(x=>c.voyages.some(v=>v.id===x));if(r)out.push('capa cartográfica · '+r);}
  if(s.upgrades.shipyard&&Object.hasOwn(g.TRADE_MARKET,id))out.push('mercado · £'+g.TRADE_MARKET[id]);
  if(s.upgrades.specimenDrops){const sp=Object.entries(g.SPECIES_DROPS).find(([sid,item])=>item===id&&c.regions.some(r=>(r.species||[]).includes(sid)));if(sp)out.push('gabinete de especímenes · '+sp[0]);}
+ // Canal de materiales de MEC-01 (materiales animales nuevos): especies accesibles que los dejan.
+ if(s.upgrades.specimenDrops&&h.A?.speciesOf){const sp=h.A.speciesOf(id).find(sid=>c.regions.some(r=>(r.species||[]).includes(sid)));if(sp)out.push('canal de materiales · '+sp);}
  const rec=g.RECIPES[id];
  if(rec&&Object.keys(rec.requires||{}).every(m=>materialSources(h,m,c,new Set(seen)).length))out.push('receta');
  return out;
@@ -181,4 +183,52 @@ function run(h,{maxSteps=80}={}){
   prospections:av.prospections,preparations:av.preparations,commissions:av.commissions,
   blockedBy:e.ok||!e.next?[]:e.missing.map(m=>m.key+' '+m.have+'/'+m.need)};
 }
-module.exports={run,availability,caps,materialSources,publishable,commerceReach,ASSUMPTIONS};
+
+// MEC-06 · auditoría del Taller sobre el estado final de run(): artefactos, componentes, niveles,
+// estudios, demostraciones y dependencias circulares. Estructural (S4): las CANTIDADES de materiales
+// se asignan solo si el material tiene una fuente real; no es una simulación de duración.
+function workshopAudit(h,{exercise=true}={}){
+ const g=h.g,s=g.state,X6=h.x.AtlasMEC06,A6=h.x.AtlasMEC06Actions,C=h.x.AtlasCampMEC02,report={levels:[],artifacts:{},studies:{},demos:{},cycles:[],components:{},assumption:'S4: cantidades sintéticas solo para materiales con fuente real'};
+ h.window.confirm=()=>true;
+ for(let l=1;l<=5;l++){const st=C.stageOf('workshop',l);report.levels.push({level:l,cost:st.cost,items:Object.keys(st.cost||{}).filter(k=>!['money','knowledge'].includes(k))});}
+ const leaves=(id,seen=new Set())=>{if(seen.has(id))return {cycle:[...seen,id]};seen.add(id);const r=g.RECIPES[id];if(!r)return {leaves:[id]};let out=[];for(const m of Object.keys(r.requires||{})){const x=leaves(m,new Set(seen));if(x.cycle)return x;out=out.concat(x.leaves);}return {leaves:out};};
+ const level=id=>{const r=g.RECIPES[id];if(!r)return 1;return Math.max(Math.max(1,Number(r.minWorkshop)||1),...Object.keys(r.requires||{}).map(level));};
+ // Ninguna receta exige un artefacto ni un producto que solo dé un estudio con instrumento.
+ const artifactIds=new Set(Object.keys(X6.ARTIFACTS));
+ for(const [id,r] of Object.entries(g.RECIPES))for(const m of Object.keys(r.requires||{}))if(artifactIds.has(m))report.cycles.push(id+' exige el artefacto '+m);
+ for(const [id,c] of Object.entries(X6.COMPONENTS)){const l=leaves(id);report.components[id]={recipe:g.RECIPES[id]?.requires,minWorkshop:g.RECIPES[id]?.minWorkshop,leaves:l.leaves||null,sources:Object.fromEntries((l.leaves||[]).map(x=>[x,materialSources(h,x)])),cycle:l.cycle||null};if(l.cycle)report.cycles.push(l.cycle.join(' → '));}
+ for(const a of Object.values(X6.ARTIFACTS)){
+  const p=g.MUSEUM_COLLECTIONS.find(x=>x.id===a.id);let lv=a.minWorkshop;const missing=[];
+  for(const m of Object.keys(p.requires)){lv=Math.max(lv,level(m));const l=leaves(m);if(l.cycle)report.cycles.push(l.cycle.join(' → '));for(const x of l.leaves||[])if(!materialSources(h,x).length)missing.push(x);}
+  // Prohibido: el artefacto exige un componente que solo se obtiene con ese mismo artefacto.
+  for(const m of Object.keys(p.requires))if(!g.RECIPES[m]&&!materialSources(h,m).length&&Object.values(X6.STUDIES).some(t=>t.reward.items?.[m]&&Object.keys(t.instruments).some(k=>k.split('|').includes(a.id))))report.cycles.push(a.id+' exige '+m+', que solo produce su propio estudio');
+  report.artifacts[a.id]={effectiveWorkshop:lv,configured:a.minWorkshop,missing:[...new Set(missing)],ok:!missing.length&&lv<=5};
+ }
+ for(const t of Object.values(X6.STUDIES)){
+  const inst=Object.keys(t.instruments).map(k=>k.split('|')),missing=[];
+  for(const alts of inst)if(!alts.some(x=>report.artifacts[x]?.ok))missing.push(alts.join('|'));
+  for(const m of Object.keys(t.requires))if(!g.RECIPES[m]&&!materialSources(h,m).length)missing.push(m);
+  if(t.group){const ok=X6.ANIMAL_GROUPS[t.group.id].ids.filter(x=>materialSources(h,x).length);if(!ok.length)missing.push('grupo '+t.group.id);}
+  report.studies[t.id]={ok:!missing.length,missing,minWorkshop:t.minWorkshop};
+ }
+ for(const d of Object.values(X6.DEMOS))report.demos[d.id]={ok:!!report.artifacts[d.artifact]?.ok&&Object.keys(d.requires).every(m=>g.RECIPES[m]||materialSources(h,m).length)};
+ if(exercise){
+  // Ejercicio real del motor: fabricar, instalar, estudiar y demostrar con cantidades sintéticas.
+  s.money=1e12;s.knowledge=1e12;s.society.rank=Math.max(s.society.rank||1,20);
+  while(C.level(s,'workshop')<5)if(!C.upgrade(s,'workshop',h.now).ok)break;
+  const give=(id,qty=1)=>{const l=leaves(id);for(const x of l.leaves||[id])if(materialSources(h,x).length)s.inventory[x]=Math.max(s.inventory[x]||0,60);if(g.RECIPES[id])for(let i=0;(s.inventory[id]||0)<qty&&i<qty;i++)g.craftItem(id);};
+  report.built=[];
+  for(const a of Object.values(X6.ARTIFACTS)){const p=g.MUSEUM_COLLECTIONS.find(x=>x.id===a.id);for(const m of Object.keys(p.requires))give(m);if(A6.location(a.id)||A6.buildArtifact(a.id))report.built.push(a.id);}
+  for(const [id,place] of [['microscopio_compuesto','taller'],['telescopio_astronomico','taller'],['camara_oscura','taller'],['pila_volta','taller'],['galvanometro','taller'],['induccion_farad','taller']]){if(A6.location(id)!==place)A6.setLocation(id,place);}
+  report.ran=[];
+  const runAll=()=>{for(const t of Object.values(X6.STUDIES)){for(const [m,q] of Object.entries(t.requires))give(m,q);if(t.group)for(const x of X6.ANIMAL_GROUPS[t.group.id].ids)if(materialSources(h,x).length)s.inventory[x]=Math.max(s.inventory[x]||0,10);
+   for(const [ids,place] of Object.entries(t.instruments)){const first=ids.split('|')[0];if(!ids.split('|').some(x=>A6.location(x)===place)){const out=Object.entries(s.mec06.installed).find(([k,p])=>p===place&&!Object.keys(t.instruments).some(z=>z.split('|').includes(k)));if(A6.capacity(place)<=Object.values(s.mec06.installed).filter(p=>p===place).length&&out)A6.setLocation(out[0],'almacen');A6.setLocation(first,place);}}
+   if(!report.ran.includes(t.id)&&A6.runStudy(t.id,h.now))report.ran.push(t.id);}};
+  runAll();
+  for(const d of Object.values(X6.DEMOS)){if(A6.location(d.artifact)!=='museo')A6.setLocation(d.artifact,'museo');for(const [m,q] of Object.entries(d.requires))give(m,q);if(A6.runDemo(d.id,h.now))report.ran.push(d.id);}
+ }
+ report.notApplicable=Object.keys(X6.STUDIES).filter(id=>X6.STUDIES[id].reward.mapPiece&&!A6.mapTarget()).map(id=>id+': todos los mapas continentales ya están fabricados en el estado final');
+ report.ok=!report.cycles.length&&Object.values(report.artifacts).every(a=>a.ok)&&Object.values(report.studies).every(x=>x.ok)&&Object.values(report.demos).every(x=>x.ok);
+ return report;
+}
+module.exports={run,availability,caps,materialSources,publishable,commerceReach,workshopAudit,ASSUMPTIONS};

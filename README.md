@@ -2,11 +2,36 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.5 Beta — MEC-05**, canal beta (rama `mec-05/v5.6.5-beta`, sobre MEC-04, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.6 Beta — MEC-06**, canal beta (rama `mec-06/v5.6.6-beta`, sobre MEC-05, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.5 Beta — MEC-05 (en revisión)
+## V5.6.6 Beta — MEC-06 (en revisión)
+
+Los artefactos, componentes y materiales tienen funciones reales, conectadas con el Taller, el Museo y las expediciones:
+
+- **Artefactos**: los 15 de la beta y los 5 históricos se ubican en la vitrina, el Taller, el Campamento o el almacén, en una sola ubicación a la vez.
+- **Análisis de muestras**: usan los 27 materiales animales.
+- **Astronomía y cartografía**: cartas estelares y partes de mapa.
+- **Fotografía**: revelado de placas y cámara en expediciones, con procedencia real.
+- **Experimentos eléctricos** encadenados.
+- **Demostraciones** en el Museo, con espera.
+- **Atractivo de artefactos exhibidos**: ingreso nuevo y separado del zoológico.
+- **Instrumentos de expedición**: sus condiciones se fijan al zarpar.
+
+El Taller usa sus cinco niveles para los componentes, los artefactos y los estudios nuevos; las recetas históricas no cambian.
+
+Corrige MEC-05:
+
+- transacciones de exhibición;
+- estados reales de vitrina;
+- conocimiento de expediciones sin efecto de equipar a último momento, con recibo desglosado;
+- fichas con la geografía de MEC-04;
+- registro regional de avistamientos.
+
+Incluye una auditoría funcional del inventario en CSV. Configuración en `www/js/mec06-workshop.js`; informe en [docs/mec06](docs/mec06/README.md). Valores provisionales para BAL-01.
+
+## V5.6.5 Beta — MEC-05 (aprobada en auditoría externa)
 
 El Museo pasa a ser un sistema de especialización. Cada uno de los cinco gabinetes de coleccionables da beneficios propios en actividades del Atlas:
 
@@ -113,6 +138,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.6 Beta | MEC-06: artefactos, materiales, instrumentos y Taller | [docs/mec06](docs/mec06/README.md) |
 | 5.6.5 Beta | MEC-05: Museo evolutivo, gabinetes y exposiciones funcionales | [docs/mec05](docs/mec05/README.md) |
 | 5.6.4 Beta | MEC-04: Sociedad científica, rangos y desbloqueos | [docs/mec04](docs/mec04/README.md) |
 | 5.6.3 Beta | MEC-03: obtención híbrida de coleccionables e intercambio | [docs/mec03](docs/mec03/README.md) |

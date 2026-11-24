@@ -1,0 +1,587 @@
+{
+ "progresion": {
+  "rank": 20,
+  "regions": 125,
+  "totalRegions": 125,
+  "research": 57,
+  "pieces": 431,
+  "blockedBy": []
+ },
+ "taller": {
+  "levels": [
+   {
+    "level": 1,
+    "cost": {
+     "money": 0,
+     "knowledge": 0
+    },
+    "items": []
+   },
+   {
+    "level": 2,
+    "cost": {
+     "money": 500,
+     "knowledge": 300
+    },
+    "items": []
+   },
+   {
+    "level": 3,
+    "cost": {
+     "money": 2000,
+     "knowledge": 1200
+    },
+    "items": []
+   },
+   {
+    "level": 4,
+    "cost": {
+     "money": 8000,
+     "knowledge": 4000
+    },
+    "items": []
+   },
+   {
+    "level": 5,
+    "cost": {
+     "money": 25000,
+     "knowledge": 12000
+    },
+    "items": []
+   }
+  ],
+  "artifacts": {
+   "microscopio_compuesto": {
+    "effectiveWorkshop": 3,
+    "configured": 3,
+    "missing": [],
+    "ok": true
+   },
+   "telescopio_astronomico": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "globo_celeste": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "esfera_armilar": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "planetario_orrery": {
+    "effectiveWorkshop": 5,
+    "configured": 5,
+    "missing": [],
+    "ok": true
+   },
+   "automata_ave": {
+    "effectiveWorkshop": 3,
+    "configured": 3,
+    "missing": [],
+    "ok": true
+   },
+   "automata_escribiente": {
+    "effectiveWorkshop": 5,
+    "configured": 5,
+    "missing": [],
+    "ok": true
+   },
+   "estereoscopio_espejos": {
+    "effectiveWorkshop": 3,
+    "configured": 3,
+    "missing": [],
+    "ok": true
+   },
+   "camara_daguerrotipos": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "linterna_magica": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "camara_oscura": {
+    "effectiveWorkshop": 3,
+    "configured": 3,
+    "missing": [],
+    "ok": true
+   },
+   "maquina_electrostatica": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "pila_volta": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "galvanometro": {
+    "effectiveWorkshop": 4,
+    "configured": 4,
+    "missing": [],
+    "ok": true
+   },
+   "induccion_farad": {
+    "effectiveWorkshop": 5,
+    "configured": 5,
+    "missing": [],
+    "ok": true
+   },
+   "carta_historica": {
+    "effectiveWorkshop": 1,
+    "configured": 1,
+    "missing": [],
+    "ok": true
+   },
+   "medallon_viajero": {
+    "effectiveWorkshop": 1,
+    "configured": 1,
+    "missing": [],
+    "ok": true
+   },
+   "astrolabio_laton": {
+    "effectiveWorkshop": 1,
+    "configured": 1,
+    "missing": [],
+    "ok": true
+   },
+   "diario_explorador": {
+    "effectiveWorkshop": 1,
+    "configured": 1,
+    "missing": [],
+    "ok": true
+   },
+   "globo_cartografico": {
+    "effectiveWorkshop": 1,
+    "configured": 1,
+    "missing": [],
+    "ok": true
+   }
+  },
+  "studies": {
+   "analisis-plumas": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 3
+   },
+   "analisis-pelo": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 3
+   },
+   "analisis-escamas": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 3
+   },
+   "estudio-osteologico": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 2
+   },
+   "estudio-rastros": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 2
+   },
+   "copia-informes": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 5
+   },
+   "observacion-astronomica": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 4
+   },
+   "calculo-derrotas": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 4
+   },
+   "registro-paisajistico": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 3
+   },
+   "revelado-placas": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 4
+   },
+   "experimento-electrostatico": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 4
+   },
+   "experimento-pila": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 4
+   },
+   "medicion-galvanica": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 4
+   },
+   "induccion": {
+    "ok": true,
+    "missing": [],
+    "minWorkshop": 5
+   }
+  },
+  "demos": {
+   "demo-planetario": {
+    "ok": true
+   },
+   "demo-automata": {
+    "ok": true
+   },
+   "demo-linterna": {
+    "ok": true
+   },
+   "demo-electrostatica": {
+    "ok": true
+   }
+  },
+  "cycles": [],
+  "components": {
+   "engranaje": {
+    "recipe": {
+     "brass_shard": 2
+    },
+    "minWorkshop": 2,
+    "leaves": [
+     "brass_shard"
+    ],
+    "sources": {
+     "brass_shard": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £200"
+     ]
+    },
+    "cycle": null
+   },
+   "espejo": {
+    "recipe": {
+     "polished_lens": 1,
+     "brass_shard": 1
+    },
+    "minWorkshop": 3,
+    "leaves": [
+     "polished_lens",
+     "brass_shard"
+    ],
+    "sources": {
+     "polished_lens": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £160"
+     ],
+     "brass_shard": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £200"
+     ]
+    },
+    "cycle": null
+   },
+   "carta_estelar": {
+    "recipe": {
+     "parchment_scrap": 1,
+     "old_ink": 1
+    },
+    "minWorkshop": 3,
+    "leaves": [
+     "parchment_scrap",
+     "old_ink"
+    ],
+    "sources": {
+     "parchment_scrap": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £45"
+     ],
+     "old_ink": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £180"
+     ]
+    },
+    "cycle": null
+   },
+   "placa_daguerrotipo": {
+    "recipe": {
+     "brass_shard": 1,
+     "polished_lens": 1
+    },
+    "minWorkshop": 4,
+    "leaves": [
+     "brass_shard",
+     "polished_lens"
+    ],
+    "sources": {
+     "brass_shard": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £200"
+     ],
+     "polished_lens": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £160"
+     ]
+    },
+    "cycle": null
+   },
+   "modulo_luminoso": {
+    "recipe": {
+     "polished_lens": 1,
+     "brass_shard": 1,
+     "carved_wood": 1
+    },
+    "minWorkshop": 4,
+    "leaves": [
+     "polished_lens",
+     "brass_shard",
+     "carved_wood"
+    ],
+    "sources": {
+     "polished_lens": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £160"
+     ],
+     "brass_shard": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £200"
+     ],
+     "carved_wood": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £80"
+     ]
+    },
+    "cycle": null
+   },
+   "componente_electrico": {
+    "recipe": {
+     "brass_shard": 2,
+     "river_pebble": 1
+    },
+    "minWorkshop": 4,
+    "leaves": [
+     "brass_shard",
+     "river_pebble"
+    ],
+    "sources": {
+     "brass_shard": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £200"
+     ],
+     "river_pebble": [
+      "botín · coast",
+      "botín · north",
+      "botín · alps",
+      "botín · carpathians",
+      "botín · balkans",
+      "botín · ethiopia_survey",
+      "botín · namib_survey",
+      "botín · atlantic_survey",
+      "botín · mesoamerica_survey",
+      "botín · asia_survey",
+      "botín · andes_survey",
+      "botín · pacific_survey",
+      "botín · polar_survey",
+      "mercado · £30"
+     ]
+    },
+    "cycle": null
+   }
+  },
+  "assumption": "S4: cantidades sintéticas solo para materiales con fuente real",
+  "built": [
+   "microscopio_compuesto",
+   "telescopio_astronomico",
+   "globo_celeste",
+   "esfera_armilar",
+   "planetario_orrery",
+   "automata_ave",
+   "automata_escribiente",
+   "estereoscopio_espejos",
+   "camara_daguerrotipos",
+   "linterna_magica",
+   "camara_oscura",
+   "maquina_electrostatica",
+   "pila_volta",
+   "galvanometro",
+   "induccion_farad",
+   "carta_historica",
+   "medallon_viajero",
+   "astrolabio_laton",
+   "diario_explorador",
+   "globo_cartografico"
+  ],
+  "ran": [
+   "analisis-plumas",
+   "analisis-pelo",
+   "analisis-escamas",
+   "estudio-osteologico",
+   "estudio-rastros",
+   "copia-informes",
+   "observacion-astronomica",
+   "registro-paisajistico",
+   "revelado-placas",
+   "experimento-electrostatico",
+   "experimento-pila",
+   "medicion-galvanica",
+   "induccion",
+   "demo-planetario",
+   "demo-automata",
+   "demo-linterna",
+   "demo-electrostatica"
+  ],
+  "notApplicable": [
+   "calculo-derrotas: todos los mapas continentales ya están fabricados en el estado final"
+  ],
+  "ok": true
+ }
+}

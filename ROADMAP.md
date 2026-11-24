@@ -1,6 +1,6 @@
-# El Gran Atlas — hoja de ruta (24 de noviembre de 2026, MEC-05)
+# El Gran Atlas — hoja de ruta (24 de noviembre de 2026, MEC-06)
 
-Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en auditoría externa. **V5.6.2 Beta — MEC-02** aprobada. **V5.6.3 Beta — MEC-03** auditada; sus observaciones se corrigen en MEC-04. **V5.6.4 Beta — MEC-04** aprobada. **V5.6.5 Beta — MEC-05** en revisión en la rama `mec-05/v5.6.5-beta`, sin fusionar a `main`; no se avanza a MEC-06 sin auditoría.
+Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en auditoría externa. **V5.6.2 Beta — MEC-02** aprobada. **V5.6.3 Beta — MEC-03** auditada; sus observaciones se corrigen en MEC-04. **V5.6.4 Beta — MEC-04** aprobada. **V5.6.5 Beta — MEC-05** aprobada. **V5.6.6 Beta — MEC-06** en revisión en la rama `mec-06/v5.6.6-beta`, sin fusionar a `main`; no se avanza a MEC-07 sin auditoría.
 
 ## Completado
 
@@ -17,7 +17,8 @@ Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en 
 | Auditoría y arte | 5.0.1 – 5.0.12 | Auditoría global, rendimiento de arranque y repintado de variantes pigmentarias |
 | Legendarios, relictos y guía | 5.1.2 – 5.2.0 | 30 legendarios, 20 relictos y Guía del naturalista |
 | Iconografía | 5.3.0 – 5.4.2 | 63 iconos y 16 motivos de bioma, 64 objetos ilustrados más, hexágonos por bioma e interfaz sin emojis |
-| Museo evolutivo (MEC-05, pendiente de auditoría) | 5.6.5 Beta | Gabinetes con beneficios reales y distintos, exposiciones temáticas por colección, niveles IV–V con rango, ingreso desglosado; correcciones de MEC-04 (investigaciones, regiones visitadas, auditoría con fuentes reales) | [docs/mec05](docs/mec05/README.md) |
+| Artefactos, instrumentos y Taller (MEC-06, pendiente de auditoría) | 5.6.6 Beta | Funciones reales para 20 artefactos, 6 componentes y 27 materiales animales; estudios, fotografía, demostraciones y atractivo; ubicación única; Taller por niveles; auditoría de inventario; correcciones de MEC-05 | [docs/mec06](docs/mec06/README.md) |
+| Museo evolutivo (MEC-05, aprobada) | 5.6.5 Beta | Gabinetes con beneficios reales y distintos, exposiciones temáticas por colección, niveles IV–V con rango, ingreso desglosado; correcciones de MEC-04 (investigaciones, regiones visitadas, auditoría con fuentes reales) | [docs/mec05](docs/mec05/README.md) |
 | Sociedad científica y rangos (MEC-04, aprobada) | 5.6.4 Beta | 20 rangos con ascenso explícito y permanente, desbloqueos de Campamento IV–V, comercio, encargos y financiación; correcciones de MEC-03; origen, hallazgo y compra separados; destinos y yacimientos en Asia, Sudamérica, Oceanía y Polos | [docs/mec04](docs/mec04/README.md) |
 | Obtención de coleccionables (MEC-03, auditada) | 5.6.3 Beta | Drop universal retirado; fuentes por pieza en campo, expediciones, comercio, excavaciones, prospecciones, Taller y encargos; intercambio y protección de piezas; transacciones atómicas. [Informe MEC-03](docs/mec03/README.md) |
 | Campamento evolutivo (MEC-02, aprobada) | 5.6.2 Beta | 5 instalaciones × 5 niveles con efectos reales en capacidades y funciones, configuración central, ficha de instalación, migración en nivel I con derechos adquiridos y canal beta explícito. [Informe MEC-02](docs/mec02/README.md) |
@@ -33,7 +34,7 @@ Estado de partida: **V5.5.1** publicada. **V5.6.1 Beta — MEC-01** aprobada en 
 | Arte pigmentario | Siguiente lote propuesto: 20 animales con variante albina o melánica mejorable | [Próximo lote ART-08](docs/arte-v5012/proximo-lote.md) |
 | Coleccionables | 431 piezas en 32 colecciones integradas como beta (V5.6.0) y consolidadas en MEC-01. Pendiente: Filatelia, arte definitivo, descripciones y balance de tasas | [Auditoría de integración](docs/v520/auditoria.md), [MEC-01](docs/mec01/README.md) |
 | Revisión de coherencia de coleccionables | MEC-04 corrigió el origen de 110 piezas «Mundial» y añadió destinos y yacimientos fuera de Europa. Quedan 21 «Mundial» con motivo y las observaciones de MEC-03 para revisión externa; una etapa geográfica propia antes de MEC-09 si hiciera falta | [docs/mec04](docs/mec04/README.md) |
-| Balance de mecánicas (BAL-01) | Tasas, precios e intercambio de coleccionables (MEC-03); costos, capacidades y tiempos del Campamento (MEC-02); umbrales, recompensas y financiación de los 20 rangos (MEC-04); valores por punto, topes, hitos temáticos y rangos del Museo (MEC-05). Todo es provisional | [docs/mec05](docs/mec05/README.md) |
+| Balance de mecánicas (BAL-01) | Tasas, precios e intercambio de coleccionables (MEC-03); costos, capacidades y tiempos del Campamento (MEC-02); umbrales, recompensas y financiación de los 20 rangos (MEC-04); valores por punto, topes, hitos temáticos y rangos del Museo (MEC-05); recompensas y esperas de estudios y demostraciones, atractivo, fotografía y niveles del Taller (MEC-06). Todo es provisional | [docs/mec05](docs/mec05/README.md) |
 | Iconos restantes | Motivo `comparativo` (sin pantalla donde mostrarlo todavía) y arte de legendarios y relictos | [docs/v540](docs/v540/README.md) |
 | Arte de los niveles del Campamento | Los niveles ya funcionan (MEC-02; la Tienda quedó sin niveles productivos). Faltan las 25 ilustraciones `<instalación>-1` a `<instalación>-5`, cuyas ranuras están en `AtlasCampMEC02.ART` | [MEC-02](docs/mec02/README.md#5-interfaz-del-campamento) |
 

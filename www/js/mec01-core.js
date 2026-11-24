@@ -237,7 +237,8 @@ function consume(state,catalog,id,qty=1){
 const INCOME_SOURCES=Object.freeze({
  descubrimientos:'Descubrimientos',publicaciones:'Publicaciones',subvenciones:'Subvenciones',
  canjeNotas:'Canje de notas de campo',museo:'Museo',expediciones:'Expediciones',comercio:'Comercio',
- encargos:'Encargos y misiones',taller:'Taller',recompensas:'Recompensas',otros:'Otras fuentes',
+ encargos:'Encargos y misiones',taller:'Taller',recompensas:'Recompensas',
+ artefactos:'Artefactos del Museo (MEC-06)',demostraciones:'Demostraciones científicas (MEC-06)',otros:'Otras fuentes',
  sinDesglose:'Antes de MEC-01 (sin desglose)'
 });
 function normalizeLedger(state,now=Date.now(),options={}){

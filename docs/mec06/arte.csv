@@ -1,0 +1,74 @@
+﻿tipo;id;nombre;referencia;ilustracion_existente;necesita_arte_nuevo
+artefacto beta;microscopio_compuesto;Microscopio compuesto;artifact-microscopio-compuesto;no;sí
+artefacto beta;telescopio_astronomico;Telescopio refractor;artifact-telescopio-astronomico;no;sí
+artefacto beta;globo_celeste;Globo celeste;artifact-globo-celeste;no;sí
+artefacto beta;esfera_armilar;Esfera armilar;artifact-esfera-armilar;no;sí
+artefacto beta;planetario_orrery;Planetario mecánico;artifact-planetario-orrery;no;sí
+artefacto beta;automata_ave;Autómata cantor;artifact-automata-ave;no;sí
+artefacto beta;automata_escribiente;Autómata escribiente;artifact-automata-escribiente;no;sí
+artefacto beta;estereoscopio_espejos;Estereoscopio de espejos;artifact-estereoscopio-espejos;no;sí
+artefacto beta;camara_daguerrotipos;Cámara daguerrotípica;artifact-camara-daguerrotipos;no;sí
+artefacto beta;linterna_magica;Linterna mágica;artifact-linterna-magica;no;sí
+artefacto beta;camara_oscura;Cámara oscura;artifact-camara-oscura;no;sí
+artefacto beta;maquina_electrostatica;Máquina electrostática;artifact-maquina-electrostatica;no;sí
+artefacto beta;pila_volta;Pila de Volta;artifact-pila-volta;no;sí
+artefacto beta;galvanometro;Galvanómetro;artifact-galvanometro;no;sí
+artefacto beta;induccion_farad;Demostrador de inducción;artifact-induccion-farad;no;sí
+artefacto histórico;carta_historica;Carta cartográfica histórica;artifact-carta-historica;no;sí
+artefacto histórico;medallon_viajero;Medallón de expedición;artifact-medallon-viajero;no;sí
+artefacto histórico;astrolabio_laton;Astrolabio de latón;artifact-astrolabio-laton;no;sí
+artefacto histórico;diario_explorador;Diario de explorador;artifact-diario-explorador;no;sí
+artefacto histórico;globo_cartografico;Globo cartográfico antiguo;artifact-globo-cartografico;no;sí
+componente;engranaje;Engranaje de latón;component-engranaje;no;sí
+componente;espejo;Espejo pulido;component-espejo;no;sí
+componente;carta_estelar;Carta estelar;component-carta-estelar;no;sí
+componente;placa_daguerrotipo;Placa de daguerrotipo;component-placa;no;sí
+componente;modulo_luminoso;Módulo luminoso;component-modulo-luminoso;no;sí
+componente;componente_electrico;Componente eléctrico;component-electrico;no;sí
+material animal;MAT-N01;Pluma tropical;item-MAT-N01;no;sí
+material animal;MAT-N02;Plumón;item-MAT-N02;no;sí
+material animal;MAT-N03;Pluma caudal;item-MAT-N03;no;sí
+material animal;MAT-N04;Pluma marina;item-MAT-N04;no;sí
+material animal;MAT-N05;Pluma facial;item-MAT-N05;no;sí
+material animal;owl_feather;Pluma de rapaz;item-owl_feather;sí;no (reutilizable)
+material animal;heron_feather;Pluma de garza;item-heron_feather;sí;no (reutilizable)
+material animal;MAT-N08;Pluma iridiscente;item-MAT-N08;no;sí
+material animal;MAT-N09;Pelo de guarda;item-MAT-N09;no;sí
+material animal;MAT-N10;Lana desprendida;item-MAT-N10;no;sí
+material animal;MAT-N11;Crin caída;item-MAT-N11;no;sí
+material animal;MAT-N12;Muda estacional;item-MAT-N12;no;sí
+material animal;otter_whisker;Bigote de nutria;item-otter_whisker;sí;no (reutilizable)
+material animal;MAT-N14;Muda de serpiente;item-MAT-N14;no;sí
+material animal;MAT-N15;Muda escamosa;item-MAT-N15;no;sí
+material animal;MAT-N16;Escudo de caparazón;item-MAT-N16;no;sí
+material animal;beaver_tail_scale;Escama de cola de castor;item-beaver_tail_scale;sí;no (reutilizable)
+material animal;antler_fragment;Fragmento de cornamenta;item-antler_fragment;sí;no (reutilizable)
+material animal;MAT-N18;Púas desprendidas;item-MAT-N18;no;sí
+material animal;wolf_tooth;Diente de lobo;item-wolf_tooth;sí;no (reutilizable)
+material animal;boar_tusk;Colmillo de jabalí;item-boar_tusk;sí;no (reutilizable)
+material animal;MAT-N19;Cascarón moteado;item-MAT-N19;no;sí
+material animal;MAT-N21;Fragmento de sepión;item-MAT-N21;no;sí
+material animal;MAT-N22;Huella en arcilla;item-MAT-N22;no;sí
+material animal;animal_trace;Muestra de huellas;item-animal_trace;sí;no (reutilizable)
+material animal;MAT-N24;Marca de alimentación;item-MAT-N24;no;sí
+material animal;MAT-N20;Egagrópila;item-MAT-N20;no;sí
+instrumento instalado;installed-taller;installed-taller;installed-taller;no;sí
+instrumento instalado;installed-campamento;installed-campamento;installed-campamento;no;sí
+estudio científico;analisis-plumas;Análisis microscópico de plumas;study-analisis-plumas;no;sí
+estudio científico;analisis-pelo;Clasificación de pelo y mudas;study-analisis-pelo;no;sí
+estudio científico;analisis-escamas;Estudio de escamas y caparazones;study-analisis-escamas;no;sí
+estudio científico;estudio-osteologico;Estudio osteológico y de estructuras calcáreas;study-estudio-osteologico;no;sí
+estudio científico;estudio-rastros;Análisis de rastros y señales;study-estudio-rastros;no;sí
+estudio científico;copia-informes;Copia mecánica de informes;study-copia-informes;no;sí
+estudio científico;observacion-astronomica;Observación astronómica;study-observacion-astronomica;no;sí
+estudio científico;calculo-derrotas;Cálculo de derrotas y cartografía;study-calculo-derrotas;no;sí
+estudio científico;registro-paisajistico;Registro paisajístico con cámara oscura;study-registro-paisajistico;no;sí
+estudio científico;revelado-placas;Revelado de placas daguerrotípicas;study-revelado-placas;no;sí
+estudio científico;experimento-electrostatico;Experimento electrostático;study-experimento-electrostatico;no;sí
+estudio científico;experimento-pila;Experimento con la pila voltaica;study-experimento-pila;no;sí
+estudio científico;medicion-galvanica;Medición galvánica;study-medicion-galvanica;no;sí
+estudio científico;induccion;Experimento de inducción;study-induccion;no;sí
+demostración;demo-planetario;Demostración del planetario mecánico;demo-demo-planetario;no;sí
+demostración;demo-automata;Exhibición del autómata cantor;demo-demo-automata;no;sí
+demostración;demo-linterna;Conferencia con linterna mágica;demo-demo-linterna;no;sí
+demostración;demo-electrostatica;Demostración electrostática;demo-demo-electrostatica;no;sí

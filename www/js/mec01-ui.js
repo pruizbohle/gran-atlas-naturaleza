@@ -23,7 +23,8 @@ function collections(m){
 }
 function detail(m){
  if(!m.discovered)return `<h3 id="mec01-dialog-title">Pieza sin descubrir</h3><p>Pertenece a la colección <b>${esc(m.collection)}</b> (${esc(m.cabinet)}).</p><p class="small">Aún no la has encontrado. Sus datos aparecerán al descubrirla.</p>${m.hint?`<p class="small">${esc(m.hint)}</p>`:''}`;
- const rows=[['Colección',m.collection],['Gabinete del Museo',m.cabinet],['Rareza',m.rarity],['Procedencia',m.continent||'Sin registrar']];
+ // MEC-06: origen, lugar de hallazgo y lugar de compra (geografía de MEC-04) cuando el modelo los trae.
+ const rows=[['Colección',m.collection],['Gabinete del Museo',m.cabinet],['Rareza',m.rarity],...(m.origin?[['Origen',m.origin],['Se encuentra en',m.findIn||'—'],['Se compra en',m.buyIn||'No se vende']]:[['Procedencia',m.continent||'Sin registrar']])];
  return `<div class="mec01-dialog-art" aria-hidden="true">${m.art||''}</div><h3 id="mec01-dialog-title">${esc(m.name)} <span class="mec01-beta">BETA</span></h3><p>${esc(m.description)}</p><dl class="mec01-dl">${rows.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl><h4>Existencias</h4><dl class="mec01-dl"><dt>En inventario</dt><dd>${fmt(m.owned)}</dd><dt>En exhibición</dt><dd>${fmt(m.exhibited)}</dd><dt>Disponible</dt><dd>${fmt(m.available)}</dd><dt>Disponible para intercambios</dt><dd>${fmt(m.tradable)}${m.protected?' (1 protegida)':''}</dd><dt>Obtenidas en total</dt><dd>${fmt(m.obtained)}</dd></dl><h4>Fuentes</h4><ul class="small">${m.sources.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>Sin fuente registrada.</li>'}</ul>${m.registry?.length?`<h4>Registro de procedencia</h4><ul class="small">${m.registry.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`:''}<p class="small">${esc(m.firstSeen)}</p>`;
 }
 
