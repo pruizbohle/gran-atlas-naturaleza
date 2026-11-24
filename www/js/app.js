@@ -2838,7 +2838,8 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   if(first){earnMoney(15,'descubrimientos');pushLog(`Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
   const note=[];
   if(Math.random()<0.12){state.feedObs[chosen]=feed(chosen)+1;note.push('comiendo');}
-  const betaRun=globalThis.AtlasBeta560Actions?.run?.(chosen);if(betaRun)note.push(betaRun);
+  // MEC-07: récords naturales y conductas (una evaluación por hito elegible y especie observada).
+  note.push(...naturalRecordsMEC07(chosen,{source,at,manual,automatic,relic:relicConditions}));
   const sexObservation=recordSexObservation(chosen,manual);
   if(sexObservation){
    const sexLabel=sexObservation.sex==='male'?'macho':'hembra';
@@ -4660,6 +4661,8 @@ let museumMEC05=null;
 // MEC-06 · registro de actividad regional (avistamientos por región) e ingreso de artefactos exhibidos.
 // Los instala el bloque MEC-06; por defecto no hacen nada.
 function regionalRecordMEC06(regionId,id,at){}
+// MEC-07 · récords naturales por especie observada. Por defecto, el hito histórico de MEC-01.
+function naturalRecordsMEC07(id,ctx){const r=globalThis.AtlasBeta560Actions?.run?.(id);return r?[r]:[];}
 function artifactIncomeMEC06(elapsedMs){return 0;}
 // MEC-03 · exploración ambiental: una tirada por búsqueda (la instala el bloque MEC-03).
 function mec03AmbientFinds(manual){return [];}
@@ -9083,15 +9086,19 @@ if(globalThis.AtlasMuseumCuration3380){
   normalizeMEC01(state);
   // Interfaz: resumen del Museo (Exposiciones) y panel de gabinetes (sala Gabinetes/Muestras).
   const overviewHtml=()=>{
-   const m=model(),inc=income(),c=expandCheck(),lv=levelOf(state.museum.wing),used=Object.keys(state.museum.exhibits||{}).length;
+   const m=model(),inc=(museumMEC05?.income||income)(),c=expandCheck(),lv=levelOf(state.museum.wing),used=Object.keys(state.museum.exhibits||{}).length;
    const active=Object.values(m.activities).filter(a=>a.total>0);
    return '<section class="mec05-overview card stack" data-art="'+esc5(X5.LEVELS[lv.level]?.art)+'"><h3 class="section">Museo · nivel '+lv.level+' · '+esc5(lv.name.replace(' (BETA)',''))+'</h3>'+
     '<div class="mec02-row"><span>Capacidad zoológica</span><strong>'+used+'/'+museumCapacity()+'</strong></div>'+
     '<div class="mec02-row"><span>Capacidad por gabinete</span><strong>'+Object.values(m.cabinets).map(b=>esc5(b.name)+' '+b.used+'/'+b.capacity).join(' · ')+'</strong></div>'+
-    '<details><summary>Ingreso pasivo · £'+inc.total.toFixed(2)+'/s</summary><ul class="small">'+
-     '<li>Ingreso base de las muestras: £'+inc.base.toFixed(2)+'/s</li>'+inc.existing.map(p=>'<li>'+esc5(p.label)+': +'+pct(p.value)+'</li>').join('')+
-     '<li>Bonificaciones nuevas de MEC-05 sobre el ingreso: ninguna</li><li>Total: £'+inc.total.toFixed(2)+'/s · £'+Math.round(inc.perHour).toLocaleString('es-ES')+'/h</li>'+
-     '<li>Acumulación offline: hasta '+inc.offlineHours+' h (£'+Math.round(inc.offlineMax).toLocaleString('es-ES')+')</li></ul></details>'+
+    (()=>{const art=inc.artifacts||0,comb=inc.combined??inc.total,h=inc.offlineHours,money=v=>'£'+Math.round(v).toLocaleString('es-ES');
+     const demos=(inc.demos||[]);
+     return '<details><summary>Ingreso pasivo · £'+comb.toFixed(2)+'/s (zoológico y artefactos)</summary><ul class="small">'+
+     '<li><b>Zoológico</b>: base de las muestras £'+inc.base.toFixed(2)+'/s</li>'+inc.existing.map(p=>'<li>Bonificación histórica · '+esc5(p.label)+': +'+pct(p.value)+'</li>').join('')+
+     '<li>Ingreso zoológico: £'+inc.total.toFixed(2)+'/s</li><li><b>Artefactos exhibidos</b> (atractivo): £'+art.toFixed(2)+'/s</li>'+
+     '<li>Combinado: £'+comb.toFixed(2)+'/s · '+money(comb*3600)+'/h</li><li>Proyección offline (máx. '+h+' h): '+money(comb*h*3600)+' (zoológico '+money(inc.total*h*3600)+' · artefactos '+money(art*h*3600)+')</li>'+
+     '<li class="small">Las demostraciones son ingresos activos y no se cuentan por segundo.</li></ul></details>'+
+     (demos.length?'<details class="mec05-demos"><summary>Demostraciones científicas · '+demos.filter(d=>d.ok).length+' disponibles</summary>'+demos.map(d=>'<div class="mec02-row"><span>'+esc5(d.label)+(d.ok?'':' · <span class="small">'+esc5((d.reasons||[]).join(' · '))+'</span>')+'</span><button type="button" class="btn alt" data-action="mec06-demo" data-id="'+esc5(d.id)+'"'+(d.ok?'':' disabled')+'>Presentar</button></div>').join('')+'</details>':'');})()+
     '<details><summary>Bonificaciones activas · '+active.length+'</summary><ul class="small">'+(active.map(a=>'<li>'+esc5(a.label)+': +'+pct(a.total)+(a.capped?' (límite)':'')+'</li>').join('')||'<li>Expón piezas en los gabinetes para activarlas.</li>')+'</ul></details>'+
     '<details><summary>Exposiciones temáticas activas · '+m.themes.length+'</summary><ul class="small">'+(m.themes.map(t=>'<li>'+esc5(t.collection)+' · '+esc5(t.label)+' ('+t.shown+'/'+t.size+')</li>').join('')||'<li>Ninguna todavía.</li>')+'</ul></details>'+
     (c.next?'<div class="req"><strong>Próxima ampliación: '+esc5(c.next.name.replace(' (BETA)',''))+'</strong><div class="small">£'+c.next.cost.toLocaleString('es-ES')+' · '+c.next.prestige+' prestigio'+(c.rank?' · rango '+c.rank+' ('+esc5(S4?.RANKS[c.rank-1]?.name)+')':'')+'</div>'+(c.reasons.length?'<div class="small">Pendiente: '+c.reasons.map(esc5).join(' · ')+'</div>':'<div class="small">Requisitos cumplidos.</div>')+'</div>':'<div class="badge">Nivel máximo del Museo</div>')+
@@ -9230,7 +9237,8 @@ if(globalThis.AtlasMuseumCuration3380){
   // 6. Estudios científicos (motores: análisis, astronomía/cartografía, fotografía, física).
   const groupPlan=(g,qty)=>{const ids=[...X6.ANIMAL_GROUPS[g].ids].sort((a,b)=>(state.inventory[b]||0)-(state.inventory[a]||0)||a.localeCompare(b)),out={};let left=qty;
    for(const id of ids){const take=Math.min(left,state.inventory[id]||0);if(take>0){out[id]=take;left-=take;}if(!left)break;}return left?null:out;};
-  const mapTarget=()=>CARTOGRAPHY3400.find(d=>!(state.inventory[d.map]>0)&&(!d.sourceResearch||state.purchases?.[d.sourceResearch]>0))||null;
+  // MEC-07: el acceso cartográfico efectivo lo decide mapAccess (bloque MEC-07) si está presente.
+  const mapTarget=()=>CARTOGRAPHY3400.find(d=>globalThis.AtlasMapAccessMEC07?globalThis.AtlasMapAccessMEC07(d).ok:!(state.inventory[d.map]>0)&&(!d.sourceResearch||state.purchases?.[d.sourceResearch]>0))||null;
   const photoPool=()=>{const conts=new Set(REGIONS.filter(r=>state.regionUnlocked?.[r.id]).map(r=>r.continent));
    return Object.values(K3()?.pieces||{}).filter(p=>p.collection==='Imágenes daguerrotipadas'&&(p.findIn||p.continents||[]).some(c=>conts.has(c))).map(p=>p.id);};
   const stereo=()=>location('estereoscopio_espejos')==='taller'?X6.MODIFIERS.find(m=>m.id==='estereo-foto').value:0;
@@ -9248,7 +9256,7 @@ if(globalThis.AtlasMuseumCuration3380){
   };
   const runStudy=(sid,now=Date.now(),random=Math.random)=>{
    const c=studyCheck(sid,now);if(!c||!c.ok)return false;const t=X6.STUDIES[sid];
-   const rw=[t.reward.knowledge?t.reward.knowledge+' conocimiento':'',t.reward.money?'£'+t.reward.money:'',...Object.entries(t.reward.items||{}).map(([k,n])=>name(k)+' ×'+n),t.reward.mapPiece?'1 parte de mapa':'',t.reward.photo?Math.round(c.chance*100)+' % de un daguerrotipo de un territorio accesible':''].filter(Boolean).join(', ');
+   const rw=[t.reward.knowledge?t.reward.knowledge+' conocimiento':'',t.reward.money?'£'+t.reward.money:'',...Object.entries(t.reward.items||{}).map(([k,n])=>name(k)+' ×'+n),t.reward.mapPiece?'1 '+(mapTarget()?name(mapTarget().piece):'parte de mapa'):'',t.reward.photo?Math.round(c.chance*100)+' % de un daguerrotipo de un territorio accesible':''].filter(Boolean).join(', ');
    if(!window.confirm(t.label+'\nSe consumen: '+(Object.keys(c.consume).length?tradeMaterials3300(c.consume):'nada')+'.\nRecompensa: '+rw+'. ¿Confirmar?'))return false;
    return tradeTransaction3300(()=>{
     for(const [k,v] of Object.entries(c.consume)){if((state.inventory[k]||0)<v)return false;state.inventory[k]-=v;}
@@ -9284,13 +9292,30 @@ if(globalThis.AtlasMuseumCuration3380){
   const attractionRate=()=>Math.min(X6.ATTRACTION.cap,Object.values(X6.ARTIFACTS).reduce((t,a)=>t+(location(a.id)==='museo'?a.attraction:0),0));
   artifactIncomeMEC06=function(elapsed){const r=attractionRate(),ms=Math.min(MAX_OFFLINE_MS,Math.max(0,Number(elapsed)||0));return r>0&&ms>0?earnMoney(r*ms/1000,'artefactos'):0;};
   // 9. Instrumentos de expedición: condiciones fijadas al zarpar (job.mec06) en la misma transacción.
+  // MEC-07 (corrección 3.3): la cámara es voluntaria. Política en state.mec06.camera: «preguntar»
+  // (por defecto), «siempre» o «nunca». Solo se ofrece, y solo consume una placa, si hay daguerrotipos
+  // posibles para los continentes del destino. La decisión se toma antes de zarpar y se fija en
+  // job.mec06.camera; vale igual para expediciones normales, ampliadas y especializadas (todas pasan por aquí).
+  const destinationPool=voyageId=>{const conts=new Set(K3()?.voyageDestinations?.[voyageId]?.continents||[]);
+   return Object.values(K3()?.pieces||{}).filter(p=>p.collection==='Imágenes daguerrotipadas'&&(p.findIn||[]).some(c=>conts.has(c))).map(p=>p.id);};
+  const cameraPlan=voyageId=>{
+   const policy=['preguntar','siempre','nunca'].includes(state.mec06?.camera)?state.mec06.camera:'preguntar';
+   const installed=location('camara_daguerrotipos')==='campamento',plates=state.inventory?.placa_daguerrotipo||0,pool=installed?destinationPool(voyageId):[];
+   const reason=!installed?'cámara no instalada':!plates?'sin placas':!pool.length?'sin imágenes compatibles con el destino':policy==='nunca'?'decisión del jugador (nunca)':null;
+   if(reason)return {used:false,reason};
+   const mod=X6.MODIFIERS.find(x=>x.id==='camara-foto'),chance=Math.min(mod.cap,mod.value+stereo());
+   const conts=[...new Set(K3().voyageDestinations[voyageId].continents)].join(', ');
+   const yes=policy==='siempre'||window.confirm('Cámara de daguerrotipos (Campamento)\nConsume: 1 Placa de daguerrotipo (tienes '+plates+').\nEfecto: '+Math.round(chance*100)+' % de traer una imagen de '+conts+' ('+pool.length+' posibles).\n¿Usar la cámara en esta expedición? Cancelar zarpa sin cámara.');
+   return yes?{used:true,chance,stereo:stereo()>0,pool:pool.length}:{used:false,reason:'decisión del jugador'};
+  };
   const sailBefore606=sail;
   sail=function(id){
+   const cam=cameraPlan(id);
    return tradeTransaction3300(()=>{const n=state.voyages.length;if(!sailBefore606(id)||state.voyages.length<=n)return false;
     const job=state.voyages[state.voyages.length-1],start=Number.isFinite(job.startedAt)?job.startedAt:Date.now(),m={schema:1,recordedAt:start,instruments:{}};
     if(location('globo_celeste')==='campamento'){const f=X6.MODIFIERS.find(x=>x.id==='globo-duracion').value;job.endAt=start+Math.max(30000,Math.round((job.endAt-start)*(1+f)));m.instruments.globo_celeste={duration:f};}
-    if(location('camara_daguerrotipos')==='campamento'&&(state.inventory.placa_daguerrotipo||0)>0){state.inventory.placa_daguerrotipo-=1;
-     const base=X6.MODIFIERS.find(x=>x.id==='camara-foto').value,chance=Math.min(X6.MODIFIERS.find(x=>x.id==='camara-foto').cap,base+stereo());m.instruments.camara_daguerrotipos={plate:1,chance,stereo:stereo()>0};}
+    m.camera=cam.used?{used:true}:{used:false,reason:cam.reason};
+    if(cam.used){if(!(state.inventory.placa_daguerrotipo>0))return false;state.inventory.placa_daguerrotipo-=1;m.instruments.camara_daguerrotipos={plate:1,chance:cam.chance,stereo:cam.stereo,pool:cam.pool};}
     job.mec06=m;return true;});
   };
   const resolveBefore606=resolveVoyageReward;
@@ -9387,7 +9412,8 @@ if(globalThis.AtlasMuseumCuration3380){
    const demos=Object.values(X6.DEMOS).map(d=>{const c=demoCheck(d.id,now);return '<div class="mec02-row"><span>'+esc6(d.label)+(c.ok?'':' · <span class="small">'+esc6(c.reasons.join(' · '))+'</span>')+'</span><button type="button" class="btn alt" data-action="mec06-demo" data-id="'+d.id+'"'+(c.ok?'':' disabled')+'>Presentar</button></div>';}).join('');
    const cats={};for(const id of Object.keys(ITEMS)){if(K3()?.pieces?.[id])continue;const c=categoryOf(id);(cats[c]=cats[c]||[]).push(id);}
    const index=Object.entries(cats).map(([c,ids])=>'<details><summary>'+esc6(c)+' · '+ids.length+'</summary><p>'+ids.map(id=>'<button type="button" class="btn alt" data-action="mec06-item" data-id="'+esc6(id)+'">'+esc6(name(id))+((state.inventory[id]||0)?' ×'+state.inventory[id]:'')+'</button>').join(' ')+'</p></details>').join('');
-   return '<details class="mec02-controls mec06-instruments"'+op('inst')+'><summary>Instrumentos y artefactos · Taller '+used('taller')+'/'+capacity('taller')+' · Campamento '+used('campamento')+'/'+capacity('campamento')+'</summary>'+(inst||'<p class="small">Cataloga artefactos para instalarlos o exponerlos.</p>')+(pending?'<details'+op('build')+'><summary>Por fabricar</summary>'+pending+'</details>':'')+'</details>'+
+   const pol=state.mec06.camera||'preguntar',camRow=catalogued('camara_daguerrotipos')?'<div class="mec02-row"><span>Cámara en expediciones</span><span>'+['preguntar','siempre','nunca'].map(p=>'<button type="button" class="btn alt" data-action="mec06-camera" data-id="'+p+'"'+(p===pol?' aria-pressed="true" disabled':'')+'>'+p[0].toUpperCase()+p.slice(1)+'</button>').join('')+'</span></div>':'';
+   return '<details class="mec02-controls mec06-instruments"'+op('inst')+'><summary>Instrumentos y artefactos · Taller '+used('taller')+'/'+capacity('taller')+' · Campamento '+used('campamento')+'/'+capacity('campamento')+'</summary>'+camRow+(inst||'<p class="small">Cataloga artefactos para instalarlos o exponerlos.</p>')+(pending?'<details'+op('build')+'><summary>Por fabricar</summary>'+pending+'</details>':'')+'</details>'+
     '<details class="mec02-controls mec06-studies"'+op('studies')+'><summary>Estudios científicos</summary>'+studies+'</details>'+
     '<details class="mec02-controls mec06-demos"'+op('demos')+'><summary>Demostraciones del Museo · atractivo £'+attractionRate().toFixed(2)+'/s</summary>'+demos+'</details>'+
     '<details class="mec02-controls mec06-index"'+op('index')+'><summary>Índice de objetos</summary>'+index+'</details>';
@@ -9405,8 +9431,307 @@ if(globalThis.AtlasMuseumCuration3380){
   // 13. Fichas de coleccionables con la geografía de MEC-04 (origen, hallazgo y compra).
   if(A1?.detailModel){const before=A1.detailModel;A1.detailModel=function(id){const m=before(id);const p=K3()?.pieces?.[id];if(m&&p){
    m.origin=p.origin+(p.place?' · '+p.place:'');m.findIn=(p.findIn||[]).join(', ')||'—';m.buyIn=(p.buyIn||[]).join(', ')||'No se vende';m.continent=m.origin;}return m;};}
-  globalThis.AtlasMEC06Actions={location,states,setLocation,capacity,planArtifact,buildArtifact,studyCheck,runStudy,demoCheck,runDemo,attractionRate,modifiers,inventoryAudit,audit,usesOf,sourcesOf,categoryOf,ficha,photoPool,mapTarget};
+  globalThis.AtlasMEC06Actions={destinationPool,cameraPlan,location,states,setLocation,capacity,planArtifact,buildArtifact,studyCheck,runStudy,demoCheck,runDemo,attractionRate,modifiers,inventoryAudit,audit,usesOf,sourcesOf,categoryOf,ficha,photoPool,mapTarget};
  }
+}
+// MEC-07 (V5.6.7 Beta) · Récords naturales, conductas extraordinarias y observaciones científicas,
+// y correcciones de MEC-06. Configuración en www/js/mec07-natural-records.js. Estado compacto en
+// state.naturalRecords. Una evaluación por hito elegible y especie realmente observada en cada
+// búsqueda (nunca por individuo del censo). Los sorteos nuevos usan un RNG aislado; el guepardo
+// conserva su secuencia histórica de Math.random. Ver docs/mec07/README.md.
+{
+ const X7=globalThis.AtlasMEC07,X6=globalThis.AtlasMEC06,A6=()=>globalThis.AtlasMEC06Actions,A3=()=>globalThis.AtlasMEC03Actions,A1=globalThis.AtlasBeta560Actions;
+ const obj=v=>v&&typeof v==='object'&&!Array.isArray(v);
+ const esc7=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const nameOf=id=>ITEMS[id]?.name||MUSEUM_COLLECTIONS.find(p=>p.id===id)?.name||id;
+
+ // ── A. Correcciones de MEC-06 ──────────────────────────────────────────────────────────────
+ // A.1 Fuentes del índice: coleccionables solo con fuentes activas de MEC-03/MEC-04; materiales
+ // animales solo con sus canales activos. La tabla experimental por especie (speciesOf) queda
+ // archivada: no se presenta como fuente ni se reactiva el sistema de drops universales.
+ const histIds=new Set(Object.keys(SPECIES_DROPS).map(k=>SPECIES_DROPS[k]));
+ const channelActive=channelId=>{const D=A1?.drops;if(!D)return false;const c=D.channels().find(x=>x.id===channelId);const src=D.sources?.()?.campo;return !!c&&(c.rates?.campo?.manual>0||c.rates?.campo?.auto>0)&&src?.active!==false;};
+ const activeMaterialSpecies=id=>{
+  // Materiales históricos: tabla histórica (SPECIES_DROPS) y ampliación de MEC-03 por tipo de animal.
+  const out=new Map();
+  for(const [sp,item] of Object.entries(SPECIES_DROPS))if(item===id&&SPECIES[sp])out.set(sp,'histórico');
+  const E=A3()?.engine;if(E&&histIds.has(id))for(const sp of Object.keys(SPECIES))if(E.historicExtra(sp).includes(id)&&!out.has(sp))out.set(sp,'ampliación MEC-03');
+  // Materiales nuevos: canal «nuevosMateriales» de MEC-01, solo si está activo.
+  if(!histIds.has(id)&&ITEMS[id]?.beta&&channelActive('nuevosMateriales'))for(const sp of A1?.speciesOf?.(id)||[])if(SPECIES[sp]&&!out.has(sp))out.set(sp,'canal nuevosMateriales (MEC-01)');
+  return out;
+ };
+ const isCollectible=id=>!!globalThis.AtlasMEC03Catalog?.pieces?.[id];
+ const sourcesBefore607=inventorySources3400;
+ inventorySources3400=function(id){
+  if(isCollectible(id))return [...(A3()?.sourceText?.(id)||[])].filter(x=>!/^BETA ·/.test(x));
+  const list=sourcesBefore607(id).filter(x=>!/^BETA · Drop de prueba/.test(x));
+  if(ITEMS[id]?.kind==='animal'||ITEMS[id]?.beta&&A1?.speciesOf?.(id)?.length){
+   const sp=activeMaterialSpecies(id);
+   if(sp.size&&!histIds.has(id))list.push('Campo · Gabinete de especímenes (canal de nuevos materiales, activo): cae de '+sp.size+(sp.size===1?' especie':' especies')+(sp.size<=6?' ('+[...sp.keys()].map(s=>SPECIES[s].name).join(', ')+')':''));
+   else if(histIds.has(id)){const ext=[...sp].filter(([,k])=>k==='ampliación MEC-03').length;if(ext)list.push('Campo · ampliación de MEC-03 por tipo de animal: '+ext+(ext===1?' especie':' especies'));}
+  }
+  return [...new Set(list)];
+ };
+ if(globalThis.AtlasMEC06Actions){
+  const a6=globalThis.AtlasMEC06Actions,before=a6.sourcesOf;
+  a6.sourcesOf=function(id){
+   if(X6?.ARTIFACTS?.[id])return before(id);
+   if(isCollectible(id))return [...new Set(A3()?.sourceText?.(id)||[])];
+   const out=[];try{out.push(...inventorySources3400(id));}catch(_){}
+   if(Object.hasOwn(TRADE_MARKET,id))out.push('Mercado: £'+TRADE_MARKET[id]);
+   for(const t of Object.values(X6?.STUDIES||{}))if(t.reward.items?.[id])out.push('Estudio: '+t.label);
+   if(/_map_piece$/.test(id))out.push('Estudio: '+X6.STUDIES['calculo-derrotas'].label+' (alternativa; solo con acceso cartográfico efectivo)');
+   return [...new Set(out)];
+  };
+  a6.activeMaterialSpecies=activeMaterialSpecies;
+ }
+ // Detalle de coleccionables de MEC-01 (gabinetes): sin la tabla experimental.
+ if(A1?.detailModel){const before=A1.detailModel;A1.detailModel=function(id){const m=before(id);if(m&&Array.isArray(m.sources))m.sources=m.sources.filter(x=>!/^Campo: cae de \d+ especies? con el Gabinete de especímenes/.test(x));return m;};}
+
+ // A.2 Cartografía: acceso efectivo (investigación previa y una ruta accesible cuyo botín o capa
+ // cartográfica entregue la parte), sin mapas ya fabricados ni partes que ya alcanzan.
+ const voyageOpen=v=>!!state.upgrades.shipyard&&voyageConditions3280(v).every(c=>c.met);
+ const mapAccess=d=>{
+  if(state.inventory?.[d.map]>0)return {ok:false,reason:'mapa ya fabricado'};
+  if((state.inventory?.[d.piece]||0)>=d.quantity)return {ok:false,reason:'ya tienes las '+d.quantity+' partes necesarias'};
+  if(d.sourceResearch&&!(state.purchases?.[d.sourceResearch]>0))return {ok:false,reason:'falta la investigación previa'};
+  const routes=d.routes?VOYAGES.filter(v=>d.routes.includes(v.id)):VOYAGES.filter(v=>V316_LOOT_BASE.concat(V316_LOOT_BY_ROUTE[v.id]||[]).some(([x])=>x===d.piece));
+  const open=routes.filter(voyageOpen);
+  return open.length?{ok:true,via:open.map(v=>v.id)}:{ok:false,reason:'ninguna ruta de origen accesible'};
+ };
+ if(globalThis.AtlasMEC06Actions){
+  const a6=globalThis.AtlasMEC06Actions;
+  a6.mapAccess=mapAccess;globalThis.AtlasMapAccessMEC07=mapAccess;
+ }
+
+ // A.4 Museo: resumen con ingresos zoológico, de artefactos, combinado y demostraciones activas.
+ if(museumMEC05){
+  const incomeBefore=museumMEC05.income;
+  museumMEC05.income=function(){
+   const z=incomeBefore(),art=globalThis.AtlasMEC06Actions?.attractionRate?.()||0,h=MAX_OFFLINE_MS/1000;
+   return {...z,zoological:z.total,artifacts:art,combined:z.total+art,combinedPerHour:(z.total+art)*3600,
+    offlineZoological:z.total*h,offlineArtifacts:art*h,offlineCombined:(z.total+art)*h,
+    demos:Object.values(X6?.DEMOS||{}).map(d=>({id:d.id,label:d.label,...(globalThis.AtlasMEC06Actions?.demoCheck?.(d.id)||{ok:false,reasons:[]})}))};
+  };
+ }
+
+ // A.5 Normalización de instrumentos instalados: ubicación válida, artefacto catalogado, capacidad
+ // y vitrina coherente. Política determinista: se conservan instalados en el orden de la
+ // configuración (AtlasMEC06.ARTIFACTS) hasta la capacidad; el resto pasa al almacén. Nunca se pierde
+ // un artefacto catalogado. Cada recuperación queda en state.mec06.recovered (máx. 20).
+ const capacityFor=(s,place)=>place==='taller'?(X6.PLACES.taller.capacityByWorkshop[Math.max(1,Math.min(5,Number(s.camp?.levels?.workshop)||1))]||0):place==='campamento'?X6.PLACES.campamento.capacity:0;
+ const normalizeInstalled=s=>{
+  if(!X6||!obj(s?.mec06)||!obj(s.mec06.installed))return;
+  const inst=s.mec06.installed,d=s.museum.displays=obj(s.museum?.displays)?s.museum.displays:{},rec=s.mec06.recovered=Array.isArray(s.mec06.recovered)?s.mec06.recovered.slice(-20):[];
+  const used={taller:0,campamento:0};
+  for(const id of Object.keys(X6.ARTIFACTS)){
+   const place=inst[id];if(!place)continue;
+   if(used[place]>=capacityFor(s,place)){delete inst[id];d['collection:'+id]=false;rec.push({id,from:place,to:'almacen',reason:'capacidad'});continue;}
+   used[place]++;d['collection:'+id]=false;
+  }
+  for(const id of Object.keys(inst))if(!X6.ARTIFACTS[id]){delete inst[id];}
+  s.mec06.recovered=rec.slice(-20);
+ };
+ const normalizeBefore607=normalizeMEC01;
+
+ // ── B. Récords naturales y conductas ──────────────────────────────────────────────────────
+ if(X7){
+  const LEG=X7.byId['guepardo-velocidad'];
+  const normalize7=s=>{
+   if(!obj(s))return s;
+   const n=s.naturalRecords=obj(s.naturalRecords)?s.naturalRecords:{};
+   n.schema=1;
+   if(typeof n.salt!=='string'||!n.salt)n.salt='nr-'+(Number.isFinite(s.lastTick)?s.lastTick:Date.now()).toString(36);
+   n.records=obj(n.records)?n.records:{};n.behaviors=obj(n.behaviors)?n.behaviors:{};
+   for(const k of Object.keys(n.records))if(!X7.byId[k]||!obj(n.records[k]))delete n.records[k];
+   for(const k of Object.keys(n.behaviors))if(!X7.behaviorById[k]||!obj(n.behaviors[k]))delete n.behaviors[k];
+   n.history=Array.isArray(n.history)?n.history.slice(-30):[];
+   n.migration=obj(n.migration)?n.migration:{};
+   // Migración idempotente del guepardo (state.beta560.hitos.af_guepardo). Sin recompensas.
+   const old=s.beta560?.hitos?.af_guepardo;
+   if(!n.migration.beta560&&obj(old)&&!n.records[LEG.id]){
+    const best=Number.isFinite(old.best)&&old.best>0?old.best:null,tries=Math.max(0,Math.floor(Number(old.tries)||0));
+    if(tries>0||best){
+     const at=Number.isFinite(old.bestAt)?old.bestAt:null;
+     n.records[LEG.id]={count:tries,first:best?{value:best,at,region:null,method:'directa',migrated:true}:null,best:best?{value:best,at,region:null,method:'directa',instrument:null,migrated:true}:null,
+      achieved:!!old.approved||!!best&&best>=LEG.threshold,achievedAt:Number.isFinite(old.approvedAt)?old.approvedAt:null,regions:{},pending:null,
+      rewards:{first:'migrado',...((!!old.approved||!!best&&best>=LEG.threshold)?{milestone:'migrado'}:{})},migrated:true};
+    }
+    n.migration.beta560={at:Number.isFinite(s.lastTick)?s.lastTick:null,from:{best:old.best??null,tries:old.tries??0,approved:!!old.approved,bestAt:old.bestAt??null,approvedAt:old.approvedAt??null}};
+   }
+   return s;
+  };
+  normalizeMEC01=function(s){const out=normalizeBefore607(s);normalizeInstalled(s);normalize7(s);return out;};
+  normalizeMEC01(state);
+  // Espejo de solo escritura del guepardo para el requisito alternativo histórico del Cuaderno (MEC-01).
+  const mirror=()=>{const r=state.naturalRecords.records[LEG.id];if(!r)return;const b=state.beta560=obj(state.beta560)?state.beta560:{moneyEarned:0,lastMoney:null};b.hitos=obj(b.hitos)?b.hitos:{};
+   b.hitos.af_guepardo={...(b.hitos.af_guepardo||{}),best:r.best?.value||0,tries:r.count,approved:r.achieved,bestAt:r.best?.at??null,approvedAt:r.achievedAt??null};};
+  // Contexto real del encuentro.
+  const ctxOf=(id,c)=>{
+   const relic=c.relic||state,region=relic.currentRegion??state.currentRegion,deep=deepRegionIndex3330.has(region),r=REGIONS.find(x=>x.id===region);
+   const sp=SPECIES[id],habitats=c.manual?[relic.habitat??state.habitat]:(sp?.habitats||[]).filter(h=>(r?.habitats||[]).includes(h));
+   return {species:id,source:c.source,manual:!!c.manual,at:Number.isFinite(c.at)?c.at:Date.now(),region,deep,time:relic.time??state.time,season:relic.season??state.season,habitats,
+    method:deep?(relic.method??state.deepSurvey?.method??'sondeo'):(c.manual?'búsqueda manual':'búsqueda automática')};
+  };
+  const regionName=id=>REGIONS.find(r=>r.id===id)?.name||id||'—';
+  const pay=(kind,entry,rec)=>{const R=X7.REWARDS;rec.rewards=obj(rec.rewards)?rec.rewards:{};if(rec.rewards[kind])return 0;
+   const rw=kind==='first'?R.first:kind==='milestone'?R.milestone:R.behavior;state.knowledge+=rw.knowledge||0;if(rw.prestige)state.prestige+=rw.prestige;
+   rec.rewards[kind]={at:rec.lastAt??null,knowledge:rw.knowledge||0,prestige:rw.prestige||0,medal:kind==='milestone'?entry.medal:null};return rw.knowledge||0;};
+  const regionalPointer=(region,entryId)=>{const rr=state.regionalRecords;if(!rr||!region)return;const reg=rr.regions[region]=obj(rr.regions[region])?rr.regions[region]:{species:{}};
+   reg.natural=obj(reg.natural)?reg.natural:{};reg.natural[entryId]=(reg.natural[entryId]||0)+1;};
+  const history=e=>{const n=state.naturalRecords;n.history.push(e);n.history=n.history.slice(-30);};
+  const applyObservation=(entry,obs)=>{
+   const n=state.naturalRecords,prev=n.records[entry.id],prevBest=prev?.best?.value;
+   const {record,events}=X7.update(entry,prev,obs);record.lastAt=obs.at;n.records[entry.id]=record;
+   regionalPointer(obs.region,entry.id);
+   const notes=[];
+   if(events.includes('first')){pay('first',entry,record);history({at:obs.at,id:entry.id,kind:'first',value:obs.value,region:obs.region});}
+   if(events.includes('pending'))notes.push('◆ evidencia pendiente de validación: '+entry.name.toLowerCase()+' '+X7.fmt(entry,obs.value));
+   if(events.includes('best-first'))notes.push('◆ medición registrada: '+entry.name.toLowerCase()+' '+X7.fmt(entry,obs.value));
+   else if(events.includes('best')){const gain=Math.abs(obs.value-prevBest)/Math.max(1e-9,Math.abs(prevBest));if(gain>=0.02)notes.push('◆ nuevo récord personal: '+entry.name.toLowerCase()+' '+X7.fmt(entry,obs.value));}
+   if(events.includes('milestone')){pay('milestone',entry,record);history({at:obs.at,id:entry.id,kind:'milestone',value:record.best.value,region:obs.region});notes.push('◆ hito cumplido: '+entry.name+' '+(X7.TYPES[entry.type].direction==='min'?'≤ ':'≥ ')+X7.fmt(entry,entry.threshold));}
+   if(entry.id===LEG.id)mirror();
+   return notes;
+  };
+  const evidenceRegions=(entry,region)=>{const r=state.naturalRecords.records[entry.id];const set=new Set(Object.keys(r?.regions||{}));if(region)set.add(region);return set.size;};
+  // Motor por especie observada: legado del guepardo (Math.random histórico) + RNG aislado.
+  // Legado del guepardo: misma probabilidad, mismo orden de Math.random y mismos textos que el
+  // motor de MEC-01, que queda sustituido (AtlasBeta560Actions.run apunta aquí; una sola tirada).
+  let legacyCtx=null;
+  const legacyRun=id=>{
+   if(id!==LEG.species)return null;
+   if(Math.random()>=LEG.chance.manual)return null;
+   let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();
+   const g=Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v),f=10**LEG.decimals;
+   const value=Math.round(Math.min(LEG.bounds.max,Math.max(LEG.bounds.min,LEG.model.mean+LEG.model.sd*g))*f)/f;
+   const prev=state.naturalRecords.records[LEG.id],wasApproved=!!prev?.achieved;
+   const c=legacyCtx||{at:Date.now(),region:state.currentRegion};
+   applyObservation(LEG,{value,at:c.at,region:c.region,method:'directa'});
+   const r=state.naturalRecords.records[LEG.id];
+   let text='corriendo a '+value+' '+LEG.unit+(prev?.best&&value>prev.best.value&&r.count>1?' · nuevo récord':'');
+   if(!wasApproved&&r.achieved)text+=' · hito aprobado: '+LEG.name+' ≥ '+LEG.threshold+' '+LEG.unit+' (BETA)';
+   return text;
+  };
+  if(A1)A1.run=legacyRun;
+  naturalRecordsMEC07=function(id,c){
+   const notes=[];const ctx=ctxOf(id,c);
+   legacyCtx={at:ctx.at,region:ctx.region};
+   try{const t=globalThis.AtlasBeta560Actions?.run?.(id);if(t)notes.push(t);}finally{legacyCtx=null;}
+   const salt=state.naturalRecords.salt;
+   for(const entry of X7.RECORDS){
+    if(entry.legacy||!X7.eligible(entry,ctx))continue;
+    const r=X7.rng([salt,ctx.at,ctx.source,ctx.region,id,entry.id].join('|'));
+    if(r()>=(ctx.manual?entry.chance.manual:entry.chance.auto))continue;
+    const value=X7.generate(entry,r,{evidenceRegions:evidenceRegions(entry,ctx.region)});if(value===null)continue;
+    notes.push(...applyObservation(entry,{value,at:ctx.at,region:ctx.region,method:entry.method,instrument:null}));
+   }
+   for(const b of X7.BEHAVIORS){
+    if(!X7.eligible(b,ctx))continue;
+    const r=X7.rng([salt,ctx.at,ctx.source,ctx.region,id,b.id].join('|'));
+    if(r()>=(ctx.manual?b.chance.manual:b.chance.auto))continue;
+    const n=state.naturalRecords,prev=n.behaviors[b.id];
+    const rec=n.behaviors[b.id]=prev?{...prev,count:prev.count+1,regions:{...prev.regions,[ctx.region]:(prev.regions?.[ctx.region]||0)+1}}:{count:1,firstAt:ctx.at,region:ctx.region,method:b.method==='evidencia'?'evidencia: '+ctx.method:ctx.method,regions:{[ctx.region]:1},rewards:{}};
+    rec.lastAt=ctx.at;regionalPointer(ctx.region,b.id);
+    if(!prev){pay('behavior',b,rec);history({at:ctx.at,id:b.id,kind:'behavior',region:ctx.region});notes.push('◆ conducta extraordinaria: '+b.name.toLowerCase());}
+   }
+   return notes;
+  };
+  // Indicador del encuentro: los avisos «◆» viajan en las notas; el encuentro los resume aparte
+  // (sin halos de rareza, sin ventanas emergentes).
+  const presentBefore607=presentEncounter;
+  presentEncounter=function(entries,...rest){
+   const out=presentBefore607(entries,...rest);
+   const marks=entries.flatMap(e=>(e.note||[]).filter(x=>typeof x==='string'&&x.startsWith('◆')).map(x=>({species:e.id,text:x.slice(2)})));
+   if(marks.length&&state.lastEncounter)state.lastEncounter.naturalRecords=marks;
+   return out;
+  };
+  const cardBefore607=encounterCardMarkup;
+  encounterCardMarkup=function(last,...rest){
+   const html=cardBefore607(last,...rest),marks=last?.naturalRecords;
+   if(!Array.isArray(marks)||!marks.length)return html;
+   return html+'<div class="mec07-encounter" data-art="record-new-best" role="status">'+marks.map(m=>'<span class="badge mec07-mark">◆ '+esc7(m.text)+'</span>').join(' ')+'</div>';
+  };
+  // Validación científica de evidencias pendientes (conserva el registro observado).
+  const validationCheck=id=>{
+   const e=X7.byId[id],r=state.naturalRecords.records[id];if(!e||!r?.pending)return {ok:false,reasons:['Sin evidencia pendiente']};
+   const ins=e.instrument,reasons=[];if(ins&&A6()?.location(ins.id)!==ins.place)reasons.push(nameOf(ins.id)+(ins.place==='taller'?' instalado en el Taller':' instalado en el Campamento'));
+   return {ok:!reasons.length,reasons,instrument:ins,pending:r.pending};
+  };
+  const validate=(id,now=Date.now())=>{
+   const c=validationCheck(id);if(!c.ok)return false;const e=X7.byId[id];
+   if(!window.confirm('Validar «'+e.name+'» ('+SPECIES[e.species]?.name+'): '+X7.fmt(e,c.pending.value)+'\nMétodo: '+c.instrument.label+'. ¿Confirmar?'))return false;
+   return tradeTransaction3300(()=>{const r=state.naturalRecords.records[id],p=r.pending;r.pending=null;
+    const {record,events}=X7.update(e,r,{...p,validated:true,instrument:c.instrument.id});record.count=r.count;record.lastAt=now;
+    for(const reg of Object.keys(record.regions))record.regions[reg].count=r.regions[reg]?.count??record.regions[reg].count;
+    state.naturalRecords.records[id]=record;
+    if(events.includes('milestone'))pay('milestone',e,record);
+    history({at:now,id,kind:'validated',value:p.value,region:p.region});pushLog('Validación científica · '+e.name+' de '+SPECIES[e.species]?.name+': '+X7.fmt(e,p.value)+'.');return true;});
+  };
+  // Cuaderno: requisito alternativo configurado (además del guepardo, que usa el espejo de MEC-01).
+  const stageBefore607=stageRequirements;
+  stageRequirements=function(id,index){
+   const req=stageBefore607(id,index);
+   for(const e of X7.RECORDS)if(!e.legacy&&e.species===id&&e.journal&&e.journal.stage===index){
+    const r=state.naturalRecords.records[e.id];
+    req.extra+=' También vale el hito «'+e.name+' '+(X7.TYPES[e.type].direction==='min'?'≤ ':'≥ ')+X7.fmt(e,e.threshold)+'» ('+(r?.best?X7.fmt(e,r.best.value)+' registrados':'sin registros')+').';
+    if(r?.achieved){req.extraOk=true;req.allOk=req.sightOk&&req.moneyOk&&req.knowledgeOk&&req.extraOk;}
+   }
+   return req;
+  };
+  // Resumen y listado (para el Cuaderno, el Bestiario y MEC-08).
+  const group=id=>{try{return bestiaryTypeBucket(id);}catch(_){return '—';}};
+  const ui7={type:'',group:'',status:'',region:'',q:''};
+  const list=()=>[...X7.RECORDS.map(e=>({kind:'record',e,r:state.naturalRecords.records[e.id]})),...X7.BEHAVIORS.map(e=>({kind:'behavior',e,r:state.naturalRecords.behaviors[e.id]}))].map(x=>{
+   const known=!!x.r&&(x.r.count>0),st=!known?'nunca':x.kind==='behavior'?'registrada':x.r.achieved?'cumplido':x.r.pending&&!x.r.best?'pendiente':'observado';
+   return {...x,known,status:st,type:x.kind==='behavior'?'conducta':x.e.type,group:group(x.e.species),regions:REGIONS.filter(r=>(r.species||[]).includes(x.e.species)).map(r=>r.id)};});
+  const summary=()=>{const l=list();const types={};for(const x of l){const t=types[x.type]=types[x.type]||{total:0,known:0,done:0};t.total++;if(x.known)t.known++;if(x.status==='cumplido'||x.status==='registrada')t.done++;}
+   return {records:X7.RECORDS.length,behaviors:X7.BEHAVIORS.length,observed:l.filter(x=>x.kind==='record'&&x.known).length,achieved:l.filter(x=>x.status==='cumplido').length,
+    behaviorsFound:l.filter(x=>x.kind==='behavior'&&x.known).length,pending:l.filter(x=>x.r?.pending).length,byType:types};};
+  const typeLabel=t=>t==='conducta'?'Conducta':X7.TYPES[t]?.label||t;
+  const section=()=>{
+   const s=summary(),l=list().filter(x=>(!ui7.type||x.type===ui7.type)&&(!ui7.group||x.group===ui7.group)&&(!ui7.status||x.status===ui7.status)&&(!ui7.region||x.regions.includes(ui7.region)||x.r?.regions?.[ui7.region]));
+   const sel=(key,opts)=>'<select data-action="mec07-filter" data-id="'+key+'" aria-label="Filtrar por '+key+'"><option value="">'+({type:'Tipo',group:'Grupo',status:'Estado',region:'Región'})[key]+'</option>'+opts.map(([v,lab])=>'<option value="'+esc7(v)+'"'+(ui7[key]===v?' selected':'')+'>'+esc7(lab)+'</option>').join('')+'</select>';
+   const regions=[...new Set(list().flatMap(x=>x.regions))].filter(id=>state.regionUnlocked?.[id]).map(id=>[id,regionName(id)]).sort((a,b)=>a[1].localeCompare(b[1],'es'));
+   const rows=l.slice(0,40).map(x=>{
+    if(!x.known)return '<li class="mec07-row unknown"><b>'+esc7(typeLabel(x.type))+'</b> · por descubrir · <span class="small">Pista: '+esc7(x.e.hint||'')+'</span></li>';
+    const sp=visibleName(x.e.species),r=x.r;
+    if(x.kind==='behavior')return '<li class="mec07-row"><b>'+esc7(x.e.name)+'</b> · '+esc7(sp)+' · '+esc7(x.e.category)+' · '+esc7(regionName(r.region))+' · '+r.count+' obs.</li>';
+    const v=validationCheck(x.e.id);
+    return '<li class="mec07-row"><b>'+esc7(x.e.name)+'</b> · '+esc7(sp)+' · mejor: '+esc7(r.best?X7.fmt(x.e,r.best.value):'—')+(r.best?' ('+esc7(regionName(r.best.region))+' · '+esc7(X7.METHODS[r.best.method]||r.best.method)+')':'')+(r.achieved?' · ✓ hito':'')+' · '+r.count+' obs.'+
+     (r.pending?' · evidencia '+esc7(X7.fmt(x.e,r.pending.value))+' <button type="button" class="btn alt" data-action="mec07-validate" data-id="'+x.e.id+'"'+(v.ok?'':' disabled title="'+esc7(v.reasons.join(' · '))+'"')+'>Validar</button>':'')+
+     (r.best?.region&&REGIONS.some(z=>z.id===r.best.region)?' <button type="button" class="btn alt" data-action="mec07-atlas" data-id="'+esc7(r.best.region)+'">Atlas</button>':'')+'</li>';}).join('');
+   return '<details class="card mec07-records" data-mec07-fold="1"'+(ui7.open?' open':'')+'><summary><h3 class="section" style="display:inline">Récords naturales</h3> · '+s.observed+'/'+s.records+' hitos observados · '+s.achieved+' cumplidos · '+s.behaviorsFound+'/'+s.behaviors+' conductas'+(s.pending?' · '+s.pending+' por validar':'')+'</summary>'+
+    '<p class="small">'+Object.entries(s.byType).map(([t,v])=>esc7(typeLabel(t))+' '+v.known+'/'+v.total).join(' · ')+'</p>'+
+    '<div class="mec07-filters">'+sel('type',[...new Set(list().map(x=>x.type))].map(t=>[t,typeLabel(t)]))+sel('group',[...new Set(list().map(x=>x.group))].map(g=>[g,g]))+sel('status',[['nunca','Nunca observado'],['observado','Observado'],['pendiente','Pendiente de validación'],['cumplido','Hito cumplido'],['registrada','Conducta registrada']])+sel('region',regions)+'</div>'+
+    '<ul class="small mec07-list">'+(rows||'<li>Sin resultados.</li>')+'</ul>'+(l.length>40?'<p class="small">Mostrando 40 de '+l.length+'. Usa los filtros.</p>':'')+'</details>';
+  };
+  const journalRenderBefore607=renderJournal;
+  renderJournal=function(){return journalRenderBefore607()+section();};
+  if(typeof panel!=='undefined'&&panel?.addEventListener){
+   panel.addEventListener('toggle',e=>{if(e.target?.dataset?.mec07Fold)ui7.open=e.target.open;},true);
+   panel.addEventListener('change',e=>{const el=e.target;if(el?.dataset?.action==='mec07-filter'){ui7[el.dataset.id]=el.value;ui7.open=true;renderPanel();}});
+  }
+  // Bestiario: solo lo descubierto de la especie.
+  const bestiaryBefore607=bestiaryModalModel3260;
+  bestiaryModalModel3260=function(id){
+   const m=bestiaryBefore607(id);if(!m)return m;
+   const recs=X7.RECORDS.filter(e=>e.species===id&&state.naturalRecords.records[e.id]?.count>0),beh=X7.BEHAVIORS.filter(b=>b.species===id&&state.naturalRecords.behaviors[b.id]?.count>0);
+   if(recs.length||beh.length)m.monograph=(m.monograph||'')+'<section class="b26-distribution mec07-bestiary"><h3>Registros especiales</h3>'+
+    recs.map(e=>{const r=state.naturalRecords.records[e.id];return '<p><b>'+esc7(e.name)+':</b> '+esc7(r.best?X7.fmt(e,r.best.value):'evidencia pendiente')+(r.achieved?' · hito cumplido':'')+' · '+esc7(Object.keys(r.regions||{}).map(regionName).join(', '))+'</p>';}).join('')+
+    beh.map(b=>{const r=state.naturalRecords.behaviors[b.id];return '<p><b>'+esc7(b.name)+'</b> ('+esc7(b.category)+') · '+esc7(Object.keys(r.regions||{}).map(regionName).join(', '))+'</p>';}).join('')+'</section>';
+   return m;
+  };
+  // Acciones.
+  const actionBefore607=mec02Action;
+  mec02Action=function(act,id){
+   if(act==='mec07-validate'){validate(id);renderPanel();return;}
+   if(act==='mec07-atlas'){const r=REGIONS.find(x=>x.id===id);if(!r)return;rememberAtlasViewport();state.atlasView=r.continent;state.atlasSelectedRegion=r.id;tab='atlas';renderPanel();selectAtlasRegion(r.id);return;}
+   if(act==='mec06-camera'){if(['preguntar','siempre','nunca'].includes(id)){tradeTransaction3300(()=>{state.mec06.camera=id;return true;});renderPanel();}return;}
+   return actionBefore607(act,id);
+  };
+  globalThis.AtlasMEC07Actions={evaluate:(id,c)=>naturalRecordsMEC07(id,c),validate,validationCheck,list,summary,section,activeMaterialSpecies,mapAccess,ui:ui7};
+ }else{normalizeMEC01=function(s){const out=normalizeBefore607(s);normalizeInstalled(s);return out;};normalizeMEC01(state);}
+
 }
 render();
 })();

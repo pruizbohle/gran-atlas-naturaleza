@@ -1,7 +1,8 @@
 {
-  "version": "5.6.6",
-  "build": "MEC-06",
-  "label": "5.6.6 Beta — MEC-06",
+  "version": "5.6.7",
+  "build": "MEC-07",
+  "label": "5.6.7 Beta — MEC-07",
+  "v567": {"mec07": true, "beta": true, "naturalRecords": 25, "behaviors": 20, "state": "state.naturalRecords", "isolatedRng": true, "apk": false},
   "v566": {"mec06": true, "beta": true, "artifacts": 20, "betaArtifacts": 15, "components": 6, "animalMaterials": 27, "studies": 14, "demos": 4, "places": ["museo","taller","campamento","almacen"], "state": "state.mec06", "apk": false},
   "v565": {"mec05": true, "beta": true, "museumLevels": 5, "museumRankLevels": {"4": 11, "5": 14}, "cabinets": 5, "cabinetBenefits": 11, "themeTiers": 4, "museumState": "derivado de state.museum.cabinets", "apk": false},
   "v564": {"mec04": true, "beta": true, "societyRanks": 20, "rankState": "state.society", "facilityRankLevels": [4, 5], "newVoyages": 5, "newDigSites": 3, "worldOrigins": 21, "apk": false},

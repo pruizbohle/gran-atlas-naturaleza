@@ -1,0 +1,89 @@
+﻿tipo;referencia;descripcion;reutiliza;necesita_arte_nuevo
+categoría;record-type-velocidad;Velocidad;—;sí
+categoría;record-type-longitud;Longitud;—;sí
+categoría;record-type-altura;Altura;—;sí
+categoría;record-type-masa;Masa;—;sí
+categoría;record-type-tamano-minimo;Tamaño mínimo;—;sí
+categoría;record-type-profundidad;Profundidad;—;sí
+categoría;record-type-duracion;Duración;—;sí
+categoría;record-type-altitud;Altitud;—;sí
+categoría;record-type-migracion;Distancia migratoria;—;sí
+categoría;record-type-longevidad;Longevidad estimada;—;sí
+categoría;record-type-frecuencia;Frecuencia;—;sí
+categoría;record-type-precision;Precisión;—;sí
+categoría;record-type-conducta;Conducta extraordinaria;—;sí
+indicador;record-new-best;Nueva marca personal;—;sí
+indicador;record-milestone;Hito cumplido;—;sí
+indicador;record-evidence-pending;Evidencia pendiente de validación;—;sí
+indicador;behavior-first;Primera conducta;—;sí
+hito;record-guepardo-velocidad;Velocidad máxima · Guepardo;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-guepardo-velocidad;Medalla · Velocidad máxima;—;sí
+hito;record-halcon-picada;Velocidad en picada · Halcón peregrino;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-halcon-picada;Medalla · Velocidad en picada;—;sí
+hito;record-pez-vela-velocidad;Arranque de natación · Pez vela del Indo-Pacífico;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-pez-vela-velocidad;Medalla · Arranque de natación;—;sí
+hito;record-berrendo-carrera;Velocidad sostenida · Berrendo;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-berrendo-carrera;Medalla · Velocidad sostenida;—;sí
+hito;record-liebre-carrera;Velocidad de carrera · Liebre europea;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-liebre-carrera;Medalla · Velocidad de carrera;—;sí
+hito;record-ballena-azul-longitud;Longitud corporal · Ballena azul;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-ballena-azul-longitud;Medalla · Longitud corporal;—;sí
+hito;record-elefante-masa;Masa estimada · Elefante africano de sabana;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-elefante-masa;Medalla · Masa estimada;—;sí
+hito;record-jirafa-altura;Altura total · Jirafa;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-jirafa-altura;Medalla · Altura total;—;sí
+hito;record-cocodrilo-longitud;Longitud · Cocodrilo marino;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-cocodrilo-longitud;Medalla · Longitud;—;sí
+hito;record-anaconda-longitud;Longitud · Anaconda verde;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-anaconda-longitud;Medalla · Longitud;—;sí
+hito;record-sapo-pulga-tamano;Tamaño mínimo · Sapo pulga;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-sapo-pulga-tamano;Medalla · Tamaño mínimo;—;sí
+hito;record-colibri-abeja-tamano;Tamaño mínimo · Colibrí abeja;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-colibri-abeja-tamano;Medalla · Tamaño mínimo;—;sí
+hito;record-colibri-abeja-aleteo;Frecuencia de aleteo · Colibrí abeja;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-colibri-abeja-aleteo;Medalla · Frecuencia de aleteo;—;sí
+hito;record-murcielago-abejorro-tamano;Tamaño mínimo · Murciélago abejorro;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-murcielago-abejorro-tamano;Medalla · Tamaño mínimo;—;sí
+hito;record-cachalote-profundidad;Profundidad de inmersión · Cachalote;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-cachalote-profundidad;Medalla · Profundidad de inmersión;—;sí
+hito;record-zifio-inmersion;Duración de inmersión · Zifio de Cuvier;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-zifio-inmersion;Medalla · Duración de inmersión;—;sí
+hito;record-pinguino-emperador-inmersion;Profundidad de inmersión · Pingüino emperador;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-pinguino-emperador-inmersion;Medalla · Profundidad de inmersión;—;sí
+hito;record-elefante-marino-profundidad;Profundidad de inmersión · Elefante marino del sur;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-elefante-marino-profundidad;Medalla · Profundidad de inmersión;—;sí
+hito;record-condor-altitud;Altitud de vuelo · Cóndor andino;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-condor-altitud;Medalla · Altitud de vuelo;—;sí
+hito;record-aguila-real-altitud;Altitud de vuelo · Águila real;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-aguila-real-altitud;Medalla · Altitud de vuelo;—;sí
+hito;record-charran-migracion;Migración documentada · Charrán ártico;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-charran-migracion;Medalla · Migración documentada;—;sí
+hito;record-pardela-migracion;Migración documentada · Pardela sombría;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-pardela-migracion;Medalla · Migración documentada;—;sí
+hito;record-tiburon-groenlandia-longevidad;Longevidad estimada · Tiburón de Groenlandia;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-tiburon-groenlandia-longevidad;Medalla · Longevidad estimada;—;sí
+hito;record-tortuga-aldabra-longevidad;Longevidad estimada · Tortuga gigante de Aldabra;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-tortuga-aldabra-longevidad;Medalla · Longevidad estimada;—;sí
+hito;record-cobra-escupidora-precision;Alcance de un escupitajo preciso · Cobra escupidora de Mozambique;ilustración zoológica existente de la especie;no (reutiliza)
+medalla futura;medal-cobra-escupidora-precision;Medalla · Alcance de un escupitajo preciso;—;sí
+conducta;behavior-emparrado-decorado;Emparrado decorado · Ave jardinera satinada;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-chimpance-herramientas;Pesca de termitas · Chimpancé común;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-cuervo-nc-herramientas;Fabricación de ganchos · Cuervo de Nueva Caledonia;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-cuervo-problemas;Resolución de problemas · Cuervo común;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-ave-lira-imitacion;Imitación vocal · Ave lira soberbia;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-pulpo-camuflaje;Cambio de color y textura · Pulpo común;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-pulpo-coco-refugio;Refugio transportado · Pulpo de coco;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-orca-caza-cooperativa;Caza cooperativa · Orca;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-pavo-real-cortejo;Exhibición de cortejo · Pavo real común;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-castor-dique;Construcción de un dique · Castor europeo;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-pez-volador-planeo;Planeo sobre el agua · Pez volador tropical;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-nutria-marina-piedras;Uso de piedras · Nutria marina;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-jorobada-burbujas;Red de burbujas · Ballena jorobada;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-buey-almizclero-defensa;Círculo defensivo · Buey almizclero;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-tejedor-nido;Nido tejido · Tejedor común;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-ardilla-voladora-planeo;Planeo entre árboles · Ardilla voladora siberiana;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-geco-hoja-camuflaje;Mimetismo de hoja seca · Geco cola de hoja satánico;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-pez-hacha-bioluminiscencia;Contrailuminación · Pez hacha plateado;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-urogallo-cantadero;Canto en el cantadero · Urogallo común;ilustración zoológica existente de la especie;no (reutiliza)
+conducta;behavior-emperador-incubacion;Incubación en invierno · Pingüino emperador;ilustración zoológica existente de la especie;no (reutiliza)
+evidencia científica;record-evidence;Lámina de evidencia (pendiente/validada);—;sí

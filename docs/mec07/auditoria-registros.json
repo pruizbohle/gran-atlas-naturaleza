@@ -1,0 +1,2101 @@
+{
+ "hitos": 25,
+ "conductas": 20,
+ "auditoria": true,
+ "progreso": {
+  "rank": 20,
+  "regions": 125,
+  "research": 57
+ },
+ "problemas": [],
+ "testigos": {
+  "guepardo-velocidad": {
+   "searches": 209,
+   "ok": true,
+   "region": "HX-07-10",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "halcon-picada": {
+   "searches": 106,
+   "ok": true,
+   "region": "HX-01-05",
+   "habitat": "montana",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pez-vela-velocidad": {
+   "searches": 194,
+   "ok": true,
+   "region": "mar_oceano_indico_tropical",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "berrendo-carrera": {
+   "searches": 4669,
+   "ok": true,
+   "region": "HX-02-05",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "liebre-carrera": {
+   "searches": 753,
+   "ok": true,
+   "region": "HX-03-09",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "ballena-azul-longitud": {
+   "searches": 157,
+   "ok": true,
+   "region": "mar_atlantico_septentrional",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "elefante-masa": {
+   "searches": 456,
+   "ok": true,
+   "region": "HX-07-10",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "jirafa-altura": {
+   "searches": 70,
+   "ok": true,
+   "region": "HX-07-10",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "cocodrilo-longitud": {
+   "searches": 91,
+   "ok": true,
+   "region": "oc_costa_nordeste_australiana",
+   "habitat": "rio",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "anaconda-longitud": {
+   "searches": 23,
+   "ok": true,
+   "region": "sa_llanos_del_orinoco",
+   "habitat": "rio",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "sapo-pulga-tamano": {
+   "searches": 2588,
+   "ok": true,
+   "region": "sa_cerrado_brasileno",
+   "habitat": "bosque",
+   "time": "dia",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "colibri-abeja-tamano": {
+   "searches": 13,
+   "ok": true,
+   "region": "gm06_antillas",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "colibri-abeja-aleteo": {
+   "searches": 108,
+   "ok": true,
+   "region": "gm06_antillas",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "murcielago-abejorro-tamano": {
+   "searches": 684,
+   "ok": true,
+   "region": "HX-06-17",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "cachalote-profundidad": {
+   "searches": 5,
+   "ok": true,
+   "region": "mar_pacifico_nororiental",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "zifio-inmersion": {
+   "searches": 572,
+   "ok": true,
+   "region": "mar_atlantico_septentrional",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pinguino-emperador-inmersion": {
+   "searches": 5,
+   "ok": true,
+   "region": "polar_hielo_antartico_occidental",
+   "habitat": "banquisa_antartica",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "elefante-marino-profundidad": {
+   "searches": 65,
+   "ok": true,
+   "region": "polar_hielo_antartico_costero",
+   "habitat": "banquisa_antartica",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "condor-altitud": {
+   "searches": 55,
+   "ok": true,
+   "region": "sa_andes_centrales",
+   "habitat": "montana",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "aguila-real-altitud": {
+   "searches": 91,
+   "ok": true,
+   "region": "HX-02-09",
+   "habitat": "montana",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "charran-migracion": {
+   "searches": 17,
+   "ok": true,
+   "region": "polar_hielo_artico_occidental",
+   "habitat": "banquisa_artica",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pardela-migracion": {
+   "searches": 7,
+   "ok": true,
+   "region": "mar_pacifico_austral",
+   "habitat": "archipielago",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "tiburon-groenlandia-longevidad": {
+   "searches": 74,
+   "ok": true,
+   "region": "polar_hielo_artico_occidental",
+   "habitat": "agua_polar",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "tortuga-aldabra-longevidad": {
+   "searches": 19,
+   "ok": true,
+   "region": "HX-07-14",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "cobra-escupidora-precision": {
+   "searches": 899,
+   "ok": true,
+   "region": "HX-11-10",
+   "habitat": "pradera",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "emparrado-decorado": {
+   "searches": 2028,
+   "ok": true,
+   "region": "oc_australia_oriental",
+   "habitat": "bosque",
+   "time": "dia",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "chimpance-herramientas": {
+   "searches": 103,
+   "ok": true,
+   "region": "HX-08-11",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "cuervo-nc-herramientas": {
+   "searches": 324,
+   "ok": true,
+   "region": "gm06_melanesia",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "cuervo-problemas": {
+   "searches": 3,
+   "ok": true,
+   "region": "HX-01-05",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "ave-lira-imitacion": {
+   "searches": 95,
+   "ok": true,
+   "region": "oc_australia_oriental",
+   "habitat": "bosque",
+   "time": "dia",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pulpo-camuflaje": {
+   "searches": 19,
+   "ok": true,
+   "region": "mar_atlantico_septentrional",
+   "habitat": "arrecife",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pulpo-coco-refugio": {
+   "searches": 12,
+   "ok": true,
+   "region": "mar_mar_tropical_asiatico",
+   "habitat": "arrecife",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "orca-caza-cooperativa": {
+   "searches": 199,
+   "ok": true,
+   "region": "mar_atlantico_septentrional",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pavo-real-cortejo": {
+   "searches": 53,
+   "ok": true,
+   "region": "HX-05-16",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "castor-dique": {
+   "searches": 52,
+   "ok": true,
+   "region": "HX-02-11",
+   "habitat": "rio",
+   "time": "atardecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pez-volador-planeo": {
+   "searches": 163,
+   "ok": true,
+   "region": "mar_oceano_indico_tropical",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "nutria-marina-piedras": {
+   "searches": 51,
+   "ok": true,
+   "region": "HX-03-18",
+   "habitat": "costa",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "jorobada-burbujas": {
+   "searches": 406,
+   "ok": true,
+   "region": "mar_atlantico_septentrional",
+   "habitat": "oceano_abierto",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "buey-almizclero-defensa": {
+   "searches": 76,
+   "ok": true,
+   "region": "HX-01-05",
+   "habitat": "tundra",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "tejedor-nido": {
+   "searches": 87,
+   "ok": true,
+   "region": "HX-08-08",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "ardilla-voladora-planeo": {
+   "searches": 184,
+   "ok": true,
+   "region": "HX-02-13",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "geco-hoja-camuflaje": {
+   "searches": 318,
+   "ok": true,
+   "region": "HX-09-14",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "manual"
+  },
+  "pez-hacha-bioluminiscencia": {
+   "searches": 49,
+   "ok": true,
+   "region": "profundo_atlantico_profundo_norte",
+   "habitat": "columna_mesopelagica",
+   "time": "amanecer",
+   "season": "primavera",
+   "method": "sondeo (automático)"
+  },
+  "urogallo-cantadero": {
+   "searches": 856,
+   "ok": true,
+   "region": "HX-01-11",
+   "habitat": "bosque",
+   "time": "amanecer",
+   "season": "verano",
+   "method": "manual"
+  },
+  "emperador-incubacion": {
+   "searches": 51,
+   "ok": true,
+   "region": "polar_hielo_antartico_occidental",
+   "habitat": "banquisa_antartica",
+   "time": "amanecer",
+   "season": "invierno",
+   "method": "manual"
+  }
+ },
+ "arteNuevo": 43,
+ "arteReutiliza": 45,
+ "entradas": {
+  "guepardo-velocidad": {
+   "kind": "record",
+   "species": "af_guepardo",
+   "regions": [
+    "HX-07-10",
+    "HX-10-10",
+    "HX-09-09",
+    "HX-08-12",
+    "HX-07-11"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "estepa"
+   ],
+   "plausibility": {
+    "min": 50,
+    "max": 120,
+    "pThreshold": 0.0657,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 209,
+    "ok": true,
+    "region": "HX-07-10",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "halcon-picada": {
+   "kind": "record",
+   "species": "na_esp_falco_peregrinus",
+   "regions": [
+    "HX-01-05",
+    "HX-02-04",
+    "HX-03-03"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "montana",
+    "costa"
+   ],
+   "plausibility": {
+    "min": 120,
+    "max": 350,
+    "pThreshold": 0.0984,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 106,
+    "ok": true,
+    "region": "HX-01-05",
+    "habitat": "montana",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pez-vela-velocidad": {
+   "kind": "record",
+   "species": "mar_esp_istiophorus_platypterus",
+   "regions": [
+    "mar_oceano_indico_tropical"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto"
+   ],
+   "plausibility": {
+    "min": 12,
+    "max": 55,
+    "pThreshold": 0.0212,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 194,
+    "ok": true,
+    "region": "mar_oceano_indico_tropical",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "berrendo-carrera": {
+   "kind": "record",
+   "species": "na_esp_antilocapra_americana",
+   "regions": [
+    "HX-02-05"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "estepa"
+   ],
+   "plausibility": {
+    "min": 35,
+    "max": 88,
+    "pThreshold": 0.01065,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 4669,
+    "ok": true,
+    "region": "HX-02-05",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "liebre-carrera": {
+   "kind": "record",
+   "species": "liebre_europea",
+   "regions": [
+    "HX-03-09"
+   ],
+   "times": [
+    "amanecer",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "bosque"
+   ],
+   "plausibility": {
+    "min": 30,
+    "max": 72,
+    "pThreshold": 0.05635,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 753,
+    "ok": true,
+    "region": "HX-03-09",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "ballena-azul-longitud": {
+   "kind": "record",
+   "species": "mar_esp_balaenoptera_musculus",
+   "regions": [
+    "mar_atlantico_septentrional",
+    "mar_pacifico_austral",
+    "mar_oceano_austral_central"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto",
+    "mar_austral"
+   ],
+   "plausibility": {
+    "min": 18,
+    "max": 30,
+    "pThreshold": 0.05825,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 157,
+    "ok": true,
+    "region": "mar_atlantico_septentrional",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "elefante-masa": {
+   "kind": "record",
+   "species": "af_elefante_sabana",
+   "regions": [
+    "HX-07-10",
+    "HX-09-11",
+    "HX-10-09",
+    "HX-09-09",
+    "HX-11-10"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "rio"
+   ],
+   "plausibility": {
+    "min": 2.5,
+    "max": 8,
+    "pThreshold": 0.039,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 456,
+    "ok": true,
+    "region": "HX-07-10",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "jirafa-altura": {
+   "kind": "record",
+   "species": "af_jirafa",
+   "regions": [
+    "HX-07-10",
+    "HX-07-08",
+    "HX-11-10"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "estepa"
+   ],
+   "plausibility": {
+    "min": 4,
+    "max": 5.9,
+    "pThreshold": 0.04345,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 70,
+    "ok": true,
+    "region": "HX-07-10",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "cocodrilo-longitud": {
+   "kind": "record",
+   "species": "oc_esp_crocodylus_porosus",
+   "regions": [
+    "oc_costa_nordeste_australiana",
+    "oc_norte_tropical_australiano"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "rio",
+    "humedal",
+    "costa"
+   ],
+   "plausibility": {
+    "min": 3,
+    "max": 6.3,
+    "pThreshold": 0.02785,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 91,
+    "ok": true,
+    "region": "oc_costa_nordeste_australiana",
+    "habitat": "rio",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "anaconda-longitud": {
+   "kind": "record",
+   "species": "sa_esp_eunectes_murinus",
+   "regions": [
+    "sa_llanos_del_orinoco",
+    "sa_amazonia"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "rio",
+    "humedal"
+   ],
+   "plausibility": {
+    "min": 2.5,
+    "max": 5.6,
+    "pThreshold": 0.0261,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 23,
+    "ok": true,
+    "region": "sa_llanos_del_orinoco",
+    "habitat": "rio",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "sapo-pulga-tamano": {
+   "kind": "record",
+   "species": "sa_esp_brachycephalus_pulex",
+   "regions": [
+    "sa_cerrado_brasileno"
+   ],
+   "times": [
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": {
+    "min": 7.5,
+    "max": 11,
+    "pThreshold": 0.10725,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 2588,
+    "ok": true,
+    "region": "sa_cerrado_brasileno",
+    "habitat": "bosque",
+    "time": "dia",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "colibri-abeja-tamano": {
+   "kind": "record",
+   "species": "gm06_mellisuga_helenae",
+   "regions": [
+    "gm06_antillas"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "selva"
+   ],
+   "plausibility": {
+    "min": 5.01,
+    "max": 6.3,
+    "pThreshold": 0.10095,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 13,
+    "ok": true,
+    "region": "gm06_antillas",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "colibri-abeja-aleteo": {
+   "kind": "record",
+   "species": "gm06_mellisuga_helenae",
+   "regions": [
+    "gm06_antillas"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "selva"
+   ],
+   "plausibility": {
+    "min": 55,
+    "max": 85,
+    "pThreshold": 0.0577,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 108,
+    "ok": true,
+    "region": "gm06_antillas",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "murcielago-abejorro-tamano": {
+   "kind": "record",
+   "species": "asia_esp_craseonycteris_thonglongyai",
+   "regions": [
+    "HX-06-17"
+   ],
+   "times": [
+    "amanecer",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": {
+    "min": 28,
+    "max": 34,
+    "pThreshold": 0.12155,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 684,
+    "ok": true,
+    "region": "HX-06-17",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "cachalote-profundidad": {
+   "kind": "record",
+   "species": "mar_esp_physeter_macrocephalus",
+   "regions": [
+    "mar_pacifico_nororiental",
+    "mar_indico_meridional",
+    "mar_atlantico_austral"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto"
+   ],
+   "plausibility": {
+    "min": 300,
+    "max": 2220,
+    "pThreshold": 0.00055,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 5,
+    "ok": true,
+    "region": "mar_pacifico_nororiental",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "zifio-inmersion": {
+   "kind": "record",
+   "species": "mar_esp_ziphius_cavirostris",
+   "regions": [
+    "mar_atlantico_septentrional",
+    "mar_pacifico_austral"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto",
+    "mar_austral"
+   ],
+   "plausibility": {
+    "min": 20,
+    "max": 150,
+    "pThreshold": 0.00965,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 572,
+    "ok": true,
+    "region": "mar_atlantico_septentrional",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pinguino-emperador-inmersion": {
+   "kind": "record",
+   "species": "polar_esp_aptenodytes_forsteri",
+   "regions": [
+    "polar_hielo_antartico_occidental",
+    "polar_hielo_antartico_central",
+    "polar_hielo_antartico_costero",
+    "polar_hielo_antartico_oriental",
+    "mar_oceano_austral_central"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "banquisa_antartica",
+    "costa_antartica"
+   ],
+   "plausibility": {
+    "min": 40,
+    "max": 560,
+    "pThreshold": 0.00275,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 5,
+    "ok": true,
+    "region": "polar_hielo_antartico_occidental",
+    "habitat": "banquisa_antartica",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "elefante-marino-profundidad": {
+   "kind": "record",
+   "species": "polar_esp_mirounga_leonina",
+   "regions": [
+    "polar_hielo_antartico_costero",
+    "mar_oceano_austral_occidental",
+    "mar_oceano_austral_central"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "banquisa_antartica",
+    "agua_polar"
+   ],
+   "plausibility": {
+    "min": 100,
+    "max": 1918,
+    "pThreshold": 0.0047,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 65,
+    "ok": true,
+    "region": "polar_hielo_antartico_costero",
+    "habitat": "banquisa_antartica",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "condor-altitud": {
+   "kind": "record",
+   "species": "sa_esp_vultur_gryphus",
+   "regions": [
+    "sa_andes_centrales",
+    "sa_andes_del_norte",
+    "sa_patagonia_y_tierra_del_fuego"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "montana",
+    "estepa",
+    "costa"
+   ],
+   "plausibility": {
+    "min": 1500,
+    "max": 6500,
+    "pThreshold": 0.01325,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 55,
+    "ok": true,
+    "region": "sa_andes_centrales",
+    "habitat": "montana",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "aguila-real-altitud": {
+   "kind": "record",
+   "species": "aguila_real",
+   "regions": [
+    "HX-02-09",
+    "HX-03-12",
+    "HX-03-13",
+    "HX-03-15",
+    "HX-04-14",
+    "HX-04-15",
+    "HX-07-13",
+    "HX-01-05",
+    "HX-02-04"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono"
+   ],
+   "habitats": [
+    "montana"
+   ],
+   "plausibility": {
+    "min": 800,
+    "max": 4800,
+    "pThreshold": 0.0219,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 91,
+    "ok": true,
+    "region": "HX-02-09",
+    "habitat": "montana",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "charran-migracion": {
+   "kind": "record",
+   "species": "polar_esp_sterna_paradisaea",
+   "regions": [
+    "polar_hielo_artico_occidental",
+    "polar_hielo_artico_oriental",
+    "mar_oceano_austral_central"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "banquisa_artica",
+    "agua_polar"
+   ],
+   "plausibility": {
+    "min": 71000,
+    "max": 71000,
+    "pThreshold": 1,
+    "regionsNeeded": 3
+   },
+   "problems": [],
+   "witness": {
+    "searches": 17,
+    "ok": true,
+    "region": "polar_hielo_artico_occidental",
+    "habitat": "banquisa_artica",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pardela-migracion": {
+   "kind": "record",
+   "species": "mar_esp_ardenna_grisea",
+   "regions": [
+    "mar_pacifico_austral",
+    "mar_oceano_austral_occidental"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "archipielago",
+    "mar_austral"
+   ],
+   "plausibility": {
+    "min": 64000,
+    "max": 64000,
+    "pThreshold": 1,
+    "regionsNeeded": 2
+   },
+   "problems": [],
+   "witness": {
+    "searches": 7,
+    "ok": true,
+    "region": "mar_pacifico_austral",
+    "habitat": "archipielago",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "tiburon-groenlandia-longevidad": {
+   "kind": "record",
+   "species": "polar_esp_somniosus_microcephalus",
+   "regions": [
+    "polar_hielo_artico_occidental",
+    "profundo_atlantico_profundo_norte"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "agua_polar"
+   ],
+   "plausibility": {
+    "min": 80,
+    "max": 400,
+    "pThreshold": 0.16165,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 74,
+    "ok": true,
+    "region": "polar_hielo_artico_occidental",
+    "habitat": "agua_polar",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "tortuga-aldabra-longevidad": {
+   "kind": "record",
+   "species": "af_tortuga_aldabra",
+   "regions": [
+    "HX-07-14"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "bosque",
+    "costa"
+   ],
+   "plausibility": {
+    "min": 40,
+    "max": 190,
+    "pThreshold": 0.0503,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 19,
+    "ok": true,
+    "region": "HX-07-14",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "cobra-escupidora-precision": {
+   "kind": "record",
+   "species": "af_xlsx_131_naja_mossambica",
+   "regions": [
+    "HX-11-10"
+   ],
+   "times": [
+    "amanecer",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "pradera",
+    "estepa"
+   ],
+   "plausibility": {
+    "min": 1,
+    "max": 3,
+    "pThreshold": 0.2708,
+    "regionsNeeded": null
+   },
+   "problems": [],
+   "witness": {
+    "searches": 899,
+    "ok": true,
+    "region": "HX-11-10",
+    "habitat": "pradera",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "emparrado-decorado": {
+   "kind": "behavior",
+   "species": "oc_esp_ptilonorhynchus_violaceus",
+   "regions": [
+    "oc_australia_oriental"
+   ],
+   "times": [
+    "dia"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "pradera"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 2028,
+    "ok": true,
+    "region": "oc_australia_oriental",
+    "habitat": "bosque",
+    "time": "dia",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "chimpance-herramientas": {
+   "kind": "behavior",
+   "species": "af_chimpance",
+   "regions": [
+    "HX-08-11",
+    "HX-08-08",
+    "HX-09-11"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 103,
+    "ok": true,
+    "region": "HX-08-11",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "cuervo-nc-herramientas": {
+   "kind": "behavior",
+   "species": "gm06_corvus_moneduloides",
+   "regions": [
+    "gm06_melanesia"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 324,
+    "ok": true,
+    "region": "gm06_melanesia",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "cuervo-problemas": {
+   "kind": "behavior",
+   "species": "na_esp_corvus_corax",
+   "regions": [
+    "HX-01-05",
+    "HX-02-04",
+    "HX-02-06"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "tundra"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 3,
+    "ok": true,
+    "region": "HX-01-05",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "ave-lira-imitacion": {
+   "kind": "behavior",
+   "species": "oc_esp_menura_novaehollandiae",
+   "regions": [
+    "oc_australia_oriental"
+   ],
+   "times": [
+    "dia"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "pradera"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 95,
+    "ok": true,
+    "region": "oc_australia_oriental",
+    "habitat": "bosque",
+    "time": "dia",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pulpo-camuflaje": {
+   "kind": "behavior",
+   "species": "mar_esp_octopus_vulgaris",
+   "regions": [
+    "mar_atlantico_septentrional"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "arrecife",
+    "costa_marina"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 19,
+    "ok": true,
+    "region": "mar_atlantico_septentrional",
+    "habitat": "arrecife",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pulpo-coco-refugio": {
+   "kind": "behavior",
+   "species": "mar_esp_amphioctopus_marginatus",
+   "regions": [
+    "mar_mar_tropical_asiatico",
+    "mar_archipielagos_tropicales"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "arrecife",
+    "costa_marina"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 12,
+    "ok": true,
+    "region": "mar_mar_tropical_asiatico",
+    "habitat": "arrecife",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "orca-caza-cooperativa": {
+   "kind": "behavior",
+   "species": "mar_esp_orcinus_orca",
+   "regions": [
+    "mar_atlantico_septentrional",
+    "mar_pacifico_noroccidental",
+    "mar_pacifico_nororiental",
+    "mar_pacifico_austral",
+    "mar_atlantico_austral",
+    "mar_oceano_austral_occidental",
+    "mar_oceano_austral_central",
+    "mar_pacifico_suroccidental"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto",
+    "mar_austral"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 199,
+    "ok": true,
+    "region": "mar_atlantico_septentrional",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pavo-real-cortejo": {
+   "kind": "behavior",
+   "species": "asia_esp_0410",
+   "regions": [
+    "HX-05-16"
+   ],
+   "times": [
+    "amanecer",
+    "dia"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 53,
+    "ok": true,
+    "region": "HX-05-16",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "castor-dique": {
+   "kind": "behavior",
+   "species": "castor_europeo",
+   "regions": [
+    "HX-02-11",
+    "HX-03-09",
+    "HX-03-11",
+    "HX-02-13"
+   ],
+   "times": [
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "rio",
+    "costa"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 52,
+    "ok": true,
+    "region": "HX-02-11",
+    "habitat": "rio",
+    "time": "atardecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pez-volador-planeo": {
+   "kind": "behavior",
+   "species": "mar_esp_exocoetus_volitans",
+   "regions": [
+    "mar_oceano_indico_tropical",
+    "mar_archipielagos_tropicales"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto",
+    "arrecife"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 163,
+    "ok": true,
+    "region": "mar_oceano_indico_tropical",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "nutria-marina-piedras": {
+   "kind": "behavior",
+   "species": "asia_esp_0177",
+   "regions": [
+    "HX-03-18",
+    "mar_pacifico_noroccidental",
+    "mar_pacifico_nororiental"
+   ],
+   "times": [
+    "amanecer",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "costa",
+    "rio"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 51,
+    "ok": true,
+    "region": "HX-03-18",
+    "habitat": "costa",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "jorobada-burbujas": {
+   "kind": "behavior",
+   "species": "mar_esp_megaptera_novaeangliae",
+   "regions": [
+    "mar_atlantico_septentrional",
+    "mar_indico_meridional",
+    "mar_pacifico_austral",
+    "mar_oceano_austral_occidental"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "oceano_abierto",
+    "mar_austral"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 406,
+    "ok": true,
+    "region": "mar_atlantico_septentrional",
+    "habitat": "oceano_abierto",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "buey-almizclero-defensa": {
+   "kind": "behavior",
+   "species": "na_esp_ovibos_moschatus",
+   "regions": [
+    "HX-01-05",
+    "HX-02-06"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "tundra"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 76,
+    "ok": true,
+    "region": "HX-01-05",
+    "habitat": "tundra",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "tejedor-nido": {
+   "kind": "behavior",
+   "species": "af_xlsx_131_ploceus_cucullatus",
+   "regions": [
+    "HX-08-08",
+    "HX-09-11"
+   ],
+   "times": [
+    "amanecer",
+    "dia"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "humedal",
+    "pradera"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 87,
+    "ok": true,
+    "region": "HX-08-08",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "ardilla-voladora-planeo": {
+   "kind": "behavior",
+   "species": "asia_esp_0843",
+   "regions": [
+    "HX-02-13",
+    "HX-03-14",
+    "HX-03-16"
+   ],
+   "times": [
+    "amanecer",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 184,
+    "ok": true,
+    "region": "HX-02-13",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "geco-hoja-camuflaje": {
+   "kind": "behavior",
+   "species": "af_xlsx_gecko_hoja",
+   "regions": [
+    "HX-09-14"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 318,
+    "ok": true,
+    "region": "HX-09-14",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "manual"
+   }
+  },
+  "pez-hacha-bioluminiscencia": {
+   "kind": "behavior",
+   "species": "deep_esp_argyropelecus_aculeatus",
+   "regions": [
+    "profundo_atlantico_profundo_norte",
+    "profundo_oceano_austral_profundo"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "primavera",
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "columna_mesopelagica",
+    "columna_profunda_fria"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 49,
+    "ok": true,
+    "region": "profundo_atlantico_profundo_norte",
+    "habitat": "columna_mesopelagica",
+    "time": "amanecer",
+    "season": "primavera",
+    "method": "sondeo (automático)"
+   }
+  },
+  "urogallo-cantadero": {
+   "kind": "behavior",
+   "species": "urogallo_comun",
+   "regions": [
+    "HX-01-11",
+    "HX-03-14",
+    "HX-02-15"
+   ],
+   "times": [
+    "amanecer"
+   ],
+   "seasons": [
+    "verano",
+    "otono",
+    "invierno"
+   ],
+   "habitats": [
+    "bosque",
+    "tundra",
+    "pradera"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 856,
+    "ok": true,
+    "region": "HX-01-11",
+    "habitat": "bosque",
+    "time": "amanecer",
+    "season": "verano",
+    "method": "manual"
+   }
+  },
+  "emperador-incubacion": {
+   "kind": "behavior",
+   "species": "polar_esp_aptenodytes_forsteri",
+   "regions": [
+    "polar_hielo_antartico_occidental",
+    "polar_hielo_antartico_central",
+    "polar_hielo_antartico_costero",
+    "polar_hielo_antartico_oriental",
+    "mar_oceano_austral_central"
+   ],
+   "times": [
+    "amanecer",
+    "dia",
+    "atardecer",
+    "noche"
+   ],
+   "seasons": [
+    "invierno"
+   ],
+   "habitats": [
+    "banquisa_antartica",
+    "costa_antartica"
+   ],
+   "plausibility": null,
+   "problems": [],
+   "witness": {
+    "searches": 51,
+    "ok": true,
+    "region": "polar_hielo_antartico_occidental",
+    "habitat": "banquisa_antartica",
+    "time": "amanecer",
+    "season": "invierno",
+    "method": "manual"
+   }
+  }
+ },
+ "supuesto": "Testigos: tras la progresión real, se fijan región, hábitat, hora y estación (sintético); el resultado es el del motor real."
+}

@@ -2,11 +2,29 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.6 Beta — MEC-06**, canal beta (rama `mec-06/v5.6.6-beta`, sobre MEC-05, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.7 Beta — MEC-07**, canal beta (rama `mec-07/v5.6.7-beta`, sobre MEC-06, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.6 Beta — MEC-06 (en revisión)
+## V5.6.7 Beta — MEC-07 (en revisión)
+
+La observación zoológica gana un registro de **récords naturales** y **conductas extraordinarias**: 25 hitos y 20 conductas, sobre especies reales del catálogo.
+
+- **Hitos:** velocidad, longitud, altura, masa, tamaño mínimo, profundidad, duración, altitud, migración, longevidad, frecuencia y precisión.
+- **Conductas:** herramientas, construcción, cortejo, camuflaje, planeo, caza cooperativa y otras.
+
+Así funcionan:
+
+- Salen de los avistamientos reales (manuales, automáticos, offline y sondeos), con una evaluación por especie observada.
+- Usan un generador aislado que no altera las probabilidades históricas.
+- Guardan la mejor marca global y regional, los hitos y las evidencias con validación instrumental.
+- Se integran en el Cuaderno y el Bestiario.
+
+El hito del guepardo se migra sin cambios. También corrige MEC-06: fuentes del índice, acceso cartográfico, cámara voluntaria, ingresos del Museo y normalización de instrumentos.
+
+Configuración en `www/js/mec07-natural-records.js`; informe en [docs/mec07](docs/mec07/README.md). Valores provisionales para BAL-01.
+
+## V5.6.6 Beta — MEC-06 (aprobada en auditoría externa)
 
 Los artefactos, componentes y materiales tienen funciones reales, conectadas con el Taller, el Museo y las expediciones:
 
@@ -138,6 +156,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.7 Beta | MEC-07: récords naturales y conductas extraordinarias | [docs/mec07](docs/mec07/README.md) |
 | 5.6.6 Beta | MEC-06: artefactos, materiales, instrumentos y Taller | [docs/mec06](docs/mec06/README.md) |
 | 5.6.5 Beta | MEC-05: Museo evolutivo, gabinetes y exposiciones funcionales | [docs/mec05](docs/mec05/README.md) |
 | 5.6.4 Beta | MEC-04: Sociedad científica, rangos y desbloqueos | [docs/mec04](docs/mec04/README.md) |

@@ -231,4 +231,63 @@ function workshopAudit(h,{exercise=true}={}){
  report.ok=!report.cycles.length&&Object.values(report.artifacts).every(a=>a.ok)&&Object.values(report.studies).every(x=>x.ok)&&Object.values(report.demos).every(x=>x.ok);
  return report;
 }
-module.exports={run,availability,caps,materialSources,publishable,commerceReach,workshopAudit,ASSUMPTIONS};
+
+// MEC-07 · auditoría de récords naturales y conductas. Comprueba con el catálogo cargado: especie,
+// regiones válidas, condiciones ambientales compatibles, método de observación, instrumento
+// accesible, plausibilidad del modelo, probabilidad positiva y un caso testigo con el motor real
+// (encuentros reales con semilla reproducible). No es una simulación económica ni temporal.
+function recordsAudit(h,{witness=true,maxSearches=25000,progress=true}={}){
+ const g=h.g,s=g.state,X7=h.x.AtlasMEC07;
+ // Estado de partida: la progresión real de run() (regiones, investigaciones, mapas); así los
+ // instrumentos y los sondeos se evalúan con su accesibilidad real, no con permisos sintéticos.
+ const prog=progress?run(h):null;const w=workshopAudit(h,{exercise:false});const out0={progress:prog&&{rank:prog.rank,regions:prog.visited,research:prog.research}};
+ const out={...out0,entries:{},ok:true,assumption:'Testigos: tras la progresión real, se fijan región, hábitat, hora y estación (sintético); el resultado es el del motor real.'};
+ const times=new Set(),seasons=new Set();for(const sp of Object.values(g.SPECIES)){for(const t of sp.times||[])times.add(t);for(const x of sp.seasons||[])seasons.add(x);}
+ const entries=[...X7.RECORDS.map(e=>['record',e]),...X7.BEHAVIORS.map(e=>['behavior',e])];
+ for(const [kind,e] of entries){
+  const sp=g.SPECIES[e.species],c=e.conditions||{},problems=[];
+  if(!sp)problems.push('especie inexistente');
+  const regions=g.REGIONS.filter(r=>(r.species||[]).includes(e.species));
+  if(!regions.length)problems.push('sin región');
+  const deepRegs=regions.filter(r=>g.deepRegionIndex3330.has(r.id)),fieldRegs=regions.filter(r=>!g.deepRegionIndex3330.has(r.id));
+  const usable=c.deep===true?deepRegs:c.deep===false?fieldRegs:regions;
+  if(!usable.length)problems.push('sin región compatible con el método ('+(c.deep?'sondeo':'campo')+')');
+  const tOK=(sp?.times||[]).filter(t=>!c.times||c.times.includes(t)),sOK=(sp?.seasons||[]).filter(x=>!c.seasons||c.seasons.includes(x));
+  const hOK=usable.flatMap(r=>(sp?.habitats||[]).filter(hh=>r.habitats.includes(hh)&&(!c.habitats||c.habitats.includes(hh))).map(hh=>[r.id,hh]));
+  if(!tOK.length)problems.push('sin horario compatible');if(!sOK.length)problems.push('sin estación compatible');if(!hOK.length&&c.deep!==true)problems.push('sin bioma compatible');
+  if(!(e.chance.manual>0&&e.chance.auto>0))problems.push('probabilidad no positiva');
+  let plaus=null;
+  if(kind==='record'){
+   const b=e.bounds,r=X7.rng('audit|'+e.id);let hits=0,min=Infinity,max=-Infinity;const need=e.model.kind==='evidencia-regiones'?Math.ceil((e.threshold-e.model.firstRegion)/e.model.perRegion)+1:0;
+   for(let i=0;i<20000;i++){const v=X7.generate(e,r,{evidenceRegions:need||1});if(v<min)min=v;if(v>max)max=v;if(X7.meets(e,v))hits++;}
+   if(min<b.min||max>b.max)problems.push('valores fuera de límites');
+   if(!(b.min<b.max)||e.threshold<b.min||e.threshold>b.max)problems.push('umbral fuera de límites');
+   if(e.model.kind==='evidencia-regiones'&&regions.length<need)problems.push('regiones insuficientes para la evidencia ('+regions.length+'/'+need+')');
+   if(!hits)problems.push('umbral inalcanzable');
+   plaus={min,max,pThreshold:hits/20000,regionsNeeded:need||null};
+   if(e.instrument&&!w.artifacts[e.instrument.id]?.ok)problems.push('instrumento no fabricable: '+e.instrument.id);
+  }
+  out.entries[e.id]={kind,species:e.species,regions:usable.map(r=>r.id),times:tOK,seasons:sOK,habitats:[...new Set(hOK.map(x=>x[1]))],plausibility:plaus,problems};
+  if(problems.length)out.ok=false;
+ }
+ if(witness){
+  out.deepReady={deepUnlocked:!!s.upgrades.deepUnlocked,abyssalUnlocked:!!s.upgrades.abyssalUnlocked,soundingKit:s.craftedItems?.sounding_kit===true};
+  const X3=h.x.AtlasMEC07Actions;let at=1790000000000+12345;
+  for(const [kind,e] of entries){
+   const info=out.entries[e.id];if(info.problems.length)continue;
+   const store=()=>kind==='record'?s.naturalRecords.records[e.id]:s.naturalRecords.behaviors[e.id];
+   const startCount=store()?.count||0;let searches=0;
+   const rid=info.regions[0],deep=g.deepRegionIndex3330.has(rid),hab=info.habitats[0]||g.REGIONS.find(r=>r.id===rid).habitats[0];
+   while((store()?.count||0)===startCount&&searches<maxSearches){
+    searches++;at+=61000;
+    if(deep){const seg={at,currentRegion:rid,season:info.seasons[0],habitat:hab,time:info.times[0],method:s.deepSurvey?.method||'sonda',interval:60000,end:at};
+     g.encounter('auto',at,true,{segment:seg,species:[e.species],choices:[e.species],weight:()=>1,hits:0});}
+    else{s.currentRegion=rid;s.habitat=hab;s.time=info.times[0];s.season=info.seasons[0];g.encounter('manual',at,true);}
+   }
+   info.witness={searches,ok:(store()?.count||0)>startCount,region:rid,habitat:hab,time:info.times[0],season:info.seasons[0],method:deep?'sondeo (automático)':'manual'};
+   if(!info.witness.ok){info.problems.push('testigo sin resultado en '+maxSearches+' búsquedas');out.ok=false;}
+  }
+ }
+ return out;
+}
+module.exports={run,availability,caps,materialSources,publishable,commerceReach,workshopAudit,recordsAudit,ASSUMPTIONS};
