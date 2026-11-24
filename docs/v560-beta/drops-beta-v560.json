@@ -14262,7 +14262,7 @@
    ]
   },
   {
-   "id": "NUM-13",
+   "id": "NUM-09",
    "name": "Estátero lidio",
    "tipo": "Coleccionable",
    "gab": "Historia",
@@ -14271,49 +14271,48 @@
    "cont": "Mundial",
    "origen": "Nuevo OBJ-12",
    "species": [
-    "na_esp_nasua_narica",
-    "sa_esp_ateles_belzebuth",
-    "oc_esp_paradisaea_apoda",
-    "na_esp_aix_sponsa",
-    "af_pangolin_temminck",
-    "sa_esp_leopardus_jacobita",
-    "sa_esp_hydrochoerus_hydrochaeris",
-    "asia_esp_0436",
-    "asia_esp_0853",
-    "sa_esp_rhinoderma_darwinii",
-    "sa_esp_tayassu_pecari",
-    "sa_esp_saguinus_imperator",
-    "sa_esp_chrysocyon_brachyurus",
-    "asia_esp_0861",
-    "na_esp_didelphis_marsupialis",
-    "asia_esp_0855",
-    "sa_esp_melanosuchus_niger",
-    "af_inseparable_lilian",
-    "oc_esp_dendrolagus_goodfellowi",
-    "na_esp_ambystoma_maculatum",
-    "asia_esp_0906",
-    "af_lechwe_rojo",
-    "gm06_pteropus_vampyrus",
+    "af_cernicalo_seychelles",
+    "asia_esp_0319",
+    "sa_esp_bothrops_alternatus",
     "asia_esp_0087",
-    "na_esp_dicrostonyx_groenlandicus",
-    "sa_esp_asio_flammeus",
-    "af_pangolin_gigante",
-    "af_mandril",
-    "asia_esp_0124",
-    "af_xlsx_garceta",
-    "af_galago",
-    "sa_esp_cariama_cristata",
-    "af_xlsx_131_colobus_polykomos",
-    "af_xlsx_rata_topo",
-    "sa_esp_anodorhynchus_hyacinthinus",
-    "na_esp_gopherus_agassizii",
     "oc_esp_harpyopsis_novaeguineae",
-    "oc_esp_pteropus_poliocephalus",
-    "af_chimpance",
-    "oc_esp_dasycercus_cristicauda",
-    "asia_esp_0867",
-    "af_gerenuc",
-    "asia_esp_0873"
+    "asia_esp_0176",
+    "af_xlsx_orix_beisa",
+    "sa_esp_cairina_moschata",
+    "na_esp_cebus_imitator",
+    "asia_esp_0855",
+    "na_esp_pharomachrus_mocinno",
+    "sa_esp_gastrotheca_riobambae",
+    "af_dikdik_guenther",
+    "asia_esp_0436",
+    "na_esp_nasua_narica",
+    "af_cobra_egipcia",
+    "af_xlsx_orix_cimitarra",
+    "asia_esp_0336",
+    "asia_esp_0833",
+    "oc_esp_rhipidura_fuliginosa",
+    "asia_esp_0249",
+    "oc_esp_wallabia_bicolor",
+    "asia_esp_0825",
+    "asia_esp_0218",
+    "af_loro_gris",
+    "af_lechwe_rojo",
+    "af_xlsx_131_neophron_percnopterus",
+    "af_mandril",
+    "asia_esp_0321",
+    "af_xlsx_131_schismaderma_carens",
+    "af_colobo",
+    "oc_esp_oxyuranus_scutellatus",
+    "oc_esp_dasyurus_viverrinus",
+    "na_esp_ursus_americanus",
+    "sa_esp_priodontes_maximus",
+    "gm06_chelonoidis_porteri",
+    "oc_esp_intellagama_lesueurii",
+    "af_gorila_occidental",
+    "af_xlsx_131_geosciurus_inauris",
+    "asia_esp_0344",
+    "asia_esp_0886",
+    "asia_esp_0834"
    ]
   },
   {
@@ -14331,23 +14330,27 @@
     "sa_esp_lama_guanicoe",
     "af_xlsx_rana_goliat",
     "sa_esp_crotalus_durissus",
+    "na_esp_aix_sponsa",
     "sa_esp_dendrobates_tinctorius",
     "asia_esp_0830",
     "af_xlsx_tilapia",
     "af_xlsx_131_phelsuma_grandis",
     "af_puku",
+    "sa_esp_cariama_cristata",
     "asia_esp_0905",
     "af_lemur_colaanillada",
     "na_esp_ambystoma_mexicanum",
     "af_leopardo",
-    "na_esp_pharomachrus_mocinno",
     "sa_esp_inia_boliviensis",
     "na_esp_ovis_canadensis",
     "af_indri",
     "asia_esp_0300",
     "af_sitatunga",
     "asia_esp_0165",
+    "sa_esp_hydrochoerus_hydrochaeris",
     "na_esp_caracara_plancus",
+    "sa_esp_chrysocyon_brachyurus",
+    "af_chimpance",
     "sa_esp_ozotoceros_bezoarticus",
     "af_xlsx_hipopotamo_pigmeo",
     "asia_esp_0910",
@@ -14360,19 +14363,15 @@
     "af_xlsx_131_chlorocebus_sabaeus",
     "na_esp_heloderma_suspectum",
     "af_xlsx_gato_dorado",
-    "af_xlsx_131_neophron_percnopterus",
     "oc_esp_cygnus_atratus",
+    "sa_esp_saguinus_imperator",
     "asia_esp_0863",
-    "sa_esp_cairina_moschata",
     "oc_esp_moloch_horridus",
     "asia_esp_0316",
+    "oc_esp_dendrolagus_goodfellowi",
     "af_fenec",
     "af_zorro_palido",
-    "af_civeta",
-    "oc_esp_pogona_vitticeps",
-    "sa_esp_ateles_paniscus",
-    "sa_esp_eunectes_murinus",
-    "asia_esp_0183"
+    "af_civeta"
    ]
   },
   {
@@ -14385,56 +14384,56 @@
    "cont": "Mundial",
    "origen": "Nuevo OBJ-12",
    "species": [
+    "af_xlsx_131_colobus_polykomos",
     "af_impala",
     "na_esp_erethizon_dorsatum",
     "na_esp_circus_hudsonius",
     "asia_esp_0864",
-    "asia_esp_0336",
+    "gm06_pteropus_vampyrus",
     "na_esp_hyalinobatrachium_fleischmanni",
-    "asia_esp_0344",
     "af_elefante_bosque",
     "na_esp_canis_latrans",
+    "na_esp_dicrostonyx_groenlandicus",
     "sa_esp_pseudoplatystoma_corruscans",
+    "af_pangolin_gigante",
     "oc_esp_vombatus_ursinus",
+    "sa_esp_ateles_belzebuth",
     "af_gorila_montana",
-    "af_dikdik_guenther",
     "asia_esp_0860",
     "af_xlsx_131_pandion_haliaetus",
     "oc_esp_gallirallus_australis",
     "asia_esp_0902",
-    "asia_esp_0833",
     "sa_esp_colossoma_macropomum",
     "na_esp_leptophis_ahaetulla",
+    "oc_esp_paradisaea_apoda",
     "oc_esp_ornithorhynchus_anatinus",
+    "af_xlsx_garceta",
     "na_esp_calypte_anna",
     "sa_esp_phoenicopterus_chilensis",
+    "af_galago",
+    "af_pangolin_temminck",
     "oc_esp_lophorina_superba",
     "af_xlsx_gacela_frente_roja",
-    "asia_esp_0319",
     "sa_esp_odontesthes_bonariensis",
-    "af_xlsx_131_geosciurus_inauris",
+    "sa_esp_asio_flammeus",
     "asia_esp_0911",
     "na_esp_cardinalis_cardinalis",
+    "oc_esp_dasycercus_cristicauda",
     "oc_esp_varanus_giganteus",
-    "af_cernicalo_seychelles",
     "af_guepardo",
     "asia_esp_0878",
+    "asia_esp_0867",
     "af_ibice_walia",
     "af_xlsx_topi",
+    "na_esp_gopherus_agassizii",
     "af_xlsx_boa_madagascar",
     "na_esp_basiliscus_plumifrons",
     "na_esp_lithobates_clamitans",
     "na_esp_mephitis_mephitis",
     "asia_esp_0062",
+    "sa_esp_rhinoderma_darwinii",
     "na_esp_lithobates_sylvaticus",
-    "oc_esp_cicinnurus_regius",
-    "asia_esp_0352",
-    "af_xlsx_131_bitis_arietans",
-    "na_esp_callipepla_californica",
-    "asia_esp_0251",
-    "oc_esp_morelia_viridis",
-    "asia_esp_0136",
-    "gm06_solenodon_paradoxus"
+    "oc_esp_cicinnurus_regius"
    ]
   },
   {
@@ -14450,38 +14449,38 @@
     "gm06_bubalus_depressicornis",
     "oc_esp_ninox_strenua",
     "af_fosa",
-    "na_esp_ursus_americanus",
     "asia_esp_0007",
     "na_esp_procyon_pygmaeus",
     "af_xlsx_131_mellivora_capensis",
     "asia_esp_0404",
-    "af_gorila_occidental",
-    "oc_esp_intellagama_lesueurii",
     "sa_esp_eunectes_notaeus",
     "oc_esp_notechis_scutatus",
+    "asia_esp_0873",
     "asia_esp_0061",
+    "af_inseparable_lilian",
     "af_abejaruco_carmin",
     "asia_esp_0859",
     "asia_esp_0465",
     "gm06_crocodylus_rhombifer",
-    "na_esp_cebus_imitator",
-    "oc_esp_rhipidura_fuliginosa",
     "sa_esp_harpia_harpyja",
+    "na_esp_didelphis_marsupialis",
     "af_serval",
     "af_xlsx_131_lupulella_mesomelas",
-    "asia_esp_0834",
     "oc_esp_aquila_audax",
     "asia_esp_0821",
-    "af_xlsx_orix_cimitarra",
-    "af_cobra_egipcia",
-    "sa_esp_bothrops_alternatus",
+    "sa_esp_leopardus_jacobita",
+    "sa_esp_eunectes_murinus",
+    "oc_esp_morelia_viridis",
     "na_esp_incilius_alvarius",
     "asia_esp_0519",
     "sa_esp_geranoaetus_melanoleucus",
-    "asia_esp_0176",
+    "asia_esp_0861",
     "oc_esp_trichosurus_vulpecula",
+    "asia_esp_0906",
     "af_rinoceronte_blanco",
-    "asia_esp_0149"
+    "asia_esp_0149",
+    "af_xlsx_131_circaetus_gallicus",
+    "af_turaco"
    ]
   },
   {
@@ -14497,19 +14496,19 @@
     "af_xlsx_131_corythaeola_cristata",
     "na_esp_vulpes_macrotis",
     "asia_esp_0102",
+    "oc_esp_pteropus_poliocephalus",
     "na_esp_puma_concolor",
     "na_esp_perisoreus_canadensis",
     "sa_esp_phyllobates_terribilis",
     "oc_esp_melopsittacus_undulatus",
-    "af_loro_gris",
     "oc_esp_petroica_australis",
+    "asia_esp_0124",
     "sa_esp_buteogallus_coronatus",
     "asia_esp_0503",
     "na_esp_marmota_flaviventris",
-    "oc_esp_dasyurus_viverrinus",
     "sa_esp_choloepus_didactylus",
     "asia_esp_0111",
-    "gm06_chelonoidis_porteri",
+    "sa_esp_tayassu_pecari",
     "af_xlsx_jirafa_reticulada",
     "af_dromedario",
     "asia_esp_0310",
@@ -14532,19 +14531,19 @@
    "species": [
     "af_xlsx_131_naja_mossambica",
     "asia_esp_0317",
+    "gm06_solenodon_paradoxus",
     "gm06_eunymphicus_cornutus",
-    "asia_esp_0321",
-    "oc_esp_oxyuranus_scutellatus",
-    "sa_esp_priodontes_maximus",
-    "sa_esp_gastrotheca_riobambae",
+    "sa_esp_ateles_paniscus",
     "na_esp_ovis_dalli",
-    "oc_esp_wallabia_bicolor",
     "af_xlsx_131_gyps_africanus",
     "af_grulla_carunculada",
     "sa_esp_mazama_americana",
     "asia_esp_0363",
-    "asia_esp_0218",
-    "af_turaco"
+    "oc_esp_pogona_vitticeps",
+    "af_xlsx_131_ploceus_cucullatus",
+    "oc_esp_varanus_salvadorii",
+    "af_nu_azul",
+    "oc_esp_sphenodon_punctatus"
    ]
   },
   {
@@ -14562,15 +14561,15 @@
     "af_xlsx_jerbo",
     "na_esp_oreamnos_americanus",
     "af_orix",
-    "af_xlsx_131_circaetus_gallicus",
     "na_esp_agalychnis_callidryas",
-    "af_xlsx_131_ploceus_cucullatus",
+    "sa_esp_melanosuchus_niger",
     "oc_esp_ptilonorhynchus_violaceus",
     "af_xlsx_131_hydrictis_maculicollis",
     "oc_esp_oxyuranus_microlepidotus",
-    "asia_esp_0825",
     "af_xlsx_cerdo_hormiguero",
-    "af_eland"
+    "af_xlsx_131_bitis_arietans",
+    "af_eland",
+    "na_esp_ateles_geoffroyi"
    ]
   },
   {
@@ -14586,10 +14585,10 @@
     "sa_esp_tamandua_tetradactyla",
     "af_xlsx_gacela_cuvier",
     "af_gacela_dorcas",
-    "oc_esp_sphenodon_punctatus",
     "asia_esp_0214",
-    "af_xlsx_131_schismaderma_carens",
-    "sa_esp_amazona_amazonica"
+    "sa_esp_amazona_amazonica",
+    "af_chacal_dorado",
+    "sa_esp_opisthocomus_hoazin"
    ]
   },
   {
@@ -14605,33 +14604,34 @@
     "asia_esp_0184",
     "sa_esp_chlamyphorus_truncatus",
     "na_esp_archilochus_colubris",
-    "af_chacal_dorado",
     "sa_esp_saimiri_sciureus",
+    "asia_esp_0352",
     "gm06_mellisuga_helenae",
     "asia_esp_0326",
     "af_xlsx_131_cercopithecus_diana",
+    "af_gerenuc",
     "na_esp_oncorhynchus_mykiss",
-    "asia_esp_0249",
     "sa_esp_dasypus_septemcinctus",
+    "sa_esp_anodorhynchus_hyacinthinus",
     "gm06_rhinoceros_sondaicus",
+    "asia_esp_0136",
     "sa_esp_pudella_mephistophiles",
     "sa_esp_colaptes_campestris",
-    "sa_esp_opisthocomus_hoazin",
-    "na_esp_ateles_geoffroyi",
-    "asia_esp_0886",
+    "af_xlsx_rata_topo",
     "na_esp_panthera_onca",
     "sa_esp_leopardus_colocola",
-    "oc_esp_varanus_salvadorii",
+    "na_esp_ambystoma_maculatum",
     "asia_esp_0030",
-    "af_colobo",
     "af_antilope_bongo",
     "asia_esp_0240",
     "af_geco_patas_palmeadas",
     "af_cebra_llanura",
+    "na_esp_callipepla_californica",
     "asia_esp_0351",
     "asia_esp_0431",
-    "af_xlsx_orix_beisa",
-    "af_nu_azul",
+    "asia_esp_0853",
+    "asia_esp_0251",
+    "asia_esp_0183",
     "af_asno_somali",
     "oc_esp_phylidonyris_novaehollandiae",
     "sa_esp_agelaioides_badius",
@@ -14650,8 +14650,7 @@
     "oc_esp_ranoidea_caerulea",
     "gm06_lorius_garrulus",
     "af_xlsx_131_neophron_percnopterus",
-    "sa_esp_bothrops_alternatus",
-    "af_xlsx_131_aquila_fasciata"
+    "sa_esp_bothrops_alternatus"
    ]
   },
   {
@@ -14747,14 +14746,14 @@
     "af_sitatunga",
     "sa_esp_chlamyphorus_truncatus",
     "asia_esp_0494",
+    "af_xlsx_131_aquila_fasciata",
     "af_xlsx_131_hydrictis_maculicollis",
     "na_esp_aix_sponsa",
     "oc_esp_apteryx_haastii",
     "gm06_rhinoceros_sondaicus",
     "asia_esp_0833",
     "af_macaco_berberia",
-    "asia_esp_0414",
-    "sa_esp_euphractus_sexcinctus"
+    "asia_esp_0414"
    ]
   },
   {
@@ -14819,6 +14818,7 @@
    "species": [
     "af_xlsx_131_lepus_capensis",
     "oc_esp_oxyuranus_scutellatus",
+    "sa_esp_euphractus_sexcinctus",
     "af_mono_brazza",
     "na_esp_dicotyles_tajacu",
     "na_esp_lithobates_sylvaticus",
@@ -14833,8 +14833,7 @@
     "sa_esp_eunectes_notaeus",
     "oc_esp_wallabia_bicolor",
     "na_esp_sylvilagus_audubonii",
-    "af_piton_africana",
-    "gm06_eunymphicus_cornutus"
+    "af_piton_africana"
    ]
   },
   {
@@ -15203,6 +15202,7 @@
     "sa_esp_opisthocomus_hoazin",
     "sa_esp_colaptes_campestris",
     "asia_esp_0067",
+    "gm06_eunymphicus_cornutus",
     "af_xlsx_garceta",
     "sa_esp_pteroglossus_torquatus",
     "sa_esp_campephilus_magellanicus",
@@ -15243,8 +15243,7 @@
     "sa_esp_ramphastos_tucanus",
     "oc_esp_gymnorhina_tibicen",
     "sa_esp_rhea_pennata",
-    "af_inseparable_lilian",
-    "asia_esp_0863"
+    "af_inseparable_lilian"
    ]
   },
   {
@@ -15262,6 +15261,7 @@
     "gm06_rhynochetos_jubatus",
     "oc_esp_rhipidura_fuliginosa",
     "na_esp_ara_macao",
+    "asia_esp_0863",
     "na_esp_corvus_corax",
     "asia_esp_0886",
     "gm06_amazona_leucocephala",
@@ -15286,8 +15286,7 @@
     "oc_esp_apteryx_mantelli",
     "sa_esp_ara_chloropterus",
     "na_esp_callipepla_californica",
-    "oc_esp_phylidonyris_novaehollandiae",
-    "af_xlsx_martin_pio"
+    "oc_esp_phylidonyris_novaehollandiae"
    ]
   },
   {
@@ -15990,11 +15989,11 @@
     "gm06_bubalus_depressicornis",
     "mar_esp_dissostichus_eleginoides",
     "asia_esp_0830",
+    "af_xlsx_martin_pio",
     "sa_esp_electrophorus_electricus",
     "oc_esp_acanthophis_antarcticus",
     "sa_esp_lycalopex_culpaeus",
-    "asia_esp_0533",
-    "af_xlsx_geco_desierto"
+    "asia_esp_0533"
    ]
   },
   {
@@ -16251,463 +16250,6 @@
    ]
   },
   {
-   "id": "RAR-01",
-   "name": "Bezoar",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "af_arrui",
-    "oc_esp_ninox_strenua",
-    "asia_esp_0860",
-    "sa_esp_caiman_yacare",
-    "na_esp_cuniculus_paca",
-    "mar_esp_mola_mola",
-    "asia_esp_0899",
-    "oc_esp_crocodylus_johnstoni",
-    "asia_esp_0296",
-    "asia_esp_0111",
-    "gm06_pteroptochos_tarnii",
-    "af_manta_gigante",
-    "sa_esp_hippocamelus_bisulcus",
-    "gm06_dromiciops_gliroides",
-    "na_esp_ambystoma_tigrinum",
-    "mar_esp_balaenoptera_physalus",
-    "na_esp_dipodomys_merriami",
-    "na_esp_dicotyles_tajacu",
-    "af_xlsx_131_madoqua_saltiana",
-    "asia_esp_0852",
-    "af_mangosta_enana",
-    "af_puku",
-    "gm06_rhinoceros_sondaicus",
-    "af_xlsx_131_colobus_polykomos",
-    "sa_esp_cariama_cristata",
-    "asia_esp_0519",
-    "na_esp_leptophis_ahaetulla",
-    "sa_esp_pudu_puda",
-    "na_esp_myrmecophaga_tridactyla",
-    "sa_esp_lagidium_viscacia",
-    "sa_esp_cebus_olivaceus",
-    "gm06_solenodon_paradoxus",
-    "polar_esp_gonatus_fabricii",
-    "af_leon",
-    "na_esp_perca_flavescens",
-    "af_leopardo",
-    "asia_esp_0864",
-    "af_sitatunga",
-    "sa_esp_leopardus_jacobita",
-    "af_xlsx_131_equus_africanus",
-    "mar_esp_grampus_griseus",
-    "sa_esp_leopardus_colocola",
-    "af_xlsx_cerdo_hormiguero",
-    "asia_esp_0465",
-    "af_tortuga_aldabra",
-    "oc_esp_vombatus_ursinus",
-    "asia_esp_0206",
-    "af_mono_brazza",
-    "asia_esp_0050"
-   ]
-  },
-  {
-   "id": "RAR-02",
-   "name": "Alicornio",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "af_elefante_sabana",
-    "oc_esp_phascolarctos_cinereus",
-    "na_esp_puma_concolor",
-    "oc_esp_oxyuranus_microlepidotus",
-    "af_xlsx_131_phelsuma_grandis",
-    "oc_esp_hemiphaga_novaeseelandiae",
-    "sa_esp_ardea_cocoi",
-    "af_xlsx_131_hydrocynus_vittatus",
-    "asia_esp_0850",
-    "sa_esp_crotalus_durissus",
-    "asia_esp_0317",
-    "na_esp_haliaeetus_leucocephalus",
-    "asia_esp_0061",
-    "asia_esp_0877",
-    "asia_esp_0308",
-    "af_xlsx_131_agama_agama",
-    "oc_esp_ornithorhynchus_anatinus",
-    "sa_esp_dasypus_septemcinctus",
-    "na_esp_marmota_vancouverensis",
-    "na_esp_gopherus_agassizii",
-    "asia_esp_0318",
-    "af_xlsx_131_mellivora_capensis",
-    "af_suricata",
-    "oc_esp_trichosurus_vulpecula",
-    "oc_esp_spilocuscus_maculatus",
-    "asia_esp_0833",
-    "na_esp_brachylagus_idahoensis",
-    "sa_esp_symphysodon_aequifasciatus",
-    "sa_esp_inia_boliviensis",
-    "oc_esp_sarcophilus_harrisii",
-    "af_duiker_azul",
-    "sa_esp_chinchilla_lanigera",
-    "asia_esp_0901",
-    "sa_esp_phyllobates_terribilis",
-    "sa_esp_rhinoderma_darwinii",
-    "asia_esp_0404",
-    "af_okapi",
-    "mar_esp_istiophorus_platypterus",
-    "asia_esp_0401",
-    "af_xlsx_131_lupulella_mesomelas",
-    "asia_esp_0849"
-   ]
-  },
-  {
-   "id": "RAR-03",
-   "name": "Ámbar gris",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "af_babuino_hamadryas",
-    "mar_esp_trachurus_murphyi",
-    "af_xlsx_131_hystrix_africaeaustralis",
-    "af_lobo_etiope",
-    "af_xlsx_cocodrilo_enano",
-    "af_xlsx_lemur_rufo",
-    "gm06_conolophus_subcristatus",
-    "asia_esp_0856",
-    "sa_esp_bothrops_alternatus",
-    "af_licaon",
-    "oc_esp_crocodylus_novaeguineae",
-    "asia_esp_0073",
-    "af_antilope_bongo",
-    "na_esp_lemmus_trimucronatus",
-    "af_serval",
-    "na_esp_dicamptodon_tenebrosus",
-    "asia_esp_0442",
-    "na_esp_alligator_mississippiensis",
-    "mar_esp_gadus_morhua",
-    "na_esp_anser_caerulescens",
-    "oc_esp_varanus_giganteus",
-    "oc_esp_petaurus_breviceps",
-    "sa_esp_speothos_venaticus",
-    "asia_esp_0096",
-    "na_esp_lithobates_clamitans",
-    "af_xlsx_131_otocyon_megalotis",
-    "deep_esp_idiacanthus_antrostomus",
-    "asia_esp_0176",
-    "sa_esp_leopardus_geoffroyi",
-    "af_elefante_bosque",
-    "na_esp_corvus_corax",
-    "sa_esp_epicrates_cenchria",
-    "af_tenrec",
-    "af_xlsx_bonobo",
-    "na_esp_erethizon_dorsatum",
-    "na_esp_cebus_imitator",
-    "oc_esp_dactylopsila_trivirgata",
-    "af_xlsx_131_atelerix_algirus",
-    "sa_esp_tayassu_pecari",
-    "asia_esp_0441",
-    "af_xlsx_camaleon_parson",
-    "sa_esp_tremarctos_ornatus",
-    "na_esp_bubo_scandiacus",
-    "gm06_sula_variegata"
-   ]
-  },
-  {
-   "id": "RAR-04",
-   "name": "Piedra de sapo",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "af_xlsx_131_lepus_fagani",
-    "oc_esp_canis_familiaris",
-    "asia_esp_0194",
-    "na_esp_leopardus_wiedii",
-    "asia_esp_0333",
-    "gm06_chelonoidis_porteri",
-    "asia_esp_0321",
-    "af_xlsx_131_phataginus_tricuspis",
-    "sa_esp_vicugna_vicugna",
-    "oc_esp_pteropus_conspicillatus",
-    "na_esp_bradypus_variegatus",
-    "asia_esp_0857",
-    "na_esp_phrynosoma_cornutum",
-    "af_facoquero",
-    "sa_esp_blastocerus_dichotomus",
-    "asia_esp_0065",
-    "na_esp_lepus_americanus",
-    "na_esp_castor_canadensis",
-    "oc_esp_dendrolagus_goodfellowi",
-    "na_esp_crotalus_atrox",
-    "gm06_pongo_abelii",
-    "asia_esp_0165",
-    "na_esp_alouatta_palliata",
-    "asia_esp_0251",
-    "na_esp_boa_imperator",
-    "af_xlsx_131_bitis_arietans",
-    "sa_esp_aotus_trivirgatus",
-    "af_xlsx_131_sclerophrys_regularis",
-    "mar_esp_alopias_vulpinus",
-    "af_xlsx_gato_dorado",
-    "oc_esp_dendrolagus_lumholtzi",
-    "oc_esp_petauroides_volans"
-   ]
-  },
-  {
-   "id": "RAR-05",
-   "name": "Piedra de serpiente",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "sa_esp_melanosuchus_niger",
-    "sa_esp_hippocamelus_antisensis",
-    "sa_esp_chrysocyon_brachyurus",
-    "af_cobra_egipcia",
-    "sa_esp_liolaemus_atacamensis",
-    "asia_esp_0336",
-    "asia_esp_0184",
-    "na_esp_bison_bison",
-    "af_gorila_occidental",
-    "na_esp_nasua_narica",
-    "gm06_procavia_capensis",
-    "gm06_amblyrhynchus_cristatus",
-    "asia_esp_0395",
-    "sa_esp_inia_geoffrensis",
-    "asia_esp_0087",
-    "na_esp_hyalinobatrachium_fleischmanni",
-    "af_xlsx_sahara_buitre",
-    "mar_esp_halichoerus_grypus",
-    "af_xlsx_mamba_negra",
-    "sa_esp_ateles_paniscus",
-    "asia_esp_0523",
-    "sa_esp_crocodylus_intermedius",
-    "af_nyala_comun",
-    "na_esp_esox_lucius",
-    "deep_esp_benthosema_glaciale",
-    "af_xlsx_131_mungos_mungo",
-    "asia_esp_0527",
-    "af_xlsx_131_cephalophus_zebra",
-    "af_gecko_diurno",
-    "mar_esp_epinephelus_lanceolatus",
-    "af_xlsx_lemur_etc",
-    "asia_esp_0503",
-    "oc_esp_notechis_scutatus",
-    "na_esp_sorex_cinereus",
-    "asia_esp_0903",
-    "af_galago",
-    "af_xlsx_topi",
-    "sa_esp_paracheirodon_axelrodi",
-    "asia_esp_0214",
-    "na_esp_sciurus_carolinensis",
-    "oc_esp_morelia_spilota",
-    "af_xlsx_131_pantodon_buchholzi",
-    "oc_esp_varanus_salvadorii",
-    "asia_esp_0373",
-    "asia_esp_0102",
-    "gm06_zalophus_wollebaeki",
-    "asia_esp_0287",
-    "asia_esp_0086",
-    "na_esp_lynx_canadensis",
-    "na_esp_sylvilagus_floridanus"
-   ]
-  },
-  {
-   "id": "RAR-06",
-   "name": "Aetita",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Poco común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "sa_esp_atelocynus_microtis",
-    "asia_esp_0351",
-    "af_xlsx_alcefalo",
-    "polar_esp_pusa_hispida",
-    "asia_esp_0902",
-    "asia_esp_0355",
-    "na_esp_marmota_flaviventris",
-    "gm06_crocodylus_rhombifer",
-    "polar_esp_monodon_monoceros",
-    "af_xlsx_orix_cimitarra",
-    "af_indri",
-    "sa_esp_octodon_degus",
-    "af_gato_montes_africano",
-    "af_lemur_colaanillada",
-    "sa_esp_tolypeutes_tricinctus",
-    "af_xlsx_pez_tigre_goliat",
-    "sa_esp_ozotoceros_bezoarticus",
-    "asia_esp_0911"
-   ]
-  },
-  {
-   "id": "RAR-07",
-   "name": "Lengua de dragón",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Poco común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "af_zorro_palido",
-    "na_esp_spilogale_gracilis",
-    "asia_esp_0534",
-    "asia_esp_0906",
-    "sa_esp_blastocerus_dichotomus",
-    "na_esp_crotalus_viridis",
-    "asia_esp_0317",
-    "af_rinoceronte_blanco",
-    "af_caracal",
-    "asia_esp_0404",
-    "sa_esp_priodontes_maximus",
-    "mar_esp_balaenoptera_physalus",
-    "oc_esp_notamacropus_rufogriseus",
-    "na_esp_basiliscus_plumifrons",
-    "af_xlsx_orix_cimitarra"
-   ]
-  },
-  {
-   "id": "RAR-08",
-   "name": "Huevo de sirena",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Poco común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "abisal_esp_pseudoliparis_kermadecensis",
-    "asia_esp_0176",
-    "asia_esp_0854",
-    "oc_esp_nymphicus_hollandicus",
-    "sa_esp_jabiru_mycteria",
-    "af_indri",
-    "af_xlsx_varano_nilo",
-    "deep_esp_haliphron_atlanticus",
-    "gm06_macrocephalon_maleo",
-    "sa_esp_iguana_iguana",
-    "sa_esp_buteogallus_coronatus",
-    "gm06_phoebastria_irrorata",
-    "af_cebra_llanura",
-    "asia_esp_0062",
-    "mar_esp_arctocephalus_gazella",
-    "sa_esp_lycalopex_gymnocercus"
-   ]
-  },
-  {
-   "id": "RAR-09",
-   "name": "Almizcle",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Poco común",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "af_xlsx_geco_desierto",
-    "gm06_crocodylus_rhombifer",
-    "oc_esp_casuarius_casuarius",
-    "mar_esp_pomacanthus_imperator",
-    "sa_esp_salminus_brasiliensis",
-    "deep_esp_histioteuthis_reversa",
-    "oc_esp_crocodylus_porosus",
-    "oc_esp_dasyurus_viverrinus",
-    "na_esp_circus_hudsonius",
-    "oc_esp_morelia_spilota",
-    "oc_esp_assa_darlingtoni",
-    "sa_esp_aotus_trivirgatus",
-    "sa_esp_tayassu_pecari",
-    "af_fenec",
-    "sa_esp_ozotoceros_bezoarticus",
-    "na_esp_sylvilagus_audubonii",
-    "sa_esp_rhea_americana",
-    "na_esp_ara_militaris"
-   ]
-  },
-  {
-   "id": "RAR-10",
-   "name": "Basilisco",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Raro",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "mar_esp_ardenna_grisea",
-    "asia_esp_0383",
-    "asia_esp_0901",
-    "sa_esp_ensifera_ensifera",
-    "mar_esp_diomedea_exulans",
-    "na_esp_dasypus_novemcinctus",
-    "gm06_arctocephalus_australis",
-    "sa_esp_campephilus_magellanicus"
-   ]
-  },
-  {
-   "id": "RAR-11",
-   "name": "Sangre de dragón",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Raro",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "oc_esp_cicinnurus_regius",
-    "af_xlsx_gacela_thomson",
-    "af_xlsx_131_colobus_polykomos",
-    "sa_esp_harpia_harpyja",
-    "gm06_amblyrhynchus_cristatus",
-    "af_puku",
-    "asia_esp_0401",
-    "asia_esp_0905"
-   ]
-  },
-  {
-   "id": "RAR-12",
-   "name": "Colmillo apócrifo",
-   "tipo": "Coleccionable",
-   "gab": "Historia natural y exploración",
-   "col": "Rarezas y mitos",
-   "rar": "Raro",
-   "cont": "Mundial",
-   "origen": "Nuevo OBJ-12",
-   "species": [
-    "asia_esp_0844",
-    "asia_esp_0387",
-    "asia_esp_0371",
-    "asia_esp_0911",
-    "mar_esp_eumetopias_jubatus",
-    "gm06_solenodon_paradoxus",
-    "oc_esp_calyptorhynchus_banksii",
-    "af_piton_africana",
-    "na_esp_dryocopus_pileatus",
-    "af_lechwe_negro",
-    "mar_esp_clupea_harengus",
-    "na_esp_odocoileus_virginianus",
-    "na_esp_caracara_plancus",
-    "mar_esp_physeter_macrocephalus"
-   ]
-  },
-  {
    "id": "MAT-N01",
    "name": "Pluma tropical",
    "tipo": "Material animal",
@@ -16717,15 +16259,17 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
+    "oc_esp_hemiphaga_novaeseelandiae",
     "oc_esp_gymnorhina_tibicen",
     "oc_esp_cicinnurus_respublica",
     "oc_esp_aquila_audax",
+    "na_esp_caracara_plancus",
     "oc_esp_ptilonorhynchus_violaceus",
     "asia_esp_0067",
     "sa_esp_ramphastos_toco",
     "sa_esp_penelope_jacquacu",
     "na_esp_ramphastos_sulfuratus",
-    "oc_esp_hemiphaga_novaeseelandiae",
+    "oc_esp_casuarius_casuarius",
     "oc_esp_phylidonyris_novaehollandiae",
     "na_esp_ara_macao",
     "sa_esp_ara_chloropterus",
@@ -16734,13 +16278,11 @@
     "sa_esp_ramphastos_tucanus",
     "oc_esp_harpyopsis_novaeguineae",
     "sa_esp_andigena_hypoglauca",
+    "oc_esp_cicinnurus_regius",
     "asia_esp_0868",
     "oc_esp_neophema_chrysogaster",
     "gm06_crax_rubra",
-    "oc_esp_lophorina_superba",
-    "oc_esp_nestor_notabilis",
-    "sa_esp_ara_ararauna",
-    "na_esp_pharomachrus_mocinno"
+    "oc_esp_lophorina_superba"
    ]
   },
   {
@@ -16753,33 +16295,33 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
+    "na_esp_anser_caerulescens",
+    "af_xlsx_sahara_buitre",
+    "na_esp_haliaeetus_leucocephalus",
+    "na_esp_bubo_scandiacus",
+    "asia_esp_0864",
+    "gm06_pteroptochos_tarnii",
+    "asia_esp_0877",
+    "asia_esp_0296",
+    "oc_esp_ninox_strenua",
+    "asia_esp_0503",
+    "sa_esp_cariama_cristata",
+    "sa_esp_ardea_cocoi",
+    "na_esp_corvus_corax",
+    "gm06_sula_variegata",
+    "asia_esp_0287",
     "sa_esp_vultur_gryphus",
+    "sa_esp_harpia_harpyja",
     "polar_esp_pagodroma_nivea",
     "asia_esp_0891",
     "gm06_pelecanus_thagus",
     "af_martin_malaquita",
     "oc_esp_pelecanus_conspicillatus",
-    "na_esp_anser_caerulescens",
     "asia_esp_0422",
     "oc_esp_apteryx_mantelli",
     "pelicano_cenudo",
-    "af_xlsx_sahara_buitre",
     "polar_esp_pygoscelis_adeliae",
-    "af_turaco",
-    "sa_esp_eudocimus_ruber",
-    "na_esp_haliaeetus_leucocephalus",
-    "asia_esp_0883",
-    "af_xlsx_garceta",
-    "af_xlsx_131_gyps_africanus",
-    "af_pinguino_africano",
-    "asia_esp_0888",
-    "na_esp_calypte_anna",
-    "mar_esp_pygoscelis_antarcticus",
-    "gm06_rhynochetos_jubatus",
-    "na_esp_bubo_scandiacus",
-    "polar_esp_stercorarius_maccormicki",
-    "sa_esp_vanellus_chilensis",
-    "oc_esp_gallirallus_australis"
+    "af_turaco"
    ]
   },
   {
@@ -16795,6 +16337,7 @@
     "asia_esp_0867",
     "asia_esp_0494",
     "af_ganso_alas_azules",
+    "na_esp_haliaeetus_leucocephalus",
     "asia_esp_0887",
     "sa_esp_scelorchilus_rubecula",
     "na_esp_corvus_corax",
@@ -16808,16 +16351,15 @@
     "asia_esp_0410",
     "af_aguila_pescadora",
     "asia_esp_0433",
+    "gm06_macrocephalon_maleo",
+    "af_xlsx_131_gyps_africanus",
     "asia_esp_0869",
     "asia_esp_0294",
     "asia_esp_0865",
     "asia_esp_0872",
     "asia_esp_0287",
-    "na_esp_archilochus_colubris",
-    "polar_esp_aptenodytes_forsteri",
-    "asia_esp_0227",
-    "asia_esp_0886",
-    "polar_esp_pagophila_eburnea"
+    "sa_esp_buteogallus_coronatus",
+    "na_esp_archilochus_colubris"
    ]
   },
   {
@@ -16836,11 +16378,17 @@
     "gm06_spheniscus_humboldti",
     "gm06_tachyeres_pteneres",
     "gm06_spheniscus_mendiculus",
+    "sa_esp_vanellus_chilensis",
+    "af_pinguino_africano",
+    "polar_esp_pagophila_eburnea",
     "gm06_nannopterum_harrisi",
+    "mar_esp_pygoscelis_antarcticus",
     "mar_esp_morus_bassanus",
     "asia_esp_0203",
     "polar_esp_sterna_paradisaea",
+    "mar_esp_ardenna_grisea",
     "af_ibis_sagrado",
+    "polar_esp_aptenodytes_forsteri",
     "oc_esp_trichoglossus_moluccanus",
     "gm06_chloephaga_hybrida",
     "oc_esp_diomedea_epomophora",
@@ -16850,13 +16398,7 @@
     "na_esp_ardea_herodias",
     "mar_esp_aptenodytes_patagonicus",
     "na_esp_pelecanus_occidentalis",
-    "af_secretario",
-    "mar_esp_thalassarche_melanophris",
-    "af_ibis_eremita",
-    "mar_esp_fregata_magnificens",
-    "gm06_larosterna_inca",
-    "na_esp_falco_peregrinus",
-    "gm06_leucocarbo_bougainvilliorum"
+    "af_secretario"
    ]
   },
   {
@@ -16872,20 +16414,26 @@
     "na_esp_platalea_ajaja",
     "oc_esp_petroica_australis",
     "asia_esp_0878",
+    "af_xlsx_sahara_buitre",
     "gm06_sula_nebouxii",
     "af_xlsx_avestruz_somali",
     "asia_esp_0503",
     "af_xlsx_131_circaetus_gallicus",
+    "sa_esp_eudocimus_ruber",
     "af_xlsx_131_corythaeola_cristata",
     "na_esp_strix_occidentalis",
     "gm06_lorius_garrulus",
     "gm06_cacatua_moluccensis",
+    "asia_esp_0888",
     "asia_esp_0880",
     "af_avestruz",
+    "na_esp_pharomachrus_mocinno",
     "na_esp_athene_cunicularia",
+    "mar_esp_fregata_magnificens",
     "na_esp_perisoreus_canadensis",
     "oc_esp_rhipidura_fuliginosa",
     "sa_esp_phoenicoparrus_andinus",
+    "sa_esp_ara_ararauna",
     "na_esp_aix_sponsa",
     "na_esp_micrathene_whitneyi",
     "na_esp_geococcyx_californianus",
@@ -16893,13 +16441,7 @@
     "na_esp_anas_platyrhynchos",
     "sa_esp_colaptes_campestris",
     "sa_esp_ardea_cocoi",
-    "gm06_pteroptochos_tarnii",
-    "na_esp_hylocichla_mustelina",
-    "af_abejaruco_carmin",
-    "sa_esp_jacana_jacana",
-    "asia_esp_0864",
-    "na_esp_callipepla_californica",
-    "oc_esp_melopsittacus_undulatus"
+    "gm06_pteroptochos_tarnii"
    ]
   },
   {
@@ -16914,6 +16456,7 @@
    "species": [
     "oc_esp_ninox_strenua",
     "asia_esp_0030",
+    "asia_esp_0886",
     "af_fosa_ave",
     "asia_esp_0234",
     "af_xlsx_131_aquila_fasciata",
@@ -16921,23 +16464,22 @@
     "af_xlsx_131_pandion_haliaetus",
     "sa_esp_geranoaetus_melanoleucus",
     "sa_esp_asio_flammeus",
+    "na_esp_falco_peregrinus",
+    "na_esp_bubo_scandiacus",
+    "asia_esp_0883",
     "af_calao_terrestre",
     "af_xlsx_131_polemaetus_bellicosus",
     "af_cernicalo_seychelles",
+    "na_esp_circus_hudsonius",
     "na_esp_bubo_virginianus",
     "na_esp_caracara_plancus",
     "asia_esp_0887",
     "sa_esp_buteogallus_coronatus",
-    "asia_esp_0886",
     "na_esp_athene_cunicularia",
     "na_esp_haliaeetus_leucocephalus",
     "af_secretario",
     "na_esp_strix_occidentalis",
-    "na_esp_falco_peregrinus",
     "asia_esp_0203",
-    "na_esp_bubo_scandiacus",
-    "oc_esp_aquila_audax",
-    "sa_esp_vultur_gryphus",
     "buho_real",
     "buho_comun",
     "aguila_real",
@@ -16954,6 +16496,9 @@
    "cont": "Mundial",
    "origen": "Existente (ID)",
    "species": [
+    "oc_esp_gallirallus_australis",
+    "af_xlsx_garceta",
+    "asia_esp_0227",
     "asia_esp_0020",
     "sa_esp_phoenicopterus_chilensis",
     "af_picozapato",
@@ -16963,18 +16508,15 @@
     "af_flamenco_enano",
     "af_jacana_africana",
     "af_garza_goliat",
+    "af_ibis_eremita",
     "asia_esp_0890",
-    "oc_esp_gallirallus_australis",
     "af_grulla_carunculada",
-    "af_xlsx_garceta",
-    "asia_esp_0227",
     "na_esp_platalea_ajaja",
     "asia_esp_0226",
     "flamenco_comun",
     "af_ostrero_africano",
     "na_esp_ardea_herodias",
     "asia_esp_0287",
-    "af_ibis_eremita",
     "sa_esp_phoenicoparrus_andinus",
     "sa_esp_ardea_cocoi",
     "af_ibis_sagrado",
@@ -17002,10 +16544,13 @@
     "oc_esp_dacelo_novaeguineae",
     "sa_esp_opisthocomus_hoazin",
     "sa_esp_primolius_couloni",
+    "oc_esp_nestor_notabilis",
     "sa_esp_pteroglossus_torquatus",
+    "oc_esp_hemiphaga_novaeseelandiae",
     "oc_esp_nestor_meridionalis",
     "gm06_priotelus_temnurus",
     "sa_esp_amazona_amazonica",
+    "na_esp_ara_militaris",
     "oc_esp_phylidonyris_novaehollandiae",
     "oc_esp_ptilonorhynchus_violaceus",
     "oc_esp_gymnorhina_tibicen",
@@ -17015,10 +16560,7 @@
     "sa_esp_ara_ararauna",
     "asia_esp_0067",
     "na_esp_ara_macao",
-    "oc_esp_cicinnurus_respublica",
-    "oc_esp_lophorina_superba",
-    "oc_esp_paradisaea_apoda",
-    "asia_esp_0868"
+    "oc_esp_cicinnurus_respublica"
    ]
   },
   {
@@ -17032,20 +16574,20 @@
    "origen": "Nuevo propuesto",
    "species": [
     "af_xlsx_cerdo_hormiguero",
-    "asia_esp_0824",
     "af_xlsx_gato_dorado",
-    "asia_esp_0820",
     "oc_esp_trichosurus_vulpecula",
-    "oc_esp_osphranter_rufus",
-    "asia_esp_0843",
     "asia_esp_0441",
     "asia_esp_0333",
-    "asia_esp_0249",
-    "na_esp_ochotona_princeps",
-    "af_nu_azul",
     "asia_esp_0318",
-    "na_esp_cervus_canadensis",
-    "af_xlsx_131_hippotragus_equinus"
+    "af_xlsx_131_mungos_mungo",
+    "af_leopardo",
+    "af_gato_montes_africano",
+    "gm06_pongo_abelii",
+    "af_xlsx_131_lepus_fagani",
+    "gm06_solenodon_paradoxus",
+    "asia_esp_0401",
+    "af_suricata",
+    "sa_esp_blastocerus_dichotomus"
    ]
   },
   {
@@ -17059,18 +16601,18 @@
    "origen": "Nuevo propuesto",
    "species": [
     "oc_esp_vombatus_ursinus",
-    "oc_esp_tachyglossus_aculeatus",
-    "asia_esp_0063",
     "na_esp_bradypus_variegatus",
     "asia_esp_0065",
     "na_esp_myrmecophaga_tridactyla",
     "af_xlsx_131_hystrix_africaeaustralis",
-    "asia_esp_0414",
-    "na_esp_cynomys_ludovicianus",
+    "sa_esp_aotus_trivirgatus",
     "oc_esp_dendrolagus_lumholtzi",
     "na_esp_cuniculus_paca",
     "asia_esp_0194",
-    "sa_esp_lagostomus_maximus"
+    "na_esp_dicotyles_tajacu",
+    "oc_esp_sarcophilus_harrisii",
+    "na_esp_nasua_narica",
+    "na_esp_marmota_vancouverensis"
    ]
   },
   {
@@ -17085,28 +16627,28 @@
    "species": [
     "af_xlsx_alcefalo",
     "asia_esp_0214",
-    "na_esp_ovis_dalli",
-    "asia_esp_0149",
-    "asia_esp_0218",
     "asia_esp_0111",
-    "sa_esp_pudella_mephistophiles",
-    "na_esp_tapirus_bairdii",
     "asia_esp_0087",
-    "af_xlsx_gacela_cuvier",
-    "af_dromedario",
-    "asia_esp_0080",
-    "asia_esp_0345",
+    "af_xlsx_orix_cimitarra",
     "sa_esp_pudu_puda",
-    "af_gacela_dorcas",
-    "sa_esp_mazama_americana",
-    "af_xlsx_orix_beisa",
-    "af_asno_somali",
+    "sa_esp_ozotoceros_bezoarticus",
     "af_antilope_bongo",
+    "asia_esp_0404",
     "asia_esp_0073",
-    "af_lechwe_rojo",
-    "sa_esp_lama_guanicoe",
     "af_sitatunga",
-    "af_xlsx_addax"
+    "asia_esp_0833",
+    "af_xlsx_131_madoqua_saltiana",
+    "af_xlsx_131_cephalophus_zebra",
+    "asia_esp_0086",
+    "sa_esp_hippocamelus_antisensis",
+    "asia_esp_0442",
+    "asia_esp_0184",
+    "sa_esp_hippocamelus_bisulcus",
+    "af_puku",
+    "af_xlsx_topi",
+    "af_xlsx_131_equus_africanus",
+    "af_duiker_azul",
+    "asia_esp_0050"
    ]
   },
   {
@@ -17119,24 +16661,24 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
-    "asia_esp_0403",
-    "asia_esp_0323",
     "sa_esp_lagidium_viscacia",
-    "asia_esp_0344",
-    "na_esp_marmota_vancouverensis",
     "asia_esp_0321",
     "asia_esp_0523",
-    "af_xlsx_131_lepus_fagani",
-    "asia_esp_0086",
-    "af_fosa",
-    "af_macaco_berberia",
-    "af_gelada",
     "na_esp_marmota_flaviventris",
     "gm06_procavia_capensis",
-    "asia_esp_0442",
-    "na_esp_ovis_canadensis",
     "asia_esp_0308",
-    "gm06_lepus_arcticus"
+    "na_esp_puma_concolor",
+    "na_esp_lepus_americanus",
+    "sa_esp_leopardus_jacobita",
+    "asia_esp_0850",
+    "sa_esp_chinchilla_lanigera",
+    "na_esp_lemmus_trimucronatus",
+    "na_esp_brachylagus_idahoensis",
+    "sa_esp_tremarctos_ornatus",
+    "sa_esp_vicugna_vicugna",
+    "na_esp_lynx_canadensis",
+    "af_serval",
+    "sa_esp_leopardus_geoffroyi"
    ]
   },
   {
@@ -17149,32 +16691,32 @@
    "cont": "Mundial",
    "origen": "Existente (ID)",
    "species": [
+    "asia_esp_0395",
+    "asia_esp_0849",
+    "mar_esp_halichoerus_grypus",
+    "na_esp_castor_canadensis",
+    "af_xlsx_131_mellivora_capensis",
     "af_suricata",
     "asia_esp_0347",
     "asia_esp_0850",
+    "asia_esp_0333",
     "af_xlsx_131_mungos_mungo",
     "af_lobo_marino_cabo",
     "af_xlsx_131_hydrictis_maculicollis",
     "na_esp_martes_americana",
     "asia_esp_0326",
     "na_esp_taxidea_taxus",
-    "asia_esp_0395",
     "sa_esp_pteronura_brasiliensis",
     "sa_esp_lontra_felina",
     "na_esp_lontra_canadensis",
     "na_esp_mustela_nigripes",
-    "asia_esp_0849",
-    "mar_esp_halichoerus_grypus",
     "mar_esp_phoca_vitulina",
     "mar_esp_zalophus_californianus",
-    "mar_esp_otaria_flavescens",
-    "na_esp_castor_canadensis",
-    "asia_esp_0177",
-    "af_xlsx_131_mellivora_capensis",
-    "asia_esp_0300",
-    "asia_esp_0333",
     "mar_esp_arctocephalus_gazella",
     "mar_esp_eumetopias_jubatus",
+    "mar_esp_otaria_flavescens",
+    "asia_esp_0177",
+    "asia_esp_0300",
     "nutria_europea"
    ]
   },
@@ -17193,16 +16735,16 @@
     "af_cobra_egipcia",
     "oc_esp_notechis_scutatus",
     "asia_esp_0351",
-    "oc_esp_oxyuranus_scutellatus",
-    "oc_esp_morelia_viridis",
     "sa_esp_crotalus_durissus",
-    "na_esp_crotalus_horridus",
     "na_esp_crotalus_atrox",
-    "af_xlsx_boa_madagascar",
     "af_xlsx_mamba_negra",
-    "sa_esp_eunectes_notaeus",
-    "sa_esp_eunectes_murinus",
-    "asia_esp_0373"
+    "asia_esp_0373",
+    "sa_esp_bothrops_alternatus",
+    "na_esp_leptophis_ahaetulla",
+    "af_xlsx_131_bitis_arietans",
+    "oc_esp_morelia_spilota",
+    "asia_esp_0102",
+    "oc_esp_oxyuranus_microlepidotus"
    ]
   },
   {
@@ -17215,29 +16757,29 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
-    "asia_esp_0316",
     "oc_esp_varanus_salvadorii",
-    "asia_esp_0431",
     "af_tortuga_aldabra",
-    "asia_esp_0900",
     "asia_esp_0527",
-    "na_esp_chrysemys_picta",
     "asia_esp_0903",
-    "na_esp_ctenosaura_similis",
     "sa_esp_liolaemus_atacamensis",
-    "af_tortuga_radiada",
-    "mar_esp_chelonia_mydas",
-    "na_esp_heloderma_suspectum",
     "af_gecko_diurno",
-    "oc_esp_varanus_gouldii",
-    "mar_esp_eretmochelys_imbricata",
-    "oc_esp_pogona_vitticeps",
-    "asia_esp_0136",
-    "af_cocodrilo_nilo",
     "sa_esp_melanosuchus_niger",
     "af_xlsx_131_phelsuma_grandis",
-    "oc_esp_sphenodon_punctatus",
-    "sa_esp_microlophus_atacamensis"
+    "gm06_crocodylus_rhombifer",
+    "gm06_amblyrhynchus_cristatus",
+    "na_esp_phrynosoma_cornutum",
+    "oc_esp_varanus_giganteus",
+    "na_esp_gopherus_agassizii",
+    "asia_esp_0519",
+    "af_xlsx_cocodrilo_enano",
+    "gm06_conolophus_subcristatus",
+    "oc_esp_crocodylus_johnstoni",
+    "asia_esp_0901",
+    "gm06_chelonoidis_porteri",
+    "na_esp_alligator_mississippiensis",
+    "sa_esp_caiman_yacare",
+    "af_xlsx_geco_desierto",
+    "af_xlsx_131_agama_agama"
    ]
   },
   {
@@ -17251,12 +16793,12 @@
    "origen": "Nuevo propuesto",
    "species": [
     "af_tortuga_laúd",
-    "asia_esp_0327",
-    "na_esp_terrapene_carolina",
-    "na_esp_gopherus_agassizii",
     "af_tortuga_aldabra",
+    "asia_esp_0327",
     "af_tortuga_radiada",
+    "na_esp_terrapene_carolina",
     "na_esp_chrysemys_picta",
+    "na_esp_gopherus_agassizii",
     "mar_esp_chelonia_mydas",
     "mar_esp_eretmochelys_imbricata",
     "eu_esp_0506",
@@ -17273,29 +16815,29 @@
    "cont": "Mundial",
    "origen": "Existente (ID)",
    "species": [
-    "af_eland",
-    "af_impala",
-    "af_xlsx_gacela_speke",
-    "af_springbok",
     "af_nyala_comun",
-    "sa_esp_hippocamelus_bisulcus",
-    "asia_esp_0825",
     "af_arrui",
-    "asia_esp_0184",
-    "af_ciervo_berberia",
-    "asia_esp_0182",
-    "af_dikdik_guenther",
-    "asia_esp_0498",
-    "asia_esp_0468",
-    "asia_esp_0081",
-    "af_gerenuc",
-    "af_orix",
-    "asia_esp_0050",
-    "af_xlsx_131_madoqua_saltiana",
-    "af_xlsx_131_cephalophus_zebra",
-    "af_antilope_sable",
-    "asia_esp_0834",
-    "na_esp_odocoileus_hemionus",
+    "asia_esp_0441",
+    "af_xlsx_alcefalo",
+    "af_eland",
+    "af_antilope_bongo",
+    "af_gacela_dorcas",
+    "af_lechwe_negro",
+    "af_xlsx_gacela_cuvier",
+    "sa_esp_mazama_americana",
+    "asia_esp_0214",
+    "af_impala",
+    "asia_esp_0344",
+    "af_xlsx_gacela_speke",
+    "af_xlsx_addax",
+    "af_springbok",
+    "asia_esp_0345",
+    "na_esp_odocoileus_virginianus",
+    "af_xlsx_131_hippotragus_equinus",
+    "sa_esp_hippocamelus_bisulcus",
+    "asia_esp_0383",
+    "asia_esp_0080",
+    "asia_esp_0218",
     "ciervo_rojo",
     "corzo_europeo"
    ]
@@ -17310,21 +16852,21 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
-    "asia_esp_0853",
-    "mar_esp_lagenorhynchus_albirostris",
-    "na_esp_mephitis_mephitis",
-    "sa_esp_saguinus_imperator",
-    "na_esp_dicotyles_tajacu",
-    "polar_esp_delphinapterus_leucas",
-    "af_sifaka",
-    "na_esp_brachylagus_idahoensis",
     "polar_esp_pusa_hispida",
-    "gm06_bubalus_depressicornis",
     "af_elefante_sabana",
-    "sa_esp_tamandua_mexicana",
-    "af_zorro_ruppell",
-    "na_esp_nasua_narica",
-    "af_tenrec"
+    "af_tenrec",
+    "mar_esp_grampus_griseus",
+    "af_xlsx_131_colobus_polykomos",
+    "sa_esp_atelocynus_microtis",
+    "sa_esp_inia_geoffrensis",
+    "asia_esp_0061",
+    "sa_esp_inia_boliviensis",
+    "asia_esp_0355",
+    "oc_esp_petaurus_breviceps",
+    "af_xlsx_131_otocyon_megalotis",
+    "asia_esp_0206",
+    "af_mangosta_enana",
+    "oc_esp_dactylopsila_trivirgata"
    ]
   },
   {
@@ -17340,27 +16882,27 @@
     "af_xlsx_131_ceratogymna_atrata",
     "af_xlsx_131_musophaga_violacea",
     "gm06_amazona_leucocephala",
+    "sa_esp_jabiru_mycteria",
     "af_inseparable_lilian",
     "na_esp_meleagris_gallopavo",
+    "mar_esp_diomedea_exulans",
+    "na_esp_calypte_anna",
     "oc_esp_cacatua_galerita",
     "sa_esp_rupicola_peruvianus",
     "af_calao_trompetero",
+    "mar_esp_thalassarche_melanophris",
     "oc_esp_apteryx_owenii",
     "af_alcatraz_cabo",
     "asia_esp_0881",
     "asia_esp_0296",
     "sa_esp_cariama_cristata",
+    "polar_esp_stercorarius_maccormicki",
     "gm06_geospiza_fortis",
     "sa_esp_chauna_torquata",
+    "gm06_phoebastria_irrorata",
     "af_cormoran_cabo",
-    "af_loro_negro_seychelles",
-    "af_xlsx_martin_pio",
-    "asia_esp_0863",
-    "af_xlsx_131_ploceus_cucullatus",
-    "asia_esp_0874",
-    "na_esp_falcipennis_canadensis",
-    "na_esp_cardinalis_cardinalis",
-    "oc_esp_megadyptes_antipodes"
+    "oc_esp_nymphicus_hollandicus",
+    "af_loro_negro_seychelles"
    ]
   },
   {
@@ -17375,19 +16917,19 @@
    "species": [
     "asia_esp_0234",
     "af_fosa_ave",
+    "asia_esp_0886",
     "na_esp_bubo_virginianus",
     "asia_esp_0030",
     "na_esp_micrathene_whitneyi",
+    "na_esp_falco_peregrinus",
     "af_xlsx_131_aquila_fasciata",
+    "oc_esp_aquila_audax",
+    "sa_esp_vultur_gryphus",
     "sa_esp_geranoaetus_melanoleucus",
     "af_xlsx_sahara_buitre",
     "af_xlsx_131_pandion_haliaetus",
     "af_xlsx_131_circaetus_gallicus",
-    "af_xlsx_131_neophron_percnopterus",
-    "oc_esp_ninox_strenua",
-    "af_cernicalo_seychelles",
-    "af_xlsx_131_gyps_africanus",
-    "af_xlsx_131_polemaetus_bellicosus"
+    "af_xlsx_131_neophron_percnopterus"
    ]
   },
   {
@@ -17400,12 +16942,14 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
+    "polar_esp_gonatus_fabricii",
     "mar_esp_octopus_vulgaris",
     "deep_esp_mesonychoteuthis_hamiltoni",
     "mar_esp_tremoctopus_violaceus",
     "mar_esp_amphioctopus_marginatus",
     "mar_esp_sepioteuthis_lessoniana",
     "mar_esp_thysanoteuthis_rhombus",
+    "deep_esp_haliphron_atlanticus",
     "mar_esp_dosidicus_gigas",
     "mar_esp_architeuthis_dux",
     "mar_esp_octopus_bimaculoides",
@@ -17413,13 +16957,11 @@
     "mar_esp_hapalochlaena_lunulata",
     "deep_esp_grimpoteuthis_abyssicola",
     "deep_esp_moroteuthopsis_ingens",
+    "deep_esp_histioteuthis_reversa",
     "mar_esp_octopus_cyanea",
     "deep_esp_vampyroteuthis_infernalis",
-    "polar_esp_gonatus_fabricii",
     "mar_esp_loligo_vulgaris",
-    "mar_esp_enteroctopus_dofleini",
-    "deep_esp_haliphron_atlanticus",
-    "deep_esp_histioteuthis_reversa"
+    "mar_esp_enteroctopus_dofleini"
    ]
   },
   {
@@ -17433,25 +16975,25 @@
    "origen": "Nuevo propuesto",
    "species": [
     "oc_esp_petauroides_volans",
-    "af_xlsx_rata_topo",
-    "na_esp_alouatta_pigra",
-    "sa_esp_tapirus_terrestris",
-    "mar_esp_balaenoptera_edeni",
     "sa_esp_dasypus_septemcinctus",
     "asia_esp_0465",
-    "af_xlsx_131_cercopithecus_diana",
-    "af_serval",
     "gm06_rhinoceros_sondaicus",
-    "mar_esp_phocoena_phocoena",
-    "af_jirafa",
-    "oc_esp_notamacropus_eugenii",
-    "af_leopardo",
-    "oc_esp_macropus_fuliginosus",
     "oc_esp_dendrolagus_goodfellowi",
-    "oc_esp_thylogale_billardierii",
-    "oc_esp_cephalorhynchus_hectori",
-    "sa_esp_euphractus_sexcinctus",
-    "na_esp_leopardus_pardalis"
+    "af_indri",
+    "na_esp_sorex_cinereus",
+    "polar_esp_monodon_monoceros",
+    "af_elefante_bosque",
+    "asia_esp_0860",
+    "na_esp_sciurus_carolinensis",
+    "asia_esp_0336",
+    "af_licaon",
+    "oc_esp_spilocuscus_maculatus",
+    "af_xlsx_131_atelerix_algirus",
+    "asia_esp_0165",
+    "na_esp_erethizon_dorsatum",
+    "sa_esp_ateles_paniscus",
+    "asia_esp_0856",
+    "sa_esp_octodon_degus"
    ]
   },
   {
@@ -17464,24 +17006,24 @@
    "cont": "Mundial",
    "origen": "Existente (ID)",
    "species": [
-    "af_gran_kudu",
-    "af_xlsx_131_atelerix_algirus",
-    "oc_esp_zaglossus_bartoni",
-    "oc_esp_dactylopsila_trivirgata",
     "oc_esp_phascolarctos_cinereus",
-    "mar_esp_megaptera_novaeangliae",
-    "sa_esp_conepatus_chinga",
     "af_facoquero",
-    "asia_esp_0165",
-    "gm06_pteropus_vampyrus",
-    "af_hiena_parda",
-    "mar_esp_globicephala_melas",
-    "af_xlsx_topi",
-    "asia_esp_0842",
     "oc_esp_ornithorhynchus_anatinus",
     "sa_esp_tolypeutes_tricinctus",
-    "af_babuino_oliva",
-    "af_hipopotamo",
+    "af_lobo_etiope",
+    "af_mono_brazza",
+    "gm06_dromiciops_gliroides",
+    "af_leon",
+    "sa_esp_speothos_venaticus",
+    "asia_esp_0096",
+    "af_babuino_hamadryas",
+    "na_esp_leopardus_wiedii",
+    "na_esp_sylvilagus_floridanus",
+    "asia_esp_0317",
+    "asia_esp_0857",
+    "af_okapi",
+    "af_xlsx_131_lupulella_mesomelas",
+    "af_xlsx_lemur_rufo",
     "lince_boreal"
    ]
   },
@@ -17495,33 +17037,33 @@
    "cont": "Mundial",
    "origen": "Nuevo propuesto",
    "species": [
-    "na_esp_lepus_californicus",
-    "na_esp_procyon_pygmaeus",
-    "asia_esp_0352",
-    "sa_esp_speothos_venaticus",
-    "asia_esp_0238",
-    "polar_esp_ursus_maritimus",
-    "af_xlsx_131_otocyon_megalotis",
-    "af_chimpance",
-    "af_xlsx_ayeaye",
-    "polar_esp_odobenus_rosmarus",
-    "na_esp_urocyon_cinereoargenteus",
-    "af_xlsx_rinoceronte_negro",
-    "asia_esp_0183",
     "af_gorila_occidental",
-    "af_xlsx_131_lupulella_mesomelas",
-    "polar_esp_leptonychotes_weddellii",
-    "asia_esp_0856",
-    "oc_esp_petaurus_breviceps",
-    "asia_esp_0821",
-    "af_hiena_manchada",
-    "gm06_pagophilus_groenlandicus",
-    "mar_esp_pseudorca_crassidens",
-    "sa_esp_tamandua_tetradactyla",
-    "af_duiker_azul",
-    "af_okapi",
-    "af_mono_brazza",
-    "asia_esp_0857"
+    "na_esp_alouatta_palliata",
+    "af_lemur_colaanillada",
+    "af_xlsx_bonobo",
+    "na_esp_cebus_imitator",
+    "oc_esp_canis_familiaris",
+    "sa_esp_chrysocyon_brachyurus",
+    "af_xlsx_131_phataginus_tricuspis",
+    "sa_esp_tayassu_pecari",
+    "oc_esp_pteropus_conspicillatus",
+    "asia_esp_0251",
+    "asia_esp_0852",
+    "sa_esp_cebus_olivaceus",
+    "mar_esp_balaenoptera_physalus",
+    "asia_esp_0176",
+    "af_galago",
+    "na_esp_dipodomys_merriami",
+    "gm06_zalophus_wollebaeki",
+    "sa_esp_leopardus_colocola",
+    "na_esp_bison_bison",
+    "af_xlsx_131_cercopithecus_diana",
+    "na_esp_lepus_californicus",
+    "asia_esp_0063",
+    "sa_esp_lagidium_viscacia",
+    "na_esp_procyon_pygmaeus",
+    "asia_esp_0468",
+    "sa_esp_pudella_mephistophiles"
    ]
   },
   {
@@ -17573,9 +17115,9 @@
    "cont": "Mundial",
    "origen": "Muestra histórica",
    "species": [
-    "asia_esp_0830",
-    "af_xlsx_131_equus_africanus",
-    "af_nyala_montana"
+    "asia_esp_0062",
+    "af_arrui",
+    "af_xlsx_orix_beisa"
    ]
   },
   {
@@ -17602,7 +17144,7 @@
    "origen": "Material auténtico",
    "species": [
     "sa_esp_inia_boliviensis",
-    "af_delfin_jorobado_indico"
+    "mar_esp_balaenoptera_physalus"
    ]
   },
   {
@@ -17615,12 +17157,12 @@
    "cont": "Mundial",
    "origen": "Mito / fraude",
    "species": [
-    "af_xlsx_131_schismaderma_carens",
-    "af_xlsx_rana_goliat",
-    "sa_esp_rhinella_marina",
-    "asia_esp_0017",
     "asia_esp_0899",
-    "na_esp_ambystoma_maculatum"
+    "af_xlsx_131_sclerophrys_regularis",
+    "sa_esp_phyllobates_terribilis",
+    "na_esp_lithobates_clamitans",
+    "af_xlsx_lemur_etc",
+    "sa_esp_rhinoderma_darwinii"
    ]
   },
   {
@@ -17649,9 +17191,9 @@
    "origen": "Mito / geología",
    "species": [
     "sa_esp_harpia_harpyja",
+    "af_xlsx_131_gyps_africanus",
     "af_calao_terrestre",
-    "na_esp_circus_hudsonius",
-    "af_aguila_pescadora"
+    "af_xlsx_131_polemaetus_bellicosus"
    ]
   },
   {
@@ -17677,8 +17219,8 @@
    "cont": "Mundial",
    "origen": "Material auténtico",
    "species": [
-    "mar_esp_lamna_ditropis",
-    "mar_esp_isurus_oxyrinchus"
+    "mar_esp_alopias_vulpinus",
+    "mar_esp_lamna_ditropis"
    ]
   },
   {
@@ -17691,10 +17233,10 @@
    "cont": "Mundial",
    "origen": "Muestra histórica",
    "species": [
-    "asia_esp_0833",
-    "sa_esp_hippocamelus_antisensis",
-    "af_ibice_walia",
-    "asia_esp_0240"
+    "sa_esp_ozotoceros_bezoarticus",
+    "asia_esp_0182",
+    "af_dikdik_guenther",
+    "asia_esp_0824"
    ]
   },
   {
@@ -17707,11 +17249,11 @@
    "cont": "Mundial",
    "origen": "Fraude",
    "species": [
-    "oc_esp_varanus_giganteus",
-    "af_xlsx_131_agama_agama",
     "asia_esp_0902",
-    "oc_esp_moloch_horridus",
-    "af_xlsx_camaleon_parson"
+    "af_xlsx_camaleon_parson",
+    "oc_esp_sphenodon_punctatus",
+    "sa_esp_iguana_iguana",
+    "na_esp_basiliscus_plumifrons"
    ]
   },
   {
@@ -17726,10 +17268,10 @@
    "species": [
     "gm06_babyrousa_celebensis",
     "asia_esp_0858",
+    "asia_esp_0901",
+    "asia_esp_0317",
     "asia_esp_0355",
-    "asia_esp_0491",
-    "asia_esp_0096",
-    "asia_esp_0860"
+    "asia_esp_0316"
    ]
   },
   {
@@ -17743,12 +17285,12 @@
    "origen": "Fraude / identificación",
    "species": [
     "af_elefante_bosque",
-    "af_potamoquero",
-    "af_xlsx_hipopotamo_pigmeo",
     "polar_esp_odobenus_rosmarus",
+    "af_potamoquero",
     "af_elefante_sabana",
     "af_hipopotamo",
-    "asia_esp_0176"
+    "asia_esp_0176",
+    "af_xlsx_hipopotamo_pigmeo"
    ]
   }
  ],
@@ -25605,8 +25147,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "na_esp_pharomachrus_mocinno": [
@@ -25639,7 +25181,7 @@
     "w": 12
    },
    {
-    "item": "NUM-14",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -25651,7 +25193,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N01",
+    "item": "MAT-N05",
     "w": 12
    }
   ],
@@ -25695,10 +25237,6 @@
    {
     "item": "DAG-16",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "na_esp_pelecanus_occidentalis": [
@@ -25785,10 +25323,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N10",
     "w": 5
    }
@@ -25833,10 +25367,6 @@
    {
     "item": "HUE-16",
     "w": 12
-   },
-   {
-    "item": "MAT-N19",
-    "w": 5
    }
   ],
   "na_esp_falcipennis_canadensis": [
@@ -25878,10 +25408,6 @@
    },
    {
     "item": "HUE-18",
-    "w": 5
-   },
-   {
-    "item": "MAT-N19",
     "w": 5
    }
   ],
@@ -26015,10 +25541,6 @@
     "w": 1.8
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N10",
     "w": 5
    }
@@ -26063,10 +25585,6 @@
    {
     "item": "DAG-13",
     "w": 5
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "na_esp_bubo_scandiacus": [
@@ -26104,10 +25622,6 @@
    },
    {
     "item": "HUE-13",
-    "w": 12
-   },
-   {
-    "item": "RAR-03",
     "w": 12
    },
    {
@@ -26159,10 +25673,6 @@
    {
     "item": "HUE-15",
     "w": 12
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "gm06_priotelus_temnurus": [
@@ -26241,8 +25751,8 @@
     "w": 5
    },
    {
-    "item": "CIV-13",
-    "w": 12
+    "item": "NUM-19",
+    "w": 1.8
    },
    {
     "item": "CIV-18",
@@ -26283,7 +25793,7 @@
     "w": 12
    },
    {
-    "item": "NUM-15",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -26292,10 +25802,6 @@
    },
    {
     "item": "HUE-14",
-    "w": 12
-   },
-   {
-    "item": "MAT-N05",
     "w": 12
    }
   ],
@@ -26335,10 +25841,6 @@
    {
     "item": "CIV-18",
     "w": 5
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    }
   ],
   "na_esp_dicrostonyx_groenlandicus": [
@@ -26371,7 +25873,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -26463,10 +25965,6 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "MAT-N14",
     "w": 5
    }
@@ -26551,10 +26049,6 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
     "item": "MAT-N02",
     "w": 12
    }
@@ -26599,10 +26093,6 @@
    {
     "item": "DAG-12",
     "w": 5
-   },
-   {
-    "item": "MAT-N18",
-    "w": 5
    }
   ],
   "na_esp_marmota_vancouverensis": [
@@ -26643,11 +26133,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "MAT-N12",
+    "item": "MAT-N10",
     "w": 5
    }
   ],
@@ -26733,10 +26219,6 @@
    {
     "item": "MUN-05",
     "w": 5
-   },
-   {
-    "item": "RAR-03",
-    "w": 12
    }
   ],
   "na_esp_panthera_onca": [
@@ -26821,10 +26303,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "na_esp_leptophis_ahaetulla": [
@@ -26865,8 +26343,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N14",
+    "w": 5
    },
    {
     "item": "RAR-05",
@@ -26911,10 +26389,6 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
     "item": "MAT-N12",
     "w": 5
    }
@@ -26957,8 +26431,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "RAR-04",
+    "w": 1.8
    }
   ],
   "na_esp_trichechus_manatus": [
@@ -27043,10 +26517,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N12",
-    "w": 5
    }
   ],
   "na_esp_spilogale_gracilis": [
@@ -27089,10 +26559,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "na_esp_ambystoma_maculatum": [
@@ -27125,7 +26591,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-13",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -27135,10 +26601,6 @@
    {
     "item": "DAG-15",
     "w": 5
-   },
-   {
-    "item": "RAR-04",
-    "w": 1.8
    }
   ],
   "na_esp_didelphis_marsupialis": [
@@ -27171,7 +26633,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -27221,10 +26683,6 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
     "item": "MAT-N18",
     "w": 5
    }
@@ -27267,7 +26725,7 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -27305,15 +26763,11 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
-    "w": 12
+    "item": "NUM-19",
+    "w": 1.8
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -27356,10 +26810,6 @@
    },
    {
     "item": "CIV-15",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    }
   ],
@@ -27491,10 +26941,6 @@
    {
     "item": "COR-20",
     "w": 1.8
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
    }
   ],
   "sa_esp_geranoaetus_melanoleucus": [
@@ -27589,7 +27035,7 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N04",
     "w": 12
    }
   ],
@@ -27631,8 +27077,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "sa_esp_salvator_merianae": [
@@ -27761,8 +27207,8 @@
     "w": 1.8
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "sa_esp_leopardus_tigrinus": [
@@ -27887,10 +27333,6 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
     "item": "MAT-N22",
     "w": 12
    }
@@ -27933,8 +27375,8 @@
     "w": 1.8
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "sa_esp_ozotoceros_bezoarticus": [
@@ -27975,12 +27417,12 @@
     "w": 5
    },
    {
-    "item": "RAR-06",
+    "item": "MAT-N11",
     "w": 5
    },
    {
     "item": "RAR-09",
-    "w": 5
+    "w": 1.8
    }
   ],
   "sa_esp_ramphastos_tucanus": [
@@ -28247,7 +27689,7 @@
     "w": 12
    },
    {
-    "item": "RAR-08",
+    "item": "MAT-N19",
     "w": 5
    }
   ],
@@ -28373,11 +27815,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
-    "item": "RAR-09",
+    "item": "MAT-N10",
     "w": 5
    }
   ],
@@ -28416,10 +27854,6 @@
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -28469,8 +27903,8 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N11",
-    "w": 5
+    "item": "MAT-N24",
+    "w": 12
    }
   ],
   "sa_esp_lontra_felina": [
@@ -28595,7 +28029,7 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -28603,8 +28037,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N14",
+    "w": 5
    },
    {
     "item": "RAR-05",
@@ -28649,8 +28083,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N11",
+    "w": 5
    },
    {
     "item": "antler_fragment",
@@ -28813,7 +28247,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -28821,8 +28255,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "RAR-04",
+    "w": 1.8
    }
   ],
   "sa_esp_salminus_brasiliensis": [
@@ -28865,10 +28299,6 @@
    {
     "item": "DAG-18",
     "w": 1.8
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "sa_esp_tamandua_mexicana": [
@@ -28910,10 +28340,6 @@
    },
    {
     "item": "DAG-11",
-    "w": 5
-   },
-   {
-    "item": "MAT-N18",
     "w": 5
    }
   ],
@@ -28959,7 +28385,7 @@
     "w": 5
    },
    {
-    "item": "RAR-08",
+    "item": "MAT-N19",
     "w": 5
    }
   ],
@@ -29045,10 +28471,6 @@
    {
     "item": "HUE-16",
     "w": 12
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
    }
   ],
   "sa_esp_blastocerus_dichotomus": [
@@ -29089,11 +28511,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
-    "item": "RAR-07",
+    "item": "MAT-N09",
     "w": 5
    }
   ],
@@ -29219,7 +28637,7 @@
     "w": 12
    },
    {
-    "item": "NUM-14",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -29269,8 +28687,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    },
    {
     "item": "RAR-03",
@@ -29319,8 +28737,8 @@
     "w": 5
    },
    {
-    "item": "RAR-08",
-    "w": 5
+    "item": "RAR-10",
+    "w": 1.8
    }
   ],
   "sa_esp_pygocentrus_nattereri": [
@@ -29395,8 +28813,8 @@
     "w": 1.8
    },
    {
-    "item": "NUM-18",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "CIV-16",
@@ -29447,10 +28865,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "RAR-04",
-    "w": 1.8
    }
   ],
   "sa_esp_tayassu_pecari": [
@@ -29483,20 +28897,16 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
-    "w": 12
+    "item": "NUM-17",
+    "w": 5
    },
    {
     "item": "DAG-02",
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N24",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "sa_esp_lagostomus_maximus": [
@@ -29539,10 +28949,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N10",
-    "w": 5
    }
   ],
   "sa_esp_lycalopex_gymnocercus": [
@@ -29584,10 +28990,6 @@
    },
    {
     "item": "DAG-12",
-    "w": 5
-   },
-   {
-    "item": "RAR-08",
     "w": 5
    }
   ],
@@ -29681,10 +29083,6 @@
    {
     "item": "HUE-15",
     "w": 12
-   },
-   {
-    "item": "MAT-N04",
-    "w": 12
    }
   ],
   "gm06_crax_rubra": [
@@ -29775,7 +29173,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N01",
+    "item": "MAT-N05",
     "w": 12
    },
    {
@@ -29821,7 +29219,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -29867,15 +29265,11 @@
     "w": 12
    },
    {
-    "item": "CIV-15",
-    "w": 12
+    "item": "CIV-17",
+    "w": 5
    },
    {
     "item": "DAG-07",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -29909,7 +29303,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -30009,7 +29403,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -30043,7 +29437,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -30183,10 +29577,6 @@
    {
     "item": "DAG-17",
     "w": 1.8
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "gm06_pelecanus_thagus": [
@@ -30315,8 +29705,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "RAR-04",
+    "w": 1.8
    }
   ],
   "sa_esp_lagidium_viscacia": [
@@ -30357,12 +29747,12 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N12",
     "w": 5
+   },
+   {
+    "item": "MAT-N24",
+    "w": 12
    }
   ],
   "sa_esp_rhea_pennata": [
@@ -30437,7 +29827,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
@@ -30479,7 +29869,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -30487,8 +29877,8 @@
     "w": 1.8
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "sa_esp_noctilio_leporinus": [
@@ -30609,8 +29999,8 @@
     "w": 12
    },
    {
-    "item": "CIV-13",
-    "w": 12
+    "item": "NUM-20",
+    "w": 1.8
    },
    {
     "item": "HUE-13",
@@ -30663,8 +30053,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "gm06_dromiciops_gliroides": [
@@ -30705,7 +30095,7 @@
     "w": 1.8
    },
    {
-    "item": "RAR-01",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -30871,10 +30261,6 @@
    {
     "item": "MUN-07",
     "w": 1.8
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    }
   ],
   "sa_esp_cerdocyon_thous": [
@@ -31041,16 +30427,16 @@
     "w": 12
    },
    {
-    "item": "NUM-17",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "DAG-03",
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "sa_esp_saimiri_sciureus": [
@@ -31133,12 +30519,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "sa_esp_lycalopex_culpaeus": [
@@ -31213,7 +30595,7 @@
     "w": 5
    },
    {
-    "item": "NUM-14",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -31223,10 +30605,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "MAT-N14",
-    "w": 5
    }
   ],
   "gm06_spheniscus_humboldti": [
@@ -31315,10 +30693,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "sa_esp_vultur_gryphus": [
@@ -31367,8 +30741,8 @@
     "w": 12
    },
    {
-    "item": "owl_feather",
-    "w": 12
+    "item": "MAT-N20",
+    "w": 5
    }
   ],
   "af_alcatraz_cabo": [
@@ -31455,10 +30829,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N09",
     "w": 5
    }
@@ -31493,7 +30863,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -31502,10 +30872,6 @@
    },
    {
     "item": "HUE-16",
-    "w": 12
-   },
-   {
-    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -31543,7 +30909,7 @@
     "w": 5
    },
    {
-    "item": "CIV-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -31593,12 +30959,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
+    "item": "MAT-N11",
+    "w": 5
    }
   ],
   "af_springbok": [
@@ -31685,10 +31047,6 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
     "item": "RAR-10",
     "w": 1.8
    }
@@ -31731,12 +31089,12 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "antler_fragment",
     "w": 5
+   },
+   {
+    "item": "RAR-01",
+    "w": 1.8
    }
   ],
   "af_xlsx_jerbo": [
@@ -31811,7 +31169,7 @@
     "w": 12
    },
    {
-    "item": "NUM-14",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -31915,7 +31273,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -31958,10 +31316,6 @@
    },
    {
     "item": "DAG-09",
-    "w": 5
-   },
-   {
-    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -32045,8 +31399,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
+    "item": "RAR-04",
+    "w": 1.8
    }
   ],
   "af_asno_somali": [
@@ -32088,10 +31442,6 @@
    },
    {
     "item": "DAG-11",
-    "w": 5
-   },
-   {
-    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -32139,10 +31489,6 @@
    {
     "item": "MAT-N03",
     "w": 12
-   },
-   {
-    "item": "RAR-06",
-    "w": 1.8
    }
   ],
   "af_orix": [
@@ -32184,10 +31530,6 @@
    },
    {
     "item": "DAG-15",
-    "w": 5
-   },
-   {
-    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -32263,8 +31605,8 @@
     "w": 12
    },
    {
-    "item": "NUM-20",
-    "w": 1.8
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "MUN-02",
@@ -32273,10 +31615,6 @@
    {
     "item": "DAG-10",
     "w": 5
-   },
-   {
-    "item": "RAR-04",
-    "w": 1.8
    }
   ],
   "af_gato_montes_africano": [
@@ -32317,7 +31655,7 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
+    "item": "MAT-N09",
     "w": 5
    }
   ],
@@ -32405,8 +31743,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
+    "item": "MAT-N09",
+    "w": 5
    },
    {
     "item": "otter_whisker",
@@ -32453,10 +31791,6 @@
    {
     "item": "DAG-16",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N12",
-    "w": 5
    }
   ],
   "af_lobo_etiope": [
@@ -32497,7 +31831,7 @@
     "w": 1.8
    },
    {
-    "item": "RAR-03",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -32587,10 +31921,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "af_tiburon_blanco": [
@@ -32674,10 +32004,6 @@
    },
    {
     "item": "DAG-09",
-    "w": 5
-   },
-   {
-    "item": "MAT-N12",
     "w": 5
    }
   ],
@@ -32769,11 +32095,7 @@
     "w": 12
    },
    {
-    "item": "HUE-14",
-    "w": 12
-   },
-   {
-    "item": "MAT-N19",
+    "item": "DAG-10",
     "w": 5
    }
   ],
@@ -32807,8 +32129,8 @@
     "w": 5
    },
    {
-    "item": "NUM-17",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "MUN-02",
@@ -32861,10 +32183,6 @@
     "w": 12
    },
    {
-    "item": "animal_trace",
-    "w": 12
-   },
-   {
     "item": "RAR-12",
     "w": 1.8
    }
@@ -32907,11 +32225,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "animal_trace",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -32954,10 +32268,6 @@
    },
    {
     "item": "DAG-09",
-    "w": 5
-   },
-   {
-    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -33047,10 +32357,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N18",
-    "w": 5
    }
   ],
   "af_xlsx_131_hydrictis_maculicollis": [
@@ -33137,12 +32443,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "af_xlsx_rinoceronte_negro": [
@@ -33185,10 +32487,6 @@
    {
     "item": "DAG-09",
     "w": 5
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "af_indri": [
@@ -33229,12 +32527,8 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
-    "item": "RAR-08",
-    "w": 5
+    "item": "MAT-N22",
+    "w": 12
    }
   ],
   "af_xlsx_jirafa_reticulada": [
@@ -33363,7 +32657,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -33405,7 +32699,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -33495,10 +32789,6 @@
    {
     "item": "DAG-19",
     "w": 1.8
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "asia_esp_0404": [
@@ -33539,11 +32829,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-07",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -33674,10 +32960,6 @@
    },
    {
     "item": "MAT-N01",
-    "w": 12
-   },
-   {
-    "item": "MAT-N08",
     "w": 12
    }
   ],
@@ -33863,10 +33145,6 @@
    {
     "item": "DAG-09",
     "w": 5
-   },
-   {
-    "item": "RAR-04",
-    "w": 1.8
    }
   ],
   "asia_esp_0218": [
@@ -33899,8 +33177,8 @@
     "w": 12
    },
    {
-    "item": "NUM-18",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "DAG-03",
@@ -33911,7 +33189,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -33953,8 +33231,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "asia_esp_0860": [
@@ -33995,12 +33273,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N22",
     "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
    }
   ],
   "asia_esp_0833": [
@@ -34033,7 +33307,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -34041,12 +33315,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 1.8
+    "item": "MAT-N11",
+    "w": 5
    }
   ],
   "asia_esp_0194": [
@@ -34087,10 +33357,6 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "MAT-N10",
     "w": 5
    }
@@ -34125,7 +33391,7 @@
     "w": 12
    },
    {
-    "item": "NUM-14",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -34135,10 +33401,6 @@
    {
     "item": "DAG-09",
     "w": 5
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "asia_esp_0249": [
@@ -34171,7 +33433,7 @@
     "w": 5
    },
    {
-    "item": "CIV-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -34180,10 +33442,6 @@
    },
    {
     "item": "DAG-11",
-    "w": 5
-   },
-   {
-    "item": "MAT-N09",
     "w": 5
    }
   ],
@@ -34227,10 +33485,6 @@
    {
     "item": "DAG-10",
     "w": 5
-   },
-   {
-    "item": "RAR-01",
-    "w": 1.8
    }
   ],
   "asia_esp_0533": [
@@ -34310,10 +33564,6 @@
    },
    {
     "item": "DAG-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-02",
     "w": 12
    },
    {
@@ -34459,7 +33709,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N05",
     "w": 12
    }
   ],
@@ -34498,10 +33748,6 @@
    },
    {
     "item": "CIV-16",
-    "w": 12
-   },
-   {
-    "item": "RAR-04",
     "w": 12
    },
    {
@@ -34551,8 +33797,8 @@
     "w": 5
    },
    {
-    "item": "antler_fragment",
-    "w": 5
+    "item": "RAR-09",
+    "w": 1.8
    }
   ],
   "asia_esp_0899": [
@@ -34593,10 +33839,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "RAR-04",
     "w": 1.8
    }
@@ -34631,16 +33873,12 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
     "item": "CIV-18",
     "w": 5
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    },
    {
     "item": "MAT-N11",
@@ -34677,7 +33915,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -34687,10 +33925,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "asia_esp_0859": [
@@ -34817,10 +34051,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
    }
   ],
   "asia_esp_0226": [
@@ -34961,10 +34191,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N22",
     "w": 12
    }
@@ -35004,10 +34230,6 @@
    },
    {
     "item": "DAG-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-04",
     "w": 12
    },
    {
@@ -35059,10 +34281,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "asia_esp_0465": [
@@ -35101,10 +34319,6 @@
    {
     "item": "CIV-18",
     "w": 5
-   },
-   {
-    "item": "RAR-01",
-    "w": 12
    },
    {
     "item": "MAT-N22",
@@ -35187,8 +34401,8 @@
     "w": 1.8
    },
    {
-    "item": "NUM-20",
-    "w": 1.8
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "DAG-01",
@@ -35199,8 +34413,8 @@
     "w": 12
    },
    {
-    "item": "MAT-N15",
-    "w": 5
+    "item": "RAR-10",
+    "w": 1.8
    }
   ],
   "oc_esp_setonix_brachyurus": [
@@ -35283,12 +34497,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "oc_esp_macropus_giganteus": [
@@ -35417,11 +34627,7 @@
     "w": 5
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "RAR-09",
+    "item": "MAT-N14",
     "w": 5
    }
   ],
@@ -36543,11 +35749,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "antler_fragment",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -36586,10 +35788,6 @@
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -36635,11 +35833,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "MAT-N12",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -36673,15 +35867,11 @@
     "w": 5
    },
    {
-    "item": "NUM-18",
-    "w": 5
-   },
-   {
-    "item": "DAG-01",
+    "item": "NUM-09",
     "w": 12
    },
    {
-    "item": "RAR-04",
+    "item": "DAG-01",
     "w": 12
    },
    {
@@ -38831,7 +38021,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -38875,10 +38065,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N09",
-    "w": 5
    }
   ],
   "na_esp_haliaeetus_leucocephalus": [
@@ -38919,11 +38105,11 @@
     "w": 1.8
    },
    {
-    "item": "RAR-02",
+    "item": "MAT-N02",
     "w": 12
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N03",
     "w": 12
    },
    {
@@ -38961,20 +38147,16 @@
     "w": 5
    },
    {
-    "item": "NUM-15",
-    "w": 12
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "DAG-01",
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
+    "item": "MAT-N09",
+    "w": 5
    }
   ],
   "na_esp_mustela_nigripes": [
@@ -39103,7 +38285,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -39191,8 +38373,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "gm06_gavia_immer": [
@@ -39321,10 +38503,6 @@
     "w": 1.8
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "MAT-N14",
     "w": 5
    }
@@ -39369,10 +38547,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N10",
-    "w": 5
    }
   ],
   "na_esp_corvus_corax": [
@@ -39413,7 +38587,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -39461,10 +38635,6 @@
    {
     "item": "DAG-11",
     "w": 5
-   },
-   {
-    "item": "MAT-N11",
-    "w": 5
    }
   ],
   "na_esp_alligator_mississippiensis": [
@@ -39505,8 +38675,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "na_esp_erethizon_dorsatum": [
@@ -39547,7 +38717,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -39581,7 +38751,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -39589,11 +38759,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "MAT-N18",
+    "item": "MAT-N10",
     "w": 5
    }
   ],
@@ -39636,10 +38802,6 @@
    },
    {
     "item": "DAG-12",
-    "w": 5
-   },
-   {
-    "item": "RAR-07",
     "w": 5
    }
   ],
@@ -39727,11 +38889,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "MAT-N18",
+    "item": "MAT-N12",
     "w": 5
    }
   ],
@@ -39951,10 +39109,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "MAT-N14",
-    "w": 5
    }
   ],
   "na_esp_phrynosoma_cornutum": [
@@ -39995,8 +39149,8 @@
     "w": 1.8
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "na_esp_didelphis_virginiana": [
@@ -40121,11 +39275,7 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "MAT-N18",
+    "item": "MAT-N10",
     "w": 5
    }
   ],
@@ -40169,10 +39319,6 @@
    {
     "item": "COR-16",
     "w": 12
-   },
-   {
-    "item": "MAT-N18",
-    "w": 5
    }
   ],
   "na_esp_meleagris_gallopavo": [
@@ -40263,8 +39409,8 @@
     "w": 12
    },
    {
-    "item": "RAR-12",
-    "w": 1.8
+    "item": "MAT-N01",
+    "w": 12
    },
    {
     "item": "owl_feather",
@@ -40361,10 +39507,6 @@
    {
     "item": "DAG-05",
     "w": 12
-   },
-   {
-    "item": "MAT-N12",
-    "w": 5
    }
   ],
   "na_esp_alouatta_palliata": [
@@ -40405,7 +39547,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -40795,10 +39937,6 @@
     "w": 1.8
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "MAT-N10",
     "w": 5
    }
@@ -40893,10 +40031,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N11",
-    "w": 5
    }
   ],
   "na_esp_lemmus_trimucronatus": [
@@ -40937,8 +40071,8 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "sa_esp_mazama_americana": [
@@ -40983,7 +40117,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -41017,7 +40151,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
@@ -41025,7 +40159,7 @@
     "w": 5
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -41064,10 +40198,6 @@
    },
    {
     "item": "DAG-01",
-    "w": 12
-   },
-   {
-    "item": "RAR-03",
     "w": 12
    },
    {
@@ -41205,7 +40335,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N05",
     "w": 12
    }
   ],
@@ -41335,10 +40465,6 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
     "item": "animal_trace",
     "w": 12
    }
@@ -41385,8 +40511,8 @@
     "w": 5
    },
    {
-    "item": "RAR-11",
-    "w": 1.8
+    "item": "MAT-N02",
+    "w": 12
    },
    {
     "item": "RAR-06",
@@ -41423,8 +40549,8 @@
     "w": 12
    },
    {
-    "item": "NUM-18",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "CIV-15",
@@ -41432,10 +40558,6 @@
    },
    {
     "item": "DAG-15",
-    "w": 5
-   },
-   {
-    "item": "RAR-07",
     "w": 5
    }
   ],
@@ -41479,10 +40601,6 @@
    {
     "item": "HUE-18",
     "w": 5
-   },
-   {
-    "item": "MAT-N05",
-    "w": 12
    }
   ],
   "sa_esp_eunectes_notaeus": [
@@ -41525,10 +40643,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "MAT-N14",
-    "w": 5
    }
   ],
   "sa_esp_symphysodon_aequifasciatus": [
@@ -41566,10 +40680,6 @@
    },
    {
     "item": "CIV-14",
-    "w": 12
-   },
-   {
-    "item": "RAR-02",
     "w": 12
    }
   ],
@@ -41653,12 +40763,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 1.8
+    "item": "MAT-N11",
+    "w": 5
    }
   ],
   "gm06_saguinus_geoffroyi": [
@@ -41787,8 +40893,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "sa_esp_ara_chloropterus": [
@@ -41872,10 +40978,6 @@
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-02",
     "w": 12
    },
    {
@@ -42013,11 +41115,7 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -42061,10 +41159,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "sa_esp_leopardus_geoffroyi": [
@@ -42105,8 +41199,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "sa_esp_anodorhynchus_hyacinthinus": [
@@ -42139,7 +41233,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -42237,10 +41331,6 @@
    {
     "item": "COR-17",
     "w": 5
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "sa_esp_penelope_jacquacu": [
@@ -42327,8 +41417,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "sa_esp_scelorchilus_rubecula": [
@@ -42415,7 +41505,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -42449,7 +41539,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
@@ -42458,10 +41548,6 @@
    },
    {
     "item": "DAG-13",
-    "w": 5
-   },
-   {
-    "item": "MAT-N18",
     "w": 5
    }
   ],
@@ -42505,10 +41591,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N11",
-    "w": 5
    }
   ],
   "sa_esp_ramphastos_toco": [
@@ -42721,10 +41803,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N11",
     "w": 5
    }
@@ -42769,10 +41847,6 @@
    {
     "item": "HUE-15",
     "w": 12
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
    }
   ],
   "sa_esp_leopardus_colocola": [
@@ -42813,7 +41887,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -42855,8 +41929,8 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
+    "item": "MAT-N22",
+    "w": 12
    }
   ],
   "sa_esp_cariama_cristata": [
@@ -42889,7 +41963,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
@@ -42897,7 +41971,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -42944,10 +42018,6 @@
    },
    {
     "item": "DAG-08",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -43035,8 +42105,8 @@
     "w": 5
    },
    {
-    "item": "RAR-08",
-    "w": 5
+    "item": "MAT-N03",
+    "w": 12
    },
    {
     "item": "owl_feather",
@@ -43083,10 +42153,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "MAT-N04",
-    "w": 12
    }
   ],
   "gm06_lontra_provocax": [
@@ -43166,10 +42232,6 @@
    },
    {
     "item": "COR-13",
-    "w": 12
-   },
-   {
-    "item": "RAR-01",
     "w": 12
    },
    {
@@ -43303,10 +42365,6 @@
     "w": 5
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
     "item": "antler_fragment",
     "w": 5
    }
@@ -43349,7 +42407,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -43391,11 +42449,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "antler_fragment",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -43439,10 +42493,6 @@
    {
     "item": "DAG-10",
     "w": 5
-   },
-   {
-    "item": "RAR-04",
-    "w": 1.8
    }
   ],
   "af_xlsx_addax": [
@@ -43487,7 +42537,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -43531,10 +42581,6 @@
    {
     "item": "DAG-11",
     "w": 5
-   },
-   {
-    "item": "RAR-08",
-    "w": 5
    }
   ],
   "af_gran_kudu": [
@@ -43577,10 +42623,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "af_gelada": [
@@ -43623,10 +42665,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N12",
-    "w": 5
    }
   ],
   "af_mono_brazza": [
@@ -43667,11 +42705,7 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -43763,7 +42797,7 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N09",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -43893,7 +42927,7 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N02",
     "w": 12
    }
   ],
@@ -43981,7 +43015,7 @@
     "w": 5
    },
    {
-    "item": "RAR-06",
+    "item": "MAT-N18",
     "w": 5
    }
   ],
@@ -44015,15 +43049,15 @@
     "w": 12
    },
    {
-    "item": "NUM-14",
-    "w": 12
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "DAG-04",
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -44099,7 +43133,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -44109,10 +43143,6 @@
    {
     "item": "DAG-12",
     "w": 5
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "asia_esp_0300": [
@@ -44203,8 +43233,8 @@
     "w": 5
    },
    {
-    "item": "antler_fragment",
-    "w": 5
+    "item": "MAT-N24",
+    "w": 12
    }
   ],
   "asia_esp_0102": [
@@ -44245,8 +43275,8 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
+    "item": "MAT-N14",
+    "w": 5
    }
   ],
   "asia_esp_0886": [
@@ -44279,7 +43309,7 @@
     "w": 12
    },
    {
-    "item": "CIV-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -44291,12 +43321,12 @@
     "w": 12
    },
    {
-    "item": "MAT-N03",
+    "item": "owl_feather",
     "w": 12
    },
    {
-    "item": "owl_feather",
-    "w": 12
+    "item": "MAT-N20",
+    "w": 5
    }
   ],
   "asia_esp_0445": [
@@ -44425,7 +43455,7 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
+    "item": "MAT-N18",
     "w": 5
    },
    {
@@ -44463,8 +43493,8 @@
     "w": 12
    },
    {
-    "item": "NUM-19",
-    "w": 1.8
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "MUN-06",
@@ -44473,10 +43503,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "antler_fragment",
-    "w": 5
    }
   ],
   "asia_esp_0878": [
@@ -44563,7 +43589,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -44601,7 +43627,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -44655,8 +43681,8 @@
     "w": 12
    },
    {
-    "item": "RAR-10",
-    "w": 1.8
+    "item": "antler_fragment",
+    "w": 5
    }
   ],
   "asia_esp_0902": [
@@ -44694,10 +43720,6 @@
    },
    {
     "item": "MUN-04",
-    "w": 5
-   },
-   {
-    "item": "RAR-06",
     "w": 5
    },
    {
@@ -44743,11 +43765,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "antler_fragment",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -44835,8 +43853,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "asia_esp_0387": [
@@ -44879,10 +43897,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "asia_esp_0073": [
@@ -44920,10 +43934,6 @@
    },
    {
     "item": "MUN-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-03",
     "w": 12
    },
    {
@@ -44971,10 +43981,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "MAT-N12",
-    "w": 5
    }
   ],
   "gm06_corvus_moneduloides": [
@@ -45145,7 +44151,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -45179,16 +44185,12 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
     "item": "CIV-17",
     "w": 5
-   },
-   {
-    "item": "RAR-04",
-    "w": 12
    },
    {
     "item": "MAT-N22",
@@ -45234,10 +44236,6 @@
    },
    {
     "item": "COR-16",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -45317,8 +44315,8 @@
     "w": 12
    },
    {
-    "item": "NUM-14",
-    "w": 12
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "CIV-14",
@@ -45327,10 +44325,6 @@
    {
     "item": "DAG-18",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "oc_esp_trichoglossus_haematodus": [
@@ -45459,8 +44453,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N14",
+    "w": 5
    }
   ],
   "oc_esp_hemiphaga_novaeseelandiae": [
@@ -45501,11 +44495,11 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
+    "item": "MAT-N01",
     "w": 12
    },
    {
-    "item": "MAT-N01",
+    "item": "MAT-N08",
     "w": 12
    }
   ],
@@ -45589,8 +44583,8 @@
     "w": 12
    },
    {
-    "item": "NUM-18",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "CIV-17",
@@ -45598,10 +44592,6 @@
    },
    {
     "item": "DAG-14",
-    "w": 5
-   },
-   {
-    "item": "MAT-N14",
     "w": 5
    }
   ],
@@ -45635,8 +44625,8 @@
     "w": 5
    },
    {
-    "item": "NUM-18",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "CIV-17",
@@ -45719,15 +44709,11 @@
     "w": 12
    },
    {
-    "item": "CIV-13",
-    "w": 12
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "MUN-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -45773,10 +44759,6 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "MAT-N22",
     "w": 12
    }
@@ -45811,7 +44793,7 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -45937,7 +44919,7 @@
     "w": 5
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -45947,10 +44929,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N14",
-    "w": 5
    }
   ],
   "oc_esp_crocodylus_porosus": [
@@ -45993,10 +44971,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "oc_esp_gallirallus_australis": [
@@ -46038,10 +45012,6 @@
    },
    {
     "item": "HUE-15",
-    "w": 12
-   },
-   {
-    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -46265,10 +45235,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "oc_esp_dendrolagus_lumholtzi": [
@@ -46306,10 +45272,6 @@
    },
    {
     "item": "DAG-05",
-    "w": 12
-   },
-   {
-    "item": "RAR-04",
     "w": 12
    },
    {
@@ -46394,10 +45356,6 @@
    },
    {
     "item": "CIV-14",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -46493,8 +45451,8 @@
     "w": 5
    },
    {
-    "item": "RAR-12",
-    "w": 1.8
+    "item": "antler_fragment",
+    "w": 5
    }
   ],
   "af_fosa_ave": [
@@ -46661,7 +45619,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -46675,10 +45633,6 @@
    {
     "item": "owl_feather",
     "w": 12
-   },
-   {
-    "item": "MAT-N20",
-    "w": 5
    }
   ],
   "af_xlsx_gato_dorado": [
@@ -46716,10 +45670,6 @@
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-04",
     "w": 12
    },
    {
@@ -46767,10 +45717,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "antler_fragment",
-    "w": 5
    }
   ],
   "af_ibice_walia": [
@@ -46813,10 +45759,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 1.8
    }
   ],
   "af_ibis_sagrado": [
@@ -46909,10 +45851,6 @@
    {
     "item": "DAG-05",
     "w": 12
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "asia_esp_0820": [
@@ -46955,10 +45893,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "MAT-N09",
-    "w": 5
    }
   ],
   "asia_esp_0081": [
@@ -47001,10 +45935,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "antler_fragment",
-    "w": 5
    }
   ],
   "asia_esp_0891": [
@@ -47095,8 +46025,8 @@
     "w": 12
    },
    {
-    "item": "MAT-N09",
-    "w": 5
+    "item": "RAR-09",
+    "w": 1.8
    }
   ],
   "asia_esp_0867": [
@@ -47129,7 +46059,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -47230,10 +46160,6 @@
    },
    {
     "item": "DAG-09",
-    "w": 5
-   },
-   {
-    "item": "MAT-N15",
     "w": 5
    }
   ],
@@ -47355,7 +46281,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -47401,8 +46327,8 @@
     "w": 5
    },
    {
-    "item": "NUM-19",
-    "w": 1.8
+    "item": "NUM-16",
+    "w": 12
    },
    {
     "item": "MUN-06",
@@ -47555,10 +46481,6 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
     "item": "MAT-N15",
     "w": 5
    }
@@ -47643,12 +46565,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
+    "item": "MAT-N11",
+    "w": 5
    }
   ],
   "af_elefante_bosque": [
@@ -47689,7 +46607,7 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N22",
     "w": 12
    },
    {
@@ -47739,10 +46657,6 @@
     "w": 5
    },
    {
-    "item": "MAT-N15",
-    "w": 5
-   },
-   {
     "item": "MAT-N16",
     "w": 5
    }
@@ -47785,10 +46699,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "RAR-07",
     "w": 1.8
    }
@@ -47823,7 +46733,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -47907,8 +46817,8 @@
     "w": 12
    },
    {
-    "item": "NUM-18",
-    "w": 5
+    "item": "NUM-16",
+    "w": 12
    },
    {
     "item": "HUE-13",
@@ -47999,7 +46909,7 @@
     "w": 12
    },
    {
-    "item": "CIV-13",
+    "item": "CIV-15",
     "w": 12
    },
    {
@@ -48055,10 +46965,6 @@
    {
     "item": "DAG-11",
     "w": 5
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "gm06_pterois_miles": [
@@ -48179,7 +47085,7 @@
     "w": 12
    },
    {
-    "item": "CIV-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -48191,8 +47097,8 @@
     "w": 12
    },
    {
-    "item": "MAT-N11",
-    "w": 5
+    "item": "RAR-01",
+    "w": 1.8
    }
   ],
   "af_xlsx_cocodrilo_enano": [
@@ -48233,8 +47139,8 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "af_xlsx_131_cercopithecus_diana": [
@@ -48279,7 +47185,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N22",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -48401,7 +47307,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -48409,7 +47315,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -48451,10 +47357,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N11",
     "w": 5
    }
@@ -48489,7 +47391,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
@@ -48499,10 +47401,6 @@
    {
     "item": "DAG-12",
     "w": 5
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "af_xlsx_131_mellivora_capensis": [
@@ -48541,10 +47439,6 @@
    {
     "item": "MUN-04",
     "w": 5
-   },
-   {
-    "item": "RAR-02",
-    "w": 12
    },
    {
     "item": "otter_whisker",
@@ -48637,10 +47531,6 @@
    {
     "item": "DAG-09",
     "w": 5
-   },
-   {
-    "item": "RAR-01",
-    "w": 1.8
    }
   ],
   "af_lemur_colaanillada": [
@@ -48681,8 +47571,8 @@
     "w": 5
    },
    {
-    "item": "RAR-06",
-    "w": 5
+    "item": "MAT-N24",
+    "w": 12
    }
   ],
   "af_xlsx_bonobo": [
@@ -48723,7 +47613,7 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -48763,10 +47653,6 @@
    {
     "item": "CIV-16",
     "w": 12
-   },
-   {
-    "item": "RAR-06",
-    "w": 5
    }
   ],
   "af_mandril": [
@@ -48799,7 +47685,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -48851,10 +47737,6 @@
    {
     "item": "DAG-05",
     "w": 12
-   },
-   {
-    "item": "MAT-N14",
-    "w": 5
    }
   ],
   "af_tortuga_laúd": [
@@ -48933,8 +47815,8 @@
     "w": 5
    },
    {
-    "item": "CIV-13",
-    "w": 12
+    "item": "NUM-20",
+    "w": 1.8
    },
    {
     "item": "MUN-05",
@@ -49021,7 +47903,7 @@
     "w": 5
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -49029,11 +47911,7 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
-    "item": "RAR-07",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -49077,10 +47955,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "af_okapi": [
@@ -49121,11 +47995,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -49167,12 +48037,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "af_cormoran_cabo": [
@@ -49263,10 +48129,6 @@
     "w": 5
    },
    {
-    "item": "MAT-N04",
-    "w": 12
-   },
-   {
     "item": "heron_feather",
     "w": 12
    }
@@ -49351,12 +48213,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
+    "item": "MAT-N09",
+    "w": 5
    }
   ],
   "af_zorro_palido": [
@@ -49399,10 +48257,6 @@
    {
     "item": "DAG-05",
     "w": 12
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "af_xlsx_131_lepus_fagani": [
@@ -49443,11 +48297,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
-    "item": "MAT-N12",
+    "item": "MAT-N09",
     "w": 5
    }
   ],
@@ -49531,10 +48381,6 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
     "item": "MAT-N10",
     "w": 5
    }
@@ -49577,12 +48423,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "af_loro_negro_seychelles": [
@@ -49661,7 +48503,7 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -49671,10 +48513,6 @@
    {
     "item": "DAG-05",
     "w": 12
-   },
-   {
-    "item": "antler_fragment",
-    "w": 5
    }
   ],
   "asia_esp_0318": [
@@ -49713,10 +48551,6 @@
    {
     "item": "MUN-04",
     "w": 5
-   },
-   {
-    "item": "RAR-02",
-    "w": 12
    },
    {
     "item": "MAT-N09",
@@ -49761,11 +48595,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -49945,10 +48775,6 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
     "item": "MAT-N15",
     "w": 5
    }
@@ -50037,12 +48863,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "animal_trace",
     "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
    }
   ],
   "gm06_lorius_garrulus": [
@@ -50121,7 +48943,7 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -50129,12 +48951,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N24",
     "w": 12
-   },
-   {
-    "item": "RAR-08",
-    "w": 5
    },
    {
     "item": "RAR-12",
@@ -50181,10 +48999,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
    }
   ],
   "asia_esp_0877": [
@@ -50225,7 +49039,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
+    "item": "MAT-N02",
     "w": 12
    }
   ],
@@ -50267,7 +49081,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -50359,11 +49173,11 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N09",
+    "w": 5
    },
    {
-    "item": "MAT-N09",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -50407,10 +49221,6 @@
    {
     "item": "DAG-13",
     "w": 5
-   },
-   {
-    "item": "MAT-N12",
-    "w": 5
    }
   ],
   "asia_esp_0319": [
@@ -50443,7 +49253,7 @@
     "w": 5
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -50497,8 +49307,8 @@
     "w": 5
    },
    {
-    "item": "MAT-N10",
-    "w": 5
+    "item": "MAT-N24",
+    "w": 12
    }
   ],
   "asia_esp_0352": [
@@ -50531,7 +49341,7 @@
     "w": 12
    },
    {
-    "item": "NUM-15",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -50541,10 +49351,6 @@
    {
     "item": "DAG-12",
     "w": 5
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "asia_esp_0345": [
@@ -50589,7 +49395,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -50681,7 +49487,7 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -50725,10 +49531,6 @@
    {
     "item": "DAG-17",
     "w": 1.8
-   },
-   {
-    "item": "antler_fragment",
-    "w": 5
    }
   ],
   "asia_esp_0853": [
@@ -50761,7 +49563,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -50770,10 +49572,6 @@
    },
    {
     "item": "DAG-15",
-    "w": 5
-   },
-   {
-    "item": "MAT-N18",
     "w": 5
    }
   ],
@@ -50861,8 +49659,8 @@
     "w": 12
    },
    {
-    "item": "MAT-N15",
-    "w": 5
+    "item": "RAR-11",
+    "w": 1.8
    }
   ],
   "na_esp_micrathene_whitneyi": [
@@ -50955,10 +49753,6 @@
    {
     "item": "HUE-20",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N05",
-    "w": 12
    }
   ],
   "na_esp_basiliscus_plumifrons": [
@@ -51003,8 +49797,8 @@
     "w": 12
    },
    {
-    "item": "RAR-07",
-    "w": 5
+    "item": "RAR-10",
+    "w": 1.8
    }
   ],
   "na_esp_lampropeltis_californiae": [
@@ -51088,10 +49882,6 @@
    },
    {
     "item": "DAG-14",
-    "w": 5
-   },
-   {
-    "item": "MAT-N09",
     "w": 5
    }
   ],
@@ -51179,12 +49969,8 @@
     "w": 12
    },
    {
-    "item": "RAR-09",
-    "w": 5
-   },
-   {
-    "item": "RAR-06",
-    "w": 1.8
+    "item": "owl_feather",
+    "w": 12
    }
   ],
   "na_esp_aix_sponsa": [
@@ -51217,7 +50003,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-14",
     "w": 12
    },
    {
@@ -51275,8 +50061,8 @@
     "w": 5
    },
    {
-    "item": "RAR-12",
-    "w": 1.8
+    "item": "antler_fragment",
+    "w": 5
    }
   ],
   "mar_esp_gadus_morhua": [
@@ -51314,10 +50100,6 @@
    },
    {
     "item": "CON-16",
-    "w": 12
-   },
-   {
-    "item": "RAR-03",
     "w": 12
    }
   ],
@@ -51451,11 +50233,7 @@
     "w": 12
    },
    {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
-    "item": "RAR-09",
+    "item": "MAT-N15",
     "w": 5
    }
   ],
@@ -51489,7 +50267,7 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -51497,7 +50275,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -51536,10 +50314,6 @@
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    }
   ],
@@ -51671,10 +50445,6 @@
    {
     "item": "DAG-16",
     "w": 1.8
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
    }
   ],
   "na_esp_odocoileus_hemionus": [
@@ -51716,10 +50486,6 @@
    },
    {
     "item": "DAG-15",
-    "w": 5
-   },
-   {
-    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -51801,10 +50567,6 @@
    {
     "item": "DAG-02",
     "w": 12
-   },
-   {
-    "item": "RAR-01",
-    "w": 12
    }
   ],
   "na_esp_lepus_americanus": [
@@ -51845,8 +50607,8 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    }
   ],
   "gm06_cyclura_nubila": [
@@ -51929,7 +50691,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -52017,7 +50779,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -52061,10 +50823,6 @@
    {
     "item": "COR-15",
     "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "na_esp_heloderma_suspectum": [
@@ -52107,10 +50865,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "mar_esp_halichoerus_grypus": [
@@ -52149,10 +50903,6 @@
    {
     "item": "CON-20",
     "w": 1.8
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    },
    {
     "item": "otter_whisker",
@@ -52287,10 +51037,6 @@
    {
     "item": "DAG-03",
     "w": 12
-   },
-   {
-    "item": "RAR-01",
-    "w": 12
    }
   ],
   "na_esp_ara_macao": [
@@ -52385,8 +51131,8 @@
     "w": 5
    },
    {
-    "item": "RAR-09",
-    "w": 5
+    "item": "MAT-N08",
+    "w": 12
    }
   ],
   "na_esp_calypte_anna": [
@@ -52431,8 +51177,8 @@
     "w": 5
    },
    {
-    "item": "MAT-N02",
-    "w": 12
+    "item": "MAT-N19",
+    "w": 5
    }
   ],
   "na_esp_vulpes_macrotis": [
@@ -52519,10 +51265,6 @@
     "w": 12
    },
    {
-    "item": "MAT-N15",
-    "w": 5
-   },
-   {
     "item": "MAT-N16",
     "w": 5
    }
@@ -52567,10 +51309,6 @@
    {
     "item": "COR-19",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "na_esp_gopherus_agassizii": [
@@ -52603,7 +51341,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -52611,8 +51349,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    },
    {
     "item": "MAT-N16",
@@ -52707,12 +51445,12 @@
     "w": 5
    },
    {
-    "item": "MAT-N04",
+    "item": "owl_feather",
     "w": 12
    },
    {
-    "item": "owl_feather",
-    "w": 12
+    "item": "MAT-N20",
+    "w": 5
    }
   ],
   "na_esp_leopardus_pardalis": [
@@ -52755,10 +51493,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "na_esp_castor_canadensis": [
@@ -52799,10 +51533,6 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "otter_whisker",
     "w": 5
    }
@@ -52837,8 +51567,8 @@
     "w": 5
    },
    {
-    "item": "NUM-19",
-    "w": 1.8
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "MUN-06",
@@ -52847,10 +51577,6 @@
    {
     "item": "HUE-16",
     "w": 12
-   },
-   {
-    "item": "MAT-N19",
-    "w": 5
    }
   ],
   "af_xlsx_gecko_hoja": [
@@ -52933,10 +51659,6 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
     "item": "MAT-N18",
     "w": 5
    }
@@ -52971,15 +51693,11 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
     "item": "CIV-16",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -53025,11 +51743,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -53111,10 +51825,6 @@
    {
     "item": "CIV-14",
     "w": 12
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    }
   ],
   "af_pinguino_africano": [
@@ -53159,7 +51869,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N04",
     "w": 12
    }
   ],
@@ -53243,12 +51953,8 @@
     "w": 1.8
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
+    "item": "MAT-N11",
+    "w": 5
    }
   ],
   "asia_esp_0910": [
@@ -53335,10 +52041,6 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N03",
-    "w": 12
-   },
-   {
     "item": "heron_feather",
     "w": 12
    }
@@ -53381,8 +52083,8 @@
     "w": 5
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N12",
+    "w": 5
    },
    {
     "item": "otter_whisker",
@@ -53419,7 +52121,7 @@
     "w": 5
    },
    {
-    "item": "NUM-15",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -53429,10 +52131,6 @@
    {
     "item": "DAG-18",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "asia_esp_0523": [
@@ -53470,10 +52168,6 @@
    },
    {
     "item": "CIV-16",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -53521,10 +52215,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "asia_esp_0901": [
@@ -53565,11 +52255,11 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    },
    {
-    "item": "RAR-10",
+    "item": "RAR-11",
     "w": 1.8
    }
   ],
@@ -53649,7 +52339,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -53701,10 +52391,6 @@
    {
     "item": "DAG-12",
     "w": 5
-   },
-   {
-    "item": "RAR-09",
-    "w": 1.8
    }
   ],
   "asia_esp_0395": [
@@ -53742,10 +52428,6 @@
    },
    {
     "item": "DAG-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    },
    {
@@ -53795,8 +52477,8 @@
     "w": 5
    },
    {
-    "item": "RAR-08",
-    "w": 5
+    "item": "MAT-N03",
+    "w": 12
    }
   ],
   "asia_esp_0874": [
@@ -53839,10 +52521,6 @@
    {
     "item": "HUE-20",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N19",
-    "w": 5
    }
   ],
   "asia_esp_0898": [
@@ -53927,10 +52605,6 @@
    {
     "item": "DAG-16",
     "w": 1.8
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "na_esp_bison_bison": [
@@ -53971,7 +52645,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -54013,7 +52687,7 @@
     "w": 1.8
    },
    {
-    "item": "RAR-04",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -54273,7 +52947,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -54324,10 +52998,6 @@
    },
    {
     "item": "DAG-10",
-    "w": 5
-   },
-   {
-    "item": "MAT-N18",
     "w": 5
    }
   ],
@@ -54411,8 +53081,8 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "MAT-N09",
+    "w": 5
    }
   ],
   "asia_esp_0351": [
@@ -54451,10 +53121,6 @@
    {
     "item": "DAG-02",
     "w": 12
-   },
-   {
-    "item": "RAR-06",
-    "w": 5
    },
    {
     "item": "MAT-N14",
@@ -54499,11 +53165,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -54546,10 +53208,6 @@
    },
    {
     "item": "DAG-05",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -54629,7 +53287,7 @@
     "w": 12
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -54637,7 +53295,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -54679,11 +53337,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
-    "item": "animal_trace",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -54767,8 +53421,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "asia_esp_0843": [
@@ -54811,10 +53465,6 @@
    {
     "item": "DAG-05",
     "w": 12
-   },
-   {
-    "item": "MAT-N09",
-    "w": 5
    }
   ],
   "asia_esp_0369": [
@@ -54897,7 +53547,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N02",
     "w": 12
    },
    {
@@ -54947,10 +53597,6 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N11",
     "w": 5
    }
@@ -54995,10 +53641,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "asia_esp_0854": [
@@ -55041,10 +53683,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "RAR-08",
-    "w": 5
    }
   ],
   "asia_esp_0414": [
@@ -55087,10 +53725,6 @@
    {
     "item": "DAG-16",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N10",
-    "w": 5
    }
   ],
   "asia_esp_0317": [
@@ -55131,12 +53765,12 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
+    "item": "animal_trace",
     "w": 12
    },
    {
-    "item": "RAR-07",
-    "w": 5
+    "item": "RAR-11",
+    "w": 1.8
    }
   ],
   "asia_esp_0401": [
@@ -55177,12 +53811,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
+    "item": "MAT-N09",
+    "w": 5
    }
   ],
   "asia_esp_0327": [
@@ -55349,7 +53979,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -55399,7 +54029,7 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -55492,10 +54122,6 @@
    },
    {
     "item": "DAG-14",
-    "w": 5
-   },
-   {
-    "item": "MAT-N18",
     "w": 5
    }
   ],
@@ -55663,7 +54289,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -55673,10 +54299,6 @@
    {
     "item": "DAG-18",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N11",
-    "w": 5
    }
   ],
   "af_babuino_hamadryas": [
@@ -55717,7 +54339,7 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
+    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -55751,7 +54373,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -55759,12 +54381,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "af_bufalo_cafre": [
@@ -55849,10 +54467,6 @@
    {
     "item": "DAG-13",
     "w": 5
-   },
-   {
-    "item": "RAR-11",
-    "w": 1.8
    }
   ],
   "af_picozapato": [
@@ -55991,10 +54605,6 @@
    {
     "item": "DAG-10",
     "w": 5
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "af_xlsx_131_ceratogymna_atrata": [
@@ -56123,11 +54733,11 @@
     "w": 5
    },
    {
-    "item": "RAR-06",
+    "item": "MAT-N11",
     "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -56257,7 +54867,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -56266,10 +54876,6 @@
    },
    {
     "item": "DAG-07",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -56311,8 +54917,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N09",
+    "w": 5
    },
    {
     "item": "otter_whisker",
@@ -56359,10 +54965,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "af_xlsx_131_gyps_africanus": [
@@ -56407,12 +55009,12 @@
     "w": 5
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N03",
     "w": 12
    },
    {
-    "item": "MAT-N20",
-    "w": 5
+    "item": "RAR-06",
+    "w": 1.8
    }
   ],
   "af_dikdik_guenther": [
@@ -56445,7 +55047,7 @@
     "w": 5
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -56457,8 +55059,8 @@
     "w": 12
    },
    {
-    "item": "antler_fragment",
-    "w": 5
+    "item": "RAR-09",
+    "w": 1.8
    }
   ],
   "af_xlsx_tilapia": [
@@ -56585,10 +55187,6 @@
    {
     "item": "COR-15",
     "w": 12
-   },
-   {
-    "item": "RAR-03",
-    "w": 1.8
    }
   ],
   "af_xlsx_131_geosciurus_inauris": [
@@ -56621,7 +55219,7 @@
     "w": 5
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -56671,8 +55269,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "af_xlsx_ayeaye": [
@@ -56714,10 +55312,6 @@
    },
    {
     "item": "DAG-07",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -56793,7 +55387,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-16",
     "w": 12
    },
    {
@@ -56839,15 +55433,11 @@
     "w": 12
    },
    {
-    "item": "HUE-13",
+    "item": "HUE-14",
     "w": 12
    },
    {
     "item": "HUE-17",
-    "w": 5
-   },
-   {
-    "item": "MAT-N19",
     "w": 5
    }
   ],
@@ -56935,11 +55525,7 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "MAT-N05",
+    "item": "MAT-N02",
     "w": 12
    }
   ],
@@ -56979,14 +55565,6 @@
    {
     "item": "CIV-16",
     "w": 12
-   },
-   {
-    "item": "RAR-06",
-    "w": 5
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "gm06_cacatua_moluccensis": [
@@ -57073,10 +55651,6 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
     "item": "otter_whisker",
     "w": 5
    }
@@ -57120,10 +55694,6 @@
    },
    {
     "item": "DAG-12",
-    "w": 5
-   },
-   {
-    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -57251,10 +55821,6 @@
    {
     "item": "COR-14",
     "w": 12
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "flamenco_comun": [
@@ -57349,8 +55915,8 @@
     "w": 5
    },
    {
-    "item": "RAR-08",
-    "w": 5
+    "item": "RAR-01",
+    "w": 1.8
    }
   ],
   "asia_esp_0007": [
@@ -57487,7 +56053,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N02",
+    "item": "owl_feather",
     "w": 12
    },
    {
@@ -57525,7 +56091,7 @@
     "w": 12
    },
    {
-    "item": "NUM-15",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -57533,7 +56099,7 @@
     "w": 1.8
    },
    {
-    "item": "RAR-04",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -57709,10 +56275,6 @@
     "w": 5
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
     "item": "MAT-N15",
     "w": 5
    }
@@ -57755,11 +56317,7 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N12",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -57803,10 +56361,6 @@
    {
     "item": "DAG-15",
     "w": 5
-   },
-   {
-    "item": "MAT-N02",
-    "w": 12
    }
   ],
   "oc_esp_dasyurus_viverrinus": [
@@ -57839,8 +56393,8 @@
     "w": 5
    },
    {
-    "item": "NUM-17",
-    "w": 5
+    "item": "NUM-09",
+    "w": 12
    },
    {
     "item": "DAG-05",
@@ -57849,10 +56403,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "oc_esp_nestor_notabilis": [
@@ -57897,7 +56447,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N01",
+    "item": "MAT-N08",
     "w": 12
    }
   ],
@@ -57936,10 +56486,6 @@
    },
    {
     "item": "MUN-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-02",
     "w": 12
    },
    {
@@ -58023,7 +56569,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "CIV-13",
     "w": 12
    },
    {
@@ -58032,10 +56578,6 @@
    },
    {
     "item": "DAG-13",
-    "w": 5
-   },
-   {
-    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -58075,10 +56617,6 @@
    {
     "item": "CIV-18",
     "w": 5
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    },
    {
     "item": "MAT-N12",
@@ -58123,11 +56661,7 @@
     "w": 12
    },
    {
-    "item": "DAG-10",
-    "w": 5
-   },
-   {
-    "item": "RAR-09",
+    "item": "MAT-N15",
     "w": 5
    }
   ],
@@ -58299,11 +56833,11 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
+    "item": "MAT-N02",
     "w": 12
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N05",
     "w": 12
    },
    {
@@ -58401,10 +56935,6 @@
    {
     "item": "DAG-11",
     "w": 5
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "af_tortuga_radiada": [
@@ -58447,10 +56977,6 @@
    {
     "item": "COR-20",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    },
    {
     "item": "MAT-N16",
@@ -58497,10 +57023,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "RAR-08",
-    "w": 5
    }
   ],
   "af_garza_goliat": [
@@ -58589,10 +57111,6 @@
    {
     "item": "HUE-18",
     "w": 5
-   },
-   {
-    "item": "MAT-N05",
-    "w": 12
    }
   ],
   "af_nu_azul": [
@@ -58625,8 +57143,8 @@
     "w": 5
    },
    {
-    "item": "CIV-13",
-    "w": 12
+    "item": "NUM-18",
+    "w": 5
    },
    {
     "item": "CIV-16",
@@ -58634,10 +57152,6 @@
    },
    {
     "item": "DAG-13",
-    "w": 5
-   },
-   {
-    "item": "MAT-N09",
     "w": 5
    }
   ],
@@ -58679,11 +57193,11 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
+    "item": "MAT-N11",
+    "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -58725,10 +57239,6 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
     "item": "MAT-N14",
     "w": 5
    }
@@ -58763,7 +57273,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -58811,10 +57321,6 @@
    {
     "item": "CIV-14",
     "w": 12
-   },
-   {
-    "item": "RAR-02",
-    "w": 12
    }
   ],
   "af_xlsx_131_sclerophrys_regularis": [
@@ -58856,7 +57362,7 @@
    },
    {
     "item": "RAR-04",
-    "w": 12
+    "w": 1.8
    }
   ],
   "af_xlsx_gacela_frente_roja": [
@@ -58931,16 +57437,16 @@
     "w": 12
    },
    {
-    "item": "NUM-15",
-    "w": 12
+    "item": "NUM-19",
+    "w": 1.8
    },
    {
     "item": "CIV-16",
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "MAT-N14",
+    "w": 5
    }
   ],
   "af_xlsx_131_polemaetus_bellicosus": [
@@ -58989,8 +57495,8 @@
     "w": 12
    },
    {
-    "item": "MAT-N20",
-    "w": 5
+    "item": "RAR-06",
+    "w": 1.8
    }
   ],
   "af_xlsx_131_cephalophus_zebra": [
@@ -59031,11 +57537,7 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
-    "item": "antler_fragment",
+    "item": "MAT-N11",
     "w": 5
    }
   ],
@@ -59079,10 +57581,6 @@
    {
     "item": "DAG-15",
     "w": 5
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "af_xlsx_131_phataginus_tricuspis": [
@@ -59123,7 +57621,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -59157,16 +57655,12 @@
     "w": 5
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
     "item": "MUN-06",
     "w": 5
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    },
    {
     "item": "MAT-N24",
@@ -59303,7 +57797,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -59345,12 +57839,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
-    "item": "RAR-01",
-    "w": 1.8
+    "item": "MAT-N11",
+    "w": 5
    }
   ],
   "af_facoquero": [
@@ -59391,10 +57881,6 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
-   },
-   {
     "item": "animal_trace",
     "w": 12
    }
@@ -59429,8 +57915,8 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
-    "w": 12
+    "item": "NUM-17",
+    "w": 5
    },
    {
     "item": "HUE-13",
@@ -59523,10 +58009,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "asia_esp_0534": [
@@ -59569,10 +58051,6 @@
    {
     "item": "DAG-06",
     "w": 12
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "asia_esp_0344": [
@@ -59605,7 +58083,7 @@
     "w": 12
    },
    {
-    "item": "NUM-15",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -59617,7 +58095,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N12",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -59659,11 +58137,11 @@
     "w": 1.8
    },
    {
-    "item": "RAR-05",
-    "w": 12
+    "item": "MAT-N11",
+    "w": 5
    },
    {
-    "item": "MAT-N11",
+    "item": "antler_fragment",
     "w": 5
    }
   ],
@@ -59787,10 +58265,6 @@
    {
     "item": "CON-16",
     "w": 12
-   },
-   {
-    "item": "RAR-03",
-    "w": 12
    }
   ],
   "polar_esp_somniosus_microcephalus": [
@@ -59877,8 +58351,8 @@
     "w": 12
    },
    {
-    "item": "MAT-N04",
-    "w": 12
+    "item": "MAT-N19",
+    "w": 5
    }
   ],
   "mar_esp_balaenoptera_edeni": [
@@ -59921,10 +58395,6 @@
    {
     "item": "DAG-19",
     "w": 1.8
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "mar_esp_eschrichtius_robustus": [
@@ -60009,10 +58479,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "mar_esp_physeter_macrocephalus": [
@@ -60055,10 +58521,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "polar_esp_balaena_mysticetus": [
@@ -60361,10 +58823,6 @@
    {
     "item": "COR-19",
     "w": 1.8
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
    }
   ],
   "mar_esp_isurus_oxyrinchus": [
@@ -60407,10 +58865,6 @@
    {
     "item": "COR-15",
     "w": 12
-   },
-   {
-    "item": "RAR-08",
-    "w": 1.8
    }
   ],
   "mar_esp_pomacanthus_imperator": [
@@ -60453,10 +58907,6 @@
    {
     "item": "COR-15",
     "w": 12
-   },
-   {
-    "item": "RAR-09",
-    "w": 5
    }
   ],
   "oc_esp_macropus_fuliginosus": [
@@ -60498,10 +58948,6 @@
    },
    {
     "item": "COR-16",
-    "w": 12
-   },
-   {
-    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -60759,10 +59205,6 @@
    {
     "item": "CON-14",
     "w": 12
-   },
-   {
-    "item": "RAR-05",
-    "w": 12
    }
   ],
   "oc_esp_cacatua_galerita": [
@@ -60853,10 +59295,6 @@
     "w": 12
    },
    {
-    "item": "MAT-N15",
-    "w": 5
-   },
-   {
     "item": "MAT-N16",
     "w": 5
    }
@@ -60900,10 +59338,6 @@
    },
    {
     "item": "COR-18",
-    "w": 5
-   },
-   {
-    "item": "RAR-08",
     "w": 5
    }
   ],
@@ -61129,8 +59563,8 @@
     "w": 12
    },
    {
-    "item": "RAR-10",
-    "w": 1.8
+    "item": "MAT-N04",
+    "w": 12
    }
   ],
   "mar_esp_aetobatus_ocellatus": [
@@ -61210,10 +59644,6 @@
    },
    {
     "item": "COR-13",
-    "w": 12
-   },
-   {
-    "item": "RAR-05",
     "w": 12
    }
   ],
@@ -61345,10 +59775,6 @@
    {
     "item": "COR-16",
     "w": 12
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    }
   ],
   "deep_esp_stomias_boa": [
@@ -61428,10 +59854,6 @@
    },
    {
     "item": "CON-15",
-    "w": 12
-   },
-   {
-    "item": "RAR-03",
     "w": 12
    }
   ],
@@ -61515,8 +59937,8 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
-    "w": 12
+    "item": "RAR-08",
+    "w": 1.8
    }
   ],
   "mar_esp_balaenoptera_musculus": [
@@ -61689,10 +60111,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "mar_esp_lamna_ditropis": [
@@ -61994,10 +60412,6 @@
    },
    {
     "item": "CON-14",
-    "w": 12
-   },
-   {
-    "item": "RAR-01",
     "w": 12
    }
   ],
@@ -62517,10 +60931,6 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
-    "w": 12
-   },
-   {
     "item": "MAT-N21",
     "w": 5
    }
@@ -62863,10 +61273,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "RAR-07",
-    "w": 5
    }
   ],
   "polar_esp_hydrurga_leptonyx": [
@@ -63169,10 +61575,6 @@
    {
     "item": "COR-16",
     "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
    }
   ],
   "mar_esp_lagenorhynchus_obscurus": [
@@ -63257,10 +61659,6 @@
    {
     "item": "COR-15",
     "w": 12
-   },
-   {
-    "item": "MAT-N19",
-    "w": 5
    }
   ],
   "polar_esp_pagodroma_nivea": [
@@ -63431,12 +61829,12 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N24",
     "w": 12
    },
    {
-    "item": "RAR-07",
-    "w": 5
+    "item": "RAR-03",
+    "w": 1.8
    }
   ],
   "mar_esp_amphioctopus_marginatus": [
@@ -63647,10 +62045,6 @@
    {
     "item": "COR-13",
     "w": 12
-   },
-   {
-    "item": "RAR-03",
-    "w": 12
    }
   ],
   "deep_esp_histioteuthis_reversa": [
@@ -63695,10 +62089,6 @@
     "w": 5
    },
    {
-    "item": "RAR-09",
-    "w": 5
-   },
-   {
     "item": "MAT-N21",
     "w": 5
    }
@@ -63739,10 +62129,6 @@
    {
     "item": "CON-17",
     "w": 5
-   },
-   {
-    "item": "RAR-02",
-    "w": 12
    }
   ],
   "polar_esp_odobenus_rosmarus": [
@@ -63784,10 +62170,6 @@
    },
    {
     "item": "COR-16",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
     "w": 12
    },
    {
@@ -63877,10 +62259,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "RAR-12",
-    "w": 1.8
    },
    {
     "item": "otter_whisker",
@@ -63975,7 +62353,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N04",
+    "item": "MAT-N05",
     "w": 12
    }
   ],
@@ -64107,10 +62485,6 @@
    {
     "item": "COR-18",
     "w": 5
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "polar_esp_stercorarius_maccormicki": [
@@ -64155,8 +62529,8 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N02",
-    "w": 12
+    "item": "MAT-N19",
+    "w": 5
    }
   ],
   "mar_esp_eubalaena_australis": [
@@ -64283,10 +62657,6 @@
    {
     "item": "COR-17",
     "w": 5
-   },
-   {
-    "item": "MAT-N18",
-    "w": 5
    }
   ],
   "oc_esp_tachyglossus_aculeatus": [
@@ -64329,10 +62699,6 @@
    {
     "item": "DAG-08",
     "w": 12
-   },
-   {
-    "item": "MAT-N10",
-    "w": 5
    }
   ],
   "mar_esp_sepioteuthis_lessoniana": [
@@ -64462,10 +62828,6 @@
    },
    {
     "item": "COR-20",
-    "w": 1.8
-   },
-   {
-    "item": "RAR-12",
     "w": 1.8
    }
   ],
@@ -64635,10 +62997,6 @@
    {
     "item": "COR-16",
     "w": 12
-   },
-   {
-    "item": "RAR-08",
-    "w": 5
    },
    {
     "item": "otter_whisker",
@@ -64989,10 +63347,6 @@
     "w": 12
    },
    {
-    "item": "RAR-08",
-    "w": 5
-   },
-   {
     "item": "MAT-N21",
     "w": 5
    }
@@ -65081,7 +63435,7 @@
     "w": 12
    },
    {
-    "item": "MAT-N02",
+    "item": "MAT-N04",
     "w": 12
    }
   ],
@@ -65297,10 +63651,6 @@
    {
     "item": "COR-17",
     "w": 5
-   },
-   {
-    "item": "MAT-N22",
-    "w": 12
    }
   ],
   "deep_esp_anoplogaster_cornuta": [
@@ -65387,7 +63737,7 @@
     "w": 1.8
    },
    {
-    "item": "MAT-N03",
+    "item": "MAT-N04",
     "w": 12
    }
   ],
@@ -65430,10 +63780,6 @@
    },
    {
     "item": "COR-14",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -65521,7 +63867,7 @@
     "w": 5
    },
    {
-    "item": "MAT-N03",
+    "item": "MAT-N04",
     "w": 12
    }
   ],
@@ -65565,10 +63911,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N09",
-    "w": 5
    }
   ],
   "polar_esp_ommatophoca_rossii": [
@@ -65655,8 +63997,8 @@
     "w": 1.8
    },
    {
-    "item": "RAR-10",
-    "w": 1.8
+    "item": "MAT-N19",
+    "w": 5
    }
   ],
   "mar_esp_ziphius_cavirostris": [
@@ -65781,8 +64123,8 @@
     "w": 5
    },
    {
-    "item": "RAR-06",
-    "w": 5
+    "item": "MAT-N22",
+    "w": 12
    },
    {
     "item": "RAR-02",
@@ -65999,8 +64341,8 @@
     "w": 5
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "mar_esp_gadus_macrocephalus": [
@@ -66259,10 +64601,6 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
     "item": "MAT-N09",
     "w": 5
    }
@@ -66307,10 +64645,6 @@
    {
     "item": "HUE-15",
     "w": 12
-   },
-   {
-    "item": "MAT-N05",
-    "w": 12
    }
   ],
   "oc_esp_rhipidura_fuliginosa": [
@@ -66343,7 +64677,7 @@
     "w": 12
    },
    {
-    "item": "NUM-16",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -66397,12 +64731,8 @@
     "w": 12
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N24",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "oc_esp_vombatus_ursinus": [
@@ -66440,10 +64770,6 @@
    },
    {
     "item": "DAG-03",
-    "w": 12
-   },
-   {
-    "item": "RAR-01",
     "w": 12
    },
    {
@@ -66491,10 +64817,6 @@
    {
     "item": "DAG-14",
     "w": 5
-   },
-   {
-    "item": "RAR-10",
-    "w": 1.8
    }
   ],
   "oc_esp_dacelo_novaeguineae": [
@@ -66581,10 +64903,6 @@
     "w": 12
    },
    {
-    "item": "RAR-05",
-    "w": 12
-   },
-   {
     "item": "MAT-N14",
     "w": 5
    }
@@ -66633,10 +64951,6 @@
    {
     "item": "MAT-N01",
     "w": 12
-   },
-   {
-    "item": "MAT-N08",
-    "w": 12
    }
   ],
   "oc_esp_sarcophilus_harrisii": [
@@ -66677,8 +64991,8 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
+    "item": "MAT-N10",
+    "w": 5
    }
   ],
   "oc_esp_gymnorhina_tibicen": [
@@ -66761,7 +65075,7 @@
     "w": 12
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-09",
     "w": 12
    },
    {
@@ -66819,10 +65133,6 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
-    "w": 12
-   },
-   {
     "item": "animal_trace",
     "w": 12
    }
@@ -66869,8 +65179,8 @@
     "w": 5
    },
    {
-    "item": "RAR-11",
-    "w": 1.8
+    "item": "MAT-N01",
+    "w": 12
    }
   ],
   "oc_esp_ninox_strenua": [
@@ -66911,16 +65221,12 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
+    "item": "MAT-N02",
     "w": 12
    },
    {
     "item": "owl_feather",
     "w": 12
-   },
-   {
-    "item": "MAT-N20",
-    "w": 5
    }
   ],
   "oc_esp_spilocuscus_maculatus": [
@@ -66961,7 +65267,7 @@
     "w": 12
    },
    {
-    "item": "RAR-02",
+    "item": "MAT-N22",
     "w": 12
    }
   ],
@@ -66995,8 +65301,8 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
-    "w": 12
+    "item": "NUM-17",
+    "w": 5
    },
    {
     "item": "MUN-02",
@@ -67047,10 +65353,6 @@
    {
     "item": "DAG-07",
     "w": 12
-   },
-   {
-    "item": "MAT-N15",
-    "w": 5
    }
   ],
   "oc_esp_canis_familiaris": [
@@ -67091,7 +65393,7 @@
     "w": 12
    },
    {
-    "item": "RAR-04",
+    "item": "MAT-N24",
     "w": 12
    }
   ],
@@ -67134,10 +65436,6 @@
    },
    {
     "item": "DAG-08",
-    "w": 12
-   },
-   {
-    "item": "animal_trace",
     "w": 12
    }
   ],
@@ -67275,8 +65573,8 @@
     "w": 12
    },
    {
-    "item": "owl_feather",
-    "w": 12
+    "item": "MAT-N20",
+    "w": 5
    }
   ],
   "oc_esp_cygnus_atratus": [
@@ -67539,8 +65837,8 @@
     "w": 12
    },
    {
-    "item": "RAR-01",
-    "w": 12
+    "item": "MAT-N15",
+    "w": 5
    }
   ],
   "oc_esp_apteryx_owenii": [
@@ -67677,12 +65975,8 @@
     "w": 5
    },
    {
-    "item": "RAR-03",
-    "w": 12
-   },
-   {
-    "item": "animal_trace",
-    "w": 12
+    "item": "MAT-N18",
+    "w": 5
    }
   ],
   "oc_esp_chlamydosaurus_kingii": [
@@ -67761,8 +66055,8 @@
     "w": 5
    },
    {
-    "item": "CIV-17",
-    "w": 5
+    "item": "HUE-13",
+    "w": 12
    },
    {
     "item": "HUE-15",
@@ -67804,10 +66098,6 @@
    },
    {
     "item": "CIV-16",
-    "w": 12
-   },
-   {
-    "item": "RAR-02",
     "w": 12
    },
    {
@@ -67857,8 +66147,8 @@
     "w": 5
    },
    {
-    "item": "RAR-09",
-    "w": 5
+    "item": "MAT-N01",
+    "w": 12
    }
   ],
   "oc_esp_nymphicus_hollandicus": [
@@ -67903,7 +66193,7 @@
     "w": 12
    },
    {
-    "item": "RAR-08",
+    "item": "MAT-N19",
     "w": 5
    }
   ],
@@ -68029,7 +66319,7 @@
     "w": 5
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {
@@ -68042,10 +66332,6 @@
    },
    {
     "item": "MAT-N03",
-    "w": 12
-   },
-   {
-    "item": "MAT-N08",
     "w": 12
    }
   ],
@@ -68129,7 +66415,7 @@
     "w": 1.8
    },
    {
-    "item": "NUM-13",
+    "item": "NUM-15",
     "w": 12
    },
    {

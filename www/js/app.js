@@ -7870,7 +7870,7 @@ if(globalThis.AtlasMuseumCuration3380){
   };
   const stats560=()=>{
    track560();
-   const owned=B.items.filter(it=>it[2]===0&&(state.inventory[it[0]]||0)>0).length;
+   const owned=B.items.filter(it=>(it[2]===0||it[2]===2)&&(state.inventory[it[0]]||0)>0).length;
    return {prestige:Math.floor(state.prestige||0),money:Math.floor(state.beta560.moneyEarned||0),items:owned};
   };
   const level560=st=>{
@@ -7977,6 +7977,24 @@ if(globalThis.AtlasMuseumCuration3380){
     s.extraProgress=s.extraProgress+' · '+(r.best?r.best+'/'+h.target+' '+h.unit:'0/'+h.target+' '+h.unit);
    }
    return m;
+  };
+ }
+
+ // Beta 5.6.0 · Las colecciones viven en Inventario → Coleccionables: se añade el avance por colección.
+ if(B){
+  const cols560=new Map();
+  for(const it of B.items)if(it[2]===0||it[2]===2){
+   const c=cols560.get(it[4])||{gab:it[3],total:0,ids:[]};c.total++;c.ids.push(it[0]);cols560.set(it[4],c);
+  }
+  const objectsBefore560=renderObjects;
+  renderObjects=function(){
+   const html=objectsBefore560();
+   if(state.inventoryView!=='coleccionables')return html;
+   const rows=[...cols560.entries()].map(([name,c])=>({name,gab:c.gab,total:c.total,have:c.ids.filter(id=>state.inventory[id]>0).length}));
+   const have=rows.reduce((n,r)=>n+r.have,0),total=rows.reduce((n,r)=>n+r.total,0);
+   const panel='<details class="inv340-collections"><summary>Colecciones · BETA · '+have+'/'+total+' piezas</summary>'+rows.map(r=>'<div class="req"><strong>'+esc(r.name)+'</strong><div class="small">'+esc(r.gab)+' · '+r.have+'/'+r.total+'</div><div class="progress"><div style="width:'+Math.round(100*r.have/r.total)+'%"></div></div></div>').join('')+'</details>';
+   const mark='<p class="small" aria-live="polite">';
+   return html.includes(mark)?html.replace(mark,panel+mark):html;
   };
  }
 
