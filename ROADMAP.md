@@ -1,6 +1,6 @@
 # El Gran Atlas — hoja de ruta (23 de noviembre de 2026)
 
-Estado de partida: **V5.5.1**. Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
+Estado de partida: **V5.5.1** publicada; **V5.6.1 Beta — MEC-01** en revisión en la rama `mec-01/v5.6.1-beta` (24 de noviembre de 2026). Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
 
 ## Completado
 
@@ -17,6 +17,7 @@ Estado de partida: **V5.5.1**. Esta hoja distingue lo que ya está hecho, lo que
 | Auditoría y arte | 5.0.1 – 5.0.12 | Auditoría global, rendimiento de arranque y repintado de variantes pigmentarias |
 | Legendarios, relictos y guía | 5.1.2 – 5.2.0 | 30 legendarios, 20 relictos y Guía del naturalista |
 | Iconografía | 5.3.0 – 5.4.2 | 63 iconos y 16 motivos de bioma, 64 objetos ilustrados más, hexágonos por bioma e interfaz sin emojis |
+| Mecánicas beta y consolidación (MEC-01, pendiente de auditoría) | 5.6.0 Beta – 5.6.1 Beta | Drops por canal con los materiales históricos restituidos, registro permanente de coleccionables y su interfaz, libro de ingresos por procedencia, gabinetes con selector completo y reservas, niveles del Museo en una tabla y estructura de hitos naturales. Sin balance. [Informe MEC-01](docs/mec01/README.md) |
 | Marco móvil y Campamento | 5.5.0 – 5.5.1 | Cabecera, monedas, título de pestaña y barra de 9 iconos fijos; el contenido se desplaza dentro de su ventana; el Campamento tiene fondo pintado y 6 áreas |
 
 ## Pendiente según los informes del repositorio
@@ -26,7 +27,8 @@ Estado de partida: **V5.5.1**. Esta hoja distingue lo que ya está hecho, lo que
 | Android estable | APK sin generar. El certificado permanente ya tiene su huella fijada; faltan el candidato compilado, el registro de restauración en un dispositivo físico y la autorización expresa | [Notas de Android](docs/android/release-notes.md), [firma permanente](docs/android/signing-certificate.json), [informe 3.42.0](README_V3420.md) |
 | Pruebas históricas | 219 de 885 pruebas fallan desde antes de V5.2.0. Hay que revisar cuáles son obsoletas y cuáles esconden errores | [Regresión V5.3.0](docs/v530/regresion.json) |
 | Arte pigmentario | Siguiente lote propuesto: 20 animales con variante albina o melánica mejorable | [Próximo lote ART-08](docs/arte-v5012/proximo-lote.md) |
-| Coleccionables | El desarrollo de coleccionables (300 piezas y Filatelia) quedó fuera de V5.2 y de la iconografía 5.3–5.4 | [Auditoría de integración](docs/v520/auditoria.md) |
+| Coleccionables | 431 piezas en 32 colecciones integradas como beta (V5.6.0) y consolidadas en MEC-01. Pendiente: Filatelia, arte definitivo, descripciones y balance de tasas | [Auditoría de integración](docs/v520/auditoria.md), [MEC-01](docs/mec01/README.md) |
+| Balance de mecánicas (MEC-02 o posterior) | Tasas de los canales nuevos, umbrales de la Sociedad, niveles del Museo (propuesta frente a lo ejecutado) y si los 8 materiales históricos ganan fuentes nuevas. Activar las fuentes de drop declaradas (expediciones, comercio, excavaciones, prospecciones, encargos, eventos) | [MEC-01 · pendientes](docs/mec01/README.md#6-problemas-y-pendientes) |
 | Iconos restantes | Motivo `comparativo` (sin pantalla donde mostrarlo todavía) y arte de legendarios y relictos | [docs/v540](docs/v540/README.md) |
 | Niveles del Campamento | Decidido para la etapa de mecánicas: cada instalación (Astillero, Caravana, Taller, Excavación, Prospecciones y Tienda) tendrá 5 niveles de mejora, con un ícono por nivel (`<área>-1` a `<área>-5`). Hoy se muestra un solo ícono por área; aún no se ha comprobado si el guardado tiene un nivel por instalación | [Campamento](docs/v550/README.md) |
 

@@ -1,0 +1,37 @@
+/* El Gran Atlas · V5.6.1 Beta — MEC-01 · colecciones, gabinetes y ventana de pieza. */
+.mec01-collections{margin:12px 0;padding:10px;border:1px solid var(--line,#d8c9a9);border-radius:6px;background:var(--card,#fff9ec)}
+.mec01-head{display:flex;flex-direction:column;gap:3px;margin-bottom:8px}
+.mec01-head span{font-size:.9em;color:var(--soft,#796d5a)}
+.mec01-progress{height:6px;margin-top:3px}
+.mec01-filters{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.mec01-field{display:flex;flex-direction:column;font-size:.8em;color:var(--soft,#796d5a);min-width:130px;flex:1}
+.mec01-field select,.mec01-field input{font:inherit;font-size:1.05em;padding:5px 6px;border:1px solid var(--line,#d8c9a9);border-radius:4px;background:#fffdf7;color:#3e5744}
+.mec01-group{border-top:1px solid var(--line,#d8c9a9);padding:6px 0}
+.mec01-group>summary{cursor:pointer;display:flex;flex-direction:column;gap:2px;list-style-position:outside}
+.mec01-group>summary small{color:var(--soft,#796d5a)}
+.mec01-complete>summary span{color:var(--green,#315d47);font-weight:700}
+.mec01-done{color:var(--green,#315d47)}
+.mec01-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:7px;margin-top:8px}
+.mec01-card{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px;min-width:0;border:1px solid #bba67e;border-radius:4px;background:#f6edda;color:#3e5744;font:inherit;text-align:center;cursor:pointer}
+.mec01-card strong{font-size:.82em;line-height:1.15;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.mec01-card small{font-size:.72em;color:var(--soft,#796d5a)}
+.mec01-card .mec01-art svg{width:52px;height:52px}
+.mec01-card.mec01-empty{opacity:.72}
+.mec01-card.mec01-shown{border-color:var(--gold,#b48a44);box-shadow:inset 0 0 0 1px var(--gold,#b48a44)}
+.mec01-unknown{background:#e9dfc8;border-style:dashed;color:#8a7b62}
+.mec01-silhouette{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#cfc2a4;color:#f6edda;font:700 28px Georgia,serif}
+.mec01-note{margin-top:8px}
+.mec01-income{margin:8px 0}
+.mec01-capacity{margin:4px 0 8px;font-size:.88em}
+.mec01-pager{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:6px 0;font-size:.85em}
+.mec01-cabinet h4{margin:10px 0 6px}
+.mec01-dialog{position:fixed;inset:0;z-index:2300;display:flex;align-items:center;justify-content:center;padding:16px;background:#1d302a66}
+.mec01-dialog[hidden]{display:none}
+.mec01-dialog-card{width:min(94vw,460px);max-height:calc(100dvh - 120px - env(safe-area-inset-bottom));overflow:auto;padding:16px;border:1px solid #99805b;border-radius:6px;background:#f5ecd7;color:#46573e;font-family:Georgia,serif;box-shadow:0 16px 60px #1d302a70}
+.mec01-dialog-card h3{margin:6px 0}
+.mec01-dialog-card h4{margin:12px 0 4px}
+.mec01-dialog-art svg{width:84px;height:84px;display:block;margin:0 auto}
+.mec01-dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:4px 0;font-size:.9em}
+.mec01-dl dt{color:var(--soft,#796d5a)}
+.mec01-dl dd{margin:0}
+.mec01-beta{display:inline-block;padding:0 5px;border-radius:2px;background:#7b4332;color:#f4e7c5;font-size:.6em;letter-spacing:1px;vertical-align:middle}

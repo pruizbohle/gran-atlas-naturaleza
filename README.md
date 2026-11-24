@@ -2,11 +2,15 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión actual: 5.5.1**
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.1 Beta — MEC-01** (rama `mec-01/v5.6.1-beta`, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## Estado actual (V5.5.1)
+## V5.6.1 Beta — MEC-01 (en revisión)
+
+Consolida las mecánicas de la V5.6.0 Beta sin calibrar todavía su balance: los materiales animales históricos vuelven a caer como antes y cada categoría nueva (materiales, coleccionables, rarezas) tiene su propio canal de drops; un registro permanente de coleccionables con su interfaz por colección; un libro de ingresos por procedencia que sustituye al cálculo por diferencias de saldo; gabinetes del Museo con selector completo y reservas de piezas; niveles del Museo en una sola tabla y una estructura reutilizable para hitos naturales. No se generó APK. Informe, estructuras de datos, pruebas y pendientes en [docs/mec01](docs/mec01/README.md).
+
+## Estado publicado (V5.5.1)
 
 | Contenido | Cantidad |
 | --- | --- |
@@ -44,7 +48,7 @@ npm ci
 npm run release:verify
 ```
 
-`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.2. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
+`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.2. En MEC-01, con un clon sin historial, dio 506 de 774 frente a 492 de 760 en la línea base, sin regresiones; las 14 nuevas son `tests/mec01.test.cjs`. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
 
 Cada envío a `main` despliega el sitio mediante `.github/workflows/static.yml`.
 
@@ -66,6 +70,8 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.1 Beta | MEC-01: consolidación de drops, colecciones, ingresos, gabinetes e hitos de la V5.6.0 Beta | [docs/mec01](docs/mec01/README.md) |
+| 5.6.0 Beta | Coleccionables, drops, Sociedad, Museo e hito del guepardo (datos beta) | [docs/v560-beta](docs/v560-beta/README.md) |
 | 5.4.0 | Iconografía: objetos OBJ-11, hexágonos por bioma e interfaz sin emojis | [docs/v540](docs/v540/README.md) |
 | 5.3.0 | Iconografía naturalista: 63 iconos, biblioteca visual y motivos de bioma | [docs/v530](docs/v530/README.md) |
 | 5.2.0 | 30 legendarios, 20 relictos, Guía del naturalista e integración de ramas | [docs/v520](docs/v520/README.md) |

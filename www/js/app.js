@@ -2303,7 +2303,7 @@ function commissionClaim3370(id,legacyClaim){
  if(original?(!!state.purchases['mission_'+id]||!!state.commissions.legacyClaims[id]||original.progress()<original.target):(!state.commissions.ready[id]||!!state.commissions.claimed[id]))return false;
  const before=JSON.parse(JSON.stringify(state)),achNotices=achievementNotices3360.slice(),encNotices=commissionNotices3370.slice();
  commissionClaiming3370=true;
- try{if(original){legacyClaim(id);state.commissions.legacyClaims[id]={claimedAt:Date.now(),source:'original-claim'};state.commissions.tracked=state.commissions.tracked.filter(x=>x!==id);}else{if(!api.pay(state,id))return false;pushLog('Encargo reclamado: '+api.catalog.find(d=>d.id===id).name+'.');}}
+ try{if(original){legacyClaim(id);state.commissions.legacyClaims[id]={claimedAt:Date.now(),source:'original-claim'};state.commissions.tracked=state.commissions.tracked.filter(x=>x!==id);}else{if(!api.pay(state,id))return false;globalThis.AtlasMEC01?.credit(state,api.catalog.find(d=>d.id===id).reward.money,'encargos');pushLog('Encargo reclamado: '+api.catalog.find(d=>d.id===id).name+'.');}}
  catch(error){state=before;throw error;}finally{commissionClaiming3370=false;}
  achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360.categories));
  if(!persist()){state=before;achievementNotices3360=achNotices;commissionNotices3370=encNotices;achievementDirty3360.clear();commissionDirty3370=true;renderCounters();renderPanel();return false;}
@@ -2579,6 +2579,7 @@ window.AtlasSaveBridge={
      normalizeAutomaticProgress(state);
      normalizeScientificVoyages(state);
      normalizeMuseumJobs(state.museum);
+     normalizeMEC01(state);
      autoDiaryBuffer={searches:0,hits:0,knowledge:0};
      lastAutoDiaryFlush=0;lastPanelSignature='';currentAutoNotice='';
      tab='field';
@@ -2829,7 +2830,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   }
   state.discovered[chosen]=true;
   state.sightings[chosen]=sight(chosen)+amount;
-  if(first){state.money+=15;pushLog(`Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
+  if(first){earnMoney(15,'descubrimientos');pushLog(`Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
   const note=[];
   if(Math.random()<0.12){state.feedObs[chosen]=feed(chosen)+1;note.push('comiendo');}
   const betaRun=globalThis.AtlasBeta560Actions?.run?.(chosen);if(betaRun)note.push(betaRun);
@@ -2848,6 +2849,8 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   if(entries.length===0){
    const drop=maybeSpeciesDrop(chosen,manual);
    if(drop)note.push(`muestra obtenida: ${ITEMS[drop].name}`);
+   // MEC-01: canales nuevos (materiales, coleccionables, rarezas), independientes del histórico.
+   for(const extra of mec01FieldDrops(chosen,manual))note.push(`muestra obtenida: ${ITEMS[extra].name}`);
    if(museumFinds.length)note.push(...museumFinds);
   }
   entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
@@ -2923,7 +2926,7 @@ function publishMonograph(id){
   if(stage(id)<5 || state.published[id]) return;
   state.published[id]=true;
   state.prestige+=1;
-  state.money+=90;
+  earnMoney(90,'publicaciones');
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
   pushLog(`Monografía publicada: ${SPECIES[id].name}. +1 prestigio, +£90.`);
   render();
@@ -2935,7 +2938,7 @@ function requestGrant(){
   const discovered=Object.keys(state.discovered).length;
   if(discovered===0) return;
   const grant=Math.round((35+discovered*5)*(1+(state.upgrades.grantBonus||0)+(state.equipment.necklace==='amber_charm'?0.05:0)));
-  state.money+=grant;
+  earnMoney(grant,'subvenciones');
   state.lastGrant=now;
   pushLog(`La Sociedad concede una subvención de £${grant}.`);
   render();
@@ -2944,7 +2947,7 @@ function exchangeNotes(){
   if(state.knowledge<40) return;
   state.knowledge-=40;
   const reward=Math.round(25*(1+(state.upgrades.noteBonus||0)));
-  state.money+=reward;
+  earnMoney(reward,'canjeNotas');
   pushLog(`Notas de campo canjeadas: -40 conocimiento, +£${reward}.`);
   render();
 }
@@ -3513,7 +3516,7 @@ function claimScientificMission(id){
   const mission=SCIENTIFIC_MISSIONS.find(m=>m.id===id);
   if(!mission || state.purchases['mission_'+id] || mission.progress()<mission.target)return;
   state.purchases['mission_'+id]=1;
-  state.money+=mission.money;
+  earnMoney(mission.money,'encargos');
   state.knowledge+=mission.knowledge;
   for(const [item,qty] of Object.entries(mission.items||{}))addInventory(item,qty);
   pushLog('Encargo completado: '+mission.name+' · £'+fmt(mission.money)+' y '+fmt(mission.knowledge)+' conocimiento.');
@@ -4290,17 +4293,24 @@ function renderMuseumArtifacts(){
   (cards?'<h3 class="section">Artefactos catalogados</h3><div class="museum-v311-worklist">'+cards+'</div>':'');
 }
 
-const MUSEUM_WINGS = [
-  {level:1,name:'Galería de fauna',cost:0,prestige:0},
-  {level:2,name:'Sala de historia natural',cost:300,prestige:2},
-  {level:3,name:'Gran galería zoológica',cost:900,prestige:5}
+// MEC-01 · niveles del Museo: única fuente de configuración. Son los costos, el prestigio
+// y las capacidades que el juego ya ejecutaba (V5.5.1 niveles 1–3; beta 5.6.0 niveles 4–5).
+// Los niveles marcados beta solo se habilitan con los datos beta. Diferencias con la
+// propuesta de docs/v560-beta/niveles-beta-v560.json: docs/mec01/README.md.
+const MUSEUM_LEVELS=[
+  {level:1,name:'Galería de fauna',cost:0,prestige:0,animalSlots:3,cabinetSlots:4,beta:false},
+  {level:2,name:'Sala de historia natural',cost:300,prestige:2,animalSlots:7,cabinetSlots:8,beta:false},
+  {level:3,name:'Gran galería zoológica',cost:900,prestige:5,animalSlots:12,cabinetSlots:12,beta:false},
+  {level:4,name:'Pabellón de ciencias (BETA)',cost:50000,prestige:60,animalSlots:18,cabinetSlots:16,beta:true},
+  {level:5,name:'Gabinete de maravillas (BETA)',cost:500000,prestige:150,animalSlots:25,cabinetSlots:20,beta:true}
 ];
+const MUSEUM_WINGS = MUSEUM_LEVELS.filter(l=>!l.beta).map(({level,name,cost,prestige})=>({level,name,cost,prestige}));
 function exhibitPrice(id){return ({'Común':45,'Poco común':70,'Raro':105,'Muy rara':150}[SPECIES[id].rare]||60);}
 function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34,'Muy rara':0.5}[SPECIES[id].rare]||0.2);}
 function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0)+(state.equipment.necklace==='museum_medallion'?0.10:0)+museumFossilSetBonus()+museumCurationBonus()+museumRelictSetBonus());}
 // Orden de mayor precio de muestra a menor, sin cambiar la economía.
 function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
-function museumCapacity(){return [0,3,7,12,18,25][state.museum.wing] || 12;}
+function museumCapacity(){return MUSEUM_LEVELS.find(l=>l.level===state.museum.wing)?.animalSlots || 12;}
 function expandMuseum(){
  const next=MUSEUM_WINGS[state.museum.wing];
  if(!next || state.prestige<next.prestige || state.money<next.cost)return;
@@ -4626,6 +4636,12 @@ function rollLoot(voyage=null,random=Math.random){
  return weighted[weighted.length-1][0];
 }
 function addInventory(id, qty=1){state.inventory[id]=(state.inventory[id]||0)+qty;}
+// MEC-01 · ganchos que instala el bloque final de app.js; sin datos beta no hacen nada.
+function mec01FieldDrops(id,manual){return [];}
+function normalizeMEC01(s){return s;}
+// MEC-01 · única entrada de dinero ganado: suma al saldo y lo anota en el libro de ingresos por procedencia.
+// Los gastos siguen restando directamente de state.money y no tocan el libro.
+function earnMoney(amount,source){const n=Number(amount);if(!Number.isFinite(n)||n<=0)return 0;state.money+=n;globalThis.AtlasMEC01?.credit(state,n,source);return n;}
 // Beta 3.16 · Taller, estudio de materiales repetidos y procedencia verificable.
 const V316_MATERIAL_STUDIES={
  herbarium:{name:'Herbario de campo',emoji:'🌿',description:'Prensar y clasificar plantas recogidas.',requires:{pressed_flower:3,parchment_scrap:1},knowledge:40,money:0},
@@ -4696,7 +4712,7 @@ function processMaterials(id,repeat=1){
  const project=V316_MATERIAL_STUDIES[id];
  for(const [item,qty] of Object.entries(project.requires))
   state.inventory[item]-=qty*repeat;
- state.money+=(project.money||0)*repeat;
+ earnMoney((project.money||0)*repeat,'taller');
  state.knowledge+=(project.knowledge||0)*repeat;
  pushLog('Taller · '+project.name+' ×'+repeat+' · +£'+(project.money||0)*repeat+' y +'+(project.knowledge||0)*repeat+' conocimiento.');
  render();
@@ -4893,7 +4909,7 @@ function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.
  // E-3280 END receipt-before
   let notes=voyageKnowledgeReward(v);
   const prize=voyageMoneyReward(v);
-  state.money+=prize;state.knowledge+=notes;
+  earnMoney(prize,'expediciones');state.knowledge+=notes;
   // Hallazgo seguro solo en reconocimientos dirigidos; las misiones antiguas no cambian.
   if(v.sample && ITEMS[v.sample]){addInventory(v.sample,1);pushLog('Muestra recogida: '+ITEMS[v.sample].name+'.');}
   const loot=rollLoot(v);
@@ -5367,7 +5383,8 @@ function handlePanelAction(e){
       if(el.dataset.m27Token!==undefined||act.startsWith('m27-')){museumAction3270(act,el.dataset.m27Token,el.dataset.m27Qty,el);return;}
     }
     // M-3270 END actions
-    if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle(id);return;}
+    if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle?.(id);return;}
+    if(act.startsWith('mec01-')){globalThis.AtlasBeta560Actions?.mec01?.(act,id,el);return;}
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
       if(act==='b26-open'){openBestiaryModal3260(Number(el.dataset.b26Slot),el);return;}
@@ -5605,7 +5622,7 @@ function tick(){
    autoDiaryBuffer={searches:0,hits:0,knowledge:0};
    lastAutoDiaryFlush=now;
  }
- if(museumRate()>0){state.money+=museumRate()*(elapsed/1000);}
+ if(museumRate()>0){earnMoney(museumRate()*(elapsed/1000),'museo');}
  const returns=processVoyages(now);
  // EC3300 BEGIN tick
  // GM3330 BEGIN tick
@@ -6823,7 +6840,7 @@ function deliverContract3390(id,sequence){
  if(sequence!==(state.commerce.deliverySeq||0)||contractStatus3390(d)!=='ready')return false;
  return tradeTransaction3300(()=>{
   for(const [mat,n]of Object.entries(d.requires))state.inventory[mat]-=n;
-  state.money+=d.money;state.knowledge+=d.knowledge;
+  earnMoney(d.money,'comercio');state.knowledge+=d.knowledge;
   const c=state.commerce;c.deliverySeq=seq+1;c.deliveries??=[];
   c.deliveries.push({id:c.deliverySeq,contract:d.id,at:Date.now(),requires:{...d.requires},money:d.money,knowledge:d.knowledge});
   return true;
@@ -6912,10 +6929,10 @@ function settleTrade3300(now=Date.now()){
  return tradeTransaction3300(()=>{
   for(const j of due){
    const r=TRADE_ROUTES.find(r=>r.id===j.route);if(!r||state.commerce.history.some(h=>h.id===j.id)||state.commerce.tradeReceipts?.some(h=>h.id===j.id))continue;
-   state.money+=r.money;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);
+   earnMoney(r.money,'comercio');for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);
    achievementIncrement3360('trade');if(r.hours===24)achievementIncrement3360('trade24');
    const m=validCargo3390(j.manifest,j.route)?j.manifest:null;
-   if(m){state.money+=m.money;state.knowledge+=m.knowledge;}
+   if(m){earnMoney(m.money,'comercio');state.knowledge+=m.knowledge;}
    const receipt={id:j.id,route:r.id,at:now,money:r.money,rewards:{...r.rewards},...(m?{manifest:JSON.parse(JSON.stringify(m))}:{})};
    state.commerce.tradeReceipts??=JSON.parse(JSON.stringify(state.commerce.history));state.commerce.history.push(receipt);state.commerce.tradeReceipts.push(JSON.parse(JSON.stringify(receipt)));
   }
@@ -7801,9 +7818,13 @@ if(globalThis.AtlasMuseumCuration3380){
  removeExhibit=mark3380(removeExhibit);toggleMuseumDisplay=mark3380(toggleMuseumDisplay);researchRelict=mark3380(researchRelict);
 }
 // Beta 5.6.0 · objetos nuevos, drops de prueba e imagen genérica. Todo lo nuevo lleva la marca BETA.
+// MEC-01 (V5.6.1 Beta) · consolidación: drops por canal, registro permanente de coleccionables,
+// libro de ingresos, gabinetes completos y estructura de hitos naturales. Ver docs/mec01/README.md.
 {
- const B=globalThis.AtlasBeta560;
+ const B=globalThis.AtlasBeta560,M=globalThis.AtlasMEC01,UI=globalThis.AtlasMEC01UI;
  const betaArtifacts560=new Set();
+ const CAT=B&&M?M.buildCatalog(B):null;
+ const RARITY=['Común','Poco común','Raro','Muy raro'];
  if(B){
   const betaKind=[ 'beta','animal','beta' ];
   for(const [id,name,tipo,gab,col] of B.items){
@@ -7822,25 +7843,39 @@ if(globalThis.AtlasMuseumCuration3380){
   }
   const betaSpecies=new Map();
   for(const [sid,list] of Object.entries(B.bySpecies))for(const i of list){const id=B.items[i][0];if(!betaSpecies.has(id))betaSpecies.set(id,[]);betaSpecies.get(id).push(sid);}
-  const dropBefore560=maybeSpeciesDrop;
-  maybeSpeciesDrop=function(id,manual){
-   const pool=B.bySpecies[id];
-   if(!pool||!pool.length)return dropBefore560(id,manual);
-   if(!state.upgrades.specimenDrops)return null;
-   if(Math.random()>=(manual?0.02:0.005))return null;
-   const weights=pool.map(i=>B.pesos[B.items[i][5]]);
-   let roll=Math.random()*weights.reduce((a,b)=>a+b,0),pick=pool[pool.length-1];
-   for(let k=0;k<pool.length;k++){roll-=weights[k];if(roll<=0){pick=pool[k];break;}}
-   const item=B.items[pick][0];
-   addInventory(item,1);
-   return item;
-  };
   const sourcesBefore560=inventorySources3400;
   inventorySources3400=function(id){
    const list=sourcesBefore560(id),sp=betaSpecies.get(id);
    if(sp&&ITEMS[id]?.beta)list.push('BETA · Drop de prueba: cae de '+sp.length+' especies'+(sp.length<=6?' ('+sp.map(s=>SPECIES[s]?.name||s).join(', ')+')':'')+'. Requiere el Gabinete de especímenes.');
    return list;
   };
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{speciesOf:id=>[...(betaSpecies.get(id)||[])]});
+ }
+ // MEC-01 · Drops. maybeSpeciesDrop conserva intacta la tabla histórica (SPECIES_DROPS) y su
+ // tirada. Los nuevos materiales, los coleccionables y las rarezas tiran después, cada uno en
+ // su propio canal y con su propia configuración (tasas provisionales, sin calibrar).
+ let mec01Source=null;
+ if(CAT){
+  // Los 8 materiales históricos que la beta repartió entre más especies (owl_feather, wolf_tooth…)
+  // quedan fuera de los canales nuevos: solo caen como antes, por SPECIES_DROPS.
+  const historicIds560=B.items.map(r=>r[0]).filter(id=>ITEMS[id]&&!ITEMS[id].beta);
+  const DROPS=M.createDrops(B,{catalog:CAT,exclude:historicIds560});
+  const addBefore560=addInventory;
+  addInventory=function(id,qty=1){
+   addBefore560(id,qty);
+   if(CAT.items.get(id)?.collectible)M.recordPiece(state,CAT,id,qty,mec01Source||'otros');
+  };
+  mec01FieldDrops=function(id,manual){
+   if(!state.upgrades.specimenDrops)return [];
+   const out=[];
+   for(const d of DROPS.roll('campo',{species:id,manual,random:Math.random})){
+    mec01Source='campo';
+    try{addInventory(d.id,1);}finally{mec01Source=null;}
+    out.push(d.id);
+   }
+   return out;
+  };
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{drops:DROPS,catalog:CAT});
  }
  // Imagen genérica: todo objeto sin arte propio muestra una lámina con "?".
  const artBefore560=renderItemArt;
@@ -7859,76 +7894,174 @@ if(globalThis.AtlasMuseumCuration3380){
  };
  const museumArtBefore560=museumCardArt;
  museumCardArt=function(kind,id){return betaArtifacts560.has(id)?genericArt560(id):museumArtBefore560(kind,id);};
+
+ // MEC-01 · Hitos naturales. Estructura reutilizable para velocidad, tamaño, peso, longevidad,
+ // profundidad, altitud, distancia y conductas extraordinarias. Solo existe el hito del guepardo,
+ // con sus valores y su orden de tiradas originales. Registro: state.beta560.hitos[especie].
+ const MILESTONE_TYPES=['velocidad','tamano','peso','longevidad','profundidad','altitud','distancia','conducta'];
+ const NATURAL_MILESTONES={
+  af_guepardo:{id:'guepardo-velocidad',type:'velocidad',behaviour:'correr',label:'Velocidad máxima',unit:'km/h',target:100,mean:85,sd:10,min:50,max:120,decimals:1,chance:0.10,journalStage:3,alternativeTo:'feed',beta:true}
+ };
+ const HITOS=NATURAL_MILESTONES;
+ const rec=id=>{
+  const b=state.beta560=state.beta560&&typeof state.beta560==='object'&&!Array.isArray(state.beta560)?state.beta560:{moneyEarned:0,lastMoney:null};
+  b.hitos=b.hitos&&typeof b.hitos==='object'&&!Array.isArray(b.hitos)?b.hitos:{};
+  const r=b.hitos[id]&&typeof b.hitos[id]==='object'?b.hitos[id]:{};
+  const best=Number.isFinite(r.best)&&r.best>0?r.best:0,h=HITOS[id];
+  return b.hitos[id]={...r,best,tries:Math.max(0,Math.floor(Number(r.tries)||0)),approved:!!r.approved||!!h&&best>=h.target,
+   bestAt:Number.isFinite(r.bestAt)?r.bestAt:null,approvedAt:Number.isFinite(r.approvedAt)?r.approvedAt:null};
+ };
+ const gauss=()=>{let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);};
+ const run=id=>{
+  const h=HITOS[id];if(!h||Math.random()>=h.chance)return null;
+  const r=rec(id),f=10**h.decimals,value=Math.round(Math.min(h.max,Math.max(h.min,h.mean+h.sd*gauss()))*f)/f,now=Date.now();
+  r.tries++;
+  const record=value>r.best;if(record){r.best=value;r.bestAt=now;}
+  let text=(h.behaviour==='correr'?'corriendo a ':h.label.toLocaleLowerCase('es')+': ')+value+' '+h.unit+(record&&r.tries>1?' · nuevo récord':'');
+  if(!r.approved&&r.best>=h.target){r.approved=true;r.approvedAt=now;text+=' · hito aprobado: '+h.label+' ≥ '+h.target+' '+h.unit+' (BETA)';}
+  return text;
+ };
+ globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{run,hitos:HITOS,types:MILESTONE_TYPES,record:rec});
+ const stageBefore560=stageRequirements;
+ stageRequirements=function(id,index){
+  const req=stageBefore560(id,index),h=HITOS[id];
+  if(h&&index===h.journalStage){
+   const r=rec(id);
+   req.extra+=' BETA: también vale el hito «'+h.label+' ≥ '+h.target+' '+h.unit+'» ('+(r.best?r.best+' '+h.unit+' registrados':'sin carreras registradas')+').';
+   if(r.approved){req.extraOk=true;req.allOk=req.sightOk&&req.moneyOk&&req.knowledgeOk&&req.extraOk;}
+  }
+  return req;
+ };
+ const journalBefore560=journalViewModel3250;
+ journalViewModel3250=function(...args){
+  const m=journalBefore560.apply(this,args),s=m&&m.selected;
+  const sid=state.selectedJournal||currentRegion().species[0],h=s&&HITOS[sid];
+  if(h&&s.stage===h.journalStage){
+   const r=rec(sid);
+   s.extraLabel=s.extraLabel+' o hito de velocidad';
+   s.extraProgress=s.extraProgress+' · '+(r.best?r.best+'/'+h.target+' '+h.unit:'0/'+h.target+' '+h.unit);
+  }
+  return m;
+ };
+
+ // MEC-01 · Normalización de la partida: se ejecuta al cargar y al importar un respaldo.
+ const STARTING_CAPITAL_MEC01=Number(initialState().money)||0;
+ normalizeMEC01=function(s){
+  if(!s||typeof s!=='object')return s;
+  if(s===state)for(const id of Object.keys(HITOS))if(s.beta560?.hitos?.[id])rec(id);
+  if(!M)return s;
+  M.normalizeLedger(s,Date.now(),{startingCapital:STARTING_CAPITAL_MEC01});
+  if(CAT){
+   M.normalizeRegistry(s,CAT);
+   s.museum=s.museum&&typeof s.museum==='object'?s.museum:{};
+   const lv=MUSEUM_LEVELS.find(l=>l.level===s.museum.wing)||MUSEUM_LEVELS[MUSEUM_LEVELS.length-1];
+   M.normalizeCabinets(s,CAT,lv.cabinetSlots);
+  }
+  return s;
+ };
+ normalizeMEC01(state);
+
  // Beta 5.6.0 · rango en la Sociedad (20 niveles). Por ahora solo informa; no bloquea ninguna mecánica.
+ // MEC-01: el dinero acumulado sale del libro de ingresos y los coleccionables, del registro histórico.
  if(B?.sociedad){
-  const track560=()=>{
-   const b=state.beta560=state.beta560&&typeof state.beta560==='object'?state.beta560:{moneyEarned:0,lastMoney:null};
-   const m=Number(state.money)||0;
-   if(b.lastMoney===null||b.lastMoney===undefined)b.moneyEarned=Math.max(Number(b.moneyEarned)||0,m);
-   else if(m>b.lastMoney)b.moneyEarned=(Number(b.moneyEarned)||0)+m-b.lastMoney;
-   b.lastMoney=m;
-  };
-  const stats560=()=>{
-   track560();
-   const owned=B.items.filter(it=>(it[2]===0||it[2]===2)&&(state.inventory[it[0]]||0)>0).length;
-   return {prestige:Math.floor(state.prestige||0),money:Math.floor(state.beta560.moneyEarned||0),items:owned};
-  };
+  const stats560=()=>({prestige:Math.floor(state.prestige||0),
+   money:Math.floor(M?(state.moneyLedger?.total||0):Math.max(Number(state.beta560?.moneyEarned)||0,Number(state.money)||0)),
+   items:CAT?M.discoveredCount(state,CAT):B.items.filter(it=>(it[2]===0||it[2]===2)&&(state.inventory[it[0]]||0)>0).length});
   const level560=st=>{
    let lv=1;
    B.sociedad.forEach((r,i)=>{if(st.prestige>=r[1]&&st.money>=r[2]&&st.items>=r[3])lv=Math.max(lv,i+1);});
    return lv;
   };
   const bar560=(label,have,need)=>'<div class="req"><strong>'+label+'</strong><div class="small">'+fmt(have)+' / '+fmt(need)+'</div><div class="progress"><div style="width:'+Math.min(100,need?Math.round(100*have/need):100)+'%"></div></div></div>';
+  const income560=()=>{
+   const l=state.moneyLedger;if(!M||!l)return '';
+   const rows=Object.entries(l.bySource).filter(([,n])=>n>0).sort((a,b)=>b[1]-a[1]);
+   return '<details class="mec01-income"><summary>Ingresos acumulados por procedencia · £'+fmt(l.total)+'</summary><ul class="small">'+rows.map(([k,n])=>'<li>'+esc(M.INCOME_SOURCES[k]||k)+': £'+fmt(n)+'</li>').join('')+'</ul>'+
+    (l.migration&&l.migration.method!=='partida-nueva'?'<p class="small">Partida anterior a MEC-01: £'+fmt(l.migration.baseline)+' quedan como ingresos sin desglose (cota inferior tomada del '+(l.migration.method==='beta560.moneyEarned'?'acumulado de la beta 5.6.0':'saldo al migrar')+').</p>':'')+
+    '<p class="small">Solo cuentan los ingresos reales; los gastos no reducen este total.</p></details>';
+  };
   const rankPanel560=()=>{
    const st=stats560(),lv=level560(st),cur=B.sociedad[lv-1],next=B.sociedad[lv];
    return '<div class="req"><strong>Rango en la Sociedad · BETA</strong><div class="small">'+esc(cur[0])+' · nivel '+lv+' de '+B.sociedad.length+'</div></div>'+
-    (next?'<div class="small">Próximo rango: <b>'+esc(next[0])+'</b>. Hay que cumplir los tres requisitos a la vez.</div>'+bar560('Prestigio',st.prestige,next[1])+bar560('Dinero acumulado (£)',st.money,next[2])+bar560('Coleccionables distintos',st.items,next[3])+(next[4]?'<div class="small">Al subir: '+esc(next[4])+' (propuesta).</div>':''):'<div class="small">Alcanzaste el rango más alto.</div>')+
+    (next?'<div class="small">Próximo rango: <b>'+esc(next[0])+'</b>. Hay que cumplir los tres requisitos a la vez.</div>'+bar560('Prestigio',st.prestige,next[1])+bar560('Dinero acumulado (£)',st.money,next[2])+bar560('Coleccionables descubiertos',st.items,next[3])+(next[4]?'<div class="small">Al subir: '+esc(next[4])+' (propuesta).</div>':''):'<div class="small">Alcanzaste el rango más alto.</div>')+
+    income560()+
     '<div class="small">BETA: el rango todavía no bloquea mecánicas y sus umbrales son provisionales.</div>'+
     '<details><summary>Los '+B.sociedad.length+' rangos</summary><ol class="small">'+B.sociedad.map((r,i)=>'<li>'+(i<lv?'✓ ':'')+esc(r[0])+' · prestigio '+fmt(r[1])+' · £'+fmt(r[2])+' · '+fmt(r[3])+' coleccionables'+(r[4]?' · '+esc(r[4]):'')+'</li>').join('')+'</ol></details>';
   };
-  const renderBefore560=render;
-  render=function(...args){track560();return renderBefore560.apply(this,args);};
   const societyBefore560=renderSociety;
   renderSociety=function(){
    if(state.societyView!=='rank')return societyBefore560();
    return globalThis.AtlasSociety3360?globalThis.AtlasSociety3360.layout(state,achievementContext3360(),rankPanel560()):'<section class="card stack">'+rankPanel560()+'</section>';
   };
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{societyStats:stats560,societyLevel:()=>level560(stats560())});
+ }
+ // El registro también recoge piezas que otros módulos escriben directamente en el inventario
+ // (por ejemplo, recompensas de encargos): se reconcilia antes de cada guardado visible.
+ if(CAT){
+  const renderBefore560=render;
+  render=function(...args){M.reconcileRegistry(state,CAT);return renderBefore560.apply(this,args);};
  }
 
  // Beta 5.6.0 · Museo: niveles 4 y 5 y gabinetes de colección (sustituyen a la sala "Muestras").
+ // MEC-01: selector completo con búsqueda, filtros y paginación; exponer reserva una unidad.
  if(B){
-  MUSEUM_WINGS.push({level:4,name:'Pabellón de ciencias (BETA)',cost:50000,prestige:60},{level:5,name:'Gabinete de maravillas (BETA)',cost:500000,prestige:150});
-  const CABINETS=['Botánica','Geología','Oceanografía','Historia','Historia natural y exploración'];
-  const SLOTS=[0,4,8,12,16,20];
-  const cabOf=new Map();
-  for(const it of B.items)if(it[2]===0||it[2]===2)cabOf.set(it[0],it[3]);
-  const cabState=()=>{state.museum.cabinets=state.museum.cabinets&&typeof state.museum.cabinets==='object'?state.museum.cabinets:{};return state.museum.cabinets;};
-  const slots560=()=>SLOTS[state.museum.wing]||SLOTS[SLOTS.length-1];
-  const toggle=id=>{
-   const gab=cabOf.get(id);if(!gab||!ITEMS[id])return;
-   const cab=cabState(),list=cab[gab]=Array.isArray(cab[gab])?cab[gab]:[];
-   const at=list.indexOf(id);
-   if(at>=0){list.splice(at,1);pushLog('Gabinete · retirada: '+ITEMS[id].name);}
-   else{
-    if(!(state.inventory[id]>0)||list.length>=slots560())return;
-    list.push(id);pushLog('Gabinete · expuesta: '+ITEMS[id].name);
-   }
-   render();
-  };
-  globalThis.AtlasBeta560Actions={toggle};
-  const rarName=['Común','Poco común','Raro','Muy raro'];
-  const rarOf=new Map(B.items.map(it=>[it[0],it[5]]));
-  const piece560=(id,shown,full)=>'<article class="m27-piece owned"><div class="m27-plate"><span class="m27-art">'+renderItemArt(id)+'</span><strong>'+esc(ITEMS[id].name)+'</strong><span class="m27-tag">'+(shown?'Expuesta · ':'')+rarName[rarOf.get(id)]+'</span></div><div class="m27-actions"><button type="button" class="btn alt" data-action="beta-cab-toggle" data-id="'+esc(id)+'" '+(!shown&&full?'disabled':'')+'>'+(shown?'Retirar':'Exponer')+'</button></div></article>';
+  MUSEUM_WINGS.push(...MUSEUM_LEVELS.filter(l=>l.beta).map(({level,name,cost,prestige})=>({level,name,cost,prestige})));
+ }
+ if(CAT&&UI){
+  const PAGE=12;
+  const ui={cab:{},col:{col:'all',rar:'all',state:'all'},open:{}};
+  const slots560=()=>(MUSEUM_LEVELS.find(l=>l.level===state.museum.wing)||MUSEUM_LEVELS[MUSEUM_LEVELS.length-1]).cabinetSlots;
+  const cabUI=g=>ui.cab[g]||(ui.cab[g]={q:'',col:'all',rar:'all',page:0});
+  const art=id=>renderItemArt(id);
+  const pieceModel=(id,extra={})=>{const it=CAT.items.get(id),st=M.pieceStatus(state,CAT,id);return {id,name:it.name,rarity:RARITY[it.rarity],collection:it.collection,art:art(id),available:st.available,...extra};};
   const cabinetsHtml=()=>{
-   const cab=cabState(),n=slots560();
-   return '<div class="m27-room-heading"><h3>Gabinetes de colección · BETA</h3><small>'+n+' casillas por gabinete · nivel '+state.museum.wing+' del museo</small></div>'+
-    '<p class="m27-note">Aquí se exponen las piezas de colección que tengas en la bolsa. Por ahora solo se muestran: no dan ingresos ni bonificaciones.</p>'+
-    CABINETS.map(g=>{
-     const shown=(cab[g]||[]).filter(id=>ITEMS[id]&&state.inventory[id]>0);
-     const owned=[...cabOf.keys()].filter(id=>cabOf.get(id)===g&&state.inventory[id]>0&&!shown.includes(id)).sort((x,y)=>ITEMS[x].name.localeCompare(ITEMS[y].name,'es'));
-     const full=shown.length>=n,list=owned.slice(0,12);
-     return '<details class="m27-section" '+(shown.length||owned.length?'open':'')+'><summary>'+esc(g)+' · '+shown.length+'/'+n+' expuestas · '+owned.length+' en bolsa</summary><div class="m27-fold-body"><div class="m27-grid">'+shown.map(id=>piece560(id,true,full)).join('')+list.map(id=>piece560(id,false,full)).join('')+'</div>'+(shown.length+owned.length===0?'<p class="m27-empty">Aún no tienes piezas de este gabinete. Caen de los animales con el Gabinete de especímenes.</p>':'')+(owned.length>12?'<p class="m27-note">Y '+(owned.length-12)+' piezas más en tu bolsa.</p>':'')+'</div></details>';
-    }).join('');
+   M.normalizeCabinets(state,CAT,slots560());
+   const n=slots560(),cab=state.museum.cabinets;
+   return UI.cabinets({capacity:n,level:state.museum.wing,cabinets:CAT.cabinets.map(g=>{
+    const f=cabUI(g),shownIds=cab[g]||[],full=shownIds.length>=n;
+    const ids=[...CAT.items.values()].filter(it=>it.collectible&&it.cabinet===g).map(it=>it.id);
+    const candidates=ids.filter(id=>!shownIds.includes(id)&&M.pieceStatus(state,CAT,id).available>0);
+    const q=f.q.trim().toLocaleLowerCase('es');
+    const matches=candidates.filter(id=>{const it=CAT.items.get(id);return (!q||it.name.toLocaleLowerCase('es').includes(q))&&(f.col==='all'||it.collection===f.col)&&(f.rar==='all'||String(it.rarity)===f.rar);})
+     .sort((x,y)=>CAT.items.get(x).name.localeCompare(CAT.items.get(y).name,'es'));
+    const pages=Math.max(1,Math.ceil(matches.length/PAGE));f.page=Math.max(0,Math.min(pages-1,f.page));
+    return {name:g,filters:f,capacity:n,used:shownIds.length,full,candidates:candidates.length,matches:matches.length,pages,page:f.page,
+     open:ui.open['cab:'+g]??(shownIds.length>0||candidates.length>0),
+     collectionNames:[...CAT.collections.values()].filter(c=>c.cabinet===g).map(c=>c.name),rarities:RARITY,
+     shown:shownIds.map(id=>pieceModel(id,{available:undefined})),list:matches.slice(f.page*PAGE,f.page*PAGE+PAGE).map(id=>pieceModel(id))};
+   })});
+  };
+  const sourcesText=id=>{
+   const it=CAT.items.get(id),sp=globalThis.AtlasBeta560Actions?.speciesOf?.(id)||[],out=[];
+   if(sp.length)out.push('Campo: cae de '+sp.length+(sp.length===1?' especie':' especies')+' con el Gabinete de especímenes'+(sp.length<=6?' ('+sp.map(s=>SPECIES[s]?.name||s).join(', ')+')':'')+'.');
+   const reg=state.collectionRegistry?.pieces?.[id];
+   if(reg)for(const [k,v] of Object.entries(reg.sources))out.push('Registrada por '+({campo:'campo',migracion:'migración de una partida anterior',otros:'otra fuente del juego'}[k]||k)+': '+v+(v===1?' unidad':' unidades')+'.');
+   return out;
+  };
+  const detailModel=id=>{
+   const it=CAT.items.get(id);if(!it?.collectible)return null;
+   const st=M.pieceStatus(state,CAT,id),reg=state.collectionRegistry?.pieces?.[id];
+   return {...st,name:it.name,collection:it.collection,cabinet:it.cabinet,rarity:RARITY[it.rarity],continent:it.continent,art:art(id),
+    description:'Pieza de la colección «'+it.collection+'», destinada al gabinete de '+it.cabinet+'. Ficha provisional: sin ilustración definitiva.',
+    sources:sourcesText(id),
+    firstSeen:reg?(reg.firstAt?'Descubierta el '+new Date(reg.firstAt).toLocaleDateString('es-CL')+'.':'Registrada al migrar una partida anterior a MEC-01.'):''};
+  };
+  const collectionsHtml=()=>{
+   const f=ui.col,groups=[];let discoveredTotal=0,complete=0;
+   for(const c of CAT.collections.values()){
+    const have=c.ids.filter(id=>M.discovered(state,id)).length;discoveredTotal+=have;
+    const done=have===c.ids.length;if(done)complete++;
+    if(f.col!=='all'&&c.name!==f.col)continue;
+    const pieces=c.ids.map((id,i)=>{const it=CAT.items.get(id),found=M.discovered(state,id),st=M.pieceStatus(state,CAT,id);
+     return {id,slot:i+1,of:c.ids.length,discovered:found,name:it.name,rarity:RARITY[it.rarity],rarityIndex:it.rarity,owned:st.owned,available:st.available,exhibited:st.exhibited,art:found?art(id):''};})
+     .filter(p=>(f.rar==='all'||String(p.rarityIndex)===f.rar)&&(f.state==='all'||(f.state==='found')===p.discovered));
+    if(f.col==='all'&&(f.rar!=='all'||f.state!=='all')&&!pieces.length)continue;
+    const open=ui.open['col:'+c.name]??(f.col!=='all');
+    // Solo se generan las tarjetas de las colecciones abiertas (32 colecciones · 431 piezas).
+    groups.push({name:c.name,cabinet:c.cabinet,have,total:c.ids.length,complete:done,pieces:open?pieces:null,open});
+   }
+   return UI.collections({filters:f,discovered:discoveredTotal,total:CAT.pieces.length,complete,collectionCount:CAT.collections.size,
+    collectionNames:[...CAT.collections.keys()],rarities:RARITY,groups});
   };
   const museumViewBefore560=museumViewModel3270;
   museumViewModel3270=function(...args){
@@ -7936,68 +8069,44 @@ if(globalThis.AtlasMuseumCuration3380){
    if(m&&m.room==='samples'&&m.view)m.view.cabinets=cabinetsHtml();
    return m;
   };
- }
-
- // Beta 5.6.0 · Hitos de conducta: el guepardo corriendo (única especie por ahora).
- {
-  const HITOS={af_guepardo:{label:'Velocidad máxima',unit:'km/h',target:100,mean:85,sd:10,min:50,max:120,chance:0.10}};
-  const rec=id=>{
-   const b=state.beta560=state.beta560&&typeof state.beta560==='object'?state.beta560:{moneyEarned:0,lastMoney:null};
-   b.hitos=b.hitos&&typeof b.hitos==='object'?b.hitos:{};
-   return b.hitos[id]=b.hitos[id]||{best:0,tries:0,approved:false};
-  };
-  const gauss=()=>{let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);};
-  const run=id=>{
-   const h=HITOS[id];if(!h||Math.random()>=h.chance)return null;
-   const r=rec(id),speed=Math.round(Math.min(h.max,Math.max(h.min,h.mean+h.sd*gauss()))*10)/10;
-   r.tries++;
-   const record=speed>r.best;if(record)r.best=speed;
-   let text='corriendo a '+speed+' '+h.unit+(record&&r.tries>1?' · nuevo récord':'');
-   if(!r.approved&&r.best>=h.target){r.approved=true;text+=' · hito aprobado: '+h.label+' ≥ '+h.target+' '+h.unit+' (BETA)';}
-   return text;
-  };
-  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{run,hitos:HITOS,record:rec});
-  const stageBefore560=stageRequirements;
-  stageRequirements=function(id,index){
-   const req=stageBefore560(id,index),h=HITOS[id];
-   if(h&&index===3){
-    const r=rec(id);
-    req.extra+=' BETA: también vale el hito «'+h.label+' ≥ '+h.target+' '+h.unit+'» ('+(r.best?r.best+' '+h.unit+' registrados':'sin carreras registradas')+').';
-    if(r.approved){req.extraOk=true;req.allOk=req.sightOk&&req.moneyOk&&req.knowledgeOk&&req.extraOk;}
-   }
-   return req;
-  };
-  const journalBefore560=journalViewModel3250;
-  journalViewModel3250=function(...args){
-   const m=journalBefore560.apply(this,args),s=m&&m.selected;
-   const h=s&&HITOS[state.selectedJournal||currentRegion().species[0]];
-   if(h&&s.stage===3){
-    const r=rec(state.selectedJournal||currentRegion().species[0]);
-    s.extraLabel=s.extraLabel+' o hito de velocidad';
-    s.extraProgress=s.extraProgress+' · '+(r.best?r.best+'/'+h.target+' '+h.unit:'0/'+h.target+' '+h.unit);
-   }
-   return m;
-  };
- }
-
- // Beta 5.6.0 · Las colecciones viven en Inventario → Coleccionables: se añade el avance por colección.
- if(B){
-  const cols560=new Map();
-  for(const it of B.items)if(it[2]===0||it[2]===2){
-   const c=cols560.get(it[4])||{gab:it[3],total:0,ids:[]};c.total++;c.ids.push(it[0]);cols560.set(it[4],c);
-  }
   const objectsBefore560=renderObjects;
   renderObjects=function(){
    const html=objectsBefore560();
    if(state.inventoryView!=='coleccionables')return html;
-   const rows=[...cols560.entries()].map(([name,c])=>({name,gab:c.gab,total:c.total,have:c.ids.filter(id=>state.inventory[id]>0).length}));
-   const have=rows.reduce((n,r)=>n+r.have,0),total=rows.reduce((n,r)=>n+r.total,0);
-   const panel='<details class="inv340-collections"><summary>Colecciones · BETA · '+have+'/'+total+' piezas</summary>'+rows.map(r=>'<div class="req"><strong>'+esc(r.name)+'</strong><div class="small">'+esc(r.gab)+' · '+r.have+'/'+r.total+'</div><div class="progress"><div style="width:'+Math.round(100*r.have/r.total)+'%"></div></div></div>').join('')+'</details>';
    const mark='<p class="small" aria-live="polite">';
-   return html.includes(mark)?html.replace(mark,panel+mark):html;
+   return html.includes(mark)?html.replace(mark,collectionsHtml()+mark):html+collectionsHtml();
   };
+  const refocus=(selector,value)=>{const input=panel.querySelector(selector);if(input){input.focus({preventScroll:true});try{input.setSelectionRange(value.length,value.length);}catch(_){}}};
+  const action=(act,id)=>{
+   if(act==='mec01-piece'){const m=detailModel(id);if(m)UI.show(UI.detail(m));return;}
+   if(act==='mec01-cab-page'){const at=id.lastIndexOf('|'),g=id.slice(0,at);if(CAT.cabinets.includes(g)){cabUI(g).page=Number(id.slice(at+1))||0;renderPanel();}return;}
+   if(act==='mec01-cab-expose'||act==='mec01-cab-withdraw'){
+    const it=CAT.items.get(id);if(!it?.collectible)return;
+    ui.open['cab:'+it.cabinet]=true;
+    const r=act==='mec01-cab-expose'?M.expose(state,CAT,id,slots560()):M.withdraw(state,CAT,id);
+    if(r.ok)pushLog('Gabinete · '+(act==='mec01-cab-expose'?'expuesta':'retirada')+': '+it.name);
+    render();
+   }
+  };
+  // Compatibilidad con el botón de la beta 5.6.0.
+  const toggle=id=>{const it=CAT.items.get(id);if(!it)return;action((state.museum.cabinets?.[it.cabinet]||[]).includes(id)?'mec01-cab-withdraw':'mec01-cab-expose',id);};
+  globalThis.AtlasBeta560Actions=Object.assign(globalThis.AtlasBeta560Actions||{},{toggle,mec01:action,cabinetSlots:slots560,detailModel});
+  panel.addEventListener('toggle',e=>{
+   const d=e.target;
+   if(d?.dataset?.mec01Group){const key='col:'+d.dataset.mec01Group,was=ui.open[key];ui.open[key]=d.open;if(d.open&&!was&&d.querySelector?.('.mec01-card')===null)renderPanel();}
+   else if(d?.dataset?.mec01Cabinet)ui.open['cab:'+d.dataset.mec01Cabinet]=d.open;
+  },true);
+  panel.addEventListener('change',e=>{
+   const el=e.target,d=el?.dataset;if(!d)return;
+   if(d.mec01Filter&&Object.hasOwn(ui.col,d.mec01Filter)){ui.col[d.mec01Filter]=el.value;renderPanel();return;}
+   if(d.mec01CabCol&&CAT.cabinets.includes(d.mec01CabCol)){Object.assign(cabUI(d.mec01CabCol),{col:el.value,page:0});renderPanel();return;}
+   if(d.mec01CabRar&&CAT.cabinets.includes(d.mec01CabRar)){Object.assign(cabUI(d.mec01CabRar),{rar:el.value,page:0});renderPanel();}
+  });
+  panel.addEventListener('input',e=>{
+   const el=e.target,g=el?.dataset?.mec01CabQuery;if(!g||!CAT.cabinets.includes(g))return;
+   Object.assign(cabUI(g),{q:el.value.slice(0,60),page:0});renderPanel();refocus('[data-mec01-cab-query="'+g.replace(/"/g,'\\"')+'"]',cabUI(g).q);
+  });
  }
-
 }
 render();
 })();
