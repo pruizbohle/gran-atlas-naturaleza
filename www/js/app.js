@@ -7391,7 +7391,7 @@ function inventoryQuery3400(){
  let ids=Object.keys(view==='taller'?RECIPES:ITEMS).filter(id=>{
   const cat=inventoryCategory3400(id),i=ITEMS[id];
   if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil','beta'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil','beta'].includes(cat))return false;
-  if(i.beta&&!(state.inventory[id]>0))return false;
+  if(i.beta&&view!=='taller'&&!(state.inventory[id]>0))return false;
   if(ui.query&&!ITEMS[id].name.toLocaleLowerCase('es').includes(ui.query.toLocaleLowerCase('es')))return false;
   if(ui.category!=='all'&&cat!==ui.category)return false;
   const owned=(state.inventory[id]||0)>0;
@@ -7801,11 +7801,22 @@ if(globalThis.AtlasMuseumCuration3380){
 // Beta 5.6.0 · objetos nuevos, drops de prueba e imagen genérica. Todo lo nuevo lleva la marca BETA.
 {
  const B=globalThis.AtlasBeta560;
+ const betaArtifacts560=new Set();
  if(B){
   const betaKind=[ 'beta','animal','beta' ];
   for(const [id,name,tipo,gab,col] of B.items){
    if(ITEMS[id])continue;
    ITEMS[id]={name,emoji:'?',slot:null,bonus:'BETA · '+B.tipos[tipo]+' · '+col,kind:betaKind[tipo],beta:true,betaType:tipo,betaGabinete:gab};
+  }
+  for(const m of B.materiales||[]){
+   if(ITEMS[m.id])continue;
+   ITEMS[m.id]={name:m.name,emoji:'?',slot:null,bonus:'BETA · Material de artefactos · Se fabrica en el Taller',kind:'artifact_material',beta:true,betaType:3};
+   RECIPES[m.id]={requires:m.requires};
+  }
+  for(const a of B.artefactos||[]){
+   if(MUSEUM_COLLECTIONS.some(p=>p.id===a.id))continue;
+   MUSEUM_COLLECTIONS.push({id:a.id,tab:'artifacts',name:a.name,icon:'?',description:'BETA · '+a.desc,requires:a.requires,knowledge:a.knowledge,beta:true});
+   betaArtifacts560.add(a.id);
   }
   const betaSpecies=new Map();
   for(const [sid,list] of Object.entries(B.bySpecies))for(const i of list){const id=B.items[i][0];if(!betaSpecies.has(id))betaSpecies.set(id,[]);betaSpecies.get(id).push(sid);}
@@ -7832,7 +7843,7 @@ if(globalThis.AtlasMuseumCuration3380){
  // Imagen genérica: todo objeto sin arte propio muestra una lámina con "?".
  const artBefore560=renderItemArt;
  const genericArt560=id=>{
-  const it=ITEMS[id]||{},t=it.betaType,fill=t===1?'#a9855a':t===2?'#b7a2c2':'#e8d8ae';
+  const it=ITEMS[id]||(betaArtifacts560.has(id)?{beta:true,betaType:3}:{}),t=it.betaType,fill=t===1?'#a9855a':t===2?'#b7a2c2':t===3?'#a8bdb8':'#e8d8ae';
   return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false" data-item-art="generic">'+
    '<rect x="14" y="10" width="72" height="80" rx="6" fill="'+fill+'" stroke="#604a35" stroke-width="2.5"/>'+
    '<rect x="21" y="17" width="58" height="66" rx="3" fill="none" stroke="#604a35" stroke-width="1" stroke-dasharray="3 3"/>'+
@@ -7844,6 +7855,8 @@ if(globalThis.AtlasMuseumCuration3380){
   const art=artBefore560(id);
   return !art||/^<svg[^>]*><\/svg>$/.test(art)?genericArt560(id):art;
  };
+ const museumArtBefore560=museumCardArt;
+ museumCardArt=function(kind,id){return betaArtifacts560.has(id)?genericArt560(id):museumArtBefore560(kind,id);};
 }
 render();
 })();

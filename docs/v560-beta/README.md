@@ -43,7 +43,7 @@ Cada elemento lleva `beta: true` en los datos y debe mostrar una insignia "BETA"
 | Paso | Estado |
 | --- | --- |
 | 1. Objetos nuevos en el inventario (470 piezas), imagen genérica "?" con cinta BETA y drops de prueba | **Integrado** en la rama `feat/v560-beta` (`www/js/beta-v560-data.js` y bloque "Beta 5.6.0" al final de `app.js`) |
-| 2. Materiales nuevos y recetas del Taller; los 15 artefactos nuevos en el Museo | Pendiente |
+| 2. 6 materiales nuevos con receta en el Taller y 15 artefactos nuevos en el Museo (sala Artefactos) | **Integrado** en la rama. Los artefactos no dan bonificación; no se ha fijado ninguna |
 | 3. Niveles de la Sociedad (20) | Pendiente |
 | 4. Museo: 5 niveles y gabinetes con exhibición de animales | Pendiente |
 | 5. Hito de velocidad del guepardo | Pendiente |
