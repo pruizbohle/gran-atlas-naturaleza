@@ -2,11 +2,34 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.7 Beta — MEC-07**, canal beta (rama `mec-07/v5.6.7-beta`, sobre MEC-06, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.8 Beta — MEC-08**, canal beta (rama `mec-08/v5.6.8-beta`, sobre MEC-07, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.7 Beta — MEC-07 (en revisión)
+## V5.6.8 Beta — MEC-08 (en revisión)
+
+La Sociedad gana un sistema completo de **reconocimientos y encargos**, construido sobre los motores existentes:
+
+- **74 logros nuevos o actualizados** para el catálogo completo (1.000 especies y 125 regiones), más 10 medallas conmemorativas. Los ids y medallas históricos se conservan como reconocimientos intermedios; hay filtro por nivel (Bronce, Plata, Oro y Platino) y títulos destacables.
+- **12 encargos permanentes nuevos** en cuatro líneas: coleccionables, Taller, récords y Campamento. Solo se ofrecen si la función correspondiente es accesible.
+- **Correspondencia científica renovable** (13 plantillas) y **proyectos institucionales** (7) sobre un solo motor:
+  - objetivos incrementales con línea base, o de posesión sin consumir;
+  - recompensas por el libro de ingresos;
+  - cobro atómico y único;
+  - sin caducidad ni penalizaciones.
+- **Diez eventos anuales** con un calendario local: Año Nuevo, Darwin, equinoccios, Día de la Tierra, Biodiversidad, Océanos, la Gran Exposición (ficticia), Noche de las Criaturas y Navidad del Naturalista. Cada uno tiene su encargo por edición, y algunos aplican modificadores temporales en una capa separada que se fija al iniciar las actividades.
+- **Correcciones de MEC-07:**
+  - migraciones como reconstrucción documental por rutas;
+  - evidencias pendientes por región;
+  - conductas con el sexo del ejemplar observado;
+  - descripciones instrumentales prudentes;
+  - registro paginado con búsqueda;
+  - una sola fuente de procedencias;
+  - normalización robusta.
+
+Informe completo: [docs/mec08](docs/mec08/README.md). No se generó APK.
+
+## V5.6.7 Beta — MEC-07 (observaciones corregidas en MEC-08)
 
 La observación zoológica gana un registro de **récords naturales** y **conductas extraordinarias**: 25 hitos y 20 conductas, sobre especies reales del catálogo.
 
@@ -157,6 +180,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 | Versión | Tema | Informe |
 | --- | --- | --- |
 | 5.6.7 Beta | MEC-07: récords naturales y conductas extraordinarias | [docs/mec07](docs/mec07/README.md) |
+| 5.6.8 Beta | MEC-08: encargos, logros, reconocimientos y eventos especiales | [docs/mec08](docs/mec08/README.md) |
 | 5.6.6 Beta | MEC-06: artefactos, materiales, instrumentos y Taller | [docs/mec06](docs/mec06/README.md) |
 | 5.6.5 Beta | MEC-05: Museo evolutivo, gabinetes y exposiciones funcionales | [docs/mec05](docs/mec05/README.md) |
 | 5.6.4 Beta | MEC-04: Sociedad científica, rangos y desbloqueos | [docs/mec04](docs/mec04/README.md) |

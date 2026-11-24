@@ -258,8 +258,9 @@ function recordsAudit(h,{witness=true,maxSearches=25000,progress=true}={}){
   if(!(e.chance.manual>0&&e.chance.auto>0))problems.push('probabilidad no positiva');
   let plaus=null;
   if(kind==='record'){
-   const b=e.bounds,r=X7.rng('audit|'+e.id);let hits=0,min=Infinity,max=-Infinity;const need=e.model.kind==='evidencia-regiones'?Math.ceil((e.threshold-e.model.firstRegion)/e.model.perRegion)+1:0;
-   for(let i=0;i<20000;i++){const v=X7.generate(e,r,{evidenceRegions:need||1});if(v<min)min=v;if(v>max)max=v;if(X7.meets(e,v))hits++;}
+   const b=e.bounds,r=X7.rng('audit|'+e.id);let hits=0,min=Infinity,max=-Infinity;const rutas=e.model.basis==='rutas';const need=e.model.kind==='evidencia-regiones'?(rutas?e.model.required.length:Math.ceil((e.threshold-e.model.firstRegion)/e.model.perRegion)+1):0;
+   const routeIds=rutas?Object.values(e.model.zones).flat().filter(id=>usable.some(r=>r.id===id)):[];if(rutas&&!X7.routeZones(e,routeIds).complete)problems.push('zonas de ruta no cubiertas por regiones accesibles');
+   for(let i=0;i<20000;i++){const v=X7.generate(e,r,{evidenceRegions:need||1,evidenceRegionIds:routeIds});if(v<min)min=v;if(v>max)max=v;if(X7.meets(e,v))hits++;}
    if(min<b.min||max>b.max)problems.push('valores fuera de límites');
    if(!(b.min<b.max)||e.threshold<b.min||e.threshold>b.max)problems.push('umbral fuera de límites');
    if(e.model.kind==='evidencia-regiones'&&regions.length<need)problems.push('regiones insuficientes para la evidencia ('+regions.length+'/'+need+')');

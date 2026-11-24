@@ -1,7 +1,8 @@
 {
-  "version": "5.6.7",
-  "build": "MEC-07",
-  "label": "5.6.7 Beta — MEC-07",
+  "version": "5.6.8",
+  "build": "MEC-08",
+  "label": "5.6.8 Beta — MEC-08",
+  "v568": {"mec08": true, "beta": true, "achievementsNew": 84, "commissionsNew": 12, "contractTemplates": 20, "events": 10, "state": "state.mec08", "eventModifiersLayer": true, "retroactiveWithoutMoney": true, "apk": false},
   "v567": {"mec07": true, "beta": true, "naturalRecords": 25, "behaviors": 20, "state": "state.naturalRecords", "isolatedRng": true, "apk": false},
   "v566": {"mec06": true, "beta": true, "artifacts": 20, "betaArtifacts": 15, "components": 6, "animalMaterials": 27, "studies": 14, "demos": 4, "places": ["museo","taller","campamento","almacen"], "state": "state.mec06", "apk": false},
   "v565": {"mec05": true, "beta": true, "museumLevels": 5, "museumRankLevels": {"4": 11, "5": 14}, "cabinets": 5, "cabinetBenefits": 11, "themeTiers": 4, "museumState": "derivado de state.museum.cabinets", "apk": false},

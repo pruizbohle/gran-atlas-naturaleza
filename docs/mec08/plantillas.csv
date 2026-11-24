@@ -1,0 +1,14 @@
+id;nombre;descripcion;objetivos (modo, objetivo por tramo de rango);requisitos;recompensa_base;arte
+obs-campo;Notas de campo;Envía avistamientos nuevos a la Sociedad.;sightingsTotal (incremental) 20/40/60;{};£60 · 60 conocimiento;contract-obs-campo
+especies-nuevas;Especies para el catálogo;Descubre especies que aún no figuran en tu Cuaderno.;discoveredAll (incremental) 2/3/4;"{""undiscovered"":4}";£90 · 90 conocimiento;contract-especies-nuevas
+monografias;Correspondencia editorial;Publica monografías nuevas.;publishedAll (incremental) 1/2/3;"{""publishable"":1}";£120 · 80 conocimiento;contract-monografias
+recoleccion;Hallazgos del terreno;Recupera piezas coleccionables en el campo.;pieces:campo (incremental) 1/1/2;{};£80 · 60 conocimiento;contract-recoleccion
+materiales;Muestras de referencia;Acredita materiales animales en tu inventario (no se entregan).;animalStock (posesion) 3/6/10;{};£70 · 70 conocimiento;contract-materiales
+analisis;Informe de laboratorio;Realiza estudios científicos en el Taller.;studies (incremental) 1/2/3;"{""workshop"":2}";£110 · 140 conocimiento;contract-analisis
+fabricacion;Encargo del instrumentista;Fabrica objetos en el Taller.;counter:crafted (incremental) 2/4/6;{};£90 · 80 conocimiento;contract-fabricacion
+prospecciones;Muestras del subsuelo;Liquida prospecciones.;prospections (incremental) 1/2/2;"{""surveys"":2}";£140 · 120 conocimiento;contract-prospecciones
+expediciones;Correspondencia de ultramar;Completa expediciones científicas.;voyagesDone (incremental) 1/2/3;"{""shipyard"":true}";£150 · 120 conocimiento;contract-expediciones
+excavaciones;Noticias de los estratos;Completa excavaciones.;excavationsDone (incremental) 1/2/2;"{""digSite"":true}";£140 · 140 conocimiento;contract-excavaciones
+exhibicion;Visita de la comisión;Mantén especies expuestas en el Museo cuando la comisión las revise.;exhibitsNow (posesion) 2/4/6;"{""museumSlots"":true}";£100 · 60 conocimiento;contract-exhibicion
+duplicados;Intercambio de duplicados;Obtén piezas mediante la Caravana.;pieces:comercio (incremental) 1/1/2;"{""caravan"":2}";£90 · 90 conocimiento;contract-duplicados
+regiones;Nuevas tierras;Visita regiones accesibles que aún no conoces.;visitedAll (incremental) 1/2/2;"{""unvisited"":2}";£80 · 80 conocimiento;contract-regiones

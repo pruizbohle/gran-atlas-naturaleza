@@ -1,0 +1,127 @@
+origen;id;dinero;conocimiento;objetos;canal;unicidad
+encargo permanente;enc_collections_1;80;80;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_collections_2;180;160;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_collections_3;220;200;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_workshop_1;100;120;"{""brass_shard"":2}";earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_workshop_2;180;200;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_workshop_3;200;240;"{""parchment_scrap"":2}";earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_records_1;80;120;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_records_2;160;220;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_records_3;220;260;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_camp_1;120;100;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_camp_2;200;220;{};earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+encargo permanente;enc_camp_3;180;200;"{""river_pebble"":3}";earnMoney(encargos) + inventario común;una vez (state.commissions.claimed)
+correspondencia;obs-campo;60;60;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;especies-nuevas;90;90;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;monografias;120;80;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;recoleccion;80;60;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;materiales;70;70;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;analisis;110;140;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;fabricacion;90;80;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;prospecciones;140;120;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;expediciones;150;120;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;excavaciones;140;140;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;exhibicion;100;60;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;duplicados;90;90;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+correspondencia;regiones;80;80;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-multidisciplinar;900;700;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-region;600;500;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-exposicion;700;500;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-materiales;800;900;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-documentacion;700;800;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-paleo;800;700;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+proyecto;proy-continentes;900;800;{};earnMoney(encargos) + addInventory;una vez por instancia (estado cobrado)
+evento;ano-nuevo;150;150;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;dia-darwin;200;200;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;equinoccio-marzo;150;120;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;dia-tierra;180;160;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;dia-biodiversidad;200;220;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;dia-oceanos;200;180;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;gran-exposicion;300;250;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;equinoccio-septiembre;150;120;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;noche-criaturas;180;200;{};earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+evento;navidad-naturalista;250;200;"{""parchment_scrap"":3,""old_ink"":2}";earnMoney(encargos) + addInventory;"una vez por edición; medalla conmemorativa una vez"
+logro;world_unlocked_125;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;visit_50;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;visit_100;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;visit_125;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;discover_1000;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;publish_250;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;publish_500;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;publish_1000;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;dimorphism_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;dimorphism_50;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;legendary_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;legendary_30;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;regional_census_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;regional_census_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;continents_recorded;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;specialized_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;specialized_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;deep_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;prospection_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;prospection_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;excavation_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;excavation_special;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;relict_20;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_first;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_milestone_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_milestone_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_milestone_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_milestone_25;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_minimum;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_validated_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_validated_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;record_regions_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;behavior_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;behavior_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;behavior_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;behavior_20;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;pieces_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;pieces_25;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;pieces_50;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;pieces_100;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;pieces_250;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;pieces_431;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;collection_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;collection_8;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;collection_32;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;cabinet_botanica;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;cabinet_geologia;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;cabinet_oceanografia;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;cabinet_historia;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;cabinet_exploracion;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;camp_first;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;camp_level3;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;camp_level5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;camp_all3;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;camp_all5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;rank_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;rank_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;rank_15;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;rank_20;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;funding_first;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;museum_wing_3;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;museum_wing_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;theme_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;theme_complete;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;artifacts_exhibited_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;demo_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;demo_10;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;components_6;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;instruments_5;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;artifacts_20;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;studies_1;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;studies_25;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;advanced_experiment;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;crafted_25;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_ano_nuevo;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_dia_darwin;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_equinoccio_marzo;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_dia_tierra;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_dia_biodiversidad;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_dia_oceanos;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_gran_exposicion;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_equinoccio_septiembre;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_noche_criaturas;0;0;{};medalla permanente;"una vez; sin dinero"
+logro;evento_navidad_naturalista;0;0;{};medalla permanente;"una vez; sin dinero"

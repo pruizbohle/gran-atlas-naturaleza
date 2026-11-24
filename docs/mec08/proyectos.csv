@@ -1,0 +1,8 @@
+id;nombre;descripcion;objetivos;requisitos;recompensa;arte
+proy-multidisciplinar;Expedición científica multidisciplinaria;Combina expediciones especializadas, estudios y una publicación.;counter:specializedVoyages (incremental) 2 | studies (incremental) 3 | publishedAll (incremental) 1;"{""rank"":8,""shipyard"":3,""workshop"":2,""publishable"":1}";£900 · 700 conocimiento;contract-proy-multidisciplinar
+proy-region;Estudio de una región;Avista especies nuevas en el registro regional de cualquier región.;regionalSpecies (incremental) 8;"{""rank"":6}";£600 · 500 conocimiento;contract-proy-region
+proy-exposicion;Preparación de una exposición temática;Activa una temática y expón al menos ocho piezas.;themesActive (posesion) 1 | cabinetPiecesShown (posesion) 8;"{""rank"":7,""museumWing"":2}";£700 · 500 conocimiento;contract-proy-exposicion
+proy-materiales;Investigación de materiales;Realiza estudios y fabrica componentes.;studies (incremental) 5 | counter:crafted (incremental) 3;"{""rank"":10,""workshop"":4}";£800 · 900 conocimiento;contract-proy-materiales
+proy-documentacion;Programa de documentación zoológica;Registra observaciones especiales y publica monografías.;naturalObservations (incremental) 3 | publishedAll (incremental) 2;"{""rank"":7,""publishable"":2}";£700 · 800 conocimiento;contract-proy-documentacion
+proy-paleo;Proyecto paleontológico;Completa excavaciones para la Sociedad.;excavationsDone (incremental) 3;"{""rank"":9,""digSite"":true}";£800 · 700 conocimiento;contract-proy-paleo
+proy-continentes;Correspondencia entre continentes;Registra avistamientos en regiones de dos continentes distintos.;continentsRecorded (incremental) 1 | sightingsTotal (incremental) 30;"{""rank"":12}";£900 · 800 conocimiento;contract-proy-continentes

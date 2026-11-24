@@ -1,7 +1,10 @@
 /* Reconocimientos de la Sociedad. Reglas puras; ninguna recompensa económica. */
 (function(root){
 'use strict';
-const categories=Object.freeze({exploration:'Exploración y cartografía',zoology:'Zoología y Cuaderno',specimens:'Especímenes especiales',museum:'Museo y paleontología',research:'Investigación y fabricación',navigation:'Expediciones y Comercio'});
+// MEC-08: las categorías y el catálogo admiten ampliaciones (extend) sin reemplazar el motor.
+const categoryTable={exploration:'Exploración y cartografía',zoology:'Zoología y Cuaderno',specimens:'Especímenes especiales',museum:'Museo y paleontología',research:'Investigación y fabricación',navigation:'Expediciones y Comercio'};
+let categories=Object.freeze({...categoryTable});
+const metricProviders=[];
 const catalog=[];
 function add(category,id,name,metric,target,description,tier='Bronce',extra={}){catalog.push(Object.freeze({id,category,name,metric,target,description,tier,reward:'Medalla permanente',...extra}));}
 add('exploration','first_journey','Más allá de las islas','outside',1,'Visita una región distinta de las Islas Británicas.');
@@ -59,6 +62,7 @@ function metrics(s,ctx){
  for(const label of ['Notable','Albino','Melánico','Épico','Excepcional','Legendario'])m['variant:'+label]=label==='Legendario'?count(s.legendaryFound):ids.filter(id=>s.specialFound?.[id]?.[label]&&index.specials[id].includes(label)).length;
  for(const key of ['trade','trade24','market','barter'])m['counter:'+key]=safe(a.counters?.[key]);
  for(const method of ['sondeo','muestreo'])m['method:'+method]=(e.methods||[]).includes(method)||deep.some(h=>h.method===method)?1:0;
+ for(const f of metricProviders){try{Object.assign(m,f(s,ctx,m)||{});}catch(_){}}
  return m;
 }
 const object=o=>o&&typeof o==='object'&&!Array.isArray(o)?o:{};
@@ -89,5 +93,13 @@ function record(s,type,data={}){
  if(type==='voyage'&&!e.voyageTypes.includes(data.type))e.voyageTypes.push(data.type);
  if(type==='deep'){e.deepCompleted=Math.min(Number.MAX_SAFE_INTEGER,e.deepCompleted+1);if(!e.methods.includes(data.method))e.methods.push(data.method);if(data.abyss&&Object.values(data.records||{}).some(n=>n>0))e.abyssRecords=Math.min(Number.MAX_SAFE_INTEGER,e.abyssRecords+1);}
 }
-root.AtlasAchievements3360=Object.freeze({categories,catalog:Object.freeze(catalog),metrics,group,normalize,evaluate,initialize,increment,record});
+let frozen=Object.freeze(catalog.slice());
+// Ampliación (MEC-08): definiciones nuevas con ids permanentes; los ids existentes no se reemplazan.
+function extend({categories:cats={},definitions=[],metrics:provider=null}={}){
+ Object.assign(categoryTable,cats);categories=Object.freeze({...categoryTable});
+ for(const d of definitions){if(catalog.some(x=>x.id===d.id))continue;add(d.category,d.id,d.name,d.metric,d.target,d.description,d.tier||'Bronce',d.extra||{});}
+ if(typeof provider==='function'&&!metricProviders.includes(provider))metricProviders.push(provider);
+ frozen=Object.freeze(catalog.slice());return frozen.length;
+}
+root.AtlasAchievements3360=Object.freeze({get categories(){return categories;},get catalog(){return frozen;},metrics,group,normalize,evaluate,initialize,increment,record,extend});
 })(globalThis);

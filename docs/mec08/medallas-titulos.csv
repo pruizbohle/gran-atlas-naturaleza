@@ -1,0 +1,20 @@
+id;medalla;titulo;categoria;condicion;multiplicador_economico
+world_unlocked;Platino;Cartógrafo del mundo;Exploración y cartografía;unlocked ≥ 113;ninguno
+visit_abyss;Platino;Corresponsal de las profundidades;Exploración y cartografía;abyssVisited ≥ 1;ninguno
+discover_900;Platino;Naturalista del mundo;Zoología y Cuaderno;discovered ≥ 900;ninguno
+publish_100;Oro;Autor de la Sociedad;Zoología y Cuaderno;published ≥ 100;ninguno
+continental_kit;Oro;Instrumentista de expedición;Investigación y fabricación;continentalKit ≥ 5;ninguno
+world_unlocked_125;Platino;Cartógrafo del Atlas completo;Exploración y cartografía;unlockedAll ≥ 125;ninguno
+discover_1000;Platino;Naturalista de las mil especies;Zoología y Cuaderno;discoveredAll ≥ 1000;ninguno
+publish_1000;Platino;Autor del catálogo completo;Zoología y Cuaderno;publishedAll ≥ 1000;ninguno
+legendary_30;Platino;Guardián de leyendas;Especímenes especiales;variant:Legendario ≥ 30;ninguno
+relict_20;Platino;Archivista de relictos;Museo y paleontología;relicts ≥ 20;ninguno
+record_milestone_25;Platino;Cronista de récords;Récords naturales y conductas;recordsAchieved ≥ 25;ninguno
+behavior_20;Platino;Etólogo de la Sociedad;Récords naturales y conductas;behaviorsFound ≥ 20;ninguno
+pieces_431;Platino;Gran coleccionista;Coleccionables;piecesFound ≥ 431;ninguno
+collection_32;Platino;Conservador de gabinetes;Coleccionables;collectionsComplete ≥ 32;ninguno
+camp_all5;Platino;Intendente de expediciones;Campamento y Sociedad;campMin ≥ 5;ninguno
+rank_20;Platino;Gran Naturalista;Campamento y Sociedad;rank ≥ 20;ninguno
+artifacts_20;Platino;Instrumentista de la Sociedad;Taller e instrumentación;artifactsCatalogued ≥ 20;ninguno
+evento_dia_darwin;Plata;Corresponsal de Darwin;Eventos conmemorativos;eventMedal:dia-darwin ≥ 1;ninguno
+evento_navidad_naturalista;Plata;Corresponsal de invierno;Eventos conmemorativos;eventMedal:navidad-naturalista ≥ 1;ninguno

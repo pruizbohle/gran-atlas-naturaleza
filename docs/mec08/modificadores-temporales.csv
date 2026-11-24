@@ -1,0 +1,5 @@
+evento;actividad;valor;tope;capa;captura
+equinoccio-marzo;campo:ambiental:botanica;0.25;0.25;eventos (separada del Museo);en cada tirada de campo, mientras dura el evento
+dia-tierra;prospeccion:geologica;0.15;0.15;eventos (separada del Museo);al iniciar la actividad temporizada (snapshot)
+dia-oceanos;expedicion:oceanografica;0.2;0.2;eventos (separada del Museo);al iniciar la actividad temporizada (snapshot)
+equinoccio-septiembre;campo:ambiental:oceanografia;0.25;0.25;eventos (separada del Museo);en cada tirada de campo, mientras dura el evento

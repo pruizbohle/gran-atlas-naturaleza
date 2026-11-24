@@ -40,8 +40,10 @@ function metrics(s,ctx){
  for(const id of ['bone_short','parchment_scrap','carved_wood','polished_lens'])m['stock:'+id]=Math.max(0,Number(s.inventory?.[id])||0);
  return m;
 }
+// MEC-08: condición de acceso opcional (rango, instalaciones, región) para líneas nuevas.
+let gateFn=null;const gate=(s,d)=>!gateFn||!d.gate||!!gateFn(s,d);
 function objective(d,m){const requirements=d.requirements.map(r=>({...r,value:Math.min(r.target,Math.max(0,Number(m[r.metric])||0))}));return {requirements,complete:requirements.every(r=>r.value>=r.target),fraction:requirements.reduce((n,r)=>n+r.value/r.target,0)/requirements.length};}
-function evaluate(s,ctx){const m=metrics(s,ctx),c=s.commissions||{};return catalog.map(d=>{const p=objective(d,m),satisfied=!!c.satisfied?.[d.id]||p.complete,available=!d.previous||!!c.ready?.[d.previous]||!!c.claimed?.[d.previous];return {definition:d,...p,satisfied,available,ready:!!c.ready?.[d.id]||satisfied&&available,claimed:!!c.claimed?.[d.id]};});}
+function evaluate(s,ctx){const m=metrics(s,ctx),c=s.commissions||{};return catalog.map(d=>{const p=objective(d,m),satisfied=!!c.satisfied?.[d.id]||p.complete,available=(!d.previous||!!c.ready?.[d.previous]||!!c.claimed?.[d.previous])&&gate(s,d);return {definition:d,...p,satisfied,available,ready:!!c.ready?.[d.id]||satisfied&&available,claimed:!!c.claimed?.[d.id]};});}
 const object=o=>o&&typeof o==='object'&&!Array.isArray(o)?o:{};
 const copy=o=>JSON.parse(JSON.stringify(object(o)));
 function normalize(s,ctx){const old=object(s.commissions);s.commissions={...old,version:1,satisfied:copy(old.satisfied),ready:copy(old.ready),claimed:copy(old.claimed),legacyClaims:copy(old.legacyClaims),notified:{...object(old.notified)},tracked:[...new Set(Array.isArray(old.tracked)?old.tracked:[])].filter(id=>(catalog.some(d=>d.id===id)||ctx.legacy.some(d=>d.id===id))&&!old.claimed?.[id]&&!s.purchases?.['mission_'+id]).slice(0,3)};
@@ -58,7 +60,7 @@ function sync(s,ctx,{silent=false,retroactive=false,now=Date.now()}={}){
  const c=s.commissions,notices=[],m=metrics(s,ctx);
  for(const d of catalog)if(!c.satisfied[d.id]&&objective(d,m).complete)c.satisfied[d.id]={observedAt:now,completedAt:retroactive?null:now};
  // Ordered DAG: a predecessor's fulfilled objective enables its successor, without forcing a claim.
- for(const d of catalog){if(!c.ready[d.id]&&c.satisfied[d.id]&&(!d.previous||c.ready[d.previous]||c.claimed[d.previous]))c.ready[d.id]={observedAt:now,completedAt:retroactive?null:now};
+ for(const d of catalog){if(!c.ready[d.id]&&c.satisfied[d.id]&&(!d.previous||c.ready[d.previous]||c.claimed[d.previous])&&gate(s,d))c.ready[d.id]={observedAt:now,completedAt:retroactive?null:now};
   if(c.ready[d.id]&&!c.claimed[d.id]&&!c.notified[d.id]){c.notified[d.id]=true;notices.push(d.id);}}
  for(const d of ctx.legacy){const key='legacy:'+d.id;if(!s.purchases['mission_'+d.id]&&d.progress()>=d.target&&!c.notified[key]){c.notified[key]=true;notices.push(key);}}
  return silent?[]:notices;
@@ -75,5 +77,11 @@ function models(s,ctx){const list=evaluate(s,ctx).map(x=>({...x,id:x.definition.
  for(const d of ctx.legacy){const value=Math.min(d.target,Math.max(0,d.progress())),claimed=!!s.purchases['mission_'+d.id];list.push({id:d.id,definition:{id:d.id,line:'legacy',name:d.name,description:d.desc,module:d.id.includes('museo')||d.id.includes('paleonto')?'museum':d.id.includes('viajes')?'expeditions':d.id.includes('publicacion')?'society':'field',reward:{money:d.money,knowledge:d.knowledge,items:d.items||{}}},legacy:true,requirements:[{metric:'legacy:'+d.id,target:d.target,value,label:d.desc}],fraction:value/d.target,satisfied:value>=d.target,available:true,ready:value>=d.target,claimed,tracked:s.commissions.tracked.includes(d.id)});}
  return list;
 }
-root.AtlasCommissions3370=Object.freeze({categories,catalog:Object.freeze(catalog),metrics,objective,evaluate,normalize,mergeReceipts,sync,initialize,pay,track,models});
+let frozen=Object.freeze(catalog.slice());let cats=categories;
+function extend({categories:more={},definitions=[],gate:g=null}={}){
+ cats=Object.freeze({...cats,...more});
+ for(const d of definitions){if(catalog.some(x=>x.id===d.id))continue;add(d.line,d.n,d.name,d.description,d.requirements,d.money,d.knowledge,d.items||{},d.extra||{});}
+ if(typeof g==='function')gateFn=g;frozen=Object.freeze(catalog.slice());return frozen.length;
+}
+root.AtlasCommissions3370=Object.freeze({get categories(){return cats;},get catalog(){return frozen;},metrics,objective,evaluate,normalize,mergeReceipts,sync,initialize,pay,track,models,extend});
 })(globalThis);

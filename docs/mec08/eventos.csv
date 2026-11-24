@@ -1,0 +1,31 @@
+ocurrencia;evento;tema;edicion;inicio_local;ultimo_dia;dias;regla;naturaleza;descripcion
+ano-nuevo-2026;Año Nuevo: nuevos horizontes;Exploración;2026;2026-01-01;2026-01-07;7;fecha fija;celebración externa adaptada;Celebración externa del año nuevo civil.
+dia-darwin-2026;Día de Darwin: correspondencia naturalista;Monografías;2026;2026-02-12;2026-02-16;5;fecha fija;celebración externa adaptada;"Celebración moderna del natalicio de Charles Darwin (12 de febrero de 1809); en 1842 sería una correspondencia entre naturalistas."
+equinoccio-marzo-2026;Equinoccio de marzo;Botánica;2026;2026-03-19;2026-03-21;3;"equinoccio calculado (Meeus); instante UTC 2026-03-20T14:40";propio del Atlas;Fecha astronómica calculada para cada año.
+dia-tierra-2026;Día de la Tierra;Geología;2026;2026-04-22;2026-04-26;5;fecha fija;celebración externa adaptada;Celebración externa moderna (desde 1970), adaptada al Atlas.
+dia-biodiversidad-2026;Día de la Biodiversidad;Zoología;2026;2026-05-22;2026-05-26;5;fecha fija;celebración externa adaptada;Día Internacional de la Diversidad Biológica (ONU), adaptado al Atlas.
+dia-oceanos-2026;Día de los Océanos;Oceanografía;2026;2026-06-08;2026-06-14;7;fecha fija;celebración externa adaptada;Día Mundial de los Océanos (ONU), adaptado al Atlas.
+gran-exposicion-2026;Gran Exposición Científica;Artefactos;2026;2026-08-01;2026-08-14;14;fecha ficticia del Atlas;propio del Atlas;Evento propio del Atlas con fecha ficticia configurable.
+equinoccio-septiembre-2026;Equinoccio de septiembre;Oceanografía;2026;2026-09-21;2026-09-23;3;"equinoccio calculado (Meeus); instante UTC 2026-09-23T00:13";propio del Atlas;Fecha astronómica calculada para cada año.
+noche-criaturas-2026;Noche de las Criaturas;Fauna nocturna;2026;2026-10-30;2026-11-01;3;fecha fija;celebración externa adaptada;Celebración externa adaptada a la fauna nocturna.
+navidad-naturalista-2026;Navidad del Naturalista;Correspondencia;2026;2026-12-24;2027-01-01;9;fecha fija;celebración externa adaptada;"Celebración externa; correspondencia y encargos especiales."
+ano-nuevo-2027;Año Nuevo: nuevos horizontes;Exploración;2027;2027-01-01;2027-01-07;7;fecha fija;celebración externa adaptada;Celebración externa del año nuevo civil.
+dia-darwin-2027;Día de Darwin: correspondencia naturalista;Monografías;2027;2027-02-12;2027-02-16;5;fecha fija;celebración externa adaptada;"Celebración moderna del natalicio de Charles Darwin (12 de febrero de 1809); en 1842 sería una correspondencia entre naturalistas."
+equinoccio-marzo-2027;Equinoccio de marzo;Botánica;2027;2027-03-19;2027-03-21;3;"equinoccio calculado (Meeus); instante UTC 2027-03-20T20:29";propio del Atlas;Fecha astronómica calculada para cada año.
+dia-tierra-2027;Día de la Tierra;Geología;2027;2027-04-22;2027-04-26;5;fecha fija;celebración externa adaptada;Celebración externa moderna (desde 1970), adaptada al Atlas.
+dia-biodiversidad-2027;Día de la Biodiversidad;Zoología;2027;2027-05-22;2027-05-26;5;fecha fija;celebración externa adaptada;Día Internacional de la Diversidad Biológica (ONU), adaptado al Atlas.
+dia-oceanos-2027;Día de los Océanos;Oceanografía;2027;2027-06-08;2027-06-14;7;fecha fija;celebración externa adaptada;Día Mundial de los Océanos (ONU), adaptado al Atlas.
+gran-exposicion-2027;Gran Exposición Científica;Artefactos;2027;2027-08-01;2027-08-14;14;fecha ficticia del Atlas;propio del Atlas;Evento propio del Atlas con fecha ficticia configurable.
+equinoccio-septiembre-2027;Equinoccio de septiembre;Oceanografía;2027;2027-09-22;2027-09-24;3;"equinoccio calculado (Meeus); instante UTC 2027-09-23T06:02";propio del Atlas;Fecha astronómica calculada para cada año.
+noche-criaturas-2027;Noche de las Criaturas;Fauna nocturna;2027;2027-10-30;2027-11-01;3;fecha fija;celebración externa adaptada;Celebración externa adaptada a la fauna nocturna.
+navidad-naturalista-2027;Navidad del Naturalista;Correspondencia;2027;2027-12-24;2028-01-01;9;fecha fija;celebración externa adaptada;"Celebración externa; correspondencia y encargos especiales."
+ano-nuevo-2028;Año Nuevo: nuevos horizontes;Exploración;2028;2028-01-01;2028-01-07;7;fecha fija;celebración externa adaptada;Celebración externa del año nuevo civil.
+dia-darwin-2028;Día de Darwin: correspondencia naturalista;Monografías;2028;2028-02-12;2028-02-16;5;fecha fija;celebración externa adaptada;"Celebración moderna del natalicio de Charles Darwin (12 de febrero de 1809); en 1842 sería una correspondencia entre naturalistas."
+equinoccio-marzo-2028;Equinoccio de marzo;Botánica;2028;2028-03-18;2028-03-20;3;"equinoccio calculado (Meeus); instante UTC 2028-03-20T02:18";propio del Atlas;Fecha astronómica calculada para cada año.
+dia-tierra-2028;Día de la Tierra;Geología;2028;2028-04-22;2028-04-26;5;fecha fija;celebración externa adaptada;Celebración externa moderna (desde 1970), adaptada al Atlas.
+dia-biodiversidad-2028;Día de la Biodiversidad;Zoología;2028;2028-05-22;2028-05-26;5;fecha fija;celebración externa adaptada;Día Internacional de la Diversidad Biológica (ONU), adaptado al Atlas.
+dia-oceanos-2028;Día de los Océanos;Oceanografía;2028;2028-06-08;2028-06-14;7;fecha fija;celebración externa adaptada;Día Mundial de los Océanos (ONU), adaptado al Atlas.
+gran-exposicion-2028;Gran Exposición Científica;Artefactos;2028;2028-08-01;2028-08-14;14;fecha ficticia del Atlas;propio del Atlas;Evento propio del Atlas con fecha ficticia configurable.
+equinoccio-septiembre-2028;Equinoccio de septiembre;Oceanografía;2028;2028-09-21;2028-09-23;3;"equinoccio calculado (Meeus); instante UTC 2028-09-22T11:50";propio del Atlas;Fecha astronómica calculada para cada año.
+noche-criaturas-2028;Noche de las Criaturas;Fauna nocturna;2028;2028-10-30;2028-11-01;3;fecha fija;celebración externa adaptada;Celebración externa adaptada a la fauna nocturna.
+navidad-naturalista-2028;Navidad del Naturalista;Correspondencia;2028;2028-12-24;2029-01-01;9;fecha fija;celebración externa adaptada;"Celebración externa; correspondencia y encargos especiales."

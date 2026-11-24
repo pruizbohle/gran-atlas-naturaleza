@@ -300,10 +300,11 @@ test('MEC-07 · 26. MEC-01 a MEC-06 se conservan; versión y verificación',()=>
  const full=game({full:true});assert.equal(full.g.REGIONS.length,125);assert.equal(Object.keys(full.g.SPECIES).length,1000);
  assert.equal((full.g.LEGENDARY_SPECIMENS||[]).length,30);assert.equal(full.g.MUSEUM_RELICTS.length,20);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.equal(pkg.version,'5.6.7');assert.equal(rel.version,'5.6.7');assert.equal(rel.build,'MEC-07');assert.equal(rel.channel,'beta');
+ // MEC-08: la versión se compara con package.json (antes, el literal 5.6.7 / MEC-07).
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec07.test.cjs'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec07-natural-records.js'"));
- assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec07-natural-records.js?v=5.6.7'));
- assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '5.6.7'"));
+ assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec07-natural-records.js?v='+pkg.version));
+ assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '"+pkg.version+"'"));
  assert.ok(fs.existsSync('docs/mec07/hitos.csv'));assert.ok(!fs.existsSync('android'));
 });
