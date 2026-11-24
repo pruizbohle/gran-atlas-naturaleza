@@ -8,7 +8,7 @@ Esta etapa deja las mecánicas de la V5.6.0 Beta funcionales, persistentes, exte
 
 ### Estado de partida
 
-- `main` = `9006b53`, único commit del repositorio (la historia anterior no está en el remoto).
+- `main` = `9006b53`. *Corrección de MEC-02:* aquí decía «único commit del repositorio»; era un efecto del clon superficial. El remoto conserva el historial completo (461 commits en esta rama). Ver [docs/mec02](../mec02/README.md#1-correcciones-de-mec-01).
 - La V5.6.0 Beta está integrada en `www/js/beta-v560-data.js` y en el bloque «Beta 5.6.0» al final de `www/js/app.js`, pero la versión publicada seguía siendo 5.5.1 en `package.json`, `atlas-release.json`, `sw.js` e `index.html`.
 
 ### Problemas confirmados en el código (no solo en la interfaz)

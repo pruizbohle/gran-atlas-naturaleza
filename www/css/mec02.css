@@ -1,0 +1,17 @@
+/* El Gran Atlas · V5.6.2 Beta — MEC-02 · ficha de instalación del Campamento. */
+.mec02-card{margin:10px 0 14px;padding:12px;border:1px solid #bba67e;border-radius:6px;background:#f6edda;color:#3e5744}
+.mec02-card>header{display:flex;gap:12px;align-items:center}
+.mec02-card>header h3{margin:2px 0}
+.mec02-art{flex:none;width:72px;height:72px;display:flex;align-items:center;justify-content:center;border:1px dashed #b6a476;border-radius:6px;background:#efe3c6}
+.mec02-art img,.mec02-art .atlas-icon,.mec02-art svg{width:64px;height:64px;max-width:64px;max-height:64px}
+.mec02-kicker{font-size:.72em;letter-spacing:1px;color:#796d5a}
+.mec02-cap{margin:8px 0 4px;font-size:.88em}
+.mec02-acts{margin:4px 0;font-size:.88em}
+.mec02-functions,.mec02-controls{margin:6px 0;font-size:.9em}
+.mec02-functions ul{margin:4px 0;padding-left:18px}
+.mec02-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px;padding:4px 0;border-top:1px dotted #d8c9a9}
+.mec02-next{margin-top:10px;padding-top:8px;border-top:1px solid #d8c9a9}
+.mec02-next h4{margin:0 0 4px}
+.mec02-next ul{margin:4px 0;padding-left:18px;font-size:.9em}
+.mec02-missing{color:#7b4332}
+.mec02-max{font-weight:700;color:#315d47}

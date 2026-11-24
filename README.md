@@ -2,11 +2,15 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.1 Beta — MEC-01** (rama `mec-01/v5.6.1-beta`, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.2 Beta — MEC-02**, canal beta (rama `mec-02/v5.6.2-beta`, sobre MEC-01, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.1 Beta — MEC-01 (en revisión)
+## V5.6.2 Beta — MEC-02 (en revisión)
+
+Convierte el Campamento en un centro de operaciones evolutivo. Astillero, Caravana, Taller, Excavaciones y Prospecciones tienen cinco niveles cada uno, definidos en una sola configuración (`www/js/mec02-camp.js`), y cada nivel cambia algo que el motor ejecuta: más expediciones, rutas, excavaciones o prospecciones simultáneas; expedición ampliada; compra por lotes; fabricación múltiple y con subcomponentes; estudios en lote; excavación profunda y especial; indicio adicional; y recogida conjunta. La Tienda sigue siendo el espacio personal. Las partidas anteriores empiezan en nivel I sin perder nada. Los valores son provisionales y no se generó APK. Informe, tabla de las 25 etapas y pruebas en [docs/mec02](docs/mec02/README.md).
+
+## V5.6.1 Beta — MEC-01 (aprobada en auditoría externa)
 
 Consolida las mecánicas de la V5.6.0 Beta sin calibrar todavía su balance: los materiales animales históricos vuelven a caer como antes y cada categoría nueva (materiales, coleccionables, rarezas) tiene su propio canal de drops; un registro permanente de coleccionables con su interfaz por colección; un libro de ingresos por procedencia que sustituye al cálculo por diferencias de saldo; gabinetes del Museo con selector completo y reservas de piezas; niveles del Museo en una sola tabla y una estructura reutilizable para hitos naturales. No se generó APK. Informe, estructuras de datos, pruebas y pendientes en [docs/mec01](docs/mec01/README.md).
 
@@ -48,7 +52,7 @@ npm ci
 npm run release:verify
 ```
 
-`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.2. En MEC-01, con un clon sin historial, dio 506 de 774 frente a 492 de 760 en la línea base, sin regresiones; las 14 nuevas son `tests/mec01.test.cjs`. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
+`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.2. En MEC-02, con el historial completo, da 690 de 906 frente a 678 de 894 en MEC-01, sin regresiones. Las 216 que fallan son aserciones históricas preexistentes, y `global-v3240` supera los 600 s por archivo en una máquina de 2 CPU. `release:verify` incluye `tests/mec01.test.cjs` y `tests/mec02.test.cjs`. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
 
 Cada envío a `main` despliega el sitio mediante `.github/workflows/static.yml`.
 
@@ -70,6 +74,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 
 | Versión | Tema | Informe |
 | --- | --- | --- |
+| 5.6.2 Beta | MEC-02: Campamento evolutivo, 5 instalaciones × 5 niveles | [docs/mec02](docs/mec02/README.md) |
 | 5.6.1 Beta | MEC-01: consolidación de drops, colecciones, ingresos, gabinetes e hitos de la V5.6.0 Beta | [docs/mec01](docs/mec01/README.md) |
 | 5.6.0 Beta | Coleccionables, drops, Sociedad, Museo e hito del guepardo (datos beta) | [docs/v560-beta](docs/v560-beta/README.md) |
 | 5.4.0 | Iconografía: objetos OBJ-11, hexágonos por bioma e interfaz sin emojis | [docs/v540](docs/v540/README.md) |

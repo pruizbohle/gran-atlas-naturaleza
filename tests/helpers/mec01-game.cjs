@@ -3,12 +3,15 @@
 // tal como los carga www/index.html (antes de app.js).
 const fs=require('node:fs'),{make:inv}=require('./inv3400-game.cjs');
 const read=p=>fs.readFileSync(p,'utf8');
-const PRELUDE=['beta-v560-data','mec01-catalog-meta','mec01-core','mec01-ui'].map(n=>read('www/js/'+n+'.js')).join('\n');
-const GLOBALS=['AtlasBeta560','AtlasMEC01','AtlasMEC01UI','AtlasBeta560Actions'];
-const EXTRA='mec01FieldDrops,normalizeMEC01,earnMoney,addInventory,maybeSpeciesDrop,SPECIES_DROPS,MUSEUM_LEVELS,MUSEUM_WINGS,museumCapacity,expandMuseum,renderMuseum,museumViewModel3270,journalViewModel3250,claimScientificMission,exchangeNotes,processMaterials,deliverContract3390,commissionClaim3370,tick,render,renderPanel,renderSociety,stageRequirements,encounter,publishMonograph,requestGrant';
+const FILES=['beta-v560-data','mec01-catalog-meta','mec01-core','mec01-ui','mec02-camp','mec02-camp-ui'];
+const PRELUDE=FILES.map(n=>read('www/js/'+n+'.js')).join('\n');
+// noCamp: sin los módulos MEC-02, para comparar con el comportamiento anterior.
+const NO_CAMP=FILES.filter(n=>!n.startsWith('mec02')).map(n=>read('www/js/'+n+'.js')).join('\n');
+const GLOBALS=['AtlasBeta560','AtlasMEC01','AtlasMEC01UI','AtlasBeta560Actions','AtlasCampMEC02','AtlasCampMEC02UI','AtlasCampMEC02Actions'];
+const EXTRA='mec01FieldDrops,normalizeMEC01,earnMoney,addInventory,maybeSpeciesDrop,SPECIES_DROPS,MUSEUM_LEVELS,MUSEUM_WINGS,museumCapacity,expandMuseum,renderMuseum,museumViewModel3270,journalViewModel3250,claimScientificMission,exchangeNotes,processMaterials,deliverContract3390,commissionClaim3370,tick,render,renderPanel,renderSociety,stageRequirements,encounter,publishMonograph,requestGrant,canProcessMaterials,processMaterials,voyageDuration,relictSurveySpec,maxRelictSurveys,maxExcavations,tradeCanStart3300,startTrade3300,settleTrade3300,buyTrade3300,collectExcavation,collectRelictSurvey,canStartRelictSurvey,relictLeadCount,MUSEUM_DIG_SITES,TRADE_ROUTES,TRADE_MARKET,V316_MATERIAL_STUDIES,recipePlan3400,rollLoot';
 function make(options={}){
  const app=(options.app||read('www/js/app.js')).replace(/\n\}\)\(\);\s*$/,'\nwindow.__mec01={'+EXTRA.split(',').map(n=>'get '+n+'(){return typeof '+n+'==="undefined"?undefined:'+n+'}').join(',')+','+GLOBALS.map(n=>'get '+n+'(){return globalThis.'+n+'}').join(',')+'};\n})();');
- const h=inv({...options,gameSource:(options.noBeta?'':PRELUDE)+'\n'+app});
+ const h=inv({...options,gameSource:(options.noBeta?'':options.noCamp?NO_CAMP:PRELUDE)+'\n'+app});
  const extra=h.window.__mec01;
  const g=new Proxy(h.g,{get(t,k){return k in t?t[k]:extra[k];}});
  // Object.create conserva los accesores del arnés (now con su setter).

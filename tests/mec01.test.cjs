@@ -274,7 +274,8 @@ test('MEC-01 · 11. exportar e importar conserva registro, libro, gabinetes, hit
  assert.equal(st.inventory['MAT-N01'],4);assert.equal(st.inventory.engranaje,2);
  assert.equal(t.A.societyStats().money,90);
  // Formato de respaldo intacto.
- assert.match(fs.readFileSync('www/js/save-manager.js','utf8'),/gameVersion: '5\.6\.1'/);
+ // MEC-02: la versión sigue a package.json (antes, literal 5.6.1).
+ assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '"+require('../package.json').version+"'"));
  assert.ok(t.store[KEY].includes('"collectionRegistry"'));
 });
 
@@ -322,16 +323,17 @@ test('MEC-01 · 13. sin datos beta el motor se comporta como V5.5.1 (sin regresi
  deq(b.MUSEUM_LEVELS.map(l=>l.cabinetSlots),[4,8,12,16,20]);
 });
 
-test('MEC-01 · versión 5.6.1 Beta coherente en paquete, PWA, integridad y caché',()=>{
- const v='5.6.1';
+test('MEC-01 · versión beta coherente en paquete, PWA, integridad y caché',()=>{
+ // MEC-02: se comprueba la coherencia con la versión vigente (antes, el literal 5.6.1).
+ const v=require('../package.json').version;assert.match(v,/^5\.6\.\d+$/);
  assert.equal(require('../package.json').version,v);
  assert.equal(require('../www/atlas-release.json').version,v);
- assert.equal(require('../www/atlas-release.json').build,'MEC-01');
+ assert.match(require('../www/atlas-release.json').build,/^MEC-0\d$/);
  const index=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
- assert.match(index,/name="atlas-version" content="5\.6\.1"/);assert.match(index,/5\.6\.1 Beta — MEC-01/);
+ assert.ok(index.includes('name="atlas-version" content="'+v+'"'));assert.ok(index.includes(v+' Beta — MEC-0'));
  assert.ok(!index.includes('v=5.5.1'));
  for(const f of ['js/mec01-core.js','js/mec01-ui.js','js/mec01-catalog-meta.js','css/mec01.css']){assert.ok(sw.includes("'./"+f+"'"),f);assert.ok(index.includes(f),f);}
- assert.match(sw,/RELEASE=\{version:'5\.6\.1'/);assert.match(sw,/const CACHE='gran-atlas-v5\.6\.1-naturalist-[0-9a-f]{12}'/);
+ assert.ok(sw.includes("RELEASE={version:'"+v+"'"));assert.match(sw,new RegExp("const CACHE='gran-atlas-v"+v.replace(/\./g,'\\.')+"-naturalist-[0-9a-f]{12}'"));
  const integrity=require('../www/atlas-integrity.json');assert.equal(integrity.version,v);
  const crypto=require('node:crypto');
  for(const f of ['js/app.js','js/mec01-core.js','js/mec01-ui.js','css/mec01.css'])

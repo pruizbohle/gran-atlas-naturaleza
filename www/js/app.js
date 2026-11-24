@@ -4639,6 +4639,10 @@ function addInventory(id, qty=1){state.inventory[id]=(state.inventory[id]||0)+qt
 // MEC-01 · ganchos que instala el bloque final de app.js; sin datos beta no hacen nada.
 function mec01FieldDrops(id,manual){return [];}
 function normalizeMEC01(s){return s;}
+// MEC-02 · ganchos del Campamento evolutivo (los instala el bloque MEC-02 al final de app.js).
+let campBridgeMEC02=null;
+function studyBatchesMEC02(){return [1,5];}
+function mec02Action(act,id){}
 // MEC-01 · única entrada de dinero ganado: suma al saldo y lo anota en el libro de ingresos por procedencia.
 // Los gastos siguen restando directamente de state.money y no tocan el libro.
 function earnMoney(amount,source){const n=Number(amount);if(!Number.isFinite(n)||n<=0)return 0;state.money+=n;globalThis.AtlasMEC01?.credit(state,n,source);return n;}
@@ -5384,6 +5388,7 @@ function handlePanelAction(e){
     }
     // M-3270 END actions
     if(act==='beta-cab-toggle'){globalThis.AtlasBeta560Actions?.toggle?.(id);return;}
+    if(act.startsWith('mec02-')){mec02Action(act,id);return;}
     if(act.startsWith('mec01-')){globalThis.AtlasBeta560Actions?.mec01?.(act,id,el);return;}
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
@@ -7435,7 +7440,7 @@ function inventoryDetail3400(id){
  const uses=inventoryUses3400(id),sources=inventorySources3400(id);
  return `<section class="inv340-detail" aria-label="Ficha de objeto"><div class="inv340-title">${itemArtInline(id)}<h4>${ITEMS[id].name}</h4></div><p class="small">${ITEMS[id].bonus} · En bolsa: ${state.inventory[id]||0}.</p>${ITEMS[id].slot?`<button class="btn alt" data-action="equip-item" data-id="${id}" ${state.inventory[id]?'':'disabled'}>${state.equipment[ITEMS[id].slot]===id?'Quitar':'Equipar'}</button>`:''}<details open><summary>Fuentes de obtención</summary><ul class="small">${sources.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>Registro de colección; sin fuente consumible.</li>'}</ul></details><details><summary>Usos y destinos · ${uses.length}</summary><ul class="inv340-uses">${uses.map(u=>`<li><button class="inv340-link" data-action="inv-${u.action}" data-id="${u.id}">${esc(u.name)}</button></li>`).join('')||'<li>Conservar en la colección del gabinete.</li>'}</ul></details>${inventoryRecipe3400(id)}</section>`;
 }
-function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${[1,5].map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
+function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${studyBatchesMEC02().map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
 renderObjects=function(){
  const q=inventoryQuery3400(),ui=inventoryUI3400,id=ITEMS[ui.selected]?ui.selected:q.shown[0];
  return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${uiIcon530(inventoryIcons530[key])} ${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">${globalThis.AtlasIcons530?.glyph('search')||''} Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query).replace(/"/g,'&quot;')}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>${globalThis.AtlasIcons530?.glyph('filter')||''} Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['beta','Colección BETA'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
@@ -7783,6 +7788,8 @@ document.addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target
 document.addEventListener('change',event=>{if(event.target.name!=='naturalistAvatar')return;document.querySelectorAll('.cp3430-avatars label').forEach(n=>n.classList.toggle('selected',n.contains(event.target)));});
 document.addEventListener('keydown',event=>{const dialog=!cpDialog3430.hidden?cpDialog3430:!cpMenu3430.hidden?cpMenu3430:null;if(!dialog)return;if(event.key==='Escape'){event.preventDefault();cpClose3430();return;}const buttons=[...dialog.querySelectorAll('button,input:not([type="radio"]),input[type="radio"]:checked')].filter(n=>!n.disabled),first=buttons[0],last=buttons.at(-1);if(event.key==='Tab'&&event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(event.key==='Tab'&&!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}if(dialog===cpMenu3430&&['ArrowDown','ArrowUp','Home','End'].includes(event.key)){event.preventDefault();const i=buttons.indexOf(document.activeElement),next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length;buttons[next]?.focus();}});
 
+// MEC-02 · puente para que el bloque de instalaciones lea el estado del Campamento.
+campBridgeMEC02={facility:()=>cp3430.mode==='new'&&cp3430.active?cp3430.facility:null,models:()=>cpModels3430,setModels(fn){cpModels3430=fn;},refresh:()=>cpRefresh3430()};
 }
 // CP3430 END approved Campamento and optional naturalist profile
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
@@ -8106,6 +8113,263 @@ if(globalThis.AtlasMuseumCuration3380){
    const el=e.target,g=el?.dataset?.mec01CabQuery;if(!g||!CAT.cabinets.includes(g))return;
    Object.assign(cabUI(g),{q:el.value.slice(0,60),page:0});renderPanel();refocus('[data-mec01-cab-query="'+g.replace(/"/g,'\\"')+'"]',cabUI(g).q);
   });
+ }
+}
+// MEC-02 (V5.6.2 Beta) · Campamento evolutivo: cinco instalaciones con cinco niveles cada una.
+// La configuración (costos, requisitos, efectos, referencias artísticas) vive solo en
+// www/js/mec02-camp.js. Aquí se conectan sus efectos a los motores existentes, que no
+// se duplican: expediciones, comercio, Taller, excavaciones y prospecciones del Museo.
+// Ver docs/mec02/README.md.
+{
+ const C=globalThis.AtlasCampMEC02,CUI=globalThis.AtlasCampMEC02UI;
+ if(C){
+  const fx=id=>C.effects(state,id);
+  const normalizeBefore602=normalizeMEC01;
+  normalizeMEC01=function(s){const r=normalizeBefore602(s);if(s&&typeof s==='object')C.normalize(s);return r;};
+  C.normalize(state);
+
+  // Astillero · capacidad, preparación (duración) y modalidad ampliada.
+  const maxVoyagesBefore602=maxVoyages;
+  maxVoyages=function(){return maxVoyagesBefore602()+(fx('shipyard').capacityBonus||0);};
+  const voyageDurationBefore602=voyageDuration;
+  voyageDuration=function(seconds){const base=voyageDurationBefore602(seconds),f=fx('shipyard').durationFactor||1;return f===1?base:Math.max(30,Math.round(base*f));};
+  const sailModality602=(id,modality)=>{
+   const v=VOYAGES.find(x=>x.id===id),m=C.VOYAGE_MODALITIES[modality];
+   if(!v||!m||!(fx('shipyard').modalities||[]).includes(modality))return false;
+   if(modality==='normal')return !!sail(id);
+   const extraMoney=Math.round(v.cost*(m.costFactor-1)),extraKnowledge=Math.round(v.knowledge*(m.costFactor-1));
+   if(state.money<v.cost+extraMoney||state.knowledge<v.knowledge+extraKnowledge||!voyageRoute3280(v).ready)return false;
+   if(!window.confirm(m.label+' · '+v.name+'\nCosto: £'+(v.cost+extraMoney)+' y '+(v.knowledge+extraKnowledge)+' conocimiento.\nDuración ×'+m.durationFactor+' · '+m.extraLootRolls+' tirada adicional de hallazgos (provisional).\n¿Confirmar salida?'))return false;
+   const n=state.voyages.length;
+   if(!sail(id)||state.voyages.length<=n)return false;
+   const job=state.voyages[state.voyages.length-1];
+   return tradeTransaction3300(()=>{
+    const start=Number.isFinite(job.startedAt)?job.startedAt:Date.now(),span=job.endAt-start;
+    state.money-=extraMoney;state.knowledge-=extraKnowledge;
+    job.modality=modality;job.endAt=start+Math.round(span*m.durationFactor);
+    return true;
+   });
+  };
+  const resolveVoyageBefore602=resolveVoyageReward;
+  resolveVoyageReward=function(job,...rest){
+   const ok=resolveVoyageBefore602(job,...rest);
+   // resolveVoyageReward ya impide liquidar dos veces el mismo viaje: el extra va dentro de esa única liquidación.
+   const m=ok&&C.VOYAGE_MODALITIES[job?.modality];
+   if(m&&m.extraLootRolls){const v=VOYAGES.find(x=>x.id===job.type);for(let i=0;i<m.extraLootRolls;i++){const loot=rollLoot(v);if(loot){addInventory(loot,1);pushLog('Expedición ampliada · hallazgo adicional: '+ITEMS[loot].name+'.');}}}
+   return ok;
+  };
+
+  // Caravana · rutas simultáneas y compra por lotes. Las condiciones de cada ruta no cambian.
+  const tradeCanBefore602=tradeCanStart3300;
+  tradeCanStart3300=function(route){
+   const jobs=state.commerce?.jobs;if(!Array.isArray(jobs))return tradeCanBefore602(route);
+   if(jobs.length>=(fx('caravan').routeCapacity||1))return false;
+   // Se reutiliza la comprobación original (prestigio, astillero, dinero, conocimiento) sin su tope fijo de 1.
+   state.commerce.jobs=[];try{return tradeCanBefore602(route);}finally{state.commerce.jobs=jobs;}
+  };
+  const marketLot602=(id,qty)=>{
+   const cost=Object.hasOwn(TRADE_MARKET,id)?TRADE_MARKET[id]:0;
+   if(!cost||qty<2||qty>(fx('caravan').marketLot||1)||!state.upgrades.shipyard||state.money<cost*qty)return 0;
+   if(!window.confirm('Compra por lotes · '+ITEMS[id].name+' ×'+qty+'\nCosto: £'+cost*qty+'. ¿Confirmar?'))return 0;
+   let n=0;for(let i=0;i<qty;i++){if(!buyTrade3300(id))break;n++;}
+   if(n)pushLog('Caravana · compra por lotes: '+ITEMS[id].name+' ×'+n+'.');
+   renderCounters();renderPanel();return n;
+  };
+
+  // Taller · niveles de receta (preparados), lotes, subcomponentes y estudios en lote.
+  const canCraftBefore602=canCraft;
+  canCraft=function(id){const need=Math.max(1,Math.floor(Number(RECIPES[id]?.minWorkshop)||1));return need<=C.level(state,'workshop')&&canCraftBefore602(id);};
+  studyBatchesMEC02=()=>[...(fx('workshop').studyBatches||[1,5])];
+  const canProcessBefore602=canProcessMaterials;
+  canProcessMaterials=function(id,repeat=1){
+   if([1,5].includes(repeat))return canProcessBefore602(id,repeat);
+   const project=V316_MATERIAL_STUDIES[id];
+   if(!project||!(fx('workshop').studyBatches||[]).includes(repeat))return false;
+   return Object.entries(project.requires).every(([item,qty])=>(state.inventory[item]||0)>=qty*repeat);
+  };
+  const recipeClass602=id=>{
+   const r=RECIPES[id],it=ITEMS[id];if(!r||!it)return null;
+   const inputs=Object.keys(r.requires),crafted=inputs.some(x=>RECIPES[x]);
+   const usedBy=Object.values(RECIPES).some(o=>o.requires[id])||MUSEUM_COLLECTIONS.some(p=>p.requires?.[id]);
+   const category=it.slot?'equipamiento':it.kind==='artifact_material'?'material-artefacto':/_map$|^oceanic_quadrant$/.test(id)?'cartografia':usedBy?'componente':'otros';
+   const complexity=crafted?'avanzada':inputs.length>=3?'intermedia':'simple';
+   return {id,category,complexity,minWorkshop:Math.max(1,Math.floor(Number(r.minWorkshop)||1)),inputs:inputs.length};
+  };
+  const craftBatch602=(id,qty)=>{
+   if(qty<2||!(fx('workshop').craftBatches||[]).includes(qty)||!canCraft(id))return 0;
+   if(!window.confirm('Fabricación múltiple · '+ITEMS[id].name+' ×'+qty+'\nSe consumen los materiales de cada unidad. ¿Confirmar?'))return 0;
+   let n=0;for(let i=0;i<qty;i++){if(!canCraft(id)||!craftItem(id))break;n++;}
+   return n;
+  };
+  const craftTree602=id=>{
+   if(!fx('workshop').componentCrafting||!RECIPES[id]||canCraft(id))return false;
+   const plan=recipePlan3400(id);if(!plan||Object.keys(plan.missing).length)return false;
+   if(!window.confirm('Fabricar '+ITEMS[id].name+' con subcomponentes\nPrimero se fabrican: '+tradeMaterials3300(plan.components)+'. ¿Confirmar?'))return false;
+   const make=(x,depth)=>{
+    if(depth>8||!RECIPES[x])return false;
+    for(const [mat,q] of Object.entries(RECIPES[x].requires)){
+     if(x==='world_map')continue;
+     let guard=0;while((state.inventory[mat]||0)<q){if(++guard>50||!make(mat,depth+1))return false;}
+    }
+    return !!craftItem(x);
+   };
+   return make(id,0);
+  };
+
+  // Excavaciones · capacidad, modalidades y recogida conjunta. Cada recompensa se liquida una vez.
+  const maxExcavationsBefore602=maxExcavations;
+  maxExcavations=function(){return maxExcavationsBefore602()+(fx('excavations').capacityBonus||0);};
+  const digMode602=(siteId,mode)=>{
+   const site=MUSEUM_DIG_SITES.find(x=>x.id===siteId),m=C.DIG_MODES[mode];
+   if(!site||!m||!(fx('excavations').modes||[]).includes(mode))return false;
+   if(mode==='normal')return startExcavation(siteId);
+   const extraMoney=Math.round(site.money*(m.costFactor-1)),extraKnowledge=Math.round(site.knowledge*(m.costFactor-1));
+   if(!canStartExcavation(siteId)||state.money<site.money+extraMoney||state.knowledge<site.knowledge+extraKnowledge)return false;
+   if(!window.confirm('Excavación '+m.label.toLowerCase()+' · '+site.name+'\nCosto: £'+(site.money+extraMoney)+' y '+(site.knowledge+extraKnowledge)+' conocimiento · duración ×'+m.durationFactor+' (provisional).\n¿Confirmar?'))return false;
+   const now=Date.now(),n=state.museum.excavations.length;
+   if(!startExcavation(siteId,now)||state.museum.excavations.length<=n)return false;
+   const job=state.museum.excavations[state.museum.excavations.length-1];
+   return museumJobTransaction(()=>{state.money-=extraMoney;state.knowledge-=extraKnowledge;job.mode=mode;job.endAt=now+Math.round(site.seconds*m.durationFactor*1000);});
+  };
+  const collectExcavationBefore602=collectExcavation;
+  collectExcavation=function(jobId,now=Date.now(),random=Math.random){
+   const job=(state.museum?.excavations||[]).find(j=>String(j.id)===String(jobId));
+   const mode=job?.mode,site=job&&MUSEUM_DIG_SITES.find(x=>x.id===job.site);
+   const ok=collectExcavationBefore602(jobId,now,random);
+   const extra=ok&&C.DIG_MODES[mode]?.extra,sid=job&&scientificVoyageId(job.id);
+   if(extra&&sid!==null&&!state.museum.excavationModeSettled?.[sid]){
+    museumJobTransaction(()=>{
+     (state.museum.excavationModeSettled??={})[sid]=true;
+     const found=[];
+     if(extra.fragments){addInventory('fossil_fragment',extra.fragments);found.push('fragmentos fósiles ×'+extra.fragments);}
+     for(let i=0;i<(extra.toothRolls||0);i++)if(random()<site.tooth){addInventory('fossil_tooth',1);found.push('diente fósil');}
+     for(const [item,q] of Object.entries(extra.guaranteed||{})){addInventory(item,q);found.push(ITEMS[item].name.toLowerCase()+' ×'+q);}
+     pushLog('Excavación '+C.DIG_MODES[mode].label.toLowerCase()+' · adicional: '+(found.join(', ')||'sin hallazgos extra')+'.');
+    });
+   }
+   return ok;
+  };
+
+  // Prospecciones · capacidad, indicio adicional, preparación y recogida conjunta.
+  // Ninguna mejora entrega un relicto: solo indicios, con el máximo original de 3.
+  const maxSurveysBefore602=maxRelictSurveys;
+  maxRelictSurveys=function(){return maxSurveysBefore602()+(fx('surveys').capacityBonus||0);};
+  const surveySpecBefore602=relictSurveySpec;
+  relictSurveySpec=function(id){const s=surveySpecBefore602(id),f=fx('surveys').durationFactor||1;return s&&f!==1?{...s,seconds:Math.max(30,Math.round(s.seconds*f))}:s;};
+  const collectSurveyBefore602=collectRelictSurvey;
+  collectRelictSurvey=function(jobId,now=Date.now(),random=Math.random){
+   const job=(state.museum?.relictSurveys||[]).find(j=>String(j.id)===String(jobId));
+   const ok=collectSurveyBefore602(jobId,now,random),extra=fx('surveys').extraLead||0,sid=job&&scientificVoyageId(job.id);
+   if(ok&&extra&&sid!==null&&!state.museum.relictSurveyBonusSettled?.[sid]){
+    museumJobTransaction(()=>{
+     (state.museum.relictSurveyBonusSettled??={})[sid]=true;
+     const before=relictLeadCount(job.relict);addRelictLead(job.relict,extra);
+     const got=relictLeadCount(job.relict)-before;
+     pushLog('Estación topográfica · '+(got?'+'+got+' indicio adicional.':'el expediente ya tiene el máximo de indicios.'));
+    });
+   }
+   return ok;
+  };
+  const collectAll602=kind=>{
+   if(!fx(kind).collectAll)return 0;
+   const now=Date.now(),jobs=kind==='excavations'?state.museum.excavations:state.museum.relictSurveys;
+   const ready=jobs.filter(j=>Number.isFinite(j.endAt)&&j.endAt<=now).map(j=>j.id);
+   let n=0;for(const id of ready)if(kind==='excavations'?collectExcavation(id,now):collectRelictSurvey(id,now))n++;
+   return n;
+  };
+
+  // Modelo común de actividades (solo lectura; cada motor conserva sus reglas).
+  const activities602=id=>{
+   const now=Date.now(),count=(jobs,opts)=>{const out={running:0,finished:0,pending:0};for(const j of jobs){const s=C.activityState(j,now,opts);if(s==='en-ejecucion')out.running++;else if(s==='terminada')out.finished++;else if(s==='recompensa-pendiente'){out.finished++;out.pending++;}}return out;};
+   if(id==='shipyard')return {...count(state.voyages,{}),settled:Object.values(state.voyageSettled||{}).filter(Boolean).length};
+   if(id==='caravan')return {...count(state.commerce?.jobs||[],{}),settled:(state.commerce?.tradeReceipts||state.commerce?.history||[]).length};
+   if(id==='excavations')return {...count(state.museum.excavations,{manualCollect:true}),settled:Object.keys(state.museum.excavationSettled||{}).length};
+   if(id==='surveys')return {...count(state.museum.relictSurveys,{manualCollect:true}),settled:Object.keys(state.museum.relictSurveySettled||{}).length};
+   return null;
+  };
+  const capacity602=id=>id==='shipyard'?{used:state.voyages.length,total:maxVoyages(),unit:'expediciones'}:
+   id==='caravan'?{used:state.commerce?.jobs?.length||0,total:fx('caravan').routeCapacity||1,unit:'rutas'}:
+   id==='excavations'?{used:state.museum.excavations.length,total:maxExcavations(),unit:'excavaciones'}:
+   id==='surveys'?{used:state.museum.relictSurveys.length,total:maxRelictSurveys(),unit:'prospecciones'}:null;
+  const operational602=id=>{const f=C.facility(id);if(f.unlock&&!state.upgrades[f.unlock.flag])return 'Sin habilitar: '+f.unlock.label;const c=capacity602(id);return c&&c.used>=c.total?'Operativa · capacidad completa':'Operativa';};
+
+  const upgrade602=id=>{
+   const r=C.check(state,id);if(!r.ok)return false;
+   if(!window.confirm('Mejorar '+C.facility(id).name+' a «'+r.next.name+'» ('+C.ROMAN[r.next.level]+'/V)\nCosto: £'+r.next.cost.money+' y '+r.next.cost.knowledge+' de conocimiento (valores provisionales).\nLa mejora es permanente. ¿Confirmar?'))return false;
+   return tradeTransaction3300(()=>{const u=C.upgrade(state,id);if(u.ok)pushLog('Campamento · '+C.facility(id).name+' mejorado a «'+u.stage.name+'» ('+C.ROMAN[u.level]+'/V).');return u.ok;})&&(renderCounters(),renderPanel(),true);
+  };
+
+  const controls602=id=>{
+   const lvl=C.level(state,id),out=[],b=(action,dataId,label,enabled=true)=>'<button type="button" class="btn alt" data-action="'+action+'" data-id="'+CUI.esc(dataId)+'"'+(enabled?'':' disabled')+'>'+CUI.esc(label)+'</button>';
+   if(id==='shipyard'&&(fx(id).modalities||[]).includes('ampliada')){
+    const routes=VOYAGES.filter(v=>voyageConditions3280(v).every(c=>c.met));
+    out.push('<details class="mec02-controls"><summary>Expedición ampliada</summary>'+(routes.map(v=>'<div class="mec02-row"><span>'+CUI.esc(v.name)+' · £'+v.cost*2+'</span>'+b('mec02-voyage',v.id+'|ampliada','Zarpar ampliada',voyageRoute3280(v).ready&&state.money>=v.cost*2&&state.knowledge>=v.knowledge*2)+'</div>').join('')||'<p class="small">No hay rutas habilitadas.</p>')+'</details>');
+   }
+   if(id==='caravan'&&(fx(id).marketLot||1)>1){
+    const lot=fx(id).marketLot;
+    out.push('<details class="mec02-controls"><summary>Compra por lotes ×'+lot+'</summary>'+Object.entries(TRADE_MARKET).map(([item,cost])=>'<div class="mec02-row"><span>'+CUI.esc(ITEMS[item].name)+' · £'+cost*lot+'</span>'+b('mec02-market',item+'|'+lot,'Comprar ×'+lot,!!state.upgrades.shipyard&&state.money>=cost*lot)+'</div>').join('')+'</details>');
+   }
+   if(id==='caravan'&&fx(id).collectibleExchange)out.push('<p class="small">Intercambio de coleccionables: conexión preparada, se activa en MEC-03.</p>');
+   if(id==='workshop'){
+    const classes=Object.keys(RECIPES).map(recipeClass602).filter(Boolean),by={};for(const c of classes)by[c.category]=(by[c.category]||0)+1;
+    out.push('<details class="mec02-controls"><summary>Recetas clasificadas · '+classes.length+'</summary><p class="small">'+Object.entries(by).map(([k,n])=>k.replace('-',' ')+': '+n).join(' · ')+'. Ninguna receta histórica exige nivel de Taller.</p></details>');
+    const batches=(fx(id).craftBatches||[]).filter(n=>n>1);
+    if(batches.length){const ready=Object.keys(RECIPES).filter(r=>canCraft(r)&&ITEMS[r]);out.push('<details class="mec02-controls"><summary>Fabricación múltiple</summary>'+(ready.map(r=>'<div class="mec02-row"><span>'+CUI.esc(ITEMS[r].name)+'</span>'+batches.map(n=>b('mec02-craft',r+'|'+n,'×'+n)).join(' ')+'</div>').join('')||'<p class="small">No hay recetas listas para fabricar.</p>')+'</details>');}
+    if(fx(id).componentCrafting){const tree=Object.keys(RECIPES).filter(r=>ITEMS[r]&&!canCraft(r)&&Object.values(RECIPES[r].requires).length&&Object.keys(RECIPES[r].requires).some(x=>RECIPES[x])&&(()=>{const p=recipePlan3400(r);return p&&!Object.keys(p.missing).length;})());out.push('<details class="mec02-controls"><summary>Fabricar con subcomponentes</summary>'+(tree.map(r=>'<div class="mec02-row"><span>'+CUI.esc(ITEMS[r].name)+'</span>'+b('mec02-craft-tree',r,'Fabricar')+'</div>').join('')||'<p class="small">Ninguna receta necesita ahora fabricar componentes intermedios.</p>')+'</details>');}
+    if((fx(id).studyBatches||[]).length>2)out.push('<p class="small">Estudios de materiales en lote: ×'+fx(id).studyBatches.join(', ×')+' (en «Estudios de materiales repetidos»).</p>');
+   }
+   if(id==='excavations'){
+    const modes=(fx(id).modes||[]).filter(m=>m!=='normal');
+    if(modes.length)out.push('<details class="mec02-controls"><summary>Modalidades de excavación</summary>'+MUSEUM_DIG_SITES.filter(s=>state.regionUnlocked?.[s.region]&&(!s.reqResearch||state.purchases?.[s.reqResearch])).map(s=>'<div class="mec02-row"><span>'+CUI.esc(s.name)+'</span>'+modes.map(m=>{const d=C.DIG_MODES[m];return b('mec02-dig',s.id+'|'+m,d.label+' · £'+Math.round(s.money*d.costFactor),canStartExcavation(s.id)&&state.money>=Math.round(s.money*d.costFactor)&&state.knowledge>=Math.round(s.knowledge*d.costFactor));}).join(' ')+'</div>').join('')+'</details>');
+   }
+   if((id==='excavations'||id==='surveys')&&fx(id).collectAll){const a=activities602(id);out.push('<div class="mec02-row">'+b('mec02-collect-all',id,'Recoger todas las terminadas ('+a.pending+')',a.pending>0)+'</div>');}
+   if(id==='surveys'){const prepared=Object.values(C.SURVEY_TYPES).filter(t=>!t.active&&t.minLevel<=lvl);if(prepared.length)out.push('<p class="small">Tipos de prospección preparados (inactivos hasta '+prepared[0].future+'): '+prepared.map(t=>CUI.esc(t.label)).join(' · ')+'.</p>');}
+   return out.join('');
+  };
+  const cardModel602=id=>{
+   const f=C.facility(id),lvl=C.level(state,id),st=C.stageOf(id,lvl),chk=C.check(state,id),art=C.ART[id+'-'+lvl];
+   return {id,name:f.name,stageName:st.name,roman:C.ROMAN[lvl],status:operational602(id),artRef:art.key,
+    art:art.file?'<img src="'+art.file+'" alt="">':(globalThis.AtlasIcons530?.image?.(art.placeholder,96)||''),
+    functions:f.levels.slice(0,lvl).flatMap(l=>l.functions),capacity:capacity602(id),activities:activities602(id),controls:controls602(id),
+    next:chk.next?{name:chk.next.name,roman:C.ROMAN[chk.next.level],functions:[...chk.next.functions],cost:chk.next.cost,prestige:chk.next.requires.prestige,reasons:chk.reasons,ok:chk.ok}:null};
+  };
+  globalThis.AtlasCampMEC02Actions={upgrade:upgrade602,sail:sailModality602,market:marketLot602,craft:craftBatch602,craftTree:craftTree602,dig:digMode602,collectAll:collectAll602,activities:activities602,capacity:capacity602,card:cardModel602,recipeClass:recipeClass602};
+  mec02Action=function(act,id){
+   const [a,b]=String(id||'').split('|');
+   if(act==='mec02-upgrade')upgrade602(a);
+   else if(act==='mec02-voyage')sailModality602(a,b);
+   else if(act==='mec02-market')marketLot602(a,Number(b));
+   else if(act==='mec02-craft')craftBatch602(a,Number(b));
+   else if(act==='mec02-craft-tree')craftTree602(a);
+   else if(act==='mec02-dig')digMode602(a,b);
+   else if(act==='mec02-collect-all')collectAll602(a);
+   renderCounters();renderPanel();
+  };
+
+  // Campamento · nivel y estado en las seis zonas del fondo pintado; ficha al entrar.
+  if(campBridgeMEC02&&CUI){
+   const modelsBefore602=campBridgeMEC02.models();
+   campBridgeMEC02.setModels(function(){
+    const base=modelsBefore602();
+    for(const id of Object.keys(base)){
+     if(!C.facility(id))continue;
+     const a=activities602(id),parts=[C.ROMAN[C.level(state,id)]+'/V'];
+     if(a&&a.running)parts.push(a.running+' en curso');
+     if(a&&a.finished)parts.push(a.finished+(a.finished===1?' terminada':' terminadas'));
+     if(!a||(!a.running&&!a.finished))parts.push(base[id].label);
+     if(C.check(state,id).ok)parts.push('↑ mejora');
+     base[id]={...base[id],label:parts.join(' · ')};
+    }
+    return base;
+   });
+   const renderPanelBefore602=renderPanel;
+   renderPanel=function(...args){
+    const r=renderPanelBefore602.apply(this,args);
+    const id=campBridgeMEC02.facility();
+    if(id&&C.facility(id)){const head=panel.querySelector('.cp3430-section');const html=CUI.card(cardModel602(id));if(head)head.insertAdjacentHTML('afterend',html);else panel.insertAdjacentHTML('afterbegin',html);}
+    return r;
+   };
+  }
  }
 }
 render();

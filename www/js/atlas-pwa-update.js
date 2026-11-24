@@ -22,6 +22,9 @@
     return raw;
   }
 
+  let releaseChannel = 'estable';
+  const channelLabel = () => releaseChannel === 'beta' ? ' (canal beta)' : '';
+
   async function fetchVersion(base) {
     const endpoint = new URL('atlas-release.json', base);
     endpoint.searchParams.set('check', Date.now());
@@ -30,8 +33,11 @@
     try {
       const response = await fetch(endpoint, { cache: 'no-store', signal: abort.signal });
       if (!response.ok) throw Error('HTTP ' + response.status);
-      const { version } = await response.json();
+      const { version, channel } = await response.json();
       if (typeof version !== 'string' || !versionPattern.test(version)) throw Error('Versión inválida');
+      // MEC-02: el canal (beta o estable) se informa aparte; la versión sigue siendo numérica
+      // porque la caché offline y la comparación de versiones dependen de ese formato.
+      releaseChannel = channel === 'beta' ? 'beta' : 'estable';
       return version;
     } catch {
       throw Error('No se pudo consultar la versión publicada. Revisa la conexión y vuelve a intentar.');
@@ -141,7 +147,7 @@
           statusLink.textContent = newer ? 'Abrir el actualizador' : 'Preparar el juego sin conexión';
           manualStatus.textContent = newer ? 'Versión nueva disponible ' + available + '.' : 'Tienes la versión ' + installed + '.';
         }
-        noticeVersions.textContent = 'Instalada ' + installed + ' · Disponible ' + available;
+        noticeVersions.textContent = 'Instalada ' + installed + ' · Disponible ' + available + channelLabel();
         notice.hidden = !newer || (!manualCheck && dismissed === available);
       } catch {
         if (manualCheck) manualStatus.textContent = 'No se pudo comprobar la versión. Revisa la conexión.';
@@ -236,7 +242,7 @@
         release = await currentInstallation(serviceWorkers);
         installedLabel.textContent = release?.version || 'Sin versión offline detectada';
         version = await fetchVersion(base);
-        availableLabel.textContent = version;
+        availableLabel.textContent = version + channelLabel();
         if (release?.version && isNewer(release.version, version)) {
           announce('Este navegador tiene una versión más reciente que la publicada.');
           return;
