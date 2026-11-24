@@ -37,3 +37,16 @@ Propuesta: las piezas se guardan como colección privada en el Campamento y se e
 ## Marca beta
 
 Cada elemento lleva `beta: true` en los datos y debe mostrar una insignia "BETA" en pantalla.
+
+## Estado de integración
+
+| Paso | Estado |
+| --- | --- |
+| 1. Objetos nuevos en el inventario (470 piezas), imagen genérica "?" con cinta BETA y drops de prueba | **Integrado** en la rama `feat/v560-beta` (`www/js/beta-v560-data.js` y bloque "Beta 5.6.0" al final de `app.js`) |
+| 2. Materiales nuevos y recetas del Taller; los 15 artefactos nuevos en el Museo | Pendiente |
+| 3. Niveles de la Sociedad (20) | Pendiente |
+| 4. Museo: 5 niveles y gabinetes con exhibición de animales | Pendiente |
+| 5. Hito de velocidad del guepardo | Pendiente |
+| 6. Colecciones privadas en el Campamento | Pendiente |
+
+**Cómo se ve el paso 1:** los objetos beta solo aparecen en el inventario cuando el jugador los tiene. Las piezas y rarezas van en *Coleccionables* y los materiales en *Animales*. Todo objeto sin arte propio, beta o no, muestra una lámina genérica con un "?". Los drops exigen el Gabinete de especímenes, como los actuales. El número de versión no cambia hasta el lanzamiento.

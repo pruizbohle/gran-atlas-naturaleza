@@ -7338,7 +7338,7 @@ const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expe
 const inventoryUI3400={query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null,filtersOpen:false};
 let inventoryActionSeq3400=0;
 function isMap3400(id){return /_map(?:_piece)?$/.test(id)||id==='world_map';}
-function inventoryCategory3400(id){const i=ITEMS[id];return isMap3400(id)?'cartography':i.kind==='regional'?'regional':i.slot?'equip':i.kind==='animal'?'animal':i.kind==='fossil'||i.kind==='rare'?'fossil':'materials';}
+function inventoryCategory3400(id){const i=ITEMS[id];return i.beta&&i.kind==='beta'?'beta':isMap3400(id)?'cartography':i.kind==='regional'?'regional':i.slot?'equip':i.kind==='animal'?'animal':i.kind==='fossil'||i.kind==='rare'?'fossil':'materials';}
 function inventorySources3400(id){
  const sources=[];
  if(RECIPES[id])sources.push('Taller: '+Object.entries(RECIPES[id].requires).map(([k,n])=>ITEMS[k].name+' ×'+n).join(' · '));
@@ -7390,7 +7390,8 @@ function inventoryQuery3400(){
  const view=state.inventoryView,ui=inventoryUI3400;
  let ids=Object.keys(view==='taller'?RECIPES:ITEMS).filter(id=>{
   const cat=inventoryCategory3400(id),i=ITEMS[id];
-  if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil'].includes(cat))return false;
+  if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil','beta'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil','beta'].includes(cat))return false;
+  if(i.beta&&!(state.inventory[id]>0))return false;
   if(ui.query&&!ITEMS[id].name.toLocaleLowerCase('es').includes(ui.query.toLocaleLowerCase('es')))return false;
   if(ui.category!=='all'&&cat!==ui.category)return false;
   const owned=(state.inventory[id]||0)>0;
@@ -7418,7 +7419,7 @@ function inventoryDetail3400(id){
 function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${[1,5].map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
 renderObjects=function(){
  const q=inventoryQuery3400(),ui=inventoryUI3400,id=ITEMS[ui.selected]?ui.selected:q.shown[0];
- return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${uiIcon530(inventoryIcons530[key])} ${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">${globalThis.AtlasIcons530?.glyph('search')||''} Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query).replace(/"/g,'&quot;')}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>${globalThis.AtlasIcons530?.glyph('filter')||''} Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
+ return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${uiIcon530(inventoryIcons530[key])} ${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">${globalThis.AtlasIcons530?.glyph('search')||''} Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query).replace(/"/g,'&quot;')}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>${globalThis.AtlasIcons530?.glyph('filter')||''} Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['beta','Colección BETA'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
 };
 craftItem=function(id){
  if(!ITEMS[id]||!canCraft(id))return false;
@@ -7796,6 +7797,53 @@ if(globalThis.AtlasMuseumCuration3380){
  museumSampleQuery3270=function(){const q=originalSampleQuery3380();if(!curationSampleProject3380)return q;const pool=new Set(globalThis.AtlasMuseumCuration3380.index(curationContext3380()).get(curationSampleProject3380)||[]),ids=q.ids.filter(id=>pool.has(id)),pages=Math.max(1,Math.ceil(ids.length/32));museumUI3270.samplePage=Math.max(0,Math.min(museumUI3270.samplePage,pages-1));return {...q,ids,total:ids.length,pages,page:museumUI3270.samplePage,emptyMessage:'No hay muestras de este proyecto que cumplan el filtro actual. Requieren estudio5/5 y publicación, o una exposición histórica conservada.'};};
  const mark3380=fn=>function(...args){curationDirty3380=true;return fn.apply(this,args);};
  removeExhibit=mark3380(removeExhibit);toggleMuseumDisplay=mark3380(toggleMuseumDisplay);researchRelict=mark3380(researchRelict);
+}
+// Beta 5.6.0 · objetos nuevos, drops de prueba e imagen genérica. Todo lo nuevo lleva la marca BETA.
+{
+ const B=globalThis.AtlasBeta560;
+ if(B){
+  const betaKind=[ 'beta','animal','beta' ];
+  for(const [id,name,tipo,gab,col] of B.items){
+   if(ITEMS[id])continue;
+   ITEMS[id]={name,emoji:'?',slot:null,bonus:'BETA · '+B.tipos[tipo]+' · '+col,kind:betaKind[tipo],beta:true,betaType:tipo,betaGabinete:gab};
+  }
+  const betaSpecies=new Map();
+  for(const [sid,list] of Object.entries(B.bySpecies))for(const i of list){const id=B.items[i][0];if(!betaSpecies.has(id))betaSpecies.set(id,[]);betaSpecies.get(id).push(sid);}
+  const dropBefore560=maybeSpeciesDrop;
+  maybeSpeciesDrop=function(id,manual){
+   const pool=B.bySpecies[id];
+   if(!pool||!pool.length)return dropBefore560(id,manual);
+   if(!state.upgrades.specimenDrops)return null;
+   if(Math.random()>=(manual?0.02:0.005))return null;
+   const weights=pool.map(i=>B.pesos[B.items[i][5]]);
+   let roll=Math.random()*weights.reduce((a,b)=>a+b,0),pick=pool[pool.length-1];
+   for(let k=0;k<pool.length;k++){roll-=weights[k];if(roll<=0){pick=pool[k];break;}}
+   const item=B.items[pick][0];
+   addInventory(item,1);
+   return item;
+  };
+  const sourcesBefore560=inventorySources3400;
+  inventorySources3400=function(id){
+   const list=sourcesBefore560(id),sp=betaSpecies.get(id);
+   if(sp&&ITEMS[id]?.beta)list.push('BETA · Drop de prueba: cae de '+sp.length+' especies'+(sp.length<=6?' ('+sp.map(s=>SPECIES[s]?.name||s).join(', ')+')':'')+'. Requiere el Gabinete de especímenes.');
+   return list;
+  };
+ }
+ // Imagen genérica: todo objeto sin arte propio muestra una lámina con "?".
+ const artBefore560=renderItemArt;
+ const genericArt560=id=>{
+  const it=ITEMS[id]||{},t=it.betaType,fill=t===1?'#a9855a':t===2?'#b7a2c2':'#e8d8ae';
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false" data-item-art="generic">'+
+   '<rect x="14" y="10" width="72" height="80" rx="6" fill="'+fill+'" stroke="#604a35" stroke-width="2.5"/>'+
+   '<rect x="21" y="17" width="58" height="66" rx="3" fill="none" stroke="#604a35" stroke-width="1" stroke-dasharray="3 3"/>'+
+   '<text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="44" font-weight="700" fill="#604a35">?</text>'+
+   (it.beta?'<rect x="26" y="70" width="48" height="13" rx="2" fill="#7b4332"/><text x="50" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#f4e7c5">BETA</text>':'')+
+   '</svg>';
+ };
+ renderItemArt=function(id){
+  const art=artBefore560(id);
+  return !art||/^<svg[^>]*><\/svg>$/.test(art)?genericArt560(id):art;
+ };
 }
 render();
 })();
