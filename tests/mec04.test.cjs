@@ -255,7 +255,8 @@ test('MEC-04 · 20. MEC-01, MEC-02 y MEC-03 se conservan; versión y verificaci�
  assert.ok(g.state.moneyLedger&&g.state.collectionRegistry&&g.state.camp&&g.state.collectionPrefs);
  const plain=game({noCamp:true});for(const fn of ['maxVoyages','maxExcavations','maxRelictSurveys'])assert.equal(g[fn](),plain.g[fn](),fn);
  // Sin módulos MEC no hay contenido nuevo (las pruebas históricas no cambian).
- assert.equal(plain.g.VOYAGES.length,8,'sin módulos MEC no se añaden destinos');assert.equal(g.VOYAGES.length,13);assert.equal(g.MUSEUM_DIG_SITES.length,7);
+ assert.equal(plain.g.VOYAGES.length,8,'sin módulos MEC no se añaden destinos');// MEC-09B añade 6 destinos y 3 yacimientos de cobertura geográfica (marcados mec09b); los de MEC-04 siguen siendo 13 y 7.
+ assert.equal(g.VOYAGES.filter(v=>!v.mec09b).length,13);assert.equal(g.MUSEUM_DIG_SITES.filter(d=>!d.mec09b).length,7);assert.equal(g.VOYAGES.length,13+6);assert.equal(g.MUSEUM_DIG_SITES.length,7+3);
  const legacy=make({now:T0,headless:true,noBeta:true});assert.equal(legacy.g.VOYAGES.length,8);assert.equal(legacy.g.MUSEUM_DIG_SITES.length,4);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
  // MEC-05: la versión se compara con package.json (antes, el literal 5.6.4 / MEC-04).

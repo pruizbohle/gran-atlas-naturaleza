@@ -1,0 +1,21 @@
+nivel;id;nombre;requisitos;desbloquea;recompensa;problemas;evidencia;estado;condiciones
+1;aficionado;Aficionado;"{""prestige"":0}";grant:apoyo;{};;D;Verificado;alcanzado por el controlador desde partida nueva
+2;corresponsal;Corresponsal;"{""prestige"":5,""species"":10}";;"{""money"":150,""knowledge"":60}";;D;Verificado;alcanzado por el controlador desde partida nueva
+3;aspirante;Aspirante;"{""prestige"":12,""research"":3,""income"":1000}";grant:campo;"{""money"":300,""knowledge"":120}";;D;Verificado;alcanzado por el controlador desde partida nueva
+4;ayudante;Ayudante de campo;"{""prestige"":25,""species"":40,""collectibles"":3}";commission:cancilleria;"{""money"":450,""knowledge"":180}";;D;Verificado;alcanzado por el controlador desde partida nueva
+5;observador;Observador;"{""prestige"":45,""monographs"":10,""regions"":5}";facility:L4;"{""money"":600,""knowledge"":240}";;D;Verificado;alcanzado por el controlador desde partida nueva
+6;colector;Colector;"{""prestige"":70,""collectibles"":15,""voyages"":3}";grant:expediciones facility:L4b commerce:subastas commission:geografica;"{""money"":800,""knowledge"":300}";;D;Verificado;alcanzado por el controlador desde partida nueva
+7;socio_auxiliar;Socio auxiliar;"{""prestige"":100,""species"":100,""research"":12,""income"":20000}";;"{""money"":1000,""knowledge"":400}";;D;Verificado;alcanzado por el controlador desde partida nueva
+8;socio_correspondiente;Socio correspondiente;"{""prestige"":135,""voyages"":10,""regions"":12}";commerce:especialistas commission:estudio;"{""money"":1300,""knowledge"":500}";;D;Verificado;alcanzado por el controlador desde partida nueva
+9;naturalista;Naturalista;"{""prestige"":175,""monographs"":60,""collectibles"":40}";facility:L5;"{""money"":1600,""knowledge"":650}";;D;Verificado;alcanzado por el controlador desde partida nueva
+10;socio_titular;Socio titular;"{""prestige"":215,""research"":20,""collections"":1,""income"":100000}";grant:proyectos facility:L5b;"{""money"":2000,""knowledge"":800}";;D;Verificado;alcanzado por el controlador desde partida nueva
+11;curador;Curador;"{""prestige"":255,""species"":250,""collectibles"":70}";museum:ampliaciones;"{""money"":2500,""knowledge"":1000}";;D;Verificado;alcanzado por el controlador desde partida nueva
+12;academico;Académico;"{""prestige"":295,""regions"":30,""voyages"":25}";commerce:extraordinarias commission:institucional;"{""money"":3000,""knowledge"":1200}";;D;Verificado;alcanzado por el controlador desde partida nueva
+13;explorador_mayor;Explorador mayor;"{""prestige"":335,""monographs"":150,""research"":28}";;"{""money"":3500,""knowledge"":1400}";;D;Verificado;alcanzado por el controlador desde partida nueva
+14;consejo;Miembro del Consejo;"{""prestige"":375,""collectibles"":110,""income"":500000}";grant:patrocinio museum:maravillas;"{""money"":4000,""knowledge"":1600}";;D;Verificado;alcanzado por el controlador desde partida nueva
+15;consejero_honorario;Consejero honorario;"{""prestige"":410,""species"":400,""collections"":3}";;"{""money"":4500,""knowledge"":1800}";;D;Verificado;alcanzado por el controlador desde partida nueva
+16;catedratico;Catedrático;"{""prestige"":440,""regions"":55,""voyages"":50}";;"{""money"":5000,""knowledge"":2000}";;D;Verificado;alcanzado por el controlador desde partida nueva
+17;director_seccion;Director de sección;"{""prestige"":465,""monographs"":250,""research"":36}";;"{""money"":5500,""knowledge"":2200}";;D;Verificado;alcanzado por el controlador desde partida nueva
+18;vicepresidente;Vicepresidente;"{""prestige"":480,""collectibles"":160,""income"":2000000}";;"{""money"":6000,""knowledge"":2400}";;D;Verificado;alcanzado por el controlador desde partida nueva
+19;presidente_honorario;Presidente honorario;"{""prestige"":485,""species"":500,""regions"":75}";;"{""money"":7000,""knowledge"":2800}";;D;Verificado;alcanzado por el controlador desde partida nueva
+20;gran_naturalista;Gran Naturalista;"{""prestige"":500,""monographs"":300,""collectibles"":200,""collections"":6}";;"{""money"":10000,""knowledge"":4000}";;D;Verificado;alcanzado por el controlador desde partida nueva

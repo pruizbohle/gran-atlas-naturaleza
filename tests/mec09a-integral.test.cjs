@@ -213,7 +213,7 @@ test('MEC-09A · I8 restaurar una partida con reservas inconsistentes no consume
 // ── §20 Versionado y canal beta ────────────────────────────────────────────────────────────
 test('MEC-09A · V versión de consolidación 5.6.9 Beta coherente y sin APK',()=>{
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json'),lock=require('../package-lock.json');
- assert.equal(pkg.version,'5.6.9');assert.equal(lock.version,'5.6.9');assert.equal(rel.version,'5.6.9');assert.equal(rel.build,'MEC-09A');assert.equal(rel.channel,'beta');assert.equal(rel.v569.apk,false);
+ assert.equal(pkg.version,'5.6.9');assert.equal(lock.version,'5.6.9');assert.equal(rel.version,'5.6.9');assert.match(rel.build,/^MEC-09[AB]$/);assert.equal(rel.channel,'beta');assert.equal(rel.v569.apk,false);
  const sw=fs.readFileSync('www/sw.js','utf8'),idx=fs.readFileSync('www/index.html','utf8');assert.match(sw,/version:'5\.6\.9'/);assert.match(idx,/content="5\.6\.9"/);
  assert.ok(!/\?v=5\.6\.8/.test(idx),'referencias de módulos actualizadas');assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '5.6.9'"));
  for(const t of ['tests/mec09a.test.cjs','tests/mec09a-integral.test.cjs','tests/mec09a-catalog.test.cjs'])assert.ok(pkg.scripts['release:verify'].includes(t),t);

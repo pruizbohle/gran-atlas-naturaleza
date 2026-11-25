@@ -1,0 +1,32 @@
+pieza;nombre;clase;motivo;hechos_y_decisiones;propuesta
+PIG-09;Azul maya;B;"El pigmento existía (Mesoamérica prehispánica); su identificación como pigmento es de 1931.";Hecho verificado: identificación 1931. Decisión creativa: encontrable antes.;—
+GEM-12;Ópalo negro;B;"Mineral existente; el yacimiento de Lightning Ridge se explotó hacia 1900.";Verificado (fecha aproximada del hallazgo comercial).;—
+AMB-08;Ámbar libanés;B;"Resina fósil cretácica existente; descripción científica del siglo XX.";Verificado.;—
+AMB-12;Ámbar azul dominicano;B;"Variedad existente; reconocida como tal en el siglo XX.";Verificado.;—
+NUM-05;Rupia de la India británica;C;"La rupia de la Compañía circulaba en 1842; el nombre «India británica» (Raj) es posterior a 1858.";Verificado (fechas del Raj). Denominación moderna permitida para identificar.;Propuesta opcional, no aplicada: renombrar a «Rupia de la Compañía de las Indias Orientales».
+CIV-06;Figurilla del valle del Indo;C;"El objeto existía enterrado; la civilización se identificó en la década de 1920. Denominación moderna.";Verificado. Licencia: hallazgo de un objeto antiguo sin atribución cultural en 1842.;—
+CIV-10;Textil nazca;C;"Objeto antiguo existente; cultura identificada en 1901. Denominación moderna.";Verificado.;—
+CIV-12;Placa del Reino de Benín;C;"Las placas existían en Benín; llegaron a Europa en 1897. Hallazgo in situ como licencia.";Verificado (1897).;—
+MAS-07;Figurilla olmeca;C;"Objeto existente; cultura identificada entre 1862 y 1920. Denominación moderna.";Verificado.;—
+MAS-09;Vasija retrato moche;C;"Objeto existente; denominación «moche» del siglo XX.";Verificado.;—
+HUE-11;Huevo de pingüino emperador;B;"Especie existente (descrita en 1844); huevo recolectado en 1902.";Verificado.;—
+HUE-12;Huevo de ave elefante;B;"Existían huevos subfósiles; llegaron a Europa hacia 1850.";Verificado.;—
+FOS-04;Trilobite marroquí;B;"Fósil existente; el comercio es del siglo XX.";Verificado.;—
+FOS-11;Pluma fósil de Solnhofen;B;"Fósil existente en la caliza; hallado en 1861.";Verificado.;—
+MARV-11;Vidrio del desierto libio;B;"Material natural existente; descrito en 1932.";Verificado.;—
+ROC-11;Hierro bandeado de Hamersley;B;"Roca existente; descrita después de 1861.";Verificado.;—
+BOT-13;Copihue;E (corregido);"Figuraba como «Mundial»; el catálogo vigente lo sitúa en Sudamérica · Chile.";Verificado en el catálogo actual.;Ya aplicado en MEC-03/MEC-04: procedencia concreta.
+BOT-14;Orquídea vainilla;E (corregido);"Figuraba como «Mundial»; el catálogo vigente: Norteamérica · México.";Verificado en el catálogo actual.;Ya aplicado.
+MAD-01;Caoba cubana (y las 12 maderas);E (corregido);"Figuraban como «Mundial»; ahora cada madera tiene continente y lugar concretos.";Verificado en el catálogo actual (MAD-01…MAD-12).;Ya aplicado.
+CIV-13;Tablilla sumeria;C;"Objeto existente; los sumerios se identificaron en 1869 (en 1842 ya se excavaba en Mesopotamia).";Verificado.;—
+CIV-17;Cerámica Jōmon;C;"Objeto existente; término de 1877. Japón cerrado hasta 1854: hallazgo por comercio como licencia.";Verificado.;—
+CIV-19;Disco misisipiano;C;"Objeto existente; denominación del siglo XX.";Verificado.;—
+CIV-20;Relieve jemer;C;"Objeto existente; Angkor se difundió en Europa desde 1860. Fragmento por comercio como licencia.";Verificado.;—
+DAG-01;Westminster (y los 20 daguerrotipos);E (corregido);"Figuraban como «Mundial»; ahora cada uno tiene lugar concreto. Westminster en 1842 es compatible (daguerrotipia desde 1839).";Verificado en el catálogo actual.;Ya aplicado.
+DAG-12;Taj Mahal;C;"Tecnología disponible y presencia británica en Agra; no se conoce un daguerrotipo de 1842 (las primeras fotografías conocidas son de la década de 1850).";Hecho: sin ejemplar conocido de 1842. Decisión creativa: posible.;—
+DAG-13;Gran Muralla;D;"China no permitía la entrada de fotógrafos occidentales al interior; primeras fotografías hacia 1870.";Verificado (acceso).;Propuesta, no aplicada: «Daguerrotipo de un grabado de la Gran Muralla» (copia fotográfica de una lámina) o reasignar a una vista de Cantón o Macao.
+DAG-14;Ciudad Prohibida;D;Pekín cerrado a occidentales hasta 1860.;Verificado.;Propuesta, no aplicada: daguerrotipo de un grabado o reasignación a Cantón (factorías).
+DAG-15;Monte Fuji;D;Japón cerrado a fotógrafos occidentales hasta 1854.;Verificado.;Propuesta, no aplicada: daguerrotipo de un grabado ukiyo-e del Fuji (Hokusai, 1830-1832), que sí circulaba vía Dejima.
+DAG-16;Angkor Wat;D;"Primeras fotografías en 1866 (Thomson); difusión europea desde 1860.";Verificado.;Propuesta, no aplicada: daguerrotipo de un dibujo o reasignación a otra vista del Sudeste asiático accesible en 1842.
+DAG-19;Cusco histórico;C;"Perú accesible en 1842; no se conoce un daguerrotipo de esa fecha, pero era técnicamente posible.";Hecho: sin ejemplar conocido. Decisión creativa: posible.;—
+DAG-20;Moáis de Rapa Nui;C;"La isla recibía buques en la década de 1840; un daguerrotipo era improbable pero técnicamente posible.";Hecho: sin ejemplar conocido. Decisión creativa.;—

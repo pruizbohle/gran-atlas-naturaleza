@@ -2,11 +2,29 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.9 Beta — MEC-09A** (revisión técnica de la versión de consolidación), canal beta (rama `mec-09a/technical-audit`, sobre MEC-08, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.9 Beta — MEC-09B** (auditoría funcional y de progresión de la versión de consolidación), canal beta (rama `mec-09b/functional-audit`, sobre MEC-09A, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.9 Beta — MEC-09A: auditoría técnica (en revisión)
+## V5.6.9 Beta — MEC-09B: auditoría funcional, accesibilidad y progresión (en revisión)
+
+Segunda etapa de consolidación. Comprueba que todo el contenido se puede usar y alcanzar con las reglas vigentes, y corrige solo bloqueos funcionales. No cambia el balance.
+
+- **Encargos y eventos:**
+  - lo realizado antes de aceptar un encargo no acredita objetivos incrementales;
+  - un evento caduca solo por el horizonte efectivo de la actividad, nunca por una actividad posterior procesada antes;
+  - aceptar vuelve a comprobar la viabilidad y, si falla, informa el motivo sin penalizar;
+  - las cantidades disponibles se calculan con el estado real, sin `Infinity`.
+- **Placas daguerrotípicas con procedencia:** lotes vírgenes, expuestos y revelados; consumo FIFO; la evidencia viene del destino de la expedición; cada placa da una sola imagen.
+- **Cobertura geográfica:** 6 expediciones y 3 yacimientos en regiones existentes de Asia, Sudamérica, Oceanía, Polos y Océanos, cada uno justificado por una carencia medida.
+- **Controlador de progresión desde partida nueva, sin ayudas:** alcanza las 1.000 especies publicadas, las 125 regiones, el rango 20 y el Campamento y el Museo completos.
+- **Matrices de accesibilidad:** cubren regiones, especies, monografías, legendarios, relictos, récords, piezas, colecciones, objetos, Taller, instalaciones, rangos, Museo, comercio, encargos y logros, con niveles de evidencia A–D.
+- **Revisión histórica:** las 31 observaciones de MEC-03 se clasifican de A a F.
+- **Fallos históricos:** se revisaron uno a uno los 42 casos de reglas genéricas.
+
+Informe completo: [docs/mec09b](docs/mec09b/README.md). No se generó APK. No se avanza a MEC-09C.
+
+## V5.6.9 Beta — MEC-09A: auditoría técnica (entregada)
 
 Es la primera etapa de consolidación: no añade mecánicas nuevas.
 

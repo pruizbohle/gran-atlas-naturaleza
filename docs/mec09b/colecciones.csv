@@ -1,0 +1,33 @@
+coleccion;gabinete;piezas;verificadas;condicionales;bloqueadas;requisitos_maximos;completable;antes_de_rango_10;estado;evidencia;controlador
+Herbario del mundo;Botánica;20;20;0;0;Astillero 1 Taller 2;sí;sí;Verificado;D;20/20 piezas obtenidas desde partida nueva
+Semillas extraordinarias;Botánica;12;12;0;0;Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Pigmentos del mundo;Botánica;12;10;2;0;Astillero 1 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;10/12 piezas obtenidas desde partida nueva
+Piedras preciosas;Geología;20;0;20;0;Caravana 2 Caravana 3 Caravana 4 Caravana 5 Prospecciones 2 Prospecciones 4;sí;revisar;Condicional;C;0/20 piezas obtenidas desde partida nueva
+Minerales extraordinarios;Geología;12;5;7;0;Prospecciones 2 Prospecciones 4 Taller 3;sí;sí;Condicional;C;5/12 piezas obtenidas desde partida nueva
+Ámbar y resinas fósiles;Geología;12;3;9;0;Prospecciones 2 Prospecciones 4;sí;sí;Condicional;C;3/12 piezas obtenidas desde partida nueva
+Meteoritos;Geología;12;4;8;0;Astillero 2 Prospecciones 2 Prospecciones 4;sí;sí;Condicional;C;4/12 piezas obtenidas desde partida nueva
+Los siete mares;Oceanografía;7;7;0;0;Astillero 1;sí;sí;Verificado;D;7/7 piezas obtenidas desde partida nueva
+Secretos de Atlántida;Oceanografía;5;0;5;0;Astillero 5;sí;revisar;Condicional;C;0/5 piezas obtenidas desde partida nueva
+Conchas de los océanos;Oceanografía;20;20;0;0;Astillero 3;sí;sí;Verificado;D;20/20 piezas obtenidas desde partida nueva
+Curiosidades de marineros;Oceanografía;12;12;0;0;Astillero 1 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Corales del mundo;Oceanografía;20;20;0;0;Astillero 3;sí;sí;Verificado;D;20/20 piezas obtenidas desde partida nueva
+Numismática;Historia;20;8;12;0;Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;8/20 piezas obtenidas desde partida nueva
+Objetos de civilizaciones;Historia;20;9;11;0;Astillero 4;sí;revisar;Condicional;C;9/20 piezas obtenidas desde partida nueva
+Armería histórica;Historia;12;4;8;0;Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;4/12 piezas obtenidas desde partida nueva
+Máscaras y figurillas;Historia;12;5;7;0;Astillero 4 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;5/12 piezas obtenidas desde partida nueva
+Cartografía antigua;Historia;12;11;1;0;Astillero 1 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;11/12 piezas obtenidas desde partida nueva
+Huevos de aves;Historia natural y exploración;20;19;1;0;Astillero 2 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;19/20 piezas obtenidas desde partida nueva
+Fósiles menores;Historia natural y exploración;12;3;9;0;Prospecciones 2 Prospecciones 4 Taller 3;sí;sí;Condicional;C;3/12 piezas obtenidas desde partida nueva
+Instrumentos de exploración;Historia natural y exploración;12;11;1;0;Astillero 1 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;11/12 piezas obtenidas desde partida nueva
+Gabinete de maravillas;Historia natural y exploración;12;3;9;0;Astillero 2 Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;3/12 piezas obtenidas desde partida nueva
+Hojas y frondas del mundo;Botánica;12;12;0;0;Prospecciones 1;sí;sí;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Rocas y formaciones geológicas;Geología;12;12;0;0;Prospecciones 2 Prospecciones 4;sí;sí;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Algas del mundo;Oceanografía;12;12;0;0;Astillero 3;sí;sí;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Medallas y condecoraciones históricas;Historia;12;0;12;0;Caravana 2 Caravana 3 Caravana 4 Caravana 5;sí;revisar;Condicional;C;0/12 piezas obtenidas desde partida nueva
+Arquitecturas animales;Historia natural y exploración;12;12;0;0;;sí;sí;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Maderas del mundo;Botánica;12;12;0;0;Caravana 2 Caravana 3 Caravana 4 Taller 2;sí;sí;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Pteridomanía;Botánica;12;12;0;0;Astillero 2;sí;sí;Verificado;D;12/12 piezas obtenidas desde partida nueva
+Metales raros;Geología;12;0;12;0;Caravana 2 Caravana 3 Caravana 4 Prospecciones 2;sí;sí;Condicional;C;0/12 piezas obtenidas desde partida nueva
+Siete maravillas antiguas;Historia;7;3;4;0;Astillero 4;sí;revisar;Condicional;C;3/7 piezas obtenidas desde partida nueva
+Imágenes daguerrotipadas;Historia natural y exploración;20;16;4;0;Astillero 1 Caravana 2 Caravana 3 Caravana 4 Caravana 5 Taller 4;sí;revisar;Condicional;C;16/20 piezas obtenidas desde partida nueva
+Rarezas y mitos;Historia natural y exploración;12;11;1;0;Astillero 5 Caravana 4;sí;revisar;Condicional;C;11/12 piezas obtenidas desde partida nueva

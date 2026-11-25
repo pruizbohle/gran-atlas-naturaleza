@@ -1,0 +1,9 @@
+continente;regiones;expediciones_antes;expediciones_despues;nuevas_expediciones;yacimientos_antes;yacimientos_despues;nuevos_yacimientos;regiones_por_expedicion_antes;regiones_por_expedicion_despues;carencia
+Europa;10;6;6;;2;2;;1.7;1.7;—
+Asia;23;2;5;himalaya_survey malay_survey indian_ocean_survey;1;2;siwalik_beds;11.5;4.6;"Asia: 23 regiones y solo 2 destinos de expedición (asia_survey, Anatolia-Cáucaso, y pacific_survey, marítimo); sin destino en el Himalaya | Asia insular (Sonda, Wallacea) y mar tropical asiático sin destino propio | Asia: un solo yacimiento (anatolia_strata) para 23 regiones"
+África;25;3;4;indian_ocean_survey;1;1;;8.3;6.3;—
+Norteamérica;18;2;2;;1;1;;9;9;—
+Sudamérica;14;2;3;amazon_survey;1;2;punta_alta;7;4.7;"Sudamérica: 14 regiones con un solo destino terrestre (andes_survey); la cuenca amazónica sin destino | Sudamérica: un solo yacimiento (andes_strata); los fósiles de las Pampas son históricamente célebres"
+Oceanía;9;1;2;nz_survey;1;2;moa_deposits;9;4.5;"Oceanía: 9 regiones con un solo destino (pacific_survey); Oceanía templada sin destino propio | Oceanía: un solo yacimiento (australia_strata, interior australiano)"
+Polos;7;1;2;antarctic_survey;0;0;;7;3.5;"Polos: un solo destino (polar_survey) para 7 regiones polares; costa antártica sin destino propio"
+Océanos;19;3;6;malay_survey antarctic_survey indian_ocean_survey;0;0;;6.3;3.2;"Océanos: 19 regiones con 3 destinos (Atlántico, Pacífico y polar); el Índico sin destino"

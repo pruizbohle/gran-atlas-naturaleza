@@ -122,8 +122,8 @@ test('MEC-09A · A6.1 partidas avanzadas: no se ofrecen objetivos sin cantidad d
 test('MEC-09A · A6.2 la meta concreta se compara con la cantidad disponible, no solo con un mínimo',()=>{
  const h=game(),A=A8(h),g=h.g,s=g.state;
  const acc=g.REGIONS.filter(r=>g.regionAccessible(r));for(const r of acc.slice(1))s.regionsVisited[r.id]=true;// queda 1 sin visitar
- assert.equal(A.AVAIL.visitedAll(),acc.filter(r=>!s.regionsVisited[r.id]).length);
- assert.equal(A.objectiveFeasible({metric:'visitedAll',mode:'incremental'},2),A.AVAIL.visitedAll()>=2);
+ assert.equal(A.AVAIL.visitedAll().n,acc.filter(r=>!s.regionsVisited[r.id]).length);
+ assert.equal(A.objectiveFeasible({metric:'visitedAll',mode:'incremental'},2),A.AVAIL.visitedAll().n>=2);
  const t=X8(h).TEMPLATES.find(x=>x.id==='proy-continentes');assert.match(t.description,/continente o mar donde aún no/);
  for(const tp of X8(h).TEMPLATES)for(const o of tp.objectives)assert.ok(o.metric in A.metrics()||A.AVAIL[o.metric],tp.id+' '+o.metric);
 });

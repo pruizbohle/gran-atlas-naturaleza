@@ -354,7 +354,7 @@ test('MEC-05 · 23. MEC-01 a MEC-04 se conservan; versión y verificación',()=>
  const h=game(),g=h.g;
  deq(h.A.drops.channels()[0].rates.campo,{manual:0.02,auto:0.005});
  assert.equal(Object.keys(K(h).pieces).length,431);assert.equal(h.A.catalog.collections.size,32);assert.equal(h.B.items.filter(r=>r[2]===1).length,27);
- assert.equal(S4(h).RANKS.length,20);assert.equal(g.VOYAGES.length,13);
+ assert.equal(S4(h).RANKS.length,20);assert.equal(g.VOYAGES.filter(v=>!v.mec09b).length,13);assert.equal(g.VOYAGES.length,13+6);
  assert.ok(g.state.moneyLedger&&g.state.collectionRegistry&&g.state.camp&&g.state.collectionPrefs&&g.state.society);
  // Sin módulos MEC: el Museo histórico no cambia (sin rango para ampliar).
  const plain=make({now:T0,headless:true,noCamp:true});assert.equal(plain.x.AtlasMEC05Actions,undefined);

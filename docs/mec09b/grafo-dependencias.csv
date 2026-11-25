@@ -1,0 +1,1231 @@
+id;type;name;requires;resources;sources;alternatives;unlocks;restrictions;reachable;evidence
+research:prismaticos_1;investigación;Prismáticos de latón;;"{""money"":25,""knowledge"":20}";;;;;true;B
+research:prismaticos_2;investigación;Lentes calibrados;research:prismaticos_1;"{""money"":50,""knowledge"":35}";;;;;true;B
+research:cuaderno_1;investigación;Cuaderno ilustrado;;"{""money"":20,""knowledge"":20}";;;;;true;B
+research:metodo_1;investigación;Método de rastreo I;;"{""money"":55,""knowledge"":40}";;;;;true;B
+research:metodo_2;investigación;Método de rastreo II;research:metodo_1;"{""money"":90,""knowledge"":70}";;;;;true;B
+research:metodo_3;investigación;Método de rastreo III;research:metodo_2;"{""money"":140,""knowledge"":120}";;;;;true;B
+research:metodo_4;investigación;Método de rastreo IV;research:metodo_3;"{""money"":220,""knowledge"":180}";;;;;true;B
+research:novato;investigación;Contratar ayudante novato;;"{""money"":45,""knowledge"":10}";;;;;true;B
+research:capacitacion_1;investigación;Capacitación profesional I;;"{""money"":65,""knowledge"":55}";;;;;true;B
+research:capacitacion_2;investigación;Capacitación profesional II;research:capacitacion_1;"{""money"":110,""knowledge"":90}";;;;;true;B
+research:astillero;investigación;Astillero básico;research:capacitacion_1;"{""money"":150,""knowledge"":90}";;;;;true;B
+research:sociedad_1;investigación;Gestión de subvenciones;research:cuaderno_1;"{""money"":130,""knowledge"":110}";;;;;true;B
+research:sociedad_2;investigación;Catálogo de notas;research:sociedad_1;"{""money"":220,""knowledge"":180}";;;;;true;B
+research:rutas_1;investigación;Cartografía naval I;research:astillero;"{""money"":180,""knowledge"":150}";;;;;true;B
+research:rutas_2;investigación;Cartografía naval II;research:rutas_1;"{""money"":320,""knowledge"":260}";;;;;true;B
+research:casco_1;investigación;Casco aligerado;research:astillero;"{""money"":200,""knowledge"":170}";;;;;true;B
+research:flota_1;investigación;Segundo destacamento;research:rutas_1;"{""money"":260,""knowledge"":220}";;;;;true;B
+research:gabinete_1;investigación;Gabinete de especímenes;research:sociedad_1;"{""money"":520,""knowledge"":460}";;;;;true;B
+research:asia_1;investigación;Cartografía de Asia;research:rutas_2 | item:asia_map;"{""money"":800,""knowledge"":650}";;;continent:Asia;;true;B
+research:fondos_x1;investigación;Fondos científicos I · ×1;;"{""money"":0,""knowledge"":0}";;;;;true;B
+research:fondos_x10;investigación;Fondos científicos II · ×10;research:fondos_x1;"{""money"":250,""knowledge"":150}";;;;;true;B
+research:fondos_x100;investigación;Fondos científicos III · ×100;research:fondos_x10;"{""money"":1200,""knowledge"":650}";;;;;true;B
+research:fondos_x1000;investigación;Fondos científicos IV · ×1000;research:fondos_x100;"{""money"":6000,""knowledge"":3000}";;;;;true;B
+research:africa_1;investigación;Estudios cartográficos de África;research:asia_1 | item:africa_map;"{""money"":1200,""knowledge"":900}";;;continent:África;;true;B
+research:nuevo_mundo_1;investigación;Navegación al Nuevo Mundo;research:africa_1 | item:oceanic_quadrant;"{""money"":2200,""knowledge"":1800}";;;;;true;B
+research:norteamerica_1;investigación;Cartografía de Norteamérica;research:nuevo_mundo_1 | item:north_america_map;"{""money"":2800,""knowledge"":2400}";;;continent:Norteamérica;;true;B
+research:sudamerica_1;investigación;Cartografía de Sudamérica;research:norteamerica_1;"{""money"":3400,""knowledge"":3000}";;;continent:Sudamérica;;true;B
+research:oceania_1;investigación;Cartografía de Oceanía;research:sudamerica_1;"{""money"":3800,""knowledge"":3400}";;;continent:Oceanía;;true;B
+research:grupos_1;investigación;Observación en grupo I;research:prismaticos_1;"{""money"":90,""knowledge"":70}";;;;;true;B
+research:grupos_2;investigación;Observación en grupo II;research:grupos_1;"{""money"":170,""knowledge"":125}";;;;;true;B
+research:grupos_3;investigación;Observación en grupo III;research:grupos_2;"{""money"":300,""knowledge"":240}";;;;;true;B
+research:censo_campo_1;investigación;Censo poblacional I;research:cuaderno_1;"{""money"":180,""knowledge"":130}";;;;;true;B
+research:censo_campo_2;investigación;Censo poblacional II;research:censo_campo_1;"{""money"":430,""knowledge"":340}";;;;;true;B
+research:grupos_auto_1;investigación;Patrullas de observación;research:grupos_3;"{""money"":640,""knowledge"":490}";;;;;true;B
+research:censo_auto_1;investigación;Censo automatizado;research:censo_campo_2;"{""money"":780,""knowledge"":590}";;;;;true;B
+research:masto_1;investigación;Mastozoología básica;research:cuaderno_1;"{""money"":85,""knowledge"":65}";;;;;true;B
+research:masto_2;investigación;Mastozoología media;research:masto_1;"{""money"":185,""knowledge"":155}";;;;;true;B
+research:ornito_1;investigación;Ornitología básica;research:cuaderno_1;"{""money"":85,""knowledge"":65}";;;;;true;B
+research:ornito_2;investigación;Ornitología media;research:ornito_1;"{""money"":185,""knowledge"":155}";;;;;true;B
+research:herpeto_1;investigación;Herpetología básica;research:cuaderno_1;"{""money"":85,""knowledge"":65}";;;;;true;B
+research:herpeto_2;investigación;Herpetología media;research:herpeto_1;"{""money"":185,""knowledge"":155}";;;;;true;B
+research:ictio_1;investigación;Ictiología básica;research:cuaderno_1;"{""money"":85,""knowledge"":65}";;;;;true;B
+research:ictio_2;investigación;Ictiología media;research:ictio_1;"{""money"":185,""knowledge"":155}";;;;;true;B
+research:etologia_1;investigación;Etología básica;research:cuaderno_1;"{""money"":100,""knowledge"":75}";;;;;true;B
+research:etologia_2;investigación;Etología media;research:etologia_1;"{""money"":235,""knowledge"":185}";;;;;true;B
+research:paleontologia_1;investigación;Paleontología básica;research:astillero;"{""money"":100,""knowledge"":70}";;;;;true;B
+research:paleontologia_2;investigación;Paleontología media;research:paleontologia_1;"{""money"":195,""knowledge"":145}";;;;;true;B
+research:paleontologia_3;investigación;Paleontología avanzada;research:paleontologia_2;"{""money"":370,""knowledge"":280}";;;;;true;B
+research:economia_museo_1;investigación;Economía científica del Museo;research:gabinete_1;"{""money"":260,""knowledge"":180}";;;;;true;B
+research:excavaciones_1;investigación;Excavaciones coordinadas;research:paleontologia_1;"{""money"":255,""knowledge"":205}";;;;;true;B
+research:preparacion_fosiles_1;investigación;Laboratorio de fósiles;research:excavaciones_1;"{""money"":430,""knowledge"":340}";;;;;true;B
+research:relictos_1;investigación;Archivos de historia natural;research:gabinete_1;"{""money"":340,""knowledge"":250}";;;;;true;B
+research:relictos_2;investigación;Rastreo de poblaciones singulares;research:relictos_1;"{""money"":550,""knowledge"":420}";;;;;true;B
+research:polos_1;investigación;Exploración de las regiones polares;research:oceania_1;"{""money"":4500,""knowledge"":4000}";;;continent:Polos;;true;B
+research:mares_superficiales_1;investigación;Navegación de mares superficiales;research:polos_1;"{""money"":5200,""knowledge"":4600}";;;continent:Océanos;;true;B
+research:exploracion_profunda_1;investigación;Sondeo y muestreo de océanos profundos;research:mares_superficiales_1;"{""money"":6000,""knowledge"":5200}";;;continent:Océanos profundos;;true;B
+research:exploracion_abisal_1;investigación;Sondeo extraordinario de fosas;research:exploracion_profunda_1;"{""money"":6800,""knowledge"":5800}";;;continent:Fosas abisales;;true;B
+continent:Europa;continente;;;"{""prestigeInitial"":0,""prestigeStep"":1}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Asia;continente;;research:asia_1;"{""prestigeInitial"":10,""prestigeStep"":2}";;;;prestigio acumulado por región (no se consume);true;B
+continent:África;continente;;research:africa_1 | item:brass_compass;"{""prestigeInitial"":53,""prestigeStep"":3}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Norteamérica;continente;;research:norteamerica_1 | item:brass_compass | item:oceanic_quadrant;"{""prestigeInitial"":125,""prestigeStep"":4}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Sudamérica;continente;;research:sudamerica_1 | item:brass_compass | item:oceanic_quadrant | item:field_telescope | item:south_america_map;"{""prestigeInitial"":182,""prestigeStep"":5}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Oceanía;continente;;research:oceania_1 | item:brass_compass | item:oceanic_quadrant | item:field_telescope | item:scholar_hat | item:oceania_map;"{""prestigeInitial"":233,""prestigeStep"":6}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Polos;continente;;research:polos_1 | item:brass_compass | item:oceanic_quadrant | item:field_telescope | item:scholar_hat | item:polar_coat | item:polar_map;"{""prestigeInitial"":282,""prestigeStep"":7}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Océanos;continente;;research:mares_superficiales_1 | item:brass_compass | item:oceanic_quadrant | item:field_telescope | item:scholar_hat | item:polar_coat | item:world_map;"{""prestigeInitial"":332,""prestigeStep"":8}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Océanos profundos;continente;;research:exploracion_profunda_1 | item:brass_compass | item:oceanic_quadrant | item:field_telescope | item:scholar_hat | item:polar_coat | item:sounding_kit | item:world_map;"{""prestigeInitial"":429,""prestigeStep"":9}";;;;prestigio acumulado por región (no se consume);true;B
+continent:Fosas abisales;continente;;research:exploracion_abisal_1 | item:brass_compass | item:oceanic_quadrant | item:field_telescope | item:scholar_hat | item:polar_coat | item:sounding_kit | item:world_map;"{""prestigeInitial"":475,""prestigeStep"":10}";;;;prestigio acumulado por región (no se consume);true;B
+region:HX-01-09;región;Islas Británicas;continent:Europa;"{""prestige"":0}";;;;;true;B
+region:HX-01-11;región;Escandinavia;continent:Europa;"{""prestige"":1}";;;;;true;B
+region:HX-02-09;región;Alpes;continent:Europa;"{""prestige"":2}";;;;;true;B
+region:HX-02-10;región;Europa Occidental;continent:Europa;"{""prestige"":3}";;;;;true;B
+region:HX-02-11;región;Europa Central;continent:Europa;"{""prestige"":4}";;;;;true;B
+region:HX-02-12;región;Península Ibérica;continent:Europa;"{""prestige"":5}";;;;;true;B
+region:HX-03-09;región;Europa Oriental;continent:Europa;"{""prestige"":6}";;;;;true;B
+region:HX-03-10;región;Península Itálica;continent:Europa;"{""prestige"":7}";;;;;true;B
+region:HX-03-11;región;Región del mar Báltico;continent:Europa;"{""prestige"":8}";;;;;true;B
+region:HX-03-12;región;Balcanes;continent:Europa;"{""prestige"":9}";;;;;true;B
+region:HX-03-13;región;Cáucaso;continent:Asia;"{""prestige"":10}";;;;;true;B
+region:HX-03-15;región;Anatolia;continent:Asia;"{""prestige"":12}";;;;;true;B
+region:HX-02-13;región;Siberia Occidental;continent:Asia;"{""prestige"":14}";;;;;true;B
+region:HX-03-14;región;Siberia Central;continent:Asia;"{""prestige"":16}";;;;;true;B
+region:HX-04-13;región;Mongolia;continent:Asia;"{""prestige"":18}";;;;;true;B
+region:HX-02-15;región;Montes Urales;continent:Asia;"{""prestige"":20}";;;;;true;B
+region:HX-03-16;región;Siberia Oriental;continent:Asia;"{""prestige"":22}";;;;;true;B
+region:HX-03-18;región;Kamchatka;continent:Asia;"{""prestige"":24}";;;;;true;B
+region:HX-04-14;región;Desierto de Gobi;continent:Asia;"{""prestige"":26}";;;;;true;B
+region:HX-04-15;región;Himalaya;continent:Asia;"{""prestige"":28}";;;;;true;B
+region:HX-03-17;región;Península Arábiga;continent:Asia;"{""prestige"":30}";;;;;true;B
+region:HX-04-12;región;Mesopotamia;continent:Asia;"{""prestige"":32}";;;;;true;B
+region:HX-04-16;región;Meseta de Irán;continent:Asia;"{""prestige"":34}";;;;;true;B
+region:HX-04-17;región;Meseta del Tíbet;continent:Asia;"{""prestige"":36}";;;;;true;B
+region:HX-04-18;región;Estepas de Asia Central;continent:Asia;"{""prestige"":38}";;;;;true;B
+region:HX-05-15;región;China Septentrional;continent:Asia;"{""prestige"":40}";;;;;true;B
+region:HX-05-16;región;Subcontinente Indio;continent:Asia;"{""prestige"":42}";;;;;true;B
+region:HX-05-17;región;China Meridional;continent:Asia;"{""prestige"":44}";;;;;true;B
+region:HX-06-16;región;Península de Corea;continent:Asia;"{""prestige"":46}";;;;;true;B
+region:HX-06-17;región;Sudeste Asiático;continent:Asia;"{""prestige"":48}";;;;;true;B
+region:HX-06-18;región;Archipiélago Japonés;continent:Asia;"{""prestige"":50}";;;;;true;B
+region:HX-06-09;región;Magreb;continent:África;"{""prestige"":53}";;;;;true;B
+region:HX-07-10;región;Sabana de África oriental;continent:África;"{""prestige"":56}";;;;;true;B
+region:HX-08-11;región;Cuenca del Congo;continent:África;"{""prestige"":59}";;;;;true;B
+region:HX-06-11;región;Valle del Nilo;continent:África;"{""prestige"":62}";;;;;true;B
+region:HX-07-08;región;Sahel occidental;continent:África;"{""prestige"":65}";;;;;true;B
+region:HX-08-08;región;Bosques guineanos occidentales;continent:África;"{""prestige"":68}";;;;;true;B
+region:HX-09-11;región;Grandes Lagos africanos;continent:África;"{""prestige"":71}";;;;;true;B
+region:HX-10-10;región;Kalahari y sabana austral;continent:África;"{""prestige"":74}";;;;;true;B
+region:HX-11-11;región;Costa del Cabo;continent:África;"{""prestige"":77}";;;;;true;B
+region:HX-09-14;región;Madagascar;continent:África;"{""prestige"":80}";;;;;true;B
+region:HX-07-12;región;Cuerno de África;continent:África;"{""prestige"":83}";;;;;true;B
+region:HX-10-09;región;Delta del Okavango;continent:África;"{""prestige"":86}";;;;;true;B
+region:HX-08-10;región;Bosques atlánticos ecuatoriales;continent:África;"{""prestige"":89}";;;;;true;B
+region:HX-07-13;región;Tierras altas de Etiopía;continent:África;"{""prestige"":92}";;;;;true;B
+region:HX-11-08;región;Desierto del Namib;continent:África;"{""prestige"":95}";;;;;true;B
+region:HX-06-08;región;Montañas del Atlas;continent:África;"{""prestige"":98}";;;;;true;B
+region:HX-09-09;región;Bosques de miombo;continent:África;"{""prestige"":101}";;;;;true;B
+region:HX-10-12;región;Litoral sudoriental africano;continent:África;"{""prestige"":104}";;;;;true;B
+region:HX-08-12;región;Lagos del Rift;continent:África;"{""prestige"":107}";;;;;true;B
+region:HX-07-14;región;Archipiélagos del Índico occidental;continent:África;"{""prestige"":110}";;;;;true;B
+region:HX-09-12;región;Humedales de Bangweulu;continent:África;"{""prestige"":113}";;;;;true;B
+region:HX-11-10;región;Sabanas del sudeste africano;continent:África;"{""prestige"":116}";;;;;true;B
+region:HX-06-07;región;Desierto del Sáhara;continent:África;"{""prestige"":119}";;;;;true;B
+region:HX-07-11;región;Sahel oriental;continent:África;"{""prestige"":122}";;;;;true;B
+region:HX-01-05;región;Alaska;continent:Norteamérica;"{""prestige"":125}";;;;;true;B
+region:HX-02-02;región;Columbia Británica;continent:Norteamérica;"{""prestige"":129}";;;;;true;B
+region:HX-02-03;región;Bosques boreales de Canadá;continent:Norteamérica;"{""prestige"":137}";;;;;true;B
+region:HX-02-04;región;Montañas Rocosas;continent:Norteamérica;"{""prestige"":141}";;;;;true;B
+region:HX-02-05;región;Grandes Llanuras;continent:Norteamérica;"{""prestige"":145}";;;;;true;B
+region:HX-02-06;región;Yukón;continent:Norteamérica;"{""prestige"":133}";;;;;true;B
+region:HX-03-02;región;Región de los Grandes Lagos;continent:Norteamérica;"{""prestige"":149}";;;;;true;B
+region:HX-03-03;región;Costa del Pacífico;continent:Norteamérica;"{""prestige"":157}";;;;;true;B
+region:HX-03-04;región;Bosques del este norteamericano;continent:Norteamérica;"{""prestige"":153}";;;;;true;B
+region:HX-03-05;región;Desierto de Sonora;continent:Norteamérica;"{""prestige"":161}";;;;;true;B
+region:HX-04-02;región;Sierra Madre;continent:Norteamérica;"{""prestige"":165}";;;;;true;B
+region:HX-04-03;región;Península de Yucatán;continent:Norteamérica;"{""prestige"":173}";;;;;true;B
+region:HX-04-04;región;Costa del golfo de México;continent:Norteamérica;"{""prestige"":169}";;;;;true;B
+region:HX-05-04;región;América Central;continent:Norteamérica;"{""prestige"":177}";;;;;true;B
+region:sa_caribe_sudamericano;región;Litoral caribeño sudamericano;continent:Sudamérica;"{""prestige"":182}";;;;;true;B
+region:sa_llanos_del_orinoco;región;Llanos del Orinoco;continent:Sudamérica;"{""prestige"":187}";;;;;true;B
+region:sa_andes_centrales;región;Andes Centrales;continent:Sudamérica;"{""prestige"":197}";;;;;true;B
+region:sa_andes_del_norte;región;Andes del Norte;continent:Sudamérica;"{""prestige"":192}";;;;;true;B
+region:sa_amazonia;región;Amazonía;continent:Sudamérica;"{""prestige"":202}";;;;;true;B
+region:sa_pantanal;región;Pantanal;continent:Sudamérica;"{""prestige"":207}";;;;;true;B
+region:sa_cerrado_brasileno;región;Cerrado brasileño;continent:Sudamérica;"{""prestige"":212}";;;;;true;B
+region:sa_pampas;región;Pampas;continent:Sudamérica;"{""prestige"":222}";;;;;true;B
+region:sa_desierto_de_atacama;región;Desierto de Atacama;continent:Sudamérica;"{""prestige"":217}";;;;;true;B
+region:sa_patagonia_y_tierra_del_fuego;región;Patagonia y Tierra del Fuego;continent:Sudamérica;"{""prestige"":227}";;;;;true;B
+region:oc_nueva_guinea;región;Nueva Guinea;continent:Oceanía;"{""prestige"":269}";;;;;true;B
+region:oc_costa_nordeste_australiana;región;Costa nordeste australiana;continent:Oceanía;"{""prestige"":239}";;;;;true;B
+region:oc_norte_tropical_australiano;región;Australia tropical septentrional;continent:Oceanía;"{""prestige"":233}";;;;;true;B
+region:oc_desierto_australiano;región;Interior árido australiano;continent:Oceanía;"{""prestige"":251}";;;;;true;B
+region:oc_tasmania;región;Tasmania;continent:Oceanía;"{""prestige"":263}";;;;;true;B
+region:oc_australia_occidental;región;Australia Occidental;continent:Oceanía;"{""prestige"":257}";;;;;true;B
+region:oc_australia_oriental;región;Australia Oriental;continent:Oceanía;"{""prestige"":245}";;;;;true;B
+region:oc_nueva_zelanda;región;Nueva Zelanda;continent:Oceanía;"{""prestige"":275}";;;;;true;B
+region:polar_hielo_artico_occidental;región;Hielo ártico occidental;continent:Polos;"{""prestige"":282}";;;;;true;B
+region:polar_hielo_artico_central;región;Hielo ártico central;continent:Polos;"{""prestige"":289}";;;;;true;B
+region:polar_hielo_artico_oriental;región;Hielo ártico oriental;continent:Polos;"{""prestige"":296}";;;;;true;B
+region:polar_hielo_antartico_occidental;región;Hielo antártico occidental;continent:Polos;"{""prestige"":303}";;;;;true;B
+region:polar_hielo_antartico_central;región;Hielo antártico central;continent:Polos;"{""prestige"":310}";;;;;true;B
+region:polar_hielo_antartico_costero;región;Hielo antártico costero;continent:Polos;"{""prestige"":317}";;;;;true;B
+region:polar_hielo_antartico_oriental;región;Hielo antártico oriental;continent:Polos;"{""prestige"":324}";;;;;true;B
+region:mar_atlantico_septentrional;región;Atlántico septentrional;continent:Océanos;"{""prestige"":332}";;;;;true;B
+region:mar_pacifico_noroccidental;región;Pacífico noroccidental;continent:Océanos;"{""prestige"":340}";;;;;true;B
+region:mar_pacifico_nororiental;región;Pacífico nororiental;continent:Océanos;"{""prestige"":348}";;;;;true;B
+region:mar_oceano_indico_tropical;región;Océano Índico tropical;continent:Océanos;"{""prestige"":356}";;;;;true;B
+region:mar_mar_tropical_asiatico;región;Mar tropical asiático;continent:Océanos;"{""prestige"":364}";;;;;true;B
+region:mar_indico_meridional;región;Índico meridional;continent:Océanos;"{""prestige"":372}";;;;;true;B
+region:mar_archipielagos_tropicales;región;Archipiélagos tropicales;continent:Océanos;"{""prestige"":380}";;;;;true;B
+region:mar_pacifico_austral;región;Pacífico austral;continent:Océanos;"{""prestige"":388}";;;;;true;B
+region:mar_atlantico_austral;región;Atlántico austral;continent:Océanos;"{""prestige"":396}";;;;;true;B
+region:mar_oceano_austral_occidental;región;Océano Austral occidental;continent:Océanos;"{""prestige"":404}";;;;;true;B
+region:mar_oceano_austral_central;región;Océano Austral central;continent:Océanos;"{""prestige"":412}";;;;;true;B
+region:mar_pacifico_suroccidental;región;Pacífico suroccidental;continent:Océanos;"{""prestige"":420}";;;;;true;B
+region:profundo_atlantico_profundo_norte;región;Atlántico profundo norte;continent:Océanos;"{""prestige"":429}";;;;;true;B
+region:profundo_pacifico_profundo_oriental;región;Pacífico profundo oriental;continent:Océanos;"{""prestige"":438}";;;;;true;B
+region:profundo_indico_profundo;región;Índico profundo;continent:Océanos;"{""prestige"":447}";;;;;true;B
+region:profundo_pacifico_profundo_suroccidental;región;Pacífico profundo suroccidental;continent:Océanos;"{""prestige"":456}";;;;;true;B
+region:profundo_oceano_austral_profundo;región;Océano Austral profundo;continent:Océanos;"{""prestige"":465}";;;;;true;B
+region:abisal_fosa_oceanica_occidental;región;Fosa oceánica occidental;continent:Océanos;"{""prestige"":475}";;;;;true;B
+region:abisal_fosa_oceanica_oriental;región;Fosa oceánica oriental;continent:Océanos;"{""prestige"":485}";;;;;true;B
+region:gm06_hudson;región;Bahía de Hudson;continent:Norteamérica;"{""prestige"":137}";;;;;true;B
+region:gm06_labrador;región;Labrador subártico;continent:Norteamérica;"{""prestige"":149}";;;;;true;B
+region:gm06_atlantico;región;Atlántico canadiense;continent:Norteamérica;"{""prestige"":153}";;;;;true;B
+region:gm06_antillas;región;Antillas y Caribe insular;continent:Norteamérica;"{""prestige"":177}";;;;;true;B
+region:gm06_darien;región;Darién y Chocó;continent:Sudamérica;"{""prestige"":182}";;;;;true;B
+region:gm06_galapagos;región;Islas Galápagos;continent:Sudamérica;"{""prestige"":197}";;;;;true;B
+region:gm06_humboldt;región;Litoral del Pacífico suroriental;continent:Sudamérica;"{""prestige"":197}";;;;;true;B
+region:gm06_bosques;región;Bosques templados del sur;continent:Sudamérica;"{""prestige"":227}";;;;;true;B
+region:gm06_rojo;región;Arco del mar Rojo;continent:África;"{""prestige"":83}";;;;;true;B
+region:gm06_sonda;región;Islas de la Sonda occidentales;continent:Asia;"{""prestige"":48}";;;;;true;B
+region:gm06_wallacea;región;Célebes y Molucas;continent:Asia;"{""prestige"":48}";;;;;true;B
+region:gm06_melanesia;región;Melanesia oriental;continent:Oceanía;"{""prestige"":269}";;;;;true;B
+item:binoculars;objeto;Prismáticos de viaje;;;receta ⟵ item:polished_lens+item:map_fragment;;;;true;B
+item:brass_compass;objeto;Brújula de latón;;;receta ⟵ item:ancient_coin+item:map_fragment;;;;true;B
+item:sturdy_pack;objeto;Morral reforzado;;;receta ⟵ item:animal_trace+item:beaver_tail_scale;;;;true;B
+item:field_hat;objeto;Sombrero de naturalista;;;receta ⟵ item:pressed_flower+item:parchment_scrap;;;;true;B
+item:feather_cap;objeto;Gorro emplumado;;;receta ⟵ item:owl_feather+item:pressed_flower;;;;true;B
+item:rain_hood;objeto;Capucha impermeable;;;receta ⟵ item:pressed_flower+item:animal_trace;;;;true;B
+item:amulet;objeto;Colgante del explorador;;;receta ⟵ item:ancient_coin+item:otter_whisker;;;;true;B
+item:amber_charm;objeto;Amuleto de ámbar;;;receta ⟵ item:pressed_flower+item:wolf_tooth;;;;true;B
+item:shell_necklace;objeto;Collar de conchas;;;receta ⟵ item:ancient_coin+item:fossil_fragment;;;;true;B
+item:fossil_fragment;objeto;Fragmento fósil;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición namib_survey (muestra) ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | excavación british_cliffs ⟵ dig:british_cliffs | excavación alpine_basin ⟵ dig:alpine_basin | excavación namib_rocks ⟵ dig:namib_rocks | excavación canadian_rocks ⟵ dig:canadian_rocks | excavación anatolia_strata ⟵ dig:anatolia_strata | excavación andes_strata ⟵ dig:andes_strata | excavación australia_strata ⟵ dig:australia_strata | excavación siwalik_beds ⟵ dig:siwalik_beds | excavación punta_alta ⟵ dig:punta_alta | excavación moa_deposits ⟵ dig:moa_deposits;;;;true;B
+item:fossil_skull;objeto;Cráneo fósil;;;excavación british_cliffs ⟵ dig:british_cliffs | excavación alpine_basin ⟵ dig:alpine_basin | excavación namib_rocks ⟵ dig:namib_rocks | excavación canadian_rocks ⟵ dig:canadian_rocks | excavación anatolia_strata ⟵ dig:anatolia_strata | excavación andes_strata ⟵ dig:andes_strata | excavación australia_strata ⟵ dig:australia_strata | excavación siwalik_beds ⟵ dig:siwalik_beds | excavación punta_alta ⟵ dig:punta_alta | excavación moa_deposits ⟵ dig:moa_deposits;;;;true;B
+item:fossil_tooth;objeto;Diente fósil;;;excavación british_cliffs ⟵ dig:british_cliffs | excavación alpine_basin ⟵ dig:alpine_basin | excavación namib_rocks ⟵ dig:namib_rocks | excavación canadian_rocks ⟵ dig:canadian_rocks | excavación anatolia_strata ⟵ dig:anatolia_strata | excavación andes_strata ⟵ dig:andes_strata | excavación australia_strata ⟵ dig:australia_strata | excavación siwalik_beds ⟵ dig:siwalik_beds | excavación punta_alta ⟵ dig:punta_alta | excavación moa_deposits ⟵ dig:moa_deposits;;;;true;B
+item:bone_short;objeto;Hueso corto;;;reconstrucción fósil ⟵ item:fossil_fragment;;;;true;B
+item:bone_long;objeto;Hueso largo;;;reconstrucción fósil ⟵ item:fossil_fragment;;;;true;B
+item:carnivore_skull;objeto;Cráneo carnívoro;;;reconstrucción fósil ⟵ item:fossil_skull+item:fossil_tooth;;;;true;B
+item:herbivore_skull;objeto;Cráneo herbívoro;;;reconstrucción fósil ⟵ item:fossil_skull+item:fossil_tooth;;;;true;B
+item:fossil_plate;objeto;Placa fósil dorsal;;;reconstrucción fósil ⟵ item:fossil_fragment;;;;true;B
+item:fossil_sail;objeto;Espina de vela fósil;;;reconstrucción fósil ⟵ item:fossil_fragment+item:fossil_tooth;;;;true;B
+item:animal_trace;objeto;Muestra de huellas;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición ethiopia_survey (muestra) ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | observación de lince_boreal ⟵ region:HX-01-11;region:HX-02-09 region:HX-02-11 region:HX-03-09 region:HX-03-11 region:HX-03-12 region:HX-03-13 region:HX-03-15 region:HX-02-13 region:HX-03-14 region:HX-02-15 region:HX-03-16;;;true;B
+item:pressed_flower;objeto;Flor prensada;;;expedición coast ⟵ voyage:coast | expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | ruta comercial coastal_trade ⟵ trade:coastal_trade;;;;true;B
+item:ancient_coin;objeto;Moneda antigua;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey;;;;true;B
+item:map_fragment;objeto;Fragmento de mapa;;;expedición coast ⟵ voyage:coast | expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey;;;;true;B
+item:asia_map_piece;objeto;Parte de mapa de Asia;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | estudio calculo-derrotas (alternativa cartográfica) ⟵ facility:workshop:4+continent:Asia:fuente;;;;true;B
+item:asia_map;objeto;Mapa de Asia;;;receta ⟵ item:asia_map_piece;;;;true;B
+item:africa_map_piece;objeto;Parte de mapa de África;;;expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | estudio calculo-derrotas (alternativa cartográfica) ⟵ facility:workshop:4+continent:África:fuente;;;;true;B
+item:africa_map;objeto;Mapa de África;;;receta ⟵ item:africa_map_piece;;;;true;B
+item:north_america_map_piece;objeto;Parte de mapa de Norteamérica;;;expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición atlantic_survey (muestra) ⟵ voyage:atlantic_survey | estudio calculo-derrotas (alternativa cartográfica) ⟵ facility:workshop:4+continent:Norteamérica:fuente;;;;true;B
+item:north_america_map;objeto;Mapa de Norteamérica;;;receta ⟵ item:north_america_map_piece;;;;true;B
+item:oceanic_quadrant;objeto;Cuadrante transatlántico;;;receta ⟵ item:brass_shard+item:polished_lens+item:map_fragment+item:parchment_scrap;;;;true;B
+item:parchment_scrap;objeto;Pergamino antiguo;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | trueque wood_paper ⟵ research:astillero+item:carved_wood | ruta comercial coastal_trade ⟵ trade:coastal_trade | ruta comercial archive_trade ⟵ trade:archive_trade;;;;true;B
+item:river_pebble;objeto;Piedra de río pulida;;;expedición coast ⟵ voyage:coast | expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | ruta comercial coastal_trade ⟵ trade:coastal_trade;;;;true;B
+item:heron_feather;objeto;Pluma de garza;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | observación de garza_real ⟵ region:HX-04-12;;;;true;B
+item:polished_lens;objeto;Lente pulida;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | trueque stone_lens ⟵ research:astillero+item:river_pebble | ruta comercial workshop_trade ⟵ trade:workshop_trade | ruta comercial archive_trade ⟵ trade:archive_trade | ruta comercial ocean_trade ⟵ trade:ocean_trade;;;;true;B
+item:brass_shard;objeto;Pieza de latón antiguo;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | trueque coin_brass ⟵ research:astillero+item:ancient_coin | ruta comercial workshop_trade ⟵ trade:workshop_trade | ruta comercial archive_trade ⟵ trade:archive_trade | ruta comercial ocean_trade ⟵ trade:ocean_trade;;;;true;B
+item:old_ink;objeto;Tintero antiguo;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | trueque flower_ink ⟵ research:astillero+item:pressed_flower | ruta comercial archive_trade ⟵ trade:archive_trade | ruta comercial ocean_trade ⟵ trade:ocean_trade;;;;true;B
+item:carved_wood;objeto;Madera tallada;;;expedición coast ⟵ voyage:coast | expedición north ⟵ voyage:north | expedición alps ⟵ voyage:alps | expedición carpathians ⟵ voyage:carpathians | expedición balkans ⟵ voyage:balkans | expedición ethiopia_survey ⟵ voyage:ethiopia_survey | expedición namib_survey ⟵ voyage:namib_survey | expedición atlantic_survey ⟵ voyage:atlantic_survey | expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | expedición asia_survey ⟵ voyage:asia_survey | expedición andes_survey ⟵ voyage:andes_survey | expedición pacific_survey ⟵ voyage:pacific_survey | expedición polar_survey ⟵ voyage:polar_survey | expedición himalaya_survey ⟵ voyage:himalaya_survey | expedición malay_survey ⟵ voyage:malay_survey | expedición amazon_survey ⟵ voyage:amazon_survey | expedición nz_survey ⟵ voyage:nz_survey | expedición antarctic_survey ⟵ voyage:antarctic_survey | expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey | mercado ⟵ research:astillero | ruta comercial workshop_trade ⟵ trade:workshop_trade | ruta comercial ocean_trade ⟵ trade:ocean_trade;;;;true;B
+item:wolf_tooth;objeto;Diente de lobo;;;observación de lobo_gris ⟵ region:HX-01-11;region:HX-02-11 region:HX-02-12 region:HX-03-09 region:HX-03-10 region:HX-03-11 region:HX-03-12 region:HX-03-13 region:HX-03-15 region:HX-02-13 region:HX-03-14 region:HX-04-13 region:HX-02-15 region:HX-03-16 region:HX-04-15 region:HX-03-17 region:HX-04-16 region:HX-04-18 region:HX-05-15 region:HX-01-05 region:HX-02-02 region:HX-02-03 region:HX-02-06 region:HX-04-02;;;true;B
+item:owl_feather;objeto;Pluma de rapaz;;;trueque trace_feather ⟵ research:astillero+item:animal_trace | observación de buho_real ⟵ region:HX-02-10 | observación de buho_comun ⟵ region:HX-01-09 | observación de aguila_real ⟵ region:HX-02-09 | observación de milano_real ⟵ region:HX-02-10;region:HX-02-12;;;true;B
+item:antler_fragment;objeto;Fragmento de cornamenta;;;observación de ciervo_rojo ⟵ region:HX-01-09 | observación de corzo_europeo ⟵ region:HX-01-09;region:HX-02-10 region:HX-02-11 region:HX-03-10 region:HX-03-11;;;true;B
+item:otter_whisker;objeto;Bigote de nutria;;;observación de nutria_europea ⟵ region:HX-01-09;region:HX-02-11 region:HX-03-11;;;true;B
+item:boar_tusk;objeto;Colmillo de jabalí;;;observación de jabali ⟵ region:HX-02-10;region:HX-02-11 region:HX-02-12 region:HX-03-09 region:HX-03-10 region:HX-03-12 region:HX-03-13 region:HX-03-15 region:HX-04-12 region:HX-05-15 region:HX-06-16 region:HX-06-09;;;true;B
+item:beaver_tail_scale;objeto;Escama de cola de castor;;;observación de castor_europeo ⟵ region:HX-02-11;region:HX-03-09 region:HX-03-11 region:HX-02-13;;;true;B
+item:field_telescope;objeto;Catalejo de precisión;;;receta ⟵ item:binoculars+item:polished_lens+item:brass_shard+item:parchment_scrap;;;;true;B
+item:scholar_hat;objeto;Sombrero académico;;;receta ⟵ item:field_hat+item:feather_cap+item:old_ink+item:pressed_flower;;;;true;B
+item:museum_medallion;objeto;Medallón de ámbar;;;receta ⟵ item:amulet+item:fossil_amber+item:river_pearl+item:brass_shard;;;;true;B
+item:fossil_amber;objeto;Ámbar fósil;;;hallazgo raro de expedición coast ⟵ voyage:coast | hallazgo raro de expedición north ⟵ voyage:north | hallazgo raro de expedición alps ⟵ voyage:alps | hallazgo raro de expedición carpathians ⟵ voyage:carpathians | hallazgo raro de expedición balkans ⟵ voyage:balkans | hallazgo raro de expedición ethiopia_survey ⟵ voyage:ethiopia_survey | hallazgo raro de expedición namib_survey ⟵ voyage:namib_survey | hallazgo raro de expedición atlantic_survey ⟵ voyage:atlantic_survey | hallazgo raro de expedición mesoamerica_survey ⟵ voyage:mesoamerica_survey | hallazgo raro de expedición asia_survey ⟵ voyage:asia_survey | hallazgo raro de expedición andes_survey ⟵ voyage:andes_survey | hallazgo raro de expedición pacific_survey ⟵ voyage:pacific_survey | hallazgo raro de expedición polar_survey ⟵ voyage:polar_survey | hallazgo raro de expedición himalaya_survey ⟵ voyage:himalaya_survey | hallazgo raro de expedición malay_survey ⟵ voyage:malay_survey | hallazgo raro de expedición amazon_survey ⟵ voyage:amazon_survey | hallazgo raro de expedición nz_survey ⟵ voyage:nz_survey | hallazgo raro de expedición antarctic_survey ⟵ voyage:antarctic_survey | hallazgo raro de expedición indian_ocean_survey ⟵ voyage:indian_ocean_survey;;;;true;B
+item:river_pearl;objeto;Perla fluvial;;;campo (río o costa) en HX-01-09 ⟵ region:HX-01-09 | campo (río o costa) en HX-01-11 ⟵ region:HX-01-11 | campo (río o costa) en HX-02-09 ⟵ region:HX-02-09 | campo (río o costa) en HX-02-10 ⟵ region:HX-02-10 | campo (río o costa) en HX-02-11 ⟵ region:HX-02-11 | campo (río o costa) en HX-02-12 ⟵ region:HX-02-12 | campo (río o costa) en HX-03-09 ⟵ region:HX-03-09 | campo (río o costa) en HX-03-10 ⟵ region:HX-03-10 | campo (río o costa) en HX-03-11 ⟵ region:HX-03-11 | campo (río o costa) en HX-03-12 ⟵ region:HX-03-12 | campo (río o costa) en HX-02-13 ⟵ region:HX-02-13 | campo (río o costa) en HX-03-14 ⟵ region:HX-03-14 | campo (río o costa) en HX-04-13 ⟵ region:HX-04-13 | campo (río o costa) en HX-02-15 ⟵ region:HX-02-15 | campo (río o costa) en HX-03-16 ⟵ region:HX-03-16 | campo (río o costa) en HX-03-18 ⟵ region:HX-03-18 | campo (río o costa) en HX-04-15 ⟵ region:HX-04-15 | campo (río o costa) en HX-04-12 ⟵ region:HX-04-12 | campo (río o costa) en HX-04-17 ⟵ region:HX-04-17 | campo (río o costa) en HX-04-18 ⟵ region:HX-04-18 | campo (río o costa) en HX-05-15 ⟵ region:HX-05-15 | campo (río o costa) en HX-05-16 ⟵ region:HX-05-16 | campo (río o costa) en HX-05-17 ⟵ region:HX-05-17 | campo (río o costa) en HX-06-16 ⟵ region:HX-06-16 | campo (río o costa) en HX-06-17 ⟵ region:HX-06-17 | campo (río o costa) en HX-06-18 ⟵ region:HX-06-18 | campo (río o costa) en HX-06-09 ⟵ region:HX-06-09 | campo (río o costa) en HX-07-10 ⟵ region:HX-07-10 | campo (río o costa) en HX-08-11 ⟵ region:HX-08-11 | campo (río o costa) en HX-06-11 ⟵ region:HX-06-11 | campo (río o costa) en HX-08-08 ⟵ region:HX-08-08 | campo (río o costa) en HX-11-11 ⟵ region:HX-11-11 | campo (río o costa) en HX-09-14 ⟵ region:HX-09-14 | campo (río o costa) en HX-10-09 ⟵ region:HX-10-09 | campo (río o costa) en HX-08-10 ⟵ region:HX-08-10 | campo (río o costa) en HX-07-13 ⟵ region:HX-07-13 | campo (río o costa) en HX-11-08 ⟵ region:HX-11-08 | campo (río o costa) en HX-10-12 ⟵ region:HX-10-12 | campo (río o costa) en HX-08-12 ⟵ region:HX-08-12 | campo (río o costa) en HX-07-14 ⟵ region:HX-07-14 | campo (río o costa) en HX-09-12 ⟵ region:HX-09-12 | campo (río o costa) en HX-11-10 ⟵ region:HX-11-10 | campo (río o costa) en HX-01-05 ⟵ region:HX-01-05 | campo (río o costa) en HX-02-02 ⟵ region:HX-02-02 | campo (río o costa) en HX-02-03 ⟵ region:HX-02-03 | campo (río o costa) en HX-02-04 ⟵ region:HX-02-04 | campo (río o costa) en HX-02-05 ⟵ region:HX-02-05 | campo (río o costa) en HX-02-06 ⟵ region:HX-02-06 | campo (río o costa) en HX-03-02 ⟵ region:HX-03-02 | campo (río o costa) en HX-03-03 ⟵ region:HX-03-03 | campo (río o costa) en HX-03-04 ⟵ region:HX-03-04 | campo (río o costa) en HX-03-05 ⟵ region:HX-03-05 | campo (río o costa) en HX-04-02 ⟵ region:HX-04-02 | campo (río o costa) en HX-04-03 ⟵ region:HX-04-03 | campo (río o costa) en HX-04-04 ⟵ region:HX-04-04 | campo (río o costa) en HX-05-04 ⟵ region:HX-05-04 | campo (río o costa) en sa_caribe_sudamericano ⟵ region:sa_caribe_sudamericano | campo (río o costa) en sa_llanos_del_orinoco ⟵ region:sa_llanos_del_orinoco | campo (río o costa) en sa_andes_del_norte ⟵ region:sa_andes_del_norte | campo (río o costa) en sa_amazonia ⟵ region:sa_amazonia | campo (río o costa) en sa_pantanal ⟵ region:sa_pantanal | campo (río o costa) en sa_cerrado_brasileno ⟵ region:sa_cerrado_brasileno | campo (río o costa) en sa_pampas ⟵ region:sa_pampas | campo (río o costa) en sa_desierto_de_atacama ⟵ region:sa_desierto_de_atacama | campo (río o costa) en sa_patagonia_y_tierra_del_fuego ⟵ region:sa_patagonia_y_tierra_del_fuego | campo (río o costa) en oc_nueva_guinea ⟵ region:oc_nueva_guinea | campo (río o costa) en oc_costa_nordeste_australiana ⟵ region:oc_costa_nordeste_australiana | campo (río o costa) en oc_norte_tropical_australiano ⟵ region:oc_norte_tropical_australiano | campo (río o costa) en oc_tasmania ⟵ region:oc_tasmania | campo (río o costa) en oc_australia_occidental ⟵ region:oc_australia_occidental | campo (río o costa) en oc_australia_oriental ⟵ region:oc_australia_oriental | campo (río o costa) en oc_nueva_zelanda ⟵ region:oc_nueva_zelanda | campo (río o costa) en gm06_hudson ⟵ region:gm06_hudson | campo (río o costa) en gm06_labrador ⟵ region:gm06_labrador | campo (río o costa) en gm06_atlantico ⟵ region:gm06_atlantico | campo (río o costa) en gm06_antillas ⟵ region:gm06_antillas | campo (río o costa) en gm06_darien ⟵ region:gm06_darien | campo (río o costa) en gm06_galapagos ⟵ region:gm06_galapagos | campo (río o costa) en gm06_humboldt ⟵ region:gm06_humboldt | campo (río o costa) en gm06_bosques ⟵ region:gm06_bosques | campo (río o costa) en gm06_rojo ⟵ region:gm06_rojo | campo (río o costa) en gm06_sonda ⟵ region:gm06_sonda | campo (río o costa) en gm06_wallacea ⟵ region:gm06_wallacea | campo (río o costa) en gm06_melanesia ⟵ region:gm06_melanesia;;;;true;B
+item:fossil_track;objeto;Huella fosilizada;;;excavación british_cliffs ⟵ dig:british_cliffs | excavación alpine_basin ⟵ dig:alpine_basin | excavación namib_rocks ⟵ dig:namib_rocks | excavación canadian_rocks ⟵ dig:canadian_rocks | excavación anatolia_strata ⟵ dig:anatolia_strata | excavación andes_strata ⟵ dig:andes_strata | excavación australia_strata ⟵ dig:australia_strata | excavación siwalik_beds ⟵ dig:siwalik_beds | excavación punta_alta ⟵ dig:punta_alta | excavación moa_deposits ⟵ dig:moa_deposits;;;;true;B
+item:fossil_claw;objeto;Garra fósil;;;excavación british_cliffs ⟵ dig:british_cliffs | excavación alpine_basin ⟵ dig:alpine_basin | excavación namib_rocks ⟵ dig:namib_rocks | excavación canadian_rocks ⟵ dig:canadian_rocks | excavación anatolia_strata ⟵ dig:anatolia_strata | excavación andes_strata ⟵ dig:andes_strata | excavación australia_strata ⟵ dig:australia_strata | excavación siwalik_beds ⟵ dig:siwalik_beds | excavación punta_alta ⟵ dig:punta_alta | excavación moa_deposits ⟵ dig:moa_deposits;;;;true;B
+item:fossil_rib;objeto;Costilla fósil;;;reconstrucción fósil ⟵ item:fossil_fragment;;;;true;B
+item:fossil_horn;objeto;Cuerno fósil;;;reconstrucción fósil ⟵ item:fossil_fragment+item:fossil_tooth;;;;true;B
+item:hard_bone;objeto;Hueso duro;;;reconstrucción fósil ⟵ item:fossil_fragment+item:river_pebble;;;;true;B
+item:polar_coat;objeto;Abrigo de expedición polar;;;receta ⟵ item:rain_hood+item:sturdy_pack+item:carved_wood+item:parchment_scrap;;;;true;B
+item:sounding_kit;objeto;Equipo de sondeo y muestreo;;;receta ⟵ item:brass_shard+item:carved_wood+item:parchment_scrap+item:sturdy_pack;;;;true;B
+item:south_america_map_piece;objeto;Parte de mapa de Sudamérica;;;capa cartográfica atlantic_survey ⟵ voyage:atlantic_survey+research:norteamerica_1 | estudio calculo-derrotas (alternativa cartográfica) ⟵ facility:workshop:4+continent:Sudamérica:fuente;;;;true;B
+item:south_america_map;objeto;Mapa de Sudamérica;;;receta ⟵ item:south_america_map_piece;;;;true;B
+item:oceania_map_piece;objeto;Parte de mapa de Oceanía;;;capa cartográfica atlantic_survey ⟵ voyage:atlantic_survey+research:sudamerica_1 | capa cartográfica north ⟵ voyage:north+research:sudamerica_1 | capa cartográfica alps ⟵ voyage:alps+research:sudamerica_1 | estudio calculo-derrotas (alternativa cartográfica) ⟵ facility:workshop:4+continent:Oceanía:fuente;;;;true;B
+item:oceania_map;objeto;Mapa de Oceanía;;;receta ⟵ item:oceania_map_piece;;;;true;B
+item:polar_map_piece;objeto;Parte de mapa de regiones polares;;;capa cartográfica north ⟵ voyage:north+research:oceania_1 | capa cartográfica alps ⟵ voyage:alps+research:oceania_1 | estudio calculo-derrotas (alternativa cartográfica) ⟵ facility:workshop:4+continent:Polos:fuente;;;;true;B
+item:polar_map;objeto;Mapa de regiones polares;;;receta ⟵ item:polar_map_piece;;;;true;B
+item:world_map;objeto;Mapamundi;;;receta ⟵ item:asia_map+item:africa_map+item:north_america_map+item:south_america_map+item:oceania_map+item:polar_map;;;;true;B
+item:asian_spices;objeto;Especias de gabinete oriental;;;trueque regional (Asia) ⟵ research:astillero+continent:Asia+item:pressed_flower;;;;true;B
+item:asian_trade_folio;objeto;Folio de comercio asiático;;;trueque regional (Asia) ⟵ research:astillero+continent:Asia+item:parchment_scrap;;;;true;B
+item:african_textile_sample;objeto;Muestra textil de gabinete africano;;;trueque regional (África) ⟵ research:astillero+continent:África+item:carved_wood;;;;true;B
+item:north_american_trade_document;objeto;Documento comercial norteamericano;;;trueque regional (Norteamérica) ⟵ research:astillero+continent:Norteamérica+item:parchment_scrap;;;;true;B
+item:south_american_cacao;objeto;Cacao de colección botánica;;;trueque regional (Sudamérica) ⟵ research:astillero+continent:Sudamérica+item:pressed_flower;;;;true;B
+item:oceanian_nacre;objeto;Nácar insular histórico;;;trueque regional (Oceanía) ⟵ research:astillero+continent:Oceanía+item:river_pebble;;;;true;B
+item:polar_geology_record;objeto;Registro geológico polar;;;trueque regional (Polos) ⟵ research:astillero+continent:Polos+item:carved_wood;;;;true;B
+item:BOT-01;objeto;Rosa silvestre;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-01;;;;true;B
+item:BOT-02;objeto;Brezo común;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-02;;;;true;B
+item:BOT-03;objeto;Amapola de California;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-03;;;;true;B
+item:BOT-04;objeto;Lupino andino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-04;;;;true;B
+item:BOT-05;objeto;Jacarandá;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-05;;;;true;B
+item:BOT-06;objeto;Protea real;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-06;;;;true;B
+item:BOT-07;objeto;Flor de baobab;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-07;;;;true;B
+item:BOT-08;objeto;Loto sagrado;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-08;;;;true;B
+item:BOT-09;objeto;Flor de cerezo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-09;;;;true;B
+item:BOT-10;objeto;Waratah;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-10;;;;true;B
+item:BOT-11;objeto;Edelweiss;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-11;;;;true;B
+item:BOT-12;objeto;Rafflesia gigante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-12;;;;true;B
+item:SEM-01;objeto;Bellota de roble;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-01;;;;true;B
+item:SEM-02;objeto;Piñón mediterráneo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-02;;;;true;B
+item:SEM-03;objeto;Haya europea;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-03;;;;true;B
+item:SEM-04;objeto;Semilla de saguaro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-04;;;;true;B
+item:SEM-05;objeto;Cacao criollo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-05;;;;true;B
+item:SEM-06;objeto;Vaina de flamboyán;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-06;;;;true;B
+item:SEM-07;objeto;Semilla de araucaria;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-07;;;;true;B
+item:SEM-08;objeto;Semilla de loto;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-08;;;;true;B
+item:SEM-09;objeto;Cápsula de eucalipto;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-09;;;;true;B
+item:SEM-10;objeto;Semilla de baobab;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-10;;;;true;B
+item:SEM-11;objeto;Sámara de arce japonés;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-11;;;;true;B
+item:SEM-12;objeto;Coco de mar;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:SEM-12;;;;true;B
+item:PIG-01;objeto;Carbón vegetal negro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-01;;;;true;B
+item:PIG-02;objeto;Ocre amarillo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-02;;;;true;B
+item:PIG-03;objeto;Ocre rojo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-03;;;;true;B
+item:PIG-04;objeto;Siena natural;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-04;;;;true;B
+item:PIG-05;objeto;Tierra verde;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-05;;;;true;B
+item:PIG-06;objeto;Achiote rojo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-06;;;;true;B
+item:PIG-07;objeto;Índigo natural;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-07;;;;true;B
+item:PIG-08;objeto;Cochinilla carmín;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-08;;;;true;B
+item:PIG-09;objeto;Azul maya;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-09;;;;true;B
+item:PIG-10;objeto;Malaquita molida;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-10;;;;true;B
+item:PIG-11;objeto;Ultramar de lapislázuli;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-11;;;;true;B
+item:PIG-12;objeto;Púrpura de Tiro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:PIG-12;;;;true;B
+item:GEM-01;objeto;Cuarzo rosa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-01;;;;true;B
+item:GEM-02;objeto;Granate almandino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-02;;;;true;B
+item:GEM-03;objeto;Amatista;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-03;;;;true;B
+item:GEM-04;objeto;Topacio imperial;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-04;;;;true;B
+item:GEM-05;objeto;Aguamarina;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-05;;;;true;B
+item:GEM-06;objeto;Turquesa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-06;;;;true;B
+item:GEM-07;objeto;Jade nefrita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-07;;;;true;B
+item:GEM-08;objeto;Peridoto;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-08;;;;true;B
+item:GEM-09;objeto;Esmeralda colombiana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-09;;;;true;B
+item:GEM-10;objeto;Zafiro de Ceilán;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-10;;;;true;B
+item:GEM-11;objeto;Rubí birmano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-11;;;;true;B
+item:GEM-12;objeto;Ópalo negro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-12;;;;true;B
+item:MIN-01;objeto;Cuarzo cristalino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-01;;;;true;B
+item:MIN-02;objeto;Calcita óptica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-02;;;;true;B
+item:MIN-03;objeto;Pirita cúbica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-03;;;;true;B
+item:MIN-04;objeto;Hematita especular;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-04;;;;true;B
+item:MIN-05;objeto;Fluorita violeta;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-05;;;;true;B
+item:MIN-06;objeto;Magnetita natural;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-06;;;;true;B
+item:MIN-07;objeto;Azurita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-07;;;;true;B
+item:MIN-08;objeto;Malaquita bandeada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-08;;;;true;B
+item:MIN-09;objeto;Obsidiana negra;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-09;;;;true;B
+item:MIN-10;objeto;Azufre cristalizado;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-10;;;;true;B
+item:MIN-11;objeto;Lapislázuli;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-11;;;;true;B
+item:MIN-12;objeto;Vivianita cristalizada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MIN-12;;;;true;B
+item:AMB-01;objeto;Resina de pino endurecida;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-01;;;;true;B
+item:AMB-02;objeto;Copal africano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-02;;;;true;B
+item:AMB-03;objeto;Copal colombiano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-03;;;;true;B
+item:AMB-04;objeto;Ámbar miel báltico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-04;;;;true;B
+item:AMB-05;objeto;Ámbar opaco báltico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-05;;;;true;B
+item:AMB-06;objeto;Ámbar de Chiapas;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-06;;;;true;B
+item:AMB-07;objeto;Ámbar de Kuji;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-07;;;;true;B
+item:AMB-08;objeto;Ámbar libanés;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-08;;;;true;B
+item:AMB-09;objeto;Ámbar dominicano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-09;;;;true;B
+item:AMB-10;objeto;Ámbar con hoja fósil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-10;;;;true;B
+item:AMB-11;objeto;Ámbar birmano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-11;;;;true;B
+item:AMB-12;objeto;Ámbar azul dominicano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:AMB-12;;;;true;B
+item:MET-13;objeto;Meteorito de L’Aigle;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-13;;;;true;B
+item:MET-02;objeto;Meteorito de Ensisheim;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-02;;;;true;B
+item:MET-14;objeto;Meteorito de Wold Cottage;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-14;;;;true;B
+item:MET-15;objeto;Meteorito de Benares;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-15;;;;true;B
+item:MET-16;objeto;Meteorito de Weston;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-16;;;;true;B
+item:MET-06;objeto;Meteorito de Gibeon;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-06;;;;true;B
+item:MET-07;objeto;Meteorito de Campo del Cielo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-07;;;;true;B
+item:MET-17;objeto;Meteorito de Chassigny;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-17;;;;true;B
+item:MET-09;objeto;Meteorito de Imilac;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-09;;;;true;B
+item:MET-18;objeto;Meteorito de Krasnojarsk;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-18;;;;true;B
+item:MET-19;objeto;Meteorito de Alais;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-19;;;;true;B
+item:MET-20;objeto;Meteorito de Stannern;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MET-20;;;;true;B
+item:MAR-01;objeto;Ficha portuaria del Atlántico Norte;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-01;;;;true;B
+item:MAR-02;objeto;Plomada de sonda del Atlántico Sur;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-02;;;;true;B
+item:MAR-03;objeto;Clavo de casco del Pacífico Norte;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-03;;;;true;B
+item:MAR-04;objeto;Fragmento de porcelana del Pacífico Sur;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-04;;;;true;B
+item:MAR-05;objeto;Contrapeso de red del Índico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-05;;;;true;B
+item:MAR-06;objeto;Botella de mensaje del Ártico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-06;;;;true;B
+item:MAR-07;objeto;Medalla de navegante del océano Austral;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-07;;;;true;B
+item:MAR-08;objeto;Fragmento del plano de los anillos;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-08;;;;true;B
+item:MAR-09;objeto;Sello del tridente sumergido;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-09;;;;true;B
+item:MAR-10;objeto;Llave de las compuertas de Atlántida;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-10;;;;true;B
+item:MAR-11;objeto;Prisma de las mareas;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-11;;;;true;B
+item:MAR-12;objeto;Corona de oricalco;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAR-12;;;;true;B
+item:CON-01;objeto;Vieira atlántica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-01;;;;true;B
+item:CON-02;objeto;Lapa mediterránea;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-02;;;;true;B
+item:CON-03;objeto;Caracola turbante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-03;;;;true;B
+item:CON-04;objeto;Oreja de mar;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-04;;;;true;B
+item:CON-05;objeto;Cauri tigre;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-05;;;;true;B
+item:CON-06;objeto;Múrex espinoso;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-06;;;;true;B
+item:CON-07;objeto;Caracola reina;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-07;;;;true;B
+item:CON-08;objeto;Cono textil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-08;;;;true;B
+item:CON-09;objeto;Nautilo perlado;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-09;;;;true;B
+item:CON-10;objeto;Caracola tritón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-10;;;;true;B
+item:CON-11;objeto;Almeja gigante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-11;;;;true;B
+item:CON-12;objeto;Argonauta hembra;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-12;;;;true;B
+item:CUR-01;objeto;Nudo de ocho;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-01;;;;true;B
+item:CUR-02;objeto;Silbato de contramaestre;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-02;;;;true;B
+item:CUR-03;objeto;Ficha de rancho naval;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-03;;;;true;B
+item:CUR-13;objeto;Flotador pesquero de corcho;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-13;;;;true;B
+item:CUR-05;objeto;Caja de agujas de vela;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-05;;;;true;B
+item:CUR-06;objeto;Pipa de arcilla marinera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-06;;;;true;B
+item:CUR-07;objeto;Cuaderno de mareas;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-07;;;;true;B
+item:CUR-08;objeto;Tablilla de señales;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-08;;;;true;B
+item:CUR-09;objeto;Trenzado de cabo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-09;;;;true;B
+item:CUR-10;objeto;Rueda de bitácora miniatura;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-10;;;;true;B
+item:CUR-11;objeto;Botella de arena oceánica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-11;;;;true;B
+item:CUR-12;objeto;Maqueta de barco en botella;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CUR-12;;;;true;B
+item:COR-01;objeto;Coral cerebro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-01;;;;true;B
+item:COR-02;objeto;Coral estrella;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-02;;;;true;B
+item:COR-03;objeto;Coral plato;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-03;;;;true;B
+item:COR-04;objeto;Coral coliflor;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-04;;;;true;B
+item:COR-05;objeto;Coral asta de ciervo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-05;;;;true;B
+item:COR-06;objeto;Gorgonia abanico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-06;;;;true;B
+item:COR-07;objeto;Coral azul;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-07;;;;true;B
+item:COR-08;objeto;Coral tubo de órgano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-08;;;;true;B
+item:COR-09;objeto;Coral bambú;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-09;;;;true;B
+item:COR-10;objeto;Coral negro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-10;;;;true;B
+item:COR-11;objeto;Coral rojo mediterráneo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-11;;;;true;B
+item:COR-12;objeto;Coral cuerno de alce;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-12;;;;true;B
+item:NUM-01;objeto;Penique victoriano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-01;;;;true;B
+item:NUM-02;objeto;Denario romano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-02;;;;true;B
+item:NUM-03;objeto;Dracma griega;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-03;;;;true;B
+item:NUM-04;objeto;Moneda cash china;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-04;;;;true;B
+item:NUM-05;objeto;Rupia de la India británica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-05;;;;true;B
+item:NUM-06;objeto;Real brasileño antiguo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-06;;;;true;B
+item:NUM-07;objeto;Dólar de plata estadounidense;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-07;;;;true;B
+item:NUM-08;objeto;Koban japonés;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-08;;;;true;B
+item:NUM-13;objeto;Tálero de María Teresa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-13;;;;true;B
+item:NUM-10;objeto;Soberano británico de oro;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-10;;;;true;B
+item:NUM-11;objeto;Ocho reales mexicano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-11;;;;true;B
+item:NUM-12;objeto;Doblón español de naufragio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-12;;;;true;B
+item:CIV-01;objeto;Lucerna romana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-01;;;;true;B
+item:CIV-02;objeto;Ánfora griega;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-02;;;;true;B
+item:CIV-03;objeto;Fíbula nórdica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-03;;;;true;B
+item:CIV-04;objeto;Escarabeo egipcio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-04;;;;true;B
+item:CIV-05;objeto;Sello cilíndrico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-05;;;;true;B
+item:CIV-06;objeto;Figurilla del valle del Indo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-06;;;;true;B
+item:CIV-07;objeto;Cerámica pueblo ancestral;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-07;;;;true;B
+item:CIV-08;objeto;Colgante de jade maya;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-08;;;;true;B
+item:CIV-09;objeto;Quipu andino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-09;;;;true;B
+item:CIV-10;objeto;Textil nazca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-10;;;;true;B
+item:CIV-11;objeto;Colgante pounamu maorí;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-11;;;;true;B
+item:CIV-12;objeto;Placa del Reino de Benín;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-12;;;;true;B
+item:ARM-01;objeto;Khopesh egipcio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-01;;;;true;B
+item:ARM-02;objeto;Casco corintio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-02;;;;true;B
+item:ARM-03;objeto;Gladius romano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-03;;;;true;B
+item:ARM-04;objeto;Armadura samurái;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-04;;;;true;B
+item:ARM-05;objeto;Jian chino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-05;;;;true;B
+item:ARM-06;objeto;Keris indonesio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-06;;;;true;B
+item:ARM-07;objeto;Cota de malla europea;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-07;;;;true;B
+item:ARM-08;objeto;Espada ropera española;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-08;;;;true;B
+item:ARM-09;objeto;Sable otomano ceremonial;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-09;;;;true;B
+item:ARM-10;objeto;Escudo zulú;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-10;;;;true;B
+item:ARM-11;objeto;Chimalli mexica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-11;;;;true;B
+item:ARM-12;objeto;Clava mapuche ceremonial;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARM-12;;;;true;B
+item:MAS-01;objeto;Máscara teatral griega;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-01;;;;true;B
+item:MAS-02;objeto;Máscara veneciana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-02;;;;true;B
+item:MAS-03;objeto;Kokeshi de madera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-03;;;;true;B
+item:MAS-04;objeto;Netsuke tallado;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-04;;;;true;B
+item:MAS-05;objeto;Peso de oro akan;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-05;;;;true;B
+item:MAS-06;objeto;Máscara gelede;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-06;;;;true;B
+item:MAS-07;objeto;Figurilla olmeca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-07;;;;true;B
+item:MAS-08;objeto;Máscara maya de jade;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-08;;;;true;B
+item:MAS-09;objeto;Vasija retrato moche;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-09;;;;true;B
+item:MAS-10;objeto;Figurilla inca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-10;;;;true;B
+item:MAS-11;objeto;Hei-tiki maorí;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-11;;;;true;B
+item:MAS-12;objeto;Máscara de madera baulé;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAS-12;;;;true;B
+item:MAP-01;objeto;Carta portulana mediterránea;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-01;;;;true;B
+item:MAP-02;objeto;Tabula Peutingeriana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-02;;;;true;B
+item:MAP-03;objeto;Mapa de Juan de la Cosa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-03;;;;true;B
+item:MAP-04;objeto;Atlas de Mercator;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-04;;;;true;B
+item:MAP-05;objeto;Mapa de Piri Reis;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-05;;;;true;B
+item:MAP-06;objeto;Carta de las rutas de la seda;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-06;;;;true;B
+item:MAP-07;objeto;Carta de la costa suajili;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-07;;;;true;B
+item:MAP-08;objeto;Mapa del valle de México;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-08;;;;true;B
+item:MAP-09;objeto;Carta del estrecho de Magallanes;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-09;;;;true;B
+item:MAP-10;objeto;Carta de la Gran Barrera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-10;;;;true;B
+item:MAP-11;objeto;Carta del Pacífico de Cook;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-11;;;;true;B
+item:MAP-12;objeto;Carta de las tierras antárticas;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAP-12;;;;true;B
+item:HUE-01;objeto;Huevo de codorniz;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-01;;;;true;B
+item:HUE-02;objeto;Huevo de frailecillo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-02;;;;true;B
+item:HUE-03;objeto;Huevo de halcón peregrino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-03;;;;true;B
+item:HUE-04;objeto;Huevo de flamenco;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-04;;;;true;B
+item:HUE-05;objeto;Huevo de ñandú;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-05;;;;true;B
+item:HUE-06;objeto;Huevo de emú;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-06;;;;true;B
+item:HUE-07;objeto;Huevo de casuario;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-07;;;;true;B
+item:HUE-08;objeto;Huevo de kiwi;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-08;;;;true;B
+item:HUE-09;objeto;Huevo de colibrí;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-09;;;;true;B
+item:HUE-10;objeto;Huevo de avestruz;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-10;;;;true;B
+item:HUE-11;objeto;Huevo de pingüino emperador;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-11;;;;true;B
+item:HUE-12;objeto;Huevo de ave elefante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-12;;;;true;B
+item:FOS-01;objeto;Helecho fósil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-01;;;;true;B
+item:FOS-02;objeto;Ammonite espiral;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-02;;;;true;B
+item:FOS-03;objeto;Madera petrificada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-03;;;;true;B
+item:FOS-04;objeto;Trilobite marroquí;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-04;;;;true;B
+item:FOS-05;objeto;Diente de tiburón fósil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-05;;;;true;B
+item:FOS-06;objeto;Pez fósil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-06;;;;true;B
+item:FOS-07;objeto;Hoja fósil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-07;;;;true;B
+item:FOS-08;objeto;Cangrejo herradura fósil;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-08;;;;true;B
+item:FOS-09;objeto;Huellas de dinosaurio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-09;;;;true;B
+item:FOS-10;objeto;Gastrólito fósil documentado;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-10;;;;true;B
+item:FOS-11;objeto;Pluma fósil de Solnhofen;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-11;;;;true;B
+item:FOS-12;objeto;Diente de reptil marino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:FOS-12;;;;true;B
+item:INS-01;objeto;Lupa de naturalista;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-01;;;;true;B
+item:INS-02;objeto;Brújula de bolsillo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-02;;;;true;B
+item:INS-03;objeto;Prensa botánica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-03;;;;true;B
+item:INS-04;objeto;Plomada cartográfica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-04;;;;true;B
+item:INS-13;objeto;Barómetro de mercurio de gabinete;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-13;;;;true;B
+item:INS-06;objeto;Cuaderno de campo impermeable;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-06;;;;true;B
+item:INS-07;objeto;Teodolito antiguo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-07;;;;true;B
+item:INS-08;objeto;Catalejo de latón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-08;;;;true;B
+item:INS-09;objeto;Cámara de placas;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-09;;;;true;B
+item:INS-10;objeto;Sextante náutico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-10;;;;true;B
+item:INS-11;objeto;Microscopio de campo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-11;;;;true;B
+item:INS-12;objeto;Cronómetro marino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:INS-12;;;;true;B
+item:MARV-01;objeto;Piedra de río perforada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-01;;;;true;B
+item:MARV-02;objeto;Rosa del desierto;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-02;;;;true;B
+item:MARV-03;objeto;Concreción esférica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-03;;;;true;B
+item:MARV-04;objeto;Ventifacto;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-04;;;;true;B
+item:MARV-05;objeto;Vidrio volcánico iridiscente;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-05;;;;true;B
+item:MARV-06;objeto;Geoda de cuarzo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-06;;;;true;B
+item:MARV-07;objeto;Piedra solar de calcita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-07;;;;true;B
+item:MARV-08;objeto;Perla barroca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-08;;;;true;B
+item:MARV-09;objeto;Fulgurita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-09;;;;true;B
+item:MARV-10;objeto;Geoda de amatista gigante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-10;;;;true;B
+item:MARV-11;objeto;Vidrio del desierto libio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-11;;;;true;B
+item:MARV-12;objeto;Copo de nieve antártico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MARV-12;;;;true;B
+item:HOJ-01;objeto;Hoja de ginkgo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-01;;;;true;B
+item:HOJ-02;objeto;Hoja de arce azucarero;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-02;;;;true;B
+item:HOJ-03;objeto;Hoja de higuera común;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-03;;;;true;B
+item:HOJ-04;objeto;Fronda de culantrillo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-04;;;;true;B
+item:HOJ-05;objeto;Hoja de eucalipto azul;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-05;;;;true;B
+item:HOJ-06;objeto;Hoja de tulípero;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-06;;;;true;B
+item:HOJ-07;objeto;Fronda de helecho arborescente plateado;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-07;;;;true;B
+item:HOJ-08;objeto;Hoja de nenúfar gigante amazónico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-08;;;;true;B
+item:HOJ-09;objeto;Hoja de gneto africano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-09;;;;true;B
+item:HOJ-10;objeto;Fronda de helecho lengua de ciervo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-10;;;;true;B
+item:HOJ-11;objeto;Hoja de planta jarro de Raffles;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-11;;;;true;B
+item:HOJ-12;objeto;Hoja de palma viajera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HOJ-12;;;;true;B
+item:ROC-01;objeto;Basalto columnar de Antrim;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-01;;;;true;B
+item:ROC-02;objeto;Granito de Cornualles;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-02;;;;true;B
+item:ROC-03;objeto;Pizarra de Gales;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-03;;;;true;B
+item:ROC-04;objeto;Pumita del Vesubio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-04;;;;true;B
+item:ROC-05;objeto;Arenisca de las Blue Mountains;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-05;;;;true;B
+item:ROC-06;objeto;Travertino de Pamukkale;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-06;;;;true;B
+item:ROC-07;objeto;Toba volcánica de Capadocia;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-07;;;;true;B
+item:ROC-08;objeto;Conglomerado de los Andes;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-08;;;;true;B
+item:ROC-09;objeto;Gneis de Lewis;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-09;;;;true;B
+item:ROC-10;objeto;Diatomita lacustre;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-10;;;;true;B
+item:ROC-11;objeto;Hierro bandeado de Hamersley;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-11;;;;true;B
+item:ROC-13;objeto;Basalto olivínico escocés;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ROC-13;;;;true;B
+item:ALG-01;objeto;Sargazo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-01;;;;true;B
+item:ALG-02;objeto;Lechuga de mar;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-02;;;;true;B
+item:ALG-03;objeto;Musgo de Irlanda;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-03;;;;true;B
+item:ALG-04;objeto;Cochayuyo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-04;;;;true;B
+item:ALG-05;objeto;Alga coralina articulada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-05;;;;true;B
+item:ALG-06;objeto;Kelpo gigante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-06;;;;true;B
+item:ALG-07;objeto;Wakame;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-07;;;;true;B
+item:ALG-08;objeto;Alga uva del Indo-Pacífico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-08;;;;true;B
+item:ALG-09;objeto;Dulse atlántico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-09;;;;true;B
+item:ALG-10;objeto;Alga abanico de pavo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-10;;;;true;B
+item:ALG-11;objeto;Verde de cordón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-11;;;;true;B
+item:ALG-12;objeto;Alga arcoíris australiana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ALG-12;;;;true;B
+item:MED-01;objeto;Medalla histórica de Waterloo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-01;;;;true;B
+item:MED-02;objeto;Medalla de campaña de Seringapatam;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-02;;;;true;B
+item:MED-03;objeto;Insignia del Águila Blanca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-03;;;;true;B
+item:MED-04;objeto;Cruz de la Legión de Honor;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-04;;;;true;B
+item:MED-05;objeto;Medalla de la Reconquista de Buenos Aires;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-05;;;;true;B
+item:MED-06;objeto;Medalla de proclamación de Pedro I;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-06;;;;true;B
+item:MED-07;objeto;Cruz de la Orden de Guadalupe;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-07;;;;true;B
+item:MED-13;objeto;Insignia civil de la Orden de Leopoldo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-13;;;;true;B
+item:MED-09;objeto;Cruz de San Jorge rusa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-09;;;;true;B
+item:MED-10;objeto;Medalla de oro de la Real Sociedad Geográfica;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-10;;;;true;B
+item:MED-11;objeto;Medalla de Trafalgar de Boulton;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-11;;;;true;B
+item:MED-12;objeto;Orden del Sol del Perú;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MED-12;;;;true;B
+item:ARQ-01;objeto;Nido de ave tejedora;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-01;;;;true;B
+item:ARQ-02;objeto;Nido de hornero;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-02;;;;true;B
+item:ARQ-03;objeto;Nido de golondrina común;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-03;;;;true;B
+item:ARQ-04;objeto;Celda de avispa alfarera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-04;;;;true;B
+item:ARQ-05;objeto;Panal de abeja gigante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-05;;;;true;B
+item:ARQ-06;objeto;Dique de castor canadiense;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-06;;;;true;B
+item:ARQ-07;objeto;Pérgola de ave jardinera satinada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-07;;;;true;B
+item:ARQ-08;objeto;Nido de pájaro sastre;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-08;;;;true;B
+item:ARQ-09;objeto;Termitero catedral;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-09;;;;true;B
+item:ARQ-10;objeto;Rueda de telaraña de seda dorada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-10;;;;true;B
+item:ARQ-11;objeto;Refugio de tricóptero de grava;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-11;;;;true;B
+item:ARQ-12;objeto;Madriguera de perrito de la pradera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:ARQ-12;;;;true;B
+item:BOT-13;objeto;Copihue;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-13;;;;true;B
+item:BOT-14;objeto;Orquídea vainilla;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-14;;;;true;B
+item:BOT-15;objeto;Pasiflora azul;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-15;;;;true;B
+item:BOT-16;objeto;Ave del paraíso;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-16;;;;true;B
+item:BOT-17;objeto;Camelia japonesa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-17;;;;true;B
+item:BOT-18;objeto;Frangipani;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-18;;;;true;B
+item:BOT-19;objeto;Rododendro himalayo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-19;;;;true;B
+item:BOT-20;objeto;Magnolia americana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:BOT-20;;;;true;B
+item:MAD-01;objeto;Caoba cubana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-01;;;;true;B
+item:MAD-02;objeto;Caoba hondureña;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-02;;;;true;B
+item:MAD-03;objeto;Ébano africano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-03;;;;true;B
+item:MAD-04;objeto;Ébano de Ceilán;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-04;;;;true;B
+item:MAD-05;objeto;Palo de rosa brasileño;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-05;;;;true;B
+item:MAD-06;objeto;Palo de rosa indio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-06;;;;true;B
+item:MAD-07;objeto;Teca birmana;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-07;;;;true;B
+item:MAD-08;objeto;Nogal europeo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-08;;;;true;B
+item:MAD-09;objeto;Cocobolo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-09;;;;true;B
+item:MAD-10;objeto;Sándalo rojo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-10;;;;true;B
+item:MAD-11;objeto;Guayacán;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-11;;;;true;B
+item:MAD-12;objeto;Roble de turbera;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MAD-12;;;;true;B
+item:HEL-01;objeto;Helecho macho;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-01;;;;true;B
+item:HEL-02;objeto;Helecho hembra;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-02;;;;true;B
+item:HEL-03;objeto;Helecho real;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-03;;;;true;B
+item:HEL-04;objeto;Helecho águila;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-04;;;;true;B
+item:HEL-05;objeto;Helecho nido de ave;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-05;;;;true;B
+item:HEL-06;objeto;Helecho cuerno de alce;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-06;;;;true;B
+item:HEL-07;objeto;Helecho espada;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-07;;;;true;B
+item:HEL-08;objeto;Helecho botón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-08;;;;true;B
+item:HEL-09;objeto;Helecho película;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-09;;;;true;B
+item:HEL-10;objeto;Azolla;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-10;;;;true;B
+item:HEL-11;objeto;Salvinia;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-11;;;;true;B
+item:HEL-12;objeto;Mamaku;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HEL-12;;;;true;B
+item:GEM-13;objeto;Diamante;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-13;;;;true;B
+item:GEM-14;objeto;Turmalina bicolor;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-14;;;;true;B
+item:GEM-15;objeto;Espinela roja;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-15;;;;true;B
+item:GEM-16;objeto;Ojo de gato;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-16;;;;true;B
+item:GEM-17;objeto;Citrino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-17;;;;true;B
+item:GEM-18;objeto;Circón miel;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-18;;;;true;B
+item:GEM-19;objeto;Ópalo de fuego;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-19;;;;true;B
+item:GEM-20;objeto;Piedra lunar;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:GEM-20;;;;true;B
+item:MTR-01;objeto;Platino nativo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-01;;;;true;B
+item:MTR-02;objeto;Paladio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-02;;;;true;B
+item:MTR-03;objeto;Rodio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-03;;;;true;B
+item:MTR-04;objeto;Iridio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-04;;;;true;B
+item:MTR-05;objeto;Osmio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-05;;;;true;B
+item:MTR-06;objeto;Oro nativo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-06;;;;true;B
+item:MTR-07;objeto;Plata nativa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-07;;;;true;B
+item:MTR-08;objeto;Bismuto;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-08;;;;true;B
+item:MTR-09;objeto;Wolframita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-09;;;;true;B
+item:MTR-10;objeto;Vanadinita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-10;;;;true;B
+item:MTR-11;objeto;Columbita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-11;;;;true;B
+item:MTR-12;objeto;Tantalita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MTR-12;;;;true;B
+item:CON-13;objeto;Concha arpa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-13;;;;true;B
+item:CON-14;objeto;Mitra episcopal;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-14;;;;true;B
+item:CON-15;objeto;Caracola araña;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-15;;;;true;B
+item:CON-16;objeto;Caracol oliva;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-16;;;;true;B
+item:CON-17;objeto;Cauri moneda;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-17;;;;true;B
+item:CON-18;objeto;Caracola melón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-18;;;;true;B
+item:CON-19;objeto;Peine de Venus;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-19;;;;true;B
+item:CON-20;objeto;Tellina violeta;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CON-20;;;;true;B
+item:COR-13;objeto;Coral hongo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-13;;;;true;B
+item:COR-14;objeto;Coral burbuja;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-14;;;;true;B
+item:COR-15;objeto;Coral sol;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-15;;;;true;B
+item:COR-16;objeto;Coral látigo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-16;;;;true;B
+item:COR-17;objeto;Coral de encaje;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-17;;;;true;B
+item:COR-18;objeto;Coral hoja;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-18;;;;true;B
+item:COR-19;objeto;Coral de cuero;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-19;;;;true;B
+item:COR-20;objeto;Coral hidnóforo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:COR-20;;;;true;B
+item:NUM-09;objeto;Estátero lidio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-09;;;;true;B
+item:NUM-14;objeto;Sólido bizantino;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-14;;;;true;B
+item:NUM-15;objeto;Dinar abasí;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-15;;;;true;B
+item:NUM-16;objeto;Ducado veneciano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-16;;;;true;B
+item:NUM-17;objeto;Placa sueca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-17;;;;true;B
+item:NUM-18;objeto;Rublo imperial;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-18;;;;true;B
+item:NUM-19;objeto;Akçe otomano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-19;;;;true;B
+item:NUM-20;objeto;Macuquina de Potosí;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:NUM-20;;;;true;B
+item:CIV-13;objeto;Tablilla sumeria;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-13;;;;true;B
+item:CIV-14;objeto;Vasija etrusca;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-14;;;;true;B
+item:CIV-15;objeto;Amuleto fenicio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-15;;;;true;B
+item:CIV-16;objeto;Sello aqueménida;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-16;;;;true;B
+item:CIV-17;objeto;Cerámica Jōmon;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-17;;;;true;B
+item:CIV-18;objeto;Tapa polinesia;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-18;;;;true;B
+item:CIV-19;objeto;Disco misisipiano;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-19;;;;true;B
+item:CIV-20;objeto;Relieve jemer;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:CIV-20;;;;true;B
+item:MUN-01;objeto;Gran Pirámide;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-01;;;;true;B
+item:MUN-02;objeto;Jardines de Babilonia;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-02;;;;true;B
+item:MUN-03;objeto;Zeus de Olimpia;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-03;;;;true;B
+item:MUN-04;objeto;Templo de Artemisa;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-04;;;;true;B
+item:MUN-05;objeto;Mausoleo de Halicarnaso;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-05;;;;true;B
+item:MUN-06;objeto;Coloso de Rodas;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-06;;;;true;B
+item:MUN-07;objeto;Faro de Alejandría;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:MUN-07;;;;true;B
+item:HUE-13;objeto;Cisne cantor;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-13;;;;true;B
+item:HUE-14;objeto;Alcatraz atlántico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-14;;;;true;B
+item:HUE-15;objeto;Arao común;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-15;;;;true;B
+item:HUE-16;objeto;Albatros viajero;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-16;;;;true;B
+item:HUE-17;objeto;Tinamú;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-17;;;;true;B
+item:HUE-18;objeto;Ave tejedora;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-18;;;;true;B
+item:HUE-19;objeto;Cálao rinoceronte;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-19;;;;true;B
+item:HUE-20;objeto;Guacamayo azul;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:HUE-20;;;;true;B
+item:DAG-01;objeto;Westminster;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-01;;;;true;B
+item:DAG-02;objeto;Notre-Dame;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-02;;;;true;B
+item:DAG-03;objeto;Coliseo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-03;;;;true;B
+item:DAG-04;objeto;Acrópolis;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-04;;;;true;B
+item:DAG-05;objeto;Alhambra;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-05;;;;true;B
+item:DAG-06;objeto;San Basilio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-06;;;;true;B
+item:DAG-07;objeto;Pirámides de Guiza;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-07;;;;true;B
+item:DAG-08;objeto;Karnak;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-08;;;;true;B
+item:DAG-09;objeto;Cabo de Buena Esperanza;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-09;;;;true;B
+item:DAG-10;objeto;Santa Sofía;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-10;;;;true;B
+item:DAG-11;objeto;Petra;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-11;;;;true;B
+item:DAG-12;objeto;Taj Mahal;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-12;;;;true;B
+item:DAG-13;objeto;Gran Muralla;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-13;;;;true;B
+item:DAG-14;objeto;Ciudad Prohibida;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-14;;;;true;B
+item:DAG-15;objeto;Monte Fuji;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-15;;;;true;B
+item:DAG-16;objeto;Angkor Wat;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-16;;;;true;B
+item:DAG-17;objeto;Teotihuacán;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-17;;;;true;B
+item:DAG-18;objeto;Chichén Itzá;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-18;;;;true;B
+item:DAG-19;objeto;Cusco histórico;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-19;;;;true;B
+item:DAG-20;objeto;Moáis de Rapa Nui;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:DAG-20;;;;true;B
+item:MAT-N01;objeto;Pluma tropical;;;canal nuevosMateriales (plumas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N02;objeto;Plumón;;;canal nuevosMateriales (plumas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N03;objeto;Pluma caudal;;;canal nuevosMateriales (plumas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N04;objeto;Pluma marina;;;canal nuevosMateriales (plumas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N05;objeto;Pluma facial;;;canal nuevosMateriales (plumas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N08;objeto;Pluma iridiscente;;;canal nuevosMateriales (plumas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N09;objeto;Pelo de guarda;;;canal nuevosMateriales (pelo) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N10;objeto;Lana desprendida;;;canal nuevosMateriales (pelo) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N11;objeto;Crin caída;;;canal nuevosMateriales (pelo) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N12;objeto;Muda estacional;;;canal nuevosMateriales (pelo) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N14;objeto;Muda de serpiente;;;canal nuevosMateriales (escamas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N15;objeto;Muda escamosa;;;canal nuevosMateriales (escamas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N16;objeto;Escudo de caparazón;;;canal nuevosMateriales (escamas) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N18;objeto;Púas desprendidas;;;canal nuevosMateriales (calcareos) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N19;objeto;Cascarón moteado;;;canal nuevosMateriales (calcareos) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N20;objeto;Egagrópila;;;canal nuevosMateriales (rastros) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N21;objeto;Fragmento de sepión;;;canal nuevosMateriales (calcareos) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N22;objeto;Huella en arcilla;;;canal nuevosMateriales (rastros) ⟵ region:HX-01-09;;;;true;B
+item:MAT-N24;objeto;Marca de alimentación;;;canal nuevosMateriales (rastros) ⟵ region:HX-01-09;;;;true;B
+item:RAR-01;objeto;Bezoar;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-01;;;;true;B
+item:RAR-02;objeto;Alicornio;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-02;;;;true;B
+item:RAR-03;objeto;Ámbar gris;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-03;;;;true;B
+item:RAR-04;objeto;Piedra de sapo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-04;;;;true;B
+item:RAR-05;objeto;Piedra de serpiente;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-05;;;;true;B
+item:RAR-06;objeto;Aetita;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-06;;;;true;B
+item:RAR-07;objeto;Lengua de dragón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-07;;;;true;B
+item:RAR-08;objeto;Huevo de sirena;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-08;;;;true;B
+item:RAR-09;objeto;Almizcle;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-09;;;;true;B
+item:RAR-10;objeto;Basilisco;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-10;;;;true;B
+item:RAR-11;objeto;Sangre de dragón;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-11;;;;true;B
+item:RAR-12;objeto;Colmillo apócrifo;;;coleccionable (fuentes del sistema híbrido) ⟵ piece:RAR-12;;;;true;B
+item:engranaje;objeto;Engranaje de latón;;;receta ⟵ item:brass_shard+facility:workshop:2;;;;true;B
+item:espejo;objeto;Espejo pulido;;;receta ⟵ item:polished_lens+item:brass_shard+facility:workshop:3;;;;true;B
+item:carta_estelar;objeto;Carta estelar;;;receta ⟵ item:parchment_scrap+item:old_ink+facility:workshop:3;;;;true;B
+item:placa_daguerrotipo;objeto;Placa de daguerrotipo;;;receta ⟵ item:brass_shard+item:polished_lens+facility:workshop:4;;;;true;B
+item:modulo_luminoso;objeto;Módulo luminoso;;;receta ⟵ item:polished_lens+item:brass_shard+item:carved_wood+facility:workshop:4;;;;true;B
+item:componente_electrico;objeto;Componente eléctrico;;;receta ⟵ item:brass_shard+item:river_pebble+facility:workshop:4;;;;true;B
+voyage:coast;expedición;Reconocimiento costero;research:astillero;"{""money"":35,""knowledge"":10,""prestige"":0}";;;;;true;B
+voyage:north;expedición;Cartografía del mar del Norte;research:astillero;"{""money"":90,""knowledge"":35,""prestige"":1}";;;;;true;B
+voyage:alps;expedición;Misión a los Alpes;research:astillero;"{""money"":180,""knowledge"":75,""prestige"":2}";;;;;true;B
+voyage:carpathians;expedición;Ruta científica a los Cárpatos;research:astillero | research:rutas_1;"{""money"":260,""knowledge"":110,""prestige"":4}";;;;;true;B
+voyage:balkans;expedición;Ruta científica a los Balcanes;research:astillero | research:rutas_2;"{""money"":340,""knowledge"":150,""prestige"":6}";;;;;true;B
+voyage:ethiopia_survey;expedición;Reconocimiento de las tierras altas etíopes;research:astillero | item:africa_map | research:rutas_2;"{""money"":950,""knowledge"":380,""prestige"":92}";;;;;true;B
+voyage:namib_survey;expedición;Reconocimiento del desierto del Namib;research:astillero | item:africa_map | research:rutas_2;"{""money"":1250,""knowledge"":460,""prestige"":95}";;;;;true;B
+voyage:atlantic_survey;expedición;Reconocimiento del Atlántico;research:astillero | research:nuevo_mundo_1 | research:rutas_2;"{""money"":1700,""knowledge"":650,""prestige"":116}";;;;;true;B
+voyage:mesoamerica_survey;expedición;Reconocimiento de Mesoamérica;research:astillero | item:north_america_map | research:norteamerica_1 | research:rutas_2;"{""money"":1500,""knowledge"":560,""prestige"":130}";;;;;true;B
+voyage:asia_survey;expedición;Reconocimiento de Anatolia y el Cáucaso;research:astillero | item:asia_map | research:asia_1 | research:rutas_2;"{""money"":1300,""knowledge"":520,""prestige"":100}";;;;;true;B
+voyage:andes_survey;expedición;Reconocimiento de los Andes;research:astillero | item:south_america_map | research:sudamerica_1 | research:rutas_2;"{""money"":1900,""knowledge"":640,""prestige"":190}";;;;;true;B
+voyage:pacific_survey;expedición;Reconocimiento del Pacífico austral;research:astillero | item:oceania_map | research:oceania_1 | research:rutas_2;"{""money"":2300,""knowledge"":760,""prestige"":240}";;;;;true;B
+voyage:polar_survey;expedición;Reconocimiento de los mares polares;research:astillero | item:polar_map | research:polos_1 | research:rutas_2;"{""money"":2800,""knowledge"":900,""prestige"":285}";;;;;true;B
+voyage:himalaya_survey;expedición;Reconocimiento del Himalaya y el Tíbet;research:astillero | item:asia_map | research:asia_1 | research:rutas_2;"{""money"":1600,""knowledge"":560,""prestige"":120}";;;;;true;B
+voyage:malay_survey;expedición;Travesía del archipiélago malayo;research:astillero | item:asia_map | research:asia_1 | research:rutas_2;"{""money"":1800,""knowledge"":600,""prestige"":150}";;;;;true;B
+voyage:amazon_survey;expedición;Reconocimiento del Amazonas;research:astillero | item:south_america_map | research:sudamerica_1 | research:rutas_2;"{""money"":1850,""knowledge"":620,""prestige"":185}";;;;;true;B
+voyage:nz_survey;expedición;Reconocimiento de Nueva Zelanda y Tasmania;research:astillero | item:oceania_map | research:oceania_1 | research:rutas_2;"{""money"":2200,""knowledge"":740,""prestige"":235}";;;;;true;B
+voyage:antarctic_survey;expedición;Expedición a las costas antárticas;research:astillero | item:polar_map | research:polos_1 | research:rutas_2;"{""money"":2900,""knowledge"":920,""prestige"":290}";;;;;true;B
+voyage:indian_ocean_survey;expedición;Reconocimiento del océano Índico;research:astillero | item:world_map | research:mares_superficiales_1 | research:rutas_2;"{""money"":2600,""knowledge"":820,""prestige"":340}";;;;;true;B
+trade:coastal_trade;ruta comercial;Cabotaje de suministros;research:astillero;"{""money"":120,""knowledge"":20,""prestige"":0}";;;;;true;B
+trade:workshop_trade;ruta comercial;Proveedores del taller;research:astillero;"{""money"":280,""knowledge"":50,""prestige"":10}";;;;;true;B
+trade:archive_trade;ruta comercial;Caravana de cartógrafos;research:astillero;"{""money"":500,""knowledge"":90,""prestige"":53}";;;;;true;B
+trade:ocean_trade;ruta comercial;Travesía de abastecimiento;research:astillero;"{""money"":900,""knowledge"":160,""prestige"":125}";;;;;true;B
+dig:british_cliffs;yacimiento;Estratos de las Islas Británicas;region:HX-01-09;"{""money"":55,""knowledge"":15}";;;;;true;B
+dig:alpine_basin;yacimiento;Cuenca sedimentaria alpina;region:HX-02-09;"{""money"":135,""knowledge"":45}";;;;;true;B
+dig:namib_rocks;yacimiento;Estratos del desierto del Namib;region:HX-11-08 | research:africa_1;"{""money"":550,""knowledge"":160}";;;;;true;B
+dig:canadian_rocks;yacimiento;Sedimentos de Columbia Británica;region:HX-02-02 | research:norteamerica_1;"{""money"":750,""knowledge"":225}";;;;;true;B
+dig:anatolia_strata;yacimiento;Estratos de Anatolia;region:HX-03-15 | research:asia_1;"{""money"":600,""knowledge"":180}";;;;;true;B
+dig:andes_strata;yacimiento;Estratos andinos;region:sa_andes_centrales | research:sudamerica_1;"{""money"":750,""knowledge"":220}";;;;;true;B
+dig:australia_strata;yacimiento;Estratos del desierto australiano;region:oc_desierto_australiano | research:oceania_1;"{""money"":850,""knowledge"":260}";;;;;true;B
+dig:siwalik_beds;yacimiento;Colinas de Siwalik;region:HX-05-16 | research:asia_1;"{""money"":680,""knowledge"":200}";;;;;true;B
+dig:punta_alta;yacimiento;Barrancas de Punta Alta;region:sa_pampas | research:sudamerica_1;"{""money"":720,""knowledge"":210}";;;;;true;B
+dig:moa_deposits;yacimiento;Depósitos de moa de Nueva Zelanda;region:oc_nueva_zelanda | research:oceania_1;"{""money"":800,""knowledge"":240}";;;;;true;B
+facility:shipyard:1;instalación;Astillero I;research:astillero;"{""money"":0,""knowledge"":0,""prestige"":0}";;;Gestiona las expediciones científicas existentes con su capacidad histórica (2 + «Segundo destacamento»). | Los viajes conservan sus requisitos de prestigio, cartografía, investigación y mapas.;;true;B
+facility:shipyard:2;instalación;Astillero II;facility:shipyard:1;"{""money"":500,""knowledge"":300,""prestige"":2}";;;+1 expedición simultánea. | MEC-03: expediciones botánicas y reconocimientos naturalistas.;;true;B
+facility:shipyard:3;instalación;Astillero III;facility:shipyard:2;"{""money"":2000,""knowledge"":1200,""prestige"":5}";;;Preparación de expediciones: −10 % de duración en las nuevas salidas (provisional). | MEC-03: expediciones oceanográficas.;;true;B
+facility:shipyard:4;instalación;Astillero IV;facility:shipyard:3 | rank:5;"{""money"":8000,""knowledge"":4000,""prestige"":10}";;;+1 expedición simultánea (+2 en total). | MEC-03: expediciones arqueológicas.;;true;B
+facility:shipyard:5;instalación;Astillero V;facility:shipyard:4 | rank:9;"{""money"":25000,""knowledge"":12000,""prestige"":20}";;;Modalidad especial «Expedición ampliada»: misma ruta, doble duración y doble costo, con una tirada adicional de hallazgos (provisional). | MEC-03: exploración extraordinaria.;;true;B
+facility:caravan:1;instalación;Caravana I;research:astillero;"{""money"":0,""knowledge"":0,""prestige"":0}";;;1 ruta comercial simultánea, mercado, trueques, contratos de suministro y manifiestos (sin cambios). | Las mercancías regionales conservan sus condiciones de acceso.;;true;B
+facility:caravan:2;instalación;Caravana II;facility:caravan:1;"{""money"":500,""knowledge"":300,""prestige"":2}";;;2 rutas comerciales simultáneas. | MEC-03: comercio e intercambio de coleccionables comunes.;;true;B
+facility:caravan:3;instalación;Caravana III;facility:caravan:2;"{""money"":2000,""knowledge"":1200,""prestige"":5}";;;Capacidad logística: compra por lotes de 5 unidades en el mercado, con una sola confirmación. | MEC-03: comerciantes regionales y piezas poco comunes.;;true;B
+facility:caravan:4;instalación;Caravana IV;facility:caravan:3 | rank:6;"{""money"":8000,""knowledge"":4000,""prestige"":10}";;;3 rutas comerciales simultáneas. | MEC-03: piezas raras y solicitudes especializadas.;;true;B
+facility:caravan:5;instalación;Caravana V;facility:caravan:4 | rank:9;"{""money"":25000,""knowledge"":12000,""prestige"":20}";;;4 rutas comerciales simultáneas. | MEC-03: coleccionistas especializados y piezas muy raras.;;true;B
+facility:workshop:1;instalación;Taller I;;"{""money"":0,""knowledge"":0,""prestige"":0}";;;Todas las recetas existentes, con fabricación inmediata. | Estudios de materiales ×1 y ×5.;;true;B
+facility:workshop:2;instalación;Taller II;facility:workshop:1;"{""money"":500,""knowledge"":300,""prestige"":2}";;;Procesamiento de materiales animales: estudios ×10. | Recetas de nivel 2 (preparado).;;true;B
+facility:workshop:3;instalación;Taller III;facility:workshop:2;"{""money"":2000,""knowledge"":1200,""prestige"":5}";;;Fabricación múltiple: ×5 con una sola confirmación. | Recetas de nivel 3 (preparado).;;true;B
+facility:workshop:4;instalación;Taller IV;facility:workshop:3 | rank:5;"{""money"":8000,""knowledge"":4000,""prestige"":10}";;;Fabricación con subcomponentes: fabrica primero los componentes intermedios que falten. | Recetas de nivel 4 (preparado).;;true;B
+facility:workshop:5;instalación;Taller V;facility:workshop:4 | rank:9;"{""money"":25000,""knowledge"":12000,""prestige"":20}";;;Fabricación ×10 y estudios ×25. | Recetas de laboratorio (nivel 5, preparado).;;true;B
+facility:excavations:1;instalación;Excavaciones I;;"{""money"":0,""knowledge"":0,""prestige"":0}";;;Yacimientos existentes del Museo con su capacidad histórica (1, o 2 con «Excavaciones coordinadas»).;;true;B
+facility:excavations:2;instalación;Excavaciones II;facility:excavations:1;"{""money"":500,""knowledge"":300,""prestige"":2}";;;+1 excavación simultánea.;;true;B
+facility:excavations:3;instalación;Excavaciones III;facility:excavations:2;"{""money"":2000,""knowledge"":1200,""prestige"":5}";;;"Excavación profunda: doble duración y doble costo; +2 fragmentos y una segunda tirada de diente fósil (provisional).";;true;B
+facility:excavations:4;instalación;Excavaciones IV;facility:excavations:3 | rank:6;"{""money"":8000,""knowledge"":4000,""prestige"":10}";;;+1 excavación simultánea (+2 en total). | Recoger de una vez todas las excavaciones terminadas.;;true;B
+facility:excavations:5;instalación;Excavaciones V;facility:excavations:4 | rank:10;"{""money"":25000,""knowledge"":12000,""prestige"":20}";;;"Excavación especial: 1,5 × duración y costo; garantiza una huella fosilizada (provisional). | MEC-03: incluye las siete maravillas y las piezas muy raras de yacimiento.";;true;B
+facility:surveys:1;instalación;Prospecciones I;;"{""money"":0,""knowledge"":0,""prestige"":0}";;;Prospección documental de indicios de relictos con su capacidad histórica (1, o 2 con «Archivos de historia natural»). | Los relictos siguen siendo hallazgos de campo. | MEC-03: reconocimientos regionales (muestras botánicas y ambientales).;;true;B
+facility:surveys:2;instalación;Prospecciones II;facility:surveys:1;"{""money"":500,""knowledge"":300,""prestige"":2}";;;+1 prospección simultánea. | MEC-03: prospecciones geológicas.;;true;B
+facility:surveys:3;instalación;Prospecciones III;facility:surveys:2;"{""money"":2000,""knowledge"":1200,""prestige"":5}";;;"+1 indicio al completar una prospección (sin superar el máximo de 3; nunca entrega un relicto).";;true;B
+facility:surveys:4;instalación;Prospecciones IV;facility:surveys:3 | rank:6;"{""money"":8000,""knowledge"":4000,""prestige"":10}";;;−20 % de duración en las nuevas prospecciones documentales (provisional). | Recoger de una vez todas las prospecciones terminadas. | MEC-03: prospecciones especializadas (todas las rarezas geológicas).;;true;B
+facility:surveys:5;instalación;Prospecciones V;facility:surveys:4 | rank:10;"{""money"":25000,""knowledge"":12000,""prestige"":20}";;;+1 prospección simultánea (+2 en total). | Hallazgos científicos extraordinarios (preparado).;;true;B
+rank:1;rango;Aficionado;;"{""prestige"":0}";;;grant:apoyo;;true;B
+rank:2;rango;Corresponsal;rank:1;"{""prestige"":5,""species"":10}";;;;;true;B
+rank:3;rango;Aspirante;rank:2;"{""prestige"":12,""research"":3,""income"":1000}";;;grant:campo;;true;B
+rank:4;rango;Ayudante de campo;rank:3;"{""prestige"":25,""species"":40,""collectibles"":3}";;;commission:cancilleria;;true;B
+rank:5;rango;Observador;rank:4;"{""prestige"":45,""monographs"":10,""regions"":5}";;;facility:L4;;true;B
+rank:6;rango;Colector;rank:5;"{""prestige"":70,""collectibles"":15,""voyages"":3}";;;grant:expediciones | facility:L4b | commerce:subastas | commission:geografica;;true;B
+rank:7;rango;Socio auxiliar;rank:6;"{""prestige"":100,""species"":100,""research"":12,""income"":20000}";;;;;true;B
+rank:8;rango;Socio correspondiente;rank:7;"{""prestige"":135,""voyages"":10,""regions"":12}";;;commerce:especialistas | commission:estudio;;true;B
+rank:9;rango;Naturalista;rank:8;"{""prestige"":175,""monographs"":60,""collectibles"":40}";;;facility:L5;;true;B
+rank:10;rango;Socio titular;rank:9;"{""prestige"":215,""research"":20,""collections"":1,""income"":100000}";;;grant:proyectos | facility:L5b;;true;B
+rank:11;rango;Curador;rank:10;"{""prestige"":255,""species"":250,""collectibles"":70}";;;museum:ampliaciones;;true;B
+rank:12;rango;Académico;rank:11;"{""prestige"":295,""regions"":30,""voyages"":25}";;;commerce:extraordinarias | commission:institucional;;true;B
+rank:13;rango;Explorador mayor;rank:12;"{""prestige"":335,""monographs"":150,""research"":28}";;;;;true;B
+rank:14;rango;Miembro del Consejo;rank:13;"{""prestige"":375,""collectibles"":110,""income"":500000}";;;grant:patrocinio | museum:maravillas;;true;B
+rank:15;rango;Consejero honorario;rank:14;"{""prestige"":410,""species"":400,""collections"":3}";;;;;true;B
+rank:16;rango;Catedrático;rank:15;"{""prestige"":440,""regions"":55,""voyages"":50}";;;;;true;B
+rank:17;rango;Director de sección;rank:16;"{""prestige"":465,""monographs"":250,""research"":36}";;;;;true;B
+rank:18;rango;Vicepresidente;rank:17;"{""prestige"":480,""collectibles"":160,""income"":2000000}";;;;;true;B
+rank:19;rango;Presidente honorario;rank:18;"{""prestige"":485,""species"":500,""regions"":75}";;;;;true;B
+rank:20;rango;Gran Naturalista;rank:19;"{""prestige"":500,""monographs"":300,""collectibles"":200,""collections"":6}";;;;;true;B
+museum:1;Museo;Galería de fauna;;"{""money"":0,""prestige"":0}";;;;;true;B
+museum:2;Museo;Sala de historia natural;museum:1;"{""money"":300,""prestige"":2}";;;;;true;B
+museum:3;Museo;Gran galería zoológica;museum:2;"{""money"":900,""prestige"":5}";;;;;true;B
+museum:4;Museo;Pabellón de ciencias (BETA);museum:3;"{""money"":50000,""prestige"":60}";;;;;true;B
+museum:5;Museo;Gabinete de maravillas (BETA);museum:4;"{""money"":500000,""prestige"":150}";;;;;true;B
+piece:BOT-01;coleccionable;Rosa silvestre;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-02;coleccionable;Brezo común;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-03;coleccionable;Amapola de California;;;campo ⟵ region:HX-01-05 | expediciones ⟵ voyage:mesoamerica_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-04;coleccionable;Lupino andino;;;campo ⟵ region:sa_caribe_sudamericano | expediciones ⟵ voyage:andes_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-05;coleccionable;Jacarandá;;;campo ⟵ region:sa_caribe_sudamericano | expediciones ⟵ voyage:andes_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-06;coleccionable;Protea real;;;campo ⟵ region:HX-06-09 | expediciones ⟵ voyage:ethiopia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-07;coleccionable;Flor de baobab;;;campo ⟵ region:HX-06-09 | expediciones ⟵ voyage:ethiopia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-08;coleccionable;Loto sagrado;;;campo ⟵ region:HX-03-13 | expediciones ⟵ voyage:asia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-09;coleccionable;Flor de cerezo;;;campo ⟵ region:HX-03-13 | expediciones ⟵ voyage:asia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-10;coleccionable;Waratah;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:pacific_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-11;coleccionable;Edelweiss;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-12;coleccionable;Rafflesia gigante;;;campo ⟵ region:HX-03-13 | expediciones ⟵ voyage:asia_survey;;;;true;B
+piece:SEM-01;coleccionable;Bellota de roble;;;campo ⟵ region:HX-01-09 | comercio ⟵ facility:caravan:2;;;;true;B
+piece:SEM-02;coleccionable;Piñón mediterráneo;;;campo ⟵ region:HX-01-09 | comercio ⟵ facility:caravan:2;;;;true;B
+piece:SEM-03;coleccionable;Haya europea;;;campo ⟵ region:HX-01-09 | comercio ⟵ facility:caravan:2;;;;true;B
+piece:SEM-04;coleccionable;Semilla de saguaro;;;campo ⟵ region:HX-01-05 | comercio ⟵ facility:caravan:2;;;;true;B
+piece:SEM-05;coleccionable;Cacao criollo;;;campo ⟵ region:sa_caribe_sudamericano | comercio ⟵ facility:caravan:2;;;;true;B
+piece:SEM-06;coleccionable;Vaina de flamboyán;;;campo ⟵ region:HX-06-09 | comercio ⟵ facility:caravan:3;;;;true;B
+piece:SEM-07;coleccionable;Semilla de araucaria;;;campo ⟵ region:sa_caribe_sudamericano | comercio ⟵ facility:caravan:3;;;;true;B
+piece:SEM-08;coleccionable;Semilla de loto;;;campo ⟵ region:HX-03-13 | comercio ⟵ facility:caravan:3;;;;true;B
+piece:SEM-09;coleccionable;Cápsula de eucalipto;;;campo ⟵ region:oc_nueva_guinea | comercio ⟵ facility:caravan:3;;;;true;B
+piece:SEM-10;coleccionable;Semilla de baobab;;;campo ⟵ region:HX-06-09 | comercio ⟵ facility:caravan:4;;;;true;B
+piece:SEM-11;coleccionable;Sámara de arce japonés;;;campo ⟵ region:HX-03-13 | comercio ⟵ facility:caravan:4;;;;true;B
+piece:SEM-12;coleccionable;Coco de mar;;;campo ⟵ region:HX-06-09 | comercio ⟵ facility:caravan:5;;;;true;B
+piece:PIG-01;coleccionable;Carbón vegetal negro;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:PIG-02;coleccionable;Ocre amarillo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:PIG-03;coleccionable;Ocre rojo;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:PIG-04;coleccionable;Siena natural;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:PIG-05;coleccionable;Tierra verde;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:PIG-06;coleccionable;Achiote rojo;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:PIG-07;coleccionable;Índigo natural;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:PIG-08;coleccionable;Cochinilla carmín;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:PIG-09;coleccionable;Azul maya;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:PIG-10;coleccionable;Malaquita molida;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:PIG-11;coleccionable;Ultramar de lapislázuli;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:PIG-12;coleccionable;Púrpura de Tiro;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:5;;;;true;B
+piece:GEM-01;coleccionable;Cuarzo rosa;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-02;coleccionable;Granate almandino;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-03;coleccionable;Amatista;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-04;coleccionable;Topacio imperial;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-05;coleccionable;Aguamarina;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-06;coleccionable;Turquesa;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-07;coleccionable;Jade nefrita;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-08;coleccionable;Peridoto;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-09;coleccionable;Esmeralda colombiana;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-10;coleccionable;Zafiro de Ceilán;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-11;coleccionable;Rubí birmano;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-12;coleccionable;Ópalo negro;;;comercio ⟵ facility:caravan:5 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MIN-01;coleccionable;Cuarzo cristalino;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-02;coleccionable;Calcita óptica;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-03;coleccionable;Pirita cúbica;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-04;coleccionable;Hematita especular;;;excavaciones ⟵ dig:namib_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-05;coleccionable;Fluorita violeta;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-06;coleccionable;Magnetita natural;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-07;coleccionable;Azurita;;;excavaciones ⟵ dig:namib_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-08;coleccionable;Malaquita bandeada;;;excavaciones ⟵ dig:namib_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-09;coleccionable;Obsidiana negra;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-10;coleccionable;Azufre cristalizado;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-11;coleccionable;Lapislázuli;;;excavaciones ⟵ dig:anatolia_strata | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:MIN-12;coleccionable;Vivianita cristalizada;;;excavaciones ⟵ dig:andes_strata | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-01;coleccionable;Resina de pino endurecida;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-02;coleccionable;Copal africano;;;excavaciones ⟵ dig:namib_rocks | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-03;coleccionable;Copal colombiano;;;excavaciones ⟵ dig:andes_strata | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-04;coleccionable;Ámbar miel báltico;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-05;coleccionable;Ámbar opaco báltico;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-06;coleccionable;Ámbar de Chiapas;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-07;coleccionable;Ámbar de Kuji;;;excavaciones ⟵ dig:anatolia_strata | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-08;coleccionable;Ámbar libanés;;;excavaciones ⟵ dig:anatolia_strata | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-09;coleccionable;Ámbar dominicano;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-10;coleccionable;Ámbar con hoja fósil;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-11;coleccionable;Ámbar birmano;;;excavaciones ⟵ dig:anatolia_strata | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:AMB-12;coleccionable;Ámbar azul dominicano;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-13;coleccionable;Meteorito de L’Aigle;;;expediciones ⟵ voyage:coast | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-02;coleccionable;Meteorito de Ensisheim;;;expediciones ⟵ voyage:coast | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-14;coleccionable;Meteorito de Wold Cottage;;;expediciones ⟵ voyage:coast | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-15;coleccionable;Meteorito de Benares;;;expediciones ⟵ voyage:asia_survey | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-16;coleccionable;Meteorito de Weston;;;expediciones ⟵ voyage:mesoamerica_survey | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-06;coleccionable;Meteorito de Gibeon;;;expediciones ⟵ voyage:ethiopia_survey | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-07;coleccionable;Meteorito de Campo del Cielo;;;expediciones ⟵ voyage:andes_survey | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-17;coleccionable;Meteorito de Chassigny;;;expediciones ⟵ voyage:coast | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-09;coleccionable;Meteorito de Imilac;;;expediciones ⟵ voyage:andes_survey | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-18;coleccionable;Meteorito de Krasnojarsk;;;expediciones ⟵ voyage:asia_survey | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-19;coleccionable;Meteorito de Alais;;;expediciones ⟵ voyage:coast | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MET-20;coleccionable;Meteorito de Stannern;;;expediciones ⟵ voyage:coast | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MAR-01;coleccionable;Ficha portuaria del Atlántico Norte;;;expediciones ⟵ voyage:coast;;;;true;B
+piece:MAR-02;coleccionable;Plomada de sonda del Atlántico Sur;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-03;coleccionable;Clavo de casco del Pacífico Norte;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-04;coleccionable;Fragmento de porcelana del Pacífico Sur;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-05;coleccionable;Contrapeso de red del Índico;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-06;coleccionable;Botella de mensaje del Ártico;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-07;coleccionable;Medalla de navegante del océano Austral;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-08;coleccionable;Fragmento del plano de los anillos;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-09;coleccionable;Sello del tridente sumergido;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-10;coleccionable;Llave de las compuertas de Atlántida;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-11;coleccionable;Prisma de las mareas;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MAR-12;coleccionable;Corona de oricalco;;;expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-01;coleccionable;Vieira atlántica;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:CON-02;coleccionable;Lapa mediterránea;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:CON-03;coleccionable;Caracola turbante;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-04;coleccionable;Oreja de mar;;;campo ⟵ region:HX-02-02 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-05;coleccionable;Cauri tigre;;;campo ⟵ region:HX-06-09 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-06;coleccionable;Múrex espinoso;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:CON-07;coleccionable;Caracola reina;;;campo ⟵ region:HX-02-02 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-08;coleccionable;Cono textil;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-09;coleccionable;Nautilo perlado;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-10;coleccionable;Caracola tritón;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-11;coleccionable;Almeja gigante;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-12;coleccionable;Argonauta hembra;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CUR-01;coleccionable;Nudo de ocho;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:CUR-02;coleccionable;Silbato de contramaestre;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:CUR-03;coleccionable;Ficha de rancho naval;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:CUR-13;coleccionable;Flotador pesquero de corcho;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:CUR-05;coleccionable;Caja de agujas de vela;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:CUR-06;coleccionable;Pipa de arcilla marinera;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3;;;;true;B
+piece:CUR-07;coleccionable;Cuaderno de mareas;;;expediciones ⟵ voyage:atlantic_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:CUR-08;coleccionable;Tablilla de señales;;;expediciones ⟵ voyage:atlantic_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:CUR-09;coleccionable;Trenzado de cabo;;;expediciones ⟵ voyage:atlantic_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:CUR-10;coleccionable;Rueda de bitácora miniatura;;;expediciones ⟵ voyage:atlantic_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:CUR-11;coleccionable;Botella de arena oceánica;;;expediciones ⟵ voyage:atlantic_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:CUR-12;coleccionable;Maqueta de barco en botella;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:5;;;;true;B
+piece:COR-01;coleccionable;Coral cerebro;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-02;coleccionable;Coral estrella;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-03;coleccionable;Coral plato;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-04;coleccionable;Coral coliflor;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-05;coleccionable;Coral asta de ciervo;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-06;coleccionable;Gorgonia abanico;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-07;coleccionable;Coral azul;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-08;coleccionable;Coral tubo de órgano;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-09;coleccionable;Coral bambú;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-10;coleccionable;Coral negro;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-11;coleccionable;Coral rojo mediterráneo;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:coast;;;;true;B
+piece:COR-12;coleccionable;Coral cuerno de alce;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:NUM-01;coleccionable;Penique victoriano;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-02;coleccionable;Denario romano;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-03;coleccionable;Dracma griega;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-04;coleccionable;Moneda cash china;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-05;coleccionable;Rupia de la India británica;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-06;coleccionable;Real brasileño antiguo;;;excavaciones ⟵ dig:andes_strata | comercio ⟵ facility:caravan:3;;;;true;B
+piece:NUM-07;coleccionable;Dólar de plata estadounidense;;;excavaciones ⟵ dig:canadian_rocks | comercio ⟵ facility:caravan:3;;;;true;B
+piece:NUM-08;coleccionable;Koban japonés;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:3;;;;true;B
+piece:NUM-13;coleccionable;Tálero de María Teresa;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:3;;;;true;B
+piece:NUM-10;coleccionable;Soberano británico de oro;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:4;;;;true;B
+piece:NUM-11;coleccionable;Ocho reales mexicano;;;excavaciones ⟵ dig:canadian_rocks | comercio ⟵ facility:caravan:4;;;;true;B
+piece:NUM-12;coleccionable;Doblón español de naufragio;;;excavaciones ⟵ dig:andes_strata | comercio ⟵ facility:caravan:5;;;;true;B
+piece:CIV-01;coleccionable;Lucerna romana;;;expediciones ⟵ voyage:coast | excavaciones ⟵ dig:british_cliffs;;;;true;B
+piece:CIV-02;coleccionable;Ánfora griega;;;expediciones ⟵ voyage:coast | excavaciones ⟵ dig:british_cliffs;;;;true;B
+piece:CIV-03;coleccionable;Fíbula nórdica;;;expediciones ⟵ voyage:coast | excavaciones ⟵ dig:british_cliffs;;;;true;B
+piece:CIV-04;coleccionable;Escarabeo egipcio;;;expediciones ⟵ voyage:ethiopia_survey | excavaciones ⟵ dig:namib_rocks;;;;true;B
+piece:CIV-05;coleccionable;Sello cilíndrico;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:CIV-06;coleccionable;Figurilla del valle del Indo;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:CIV-07;coleccionable;Cerámica pueblo ancestral;;;expediciones ⟵ voyage:mesoamerica_survey | excavaciones ⟵ dig:canadian_rocks;;;;true;B
+piece:CIV-08;coleccionable;Colgante de jade maya;;;expediciones ⟵ voyage:mesoamerica_survey | excavaciones ⟵ dig:canadian_rocks;;;;true;B
+piece:CIV-09;coleccionable;Quipu andino;;;expediciones ⟵ voyage:andes_survey | excavaciones ⟵ dig:andes_strata;;;;true;B
+piece:CIV-10;coleccionable;Textil nazca;;;expediciones ⟵ voyage:andes_survey | excavaciones ⟵ dig:andes_strata;;;;true;B
+piece:CIV-11;coleccionable;Colgante pounamu maorí;;;expediciones ⟵ voyage:pacific_survey | excavaciones ⟵ dig:australia_strata;;;;true;B
+piece:CIV-12;coleccionable;Placa del Reino de Benín;;;expediciones ⟵ voyage:ethiopia_survey | excavaciones ⟵ dig:namib_rocks;;;;true;B
+piece:ARM-01;coleccionable;Khopesh egipcio;;;excavaciones ⟵ dig:namib_rocks | comercio ⟵ facility:caravan:2;;;;true;B
+piece:ARM-02;coleccionable;Casco corintio;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:ARM-03;coleccionable;Gladius romano;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:ARM-04;coleccionable;Armadura samurái;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:2;;;;true;B
+piece:ARM-05;coleccionable;Jian chino;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:2;;;;true;B
+piece:ARM-06;coleccionable;Keris indonesio;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:3;;;;true;B
+piece:ARM-07;coleccionable;Cota de malla europea;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:3;;;;true;B
+piece:ARM-08;coleccionable;Espada ropera española;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:3;;;;true;B
+piece:ARM-09;coleccionable;Sable otomano ceremonial;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:3;;;;true;B
+piece:ARM-10;coleccionable;Escudo zulú;;;excavaciones ⟵ dig:namib_rocks | comercio ⟵ facility:caravan:4;;;;true;B
+piece:ARM-11;coleccionable;Chimalli mexica;;;excavaciones ⟵ dig:canadian_rocks | comercio ⟵ facility:caravan:4;;;;true;B
+piece:ARM-12;coleccionable;Clava mapuche ceremonial;;;excavaciones ⟵ dig:andes_strata | comercio ⟵ facility:caravan:5;;;;true;B
+piece:MAS-01;coleccionable;Máscara teatral griega;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAS-02;coleccionable;Máscara veneciana;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAS-03;coleccionable;Kokeshi de madera;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAS-04;coleccionable;Netsuke tallado;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAS-05;coleccionable;Peso de oro akan;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAS-06;coleccionable;Máscara gelede;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAS-07;coleccionable;Figurilla olmeca;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAS-08;coleccionable;Máscara maya de jade;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAS-09;coleccionable;Vasija retrato moche;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAS-10;coleccionable;Figurilla inca;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:MAS-11;coleccionable;Hei-tiki maorí;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:MAS-12;coleccionable;Máscara de madera baulé;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:5;;;;true;B
+piece:MAP-01;coleccionable;Carta portulana mediterránea;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAP-02;coleccionable;Tabula Peutingeriana;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAP-03;coleccionable;Mapa de Juan de la Cosa;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAP-04;coleccionable;Atlas de Mercator;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAP-05;coleccionable;Mapa de Piri Reis;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MAP-06;coleccionable;Carta de las rutas de la seda;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAP-07;coleccionable;Carta de la costa suajili;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAP-08;coleccionable;Mapa del valle de México;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAP-09;coleccionable;Carta del estrecho de Magallanes;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MAP-10;coleccionable;Carta de la Gran Barrera;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:MAP-11;coleccionable;Carta del Pacífico de Cook;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:MAP-12;coleccionable;Carta de las tierras antárticas;;;expediciones ⟵ voyage:polar_survey | comercio ⟵ facility:caravan:5;;;;true;B
+piece:HUE-01;coleccionable;Huevo de codorniz;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-02;coleccionable;Huevo de frailecillo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-03;coleccionable;Huevo de halcón peregrino;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-04;coleccionable;Huevo de flamenco;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-05;coleccionable;Huevo de ñandú;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-06;coleccionable;Huevo de emú;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:3 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-07;coleccionable;Huevo de casuario;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:3 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-08;coleccionable;Huevo de kiwi;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:3 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-09;coleccionable;Huevo de colibrí;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:3 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-10;coleccionable;Huevo de avestruz;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-11;coleccionable;Huevo de pingüino emperador;;;expediciones ⟵ voyage:polar_survey | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-12;coleccionable;Huevo de ave elefante;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:5;;;;true;B
+piece:FOS-01;coleccionable;Helecho fósil;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-02;coleccionable;Ammonite espiral;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-03;coleccionable;Madera petrificada;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-04;coleccionable;Trilobite marroquí;;;excavaciones ⟵ dig:namib_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-05;coleccionable;Diente de tiburón fósil;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-06;coleccionable;Pez fósil;;;excavaciones ⟵ dig:namib_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-07;coleccionable;Hoja fósil;;;excavaciones ⟵ dig:anatolia_strata | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-08;coleccionable;Cangrejo herradura fósil;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-09;coleccionable;Huellas de dinosaurio;;;excavaciones ⟵ dig:andes_strata | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-10;coleccionable;Gastrólito fósil documentado;;;excavaciones ⟵ dig:canadian_rocks | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-11;coleccionable;Pluma fósil de Solnhofen;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1 | taller ⟵ facility:workshop:3;;;;true;B
+piece:FOS-12;coleccionable;Diente de reptil marino;;;excavaciones ⟵ dig:british_cliffs | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:INS-01;coleccionable;Lupa de naturalista;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:INS-02;coleccionable;Brújula de bolsillo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:INS-03;coleccionable;Prensa botánica;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:INS-04;coleccionable;Plomada cartográfica;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:INS-13;coleccionable;Barómetro de mercurio de gabinete;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:INS-06;coleccionable;Cuaderno de campo impermeable;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3;;;;true;B
+piece:INS-07;coleccionable;Teodolito antiguo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3;;;;true;B
+piece:INS-08;coleccionable;Catalejo de latón;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3;;;;true;B
+piece:INS-09;coleccionable;Cámara de placas;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3;;;;true;B
+piece:INS-10;coleccionable;Sextante náutico;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4;;;;true;B
+piece:INS-11;coleccionable;Microscopio de campo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4;;;;true;B
+piece:INS-12;coleccionable;Cronómetro marino;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:5;;;;true;B
+piece:MARV-01;coleccionable;Piedra de río perforada;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MARV-02;coleccionable;Rosa del desierto;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MARV-03;coleccionable;Concreción esférica;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MARV-04;coleccionable;Ventifacto;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MARV-05;coleccionable;Vidrio volcánico iridiscente;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:2;;;;true;B
+piece:MARV-06;coleccionable;Geoda de cuarzo;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MARV-07;coleccionable;Piedra solar de calcita;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MARV-08;coleccionable;Perla barroca;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MARV-09;coleccionable;Fulgurita;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:3;;;;true;B
+piece:MARV-10;coleccionable;Geoda de amatista gigante;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:MARV-11;coleccionable;Vidrio del desierto libio;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:4;;;;true;B
+piece:MARV-12;coleccionable;Copo de nieve antártico;;;expediciones ⟵ voyage:polar_survey | comercio ⟵ facility:caravan:5;;;;true;B
+piece:HOJ-01;coleccionable;Hoja de ginkgo;;;campo ⟵ region:HX-03-13 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-02;coleccionable;Hoja de arce azucarero;;;campo ⟵ region:HX-01-05 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-03;coleccionable;Hoja de higuera común;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-04;coleccionable;Fronda de culantrillo;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-05;coleccionable;Hoja de eucalipto azul;;;campo ⟵ region:oc_nueva_guinea | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-06;coleccionable;Hoja de tulípero;;;campo ⟵ region:HX-01-05 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-07;coleccionable;Fronda de helecho arborescente plateado;;;campo ⟵ region:oc_nueva_guinea | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-08;coleccionable;Hoja de nenúfar gigante amazónico;;;campo ⟵ region:sa_caribe_sudamericano | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-09;coleccionable;Hoja de gneto africano;;;campo ⟵ region:HX-07-10 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-10;coleccionable;Fronda de helecho lengua de ciervo;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-11;coleccionable;Hoja de planta jarro de Raffles;;;campo ⟵ region:HX-03-13 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:HOJ-12;coleccionable;Hoja de palma viajera;;;campo ⟵ region:HX-07-10 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-01;coleccionable;Basalto columnar de Antrim;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-02;coleccionable;Granito de Cornualles;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-03;coleccionable;Pizarra de Gales;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-04;coleccionable;Pumita del Vesubio;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-05;coleccionable;Arenisca de las Blue Mountains;;;campo ⟵ region:oc_nueva_guinea | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-06;coleccionable;Travertino de Pamukkale;;;campo ⟵ region:HX-03-13 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-07;coleccionable;Toba volcánica de Capadocia;;;campo ⟵ region:HX-03-13 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-08;coleccionable;Conglomerado de los Andes;;;campo ⟵ region:sa_caribe_sudamericano | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-09;coleccionable;Gneis de Lewis;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-10;coleccionable;Diatomita lacustre;;;campo ⟵ region:HX-06-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-11;coleccionable;Hierro bandeado de Hamersley;;;campo ⟵ region:oc_nueva_guinea | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ROC-13;coleccionable;Basalto olivínico escocés;;;campo ⟵ region:HX-01-09 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:ALG-01;coleccionable;Sargazo;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-02;coleccionable;Lechuga de mar;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:ALG-03;coleccionable;Musgo de Irlanda;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:ALG-04;coleccionable;Cochayuyo;;;campo ⟵ region:sa_caribe_sudamericano | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-05;coleccionable;Alga coralina articulada;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:ALG-06;coleccionable;Kelpo gigante;;;campo ⟵ region:HX-02-02 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-07;coleccionable;Wakame;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-08;coleccionable;Alga uva del Indo-Pacífico;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-09;coleccionable;Dulse atlántico;;;campo ⟵ region:HX-02-02 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-10;coleccionable;Alga abanico de pavo;;;campo ⟵ region:HX-06-09 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-11;coleccionable;Verde de cordón;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:ALG-12;coleccionable;Alga arcoíris australiana;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:MED-01;coleccionable;Medalla histórica de Waterloo;;;comercio ⟵ facility:caravan:2;;;;true;B
+piece:MED-02;coleccionable;Medalla de campaña de Seringapatam;;;comercio ⟵ facility:caravan:2;;;;true;B
+piece:MED-03;coleccionable;Insignia del Águila Blanca;;;comercio ⟵ facility:caravan:2;;;;true;B
+piece:MED-04;coleccionable;Cruz de la Legión de Honor;;;comercio ⟵ facility:caravan:2;;;;true;B
+piece:MED-05;coleccionable;Medalla de la Reconquista de Buenos Aires;;;comercio ⟵ facility:caravan:2;;;;true;B
+piece:MED-06;coleccionable;Medalla de proclamación de Pedro I;;;comercio ⟵ facility:caravan:3;;;;true;B
+piece:MED-07;coleccionable;Cruz de la Orden de Guadalupe;;;comercio ⟵ facility:caravan:3;;;;true;B
+piece:MED-13;coleccionable;Insignia civil de la Orden de Leopoldo;;;comercio ⟵ facility:caravan:3;;;;true;B
+piece:MED-09;coleccionable;Cruz de San Jorge rusa;;;comercio ⟵ facility:caravan:3;;;;true;B
+piece:MED-10;coleccionable;Medalla de oro de la Real Sociedad Geográfica;;;comercio ⟵ facility:caravan:4;;;;true;B
+piece:MED-11;coleccionable;Medalla de Trafalgar de Boulton;;;comercio ⟵ facility:caravan:4;;;;true;B
+piece:MED-12;coleccionable;Orden del Sol del Perú;;;comercio ⟵ facility:caravan:5;;;;true;B
+piece:ARQ-01;coleccionable;Nido de ave tejedora;;;campo ⟵ region:HX-06-09 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-02;coleccionable;Nido de hornero;;;campo ⟵ region:sa_caribe_sudamericano | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-03;coleccionable;Nido de golondrina común;;;campo ⟵ region:HX-01-09 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-04;coleccionable;Celda de avispa alfarera;;;campo ⟵ region:HX-03-13;;;;true;B
+piece:ARQ-05;coleccionable;Panal de abeja gigante;;;campo ⟵ region:HX-03-13;;;;true;B
+piece:ARQ-06;coleccionable;Dique de castor canadiense;;;campo ⟵ region:HX-01-05 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-07;coleccionable;Pérgola de ave jardinera satinada;;;campo ⟵ region:oc_nueva_guinea | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-08;coleccionable;Nido de pájaro sastre;;;campo ⟵ region:HX-03-13 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-09;coleccionable;Termitero catedral;;;campo ⟵ region:HX-06-09;;;;true;B
+piece:ARQ-10;coleccionable;Rueda de telaraña de seda dorada;;;campo ⟵ region:HX-06-09;;;;true;B
+piece:ARQ-11;coleccionable;Refugio de tricóptero de grava;;;campo ⟵ region:HX-01-09;;;;true;B
+piece:ARQ-12;coleccionable;Madriguera de perrito de la pradera;;;campo ⟵ region:HX-01-05 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:BOT-13;coleccionable;Copihue;;;campo ⟵ region:sa_caribe_sudamericano | expediciones ⟵ voyage:andes_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-14;coleccionable;Orquídea vainilla;;;campo ⟵ region:HX-01-05 | expediciones ⟵ voyage:mesoamerica_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-15;coleccionable;Pasiflora azul;;;campo ⟵ region:sa_caribe_sudamericano | expediciones ⟵ voyage:andes_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-16;coleccionable;Ave del paraíso;;;campo ⟵ region:HX-06-09 | expediciones ⟵ voyage:ethiopia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-17;coleccionable;Camelia japonesa;;;campo ⟵ region:HX-03-13 | expediciones ⟵ voyage:asia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-18;coleccionable;Frangipani;;;campo ⟵ region:HX-01-05 | expediciones ⟵ voyage:mesoamerica_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-19;coleccionable;Rododendro himalayo;;;campo ⟵ region:HX-03-13 | expediciones ⟵ voyage:asia_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:BOT-20;coleccionable;Magnolia americana;;;campo ⟵ region:HX-01-05 | expediciones ⟵ voyage:mesoamerica_survey | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-01;coleccionable;Caoba cubana;;;campo ⟵ region:HX-01-05 | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-02;coleccionable;Caoba hondureña;;;campo ⟵ region:HX-01-05 | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-03;coleccionable;Ébano africano;;;campo ⟵ region:HX-08-11 | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-04;coleccionable;Ébano de Ceilán;;;campo ⟵ region:HX-03-13 | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-05;coleccionable;Palo de rosa brasileño;;;campo ⟵ region:sa_caribe_sudamericano | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-06;coleccionable;Palo de rosa indio;;;campo ⟵ region:HX-03-13 | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-07;coleccionable;Teca birmana;;;campo ⟵ region:HX-03-13 | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-08;coleccionable;Nogal europeo;;;campo ⟵ region:HX-01-09 | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-09;coleccionable;Cocobolo;;;campo ⟵ region:HX-01-05 | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-10;coleccionable;Sándalo rojo;;;campo ⟵ region:HX-03-13 | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-11;coleccionable;Guayacán;;;campo ⟵ region:HX-01-05 | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:2;;;;true;B
+piece:MAD-12;coleccionable;Roble de turbera;;;campo ⟵ region:HX-01-09 | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:2;;;;true;B
+piece:HEL-01;coleccionable;Helecho macho;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-02;coleccionable;Helecho hembra;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-03;coleccionable;Helecho real;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-04;coleccionable;Helecho águila;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-05;coleccionable;Helecho nido de ave;;;campo ⟵ region:HX-03-13 | expediciones ⟵ voyage:asia_survey;;;;true;B
+piece:HEL-06;coleccionable;Helecho cuerno de alce;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:pacific_survey;;;;true;B
+piece:HEL-07;coleccionable;Helecho espada;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-08;coleccionable;Helecho botón;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:pacific_survey;;;;true;B
+piece:HEL-09;coleccionable;Helecho película;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-10;coleccionable;Azolla;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:HEL-11;coleccionable;Salvinia;;;campo ⟵ region:sa_caribe_sudamericano | expediciones ⟵ voyage:andes_survey;;;;true;B
+piece:HEL-12;coleccionable;Mamaku;;;campo ⟵ region:oc_nueva_guinea | expediciones ⟵ voyage:pacific_survey;;;;true;B
+piece:GEM-13;coleccionable;Diamante;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-14;coleccionable;Turmalina bicolor;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-15;coleccionable;Espinela roja;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-16;coleccionable;Ojo de gato;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-17;coleccionable;Citrino;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-18;coleccionable;Circón miel;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-19;coleccionable;Ópalo de fuego;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:GEM-20;coleccionable;Piedra lunar;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-01;coleccionable;Platino nativo;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-02;coleccionable;Paladio;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-03;coleccionable;Rodio;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-04;coleccionable;Iridio;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-05;coleccionable;Osmio;;;comercio ⟵ facility:caravan:2 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-06;coleccionable;Oro nativo;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-07;coleccionable;Plata nativa;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-08;coleccionable;Bismuto;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-09;coleccionable;Wolframita;;;comercio ⟵ facility:caravan:3 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-10;coleccionable;Vanadinita;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-11;coleccionable;Columbita;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:MTR-12;coleccionable;Tantalita;;;comercio ⟵ facility:caravan:4 | prospecciones ⟵ facility:surveys:1;;;;true;B
+piece:CON-13;coleccionable;Concha arpa;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-14;coleccionable;Mitra episcopal;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-15;coleccionable;Caracola araña;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-16;coleccionable;Caracol oliva;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:CON-17;coleccionable;Cauri moneda;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-18;coleccionable;Caracola melón;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-19;coleccionable;Peine de Venus;;;campo ⟵ region:HX-03-18 | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:CON-20;coleccionable;Tellina violeta;;;campo ⟵ region:HX-01-09 | expediciones ⟵ voyage:coast;;;;true;B
+piece:COR-13;coleccionable;Coral hongo;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-14;coleccionable;Coral burbuja;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-15;coleccionable;Coral sol;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:coast;;;;true;B
+piece:COR-16;coleccionable;Coral látigo;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-17;coleccionable;Coral de encaje;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-18;coleccionable;Coral hoja;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-19;coleccionable;Coral de cuero;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:COR-20;coleccionable;Coral hidnóforo;;;campo ⟵ region:mar_atlantico_septentrional | expediciones ⟵ voyage:atlantic_survey;;;;true;B
+piece:NUM-09;coleccionable;Estátero lidio;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-14;coleccionable;Sólido bizantino;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-15;coleccionable;Dinar abasí;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-16;coleccionable;Ducado veneciano;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:2;;;;true;B
+piece:NUM-17;coleccionable;Placa sueca;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:3;;;;true;B
+piece:NUM-18;coleccionable;Rublo imperial;;;excavaciones ⟵ dig:british_cliffs | comercio ⟵ facility:caravan:3;;;;true;B
+piece:NUM-19;coleccionable;Akçe otomano;;;excavaciones ⟵ dig:anatolia_strata | comercio ⟵ facility:caravan:4;;;;true;B
+piece:NUM-20;coleccionable;Macuquina de Potosí;;;excavaciones ⟵ dig:andes_strata | comercio ⟵ facility:caravan:4;;;;true;B
+piece:CIV-13;coleccionable;Tablilla sumeria;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:CIV-14;coleccionable;Vasija etrusca;;;expediciones ⟵ voyage:coast | excavaciones ⟵ dig:british_cliffs;;;;true;B
+piece:CIV-15;coleccionable;Amuleto fenicio;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:CIV-16;coleccionable;Sello aqueménida;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:CIV-17;coleccionable;Cerámica Jōmon;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:CIV-18;coleccionable;Tapa polinesia;;;expediciones ⟵ voyage:pacific_survey | excavaciones ⟵ dig:australia_strata;;;;true;B
+piece:CIV-19;coleccionable;Disco misisipiano;;;expediciones ⟵ voyage:mesoamerica_survey | excavaciones ⟵ dig:canadian_rocks;;;;true;B
+piece:CIV-20;coleccionable;Relieve jemer;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:MUN-01;coleccionable;Gran Pirámide;;;expediciones ⟵ voyage:ethiopia_survey | excavaciones ⟵ dig:namib_rocks;;;;true;B
+piece:MUN-02;coleccionable;Jardines de Babilonia;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:MUN-03;coleccionable;Zeus de Olimpia;;;expediciones ⟵ voyage:coast | excavaciones ⟵ dig:british_cliffs;;;;true;B
+piece:MUN-04;coleccionable;Templo de Artemisa;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:MUN-05;coleccionable;Mausoleo de Halicarnaso;;;expediciones ⟵ voyage:asia_survey | excavaciones ⟵ dig:anatolia_strata;;;;true;B
+piece:MUN-06;coleccionable;Coloso de Rodas;;;expediciones ⟵ voyage:coast | excavaciones ⟵ dig:british_cliffs;;;;true;B
+piece:MUN-07;coleccionable;Faro de Alejandría;;;expediciones ⟵ voyage:ethiopia_survey | excavaciones ⟵ dig:namib_rocks;;;;true;B
+piece:HUE-13;coleccionable;Cisne cantor;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-14;coleccionable;Alcatraz atlántico;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-15;coleccionable;Arao común;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-16;coleccionable;Albatros viajero;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:2 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-17;coleccionable;Tinamú;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:3 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-18;coleccionable;Ave tejedora;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:3 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-19;coleccionable;Cálao rinoceronte;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:HUE-20;coleccionable;Guacamayo azul;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:DAG-01;coleccionable;Westminster;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-02;coleccionable;Notre-Dame;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-03;coleccionable;Coliseo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-04;coleccionable;Acrópolis;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-05;coleccionable;Alhambra;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-06;coleccionable;San Basilio;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-07;coleccionable;Pirámides de Guiza;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-08;coleccionable;Karnak;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:2 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-09;coleccionable;Cabo de Buena Esperanza;;;expediciones ⟵ voyage:ethiopia_survey | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-10;coleccionable;Santa Sofía;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-11;coleccionable;Petra;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-12;coleccionable;Taj Mahal;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-13;coleccionable;Gran Muralla;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-14;coleccionable;Ciudad Prohibida;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-15;coleccionable;Monte Fuji;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:3 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-16;coleccionable;Angkor Wat;;;expediciones ⟵ voyage:asia_survey | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-17;coleccionable;Teotihuacán;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-18;coleccionable;Chichén Itzá;;;expediciones ⟵ voyage:mesoamerica_survey | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-19;coleccionable;Cusco histórico;;;expediciones ⟵ voyage:andes_survey | comercio ⟵ facility:caravan:4 | taller ⟵ facility:workshop:4;;;;true;B
+piece:DAG-20;coleccionable;Moáis de Rapa Nui;;;expediciones ⟵ voyage:pacific_survey | comercio ⟵ facility:caravan:5;;;;true;B
+piece:RAR-01;coleccionable;Bezoar;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-02;coleccionable;Alicornio;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-03;coleccionable;Ámbar gris;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-04;coleccionable;Piedra de sapo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-05;coleccionable;Piedra de serpiente;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-06;coleccionable;Aetita;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-07;coleccionable;Lengua de dragón;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-08;coleccionable;Huevo de sirena;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-09;coleccionable;Almizcle;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-10;coleccionable;Basilisco;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-11;coleccionable;Sangre de dragón;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B
+piece:RAR-12;coleccionable;Colmillo apócrifo;;;expediciones ⟵ voyage:coast | comercio ⟵ facility:caravan:4 | observación animal ⟵ region:HX-01-09;;;;true;B

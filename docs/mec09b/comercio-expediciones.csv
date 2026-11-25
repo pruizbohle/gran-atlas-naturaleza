@@ -1,0 +1,41 @@
+tipo;id;nombre;requisitos;iniciar;terminar;recompensas;evidencia;estado;nueva
+expedición;coast;Reconocimiento costero;prestigio 0 · £35 · 10 C;sí;sí;£65 · 25 notas · botín;D;Verificado;
+expedición;north;Cartografía del mar del Norte;prestigio 1 · £90 · 35 C;sí;sí;£150 · 70 notas · botín;D;Verificado;
+expedición;alps;Misión a los Alpes;prestigio 2 · £180 · 75 C;sí;sí;£260 · 125 notas · botín;D;Verificado;
+expedición;carpathians;Ruta científica a los Cárpatos;prestigio 4 · £260 · 110 C;sí;sí;£380 · 180 notas · botín;D;Verificado;
+expedición;balkans;Ruta científica a los Balcanes;prestigio 6 · £340 · 150 C;sí;sí;£500 · 250 notas · botín;D;Verificado;
+expedición;ethiopia_survey;Reconocimiento de las tierras altas etíopes;prestigio 92 · £950 · 380 C · africa_map;sí;sí;£1400 · 700 notas · botín;D;Verificado;
+expedición;namib_survey;Reconocimiento del desierto del Namib;prestigio 95 · £1250 · 460 C · africa_map;sí;sí;£1750 · 900 notas · botín;D;Verificado;
+expedición;atlantic_survey;Reconocimiento del Atlántico;prestigio 116 · £1700 · 650 C · nuevo_mundo_1;sí;sí;£2050 · 850 notas · botín;D;Verificado;
+expedición;mesoamerica_survey;Reconocimiento de Mesoamérica;prestigio 130 · £1500 · 560 C · north_america_map · norteamerica_1;sí;sí;£1900 · 880 notas · botín;C;Condicional;
+expedición;asia_survey;Reconocimiento de Anatolia y el Cáucaso;prestigio 100 · £1300 · 520 C · asia_map · asia_1;sí;sí;£1700 · 850 notas · botín;D;Verificado;
+expedición;andes_survey;Reconocimiento de los Andes;prestigio 190 · £1900 · 640 C · south_america_map · sudamerica_1;sí;sí;£2300 · 980 notas · botín;D;Verificado;
+expedición;pacific_survey;Reconocimiento del Pacífico austral;prestigio 240 · £2300 · 760 C · oceania_map · oceania_1;sí;sí;£2800 · 1150 notas · botín;D;Verificado;
+expedición;polar_survey;Reconocimiento de los mares polares;prestigio 285 · £2800 · 900 C · polar_map · polos_1;sí;sí;£3300 · 1300 notas · botín;D;Verificado;
+expedición;himalaya_survey;Reconocimiento del Himalaya y el Tíbet;prestigio 120 · £1600 · 560 C · asia_map · asia_1;sí;sí;£1950 · 900 notas · botín;D;Verificado;MEC-09B
+expedición;malay_survey;Travesía del archipiélago malayo;prestigio 150 · £1800 · 600 C · asia_map · asia_1;sí;sí;£2100 · 950 notas · botín;D;Verificado;MEC-09B
+expedición;amazon_survey;Reconocimiento del Amazonas;prestigio 185 · £1850 · 620 C · south_america_map · sudamerica_1;sí;sí;£2250 · 960 notas · botín;D;Verificado;MEC-09B
+expedición;nz_survey;Reconocimiento de Nueva Zelanda y Tasmania;prestigio 235 · £2200 · 740 C · oceania_map · oceania_1;sí;sí;£2700 · 1100 notas · botín;D;Verificado;MEC-09B
+expedición;antarctic_survey;Expedición a las costas antárticas;prestigio 290 · £2900 · 920 C · polar_map · polos_1;sí;sí;£3400 · 1350 notas · botín;D;Verificado;MEC-09B
+expedición;indian_ocean_survey;Reconocimiento del océano Índico;prestigio 340 · £2600 · 820 C · world_map · mares_superficiales_1;sí;sí;£3100 · 1200 notas · botín;D;Verificado;MEC-09B
+ruta comercial;coastal_trade;Cabotaje de suministros;prestigio 0 · £120;sí;sí;"{""parchment_scrap"":3,""pressed_flower"":2,""river_pebble"":3}";C;Condicional;
+ruta comercial;workshop_trade;Proveedores del taller;prestigio 10 · £280;sí;sí;"{""polished_lens"":2,""brass_shard"":2,""carved_wood"":3}";C;Condicional;
+ruta comercial;archive_trade;Caravana de cartógrafos;prestigio 53 · £500;sí;sí;"{""old_ink"":2,""parchment_scrap"":5,""brass_shard"":3,""polished_lens"":2}";C;Condicional;
+ruta comercial;ocean_trade;Travesía de abastecimiento;prestigio 125 · £900;sí;sí;"{""brass_shard"":5,""polished_lens"":4,""old_ink"":3,""carved_wood"":6}";C;Condicional;
+yacimiento;british_cliffs;Estratos de las Islas Británicas;región HX-01-09;sí;sí;fragmentos 2–3 · dientes 0.12 · cráneo 0.004;C;Condicional;
+yacimiento;alpine_basin;Cuenca sedimentaria alpina;región HX-02-09;sí;sí;fragmentos 3–5 · dientes 0.2 · cráneo 0.009;C;Condicional;
+yacimiento;namib_rocks;Estratos del desierto del Namib;región HX-11-08 · africa_1;sí;sí;fragmentos 5–8 · dientes 0.3 · cráneo 0.025;C;Condicional;
+yacimiento;canadian_rocks;Sedimentos de Columbia Británica;región HX-02-02 · norteamerica_1;sí;sí;fragmentos 6–9 · dientes 0.32 · cráneo 0.035;C;Condicional;
+yacimiento;anatolia_strata;Estratos de Anatolia;región HX-03-15 · asia_1;sí;sí;fragmentos 4–7 · dientes 0.25 · cráneo 0.02;C;Condicional;
+yacimiento;andes_strata;Estratos andinos;región sa_andes_centrales · sudamerica_1;sí;sí;fragmentos 4–7 · dientes 0.25 · cráneo 0.02;C;Condicional;
+yacimiento;australia_strata;Estratos del desierto australiano;región oc_desierto_australiano · oceania_1;sí;sí;fragmentos 5–8 · dientes 0.28 · cráneo 0.025;C;Condicional;
+yacimiento;siwalik_beds;Colinas de Siwalik;región HX-05-16 · asia_1;sí;sí;fragmentos 4–7 · dientes 0.26 · cráneo 0.02;C;Condicional;MEC-09B
+yacimiento;punta_alta;Barrancas de Punta Alta;región sa_pampas · sudamerica_1;sí;sí;fragmentos 4–7 · dientes 0.25 · cráneo 0.02;C;Condicional;MEC-09B
+yacimiento;moa_deposits;Depósitos de moa de Nueva Zelanda;región oc_nueva_zelanda · oceania_1;sí;sí;fragmentos 4–7 · dientes 0.18 · cráneo 0.02;C;Condicional;MEC-09B
+mercado;parchment_scrap;Pergamino antiguo;Astillero · £45;sí;sí;parchment_scrap;C;Condicional;
+mercado;pressed_flower;Flor prensada;Astillero · £40;sí;sí;pressed_flower;C;Condicional;
+mercado;river_pebble;Piedra de río pulida;Astillero · £30;sí;sí;river_pebble;C;Condicional;
+mercado;carved_wood;Madera tallada;Astillero · £80;sí;sí;carved_wood;C;Condicional;
+mercado;polished_lens;Lente pulida;Astillero · £160;sí;sí;polished_lens;C;Condicional;
+mercado;brass_shard;Pieza de latón antiguo;Astillero · £200;sí;sí;brass_shard;C;Condicional;
+mercado;old_ink;Tintero antiguo;Astillero · £180;sí;sí;old_ink;C;Condicional;

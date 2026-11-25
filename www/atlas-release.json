@@ -1,7 +1,8 @@
 {
   "version": "5.6.9",
-  "build": "MEC-09A",
-  "label": "5.6.9 Beta — MEC-09A (revisión técnica de consolidación)",
+  "build": "MEC-09B",
+  "label": "5.6.9 Beta — MEC-09B (auditoría funcional y de progresión)",
+  "v569b": {"mec09b": true, "beta": true, "functionalAudit": true, "consolidation": "5.6.9", "progressionController": true, "daguerreotypePlates": "state.mec06.plates", "geographicCoverage": {"voyages": 6, "digSites": 3, "newRegions": 0}, "balance": "BAL-01 provisional", "apk": false},
   "v569": {"mec09a": true, "beta": true, "technicalReview": true, "consolidation": "5.6.9", "historicFailuresClassified": 216, "eventEditionsRegistry": true, "coreSanitizer": true, "apk": false},
   "v568": {"mec08": true, "beta": true, "achievementsNew": 84, "commissionsNew": 12, "contractTemplates": 20, "events": 10, "state": "state.mec08", "eventModifiersLayer": true, "retroactiveWithoutMoney": true, "apk": false},
   "v567": {"mec07": true, "beta": true, "naturalRecords": 25, "behaviors": 20, "state": "state.naturalRecords", "isolatedRng": true, "apk": false},

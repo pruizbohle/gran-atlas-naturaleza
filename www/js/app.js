@@ -2647,6 +2647,10 @@ function naturalRecordsSexMEC08(){return [];}
 // MEC-09A: ganchos de reconocimiento (el bloque MEC-08 los reemplaza). activityScopeMEC08 ejecuta una
 // actividad con su fecha efectiva; recognitionHookMEC08 registra contadores dentro de la transacción.
 function activityScopeMEC08(at,run){return run();}
+// MEC-09B · Procedencia de placas daguerrotípicas (el bloque MEC-09B la reemplaza). Eventos: 'expose'
+// (al zarpar con cámara), 'settle' (liquidación con su resultado), 'exposed' (placas expuestas
+// disponibles para el revelado del Taller), 'develop' (consume una expuesta y devuelve su evidencia).
+function platesMEC09B(){return null;}
 // MEC-09A · Gestión de foco tras re-renderizar el panel: vuelve al mismo control si sigue existiendo
 // (mismo data-action y data-id) o, si no, al encabezado de la sección indicada.
 function restoreFocusMEC09A(selectors){
@@ -3679,6 +3683,8 @@ const MUSEUM_DIG_SITES=[
 ];
 // MEC-04 · yacimientos nuevos (Asia, Sudamérica, Oceanía); solo con el módulo MEC-04. Se añaden antes de normalizar la partida.
 for(const site of globalThis.AtlasMEC04Content?.digSites||[])if(!MUSEUM_DIG_SITES.some(x=>x.id===site.id))MUSEUM_DIG_SITES.push({...site,fragments:[...site.fragments]});
+// MEC-09B · Yacimientos de la ampliación geográfica funcional (www/js/mec09b-geography.js).
+for(const site of globalThis.AtlasMEC09BContent?.digSites||[])if(!MUSEUM_DIG_SITES.some(x=>x.id===site.id))MUSEUM_DIG_SITES.push({...site,fragments:[...site.fragments]});
 const MUSEUM_RELICT_SETS=[
  {id:'ancient_fishes',name:'Linajes acuáticos antiguos',icon:'🐟',requires:['coelacanth_indic','african_lungfish','white_sturgeon'],bonus:0.025},
  {id:'island_survivors',name:'Biodiversidad insular singular',icon:'🏝️',requires:['seychelles_sheathbat','angonoka'],bonus:0.02},
@@ -4548,6 +4554,8 @@ const VOYAGES=[
 ];
 // MEC-04 · destinos nuevos de expedición (Asia, Sudamérica, Oceanía, Polos, Mesoamérica); solo con el módulo MEC-04.
 for(const v of globalThis.AtlasMEC04Content?.voyages||[])if(!VOYAGES.some(x=>x.id===v.id))VOYAGES.push({...v});
+// MEC-09B · Destinos de la ampliación geográfica funcional (www/js/mec09b-geography.js).
+for(const v of globalThis.AtlasMEC09BContent?.voyages||[])if(!VOYAGES.some(x=>x.id===v.id))VOYAGES.push({...v});
 const ITEMS={
  binoculars:{name:'Prismáticos de viaje',emoji:'🔭',slot:'instrument',bonus:'+12 % relativo de probabilidad de encuentro manual',kind:'equip'},
  brass_compass:{name:'Brújula de latón',emoji:'🧭',slot:'instrument',bonus:'+4 % de conocimiento de expediciones (redondeado)',kind:'equip'},
@@ -9273,7 +9281,7 @@ if(globalThis.AtlasMuseumCuration3380){
    for(const id of ids){const take=Math.min(left,state.inventory[id]||0);if(take>0){out[id]=take;left-=take;}if(!left)break;}return left?null:out;};
   // MEC-07: el acceso cartográfico efectivo lo decide mapAccess (bloque MEC-07) si está presente.
   const mapTarget=()=>CARTOGRAPHY3400.find(d=>globalThis.AtlasMapAccessMEC07?globalThis.AtlasMapAccessMEC07(d).ok:!(state.inventory[d.map]>0)&&(!d.sourceResearch||state.purchases?.[d.sourceResearch]>0))||null;
-  const photoPool=()=>{const conts=new Set(REGIONS.filter(r=>state.regionUnlocked?.[r.id]).map(r=>r.continent));
+  const photoPool=(only=null)=>{const conts=new Set(Array.isArray(only)?only:REGIONS.filter(r=>state.regionUnlocked?.[r.id]).map(r=>r.continent));
    return Object.values(K3()?.pieces||{}).filter(p=>p.collection==='Imágenes daguerrotipadas'&&(p.findIn||p.continents||[]).some(c=>conts.has(c))).map(p=>p.id);};
   const stereo=()=>location('estereoscopio_espejos')==='taller'?X6.MODIFIERS.find(m=>m.id==='estereo-foto').value:0;
   const cooldownLeft=(rec,hours,now)=>hours&&rec?.lastAt?Math.max(0,rec.lastAt+hours*3600e3-now):0;
@@ -9282,7 +9290,12 @@ if(globalThis.AtlasMuseumCuration3380){
    if(wl()<t.minWorkshop)reasons.push('Taller '+C.ROMAN[t.minWorkshop]);
    for(const [ids,place] of Object.entries(t.instruments))if(!at(ids,place))reasons.push(ids.split('|').map(name).join(' o ')+' '+(place==='taller'?'instalado en el Taller':'instalado en el Campamento'));
    if(t.group){const g=groupPlan(t.group.id,t.group.qty);if(!g)reasons.push(t.group.qty+' × '+X6.ANIMAL_GROUPS[t.group.id].label.toLowerCase());else for(const [k,v] of Object.entries(g))consume[k]=(consume[k]||0)+v;}
-   for(const [k,v] of Object.entries(t.requires))if((state.inventory[k]||0)<v)reasons.push(name(k)+' '+(state.inventory[k]||0)+'/'+v);
+   // MEC-09B: si hay una placa YA EXPUESTA en una expedición liquidada, el revelado la usa (con la evidencia
+   // de su destino) y no consume una placa virgen; si no, se mantiene la regla de MEC-06 (placa virgen del
+   // inventario, territorios accesibles) y el lote consumido conserva su procedencia (FIFO).
+   const exposedPlates=t.engine==='fotografia'&&t.requires?.placa_daguerrotipo?platesMEC09B('exposed'):null;
+   const useExposed=exposedPlates>0;if(useExposed)delete consume.placa_daguerrotipo;
+   for(const [k,v] of Object.entries(t.requires))if(!(useExposed&&k==='placa_daguerrotipo')&&(state.inventory[k]||0)<v)reasons.push(name(k)+' '+(state.inventory[k]||0)+'/'+v);
    if(t.reward.mapPiece&&!mapTarget())reasons.push('Ningún mapa continental pendiente con fuente accesible');
    const wait=cooldownLeft(state.mec06.studies[sid],t.cooldownHours,now);if(wait)reasons.push('Disponible en '+Math.ceil(wait/60000)+' min');
    const chance=t.reward.photo?Math.min(1,t.reward.photo.chance+stereo()):null;
@@ -9299,7 +9312,8 @@ if(globalThis.AtlasMuseumCuration3380){
     if(t.reward.money)rec.money=earnMoney(t.reward.money,'taller');
     for(const [k,n] of Object.entries(t.reward.items||{})){addInventory(k,n);rec.items[k]=n;}
     if(t.reward.mapPiece){const d=mapTarget();if(!d)return false;addInventory(d.piece,1);rec.items[d.piece]=1;}
-    if(t.reward.photo){const pool=photoPool();if(pool.length&&random()<c.chance){const id=pool[Math.floor(random()*pool.length)%pool.length];if(A3().grant(id,1,'taller','taller:revelado',sid)){got[id]=1;rec.photo={id,origin:K3().pieces[id].origin,place:K3().pieces[id].place,chance:c.chance};}}}
+    let lot=null;if(t.engine==='fotografia'&&t.requires?.placa_daguerrotipo&&platesMEC09B('exposed')!==null){lot=platesMEC09B('develop',sid,now,!('placa_daguerrotipo' in c.consume));if(!lot)return false;}
+    if(t.reward.photo){const pool=lot?.continents?photoPool(lot.continents):photoPool();rec.plate=lot?{lot:lot.id,continents:lot.continents,voyage:lot.voyage}:null;if(pool.length&&random()<c.chance){const id=pool[Math.floor(random()*pool.length)%pool.length];if(A3().grant(id,1,'taller','taller:revelado',sid)){got[id]=1;rec.photo={id,origin:K3().pieces[id].origin,place:K3().pieces[id].place,chance:c.chance};if(lot)platesMEC09B('result',lot.id,id);}}}
     const s=state.mec06.studies[sid]=state.mec06.studies[sid]||{count:0,lastAt:null};s.count++;s.lastAt=now;
     rec.collectibles=got;state.mec06.history.push(rec);state.mec06.history=state.mec06.history.slice(-30);
     pushLog(t.label+' · '+rw.split(', ')[0]+(Object.keys(got).length?' · '+Object.keys(got).map(name).join(', '):'')+'.');return true;});
@@ -9350,7 +9364,7 @@ if(globalThis.AtlasMuseumCuration3380){
     if(location('globo_celeste')==='campamento'){const f=X6.MODIFIERS.find(x=>x.id==='globo-duracion').value;job.endAt=start+Math.max(30000,Math.round((job.endAt-start)*(1+f)));m.instruments.globo_celeste={duration:f};}
     m.camera=cam.used?{used:true}:{used:false,reason:cam.reason};
     if(cam.used){if(!(state.inventory.placa_daguerrotipo>0))return false;state.inventory.placa_daguerrotipo-=1;m.instruments.camara_daguerrotipos={plate:1,chance:cam.chance,stereo:cam.stereo,pool:cam.pool};}
-    job.mec06=m;return true;});
+    job.mec06=m;if(cam.used)platesMEC09B('expose',job,start);return true;});
   };
   const resolveBefore606=resolveVoyageReward;
   resolveVoyageReward=function(job,...rest){
@@ -9359,6 +9373,7 @@ if(globalThis.AtlasMuseumCuration3380){
    if(cam){const conts=new Set(K3()?.voyageDestinations?.[job.type]?.continents||[]);
     const pool=Object.values(K3()?.pieces||{}).filter(p=>p.collection==='Imágenes daguerrotipadas'&&(p.findIn||[]).some(c=>conts.has(c))).map(p=>p.id),got={};
     if(pool.length&&Math.random()<cam.chance){const id=pool[Math.floor(Math.random()*pool.length)%pool.length];if(A3().grant(id,1,'expediciones','expedicion:fotografica',job.id))got[id]=1;}
+    platesMEC09B('settle',job,Object.keys(got)[0]||null);
     globalThis.AtlasCampMEC02Receipt?.('voyageHistory',job,{collectibles:got,fields:{photography:{chance:cam.chance,plate:cam.plate,result:Object.keys(got)[0]||null}}});}
    return ok;
   };
@@ -9922,18 +9937,39 @@ if(globalThis.AtlasMuseumCuration3380){
   const accessible=()=>REGIONS.filter(r=>regionAccessible(r));
   const accSpecies=()=>[...new Set(accessible().flatMap(r=>r.species||[]))];
   const recorded=r=>Object.keys(state.regionalRecords?.regions?.[r.id]?.species||{}).length>0;
+  // MEC-09B · Disponibilidad con condiciones reales. Cada métrica devuelve {n, repeatable, why}:
+  // n = cantidad disponible (finita) o fuentes repetibles que cumplen sus requisitos actuales;
+  // repeatable = la actividad puede repetirse (basta n > 0). Nunca se usa «infinito» sin comprobar
+  // capacidades, instrumentos, materiales, instalaciones o regiones.
+  const fin9=(n,why)=>({n:Math.max(0,n),repeatable:false,why});
+  const rep9=(n,why)=>({n:Math.max(0,n),repeatable:true,why});
+  const srcOf=id=>{try{return (globalThis.AtlasItemSources?.(id)||[]).filter(x=>!/sin fuente|experimental/i.test(x));}catch(_){return [];}};
+  const continentsAcc=()=>new Set(accessible().map(r=>r.continent));
+  const P3=()=>globalThis.AtlasMEC03Catalog?.pieces||{};
+  const cabinetCap=()=>{const L=MUSEUM_LEVELS.find(l=>l.level===(state.museum?.wing||1))||MUSEUM_LEVELS[0];return (L.cabinetSlots||0)*Object.keys(globalThis.AtlasMEC05?.CABINETS||{}).length;};
+  const X6a=()=>globalThis.AtlasMEC06,A6a=()=>globalThis.AtlasMEC06Actions;
   const AVAIL={
-   discoveredAll:()=>undiscoveredAccessible(),
-   visitedAll:()=>accessibleUnvisited(),
-   publishedAll:()=>accSpecies().filter(id=>!state.published?.[id]).length,
-   regionalSpecies:()=>accessible().reduce((t,r)=>t+(r.species||[]).filter(id=>!state.regionalRecords?.regions?.[r.id]?.species?.[id]).length,0),
-   continentsRecorded:()=>{const done=new Set(REGIONS.filter(recorded).map(r=>r.continent));return new Set(accessible().map(r=>r.continent).filter(c=>!done.has(c))).size;},
-   exhibitsNow:()=>Math.min(museumCapacity(),Object.keys(SPECIES).filter(id=>state.discovered?.[id]).length+Object.keys(state.museum?.exhibits||{}).length),
-   cabinetPiecesShown:()=>Infinity,
-   naturalObservations:()=>[...(globalThis.AtlasMEC07?.RECORDS||[]),...(globalThis.AtlasMEC07?.BEHAVIORS||[])].some(e=>accessible().some(r=>(r.species||[]).includes(e.species)))?Infinity:0,
-   demos:()=>demoReady()?Infinity:0
+   discoveredAll:()=>fin9(undiscoveredAccessible(),'especies accesibles sin descubrir'),
+   visitedAll:()=>fin9(accessibleUnvisited(),'regiones accesibles sin visitar'),
+   // Monografías: especies de regiones accesibles sin publicar (las cinco etapas son alcanzables para
+   // todo el catálogo; ver docs/mec09b/monografias.csv).
+   publishedAll:()=>fin9(accSpecies().filter(id=>!state.published?.[id]).length,'monografías pendientes de especies accesibles'),
+   regionalSpecies:()=>fin9(accessible().reduce((t,r)=>t+(r.species||[]).filter(id=>!state.regionalRecords?.regions?.[r.id]?.species?.[id]).length,0),'pares región-especie sin registro'),
+   continentsRecorded:()=>{const done=new Set(REGIONS.filter(recorded).map(r=>r.continent));return fin9([...continentsAcc()].filter(c=>!done.has(c)).length,'continentes accesibles sin registros');},
+   exhibitsNow:()=>fin9(Math.min(museumCapacity(),Object.keys(SPECIES).filter(id=>state.discovered?.[id]).length+Object.keys(state.museum?.exhibits||{}).length),'capacidad zoológica del Museo y especies exhibibles'),
+   cabinetPiecesShown:()=>fin9(Math.min(cabinetCap(),Object.keys(P3()).filter(id=>(state.inventory?.[id]||0)>0||srcOf(id).length).length),'capacidad de gabinetes del nivel actual y piezas obtenibles'),
+   themesActive:()=>fin9(globalThis.AtlasMEC05Actions?.model?.().themes?.length??(cabinetCap()>0?1:0),'temáticas posibles en los gabinetes'),
+   naturalObservations:()=>{const X7=globalThis.AtlasMEC07,acc=accessible();return rep9([...(X7?.RECORDS||[]),...(X7?.BEHAVIORS||[])].filter(e=>acc.some(r=>(r.species||[]).includes(e.species)&&(!e.regions||e.regions.includes?.(r.id)!==false))).length,'récords y conductas con especie en regiones accesibles');},
+   demos:()=>rep9(Object.values(X6a()?.DEMOS||{}).filter(d=>state.museum?.collections?.[d.artifact]).length,'demostraciones con su artefacto catalogado'),
+   studies:()=>rep9(Object.values(X6a()?.STUDIES||{}).filter(st=>lv('workshop')>=(st.minWorkshop||1)&&Object.keys(st.instruments||{}).every(id=>state.museum?.collections?.[id])&&(!st.group||(X6a().ANIMAL_GROUPS?.[st.group.id]?.ids||[]).some(m=>(state.inventory?.[m]||0)>0||srcOf(m).length))).length,'estudios con instrumentos catalogados, Taller suficiente y materiales con fuente'),
+   'counter:crafted':()=>rep9(Object.keys(RECIPES).filter(id=>lv('workshop')>=(RECIPES[id].minWorkshop||1)&&Object.keys(RECIPES[id].requires||{}).every(m=>(state.inventory?.[m]||0)>0||srcOf(m).length)).length,'recetas del nivel de Taller con ingredientes obtenibles'),
+   'pieces:campo':()=>{const c=continentsAcc();return rep9(Object.values(P3()).filter(p=>p.sources?.campo&&(p.sources.campo.continents||[]).some(x=>c.has(x)||x==='Mundial')).length,'piezas de campo en continentes accesibles');},
+   'pieces:comercio':()=>rep9(lv('caravan')>=2?Object.values(P3()).filter(p=>p.sources?.comercio).length:0,'piezas comerciables con Caravana II'),
+   animalStock:()=>rep9(Object.values(X6a()?.ANIMAL_GROUPS||{}).flatMap(g=>g.ids).filter(m=>srcOf(m).length).length,'materiales animales con fuente activa'),
+   sightingsTotal:()=>rep9(accSpecies().length,'especies en regiones accesibles')
   };
-  const objectiveFeasible=(o,target)=>{const f=AVAIL[o.metric];return !f||f()>=target;};
+  const objectiveFeasible=(o,target)=>{const f=AVAIL[o.metric];if(!f)return true;const a=f();return a.repeatable?a.n>0:a.n>=target;};
+  const objectiveReason=(o,target)=>{const f=AVAIL[o.metric];if(!f)return null;const a=f();return (a.repeatable?a.n>0:a.n>=target)?null:(a.why+': '+a.n+(a.repeatable?'':' de '+target));};
   const tierIndex=()=>rankNow()<5?0:rankNow()<12?1:2;
   const instantiate=(t,id,now,extra={})=>{const ti=tierIndex(),mm=m8();
    const objectives=t.objectives.map(o=>{const target=Array.isArray(o.target)?o.target[ti]:o.target;return {metric:o.metric,mode:o.mode,target,baseline:o.mode==='incremental'?(mm[o.metric]||0):0};});
@@ -9965,41 +10001,54 @@ if(globalThis.AtlasMuseumCuration3380){
   // Fechas: reachedAt/completedAt = actividad efectiva; settledAt = liquidación (cuando se detecta);
   // claimedAt = cobro. Para eventos se comprueba PRIMERO la caducidad y luego el cumplimiento, y solo
   // vale lo observado dentro del periodo (objetivos marcados con reachedAt < endsAt).
+  // MEC-09B · El cierre de un evento lo decide SIEMPRE el horizonte efectivo (actividad pendiente anterior
+  // al cierre), nunca la fecha de una actividad posterior que se procese antes; el cumplimiento se marca con
+  // la fecha efectiva de la actividad que lo produce (solo si es anterior al cierre y posterior a la aceptación).
   const syncContracts=(now=Date.now(),effective=null)=>{
-   const t=Number.isFinite(effective)?Math.min(effective,now):horizon(now);
+   const h=horizon(now),t=Number.isFinite(effective)?Math.min(effective,now):h;
    let mm=null;const M=()=>mm||(mm=m8());let changed=false;
    for(const c of state.mec08.contracts){
     if(c.status!=='aceptado')continue;
+    const inWindow=t>=(Number(c.acceptedAt)||0)&&(!(c.kind==='evento'&&Number.isFinite(c.endsAt))||t<c.endsAt);
+    if(inWindow){const pr=progress(c,M());pr.forEach((o,i)=>{const ob=c.objectives[i],met=o.value>=o.target;if(ob.mode==='posesion'){if(!!ob.reached!==met){ob.reached=met;ob.reachedAt=met?t:null;changed=true;}}else if(met&&!ob.reached){ob.reached=true;ob.reachedAt=t;changed=true;}});c.progress=pr.map(o=>o.value);}
+    const done=c.objectives.every(o=>o.reached);
     if(c.kind==='evento'&&Number.isFinite(c.endsAt)){
-     if(t>=c.endsAt){
-      if(c.objectives.every(o=>o.reached)){c.status='completado';c.completedAt=Math.max(...c.objectives.map(o=>o.reachedAt||c.acceptedAt||0));c.settledAt=now;edition(c,'completado',c.completedAt);}
-      else{c.status='caducado';c.closedAt=now;c.endedAt=c.endsAt;edition(c,'caducado',c.endsAt);}
-      changed=true;continue;}
-     const pr=progress(c,M());pr.forEach((o,i)=>{const ob=c.objectives[i];if(o.value>=o.target&&!ob.reached){ob.reached=true;ob.reachedAt=t;changed=true;}});
-     if(c.objectives.every(o=>o.reached)){c.status='completado';c.completedAt=Math.max(...c.objectives.map(o=>o.reachedAt));c.settledAt=now;c.progress=pr.map(o=>o.value);edition(c,'completado',c.completedAt);changed=true;}
+     if(done){c.status='completado';c.completedAt=Math.max(...c.objectives.map(o=>o.reachedAt||c.acceptedAt||0));c.settledAt=now;edition(c,'completado',c.completedAt);changed=true;continue;}
+     if(h>=c.endsAt){c.status='caducado';c.closedAt=now;c.endedAt=c.endsAt;edition(c,'caducado',c.endsAt);changed=true;}
      continue;}
-    const pr=progress(c,M());
-    if(pr.every(o=>o.value>=o.target)){c.status='completado';c.completedAt=t;c.settledAt=now;c.progress=pr.map(o=>o.value);changed=true;}
+    if(done){c.status='completado';c.completedAt=Math.max(...c.objectives.map(o=>o.reachedAt||c.acceptedAt||0));c.settledAt=now;changed=true;}
    }
    return changed;
   };
-  // Ejecuta una actividad con su fecha efectiva: lo que ocurre en o después del cierre de un evento no
-  // acredita su encargo aunque se liquide con retraso; lo anterior sí (aunque se cobre después).
+  // La posesión se verifica a la vez que el resto: debe cumplirse en el momento de la comprobación
+  // (no queda marcada para siempre); lo incremental, una vez alcanzado, queda alcanzado.
+  // Ejecuta una actividad con su fecha efectiva. Lo incremental realizado ANTES de aceptar el encargo
+  // (aunque se liquide después) o EN/DESPUÉS del cierre de un evento no acredita: su aporte se excluye.
+  // La posesión y lo histórico se evalúan con el estado vigente (pueden usar progreso previo).
   let effectiveAt8=null;
   const activityScope=(at,run)=>{
-   const t=Number.isFinite(at)?at:Date.now(),open=state.mec08?.contracts?.filter(c=>c.kind==='evento'&&c.status==='aceptado'&&Number.isFinite(c.endsAt))||[];
+   const t=Number.isFinite(at)?at:Date.now(),open=state.mec08?.contracts?.filter(c=>c.status==='aceptado')||[];
    const prev=effectiveAt8;
+   const outside=open.filter(c=>t<(Number(c.acceptedAt)||0)||(c.kind==='evento'&&Number.isFinite(c.endsAt)&&t>=c.endsAt));
    if(!open.length){effectiveAt8=t;try{return run();}finally{effectiveAt8=prev;}}
-   const late=open.filter(c=>t>=c.endsAt),before=late.length?m8():null;effectiveAt8=t;let out;
+   const before=outside.length?m8():null;effectiveAt8=t;let out;
    try{out=run();}finally{effectiveAt8=prev;}
-   if(late.length){const after=m8();for(const c0 of late){const c=state.mec08.contracts.find(x=>x.id===c0.id);if(!c||c.status!=='aceptado')continue;for(const o of c.objectives)if(o.mode==='incremental'){const d=(after[o.metric]||0)-(before[o.metric]||0);if(d>0)o.excluded=(Number(o.excluded)||0)+d;}}}
+   if(outside.length){const after=m8();for(const c0 of outside){const c=state.mec08.contracts.find(x=>x.id===c0.id);if(!c||c.status!=='aceptado')continue;for(const o of c.objectives)if(o.mode==='incremental'){const d=(after[o.metric]||0)-(before[o.metric]||0);if(d>0)o.excluded=(Number(o.excluded)||0)+d;}}}
    syncContracts(Date.now(),t);
    return out;
   };
   activityScopeMEC08=activityScope;
   const activeCount=kind=>state.mec08.contracts.filter(c=>c.kind===kind&&['aceptado','completado'].includes(c.status)).length;
+  // MEC-09B · Viabilidad al aceptar: la oferta se conserva tal cual; si ya no es alcanzable se informa
+  // el motivo y se bloquea la aceptación (sin penalización ni regeneración del tablero).
+  const acceptCheck=(id,now=Date.now())=>{const b=board(now),offer=b.offers.find(o=>o.id===id),reasons=[];
+   if(!offer)return {ok:false,reasons:['La oferta ya no está en el tablero']};
+   if(activeCount(offer.kind)>=X8.CONTRACT_POLICY.maxActive[offer.kind])reasons.push('Sin plazas libres ('+X8.CONTRACT_POLICY.maxActive[offer.kind]+' activos)');
+   const t=X8.TEMPLATES.find(x=>x.id===offer.template);if(t){const f=feasible(t.requires);if(!f.ok)reasons.push('Requisitos: '+f.why.join(', '));}
+   for(const o of offer.objectives){const r=objectiveReason(o,o.target);if(r)reasons.push(r);}
+   return {ok:!reasons.length,reasons,offer};};
   const accept=(id,now=Date.now())=>{
-   const b=board(now),offer=b.offers.find(o=>o.id===id);if(!offer||activeCount(offer.kind)>=X8.CONTRACT_POLICY.maxActive[offer.kind])return false;
+   const chk=acceptCheck(id,now);if(!chk.ok)return false;const b=board(now),offer=chk.offer;
    // MEC-09A · Se conserva la oferta presentada (objetivos, dificultad por rango y recompensa); al
    // aceptar solo se fija la línea base de los objetivos incrementales.
    return tradeTransaction3300(()=>{const mm=m8(),c=JSON.parse(JSON.stringify(offer));c.objectives=c.objectives.map(o=>({...o,baseline:o.mode==='incremental'?(mm[o.metric]||0):0}));
@@ -10066,7 +10115,7 @@ if(globalThis.AtlasMuseumCuration3380){
   const rewardText=r=>['£'+r.money,r.knowledge+' conocimiento',...Object.entries(r.items||{}).map(([k,n])=>(ITEMS[k]?.name||k)+' ×'+n)].join(' · ');
   const contractCard=(c,mm)=>{const pr=c.status==='ofrecido'?c.objectives.map(o=>({...o,value:0})):progress(c,mm);
    return '<article class="mec08-contract card" data-contract="'+esc8(c.id)+'" data-art="'+esc8(c.art)+'"><h4>'+esc8(c.name)+' <span class="badge">'+esc8(c.kind)+'</span></h4><p class="small">'+esc8(c.description)+'</p><ul class="small">'+pr.map(o=>'<li>'+esc8(METRIC_LABEL[o.metric]||o.metric)+': '+o.value+'/'+o.target+(o.mode==='incremental'?' (desde la aceptación)':o.mode==='posesion'?' (se acredita, no se entrega)':'')+'</li>').join('')+'</ul><p class="small">Recompensa: '+esc8(rewardText(c.reward))+'</p>'+
-    (c.status==='ofrecido'?'<button type="button" class="btn alt" data-action="mec08-accept" data-id="'+esc8(c.id)+'">Aceptar</button>':c.status==='aceptado'?'<button type="button" class="btn alt" data-action="mec08-abandon" data-id="'+esc8(c.id)+'">Abandonar</button>':c.status==='completado'?'<button type="button" class="btn" data-action="mec08-claim" data-id="'+esc8(c.id)+'">Cobrar</button>':'<span class="small">'+esc8(c.status)+'</span>')+'</article>';};
+    (c.status==='ofrecido'?(()=>{const k=acceptCheck(c.id);return k.ok?'<button type="button" class="btn alt" data-action="mec08-accept" data-id="'+esc8(c.id)+'">Aceptar</button>':'<p class="small mec08-blocked" role="note">No se puede aceptar: '+esc8(k.reasons.join(' · '))+'</p><button type="button" class="btn alt" disabled aria-disabled="true">Aceptar</button>';})():c.status==='aceptado'?'<button type="button" class="btn alt" data-action="mec08-abandon" data-id="'+esc8(c.id)+'">Abandonar</button>':c.status==='completado'?'<button type="button" class="btn" data-action="mec08-claim" data-id="'+esc8(c.id)+'">Cobrar</button>':'<span class="small">'+esc8(c.status)+'</span>')+'</article>';};
   const METRIC_LABEL={sightingsTotal:'Avistamientos',discoveredAll:'Especies descubiertas',publishedAll:'Monografías publicadas','pieces:campo':'Piezas halladas en el campo',animalStock:'Materiales animales en inventario',studies:'Estudios científicos','counter:crafted':'Fabricaciones',prospections:'Prospecciones',voyagesDone:'Expediciones',excavationsDone:'Excavaciones',exhibitsNow:'Especies expuestas','pieces:comercio':'Piezas de la Caravana',visitedAll:'Regiones visitadas','counter:specializedVoyages':'Expediciones especializadas',regionalSpecies:'Especies en registros regionales',themesActive:'Exposiciones temáticas',cabinetPiecesShown:'Piezas expuestas en gabinetes',naturalObservations:'Observaciones especiales',continentsRecorded:'Continentes con registros',demos:'Demostraciones','counter:nightObservations':'Observaciones nocturnas','counter:contractsClaimed':'Encargos cobrados'};
   const contractsSection=()=>{const b=board(),mm=m8(),mine=state.mec08.contracts.filter(c=>['aceptado','completado'].includes(c.status)&&c.kind!=='evento'),left=(b.period+1)*X8.CONTRACT_POLICY.periodHours*3600e3-Date.now();
    return '<section class="mec08-contracts"><h3 class="section">Correspondencia y proyectos de la Sociedad</h3><p class="small">Ofertas renovadas cada '+X8.CONTRACT_POLICY.periodHours+' h (próxima en '+fmtLeft(left)+'). Los encargos aceptados no caducan y no hay penalizaciones por ausencia.</p>'+
@@ -10104,8 +10153,67 @@ if(globalThis.AtlasMuseumCuration3380){
   };
   // Sincronización con el flujo existente (tick) y avisos agrupados.
   const tickHook=()=>{const mg=state.mec08.migration,was=!!(mg.achievements&&mg.commissions);migrateRecognition();if(syncContracts()||!was)persist();flushNotices();};
-  globalThis.AtlasMEC08Actions={board,accept,abandon,claim,acceptEvent,eventContract,syncContracts,activityScope,horizon,objectiveFeasible,AVAIL,progress,feasible,metrics:m8,eventsNow,notices,flushNotices,pending,contractsSection,eventsPanel,tick:tickHook,instantiate};
+  globalThis.AtlasMEC08Actions={board,accept,abandon,claim,acceptEvent,eventContract,syncContracts,activityScope,horizon,objectiveFeasible,objectiveReason,acceptCheck,AVAIL,progress,feasible,metrics:m8,eventsNow,notices,flushNotices,pending,contractsSection,eventsPanel,tick:tickHook,instantiate};
  }
+}
+// MEC-09B (V5.6.9 Beta) · Procedencia de placas daguerrotípicas (docs/mec09b/placas.md).
+// state.mec06.plates = {schema, seq, lots:[{id,kind,qty,origin,at,activity,region,continents,voyage,jobId,result,developedAt}]}
+// Existencias disponibles = suma de lotes «virgen» = state.inventory.placa_daguerrotipo (invariante).
+// «expuesta»: consumida al zarpar con cámara, con la evidencia del destino; NO es existencia disponible,
+// es evidencia pendiente de revelar. «revelada»: registro de archivo (con su resultado o sin imagen).
+{
+ const PLATE='placa_daguerrotipo',KINDS=['virgen','expuesta','revelada'],UNKNOWN='anterior a MEC-09B (procedencia desconocida)';
+ const obj9=v=>v&&typeof v==='object'&&!Array.isArray(v);
+ const box=s=>{const m=s.mec06=obj9(s.mec06)?s.mec06:{};const p=m.plates=obj9(m.plates)?m.plates:{};p.schema=1;p.seq=Number.isSafeInteger(p.seq)&&p.seq>0?p.seq:1;p.lots=Array.isArray(p.lots)?p.lots:[];p.recoveries=Array.isArray(p.recoveries)?p.recoveries.slice(-30):[];return p;};
+ const newId=p=>'L'+(p.seq++);
+ const virgin=p=>p.lots.filter(l=>l.kind==='virgen');
+ const sumVirgin=p=>virgin(p).reduce((t,l)=>t+l.qty,0);
+ // Ajusta los lotes vírgenes al inventario (la referencia): faltan → lote sin procedencia; sobran → FIFO.
+ const reconcile=(s,reason='consumo')=>{const p=box(s),inv=Math.max(0,Math.floor(Number(s.inventory?.[PLATE])||0));let diff=inv-sumVirgin(p);
+  if(diff>0){p.lots.push({id:newId(p),kind:'virgen',qty:diff,origin:p.migrated?'sin registrar':UNKNOWN,at:null,activity:null,region:null,jobId:null});if(p.migrated)p.recoveries.push({at:Number.isFinite(s.lastTick)?s.lastTick:null,kind:'alta sin registrar',qty:diff});}
+  while(diff<0){const l=virgin(p)[0];if(!l)break;const take=Math.min(l.qty,-diff);l.qty-=take;diff+=take;if(p.migrated)p.recoveries.push({at:Number.isFinite(s.lastTick)?s.lastTick:null,kind:reason,lot:l.id,qty:take});}
+  p.lots=p.lots.filter(l=>l.qty>0);return p;};
+ // Sin el módulo de Taller (MEC-06) no hay placas que registrar: la partida no se toca.
+ const on=()=>!!globalThis.AtlasMEC06;
+ const normalizePlates=s=>{if(!obj9(s)||!on())return s;const p=box(s),seen=new Set();
+  p.lots=p.lots.filter(l=>obj9(l)&&KINDS.includes(l.kind)&&Number.isSafeInteger(Math.floor(Number(l.qty)))&&Math.floor(Number(l.qty))>0).map(l=>({...l,qty:Math.floor(Number(l.qty)),id:typeof l.id==='string'&&!seen.has(l.id)?(seen.add(l.id),l.id):(()=>{const i=newId(p);seen.add(i);return i;})(),
+   origin:typeof l.origin==='string'?l.origin:UNKNOWN,at:Number.isFinite(l.at)?l.at:null,continents:Array.isArray(l.continents)?l.continents.filter(x=>typeof x==='string'):undefined}));
+  // Expediciones en curso que ya llevaban cámara antes de MEC-09B: su placa expuesta se registra sin inventar origen.
+  for(const job of Array.isArray(s.voyages)?s.voyages:[])if(job?.mec06?.instruments?.camara_daguerrotipos&&!p.lots.some(l=>l.jobId===job.id))
+   p.lots.push({id:newId(p),kind:'expuesta',qty:1,origin:UNKNOWN,at:Number.isFinite(job.startedAt)?job.startedAt:null,activity:'expedición fotográfica',region:null,continents:[...(globalThis.AtlasMEC03Catalog?.voyageDestinations?.[job.type]?.continents||[])],voyage:job.type,jobId:job.id});
+  reconcile(s,'consumo sin registrar');
+  const rev=p.lots.filter(l=>l.kind==='revelada');if(rev.length>80){const keep=new Set(rev.slice(-80).map(l=>l.id));p.archived=(Number(p.archived)||0)+rev.length-80;p.lots=p.lots.filter(l=>l.kind!=='revelada'||keep.has(l.id));}
+  p.migrated=true;return s;};
+ const before609=normalizeMEC01;
+ normalizeMEC01=function(s){const out=before609(s);normalizePlates(s);return out;};
+ normalizePlates(state);
+ // Entradas: cada alta del inventario crea un lote virgen con su origen (fuente del registro MEC-01).
+ const addBefore609=addInventory;
+ addInventory=function(id,qty=1){const r=addBefore609(id,qty);if(id===PLATE&&qty>0&&on()){const p=box(state);reconcile(state);
+  const l=p.lots.filter(x=>x.kind==='virgen').pop();if(l&&(l.origin===UNKNOWN||l.origin==='sin registrar')&&l.at===null&&l.qty===qty){l.origin=(typeof mec01Source==='string'&&mec01Source)||'otra fuente';l.at=Date.now();l.activity=l.origin;p.recoveries=p.recoveries.filter(x=>!(x.kind==='alta sin registrar'&&x.qty===qty));}}return r;};
+ platesMEC09B=function(event,a,b){
+  if(!on())return null;const p=box(state);
+  // Solo cuentan las placas expuestas de expediciones YA liquidadas (las de un viaje en curso siguen a bordo).
+  if(event==='exposed')return p.lots.filter(l=>l.kind==='expuesta'&&Number.isFinite(l.settledAt)).reduce((t,l)=>t+l.qty,0);
+  if(event==='expose'){const job=a;// el inventario ya bajó en 1: se toma el lote virgen más antiguo (FIFO)
+   const l=virgin(p)[0];const origin=l?l.origin:UNKNOWN;if(l){l.qty-=1;}p.lots=p.lots.filter(x=>x.qty>0);
+   p.lots.push({id:newId(p),kind:'expuesta',qty:1,origin,from:l?.id||null,at:Number.isFinite(b)?b:Date.now(),activity:'expedición fotográfica',region:null,continents:[...(globalThis.AtlasMEC03Catalog?.voyageDestinations?.[job.type]?.continents||[])],voyage:job.type,jobId:job.id});
+   reconcile(state);return true;}
+  if(event==='settle'){const job=a,res=b,l=p.lots.find(x=>x.kind==='expuesta'&&x.jobId===job.id);if(!l)return null;
+   // Con imagen: la placa se reveló en el Campamento al volver. Sin imagen: queda expuesta (evidencia pendiente)
+   // para el revelado del Taller, que usará la evidencia de ese mismo destino. Nunca dos imágenes por placa.
+   l.settledAt=Date.now();if(res){l.kind='revelada';l.result=res;l.developedAt=l.settledAt;l.developedIn='campamento';}return l;}
+  if(event==='develop'){const exposedOnly=arguments[3];
+   if(!exposedOnly){// placa virgen (regla MEC-06): el inventario ya bajó; el lote más antiguo pasa a revelada.
+    const v=virgin(p)[0],origin=v?v.origin:UNKNOWN;if(v)v.qty-=1;p.lots=p.lots.filter(x=>x.qty>0);
+    const d={id:newId(p),kind:'revelada',qty:1,origin,from:v?.id||null,at:v?.at??null,activity:'revelado en el Taller',region:null,continents:null,voyage:null,jobId:null,developedAt:b,developedIn:'taller',study:a};
+    p.lots.push(d);reconcile(state);return d;}
+   const l=p.lots.find(x=>x.kind==='expuesta'&&Number.isFinite(x.settledAt));if(!l)return null;
+   if(l.qty>1){l.qty-=1;const d={...l,id:newId(p),qty:1,kind:'revelada',developedAt:b,developedIn:'taller',study:a};p.lots.push(d);return d;}
+   l.kind='revelada';l.developedAt=b;l.developedIn='taller';l.study=a;return l;}
+  if(event==='result'){const l=p.lots.find(x=>x.id===a);if(l)l.result=b;return l;}
+  return null;};
+ globalThis.AtlasPlatesMEC09B={normalize:normalizePlates,reconcile:()=>reconcile(state),lots:()=>box(state).lots.map(l=>({...l})),available:()=>sumVirgin(box(state)),exposed:()=>platesMEC09B('exposed'),UNKNOWN};
 }
 render();
 })();
