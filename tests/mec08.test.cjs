@@ -280,7 +280,7 @@ test('MEC-08 · 28. corrección 3.4: descripciones instrumentales prudentes; mag
 
 test('MEC-08 · 29. corrección 3.5: registro paginado, búsqueda por especie y filtro de evidencias',()=>{
  const h=game({full:true}),A=A7(h),g=h.g,s=g.state;assert.equal(A.list().length,45);
- let seen=0;A.ui.page=0;for(let p=0;p<5;p++){A.ui.page=p;const html=A.section();seen+=(html.match(/class="mec07-row/g)||[]).length;if(!/data-action="mec07-page" data-id="\d+">Siguiente/.test(html))break;}
+ let seen=0;A.ui.page=0;for(let p=0;p<5;p++){A.ui.page=p;const html=A.section();seen+=(html.match(/class="mec07-row/g)||[]).length;if(!/data-action="mec07-page"[^>]*data-id="\d+">Siguiente/.test(html))break;}
  assert.equal(seen,45,'las 45 entradas sin filtros');
  const e=X7(h).byId['sapo-pulga-tamano'];s.stages[e.species]=1;s.naturalRecords.records[e.id]=X7(h).update(e,null,{value:8.5,at:T0,region:'A',method:'estimacion'}).record;
  A.ui.page=0;A.ui.q=g.SPECIES[e.species].name.slice(0,5);assert.ok(A.filtered().some(x=>x.e.id===e.id));A.ui.q='';
@@ -313,9 +313,9 @@ test('MEC-08 · 32. catálogo completo intacto, versión, verificación y sin AP
  assert.equal(g.LEGENDARY_SPECIMENS.length,30);assert.equal(g.MUSEUM_RELICTS.length,20);assert.equal(Object.keys(K(full).pieces).length,431);
  assert.equal(X7(full).RECORDS.length,25);assert.equal(X7(full).BEHAVIORS.length,20);assert.equal(full.x.AtlasMEC04.RANKS.length,20);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.equal(pkg.version,'5.6.8');assert.equal(rel.version,'5.6.8');assert.equal(rel.build,'MEC-08');assert.equal(rel.v568.apk,false);
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d/);assert.equal(rel.v568.apk,false);
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec08.test.cjs'));
- assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec08-recognition.js'"));assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec08-recognition.js?v=5.6.8'));
- assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '5.6.8'"));assert.ok(!fs.existsSync('android'));
+ assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec08-recognition.js'"));assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec08-recognition.js?v='+pkg.version));
+ assert.ok(fs.readFileSync('www/js/save-manager.js','utf8').includes("gameVersion: '"+pkg.version+"'"));assert.ok(!fs.existsSync('android'));
  for(const f of ['README.md','logros.csv','encargos.csv','plantillas.csv','eventos.csv'])assert.ok(fs.existsSync('docs/mec08/'+f),f);
 });

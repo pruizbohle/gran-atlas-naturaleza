@@ -2,11 +2,32 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.8 Beta — MEC-08**, canal beta (rama `mec-08/v5.6.8-beta`, sobre MEC-07, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.9 Beta — MEC-09A** (revisión técnica de la versión de consolidación), canal beta (rama `mec-09a/technical-audit`, sobre MEC-08, sin fusionar a `main`)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.8 Beta — MEC-08 (en revisión)
+## V5.6.9 Beta — MEC-09A: auditoría técnica (en revisión)
+
+Es la primera etapa de consolidación: no añade mecánicas nuevas.
+
+- **Hallazgos de MEC-08:**
+  - los eventos comprueban la caducidad antes que el cumplimiento y usan la fecha efectiva de cada actividad;
+  - los contadores se escriben en la misma transacción que la actividad;
+  - un registro permanente impide repetir ediciones de eventos;
+  - aceptar un encargo conserva la oferta presentada;
+  - la viabilidad compara la meta concreta con lo disponible;
+  - el foco ya no se pierde tras las acciones.
+- **Estabilidad:**
+  - una partida local dañada se recupera de forma determinista;
+  - se corrigió un bucle sin límite que hacía agotar la suite `global-v3240` (de más de 600 s a unos 39 s).
+- **Pruebas:**
+  - los 216 fallos históricos están clasificados por causa raíz, con pruebas equivalentes del comportamiento vigente en el catálogo completo;
+  - se revisaron migraciones con partidas auténticas de 5.4 a MEC-08, partidas dañadas, transacciones, ingresos, reservas e integridad de catálogos;
+  - la suite pasa a 1.081 pruebas, 860 aprobadas y 0 regresiones.
+
+Informe completo: [docs/mec09a](docs/mec09a/README.md). No se generó APK.
+
+## V5.6.8 Beta — MEC-08 (auditada; hallazgos corregidos en MEC-09A)
 
 La Sociedad gana un sistema completo de **reconocimientos y encargos**, construido sobre los motores existentes:
 
@@ -181,6 +202,7 @@ La hoja de ruta vigente está en [`ROADMAP.md`](ROADMAP.md). El historial comple
 | --- | --- | --- |
 | 5.6.7 Beta | MEC-07: récords naturales y conductas extraordinarias | [docs/mec07](docs/mec07/README.md) |
 | 5.6.8 Beta | MEC-08: encargos, logros, reconocimientos y eventos especiales | [docs/mec08](docs/mec08/README.md) |
+| 5.6.9 Beta | MEC-09A: auditoría técnica, estabilidad y consolidación de motores | [docs/mec09a](docs/mec09a/README.md) |
 | 5.6.6 Beta | MEC-06: artefactos, materiales, instrumentos y Taller | [docs/mec06](docs/mec06/README.md) |
 | 5.6.5 Beta | MEC-05: Museo evolutivo, gabinetes y exposiciones funcionales | [docs/mec05](docs/mec05/README.md) |
 | 5.6.4 Beta | MEC-04: Sociedad científica, rangos y desbloqueos | [docs/mec04](docs/mec04/README.md) |

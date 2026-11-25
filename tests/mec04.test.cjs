@@ -259,7 +259,7 @@ test('MEC-04 · 20. MEC-01, MEC-02 y MEC-03 se conservan; versión y verificaci�
  const legacy=make({now:T0,headless:true,noBeta:true});assert.equal(legacy.g.VOYAGES.length,8);assert.equal(legacy.g.MUSEUM_DIG_SITES.length,4);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
  // MEC-05: la versión se compara con package.json (antes, el literal 5.6.4 / MEC-04).
- assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d[A-Z]?$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec04.test.cjs'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec04-society.js'"));
  assert.equal(require('node:child_process').spawnSync(process.execPath,['scripts/build-mec03-catalog.cjs']).status,0);

@@ -328,7 +328,7 @@ test('MEC-01 · versión beta coherente en paquete, PWA, integridad y caché',()
  const v=require('../package.json').version;assert.match(v,/^5\.6\.\d+$/);
  assert.equal(require('../package.json').version,v);
  assert.equal(require('../www/atlas-release.json').version,v);
- assert.match(require('../www/atlas-release.json').build,/^MEC-0\d$/);
+ assert.match(require("../www/atlas-release.json").build,/^MEC-0\d[A-Z]?$/);
  const index=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
  assert.ok(index.includes('name="atlas-version" content="'+v+'"'));assert.ok(index.includes(v+' Beta — MEC-0'));
  assert.ok(!index.includes('v=5.5.1'));

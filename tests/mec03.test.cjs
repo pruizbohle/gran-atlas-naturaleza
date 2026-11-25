@@ -330,7 +330,7 @@ test('MEC-03 · 20. MEC-01 y MEC-02 se conservan; versión y verificación',()=>
  const plain=game({noCamp:true});for(const x of [h,plain])rich(x,{levels:1});
  for(const fn of ['maxVoyages','maxExcavations','maxRelictSurveys'])assert.equal(h.g[fn](),plain.g[fn](),fn);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d[A-Z]?$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec03.test.cjs'));
  const sw=fs.readFileSync('www/sw.js','utf8');for(const f of ['js/mec03-catalog.js','js/mec03-collect.js'])assert.ok(sw.includes("'./"+f+"'"),f);
  // La configuración generada está al día con su script.

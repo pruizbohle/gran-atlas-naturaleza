@@ -1,0 +1,71 @@
+{
+ "rama_origen": "mec-08/v5.6.8-beta",
+ "commit_origen": "e930fad",
+ "rama": "mec-09a/technical-audit",
+ "version_origen": "5.6.8 Beta",
+ "version": "5.6.9 Beta (MEC-09A)",
+ "esquema_guardado": {
+  "clave": "gran_atlas_v05",
+  "formato_respaldo": "FORMAT_VERSION de save-manager.js (sin cambios)",
+  "subesquemas": [
+   "moneyLedger.schema",
+   "collectionRegistry",
+   "camp",
+   "society",
+   "mec06",
+   "naturalRecords.schema",
+   "regionalRecords.schema",
+   "mec08.schema",
+   "mec09a.schema (nuevo, recuperaciones)"
+  ]
+ },
+ "modulos_js_cargados": 73,
+ "dependencias": {
+  "@capacitor/core": "7.6.10",
+  "@capacitor/android": "7.6.10",
+  "@capacitor/filesystem": "7.1.9",
+  "@capacitor/share": "7.0.4"
+ },
+ "dependencias_desarrollo": {
+  "@capacitor/cli": "7.6.10"
+ },
+ "configuracion": [
+  "package.json",
+  "package-lock.json",
+  "www/atlas-release.json",
+  "www/atlas-integrity.json",
+  "www/manifest.webmanifest",
+  "www/sw.js",
+  "capacitor.config.json"
+ ],
+ "catalogos": {
+  "especies": 1000,
+  "regiones": 125,
+  "legendarios": 30,
+  "relictos": 20,
+  "coleccionables": 431,
+  "colecciones": 32,
+  "materiales_animales": 27,
+  "artefactos": 20,
+  "records": 25,
+  "conductas": 20,
+  "rangos": 20,
+  "instalaciones": "5 x 5",
+  "museo": 5,
+  "logros": 164,
+  "encargos_permanentes": 36,
+  "plantillas": 20,
+  "eventos": 10
+ },
+ "suite_mec08": {
+  "pruebas": 1027,
+  "aprobadas": 811,
+  "fallidas": 216,
+  "nuevas_mec08": 32,
+  "regresiones_vs_mec07": 0,
+  "tiempo_agotado": [
+   "global-v3240"
+  ]
+ },
+ "resultados_individuales": "docs/mec09a/resultado-suite-mec08.json"
+}

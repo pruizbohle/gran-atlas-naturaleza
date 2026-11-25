@@ -301,7 +301,7 @@ test('MEC-07 · 26. MEC-01 a MEC-06 se conservan; versión y verificación',()=>
  assert.equal((full.g.LEGENDARY_SPECIMENS||[]).length,30);assert.equal(full.g.MUSEUM_RELICTS.length,20);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
  // MEC-08: la versión se compara con package.json (antes, el literal 5.6.7 / MEC-07).
- assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d[A-Z]?$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec07.test.cjs'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec07-natural-records.js'"));
  assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec07-natural-records.js?v='+pkg.version));

@@ -1,0 +1,20 @@
+comprobacion;descripcion;elementos;problemas;detalle
+especies-unicas;Identificadores y nombres científicos únicos;1000;0;
+regiones-unicas;Regiones con id único y con especies;125;0;
+referencias-region-especie;"Cada especie de una región existe; sin repeticiones dentro de la región";1833;0;
+especies-con-region;Cada especie aparece en al menos una región;1000;0;
+recetas;Recetas con resultado e ingredientes definidos y cantidades positivas;28;0;
+investigaciones;Requisitos de investigación válidos y sin ciclos;57;0;
+coleccionables;431 piezas con definición, colección y gabinete;431;0;
+colecciones;32 colecciones, ninguna vacía;32;0;
+artefactos;20 artefactos con catalogación en el Museo y usos válidos (estudio, demostración o modificador de expedición);20;0;
+materiales-animales;27 materiales animales con definición;27;0;
+instalaciones;5 instalaciones × 5 niveles;5;0;
+records;25 récords con especie existente, límites y umbral dentro de límites;25;0;
+conductas;20 conductas con especie existente y presente en alguna región;20;0;
+encargos;Encargos con recompensa válida (dinero/conocimiento finitos, objetos definidos) y requisitos con métrica;36;0;
+plantillas;Plantillas con métricas existentes y recompensas válidas;20;0;
+eventos;10 eventos con regla válida, encargo y modificadores con actividad conocida;10;0;
+logros;Logros con métrica existente y nivel válido;164;0;
+legendarios-relictos;30 legendarios y 20 relictos con especie/región existentes;50;0;
+rangos;20 rangos de Sociedad ordenados;20;0;

@@ -178,7 +178,7 @@ function eligible(entry,ctx){
  return true;
 }
 /* 3. Generación: distintos modelos por magnitud; siempre dentro de límites plausibles. */
-function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function gauss(r){let u=0,v=0,n=0;while(!u&&n++<64)u=r();if(!u)u=Number.EPSILON;n=0;while(!v&&n++<64)v=r();if(!v)v=Number.EPSILON;return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
 function clamp(x,a,b){return Math.max(a,Math.min(b,x));}
 function generate(entry,r,ctx={}){
  const m=entry.model,b=entry.bounds||{min:-Infinity,max:Infinity},f=10**(entry.decimals??1);let v;

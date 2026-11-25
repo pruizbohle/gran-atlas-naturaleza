@@ -1,0 +1,19 @@
+operacion;mecanismo;resultado_con_fallo_de_guardado;evidencia
+Fabricación (craftItem);tradeTransaction3300 + contador MEC-08 en la misma transacción;Atómica;T1, A2.1
+Fabricación múltiple / subcomponentes (craftBatch602, craft-tree);"Cada unidad usa craftItem (transacción); el lote se detiene en el primer fallo";Atómica por unidad;probe
+Investigación (buyNode);Transacción;Atómica;probe
+Compra de mercado (buyTrade3300);tradeTransaction3300;Atómica;T1
+Rutas comerciales (start/settle);"tradeTransaction3300; liquidación única por id";Atómica;commerce-v3300 (vigentes)
+Comercio de coleccionables (MEC-03);"Transacción; respeta exhibidas y última unidad";Atómica;mec03
+Expediciones (sail / processVoyages);"sail en transacción; liquidación síncrona en el ciclo con recibo por id";Atómica / coherente;T1, I2, I5
+Excavaciones (start / collect);"museumJobTransaction; collect envuelto en transacción con su contador";Atómica;T1, I5
+Prospecciones (MEC-04);"Transacción; liquidación con fecha efectiva (activityScope)";Atómica;probe
+Sondeos profundos;deepTransaction3330 (anidable);Atómica;E3
+Estudios, demostraciones, construcción de artefactos;Transacción MEC-06;Atómica;T1
+Instalación de instrumentos (setLocation);"Transacción MEC-06; capacidad normalizada";Atómica;N2
+Ampliación del Museo;Transacción;Atómica;T1
+Mejora de instalaciones / ascenso / financiación;Transacción (MEC-02/MEC-04);Atómica;probe
+Encargos permanentes;commissionClaim3370: pay + crédito + persist con reversión;Atómica;mec08 10
+Correspondencia, proyectos y eventos;"tradeTransaction3300; cobro único; registro de ediciones";Atómica;mec08 14, A1–A3
+Validación de récords;Transacción con contador interno;Atómica;A2.2, mec07 22
+Canje de notas, publicación, subvención, tomo;Sin transacción: coherente en memoria, guardado en el ciclo;Coherente, no atómica (F10);probe

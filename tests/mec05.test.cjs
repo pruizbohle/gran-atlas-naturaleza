@@ -361,7 +361,7 @@ test('MEC-05 · 23. MEC-01 a MEC-04 se conservan; versión y verificación',()=>
  const full=game({full:true});assert.equal(full.g.REGIONS.length,125);assert.equal(Object.keys(full.g.SPECIES).length,1000);
  const pkg=require('../package.json'),rel=require('../www/atlas-release.json');
  // MEC-06: la versión se compara con package.json (antes, el literal 5.6.5 / MEC-05).
- assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d$/);assert.equal(rel.channel,'beta');
+ assert.match(pkg.version,/^5\.6\.\d+$/);assert.equal(rel.version,pkg.version);assert.match(rel.build,/^MEC-0\d[A-Z]?$/);assert.equal(rel.channel,'beta');
  assert.ok(pkg.scripts['release:verify'].includes('tests/mec05.test.cjs'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes("'./js/mec05-museum.js'"));
  assert.ok(fs.readFileSync('www/index.html','utf8').includes('js/mec05-museum.js?v='+pkg.version));

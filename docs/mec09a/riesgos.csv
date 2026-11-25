@@ -1,0 +1,7 @@
+id;riesgo;descripcion;nivel;mitigacion_o_etapa
+R1;Reloj del dispositivo;"Adelantar el reloj permite ver eventos futuros; atrasarlo, repetir periodos de correspondencia ya vistos (no ediciones usadas: registro permanente)";Medio;"Aceptado en un juego local; las ediciones usadas no se repiten"
+R2;Respaldos antiguos;Restaurar voluntariamente un respaldo anterior devuelve el estado de esa fecha (también encargos y ediciones);Bajo;"Inherente; la importación no paga migraciones ni duplica liquidaciones dentro de la partida restaurada"
+R3;Orden de carga;Las envolturas dependen del orden de bloques de app.js y de módulos en index.html;Medio;"Matriz de funciones redefinidas; cualquier bloque nuevo debe ir al final (MEC-09D: consolidar cadenas)"
+R4;Pruebas históricas;216 pruebas fallidas permanecen como registro histórico;Bajo;"Clasificadas; pruebas equivalentes vigentes"
+R5;Lectores de pantalla;Sin validación física;Medio;MEC-09C
+R6;Balance;Todos los valores siguen provisionales;—;BAL-01

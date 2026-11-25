@@ -264,7 +264,7 @@ test('MEC-02 · nivel I reproduce el comportamiento histórico (sin regresiones)
 test('MEC-02 · versión beta en canal beta, compatible con el actualizador',()=>{
  // MEC-03: se comprueba la versión vigente de package.json (antes, el literal 5.6.2 / MEC-02).
  const rel=require('../www/atlas-release.json');
- assert.equal(rel.version,require('../package.json').version);assert.equal(rel.channel,'beta');assert.match(rel.build,/^MEC-0\d$/);
+ assert.equal(rel.version,require('../package.json').version);assert.equal(rel.channel,'beta');assert.match(rel.build,/^MEC-0\d[A-Z]?$/);
  assert.match(rel.version,/^\d+\.\d+\.\d+$/,'el actualizador PWA exige una versión numérica');
  const upd=fs.readFileSync('www/js/atlas-pwa-update.js','utf8');
  assert.match(upd,/versionPattern = \/\^\\d\+\\\.\\d\+\\\.\\d\+\$\//);assert.ok(upd.includes("channel === 'beta'"));
