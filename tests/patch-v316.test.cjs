@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const SRC=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+const SRC=fs.readFileSync('www/js/app.js','utf8') /* MEC-09D: motor vigente completo; la fuente recortada ya no ejecuta (docs/mec09d) */;
 const CSS=fs.readFileSync('www/css/styles.css','utf8');
 function game(){
  const dom={};
@@ -21,13 +21,14 @@ function game(){
    'V316_ORIGINS,rollLoot,canCraft,craftItem,canProcessMaterials,processMaterials,manualEncounterBonus,'+
    'knowledgeBonus,museumRate,renderObjects,v316ItemUses,get state(){return state}};\n})();');
  assert.notEqual(injected,SRC,'No se encontró el punto de prueba');
- vm.runInContext(injected,context,{filename:'app.js'});
+ require('./helpers/runtime-data.cjs').preload(context,injected),vm.runInContext(injected,context,{filename:'app.js'});
  return context.window.__v316;
 }
 test('Beta 3.16 mantiene catálogo, mapa y materiales de recetas coherentes',()=>{
  const x=game();
- assert.equal(Object.keys(x.SPECIES).length,487);
- assert.equal(x.REGIONS.length,57);
+ /* MEC-09D: catálogo vigente (1.000 especies, 125 regiones) tras las expansiones aprobadas; el resto de garantías se aplica completo. */
+ assert.equal(Object.keys(x.SPECIES).length,1000);
+ assert.equal(x.REGIONS.length,125);
  assert.ok(Object.keys(x.ITEMS).length>=47,'3.16 objects must persist as the museum expands');
  assert.ok(Object.keys(x.V316_MATERIAL_STUDIES).length>=8);
  for(const [name,recipe] of Object.entries(x.RECIPES)){
@@ -117,11 +118,13 @@ test('Inventario móvil ofrece cinco pestañas, origen, usos y estudio ×1/×5',
    assert.match(html,/Estudiar ×5/);
    assert.match(html,/Catalejo de precisión/);
   }
+  /* MEC-09D: desde 3.40 cada vista es una cuadrícula paginada con ficha; el origen se muestra en la ficha
+     («Todas las fuentes documentadas», 3.41) y los raros se agrupan en «Fósiles y raros» dentro de Coleccionables. */
   if(tab==='coleccionables'){
-   assert.match(html,/Ámbar fósil/);
-   assert.match(html,/Perla fluvial/);
+   assert.match(html,/Fósiles y raros/);
+   assert.match(html,/data-action="inv-item" data-id="fossil_amber"/);
   }
-  if(tab==='expedicion')assert.match(html,/Obtención:/);
+  if(tab==='expedicion')assert.match(html,/Fuentes de obtención|Todas las fuentes documentadas|Fuente:/);
  }
  assert.match(CSS,/\.inventory-v33 \.inventory-subtabs\{grid-template-columns:repeat\(5/);
  assert.match(CSS,/@media\(max-width:400px\)/);

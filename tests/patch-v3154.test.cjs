@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const src=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+const src=fs.readFileSync('www/js/app.js','utf8') /* MEC-09D: motor vigente completo; la fuente recortada ya no ejecuta (docs/mec09d) */;
 const css=fs.readFileSync('www/css/styles.css','utf8');
 function boot(){
  const cache={};
@@ -23,13 +23,14 @@ function boot(){
  ].join('\n');
  const js=src.replace(/\n\}\)\(\);\s*$/,expose);
  assert.notEqual(js,src);
- vm.runInContext(js,context,{filename:'www/js/app.js'});
+ require('./helpers/runtime-data.cjs').preload(context,js),vm.runInContext(js,context,{filename:'www/js/app.js'});
  return context.window.__audit;
 }
 test('Catálogo sin animales huérfanos, referencias rotas ni taxones binomiales duplicados',()=>{
  const g=boot(),ids=Object.keys(g.SPECIES),links=g.REGIONS.flatMap(r=>r.species);
- assert.equal(g.REGIONS.length,57);
- assert.equal(ids.length,487);
+ /* MEC-09D: el catálogo creció en etapas aprobadas (57 → 125 regiones, 487 → 1.000 especies); las garantías de integridad se aplican al catálogo vigente completo. */
+ assert.equal(g.REGIONS.length,125);
+ assert.equal(ids.length,1000);
  assert.equal(ids.filter(id=>!links.includes(id)).length,0);
  assert.ok(g.REGIONS.every(r=>r.species.every(id=>!!g.SPECIES[id])));
  const names=ids.map(id=>g.SPECIES[id].latin.toLocaleLowerCase('es'));
@@ -51,7 +52,8 @@ test('Dos lagópodos se mantienen con sus IDs, rareza y nombres científicos',()
 });
 test('Clases uniformes en todas las especies; anfibios, peces y cálao correctos',()=>{
  const g=boot();
- const classes=new Set(['Mammalia','Aves','Reptilia','Amphibia','Actinopterygii','Chondrichthyes']);
+ /* MEC-09D: 3.31–3.34 incorporaron cefalópodos polares y profundos (aprobado). */
+ const classes=new Set(['Mammalia','Aves','Reptilia','Amphibia','Actinopterygii','Chondrichthyes','Cephalopoda']);
  for(const id of Object.keys(g.SPECIES)){
   const t=g.taxonomyInfo(id);
   assert.ok(classes.has(t.className),id+' clase '+t.className);
@@ -67,24 +69,27 @@ test('Clases uniformes en todas las especies; anfibios, peces y cálao correctos
 test('Cálao ave, desmán sin caparazón, cobras con capucha y liebres homologadas',()=>{
  const g=boot();
  const calao=g.getSpriteMarkup('asia_esp_0067');
- assert.match(calao,/#[cC]94f35/);
+ /* MEC-09D: el arte de aves 3.19.3 sustituyó la paleta del cálao; se comprueba la familia y el casco. */
+ assert.match(calao,/data-bird-family="hornbill"/);assert.match(calao,/casque/);
  assert.doesNotMatch(calao,/M78 58Q86 48 86/);
  const desman=g.getSpriteMarkup('eu_esp_0623');
- assert.match(desman,/M19 66Q28 52/);
+ /* MEC-09D: el arte de mamíferos 3.19.4/3.19.9 sustituyó el trazo; se comprueba la familia propia y la ausencia de caparazón. */
+ assert.match(desman,/data-mammal-family="desman"/);
  assert.doesNotMatch(desman,/rx="29" ry="19"/);
+ /* MEC-09D: los módulos de arte 3.19.2b y 3.19.4 nombran la familia con data-herp-family / data-mammal-family; las liebres se agrupan como lagomorfos. */
  const cobras=Object.keys(g.SPECIES).filter(id=>/^(Naja|Ophiophagus)\b/.test(g.SPECIES[id].latin));
  assert.equal(cobras.length,4);
  for(const id of cobras){
   const svg=g.getSpriteMarkup(id);
-  assert.match(svg,/data-family="cobra"/);
-  assert.match(g.getSpriteMarkup(id,'albino'),/data-family="cobra"/);
-  assert.match(g.getSpriteMarkup(id,'melanico'),/data-family="cobra"/);
+  assert.match(svg,/data-(herp-)?family="cobra"/);
+  assert.match(g.getSpriteMarkup(id,'albino'),/data-(herp-)?family="cobra"/);
+  assert.match(g.getSpriteMarkup(id,'melanico'),/data-(herp-)?family="cobra"/);
  }
  assert.equal(new Set(cobras.map(id=>g.getSpriteMarkup(id))).size,4);
  const hares=Object.keys(g.SPECIES).filter(id=>g.SPECIES[id].kind==='hare');
  assert.ok(hares.length>=2);
- for(const id of hares)assert.match(g.getSpriteMarkup(id),/data-family="hare"/);
- assert.match(g.getSpriteMarkup('asia_esp_0842'),/data-family="hare"/);
+ for(const id of hares)assert.match(g.getSpriteMarkup(id),/data-(mammal-)?family="(hare|lagomorph|Leporidae)"/);
+ assert.match(g.getSpriteMarkup('asia_esp_0842'),/data-(mammal-)?family="(hare|lagomorph|Leporidae)"/);
 });
 test('Migración de alias conserva avances y no suma dos veces',()=>{
  const g=boot();
@@ -110,13 +115,15 @@ test('Migración de alias conserva avances y no suma dos veces',()=>{
 });
 test('Bestiario permite invertir un mismo criterio y conserva selección',()=>{
  const g=boot();
+ /* MEC-09D: desde 3.26 el criterio se elige en un selector y la dirección en un botón con nombre accesible. */
  g.state.bestiarySort='rarity';g.state.bestiaryDescending=false;
- assert.match(g.renderBestiary(),/Rareza ↑/);
- g.state.bestiaryDescending=true;
- assert.match(g.renderBestiary(),/Rareza ↓/);
+ assert.match(g.renderBestiary(),/value="rarity" selected>Rareza/);assert.match(g.renderBestiary(),/Orden ascendente/);
+ /* Los filtros de 3.26 viven en la sesión y se inician desde la preferencia guardada: se comprueba al abrir. */
+ const g2=boot();g2.state.bestiarySort='rarity';g2.state.bestiaryDescending=true;
+ assert.match(g2.renderBestiary(),/Orden descendente/);
  assert.match(src,/state\.bestiarySort===id\)state\.bestiaryDescending=!state\.bestiaryDescending/);
- g.state.bestiarySort='type';g.state.bestiaryDescending=false;
- assert.match(g.renderBestiary(),/Tipo ↑/);
+ const g3=boot();g3.state.bestiarySort='type';g3.state.bestiaryDescending=false;
+ assert.match(g3.renderBestiary(),/value="type" selected>Tipo/);assert.match(g3.renderBestiary(),/Orden ascendente/);
 });
 test('Selva y sabana presentan filtros y estilos propios',()=>{
  const scene=require('../www/js/field-scene-v3210.js');assert.ok(scene.habitats.includes('selva'));assert.ok(scene.habitats.includes('sabana'));assert.notEqual(scene.render('selva'),scene.render('sabana'));

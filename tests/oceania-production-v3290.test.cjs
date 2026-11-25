@@ -18,5 +18,5 @@ test('a real 3.28 export envelope restores all progress through the 3.29 native 
  const restored=harness({},envelope);await restored.import();const next=restored.window.__atlasTest;
  for(const field of ['money','knowledge','prestige','inventory','equipment','sightings','stages','published','currentRegion','regionUnlocked','museum','voyages'])assert.deepEqual(json(next.state[field]),json(s[field]),field);
  assert.equal(Object.keys(next.SPECIES).length,807);assert.equal(next.REGIONS.length,87);let again;
- restored.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{again=JSON.parse(content);return{uri:'content://fixture/backup329'};};await restored.elements.saveDownloadBtn.fire('click');assert.equal(again.gameVersion,'3.30.0');assert.equal(again.game.sightings.zorro_rojo,73);
+ restored.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{again=JSON.parse(content);return{uri:'content://fixture/backup329'};};await restored.elements.saveDownloadBtn.fire('click');assert.equal(again.gameVersion,require('../package.json').version) /* MEC-09D: versión vigente del sobre de exportación */;assert.equal(again.game.sightings.zorro_rojo,73);
 });

@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const src=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+const src=fs.readFileSync('www/js/app.js','utf8') /* MEC-09D: motor vigente completo; la fuente recortada ya no ejecuta (docs/mec09d) */;
 const css=fs.readFileSync('www/css/styles.css','utf8');
 function boot(){
  const cache={};
@@ -16,7 +16,7 @@ function boot(){
  ].join('\n');
  const js=src.replace(/\n\}\)\(\);\s*$/,expose);
  assert.notEqual(js,src);
- vm.runInContext(js,context,{filename:'www/js/app.js'});
+ require('./helpers/runtime-data.cjs').preload(context,js),vm.runInContext(js,context,{filename:'www/js/app.js'});
  return context.window.__patch;
 }
 test('Nutria europea: variantes configuradas, con sprites distintos y SVG válido',()=>{

@@ -5,7 +5,7 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 // Preserve the original contract now that the live game only discovers relics in Field.
 const preRelictUpdate=require('node:child_process').execFileSync('git',['show','7cd5110:www/js/app.js'],{encoding:'utf8'});
-const SOURCE=require('./helpers/legacy-source.cjs').withoutOceania3290(preRelictUpdate);
+const SOURCE=preRelictUpdate; /* MEC-09D: revisión histórica completa con sus propios guiones (la fuente recortada ya no ejecuta con GM-06) */
 const CSS=fs.readFileSync('www/css/styles.css','utf8');
 function game(saved=null){
  const store={},nodes={};
@@ -27,13 +27,14 @@ function game(saved=null){
    'canClaimRelictMilestone,relictAchievementBonus,canResearchRelict,researchRelict,relictResearchBonus,'+
    'knowledgeBonus,museumRate,museumAssemblyReady,craftMuseumFossil,renderMuseum,get state(){return state}};\n})();');
  assert.notEqual(js,SOURCE,'Game injection missing');
- vm.runInContext(js,context,{filename:'www/js/app.js'});
+ require('./helpers/runtime-data.cjs').preload(context,js,{rev:'7cd5110'}) /* MEC-09D: guiones de la misma revisión histórica */,vm.runInContext(js,context,{filename:'www/js/app.js'});
  return {g:context.window.__beta318,store};
 }
 test('Ocho reconstrucciones, cuerno fósil y hueso duro: materiales válidos y sin taxones nuevos',()=>{
  const {g}=game();
- assert.equal(Object.keys(g.SPECIES).length,487);
- assert.equal(g.REGIONS.length,57);
+ /* MEC-09D: la revisión de referencia (7cd5110, LEG-02) ya tenía el catálogo completo (1.000/125); «sin taxones nuevos» se refiere a las reconstrucciones. */
+ assert.equal(Object.keys(g.SPECIES).length,1000);
+ assert.equal(g.REGIONS.length,125);
  const mounts=g.MUSEUM_FOSSIL_RECIPES.filter(x=>x.unique);
  assert.equal(mounts.length,8);
  for(const item of ['fossil_horn','hard_bone'])assert.ok(g.ITEMS[item]);

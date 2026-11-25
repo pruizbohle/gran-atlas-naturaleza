@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const SOURCE=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+const SOURCE=fs.readFileSync('www/js/app.js','utf8'); // MEC-09D: motor vigente completo (antes: fuente recortada que ya no ejecuta)
 
 function harness(){
  const dom={};
@@ -33,7 +33,7 @@ function harness(){
  '})();'].join('\n');
  const script=SOURCE.replace(/\n\}\)\(\);\s*$/,append);
  assert.notEqual(script,SOURCE,'no se inyectó la interfaz de pruebas');
- vm.runInContext(script,context,{filename:'www/js/app.js'});
+ require('./helpers/runtime-data.cjs').preload(context,script),vm.runInContext(script,context,{filename:'www/js/app.js'});
  return {api:context.window.__beta315,random:v=>fakeMath.random=()=>v,cache};
 }
 test('Las cinco ramas cubren todas las investigaciones sin perder las existentes',()=>{
@@ -49,7 +49,8 @@ test('Las cinco ramas cubren todas las investigaciones sin perder las existentes
   for(const id of node.reqAll||[])assert.ok(ids.has(id),node.id+' necesita '+id);
  }
  const html=g.renderResearch();
- assert.match(html,/research-branch-tabs/);
+ // MEC-09D: desde 3.28 las ramas se presentan con er28-branches (presentación aprobada).
+ assert.match(html,/er28-branches/);
  assert.match(html,/Observación en grupo/);
 });
 test('El avance se adquiere por niveles y las mejoras automáticas no quedan disponibles al inicio',()=>{

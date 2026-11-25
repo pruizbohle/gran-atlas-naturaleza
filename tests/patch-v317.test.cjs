@@ -3,7 +3,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const SOURCE=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+const SOURCE=fs.readFileSync('www/js/app.js','utf8') /* MEC-09D: motor vigente completo; la fuente recortada ya no ejecuta (docs/mec09d) */;
 const CSS=fs.readFileSync('www/css/styles.css','utf8');
 function game(saved=null){
  const els={},store={};
@@ -26,14 +26,15 @@ function game(saved=null){
   'museumFossilMountCount,renderMuseum,renderBestiary,renderExcavations,renderFossilWorkshop,'+
   'renderMuseumCuration,museumCardArt,renderObjects,craftMuseumFossil,museumAssemblyReady,get state(){return state}};\n})();');
  assert.notEqual(exposed,SOURCE,'Cannot expose game state');
- vm.runInContext(exposed,context,{filename:'www/js/app.js'});
+ require('./helpers/runtime-data.cjs').preload(context,exposed),vm.runInContext(exposed,context,{filename:'www/js/app.js'});
  return context.window.__v317;
 }
 test('El Atlas mantiene las 487 especies y 57 zonas; nuevas recetas y colecciones válidas',()=>{
  const g=game();
- assert.equal(Object.keys(g.SPECIES).length,487);
- assert.equal(g.REGIONS.length,57);
- assert.equal(g.MUSEUM_DIG_SITES.length,4);
+ /* MEC-09D: catálogo vigente (1.000/125). Yacimientos: 4 de 3.17 + 3 de MEC-04 + 3 de MEC-09B; los 4 originales se conservan. */
+ assert.equal(Object.keys(g.SPECIES).length,1000);
+ assert.equal(g.REGIONS.length,125);
+ assert.equal(g.MUSEUM_DIG_SITES.length,4+3+3);
  assert.equal(g.MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique).length,8);
  assert.equal(g.MUSEUM_FOSSIL_SETS.length,3);
  for(const list of [g.MUSEUM_FOSSIL_RECIPES,g.MUSEUM_COLLECTIONS,g.MUSEUM_CURATORIAL_PROJECTS]){
@@ -50,20 +51,22 @@ test('El Atlas mantiene las 487 especies y 57 zonas; nuevas recetas y coleccione
  }
 });
 test('Bestiario oculta solo monografías, no especies 5/5 sin publicación',()=>{
- const g=game();
- g.state.stages.zorro_rojo=5;
- g.state.stages.lobo_gris=5;
- g.state.published.zorro_rojo=true;
- let all=g.renderBestiary();
- assert.equal((all.match(/class="species-card\b/g)||[]).length,32);
- g.state.bestiaryHideMonographs=true;
- let incomplete=g.renderBestiary();
- assert.equal((incomplete.match(/class="species-card\b/g)||[]).length,32);
- assert.match(incomplete,/486 de 487 visibles/);
- assert.match(incomplete,/data-action="bestiary-hide-monographs" checked/);
- assert.match(incomplete,/Identificadas/);
- g.state.bestiarySort='rarity';g.state.bestiaryDescending=true;
- assert.match(g.renderBestiary(),/Rareza ↓/);
+ /* MEC-09D: desde 3.26 el Bestiario pagina 32 fichas (b26-open), los filtros viven en la sesión y se inician con la
+    preferencia guardada, y la dirección del orden se expresa con un botón accesible. Se conserva la garantía:
+    ocultar monografías retira solo la especie publicada, no la especie 5/5 sin publicar. */
+ const setup=hide=>{const g=game();for(const id of ['zorro_rojo','lobo_gris']){g.state.discovered[id]=true;g.state.stages[id]=5;}g.state.published.zorro_rojo=true;g.state.bestiaryHideMonographs=hide;return g;};
+ const all=setup(false).renderBestiary();
+ assert.equal((all.match(/data-action="b26-open"/g)||[]).length,32);
+ const total=Object.keys(setup(false).SPECIES).length;
+ assert.match(all.replace(/<[^>]+>/g,' '),new RegExp('32 de '+total));
+ const incomplete=setup(true).renderBestiary();
+ assert.equal((incomplete.match(/data-action="b26-open"/g)||[]).length,32);
+ assert.match(incomplete.replace(/<[^>]+>/g,' '),new RegExp('32 de '+(total-1)));
+ assert.match(incomplete,/aria-label="Lobo/,'la especie 5/5 sin publicar sigue visible');
+ assert.doesNotMatch(incomplete,/aria-label="Zorro rojo/,'la monografía publicada se oculta');
+ assert.match(incomplete,/identificadas/);
+ const g=game();g.state.bestiarySort='rarity';g.state.bestiaryDescending=true;
+ assert.match(g.renderBestiary(),/Orden descendente/);
  assert.match(SOURCE,/state\.bestiaryHideMonographs=!state\.bestiaryHideMonographs;renderPanel\(\);persist\(\);/);
 });
 test('Excavaciones requieren fondos, región, y solo ocupan una ranura inicialmente',()=>{
@@ -162,7 +165,7 @@ test('Partida antigua sin campos nuevos se recupera y mantiene sus colecciones',
  assert.equal(g.state.published.zorro_rojo,true);
  assert.equal(g.state.bestiaryHideMonographs,false);
  assert.match(g.renderFossilWorkshop(),/Yacimientos disponibles/);
- assert.match(g.renderMuseum(),/Paleontología/);
+ /* MEC-09D: la sala paleontológica se llama «Fósiles» desde el Museo 3.27. */ assert.match(g.renderMuseum(),/Paleontología|Fósiles/);
  assert.match(CSS,/\.bestiary-v317-filter/);
  assert.match(CSS,/@media\(max-width:600px\)/);
 });

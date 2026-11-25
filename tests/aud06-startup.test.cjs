@@ -29,7 +29,7 @@ test('AUD-06 El índice del Bestiario se difiere hasta su uso y comparte la taxo
 test('AUD-06 El índice de especímenes conserva precedencia, alias taxonómicos y variantes en las 1000 fichas', () => {
   const { audit, SPECIES, SPECIMEN_CATEGORIES, LEGENDARY_SPECIMENS, configuredSpecials } = game();
   const canonical = entry => (entry?.latin || '').toLowerCase().trim().split(/\s+/).slice(0, 2).join(' ');
-  assert.equal(LEGENDARY_SPECIMENS.length, 12);
+  assert.equal(LEGENDARY_SPECIMENS.length, 30); /* MEC-09D: LEG-02 amplió a 30 legendarios únicos (aprobado) */
   for (const [id, entry] of Object.entries(SPECIES)) {
     const expected = LEGENDARY_SPECIMENS.find(specimen => canonical(entry) &&
       canonical(SPECIES[specimen.speciesId]) === canonical(entry));

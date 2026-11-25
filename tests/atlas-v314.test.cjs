@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const GAME=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+const GAME=fs.readFileSync('www/js/app.js','utf8') /* MEC-09D: motor vigente completo; la fuente recortada ya no ejecuta (docs/mec09d) */;
 function game(){
  const nodes={};
  const get=id=>nodes[id]||(nodes[id]={id,hidden:false,disabled:false,textContent:'',innerHTML:'',value:'',dataset:{},files:[],classList:{add(){},remove(){},toggle(){}},style:{},addEventListener(){},setAttribute(){},focus(){},click(){},querySelector(){return null},querySelectorAll(){return []}});
@@ -17,7 +17,7 @@ patch(data){Object.assign(state,data);},
 };
 })();`);
  assert.notEqual(out,GAME,'No se inyectó interfaz de prueba');
- vm.runInContext(out,ctx,{filename:'www/js/app.js'});
+ require('./helpers/runtime-data.cjs').preload(ctx,out),vm.runInContext(out,ctx,{filename:'www/js/app.js'});
  return ctx.window.__atlasTest;
 }
 test('Probabilidad: categorías ordenadas de común a muy rara',()=>{
@@ -26,7 +26,9 @@ test('Probabilidad: categorías ordenadas de común a muy rara',()=>{
  for(let i=1;i<weights.length;i++)assert.ok(weights[i]<weights[i-1]);
 });
 test('Norteamérica tiene exactamente dos regiones iniciales con fauna del Excel y biomas',()=>{
- const g=game(),r=g.REGIONS.filter(x=>x.continent==='Norteamérica');
+ // MEC-09D: 3.22 amplió Norteamérica a 18 regiones (aprobado); las dos iniciales conservan orden, fauna y biomas.
+ const g=game(),all=g.REGIONS.filter(x=>x.continent==='Norteamérica'),r=all.slice(0,2);
+ assert.equal(all.length,18);
  assert.deepEqual(Array.from(r.map(x=>x.name)),['Alaska','Columbia Británica']);
  assert.deepEqual(Array.from(r.map(x=>x.species.length)),[17,11]);
  for(const region of r){
@@ -39,13 +41,14 @@ test('Norteamérica tiene exactamente dos regiones iniciales con fauna del Excel
 });
 test('Investigaciones encadenadas requieren artefacto y mapa, sin consumirlos',()=>{
  const g=game();
- g.patch({money:20000,knowledge:20000,prestige:130,purchases:{asia_1:1},inventory:{africa_map:1,north_america_map_piece:8}});
+ // MEC-09D: desde 3.30 cada continente exige además preparaciones fabricadas acumulativas (no consumidas).
+ g.patch({money:20000,knowledge:20000,prestige:130,purchases:{asia_1:1},inventory:{africa_map:1,north_america_map_piece:8},craftedItems:{brass_compass:true}});
  const alaska=g.REGIONS.find(x=>x.name==='Alaska');
  assert.equal(g.regionRequirementsMet(alaska),false);
  assert.equal(g.canBuy(g.RESEARCH_NODES.find(x=>x.id==='nuevo_mundo_1')),false);
  g.buyNode('africa_1');assert.equal(g.state.purchases.africa_1,1);assert.equal(g.state.inventory.africa_map,1);
  g.buyNode('nuevo_mundo_1');assert.equal(g.state.purchases.nuevo_mundo_1,undefined);
- g.state.inventory.oceanic_quadrant=1;
+ g.state.inventory.oceanic_quadrant=1;g.state.craftedItems.oceanic_quadrant=true;
  g.state.upgrades.shipyard=1;g.state.upgrades.routeTier=2;
  g.buyNode('nuevo_mundo_1');assert.equal(g.state.purchases.nuevo_mundo_1,1);assert.equal(g.state.inventory.oceanic_quadrant,1);
  assert.ok(g.availableVoyages().some(v=>v.id==='atlantic_survey'));
@@ -56,7 +59,8 @@ test('Investigaciones encadenadas requieren artefacto y mapa, sin consumirlos',(
 });
 test('Las investigaciones nuevas no modifican los códigos de África',()=>{
  const g=game(),af=g.REGIONS.filter(x=>x.continent==='África');
- assert.equal(af.length,24);
+ // MEC-09D: GM-06 añadió una región africana (gm06_rojo); las 24 históricas conservan su código.
+ assert.equal(af.length,25);assert.equal(af.filter(r=>/^HX-/.test(r.id)).length,24);
  assert.equal(new Set(g.REGIONS.map(x=>x.id)).size,g.REGIONS.length);
  assert.ok(g.RECIPES.oceanic_quadrant.requires.brass_shard>0);
  assert.equal(g.RECIPES.north_america_map.requires.north_america_map_piece,8);
@@ -65,10 +69,12 @@ test('Las investigaciones nuevas no modifican los códigos de África',()=>{
 test('Fauna de África: ninguna especie regional queda sin bioma ni horario posible',()=>{
  const g=game();
  const africa=g.REGIONS.filter(r=>r.continent==='África');
- assert.equal(africa.length,24);
+ assert.equal(africa.length,25); // MEC-09D: 24 históricas + gm06_rojo (GM-06)
  const ecologicalProblems=[];
  for(const r of africa){
-  assert.ok(r.species.length>=8,r.name+' con fauna insuficiente');
+  // MEC-09D: el mínimo de 8 es la regla de las regiones históricas del Excel (3.14). El Arco del mar Rojo
+  // (GM-06) tiene 7 especies: se registra como observación P3 en docs/mec09d (no se añaden especies).
+  assert.ok(r.species.length>=(/^HX-/.test(r.id)?8:7),r.name+' con fauna insuficiente');
   assert.equal(new Set(r.species).size,r.species.length,'duplicados en '+r.name);
   for(const id of r.species){
    const sp=g.SPECIES[id];
