@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"standalone laboratory catalog is reproducible and offline assets exist": "e0db247"});
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');

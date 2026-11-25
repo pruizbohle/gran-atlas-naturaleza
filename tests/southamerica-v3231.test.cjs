@@ -1,6 +1,6 @@
 'use strict';
 const {withoutBestiaryPagination}=require('./helpers/legacy-source.cjs');
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"AM-05 preserves the complete gameplay source, 710 identities, 79 regions, ten South American regions and all 192 source records": "e0db247", "the new release precaches production polish, exact comparisons, visual ledger and an independent safe updater": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
 const {catalog}=require('../scripts/load-southamerica-review-v3231.cjs'),{harness}=require('./helpers/live-game.cjs');
 const context=catalog(),after=context.AtlasSouthReview,before=context.AtlasSouthBefore3231,data=context.AtlasSouthAmerica3230;
 const audit=require('../docs/sudamerica-v3231/art-audit.json'),baseline=require('../docs/sudamerica-v3230/render-inventory.json');

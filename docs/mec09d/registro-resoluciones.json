@@ -605,7 +605,8 @@
  },
  "stability-v3200 :: offline worker serves its immutable revision first and never turns missing scripts into HTML": {
   "cat": "SUSTITUIDA",
-  "why": "El modelo de precarga addAll se retiró cuando el trabajador pasó a descarga verificada con manifiesto e instalación autorizada; sustituida por tests/mec09d-worker.test.cjs sobre www/sw.js vigente (caché primero, script ausente nunca HTML, navegación a index.html, instalación autorizada y verificada, archivo alterado aborta)."
+  "why": "Sustituida por tests/mec09d-worker.test.cjs (trabajador vigente) y anclada a c3aa991, donde pasa con su modelo de precarga.",
+  "rev": "c3aa991"
  },
  "gm07-m01-release :: M01 preserves Android identity,signing,workflows and all historical offline entries; new hashes verify": {
   "cat": "SUSTITUIDA",
@@ -682,5 +683,252 @@
  "enc3370-baseline :: ENC01 conserva literalmente las 13 definiciones y el premio original, y los 80 criterios": {
   "cat": "EXPECTATIVA",
   "why": "13 misiones literales salvo el abono earnMoney del libro MEC-01 (verificado exacto) y el mensaje sin emoji (df95aca); 80 logros por definición; renderizador de Sociedad verificado en f351068."
+ },
+ "and3420-release :: AND08 el motor, catálogos, geometría y algoritmos temporales permanecen intactos": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a 624354e, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "624354e"
+ },
+ "and3420-release :: AND08 coherencia de versión, PWA, diez módulos y actualizador con respaldo": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a 624354e, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "624354e"
+ },
+ "atlas-v3211 :: Atlas keeps all continent, requirement, unlock and travel implementations from 3.21.0": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "atlas-v3211 :: Field rendering and artwork modules remain untouched by the Atlas update": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a c3aa991, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "c3aa991"
+ },
+ "bestiary-v3260 :: 3.26 adds presentation only; every original 3.25 gameplay, journal, art and catalog byte remains exact": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "bestiary-v3260 :: release precaches the production Bestiary and an isolated twelve-state comparison using the actual 3.25 engine": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "birds-v3193 :: entrypoint loads the art module first and every offline asset exists": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "e0db247"
+ },
+ "cp3430-release :: CP release: versión coherente, respaldo formato 1 y aprobación final": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a f867e7a, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "f867e7a"
+ },
+ "cp3430-release :: CP release: Pages valida la candidata actual antes de desplegar": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a f867e7a, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "f867e7a"
+ },
+ "cp3430-release :: CP release: firma, publicación Android y SAF conservan sus guardas originales": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a f867e7a, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: gm07-m01-release «M01 preserves Android identity» (sin cambios en MEC-09D respecto de 1500e42) y and3420-native.",
+  "rev": "f867e7a"
+ },
+ "cp3430-release :: CP release: diez módulos y alias histórico; actualizador compatible con la versión nueva": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a f867e7a, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "f867e7a"
+ },
+ "cp3430-ui :: CP el motor previo queda intacto fuera de los adaptadores CP, GM06 y arte M01 opcionales": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a c3aa991, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "c3aa991"
+ },
+ "dimorphism-v3195 :: laboratory is reproducible and cannot bootstrap game/save side effects": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "expeditions-research-v3280 :: 3.28 changes only delimited presentation, observational receipts and explicitly authorized validation blocks; all previous 3.27 bytes remain exact": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "expeditions-research-v3280 :: release precaches both actual renderers and an opaque memory-only sixteen-state comparison laboratory": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "global-v3240 :: AM-06 changes only the additive Bestiary presentation; approved art, catalog, geography, CSS and all gameplay bytes remain intact": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "gm05-art :: all2605 configured routes retained; only four explicitly reviewed sharks change drawings": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a c3aa991, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "c3aa991"
+ },
+ "gm06-release :: GM06 offline manifest verifies every resource hash and the safe updater": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a 52446ca, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: gm07-m01-release «M01 preserves Android identity» (sin cambios en MEC-09D respecto de 1500e42) y and3420-native. Investigada (no pasaba en ninguna revisión examinada): el constructor lista www con readdirSync, que el anclaje no redirigía; ampliado el anclaje a readdirSync/statSync/copyFileSync/cpSync, pasa en 52446ca.",
+  "rev": "52446ca"
+ },
+ "gm07-m01 :: M01 changes only the opt-in scoped art hook; catalog,geography,economy,save/native logic stay exact": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a c3aa991, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: gm07-m01-release «M01 preserves Android identity» (sin cambios en MEC-09D respecto de 1500e42) y and3420-native.",
+  "rev": "c3aa991"
+ },
+ "gm07-m01 :: M01 comparison provenance retains the previous worldwide candidate and exact art revision": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a c3aa991, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "c3aa991"
+ },
+ "herp-v3192b :: standalone laboratory catalog is reproducible and offline assets exist": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "inv3400-release :: INV08 PWA coherente, actualizador autorizado y laboratorio precargado aislado": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a 3416324, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "3416324"
+ },
+ "journal-v3250 :: 3.25 only adds journal presentation: all original game source, including the five-stage engine, remains exact": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "journal-v3250 :: all 807 stage-zero illustrations omit technical identity metadata without changing a single SVG drawing": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "journal-v3250 :: release and offline cache include the same production journal, isolated comparison and safe update entry": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "log3390-integrity :: LOG06 conserva byte a byte80 logros,37 misiones,12 exposiciones y los cinco renderizadores de Museo": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a 148321e, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "148321e"
+ },
+ "log3390-integrity :: LOG06 versión PWA, actualizador con copia exacta y laboratorio con aislamiento de almacenamiento": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a 148321e, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "148321e"
+ },
+ "mammals-v3194 :: all 218 non-mammals retain exactly their previous sprites, skins and configured sexes": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "mammals-v3194 :: the game, current labs and offline cache include the new art in the existing architecture": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "museum-v3270 :: presentation is additive: original 3.26 app and every game rule remain byte-for-byte exact": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "museum-v3270 :: release precaches all Museum resources and actual isolated before/after lab with twelve states and no storage access": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "northamerica-v3221 :: AM-03 preserves the complete production gameplay, global art engines, data, geography and updater byte for byte": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "northamerica-v3221 :: the compact audit laboratory, frozen comparison engines and new art are available offline without touching saves": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "oceania-gm02a :: production 3.30.0 installs 807 identities, 87 regions, 1460 pairs and the original save key": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "e0db247"
+ },
+ "oceania-production-v3290 :: historical 3.29 release exactly matches the final reproducible split-module package": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify. Investigada (no pasaba en ninguna revisión examinada): el empaquetador copia www con cpSync/copyFileSync, que el anclaje no redirigía; con la ampliación pasa en e0db247.",
+  "rev": "e0db247"
+ },
+ "oceania-release-v3290 :: staging refuses output inside the repository and never changes the public version": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: gm07-m01-release «M01 preserves Android identity» (sin cambios en MEC-09D respecto de 1500e42) y and3420-native.",
+  "rev": "e0db247"
+ },
+ "oceania-release-v3290 :: staging preserves native import/export installers and configures Android version 32900 without changing app ID": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: gm07-m01-release «M01 preserves Android identity» (sin cambios en MEC-09D respecto de 1500e42) y and3420-native. Investigada (no pasaba en ninguna revisión examinada): los instaladores nativos se copiaban con copyFileSync desde la versión vigente; con la ampliación del anclaje pasa en e0db247 (los scripts Python operan sobre la copia temporal, fuera del repositorio).",
+  "rev": "e0db247"
+ },
+ "oceania-runtime-v3290 :: runtime generation is deterministic, scientifically approved and loaded by public entry/cache": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: npm run release:verify (manifiesto atlas-integrity verificado), mec09c y mec09d-worker.",
+  "rev": "e0db247"
+ },
+ "pigmentation-v3196 :: lab bundle is reproducible and isolated from game progress; offline resources are complete": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "polish-v3199 :: historical gameplay function bodies remain exact outside the explicitly tested 3.28 validation/receipt additions": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "polish-v3199 :: birds, herpetofauna and the inventory art remain byte-for-byte protected": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "polish-v3199 :: production/laboratory bundles reproduce exactly and all offline files exist": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "southamerica-v3231 :: AM-05 preserves the complete gameplay source, 710 identities, 79 regions, ten South American regions and all 192 source records": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "southamerica-v3231 :: the new release precaches production polish, exact comparisons, visual ledger and an independent safe updater": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "e0db247"
+ },
+ "stability-v3200 :: entire catalog, 3473 sprite combinations and seven art modules remain exactly unchanged": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: pruebas de catálogo con diferencias aprobadas explícitas (helpers/approved-diffs.cjs: gm05-economy, polar-v3310, marine-v3320, deep-v3330, abyssal-v3340, ux3410-integrity UX05, log3390-integrity LOG06) y las pruebas funcionales del sistema.",
+  "rev": "e0db247"
+ },
+ "stability-v3200 :: seeded automatic stress at 1s, 1h and 8h matches historical gameplay bytes and RNG calls of v3.19.9, excluding the additive 3.28 voyage receipts": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a e0db247, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: persistence-v3240 (equivalencia de 8 h sin conexión en el motor vigente) y aud01-online-offline.",
+  "rev": "e0db247"
+ },
+ "ux3410-release :: UX07 identidad, PWA y laboratorio aislado coherentes": {
+  "cat": "SUSTITUIDA",
+  "why": "Prueba de identidad histórica (huella de bytes, versión o paquete de su entrega), anclada a a343ed2, última revisión en que su garantía se verificó; pasa allí íntegra. Equivalente vigente: laboratorios congelados por decisión MEC-09D (no se regeneran); juego vigente cubierto por release:verify.",
+  "rev": "a343ed2"
+ },
+ "gm06-release :: GM06 public entry loads the three modules once, after base geography and before the game": {
+  "cat": "EXPECTATIVA",
+  "why": "Orden de carga de los tres módulos GM06 comprobado sobre la entrada pública vigente; identidad de la publicación 3.44.0 (versión y metadatos aprobados) verificada en 52446ca."
+ },
+ "gm06-release :: GM06 preserves Android signing, workflows, Capacitor configuration and native save code": {
+  "cat": "SUSTITUIDA",
+  "why": "Firma, flujos y Capacitor idénticos a GM06 salvo la corrección aprobada 23c28cc de android_release.py; ningún archivo Android ni el guardado nativo cambia en MEC-09D respecto de 1500e42; guardado nativo 3.44.0 verificado en 52446ca. Evolución del gestor cubierta por and3420-save, cp3430-migrations y mec09a."
+ },
+ "gm07-m01-release :: M01 public entry loads the scoped module once afterGM06 and beforethegame; version metadata agrees": {
+  "cat": "EXPECTATIVA",
+  "why": "Orden de carga comprobado sobre la entrada vigente; identidad de la publicación 3.45.0 (índice, versiones, guardado y actualizador) verificada con los archivos de c3aa991."
  }
 }

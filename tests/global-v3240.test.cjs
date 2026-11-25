@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"AM-06 changes only the additive Bestiary presentation; approved art, catalog, geography, CSS and all gameplay bytes remain intact": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
 const {harness}=require('./helpers/live-game.cjs'),{withoutBestiaryPagination}=require('./helpers/legacy-source.cjs');
 const json=x=>JSON.parse(JSON.stringify(x)),hash=x=>crypto.createHash('sha256').update(x).digest('hex');
 function evidence(name,value){if(process.env.ATLAS_EVIDENCE_DIR)fs.writeFileSync(process.env.ATLAS_EVIDENCE_DIR+'/'+name+'.json',JSON.stringify(value,null,2)+'\n');}

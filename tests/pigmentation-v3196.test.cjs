@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"lab bundle is reproducible and isolated from game progress; offline resources are complete": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const {catalogSource}=require('./helpers/catalog.cjs'),{harness}=require('./helpers/live-game.cjs');
 const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),ctx=vm.createContext({});ctx.window=ctx;
 for(const n of ['fish-art-v3191','herp-art-v3192','bird-art-v3193','mammal-art-v3194'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),ctx);

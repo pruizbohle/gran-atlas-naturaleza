@@ -1,5 +1,6 @@
 const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
-const GAME=fs.readFileSync('www/js/app.js','utf8'),SAVE=fs.readFileSync('www/js/save-manager.js','utf8'),KEY='gran_atlas_v05';
+/* MEC-09D: fuentes leídas en cada llamada (no al cargar el módulo), para que una prueba anclada a su revisión use el motor y el gestor de esa revisión; el contenido vigente es el mismo */
+const source=f=>fs.readFileSync(f,'utf8'),KEY='gran_atlas_v05';
 function harness(store={},backup,options={}){
  const elements={};const timeouts=[];let tick=null;
  function node(id){
@@ -29,7 +30,7 @@ function harness(store={},backup,options={}){
  if(options.bestiary3260||options.museum3270||options.development3280)vm.runInContext(fs.readFileSync('www/js/bestiary-ui-v3260.js','utf8'),ctx);
  if(options.development3280)vm.runInContext(fs.readFileSync('www/js/expeditions-research-ui-v3280.js','utf8'),ctx);
  if(options.museum3270)vm.runInContext(fs.readFileSync('www/js/museum-ui-v3270.js','utf8'),ctx);
- const gameSourceRaw=options.gameSource||((options.legacy||options.southamerica===false)?require('./legacy-source.cjs').withoutOceania3290(GAME):GAME);
+ const gameSourceRaw=options.gameSource||((options.legacy||options.southamerica===false)?require('./legacy-source.cjs').withoutOceania3290(source('www/js/app.js')):source('www/js/app.js'));
  // Explicit opt-out for historical feature contracts superseded by EC-01.
  const gameSource=options.commerce3300===false?require('./legacy-source.cjs').withoutCommerce3300(gameSourceRaw):gameSourceRaw;
  const testGame=gameSource.replace(/\n\}\)\(\);\s*$/, options.bridge||'\nwindow.__atlasTest={get state(){return state},initialState,persist,encounter,rollSpecimen,recordSpecimen,specimenRates,specialBadges,renderLegendaryCollection,renderJournal,journalViewModel3250:typeof journalViewModel3250===\'undefined\'?null:journalViewModel3250,renderBestiary,get bestiaryPage(){return bestiaryPage},set bestiaryPage(value){bestiaryPage=value},BESTIARY_PAGE_SIZE:typeof BESTIARY_PAGE_SIZE==="undefined"?null:BESTIARY_PAGE_SIZE,openTab(name){tab=name;renderPanel()},handlePanelAction,get spriteCacheSize(){return spriteCache.size},renderPanel,renderExpeditions,renderObjects,craftItem,canCraft,canBuy,autoInterval,manualSearchChance,automaticSearchChance,exhibitAnimal,startExcavation,collectExcavation,...(typeof collectRelictSurvey===\"function\"?{startRelictSurvey,collectRelictSurvey}:{}),equipItem,LEGENDARY_SPECIMENS,SPECIMEN_CATEGORIES,SPECIMEN_LEVELS,...(typeof fieldAid===\"function\"?{fieldAid}:{}),spendMoneyForKnowledge,buyNode,...(typeof buyCrownPack===\"function\"?{buyCrownPack,exchangeTrialCrowns}:{}),renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,...(typeof searchRelictInField==="function"?{searchRelictInField}:{}),maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS,regionRequirementsMet,unlockRegion,travelToRegion,getSpriteMarkup,taxonomyInfo,SEXUAL_DIMORPHISM,advanceSpecies,publishMonograph,selectAtlasRegion,atlasViewModel,RESEARCH_NODES,RECIPES,configuredSpecials,automaticEligibleSpecies,processVoyages,V316_LOOT_BASE,V316_LOOT_BY_ROUTE,rollLoot,knowledgeBonus,manualEncounterBonus,helperBonus,museumRate,museumCapacity,stageRequirements,researchCensusCount,exhibitIncome};\n})();');
@@ -49,7 +50,7 @@ function harness(store={},backup,options={}){
  if(gameSource.includes('AtlasCommissions3370'))vm.runInContext(fs.readFileSync('www/js/commissions-v3370.js','utf8'),ctx);
  if(gameSource.includes('AtlasMuseumCuration3380'))vm.runInContext(fs.readFileSync('www/js/museum-curation-v3380.js','utf8'),ctx);
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
- vm.runInContext(options.saveSource||SAVE,ctx,{filename:'www/js/save-manager.js'});
+ vm.runInContext(options.saveSource||source('www/js/save-manager.js'),ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,
   evalInGame(code){return vm.runInContext('window.__atlasTest.'+code,ctx);},
   tick(){assert.ok(tick,'motor debe tener guardado periódico');tick();},

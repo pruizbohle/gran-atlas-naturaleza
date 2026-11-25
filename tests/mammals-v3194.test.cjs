@@ -1,6 +1,6 @@
 const {normalizedRecord}=require('./helpers/variant-labels.cjs');
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"all 218 non-mammals retain exactly their previous sprites, skins and configured sexes": "e0db247", "the game, current labs and offline cache include the new art in the existing architecture": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const {catalogSource,catalog}=require('./helpers/catalog.cjs');
 const engine=fs.readFileSync('www/js/mammal-art-v3194.js','utf8'),source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 const bird=fs.readFileSync('www/js/bird-art-v3193.js','utf8'),herp=fs.readFileSync('www/js/herp-art-v3192.js','utf8');

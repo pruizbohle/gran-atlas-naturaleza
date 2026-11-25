@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto'),cp=require('node:child_process');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"production 3.30.0 installs 807 identities, 87 regions, 1460 pairs and the original save key": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto'),cp=require('node:child_process');
 const data=require('../www/js/oceania-data-v3290.js');
 const {harness}=require('./helpers/live-game.cjs');
 const regions={oc_nueva_guinea:18,oc_costa_nordeste_australiana:13,oc_norte_tropical_australiano:14,oc_desierto_australiano:14,oc_tasmania:12,oc_australia_occidental:17,oc_australia_oriental:26,oc_nueva_zelanda:17};

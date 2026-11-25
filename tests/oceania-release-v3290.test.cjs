@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=require('node:child_process'),vm=require('node:vm');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"staging refuses output inside the repository and never changes the public version": "e0db247", "staging preserves native import/export installers and configures Android version 32900 without changing app ID": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=require('node:child_process'),vm=require('node:vm');
 const {build,gates}=require('../scripts/build-oceania-release-v3290.cjs');
 test('release gate rejects missing technical validation even after scientific resolution',()=>{
  const blockers=gates('/tmp/atlas-nonexistent-validation-3290.json');

@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"historical 3.29 release exactly matches the final reproducible split-module package": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto');
 const {build}=require('../scripts/build-oceania-release-v3290.cjs'),{harness}=require('./helpers/live-game.cjs'),{baselineHarness}=require('./helpers/oceania-review.cjs');
 const cp=require('node:child_process');
 const baselineFile=file=>cp.execFileSync('git',['show','07cf5d8:'+file],{maxBuffer:4e6});

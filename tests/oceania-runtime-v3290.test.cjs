@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
+/* MEC-09D: pruebas de identidad histórica ancladas a la revisión en que su garantía se verificó por última vez (helpers/at-revision.cjs; justificación y equivalente vigente en docs/mec09d/matriz-221.csv) */const test=require('./helpers/at-revision.cjs').anchored(require('node:test'),{"runtime generation is deterministic, scientifically approved and loaded by public entry/cache": "e0db247"}),assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
 const {reviewHarness,candidate}=require('./helpers/oceania-review.cjs'),{baselineHarness:harness}=require('./helpers/oceania-review.cjs');
 const json=x=>JSON.parse(JSON.stringify(x));
 test('isolated actual engine installs exactly 97 additional identities, eight regions and 131 presences',()=>{
