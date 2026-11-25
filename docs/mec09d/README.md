@@ -140,11 +140,11 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 | §8 guardado diferido | Hecho (MEC-09D.2): [auditoria-guardado-transacciones.md](auditoria-guardado-transacciones.md) |
 | §9 auditoría transaccional | Hecho (MEC-09D.2); F10 se mantiene como política aprobada (P3) |
 | §10 fuente única de verdad | **Hecho** (MEC-09D.3): [fuente-unica.md](fuente-unica.md) |
-| §11–13 431 piezas y 32 colecciones | Pendiente |
+| §11–13 piezas y colecciones | **Hecho** (MEC-09D.4): [coleccionables.md](coleccionables.md), con la matriz de piezas en `piezas.csv` y la de colecciones en `colecciones.csv` |
 | §14–15 legendarios, relictos y pistas | **Hecho**: §14 ([legendarios.md](legendarios.md), 30/30 por encuentro real en Campo) y §15 (`mec09d-relicts`) |
 | §16 récords y comportamientos | **Hecho** (MEC-09D.3): [records-conductas.md](records-conductas.md) |
 | §17 grafo de dependencias | **Hecho** (MEC-09D.3): [grafo-progresion.md](grafo-progresion.md) |
-| §18 rutas, expediciones y yacimientos | Pendiente |
+| §18 rutas, expediciones y yacimientos | **Hecho** (MEC-09D.4): [actividades.md](actividades.md) |
 | §19 `AVAIL` y encargos por perfil | Pendiente |
 | §20 calendario y tiempo sin conexión | Pendiente |
 | §21 placas y fotografía | Pendiente |
@@ -219,10 +219,34 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 
 No hubo cambios en el juego en MEC-09D.3: solo pruebas, el script de análisis y documentación.
 
-## 9. Próximo paso propuesto (a la espera de autorización)
+## 9. MEC-09D.4 · Coleccionables, comercio y expediciones
+
+**Resultado de la suite completa: 1333 de 1333 pruebas pasan** (143 archivos, 0 regresiones). `release:verify`: 302 de 302.
+
+**Pruebas nuevas:**
+- `mec09d-collectibles` (6): las 431 piezas obtenidas por la selección real del motor; 32 colecciones completables; duplicados y excedentes; persistencia.
+- `mec09d-activities` (34): 19 expediciones, 4 rutas y 10 yacimientos uno por uno.
+
+**Commits:**
+
+| Commit | Contenido |
+|---|---|
+| `c6e4f39` | §11–§13 |
+| `c338a94` | §18 y registro de asuntos para BAL |
+
+**Clasificación de lo encontrado:**
+- **Errores funcionales:** ninguno.
+- **Referencias rotas:** ninguna.
+- **Fuentes no operativas:** ninguna.
+- **Correcciones:** ninguna necesaria en el juego.
+- **Para BAL:** todo lo encontrado se reúne en [reservado-bal.md](reservado-bal.md): rotación lenta de la Caravana, fuentes únicas, rendimiento desigual de rutas y expediciones, colecciones lentas.
+- **Decisiones del propietario:** siguen pendientes O1 y O2 (ver §4).
+
+No hubo cambios en el juego: solo pruebas, scripts de análisis y documentación.
+
+## 10. Próximo paso propuesto (a la espera de autorización)
 
 Quedan:
-- **§11–§13:** 431 piezas y 32 colecciones;
-- **§18–§21:** comercio y actividades geográficas, encargos y `AVAIL`, calendario, fotografía;
+- **§19–§21:** encargos y `AVAIL`, calendario, fotografía;
 - **§22–§31:** correcciones de interfaz;
 - **§32–§39:** rendimiento, integración entre sistemas, migraciones, preparación de MEC-09E, documentación Android, etiqueta de versión y capturas.

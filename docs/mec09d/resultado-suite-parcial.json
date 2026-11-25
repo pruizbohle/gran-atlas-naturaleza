@@ -6,10 +6,10 @@
   "fail": 221
  },
  "suite_actual": {
-  "tests": 1293,
-  "pass": 1293,
+  "tests": 1333,
+  "pass": 1333,
   "fail": 0,
-  "files": 141,
+  "files": 143,
   "timeouts": []
  },
  "regresiones": [],
@@ -43,6 +43,12 @@
    "mec09d-records": 46,
    "mec09d-graph": 5,
    "mec09d-sot": 5
+  }
+ },
+ "mec09d_4": {
+  "nuevas": {
+   "mec09d-collectibles": 6,
+   "mec09d-activities": 34
   }
  }
 }
