@@ -9,9 +9,13 @@
 - No se generó ningún APK. El APK público V4.9.6 está intacto.
 - No se avanzó a MEC-09E.
 - No hay cambios de balance: costes, probabilidades, recompensas y duraciones siguen iguales.
-- No hay cambios en el juego publicado. `git diff 1500e42 -- www` está vacío.
-  - El único archivo de `www` que se tocó, el laboratorio `www/js/lab/dimorphism-production.js`, se regeneró y después se devolvió a su contenido de `1500e42`. Regenerarlo rompía la cadena de laboratorios históricos de pulido 3.19.9 (ver «Observaciones»).
-- Fuera de `tests/` y `docs/` cambia una sola línea: `scripts/gm05-runtime.cjs`. Es un auxiliar de pruebas que fabrica las credenciales cartográficas de INV 3.40 en la partida avanzada sintética.
+- La versión pública no cambia: GitHub Pages sigue publicando `main`.
+- Cambios en `www` respecto de `1500e42`:
+  - Hasta MEC-09D C1 no hubo ninguno. El laboratorio `www/js/lab/dimorphism-production.js` se regeneró y después se devolvió a su contenido de `1500e42`, porque regenerarlo rompía la cadena de laboratorios históricos de pulido 3.19.9 (ver «Observaciones»).
+  - Desde MEC-09D.2 hay uno solo: la consolidación de `taxonomyInfo` en `www/js/app.js`. Su resultado es idéntico para las 1000 especies. Se regeneraron `atlas-integrity.json` y la revisión de caché de `sw.js`.
+- Fuera de `www`, `tests/` y `docs/` cambian:
+  - `scripts/gm05-runtime.cjs`, un auxiliar de pruebas que fabrica las credenciales cartográficas de INV 3.40;
+  - `scripts/build-preview-mec09d.cjs`, que construye la Preview.
 
 ## 1. Línea base (MEC-09C, `1500e42`)
 
@@ -132,12 +136,12 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 | §3 línea base y commit de partida | Hecho |
 | §4 integridad de contenido | Parcial: recuentos verificados en el arnés (1000/125, 30 legendarios, 20 relictos); falta el informe |
 | §5–6 las 221 pruebas | **Hecho** (Continuación 1): 221 de 221 resueltas y trazadas una por una, 0 pendientes |
-| §7 consolidación de las 96 funciones redefinidas | Pendiente |
-| §8 guardado diferido | Pendiente |
-| §9 auditoría transaccional | Pendiente |
+| §7 consolidación de las funciones redefinidas | Parcial (MEC-09D.2): inventario actual de 98/185 clasificado; `taxonomyInfo` consolidada (9 envolturas → 1 capa) con equivalencia sobre 1000 especies; cadenas de acceso, modelo de Atlas y normalización fijadas por equivalencia con `1500e42` ([funciones-redefinidas.md](funciones-redefinidas.md)) |
+| §8 guardado diferido | Hecho (MEC-09D.2): [auditoria-guardado-transacciones.md](auditoria-guardado-transacciones.md) |
+| §9 auditoría transaccional | Hecho (MEC-09D.2); F10 se mantiene como política aprobada (P3) |
 | §10 fuente única de verdad | Pendiente |
 | §11–13 431 piezas y 32 colecciones | Pendiente |
-| §14–15 legendarios, relictos y pistas | Pendiente (falta `mec09d-relicts`) |
+| §14–15 legendarios, relictos y pistas | §15 hecho (`tests/mec09d-relicts.test.cjs`, 20 relictos uno por uno); §14 legendarios pendiente |
 | §16 récords y comportamientos | Pendiente |
 | §17 grafo de dependencias | Pendiente |
 | §18 rutas, expediciones y yacimientos | Pendiente |
@@ -155,7 +159,27 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 | §39 pruebas 1–26 | Pendiente |
 | §41 entregables | Parcial: este informe, la matriz y el registro |
 
-## 7. Próximo paso propuesto (a la espera de autorización)
+## 7. MEC-09D.2 (tras la Preview 01)
 
-1. Escribir `mec09d-relicts`.
-2. Continuar con §7–§39 en el orden de prioridad P0–P3.
+**Resultado de la suite completa: 1200 de 1200 pruebas pasan** (136 archivos, 0 regresiones, sin tiempos agotados). Son 31 pruebas nuevas:
+- `mec09d-consolidation`: 4;
+- `mec09d-persistence`: 5;
+- `mec09d-relicts`: 22.
+
+**Commits:**
+
+| Commit | Contenido |
+|---|---|
+| `0a4aaef` | §7 |
+| `c020467` | §8–§9 |
+| `0ff982c` | §15 |
+
+**Único cambio en el juego:** la consolidación de `taxonomyInfo` en `www/js/app.js`. Su resultado es idéntico para las 1000 especies. Se regeneraron el manifiesto de integridad y la revisión de caché del trabajador sin conexión; la versión sigue siendo 5.6.9.
+
+**Sin cambios de balance, contenidos ni mecánicas, y sin APK.**
+
+**La Preview 01 sigue intacta**: rama `preview-mec09d-01`, commit `700f983`.
+
+## 8. Próximo paso propuesto (a la espera de autorización)
+
+Continuar con §4, §11–§14 y §16–§39 en orden de prioridad P0–P3.

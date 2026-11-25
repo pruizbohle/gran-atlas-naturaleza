@@ -6,10 +6,10 @@
   "fail": 221
  },
  "suite_actual": {
-  "tests": 1169,
-  "pass": 1169,
+  "tests": 1200,
+  "pass": 1200,
   "fail": 0,
-  "files": 133,
+  "files": 136,
   "timeouts": []
  },
  "regresiones": [],
@@ -28,5 +28,12 @@
   "ANDROID": 0,
   "ENTORNO": 0,
   "PENDIENTE": 0
+ },
+ "mec09d_2": {
+  "nuevas": {
+   "mec09d-consolidation": 4,
+   "mec09d-persistence": 5,
+   "mec09d-relicts": 22
+  }
  }
 }
