@@ -666,5 +666,21 @@
  "stability-v3200 :: storage failure keeps the live session exportable and failed imports roll back in memory": {
   "cat": "EXPECTATIVA",
   "why": "Versión de sobre de exportación vigente (package.json)."
+ },
+ "ux3410-integrity :: UX05 fuentes de probabilidad, premios y geometría permanecen intactas": {
+  "cat": "EXPECTATIVA",
+  "why": "Investigada en detalle (no pasaba en ninguna revisión): solo difieren (a) los módulos de logros y encargos, extendidos por MEC-08 (e930fad) con los 80 logros y 24 encargos idénticos —se comparan definiciones—, y (b) settleTrade3300 y resolveVoyageReward, que acreditan con earnMoney(n,'comercio'|'expediciones') del libro de ingresos MEC-01, verificado como suma exacta de n. Sin cambio de probabilidad, premio ni geometría; la secuencia económica real produce la misma partida que la base."
+ },
+ "log3390-integrity :: LOG06 catálogo, recetas, rutas, costos y premios anteriores idénticos a3.38": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogos de 3.38 comparados con las excepciones aprobadas (oso tibetano, Legendario LEG-02, mapas INV 3.40 aditivos, campo cartography); MUSEUM_RELICTS rediseñado en 03bf329 comprobado por forma (20)."
+ },
+ "mus3380-baseline :: MUS01 conserva catálogos de80 logros/37 misiones y renderer base de cinco salas": {
+  "cat": "EXPECTATIVA",
+  "why": "80 logros y 37/24 encargos comparados por definición (MEC-08 los hizo extensibles); renderizadores verificados en eedb3ac; 8 fósiles únicos, 5 artefactos y capacidades 3/7/12 sobre el juego vigente; relictos 20 (03bf329)."
+ },
+ "enc3370-baseline :: ENC01 conserva literalmente las 13 definiciones y el premio original, y los 80 criterios": {
+  "cat": "EXPECTATIVA",
+  "why": "13 misiones literales salvo el abono earnMoney del libro MEC-01 (verificado exacto) y el mensaje sin emoji (df95aca); 80 logros por definición; renderizador de Sociedad verificado en f351068."
  }
 }

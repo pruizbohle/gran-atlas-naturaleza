@@ -31,4 +31,14 @@ function same(assert,key,current,old,label=key){
 //    especies de LEGENDARY_SPECIMENS que aún no la tenían. Las demás categorías y tasas son exactas.
 let legendCache=null;function legendIds(g){if(g&&g.LEGENDARY_SPECIMENS)return new Set(g.LEGENDARY_SPECIMENS.map(l=>l.speciesId));if(!legendCache)legendCache=new Set(require('./live-game.cjs').harness().window.__atlasTest.LEGENDARY_SPECIMENS.map(l=>l.speciesId));return legendCache;}
 function rates(assert,g,id,current,old){const x=json(current),y=json(old);if(x.Legendario!==undefined&&y.Legendario===undefined){const legend=legendIds(g);assert.ok(legend.has(id),id+': Legendario solo en especies legendarias LEG-02');assert.equal(x.Legendario,0.0001,id);delete x.Legendario;}assert.deepEqual(x,y,id);}
-module.exports={json,species,speciesCatalog,research,researchPrefix,keyed,same,rates,BEAR};
+// 5. Libro de ingresos MEC-01 (769477a): los abonos de dinero pasan por earnMoney(n,fuente), que suma
+//    exactamente n a state.money y solo registra la procedencia. ledger() devuelve la forma anterior.
+const EARN=/function earnMoney\(amount,source\)\{const n=Number\(amount\);if\(!Number\.isFinite\(n\)\|\|n<=0\)return 0;state\.money\+=n;globalThis\.AtlasMEC01\?\.credit\(state,n,source\);return n;\}/;
+function ledger(src){return String(src).replace(/earnMoney\(([^,()]+),'[a-z]+'\);/g,'state.money+=$1;');}
+function earnMoneyIsExact(assert,appSource){assert.match(appSource,EARN,'earnMoney suma exactamente el importe');}
+// 6. MEC-08 (e930fad) hizo extensibles los módulos de logros y encargos sin cambiar sus definiciones:
+//    se comparan las definiciones exportadas (id, métrica, objetivo, premio…) en lugar de los bytes.
+function moduleCatalog(assert,file,currentSource,oldSource){const name=/achievements/.test(file)?'AtlasAchievements3360':'AtlasCommissions3370';const load=src=>{const c={};c.globalThis=c;require('node:vm').runInNewContext(src,c);return c[name].catalog;};const cur=json(load(currentSource)),old=json(load(oldSource));assert.equal(cur.length,old.length,file);assert.deepEqual(cur,old,file);}
+// 7. MUSEUM_RELICTS se rediseñó en 03bf329: veinte relictos de descubrimiento solo en Campo.
+function relictShape(assert,relicts){assert.equal(relicts.length,20);assert.equal(new Set(relicts.map(r=>r.id)).size,20);for(const r of relicts)assert.ok(r.name&&r.latin&&r.region&&r.habitats.length&&r.times.length&&r.locality&&r.habitatDetail,r.id);}
+module.exports={json,species,speciesCatalog,research,researchPrefix,keyed,same,rates,ledger,earnMoneyIsExact,moduleCatalog,relictShape,BEAR};
