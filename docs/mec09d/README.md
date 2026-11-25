@@ -15,13 +15,13 @@
 
 1145 pruebas: 924 pasan y 221 fallan. Sin tiempos agotados. Resultado por prueba en `docs/mec09c/resultado-suite-mec09c.json`.
 
-## 2. Resultado actual (suite completa, 133 archivos)
+## 2. Resultado actual (suite completa, 133 archivos; tras la Continuación 1, commit `fc047aa`)
 
 | | MEC-09C | Ahora |
 |---|---|---|
 | Pruebas | 1145 | 1169 |
-| Pasan | 924 | 1114 |
-| Fallan | 221 | 55 |
+| Pasan | 924 | **1169** |
+| Fallan | 221 | **0** |
 | Regresiones (pasaban y ahora fallan) | – | **0** |
 | Tiempos agotados | 0 | 0 |
 
@@ -35,14 +35,15 @@ Las 24 pruebas nuevas en el recuento tienen dos orígenes:
 
 La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado en MEC-09C, estado actual, categoría, justificación, equivalente vigente y fallo original. El registro razonado está en `docs/mec09d/registro-resoluciones.json`.
 
-| Categoría | Pasan ahora | Siguen fallando |
+| Categoría | Pruebas | Estado actual |
 |---|---|---|
-| ARNES: el error estaba en la preparación de la prueba | 37 | 0 |
-| EXPECTATIVA: actualizada por un cambio aprobado y documentado | 114 | 0 |
-| SUSTITUIDA: anclada a su revisión histórica, o reemplazada por una prueba vigente | 15 | 1 |
-| PENDIENTE: revisión individual sin terminar | 0 | 54 |
-| FUNCIONAL: error real del juego | 0 | 0 |
-| **Total** | **166** | **55** |
+| ARNES: el error estaba en la preparación de la prueba | 37 | pasan |
+| EXPECTATIVA: actualizada por un cambio aprobado y documentado | 120 | pasan |
+| SUSTITUIDA: anclada a su revisión histórica o reemplazada por una prueba vigente equivalente | 64 | pasan |
+| FUNCIONAL: error real del juego | 0 | – |
+| ANDROID / ENTORNO | 0 | – |
+| PENDIENTE | 0 | – |
+| **Total** | **221** | **221 pasan** |
 
 **No se ha encontrado ningún error funcional del juego.** Ninguna prueba se borró. La garantía es automática: `tests/helpers/mec09d-traceability.cjs` comprueba que todos los títulos de prueba de `1500e42` siguen declarados y que cada archivo histórico modificado lleva la marca `MEC-09D` junto a cada cambio.
 
@@ -78,18 +79,38 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
    - un archivo alterado aborta sin dejar una revisión parcial;
    - solo se borran cachés antiguas del juego.
 
-### Las 55 que siguen fallando
+### Continuación 1: cierre de las 55 restantes
 
-- **54 pendientes de revisión individual.** Casi todas son huellas de publicación de versiones anteriores, por ejemplo nombres de caché `gran-atlas-v3.30.0-…`, bytes de módulos o laboratorios reproducibles.
-  - 50 pasan en una revisión histórica concreta, indicada en la matriz: son candidatas a anclaje.
-  - El anclaje se aplicará solo a pruebas de huella. Las que resulten ser de comportamiento se corregirán.
-  - 4 no pasan en ninguna revisión probada. Habrá que estudiarlas una a una; podrían quedar como ANDROID o ENTORNO.
-- **1 sustituida, con su anclaje sin aplicar todavía:** `stability-v3200 · offline worker`. Su equivalente ya pasa.
+**Guardas de catálogo y de fuentes (7), corregidas con diferencias aprobadas explícitas, sin anclaje.** Son UX05, LOG06, MUS01, ENC01, la entrada GM06, Android GM06 y la entrada M01.
+- **UX05 «fuentes de probabilidad, premios y geometría».** No pasaba en ninguna revisión, así que la investigué a fondo. Solo difieren dos cosas:
+  - los módulos de logros y encargos, que MEC-08 hizo extensibles. Sus 80 logros y 24 encargos son idénticos en id, métrica, objetivo y premio;
+  - `settleTrade3300` y `resolveVoyageReward`, que abonan el dinero con `earnMoney(n,…)` del libro de ingresos MEC-01. La prueba verifica literalmente que esa función suma exactamente `n`.
+  - **No cambia ninguna probabilidad ni ningún premio.** La prueba hermana «misma secuencia económica real produce la misma partida» pasa sobre el motor vigente.
+- **Diferencias nuevas en `approved-diffs.cjs`:**
+  - `ledger`, para el abono por el libro de ingresos MEC-01;
+  - `moduleCatalog`, que compara las definiciones de logros y encargos de MEC-08;
+  - `relictShape`, que comprueba la forma de los 20 relictos de `03bf329`;
+  - el mensaje del registro sin emoji (`df95aca`).
+- **Entradas GM06 y M01.** El orden de carga se comprueba sobre la entrada pública vigente. La identidad de cada publicación (versión y metadatos) se comprueba en su revisión.
+- **Android GM06.** Ningún archivo Android ni el guardado nativo cambia en MEC-09D respecto de `1500e42`. El único cambio desde GM06 es la corrección aprobada de rutas UTF-8 (`23c28cc`).
+
+**Pruebas de identidad histórica ancladas a su revisión (48).** Comprueban huellas de bytes, versiones de publicación, paquetes, precargas o laboratorios reproducibles de una entrega concreta. Cada una se ejecuta con los archivos de la última revisión en que su garantía se verificó y pasa allí íntegra. La matriz indica la revisión y el equivalente vigente de cada una: `release:verify`, `mec09d-worker`, las pruebas de catálogo con diferencias aprobadas y `persistence-v3240` para la equivalencia de 8 horas.
+
+**Las cuatro sin revisión, investigadas una a una:**
+- **UX05:** corregida, como se describe arriba.
+- **El manifiesto GM06 y los dos empaquetadores de Oceanía 3.29.** Fallaban porque sus constructores listan y copian `www` con `readdirSync`, `cpSync` y `copyFileSync`, operaciones que el anclaje no redirigía. Con el anclaje ampliado pasan en `52446ca`, `e0db247` y `e0db247`.
+- **No eran fallos de Android ni de entorno.**
+
+**Prueba sustituida con anclaje pendiente.** `stability-v3200 · offline worker` está anclada ahora a `c3aa991` y su equivalente vigente es `mec09d-worker`.
+
+**Ajustes de arnés para que el anclaje sea efectivo en archivos mixtos:**
+- `live-game.cjs` lee el motor en cada llamada en lugar de al cargarse. El contenido vigente es el mismo.
+- En `gm05-art` y `stability-v3200`, las fuentes se leen dentro de la prueba anclada.
 
 ## 4. Herramientas nuevas en el repositorio
 
 - `tests/helpers/runtime-data.cjs`: precarga los scripts de producción, opcionalmente de una revisión git.
-- `tests/helpers/at-revision.cjs`: ejecuta una prueba o un archivo contra los archivos de una revisión. Con `pinFile`, `anchored` o `MEC09D_REV`, la revisión se propaga también a los procesos `node` hijos.
+- `tests/helpers/at-revision.cjs`: ejecuta una prueba o un archivo contra los archivos de una revisión. Redirige lecturas, listados de directorio, `stat` y copias. Con `pinFile`, `anchored` o `MEC09D_REV`, la revisión se propaga también a los procesos `node` hijos. Las escrituras nunca se redirigen al repositorio.
 - `tests/helpers/approved-diffs.cjs`: diferencias aprobadas y documentadas.
 - `tests/helpers/mec09d-traceability.cjs`: garantía de que no se eliminan pruebas.
 - `tests/mec09d-worker.test.cjs`: trabajador sin conexión vigente.
@@ -108,7 +129,7 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 |---|---|
 | §3 línea base y commit de partida | Hecho |
 | §4 integridad de contenido | Parcial: recuentos verificados en el arnés (1000/125, 30 legendarios, 20 relictos); falta el informe |
-| §5–6 las 221 pruebas | Parcial: 166 resueltas y 55 pendientes, matriz entregada |
+| §5–6 las 221 pruebas | **Hecho** (Continuación 1): 221 de 221 resueltas y trazadas una por una, 0 pendientes |
 | §7 consolidación de las 96 funciones redefinidas | Pendiente |
 | §8 guardado diferido | Pendiente |
 | §9 auditoría transaccional | Pendiente |
@@ -134,6 +155,5 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 
 ## 7. Próximo paso propuesto (a la espera de autorización)
 
-1. Terminar las 55 pruebas restantes: anclar las de huella y corregir las de comportamiento.
-2. Escribir `mec09d-relicts`.
-3. Continuar con §7–§39 en el orden de prioridad P0–P3.
+1. Escribir `mec09d-relicts`.
+2. Continuar con §7–§39 en el orden de prioridad P0–P3.
