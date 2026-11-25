@@ -1,0 +1,30 @@
+/* Synthetic scenario data and explicit clock controls. Runs only inside the laboratory closure. */
+let cpScenario3430='A',cpApproved3430=false,cpPending3430=null,cpLastButton3430=null;
+window.confirm=message=>{if(cpApproved3430)return true;cpPending3430=cpLastButton3430;parent.postMessage({type:'cp3430-confirm',message:String(message)},'*');return false;};
+document.addEventListener('click',event=>{const n=event.target.closest('button');if(n)cpLastButton3430={id:n.id||null,action:n.dataset.action||null,target:n.dataset.id||null,token:n.dataset.m27Token||null};},true);
+function cpBase3430(kind){const s=initialState();s.collectionId='camp-profile-laboratory-'+kind;s.helpers=0;s.log=[];s.lastTick=Date.now();const mature=['C','D','E','F'].includes(kind),developed=kind!=='A';s.money=developed?100000:420;s.knowledge=developed?100000:0;s.prestige=mature?1000:kind==='B'?24:0;
+ const research=developed?['prismaticos_1','cuaderno_1','metodo_1','capacitacion_1','astillero','rutas_1',...(mature?['rutas_2','sociedad_1','gabinete_1','asia_1','africa_1','nuevo_mundo_1','norteamerica_1','sudamerica_1','oceania_1','polos_1','mares_superficiales_1','exploracion_profunda_1','exploracion_abisal_1','paleontologia_1','paleontologia_2','paleontologia_3']:[])]:[];
+ for(const id of research){const n=RESEARCH_NODES.find(n=>n.id===id);if(n){s.purchases[id]=1;n.effect(s);}}
+ if(developed)for(const [id,item]of Object.entries(ITEMS))if(mature||['carved_wood','fossil_fragment','parchment_scrap','pressed_flower','old_ink','brass_shard'].includes(id))s.inventory[id]=mature?120:20;
+ if(mature){for(const rule of Object.values(CONTINENT_RULES3300))for(const id of rule.items)s.craftedItems[id]=true;for(const d of CARTOGRAPHY3400){s.inventory[d.map]=1;s.craftedItems[d.map]=true;}s.inventory.world_map=1;s.craftedItems.world_map=true;s.museum.wing=3;}
+ if(['D','E','F'].includes(kind)){const n=RESEARCH_NODES.find(n=>/excava/.test(n.id));if(n){s.purchases[n.id]=1;n.effect(s);}const r=RESEARCH_NODES.find(n=>n.id==='relictos_1');if(r){s.purchases[r.id]=1;r.effect(s);}}
+ if(['E','F'].includes(kind)){for(const id of Object.keys(SPECIES)){s.discovered[id]=true;s.sightings[id]=640;s.feedObs[id]=12;s.stages[id]=5;s.published[id]=true;}for(const id of Object.keys(SPECIES).slice(0,12))s.museum.exhibits[id]=true;for(const d of MUSEUM_COLLECTIONS)s.museum.collections[d.id]=true;for(const d of MUSEUM_FOSSIL_RECIPES.filter(d=>d.unique))s.museum.collections[d.id]=true;s.naturalistProfile3430={avatar:'botanica',name:'Elena Ríos'};s.specialFound[Object.keys(SPECIES)[0]]={Notable:true};s.specialCounts={[Object.keys(SPECIES)[0]]:{Notable:3}};}
+ state=s;for(const r of REGIONS)if(regionRequirementsMet(r))s.regionUnlocked[r.id]=true;if(['D','E','F'].includes(kind))for(const r of MUSEUM_RELICTS.slice(0,4)){s.regionUnlocked[r.region]=true;s.museum.relictLeads[r.id]=1;}
+ return s;
+}
+function cpReport3430(){parent.postMessage({type:'cp3430-state',scenario:cpScenario3430,mode:cp3430.mode,facility:cp3430.active?cp3430.facility:null,module:tab,profile:cpUI3430.profile(state),storageFault:!!storageFault,jobs:{voyages:state.voyages.length,trade:state.commerce.jobs.length,digs:state.museum.excavations.length,surveys:state.museum.relictSurveys.length},time:Date.now(),money:state.money,knowledge:state.knowledge},'*');}
+function cpLoad3430(kind){if(!['A','B','C','D','E','F'].includes(kind))return;window.__cp3430Fail=false;window.__cp3430Memory.clear();cpScenario3430=kind;cpPending3430=null;cpLastButton3430=null;cpApproved3430=true;
+ try{const s=cpBase3430(kind);window.AtlasSaveBridge.restoreGame(s);Object.assign(inventoryUI3400,{query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null,filtersOpen:false});state.inventoryView='equipo';developmentUI3280.route='coast';tradeSection3390='routes';
+  if(kind==='B'||['E','F'].includes(kind))sail('coast');
+  if(['C','E','F'].includes(kind))startTrade3300('coastal_trade');
+  if(['D','E','F'].includes(kind)){const now=Date.now();startExcavation('british_cliffs',now-3600000);startExcavation('alpine_basin',now);startRelictSurvey(MUSEUM_RELICTS[0].id,now);}
+  if(['E','F'].includes(kind)){const d=globalThis.AtlasAchievements3360.catalog.find(d=>d.title&&state.achievements.unlocked[d.id]);if(d)state.achievements.featured=d.id;}
+  globalThis.AtlasSociety3360?.clearNotifications();globalThis.AtlasCommissionsUI3370?.clearNotifications();cp3430.paintKey='';cpHome3430();if(kind==='F'){window.__cp3430Fail=true;persist();}cpPaintAvatar3430();cpReport3430();
+ }finally{cpApproved3430=false;}
+}
+window.addEventListener('message',event=>{if(event.source!==parent)return;const data=event.data;if(data?.type==='cp3430-scenario')cpLoad3430(data.scenario);if(data?.type==='cp3430-mode'){cpSetMode3430(data.mode);cpReport3430();}if(data?.type==='cp3430-advance'){window.__cp3430Clock+=3600000;window.__cp3430Tick?.();renderPanel();cpReport3430();}if(data?.type==='cp3430-answer'){const pending=cpPending3430;cpPending3430=null;if(data.accepted&&pending){const target=pending.id?document.getElementById(pending.id):[...document.querySelectorAll('button[data-action]')].find(n=>n.dataset.action===pending.action&&(n.dataset.id||null)===pending.target&&(n.dataset.m27Token||null)===pending.token);if(target&&!target.disabled){cpApproved3430=true;try{target.click();}finally{cpApproved3430=false;}}}cpReport3430();}});
+// No timer: reports are projected after existing event dispatch has completed.
+document.addEventListener('click',()=>queueMicrotask(cpReport3430));document.addEventListener('submit',()=>queueMicrotask(cpReport3430));
+window.CampProfileLab3430.navigate=uxNavigate3410;window.CampProfileLab3430.back=uxBack3410;window.CampProfileLab3430.view=()=>({inventory:{...inventoryUI3400},route:developmentUI3280.route});
+window.CampProfileLab3430.report=cpReport3430;window.CampProfileLab3430.state=()=>JSON.parse(JSON.stringify(state));window.CampProfileLab3430.load=cpLoad3430;window.CampProfileLab3430.clock=()=>Date.now();
+cpLoad3430('A');parent.postMessage({type:'cp3430-ready'},'*');

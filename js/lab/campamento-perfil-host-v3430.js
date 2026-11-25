@@ -1,0 +1,10 @@
+(()=>{
+'use strict';
+const original='<!doctype html>\n'+document.documentElement.outerHTML,frame=document.getElementById('engine'),status=document.getElementById('labStatus'),confirmation=document.getElementById('labConfirmation');let ready=false;
+function send(data){frame.contentWindow.postMessage(data,'*');}
+window.addEventListener('message',event=>{if(event.source!==frame.contentWindow)return;const d=event.data;if(d?.type==='cp3430-ready'){ready=true;status.textContent='Memoria aislada · reloj de prueba detenido';window.CampProfileHost3430={...window.CampProfileHost3430,ready:true};}if(d?.type==='cp3430-state'){window.CampProfileHost3430={...window.CampProfileHost3430,...d,ready};status.textContent='Escenario '+d.scenario+' · '+(d.facility||'plano general')+' · '+(d.storageFault?'error de almacenamiento simulado':'memoria aislada');}if(d?.type==='cp3430-confirm'){document.getElementById('labConfirmText').textContent=d.message;confirmation.showModal();document.getElementById('labConfirmNo').focus();}});
+for(const id of ['labConfirmYes','labConfirmNo'])document.getElementById(id).onclick=()=>{confirmation.close();send({type:'cp3430-answer',accepted:id==='labConfirmYes'});};confirmation.addEventListener('cancel',event=>{event.preventDefault();confirmation.close();send({type:'cp3430-answer',accepted:false});});
+document.getElementById('scenario').onchange=event=>{if(ready)send({type:'cp3430-scenario',scenario:event.target.value});};document.getElementById('mode').onchange=event=>{if(ready)send({type:'cp3430-mode',mode:event.target.value});};document.getElementById('advance').onclick=()=>{if(ready)send({type:'cp3430-advance'});};
+document.getElementById('downloadLab').onclick=()=>{const url=URL.createObjectURL(new Blob([original],{type:'text/html;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='El-Gran-Atlas-laboratorio-campamento-perfil.html';document.body.appendChild(link);link.click();link.remove();URL.revokeObjectURL(url);};
+frame.srcdoc=JSON.parse(document.getElementById('engineTemplate').textContent);
+})();

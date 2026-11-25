@@ -1,0 +1,38 @@
+{
+  "label": "MEC-09D Preview 01",
+  "version": "5.6.9",
+  "sourceCommit": "86bc3af",
+  "builtAt": "2026-11-25T17:07:38.478Z",
+  "storageKeys": [
+    "gran_atlas_v05_preview_mec09d",
+    "gran_atlas_backup_before_update_preview_mec09d",
+    "gran_atlas_backup_pre_import_v301_preview_mec09d",
+    "gran_atlas_restore_receipt_v34_preview_mec09d",
+    "gran_atlas_v07_backup_before_v08_preview_mec09d"
+  ],
+  "modifiedFiles": [
+    "index.html",
+    "js/app.js",
+    "js/atlas-pwa-update.js",
+    "js/gm06/lab-bridge.js",
+    "js/lab/bestiary-app-before-v3250.js",
+    "js/lab/dimorphism-production.js",
+    "js/lab/expeditions-app-before-v3270.js",
+    "js/lab/journal-app-before-v3240.js",
+    "js/lab/museum-app-before-v3260.js",
+    "js/lab/northamerica-before-v3221.js",
+    "js/lab/northamerica-catalog-v3220.js",
+    "js/lab/oceania-catalog-v3290.js",
+    "js/lab/polish-before-v3198.js",
+    "js/lab/southamerica-before-v3231.js",
+    "js/lab/southamerica-catalog-v3230.js",
+    "js/pwa-update-v3212.js",
+    "js/pwa-update-v3220.js",
+    "js/pwa-update-v3260.js",
+    "js/save-manager.js",
+    "laboratorio-campamento-perfil-v3430.html",
+    "laboratorio-cartografia-gm06.html"
+  ],
+  "files": 8264,
+  "note": "Copia exacta de www/ salvo las claves de almacenamiento aisladas, la insignia y la desactivación de la instalación PWA. Sin cambios de juego ni de balance."
+}

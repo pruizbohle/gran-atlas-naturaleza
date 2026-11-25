@@ -1,0 +1,246 @@
+{
+  "version": "5.6.9",
+  "build": "MEC-09C",
+  "label": "5.6.9 Beta — MEC-09C (interfaz móvil, navegación y rendimiento)",
+  "v569c": {"mec09c": true, "beta": true, "mobileUX": true, "consolidation": "5.6.9", "presentationOnly": true, "balance": "sin cambios (BAL-01)", "apk": false},
+  "v569b": {"mec09b": true, "beta": true, "functionalAudit": true, "consolidation": "5.6.9", "progressionController": true, "daguerreotypePlates": "state.mec06.plates", "geographicCoverage": {"voyages": 6, "digSites": 3, "newRegions": 0}, "balance": "BAL-01 provisional", "apk": false},
+  "v569": {"mec09a": true, "beta": true, "technicalReview": true, "consolidation": "5.6.9", "historicFailuresClassified": 216, "eventEditionsRegistry": true, "coreSanitizer": true, "apk": false},
+  "v568": {"mec08": true, "beta": true, "achievementsNew": 84, "commissionsNew": 12, "contractTemplates": 20, "events": 10, "state": "state.mec08", "eventModifiersLayer": true, "retroactiveWithoutMoney": true, "apk": false},
+  "v567": {"mec07": true, "beta": true, "naturalRecords": 25, "behaviors": 20, "state": "state.naturalRecords", "isolatedRng": true, "apk": false},
+  "v566": {"mec06": true, "beta": true, "artifacts": 20, "betaArtifacts": 15, "components": 6, "animalMaterials": 27, "studies": 14, "demos": 4, "places": ["museo","taller","campamento","almacen"], "state": "state.mec06", "apk": false},
+  "v565": {"mec05": true, "beta": true, "museumLevels": 5, "museumRankLevels": {"4": 11, "5": 14}, "cabinets": 5, "cabinetBenefits": 11, "themeTiers": 4, "museumState": "derivado de state.museum.cabinets", "apk": false},
+  "v564": {"mec04": true, "beta": true, "societyRanks": 20, "rankState": "state.society", "facilityRankLevels": [4, 5], "newVoyages": 5, "newDigSites": 3, "worldOrigins": 21, "apk": false},
+  "v563": {"mec03": true, "beta": true, "pieces": 431, "collections": 32, "animalMaterials": 27, "universalDropsRetired": true, "sources": ["campo","observacion","expediciones","comercio","excavaciones","prospecciones","taller","encargos"], "eventsActive": false, "apk": false},
+  "v562": {"mec02": true, "beta": true, "facilities": 5, "levelsPerFacility": 5, "stages": 25, "personalArea": "shop", "campState": "state.camp", "provisionalValues": true, "apk": false},
+  "v561": {"mec01": true, "beta": true, "dropChannels": 4, "collectionRegistry": true, "moneyLedger": true, "cabinetSelector": true, "museumLevels": 5, "naturalMilestones": 1, "apk": false},
+  "v560": {"beta": true, "pieces": 458, "collections": 32, "societyRanks": 20},
+  "atlas": "simple",
+  "v551": {"campFondo": true, "campAreas": 6},
+  "v550": {"mobileFixedFrame": true, "dockIcons": 9, "currencyPops": true},
+  "v540": {"objectIcons": 68, "biomeHexTint": true, "emojiFreeLog": true},
+  "v530": {"iconography": true, "relictCases": 20, "illustratedBiomes": 16},
+  "v520": {
+    "activeTaxa": 1000,
+    "regions": 125,
+    "legendary": 30,
+    "relicts": 20,
+    "relictWebPFiles": 80,
+    "contextualGuide": true
+  },
+  "gm07P04": {
+    "activeTaxa": 1000,
+    "scientificallyIllustratedTaxa": 950,
+    "scientificPlates": 1622,
+    "illustratedLegendary": 12,
+    "newCatalogEntries": 2,
+    "newRegions": 0
+  },
+  "gm07P05": {
+    "activeTaxa": 1000,
+    "scientificallyIllustratedTaxa": 964,
+    "scientificPlates": 1636,
+    "deepSeaTaxa": 14,
+    "illustratedLegendary": 12,
+    "relicts": 9
+  },
+  "gm07P06": {
+    "activeTaxa": 1000,
+    "scientificallyIllustratedTaxa": 1000,
+    "scientificPlates": 1672,
+    "newMarineFishPlates": 16,
+    "newCephalopodPlates": 20,
+    "regions": 125,
+    "illustratedLegendary": 12,
+    "relicts": 9
+  },
+  "cells": {
+    "Europa": 10,
+    "Asia": 27,
+    "África": 25,
+    "Norteamérica": 18,
+    "Sudamérica": 14,
+    "Oceanía": 9,
+    "Polos": 7,
+    "Océanos": 19
+  },
+  "northAmerica": {
+    "regions": 14,
+    "sourceNames": 129,
+    "taxa": 128,
+    "presences": 206
+  },
+  "southAmerica": {
+    "regions": 10,
+    "sourceNames": 131,
+    "taxa": 131,
+    "newSpecies": 121,
+    "reusedSpecies": 10,
+    "presences": 192
+  },
+  "channel": "beta",
+  "oceania": {
+    "regions": 8,
+    "taxa": 97,
+    "presences": 131
+  },
+  "polar": {
+    "regions": 7,
+    "newSpecies": 21,
+    "presences": 45
+  },
+  "surfaceSeas": {
+    "regions": 12,
+    "newSpecies": 95,
+    "reusedSpecies": 18,
+    "presences": 192,
+    "totalSpecies": 923,
+    "totalRegions": 106,
+    "totalPresences": 1697
+  },
+  "deepOceans": {
+    "regions": 5,
+    "newSpecies": 20,
+    "reusedSpecies": 4,
+    "presences": 44,
+    "totalSpecies": 943,
+    "totalRegions": 111,
+    "totalPresences": 1741,
+    "methods": [
+      "sondeo",
+      "muestreo"
+    ]
+  },
+  "abyssalTrenches": {
+    "regions": 2,
+    "newSpecies": 2,
+    "reusedSpecies": 1,
+    "presences": 3,
+    "totalSpecies": 945,
+    "totalRegions": 113,
+    "totalPresences": 1744,
+    "methods": [
+      "muestreo",
+      "extraordinario"
+    ]
+  },
+  "consolidation": {
+    "identities": 945,
+    "regions": 113,
+    "presences": 1744,
+    "classificationCorrections": 3,
+    "artCorrections": 4
+  },
+  "achievements": {
+    "total": 80,
+    "categories": 6,
+    "tiers": [
+      "Bronce",
+      "Plata",
+      "Oro",
+      "Platino"
+    ],
+    "economicRewards": false,
+    "storage": "gran_atlas_v05",
+    "retroactive": true
+  },
+  "commissions": {
+    "original": 13,
+    "new": 24,
+    "total": 37,
+    "lines": 6,
+    "trackedLimit": 3,
+    "newRewards": {
+      "money": 3560,
+      "knowledge": 4750,
+      "prestige": 0
+    },
+    "commercialEvidenceSince": "3.36.0"
+  },
+  "museumCuration": {
+    "projects": 12,
+    "rooms": 5,
+    "animalCapacity": [
+      3,
+      7,
+      12
+    ],
+    "economicRewards": 0,
+    "newFauna": 0,
+    "newScientificPieces": 0
+  },
+  "logistics": {
+    "contracts": 10,
+    "uniqueContracts": 8,
+    "repeatableContracts": 2,
+    "manifests": 4,
+    "originalTradeHours": [
+      4,
+      8,
+      12,
+      24
+    ],
+    "storage": "gran_atlas_v05",
+    "permanentReceipts": true,
+    "progressionReserve": 6
+  },
+  "inventoryCartography": {
+    "originalItems": 54,
+    "totalItems": 68,
+    "newMaps": 3,
+    "worldMap": true,
+    "regionalBarters": 7,
+    "ratios": [
+      50,
+      100
+    ],
+    "historicalAccessPreserved": true,
+    "storage": "gran_atlas_v05"
+  },
+  "experience": {
+    "compass": "contextual and optional",
+    "safeShortcuts": true,
+    "achievementPageSize": 8,
+    "missionPageSize": 4,
+    "newCatalogEntries": 0,
+    "physicalAndroidValidated": false
+  },
+  "androidDistribution": {
+    "appId": "com.elgranatlas.naturaleza.beta314",
+    "versionCode": 40906,
+    "policy": "Permanent certificate and exact-candidate physical restoration required before Android publication"
+  },
+  "campamentoProfile": {
+    "facilities": 5,
+    "avatars": 8,
+    "profile": "optional naturalistProfile3430",
+    "navigationAlias": "expeditions",
+    "economyChanged": false,
+    "designApproved": true,
+    "implementationApprovalPending": false
+  },
+  "gm06": {
+    "species": 997,
+    "newSpecies": 52,
+    "regions": 125,
+    "newRegions": 12,
+    "presences": 1829,
+    "approved": true,
+    "economyChanged": false,
+    "collectiblesIntegrated": false,
+    "specialDossier": "Rapa Nui",
+    "physicalAndroidValidated": false
+  },
+  "gm07M01": {
+    "reviewedSpecies": 32,
+    "modifiedNormalSprites": 30,
+    "retainedOriginals": 2,
+    "configuredVariantsIncludingNormal": 70,
+    "approvedUserRecords": 31,
+    "resolvedFinalObservations": 1,
+    "approved": true,
+    "economyChanged": false,
+    "otherSpeciesChanged": false,
+    "collectiblesIntegrated": false,
+    "androidBuildCreated": false
+  }
+}

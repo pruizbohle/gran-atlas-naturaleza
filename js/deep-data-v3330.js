@@ -1,0 +1,2399 @@
+(function(root){const data={
+  "version": "3.33.0",
+  "sourceNames": 24,
+  "newSpecies": 20,
+  "reusedSpecies": 4,
+  "species": {
+    "deep_esp_haliphron_atlanticus": {
+      "name": "Pulpo de siete brazos",
+      "latin": "Haliphron atlanticus",
+      "sourceScientific": "Haliphron atlanticus",
+      "sourceSpeciesIds": [
+        "ESP-1044"
+      ],
+      "origin": "deep3330",
+      "artProfile": "sevenarm_octopus",
+      "kind": "sevenarm_octopus",
+      "color": "#697784",
+      "family": "Alloposidae",
+      "taxonomy": {
+        "className": "Cephalopoda",
+        "subClass": "Cefalópodos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Poco común",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_mitsukurina_owstoni": {
+      "name": "Tiburón duende",
+      "latin": "Mitsukurina owstoni",
+      "sourceScientific": "Mitsukurina owstoni",
+      "sourceSpeciesIds": [
+        "ESP-0338"
+      ],
+      "origin": "deep3330",
+      "artProfile": "goblin_shark",
+      "kind": "goblin_shark",
+      "color": "#697784",
+      "family": "Mitsukurinidae",
+      "taxonomy": {
+        "className": "Chondrichthyes",
+        "subClass": "Escualos y rayas"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_argyropelecus_aculeatus": {
+      "name": "Pez hacha plateado",
+      "latin": "Argyropelecus aculeatus",
+      "sourceScientific": "Argyropelecus aculeatus",
+      "sourceSpeciesIds": [
+        "ESP-0040"
+      ],
+      "origin": "deep3330",
+      "artProfile": "hatchetfish",
+      "kind": "hatchetfish",
+      "color": "#697784",
+      "family": "Sternoptychidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "columna_mesopelagica",
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Fotóforos ventrales, contrailuminación",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_benthosema_glaciale": {
+      "name": "Pez linterna boreal",
+      "latin": "Benthosema glaciale",
+      "sourceScientific": "Benthosema glaciale",
+      "sourceSpeciesIds": [
+        "ESP-0055"
+      ],
+      "origin": "deep3330",
+      "artProfile": "lanternfish",
+      "kind": "lanternfish",
+      "color": "#697784",
+      "family": "Myctophidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Fotóforos corporales y ventrales",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_ceratias_holboelli": {
+      "name": "Rape abisal",
+      "latin": "Ceratias holboelli",
+      "sourceScientific": "Ceratias holboelli",
+      "sourceSpeciesIds": [
+        "ESP-0103"
+      ],
+      "origin": "deep3330",
+      "artProfile": "deep_angler",
+      "kind": "deep_angler",
+      "color": "#697784",
+      "family": "Ceratiidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Poco común",
+      "habitats": [
+        "columna_batial",
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Esca luminosa de hembra adulta",
+      "plateNote": "Hembra adulta de referencia, sin configurar dimorfismo jugable",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_eurypharynx_pelecanoides": {
+      "name": "Pez pelícano",
+      "latin": "Eurypharynx pelecanoides",
+      "sourceScientific": "Eurypharynx pelecanoides",
+      "sourceSpeciesIds": [
+        "ESP-0201"
+      ],
+      "origin": "deep3330",
+      "artProfile": "gulper_eel",
+      "kind": "gulper_eel",
+      "color": "#697784",
+      "family": "Eurypharyngidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_stomias_boa": {
+      "name": "Pez dragón abisal",
+      "latin": "Stomias boa",
+      "sourceScientific": "Stomias boa",
+      "sourceSpeciesIds": [
+        "ESP-1025"
+      ],
+      "origin": "deep3330",
+      "artProfile": "scaly_dragonfish",
+      "kind": "scaly_dragonfish",
+      "color": "#697784",
+      "family": "Stomiidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Barbilla y fotóforos ventrales",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_vampyroteuthis_infernalis": {
+      "name": "Calamar vampiro",
+      "latin": "Vampyroteuthis infernalis",
+      "sourceScientific": "Vampyroteuthis infernalis",
+      "sourceSpeciesIds": [
+        "ESP-0524"
+      ],
+      "origin": "deep3330",
+      "artProfile": "vampire_squid",
+      "kind": "vampire_squid",
+      "color": "#697784",
+      "family": "Vampyroteuthidae",
+      "taxonomy": {
+        "className": "Cephalopoda",
+        "subClass": "Cefalópodos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_batial",
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Órganos luminosos en extremos de brazos; no tinta",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_anoplogaster_cornuta": {
+      "name": "Pez abisal colmillo largo",
+      "latin": "Anoplogaster cornuta",
+      "sourceScientific": "Anoplogaster cornuta",
+      "sourceSpeciesIds": [
+        "ESP-0019"
+      ],
+      "origin": "deep3330",
+      "artProfile": "fangtooth",
+      "kind": "fangtooth",
+      "color": "#697784",
+      "family": "Anoplogastridae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_chauliodus_macouni": {
+      "name": "Pez víbora del Pacífico",
+      "latin": "Chauliodus macouni",
+      "sourceScientific": "Chauliodus macouni",
+      "sourceSpeciesIds": [
+        "ESP-0117"
+      ],
+      "origin": "deep3330",
+      "artProfile": "viperfish",
+      "kind": "viperfish",
+      "color": "#697784",
+      "family": "Stomiidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Poco común",
+      "habitats": [
+        "columna_mesopelagica",
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Fotóforos ventrales y radio dorsal anterior prolongado",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_idiacanthus_antrostomus": {
+      "name": "Pez dragón negro",
+      "latin": "Idiacanthus antrostomus",
+      "sourceScientific": "Idiacanthus antrostomus",
+      "sourceSpeciesIds": [
+        "ESP-0254"
+      ],
+      "origin": "deep3330",
+      "artProfile": "blackdragon",
+      "kind": "blackdragon",
+      "color": "#697784",
+      "family": "Stomiidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Barbilla y fotóforos de hembra adulta",
+      "plateNote": "Hembra adulta de referencia, sin configurar dimorfismo jugable",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_macropinna_microstoma": {
+      "name": "Pez cabeza transparente",
+      "latin": "Macropinna microstoma",
+      "sourceScientific": "Macropinna microstoma",
+      "sourceSpeciesIds": [
+        "ESP-1027"
+      ],
+      "origin": "deep3330",
+      "artProfile": "barreleye",
+      "kind": "barreleye",
+      "color": "#697784",
+      "family": "Opisthoproctidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Poco común",
+      "habitats": [
+        "columna_mesopelagica",
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_histioteuthis_reversa": {
+      "name": "Calamar de aguas profundas",
+      "latin": "Histioteuthis reversa",
+      "sourceScientific": "Histioteuthis reversa",
+      "sourceSpeciesIds": [
+        "ESP-1052"
+      ],
+      "origin": "deep3330",
+      "artProfile": "jewel_squid",
+      "kind": "jewel_squid",
+      "color": "#697784",
+      "family": "Histioteuthidae",
+      "taxonomy": {
+        "className": "Cephalopoda",
+        "subClass": "Cefalópodos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Muy rara",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Fotóforos compuestos ventrales y perioculares",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_moroteuthopsis_ingens": {
+      "name": "Calamar de anzuelo",
+      "latin": "Moroteuthopsis ingens",
+      "sourceScientific": "Onykia ingens",
+      "sourceSpeciesIds": [
+        "ESP-1053"
+      ],
+      "origin": "deep3330",
+      "artProfile": "hooked_squid",
+      "kind": "hooked_squid",
+      "color": "#697784",
+      "family": "Onychoteuthidae",
+      "taxonomy": {
+        "className": "Cephalopoda",
+        "subClass": "Cefalópodos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_batial",
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_chlamydoselachus_anguineus": {
+      "name": "Tiburón anguila",
+      "latin": "Chlamydoselachus anguineus",
+      "sourceScientific": "Chlamydoselachus anguineus",
+      "sourceSpeciesIds": [
+        "ESP-0120"
+      ],
+      "origin": "deep3330",
+      "artProfile": "frilled_shark",
+      "kind": "frilled_shark",
+      "color": "#697784",
+      "family": "Chlamydoselachidae",
+      "taxonomy": {
+        "className": "Chondrichthyes",
+        "subClass": "Escualos y rayas"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_anoplogaster_brachycera": {
+      "name": "Pez ogro",
+      "latin": "Anoplogaster brachycera",
+      "sourceScientific": "Anoplogaster brachycera",
+      "sourceSpeciesIds": [
+        "ESP-1029"
+      ],
+      "origin": "deep3330",
+      "artProfile": "short_fangtooth",
+      "kind": "short_fangtooth",
+      "color": "#697784",
+      "family": "Anoplogastridae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Común",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_bathypterois_grallator": {
+      "name": "Pez trípode",
+      "latin": "Bathypterois grallator",
+      "sourceScientific": "Bathypterois grallator",
+      "sourceSpeciesIds": [
+        "ESP-1028"
+      ],
+      "origin": "deep3330",
+      "artProfile": "tripodfish",
+      "kind": "tripodfish",
+      "color": "#697784",
+      "family": "Ipnopidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "fondo_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_grimpoteuthis_abyssicola": {
+      "name": "Pulpo dumbo",
+      "latin": "Grimpoteuthis abyssicola",
+      "sourceScientific": "Grimpoteuthis umbellata",
+      "sourceSpeciesIds": [
+        "ESP-0225"
+      ],
+      "origin": "deep3330",
+      "artProfile": "dumbo_octopus",
+      "kind": "dumbo_octopus",
+      "color": "#697784",
+      "family": "Grimpoteuthidae",
+      "taxonomy": {
+        "className": "Cephalopoda",
+        "subClass": "Cefalópodos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "fondo_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_mesonychoteuthis_hamiltoni": {
+      "name": "Calamar colosal",
+      "latin": "Mesonychoteuthis hamiltoni",
+      "sourceScientific": "Mesonychoteuthis hamiltoni",
+      "sourceSpeciesIds": [
+        "ESP-0337"
+      ],
+      "origin": "deep3330",
+      "artProfile": "colossal_squid",
+      "kind": "colossal_squid",
+      "color": "#697784",
+      "family": "Cranchiidae",
+      "taxonomy": {
+        "className": "Cephalopoda",
+        "subClass": "Cefalópodos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "Fotóforos oculares, sin iluminación de todo el manto",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    },
+    "deep_esp_dissostichus_mawsoni": {
+      "name": "Bacalao antártico",
+      "latin": "Dissostichus mawsoni",
+      "sourceScientific": "Dissostichus mawsoni",
+      "sourceSpeciesIds": [
+        "ESP-0171"
+      ],
+      "origin": "deep3330",
+      "artProfile": "antarctic_toothfish",
+      "kind": "antarctic_toothfish",
+      "color": "#697784",
+      "family": "Nototheniidae",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "gameGroup": "Pez",
+      "rare": "Raro",
+      "habitats": [
+        "fondo_profundo_frio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "dimorphism": false,
+      "bioluminescence": "",
+      "plateNote": "Referencia anatómica de muestra; no observación directa desde cubierta",
+      "ecologyNote": "Registro indirecto por red, muestra conservada o examen de evidencia de expedición. No implica ver un animal vivo desde cubierta."
+    }
+  },
+  "regions": [
+    {
+      "id": "profundo_atlantico_profundo_norte",
+      "name": "Atlántico profundo norte",
+      "code": "HX-03-07",
+      "sourceHexId": "HX-03-07",
+      "continent": "Océanos",
+      "depthTier": "profundo",
+      "unlock": {
+        "prestige": 429
+      },
+      "habitats": [
+        "columna_batial",
+        "columna_mesopelagica"
+      ],
+      "species": [
+        "mar_esp_architeuthis_dux",
+        "polar_esp_gonatus_fabricii",
+        "deep_esp_haliphron_atlanticus",
+        "deep_esp_mitsukurina_owstoni",
+        "polar_esp_somniosus_microcephalus",
+        "deep_esp_argyropelecus_aculeatus",
+        "deep_esp_benthosema_glaciale",
+        "deep_esp_ceratias_holboelli",
+        "deep_esp_eurypharynx_pelecanoides",
+        "deep_esp_stomias_boa"
+      ]
+    },
+    {
+      "id": "profundo_pacifico_profundo_oriental",
+      "name": "Pacífico profundo oriental",
+      "code": "HX-07-01",
+      "sourceHexId": "HX-07-01",
+      "continent": "Océanos",
+      "depthTier": "profundo",
+      "unlock": {
+        "prestige": 438
+      },
+      "habitats": [
+        "columna_batial",
+        "columna_mesopelagica"
+      ],
+      "species": [
+        "mar_esp_architeuthis_dux",
+        "deep_esp_vampyroteuthis_infernalis",
+        "mar_esp_isistius_brasiliensis",
+        "deep_esp_anoplogaster_cornuta",
+        "deep_esp_chauliodus_macouni",
+        "deep_esp_eurypharynx_pelecanoides",
+        "deep_esp_idiacanthus_antrostomus",
+        "deep_esp_macropinna_microstoma"
+      ]
+    },
+    {
+      "id": "profundo_indico_profundo",
+      "name": "Índico profundo",
+      "code": "HX-08-13",
+      "sourceHexId": "HX-08-13",
+      "continent": "Océanos",
+      "depthTier": "profundo",
+      "unlock": {
+        "prestige": 447
+      },
+      "habitats": [
+        "columna_batial",
+        "fondo_batial"
+      ],
+      "species": [
+        "deep_esp_haliphron_atlanticus",
+        "deep_esp_histioteuthis_reversa",
+        "deep_esp_moroteuthopsis_ingens",
+        "deep_esp_vampyroteuthis_infernalis",
+        "deep_esp_chlamydoselachus_anguineus",
+        "deep_esp_anoplogaster_brachycera",
+        "deep_esp_anoplogaster_cornuta",
+        "deep_esp_bathypterois_grallator",
+        "deep_esp_ceratias_holboelli",
+        "deep_esp_eurypharynx_pelecanoides"
+      ]
+    },
+    {
+      "id": "profundo_pacifico_profundo_suroccidental",
+      "name": "Pacífico profundo suroccidental",
+      "code": "HX-09-15",
+      "sourceHexId": "HX-09-15",
+      "continent": "Océanos",
+      "depthTier": "profundo",
+      "unlock": {
+        "prestige": 456
+      },
+      "habitats": [
+        "fondo_batial",
+        "columna_batial"
+      ],
+      "species": [
+        "deep_esp_grimpoteuthis_abyssicola",
+        "deep_esp_histioteuthis_reversa",
+        "deep_esp_vampyroteuthis_infernalis",
+        "deep_esp_mitsukurina_owstoni",
+        "deep_esp_anoplogaster_brachycera",
+        "deep_esp_anoplogaster_cornuta",
+        "deep_esp_chauliodus_macouni",
+        "deep_esp_eurypharynx_pelecanoides",
+        "deep_esp_macropinna_microstoma",
+        "deep_esp_stomias_boa"
+      ]
+    },
+    {
+      "id": "profundo_oceano_austral_profundo",
+      "name": "Océano Austral profundo",
+      "code": "HX-11-18",
+      "sourceHexId": "HX-11-18",
+      "continent": "Océanos",
+      "depthTier": "profundo",
+      "unlock": {
+        "prestige": 465
+      },
+      "habitats": [
+        "columna_profunda_fria",
+        "fondo_profundo_frio"
+      ],
+      "species": [
+        "deep_esp_mesonychoteuthis_hamiltoni",
+        "deep_esp_moroteuthopsis_ingens",
+        "deep_esp_vampyroteuthis_infernalis",
+        "deep_esp_argyropelecus_aculeatus",
+        "deep_esp_ceratias_holboelli",
+        "deep_esp_dissostichus_mawsoni"
+      ]
+    }
+  ],
+  "presences": [
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "mar_esp_architeuthis_dux",
+      "sourceSheet": "Fauna",
+      "sourceRow": 375,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-0035",
+      "sourceScientific": "Architeuthis dux",
+      "effectiveScientific": "Architeuthis dux",
+      "sourceCommon": "Calamar gigante",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "polar_esp_gonatus_fabricii",
+      "sourceSheet": "Fauna",
+      "sourceRow": 376,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-1051",
+      "sourceScientific": "Gonatus fabricii",
+      "effectiveScientific": "Gonatus fabricii",
+      "sourceCommon": "Calamar boreal",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_haliphron_atlanticus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 377,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-1044",
+      "sourceScientific": "Haliphron atlanticus",
+      "effectiveScientific": "Haliphron atlanticus",
+      "sourceCommon": "Pulpo de siete brazos",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_mitsukurina_owstoni",
+      "sourceSheet": "Fauna",
+      "sourceRow": 378,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-0338",
+      "sourceScientific": "Mitsukurina owstoni",
+      "effectiveScientific": "Mitsukurina owstoni",
+      "sourceCommon": "Tiburón duende",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "polar_esp_somniosus_microcephalus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 379,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-1036",
+      "sourceScientific": "Somniosus microcephalus",
+      "effectiveScientific": "Somniosus microcephalus",
+      "sourceCommon": "Tiburón de Groenlandia",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_argyropelecus_aculeatus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 380,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-0040",
+      "sourceScientific": "Argyropelecus aculeatus",
+      "effectiveScientific": "Argyropelecus aculeatus",
+      "sourceCommon": "Pez hacha plateado",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_benthosema_glaciale",
+      "sourceSheet": "Fauna",
+      "sourceRow": 381,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-0055",
+      "sourceScientific": "Benthosema glaciale",
+      "effectiveScientific": "Benthosema glaciale",
+      "sourceCommon": "Pez linterna boreal",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_ceratias_holboelli",
+      "sourceSheet": "Fauna",
+      "sourceRow": 382,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-0103",
+      "sourceScientific": "Ceratias holboelli",
+      "effectiveScientific": "Ceratias holboelli",
+      "sourceCommon": "Rape abisal",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_eurypharynx_pelecanoides",
+      "sourceSheet": "Fauna",
+      "sourceRow": 383,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-0201",
+      "sourceScientific": "Eurypharynx pelecanoides",
+      "effectiveScientific": "Eurypharynx pelecanoides",
+      "sourceCommon": "Pez pelícano",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_atlantico_profundo_norte",
+      "speciesId": "deep_esp_stomias_boa",
+      "sourceSheet": "Fauna",
+      "sourceRow": 384,
+      "sourceHexId": "HX-03-07",
+      "sourceSpeciesId": "ESP-1025",
+      "sourceScientific": "Stomias boa",
+      "effectiveScientific": "Stomias boa",
+      "sourceCommon": "Pez dragón abisal",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "mar_esp_architeuthis_dux",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1134,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-0035",
+      "sourceScientific": "Architeuthis dux",
+      "effectiveScientific": "Architeuthis dux",
+      "sourceCommon": "Calamar gigante",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "deep_esp_vampyroteuthis_infernalis",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1135,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-0524",
+      "sourceScientific": "Vampyroteuthis infernalis",
+      "effectiveScientific": "Vampyroteuthis infernalis",
+      "sourceCommon": "Calamar vampiro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. Columna pobre en oxígeno; evidencia alimentaria de nieve marina, no depredación supuesta."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "mar_esp_isistius_brasiliensis",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1136,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-1040",
+      "sourceScientific": "Isistius brasiliensis",
+      "effectiveScientific": "Isistius brasiliensis",
+      "sourceCommon": "Tiburón cigarro",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. El registro profundo no modifica su migración nocturna superficial existente."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "deep_esp_anoplogaster_cornuta",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1137,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-0019",
+      "sourceScientific": "Anoplogaster cornuta",
+      "effectiveScientific": "Anoplogaster cornuta",
+      "sourceCommon": "Pez abisal colmillo largo",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "deep_esp_chauliodus_macouni",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1138,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-0117",
+      "sourceScientific": "Chauliodus macouni",
+      "effectiveScientific": "Chauliodus macouni",
+      "sourceCommon": "Pez víbora del Pacífico",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "deep_esp_eurypharynx_pelecanoides",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1139,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-0201",
+      "sourceScientific": "Eurypharynx pelecanoides",
+      "effectiveScientific": "Eurypharynx pelecanoides",
+      "sourceCommon": "Pez pelícano",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "deep_esp_idiacanthus_antrostomus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1140,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-0254",
+      "sourceScientific": "Idiacanthus antrostomus",
+      "effectiveScientific": "Idiacanthus antrostomus",
+      "sourceCommon": "Pez dragón negro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_oriental",
+      "speciesId": "deep_esp_macropinna_microstoma",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1141,
+      "sourceHexId": "HX-07-01",
+      "sourceSpeciesId": "ESP-1027",
+      "sourceScientific": "Macropinna microstoma",
+      "effectiveScientific": "Macropinna microstoma",
+      "sourceCommon": "Pez cabeza transparente",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano mesopelágico y batipelágico",
+      "habitats": [
+        "columna_mesopelagica"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. Escudo cefálico transparente, ojos tubulares; no es bioluminiscencia."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_haliphron_atlanticus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1371,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-1044",
+      "sourceScientific": "Haliphron atlanticus",
+      "effectiveScientific": "Haliphron atlanticus",
+      "sourceCommon": "Pulpo de siete brazos",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_histioteuthis_reversa",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1372,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-1052",
+      "sourceScientific": "Histioteuthis reversa",
+      "effectiveScientific": "Histioteuthis reversa",
+      "sourceCommon": "Calamar de aguas profundas",
+      "sourceRarity": "Muy raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_moroteuthopsis_ingens",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1373,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-1053",
+      "sourceScientific": "Onykia ingens",
+      "effectiveScientific": "Moroteuthopsis ingens",
+      "sourceCommon": "Calamar de anzuelo",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_vampyroteuthis_infernalis",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1374,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-0524",
+      "sourceScientific": "Vampyroteuthis infernalis",
+      "effectiveScientific": "Vampyroteuthis infernalis",
+      "sourceCommon": "Calamar vampiro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. Columna pobre en oxígeno; evidencia alimentaria de nieve marina, no depredación supuesta."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_chlamydoselachus_anguineus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1375,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-0120",
+      "sourceScientific": "Chlamydoselachus anguineus",
+      "effectiveScientific": "Chlamydoselachus anguineus",
+      "sourceCommon": "Tiburón anguila",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_anoplogaster_brachycera",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1376,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-1029",
+      "sourceScientific": "Anoplogaster brachycera",
+      "effectiveScientific": "Anoplogaster brachycera",
+      "sourceCommon": "Pez ogro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_anoplogaster_cornuta",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1377,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-0019",
+      "sourceScientific": "Anoplogaster cornuta",
+      "effectiveScientific": "Anoplogaster cornuta",
+      "sourceCommon": "Pez abisal colmillo largo",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_bathypterois_grallator",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1378,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-1028",
+      "sourceScientific": "Bathypterois grallator",
+      "effectiveScientific": "Bathypterois grallator",
+      "sourceCommon": "Pez trípode",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "fondo_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestreo de fondo con draga o evidencia de captura científica; examen indirecto a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_ceratias_holboelli",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1379,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-0103",
+      "sourceScientific": "Ceratias holboelli",
+      "effectiveScientific": "Ceratias holboelli",
+      "sourceCommon": "Rape abisal",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_indico_profundo",
+      "speciesId": "deep_esp_eurypharynx_pelecanoides",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1380,
+      "sourceHexId": "HX-08-13",
+      "sourceSpeciesId": "ESP-0201",
+      "sourceScientific": "Eurypharynx pelecanoides",
+      "effectiveScientific": "Eurypharynx pelecanoides",
+      "sourceCommon": "Pez pelícano",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_grimpoteuthis_abyssicola",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1486,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-0225",
+      "sourceScientific": "Grimpoteuthis umbellata",
+      "effectiveScientific": "Grimpoteuthis abyssicola",
+      "sourceCommon": "Pulpo dumbo",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "fondo_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestreo de fondo con draga o evidencia de captura científica; examen indirecto a bordo. Corrección editorial al mar de Tasmania (2821–3180 m); el original umbellata permanece trazado."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_histioteuthis_reversa",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1487,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-1052",
+      "sourceScientific": "Histioteuthis reversa",
+      "effectiveScientific": "Histioteuthis reversa",
+      "sourceCommon": "Calamar de aguas profundas",
+      "sourceRarity": "Muy raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_vampyroteuthis_infernalis",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1488,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-0524",
+      "sourceScientific": "Vampyroteuthis infernalis",
+      "effectiveScientific": "Vampyroteuthis infernalis",
+      "sourceCommon": "Calamar vampiro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. Columna pobre en oxígeno; evidencia alimentaria de nieve marina, no depredación supuesta."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_mitsukurina_owstoni",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1489,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-0338",
+      "sourceScientific": "Mitsukurina owstoni",
+      "effectiveScientific": "Mitsukurina owstoni",
+      "sourceCommon": "Tiburón duende",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_anoplogaster_brachycera",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1490,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-1029",
+      "sourceScientific": "Anoplogaster brachycera",
+      "effectiveScientific": "Anoplogaster brachycera",
+      "sourceCommon": "Pez ogro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_anoplogaster_cornuta",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1491,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-0019",
+      "sourceScientific": "Anoplogaster cornuta",
+      "effectiveScientific": "Anoplogaster cornuta",
+      "sourceCommon": "Pez abisal colmillo largo",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_chauliodus_macouni",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1492,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-0117",
+      "sourceScientific": "Chauliodus macouni",
+      "effectiveScientific": "Chauliodus macouni",
+      "sourceCommon": "Pez víbora del Pacífico",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_eurypharynx_pelecanoides",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1493,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-0201",
+      "sourceScientific": "Eurypharynx pelecanoides",
+      "effectiveScientific": "Eurypharynx pelecanoides",
+      "sourceCommon": "Pez pelícano",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_macropinna_microstoma",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1494,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-1027",
+      "sourceScientific": "Macropinna microstoma",
+      "effectiveScientific": "Macropinna microstoma",
+      "sourceCommon": "Pez cabeza transparente",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. Escudo cefálico transparente, ojos tubulares; no es bioluminiscencia."
+    },
+    {
+      "regionId": "profundo_pacifico_profundo_suroccidental",
+      "speciesId": "deep_esp_stomias_boa",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1495,
+      "sourceHexId": "HX-09-15",
+      "sourceSpeciesId": "ESP-1025",
+      "sourceScientific": "Stomias boa",
+      "effectiveScientific": "Stomias boa",
+      "sourceCommon": "Pez dragón abisal",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico",
+      "habitats": [
+        "columna_batial"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_oceano_austral_profundo",
+      "speciesId": "deep_esp_mesonychoteuthis_hamiltoni",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1570,
+      "sourceHexId": "HX-11-18",
+      "sourceSpeciesId": "ESP-0337",
+      "sourceScientific": "Mesonychoteuthis hamiltoni",
+      "effectiveScientific": "Mesonychoteuthis hamiltoni",
+      "sourceCommon": "Calamar colosal",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico frío",
+      "habitats": [
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestra diagnóstica o evidencia de captura de expedición; no observación directa en profundidad."
+    },
+    {
+      "regionId": "profundo_oceano_austral_profundo",
+      "speciesId": "deep_esp_moroteuthopsis_ingens",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1571,
+      "sourceHexId": "HX-11-18",
+      "sourceSpeciesId": "ESP-1053",
+      "sourceScientific": "Onykia ingens",
+      "effectiveScientific": "Moroteuthopsis ingens",
+      "sourceCommon": "Calamar de anzuelo",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico frío",
+      "habitats": [
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_oceano_austral_profundo",
+      "speciesId": "deep_esp_vampyroteuthis_infernalis",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1572,
+      "sourceHexId": "HX-11-18",
+      "sourceSpeciesId": "ESP-0524",
+      "sourceScientific": "Vampyroteuthis infernalis",
+      "effectiveScientific": "Vampyroteuthis infernalis",
+      "sourceCommon": "Calamar vampiro",
+      "sourceRarity": "Común",
+      "sourceBiome": "Océano batipelágico frío",
+      "habitats": [
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo. Columna pobre en oxígeno; evidencia alimentaria de nieve marina, no depredación supuesta."
+    },
+    {
+      "regionId": "profundo_oceano_austral_profundo",
+      "speciesId": "deep_esp_argyropelecus_aculeatus",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1573,
+      "sourceHexId": "HX-11-18",
+      "sourceSpeciesId": "ESP-0040",
+      "sourceScientific": "Argyropelecus aculeatus",
+      "effectiveScientific": "Argyropelecus aculeatus",
+      "sourceCommon": "Pez hacha plateado",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico frío",
+      "habitats": [
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_oceano_austral_profundo",
+      "speciesId": "deep_esp_ceratias_holboelli",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1574,
+      "sourceHexId": "HX-11-18",
+      "sourceSpeciesId": "ESP-0103",
+      "sourceScientific": "Ceratias holboelli",
+      "effectiveScientific": "Ceratias holboelli",
+      "sourceCommon": "Rape abisal",
+      "sourceRarity": "Poco común",
+      "sourceBiome": "Océano batipelágico frío",
+      "habitats": [
+        "columna_profunda_fria"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "sondeo",
+        "muestreo"
+      ],
+      "evidenceNote": "Red vertical: evidencia de columna de agua; muestra clasificada a bordo."
+    },
+    {
+      "regionId": "profundo_oceano_austral_profundo",
+      "speciesId": "deep_esp_dissostichus_mawsoni",
+      "sourceSheet": "Fauna",
+      "sourceRow": 1575,
+      "sourceHexId": "HX-11-18",
+      "sourceSpeciesId": "ESP-0171",
+      "sourceScientific": "Dissostichus mawsoni",
+      "effectiveScientific": "Dissostichus mawsoni",
+      "sourceCommon": "Bacalao antártico",
+      "sourceRarity": "Raro",
+      "sourceBiome": "Océano batipelágico frío",
+      "habitats": [
+        "fondo_profundo_frio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "methods": [
+        "muestreo"
+      ],
+      "evidenceNote": "Muestreo de fondo con draga o evidencia de captura científica; examen indirecto a bordo."
+    }
+  ],
+  "ids": {
+    "Isistius brasiliensis": "mar_esp_isistius_brasiliensis",
+    "Eurypharynx pelecanoides": "deep_esp_eurypharynx_pelecanoides",
+    "Bathypterois grallator": "deep_esp_bathypterois_grallator",
+    "Dissostichus mawsoni": "deep_esp_dissostichus_mawsoni",
+    "Mesonychoteuthis hamiltoni": "deep_esp_mesonychoteuthis_hamiltoni",
+    "Ceratias holboelli": "deep_esp_ceratias_holboelli",
+    "Vampyroteuthis infernalis": "deep_esp_vampyroteuthis_infernalis",
+    "Argyropelecus aculeatus": "deep_esp_argyropelecus_aculeatus",
+    "Benthosema glaciale": "deep_esp_benthosema_glaciale",
+    "Macropinna microstoma": "deep_esp_macropinna_microstoma",
+    "Moroteuthopsis ingens": "deep_esp_moroteuthopsis_ingens",
+    "Grimpoteuthis abyssicola": "deep_esp_grimpoteuthis_abyssicola",
+    "Idiacanthus antrostomus": "deep_esp_idiacanthus_antrostomus",
+    "Haliphron atlanticus": "deep_esp_haliphron_atlanticus",
+    "Histioteuthis reversa": "deep_esp_histioteuthis_reversa",
+    "Chlamydoselachus anguineus": "deep_esp_chlamydoselachus_anguineus",
+    "Gonatus fabricii": "polar_esp_gonatus_fabricii",
+    "Anoplogaster cornuta": "deep_esp_anoplogaster_cornuta",
+    "Mitsukurina owstoni": "deep_esp_mitsukurina_owstoni",
+    "Anoplogaster brachycera": "deep_esp_anoplogaster_brachycera",
+    "Architeuthis dux": "mar_esp_architeuthis_dux",
+    "Chauliodus macouni": "deep_esp_chauliodus_macouni",
+    "Stomias boa": "deep_esp_stomias_boa",
+    "Somniosus microcephalus": "polar_esp_somniosus_microcephalus"
+  },
+  "corrections": {
+    "Onykia ingens": "Moroteuthopsis ingens",
+    "Grimpoteuthis umbellata": "Grimpoteuthis abyssicola"
+  }
+};root.AtlasDeep3330=data;if(typeof module!=="undefined")module.exports=data;})(globalThis);

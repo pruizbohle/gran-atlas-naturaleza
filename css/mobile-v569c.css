@@ -1,0 +1,173 @@
+/* V5.6.9 Beta · MEC-09C · Homologación móvil. Solo presentación: no toca reglas, datos ni partidas.
+   Se carga la última. Fichas de diseño (tokens) compartidas por todos los módulos y reglas móviles
+   que conservan la estructura del marco V5.5.0: encabezado, recursos, título, contenido y navegación. */
+:root{
+  --ux-tap:44px;           /* área táctil objetivo (44–48 px CSS) */
+  --ux-tap-min:40px;       /* mínimo aceptado en controles secundarios */
+  --ux-gap:8px;--ux-gap-s:6px;--ux-pad:12px;
+  --ux-radius:12px;--ux-radius-s:9px;
+  --ux-h1:20px;--ux-h2:17px;--ux-h3:15px;--ux-body:14px;--ux-small:12.5px;--ux-micro:11.5px;
+  --ux-ink:#2c3f2f;--ux-ink-soft:#5b6150;--ux-paper:#fdf6e3;--ux-paper-2:#fbf4e2;--ux-line:#d8c9a0;--ux-accent:#7f8966;--ux-focus:#bb8d28;
+  --ux-subtab-h:40px;--ux-icon:22px;--ux-icon-l:30px;
+}
+/* Foco visible homologado en todo el juego (teclado). */
+:where(button,a,select,input,summary,[tabindex]):focus-visible{outline:3px solid var(--ux-focus);outline-offset:2px}
+/* Textos traducidos más largos: nunca desbordar una tarjeta. */
+.ux9c-wrap,.cp3430-settings,.ux9c-chain{overflow-wrap:anywhere;hyphens:auto}
+
+@media (max-width:700px){
+  /* ── Marco: 52 + 46 + 44 + 58 = 200 px fijos (antes 212), respetando áreas seguras ─────────── */
+  #app .topbar{height:calc(52px + env(safe-area-inset-top,0px));min-height:calc(52px + env(safe-area-inset-top,0px));padding:calc(4px + env(safe-area-inset-top,0px)) 12px 4px!important}
+  .topbar .brand::after{font-size:18px}
+  .frame-region{font-size:11px}
+  .frame-cur{height:46px;padding:4px 10px;gap:6px}
+  .frame-chip{height:38px;font-size:14px;gap:4px;padding:0 4px;font-variant-numeric:tabular-nums}
+  .frame-chip img{width:22px;height:22px}
+  .frame-title{height:44px;padding:0 10px 0 14px}
+  .frame-title h1{font-size:var(--ux-h1)}
+  .frame-tools{gap:4px}
+  .frame-tool{width:var(--ux-tap-min);height:var(--ux-tap-min)}
+  .mobile-dock{padding-left:max(2px,env(safe-area-inset-left,0px));padding-right:max(2px,env(safe-area-inset-right,0px))}
+  .mobile-dock .mobile-dock-link{height:48px;position:relative;border-radius:10px}
+  /* Pestaña activa: no depende solo del color (marca inferior). */
+  .mobile-dock .mobile-dock-link.active::after{content:"";position:absolute;left:28%;right:28%;bottom:2px;height:3px;border-radius:2px;background:var(--ux-ink)}
+  .mobile-dock .mobile-dock-link.active{outline:1px solid var(--ux-accent)}
+  main#panel.panel{padding:8px 8px calc(10px + env(safe-area-inset-bottom,0px))}
+  html,body{max-width:100%;overflow-x:hidden}
+
+  /* ── Ventanas emergentes del marco: encabezado compacto, cierre visible, nunca fuera de pantalla ── */
+  .frame-pop{top:calc(104px + env(safe-area-inset-top,0px));max-height:calc(100dvh - 190px);left:10px;right:10px;padding:10px 12px 12px}
+  .frame-pop .ux9c-close,.ux9c-dialog-close{position:absolute;top:4px;right:4px;width:var(--ux-tap);height:var(--ux-tap);border:0;background:none;font-size:24px;line-height:1;color:var(--ux-ink-soft);cursor:pointer;border-radius:10px}
+  .frame-pop b.fp-t{padding-right:40px}
+  body.fr-pop-guia .ux3410-guide,body.fr-pop-brujula .ux3410-compass{top:calc(104px + env(safe-area-inset-top,0px));max-height:calc(100dvh - 190px);left:10px;right:10px}
+  body[data-frame-tab=atlas].fr-sheet .atlas-region-panel{bottom:calc(66px + env(safe-area-inset-bottom,0px));max-height:min(58dvh,calc(100dvh - 190px))}
+  /* Diálogos de módulo (perfil, Bestiario, Museo, MEC-01): ancho del teléfono y altura máxima. */
+  #cp3430-dialog section[role=dialog],.mec01-dialog,[class*=dialog][aria-modal=true]{max-width:calc(100vw - 16px);max-height:calc(100dvh - 24px);overflow:auto;box-sizing:border-box}
+
+  /* ── Avisos (logros, eventos): una línea sobre la barra inferior, sin tapar el contenido central ── */
+  .ach-toast{top:auto!important;bottom:calc(66px + env(safe-area-inset-bottom,0px));right:8px;left:8px;width:auto!important;border-width:1px;box-shadow:0 4px 14px #0003}
+  .ach-toast-open{padding:6px 10px;gap:1px}
+  .ach-toast-open span{font-size:10.5px}
+  .ach-toast-open strong{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ach-toast-open small{display:none}
+  .ach-toast-close{min-width:var(--ux-tap);min-height:var(--ux-tap)}
+
+  /* ── Subpestañas homologadas: una fila, altura fija, desplazable dentro de su contenedor ───── */
+  .inventory-subtabs,.society-tabs,.er28-branches,.ux9c-subtabs{display:flex!important;flex-wrap:nowrap!important;gap:6px!important;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;grid-template-columns:none!important;padding:2px 2px 4px!important;margin:0 0 8px!important;height:auto!important}
+  .inventory-subtabs::-webkit-scrollbar,.society-tabs::-webkit-scrollbar,.er28-branches::-webkit-scrollbar{display:none}
+  .inventory-subtabs>*,.society-tabs>*,.er28-branches>*{flex:0 0 auto!important;width:auto!important;min-width:0!important;height:var(--ux-subtab-h)!important;min-height:var(--ux-subtab-h)!important;padding:0 12px!important;margin:0!important;display:inline-flex!important;align-items:center;gap:6px;white-space:nowrap;font-size:13.5px!important;scroll-snap-align:start;border-radius:var(--ux-radius-s)!important}
+  .inventory-subtabs>* img,.society-tabs>* img,.er28-branches>* img{width:20px!important;height:20px!important}
+  /* Selección inequívoca: fondo + borde inferior + aria-pressed/selected (no solo color). */
+  .inventory-subtabs>.active,.society-tabs>.active,.er28-branches>.selected{box-shadow:inset 0 -3px 0 var(--ux-ink)!important}
+  body[data-frame-tab=society] .society-tabs{position:sticky;top:-8px;z-index:4;background:var(--ux-paper-2);margin:0 -8px 8px!important;padding:6px 8px!important;border-bottom:1px solid #e4d8b6}
+
+  /* ── Textos redundantes (clase D): el título de la pestaña ya figura en el marco ───────────── */
+  .inventory-v33-kicker,.society-kicker,.b26-eyebrow,.er28-eyebrow,.atlas-kicker,.m27-heading>span:first-child{display:none!important}
+  .inv340-root>header>h3,.b26-heading h2,.b26-heading h3{display:none}
+  .inv340-root>header{padding-bottom:2px}
+  .inv340-root>header p.small{margin:0}
+
+  /* Sociedad: rango y progreso primero; registro numérico en una fila; aviso de evento a ancho completo. */
+  .society-header{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;gap:4px 10px!important;padding:10px!important}
+  .society-header>*{min-width:0}
+  .society-header h3{font-size:var(--ux-h2)!important;margin:0!important}
+  .society-header .society-register{grid-column:1/-1;display:flex!important;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:var(--ux-small)}
+  .society-header .society-register span{display:inline-flex;align-items:baseline;gap:4px;white-space:nowrap}
+  .society-header .society-register b{font-size:16px}
+  .society-header .society-legacy{grid-column:1/-1;margin:0;text-align:right;font-size:var(--ux-small)}
+  .society-header .mec08-strip{grid-column:1/-1;width:auto!important;writing-mode:horizontal-tb}
+  .society-seal img{width:34px;height:34px}
+
+  /* Investigación: cabecera en una línea. */
+  .er28-heading{padding:8px 12px!important;min-height:0!important}
+  .er28-heading h2,.er28-heading h3{font-size:var(--ux-h2)!important;margin:0!important}
+
+  /* Bestiario: búsqueda visible; grupo, avistamientos y orden en «Filtros». */
+  .b26-heading{padding-bottom:4px!important}
+  .ux9c-filters-toggle{display:inline-flex;align-items:center;gap:6px;min-height:var(--ux-tap-min);padding:0 12px;border-radius:var(--ux-radius-s);border:1px solid var(--ux-line);background:var(--ux-paper);font-weight:700;color:var(--ux-ink);cursor:pointer}
+  .ux9c-filters-toggle[aria-expanded=true]{box-shadow:inset 0 -3px 0 var(--ux-ink)}
+  .b26-controls.ux9c-collapsed .b26-filter-row,.b26-controls.ux9c-collapsed .b26-sort-row,.b26-controls.ux9c-collapsed .b26-advanced{display:none!important}
+  .ux9c-filterbar{display:flex;gap:8px;align-items:center;margin-top:6px}
+  .ux9c-filterbar small{color:var(--ux-ink-soft)}
+
+  /* Campo: el rótulo de búsqueda nunca queda bajo los prismáticos de la escena inicial. */
+  .field-stage .field-empty-art,.field-stage [class*=binocular]{max-height:46%;object-fit:contain}
+
+  /* Ningún bloque del panel puede ensancharse por una fila desplazable interna (min-content). */
+  main#panel>*,.inv340-root,.inv340-root>*,.society-v3360,.society-v3360>*,.society-content,.er28-root,.er28-root>*{min-width:0!important;max-width:100%}
+  /* Campo: los prismáticos de la escena vacía caben en su marco y no tapan el rótulo. */
+  .field-empty-art{overflow:hidden}
+  .field-empty-art img{width:100%!important;height:100%!important;object-fit:contain}
+  /* Museo: notas repetidas en cada tarjeta (clase D) fuera de la vista compacta. */
+  .cur-note{display:none!important}
+  /* Información contextual (clase C) plegada tras «ⓘ». */
+  .ux9c-info-btn{display:inline-flex;align-items:center;justify-content:center;min-width:var(--ux-tap-min);min-height:var(--ux-tap-min);margin:0 0 0 2px;padding:0 8px;border:1px solid var(--ux-line);border-radius:999px;background:var(--ux-paper);color:var(--ux-ink-soft);font:600 13px system-ui,sans-serif;cursor:pointer}
+  .ux9c-info-btn[aria-expanded=true]{color:var(--ux-ink);box-shadow:inset 0 -2px 0 var(--ux-ink)}
+  [data-ux9c-info=closed]{display:none!important}
+  .ux9c-compact-label{font-size:0!important;gap:0!important}
+  .ux9c-compact-label input{font-size:16px!important}
+  .ux9c-compact-label svg,.ux9c-compact-label img{display:none}
+  /* Controles táctiles mínimos en acciones de panel. */
+  main#panel :where(button,select,.btn):not(.ux3410-link):not(.inv340-link):not([class*=dot]):not([class*=pager]){min-height:var(--ux-tap-min)}
+  main#panel :where(input[type=search],input[type=text],select){min-height:var(--ux-tap-min);font-size:16px}
+
+  /* Cadena de obtención y configuración. */
+  .ux9c-chain{margin:8px 0;border:1px solid var(--ux-line);border-radius:var(--ux-radius-s);background:var(--ux-paper);padding:6px 10px}
+  .ux9c-chain summary{font-weight:700;min-height:var(--ux-tap-min);display:flex;align-items:center;cursor:pointer}
+}
+/* Cadena de obtención (todas las anchuras). */
+.ux9c-chain ol{list-style:none;margin:4px 0 0;padding:0}
+.ux9c-chain ol ol{padding-left:14px;border-left:2px solid #e4d8b6;margin-left:4px}
+.ux9c-chain li{margin:4px 0;font-size:13.5px;line-height:1.35}
+.ux9c-chain .ux9c-ok{color:#3f6a3a}
+.ux9c-chain .ux9c-miss{color:#8a3b2b;font-weight:700}
+.ux9c-chain .ux9c-state{display:inline-block;min-width:16px;font-weight:700}
+.ux9c-chain .ux9c-hint{display:block;color:#5b6150;font-size:12.5px}
+/* Configuración del naturalista: preparada para textos de distinta longitud. */
+.cp3430-settings{display:grid;gap:10px}
+.cp3430-settings section{border:1px solid #d8c9a0;border-radius:12px;padding:10px 12px;background:#fffaf0}
+.cp3430-settings h3{margin:0 0 6px;font:700 15px Georgia,serif;color:#2c3f2f}
+.cp3430-settings p{margin:4px 0;font-size:13.5px}
+.cp3430-settings .cp9c-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between}
+.cp3430-settings .cp9c-row>*{min-width:0}
+.cp3430-settings select,.cp3430-settings button{min-height:44px;max-width:100%}
+.cp3430-settings .cp9c-reserved{color:#6a6a52;font-size:12.5px}
+/* Teléfonos estrechos (≤ 359 px): recursos y Campamento sin cortes ni solapes. */
+@media (max-width:359px){
+  .frame-cur{gap:4px;padding:4px 6px}
+  .frame-chip{gap:2px;padding:0 2px;font-size:13px}
+  .frame-chip img{width:18px;height:18px}
+  .cp3430-plan .cp3430-state{font-size:10px!important;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+  .cp3430-plan .cp3430-name,.cp3430-plan strong{font-size:13px!important}
+  .cp3430-plan>button{max-width:47vw}
+}
+/* Aviso de evento de Sociedad a ancho completo en todas las anchuras (antes: columna de una palabra). */
+.society-header .mec08-strip{grid-column:1/-1;min-width:0;width:auto;writing-mode:horizontal-tb}
+/* Teléfono en horizontal (alto ≤ 520 px, ancho > 700 px): el marco de escritorio ocupaba toda la
+   pantalla. Recursos en una fila, pestañas en una fila desplazable y contenido visible desde el inicio. */
+@media (min-width:701px) and (max-height:520px){
+  #app .topbar{padding:6px 14px!important;min-height:0}
+  .topbar .subbrand,.topbar .region-pill{display:none}
+  .topbar .brand{font-size:18px}
+  .stats-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:6px 0}
+  .stats-grid .stat-card{padding:4px 8px;min-height:0;display:flex;align-items:center;justify-content:space-between;gap:6px}
+  .stats-grid .stat-card strong{font-size:16px}
+  .stats-grid .stat-card>span{font-size:12px}
+  .minor-stats,.mobile-stats-toggle,.footer-note{display:none!important}
+  nav.tabs{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto;gap:6px;scrollbar-width:none;margin-bottom:6px}
+  nav.tabs .tab{flex:0 0 auto;min-height:44px;padding:0 12px;white-space:nowrap}
+  .ux3410-guide{display:none}
+}
+/* Contraste AA (≥ 4,5:1) en textos pequeños señalados por la auditoría automática. */
+.er28-branches>*:not(.selected){color:#33402f!important}
+.er28-branches small{font-size:11px!important;color:inherit!important;opacity:1!important}
+.society-v3360 .btn.gold:not(:disabled){color:#1d2a1d!important}
+.field-reward-kicker{font-size:10.5px!important;color:#5a5240!important}
+.field-reward-line,.field-reward-line span{color:#3f4636!important}
+.b26-search small,.b26-search span,.j25-specimen small{color:#4d4a3a!important}
+.er28-tag{font-size:11px!important;filter:none!important}
+.er28-project-status .er28-tag{color:#2c3f2f!important}
+.er28-effect,.er28-costs{color:#3f4636!important}
+.field-goal,.field-progress small,.ux3410-show small{color:#3f4636!important}
+.j25-specimen small,.j25-meta small{color:#45412f!important}
+.er28-project-index small,.er28-project-index span,.er28-costs small{font-size:11px!important;color:#2c3f2f!important;opacity:1!important}

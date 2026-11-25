@@ -1,0 +1,88 @@
+.atlas-art-frame, .specimen-label {
+  --metal: #a3906b;
+  --highlight: #e9dfc6;
+  --rim: #685a3e;
+  --mat: #f1e8d5;
+}
+.notable { --metal: #ad754f; --highlight: #ebc1a0; --rim: #694331; --mat: #f0ddc9; }
+.epic { --metal: #8f9aa0; --highlight: #e2eaed; --rim: #414d55; --mat: #e8e7e0; }
+.exceptional { --metal: #b48a3d; --highlight: #f4dc98; --rim: #725322; --mat: #f5e7bc; }
+.legendary { --metal: #526d5b; --highlight: #e6cb89; --rim: #263c33; --mat: #e8dbb6; }
+.atlas-art-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: min(100%, var(--art-size, 8rem));
+  max-height: 100%;
+  aspect-ratio: 1;
+}
+.atlas-art-frame > img { display: block; width: 100%; height: 100%; min-width: 0; object-fit: contain; }
+.atlas-art-frame > .atlas-art-image {
+  position: relative;
+  z-index: 1;
+  transform: var(--art-visual-transform, none);
+}
+.atlas-art-frame > .atlas-art-landscape {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  opacity: .52;
+  border-radius: 12%;
+  mask-image: radial-gradient(ellipse at center, black 35%, #0008 62%, transparent 76%);
+}
+.atlas-art-journal.atlas-art-cutout {
+  background: radial-gradient(ellipse, #f9efd2 9%, #f2e6c355 58%, transparent 74%);
+}
+.atlas-art-museum.atlas-art-cutout {
+  background: radial-gradient(ellipse, #d8d3b9 5%, #b6b8a54d 55%, transparent 76%);
+}
+.atlas-art-cutout.notable { --halo: #a55f31c9; }
+.atlas-art-cutout.epic { --halo: #d9edf9f2; }
+.atlas-art-cutout.exceptional { --halo: #e6ad26ee; }
+.atlas-art-cutout:not(.classic) > .atlas-art-image {
+  filter: drop-shadow(0 0 1.4px var(--halo)) drop-shadow(0 0 3px var(--halo));
+}
+.atlas-art-cutout.legendary > .atlas-art-image {
+  filter: drop-shadow(0 0 1.2px #f5d990) drop-shadow(0 0 4px #198672) drop-shadow(0 0 5px #a87c2f8f);
+}
+/* An opaque legacy plate has no animal alpha. Indicate category separately during migration. */
+.atlas-art-opaque:not(.classic)::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: auto 4% 4% auto;
+  width: clamp(6px, .9vw, 10px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--metal);
+  box-shadow: 0 0 0 1px var(--highlight);
+}
+.atlas-art-opaque.legendary::after { background: #286c59; box-shadow: 0 0 0 2px #efce80; }
+.field-environment > .atlas-art-landscape {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: blur(1px) saturate(.75);
+  opacity: .76;
+}
+.field-stage[data-light="noche"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.68) brightness(.64); }
+.field-stage[data-light="atardecer"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.83) sepia(.16); }
+.field-stage[data-light="amanecer"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.68) brightness(.9) sepia(.12); }
+.field-animal-sprite .atlas-art-frame { --art-size: clamp(64px, 20vw, 134px); margin-inline: auto; }
+.field-actors-group .atlas-art-frame { --art-size: clamp(56px, 17vw, 104px); }
+.field-log-art { display: flex; gap: .45rem; margin-block: .35rem; }
+.field-log-art .atlas-art-frame { --art-size: 48px; }
+.j25-portrait .atlas-art-frame, .b26-portrait .atlas-art-frame, .m27-dialog-art .atlas-art-frame { --art-size: clamp(100px, 28vw, 166px); }
+.sprite-wrap .atlas-art-frame, .b26-card-art .atlas-art-frame, .m27-art .atlas-art-frame { --art-size: 88px; }
+.journal-v311-avatar .atlas-art-frame, .j25-avatar .atlas-art-frame { --art-size: 48px; }
+.j25-portrait > small { margin-top: .25rem; }
+@media (max-width: 760px) {
+  .j25-avatar .atlas-art-frame { --art-size: 36px; padding: 3px; }
+  .b26-card-art .atlas-art-frame { --art-size: 80px; }
+}
+@media (max-width: 360px), (max-height: 700px) and (max-width: 760px) {
+  .j25-avatar .atlas-art-frame { --art-size: 31px; }
+}

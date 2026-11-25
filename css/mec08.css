@@ -1,0 +1,13 @@
+/* MEC-08 · V5.6.8 Beta · Franja de Sociedad, correspondencia, proyectos y eventos. */
+.mec08-strip{margin:.35rem 0 0;padding:.3rem .55rem;border-left:3px solid var(--accent,#8a6d3b);background:rgba(138,109,59,.08);line-height:1.5}
+.mec08-strip:empty{display:none}
+.mec08-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.6rem;margin:.4rem 0}
+.mec08-contract h4,.mec08-event h4{margin:.1rem 0 .3rem;font-size:1rem}
+.mec08-contract ul{margin:.2rem 0 .4rem;padding-left:1.1rem}
+.mec08-contract .btn,.mec08-event .btn{min-height:44px}
+.mec07-pager{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
+.mec07-pager .btn,.mec07-filters select,.mec07-filters input{min-height:44px}
+.mec07-filters{display:flex;flex-wrap:wrap;gap:.4rem}
+.mec07-evidence{display:inline-flex;align-items:center;gap:.25rem}
+.mec07-marks{white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.mec08-strip,.mec08-contract{transition:none!important;animation:none!important}}

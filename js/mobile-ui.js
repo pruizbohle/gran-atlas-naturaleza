@@ -1,0 +1,57 @@
+// Navegación exclusiva para pantallas móviles; el motor original sigue intacto.
+(()=>{
+  const menu=document.getElementById('mobileDrawer');
+  const open=document.getElementById('mobileMenuOpen');
+  const close=document.getElementById('mobileMenuClose');
+  const backdrop=document.getElementById('mobileMenuBackdrop');
+  const heading=document.getElementById('mobileViewTitle');
+  const statToggle=document.getElementById('mobileStatsToggle');
+  statToggle?.addEventListener('click',()=>{
+    const expanded=document.body.classList.toggle('mobile-stats-open');
+    statToggle.setAttribute('aria-expanded',String(expanded));
+    statToggle.lastElementChild.textContent=expanded?'▴':'▾';
+  });
+
+  if(!menu||!open||!heading)return;
+  const labels={atlas:'Atlas',field:'Campo',journal:'Cuaderno',research:'Investigación',society:'Sociedad',bestiary:'Bestiario',expeditions:'Campamento',objects:'Inventario',museum:'Museo',crown:'Corona'};
+  const main=['atlas','field','journal','research'];
+  function selected(){return Array.from(document.querySelectorAll('.mobile-dock-link.active,.mobile-menu-item.active')).find(e=>e.dataset.tab)?.dataset.tab||'field';}
+  function sync(){
+    const value=selected();
+    const name=labels[value]||'Campo';
+    if(heading.dataset.module!==value){
+      heading.dataset.module=value;
+      heading.innerHTML=(window.AtlasIcons530?.image(window.AtlasIcons530.tabs[value])||'')+' '+name;
+    }
+    open.classList.toggle('is-active', !main.includes(value));
+    document.querySelector('.mobile-dock')?.setAttribute('aria-label','Navegación móvil · '+(labels[value]||''));
+    document.querySelectorAll('.mobile-dock-link,.mobile-menu-item').forEach(b=>b.setAttribute('aria-current',b.classList.contains('active')?'page':'false'));
+  }
+  const shut=()=>{
+    menu.hidden=true;
+    document.body.classList.remove('mobile-menu-open');
+    open.setAttribute('aria-expanded','false');
+  };
+  function reveal(){menu.hidden=false; document.body.classList.add('mobile-menu-open');open.setAttribute('aria-expanded','true');close.focus();}
+  open.addEventListener('click',()=>menu.hidden?reveal():shut());
+  close.addEventListener('click',()=>{shut();open.focus()});
+  backdrop.addEventListener('click',()=>{shut();open.focus()});
+  document.addEventListener('keydown',e=>{
+    if(menu.hidden)return;
+    if(e.key==='Escape'){shut();open.focus();return;}
+    if(e.key==='Tab'){const buttons=[...menu.querySelectorAll('.mobile-drawer-sheet button')].filter(b=>!b.disabled),first=buttons[0],last=buttons.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}
+  });
+  document.querySelectorAll('.mobile-dock-link,.mobile-menu-item').forEach(b=>b.addEventListener('click',()=>{
+    shut();sync();
+    // The app restores the previous context after the navigation event.
+    if(!window.AtlasExperience3410&&window.matchMedia('(max-width:700px)').matches)window.scrollTo({top:0,behavior:'instant'});
+  }));
+  document.getElementById('panel')?.addEventListener('click',e=>{
+    if(e.target.closest('[data-action="select-journal"]') && !document.querySelector('.journal-v311') && window.matchMedia('(max-width:700px)').matches){
+      requestAnimationFrame(()=>document.querySelector('.journal-detail')?.scrollIntoView({block:'start',behavior:'smooth'}));
+    }
+  });
+  const observer=new MutationObserver(sync);
+  document.querySelectorAll('.tab').forEach(b=>observer.observe(b,{attributes:true,attributeFilter:['class']}));
+  sync();
+})();
