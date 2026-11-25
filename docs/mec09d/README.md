@@ -1,5 +1,7 @@
 # MEC-09D · Informe de avance (estado parcial para auditoría)
 
+**Preview web jugable:** [MEC-09D Preview 01](https://rawcdn.githack.com/pruizbohle/gran-atlas-naturaleza/700f983cf3ac5ab145eb3c1f3d3fd0cc3802ee55/index.html) (detalles en [preview-01.md](preview-01.md)).
+
 **Estado: EN CURSO. No está cerrada.** Este documento registra el punto exacto en que se interrumpió el trabajo, para que pueda auditarse antes de continuar.
 
 - Rama: `mec-09d/consolidation`, creada desde `1500e42` (cierre de MEC-09C).
