@@ -25,13 +25,13 @@ test('3.19.4 inventories all 269 mammals in the effective 487-species catalog',(
  assert.equal(Object.keys(current.SPECIES).length,487);assert.equal(mammals.length,269);assert.equal(Object.keys(MAMMAL_FAMILIES).length,68);
  assert.equal(new Set(mammals.map(([id,sp])=>classifyMammal(sp,id))).size,68);
  assert.deepEqual(mammals.map(([id])=>id),Object.keys(lab.SPECIES));
- for(const [id,sp] of mammals){assert.ok(classifyMammal(sp,id),id);assert.equal(JSON.stringify({...sp,dimorphism:lab.SPECIES[id].dimorphism}),JSON.stringify(normalizedRecord(lab.SPECIES[id])),id+' original record');}
+ for(const [id,sp] of mammals){assert.ok(classifyMammal(sp,id),id);/* MEC-09D: variante aprobada del oso tibetano (eaeb392) */{const[x,y]=require('./helpers/approved-diffs.cjs').species({...sp,dimorphism:lab.SPECIES[id].dimorphism},normalizedRecord(lab.SPECIES[id]),id);assert.equal(JSON.stringify(x),JSON.stringify(y),id+' original record');}}
 });
 
 test('gameplay catalog fields and original 24 IDs survive the dimorphism update',()=>{
  const data=catalog();
  const old=require('./fixtures/catalog-v3194.json');
- for(const [id,sp]of Object.entries(data.SPECIES))assert.deepEqual(JSON.parse(JSON.stringify({...sp,dimorphism:old.SPECIES[id].dimorphism})),normalizedRecord(old.SPECIES[id]));
+ /* MEC-09D: variante aprobada del oso tibetano (eaeb392) */for(const [id,sp]of Object.entries(data.SPECIES)){const[x,y]=require('./helpers/approved-diffs.cjs').species({...sp,dimorphism:old.SPECIES[id].dimorphism},normalizedRecord(old.SPECIES[id]),id);assert.deepEqual(x,y,id);}
  for(const id of Object.keys(old.SEXUAL_DIMORPHISM))assert.ok(data.SEXUAL_DIMORPHISM[id],id);
 });
 

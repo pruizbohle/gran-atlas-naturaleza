@@ -21,6 +21,8 @@ Mejora el uso de las mecánicas existentes en teléfonos en vertical. No cambia 
 
 Informe, capturas reales antes y después, y galería: [docs/mec09c](docs/mec09c/README.md). Sin APK. No se avanza a MEC-09D.
 
+MEC-09D (en curso, rama `mec-09d/consolidation`): avance parcial para auditoría en [docs/mec09d](docs/mec09d/README.md). 166 de las 221 pruebas históricas resueltas, 0 regresiones, sin cambios en el juego publicado, sin APK.
+
 ## V5.6.9 Beta — MEC-09B: auditoría funcional, accesibilidad y progresión (aprobada con observaciones)
 
 Segunda etapa de consolidación. Comprueba que todo el contenido se puede usar y alcanzar con las reglas vigentes, y corrige solo bloqueos funcionales. No cambia el balance.

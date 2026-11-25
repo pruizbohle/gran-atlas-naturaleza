@@ -1,4 +1,9 @@
 'use strict';
+// MEC-09D · Contrato histórico de expansión anclado a e0db247 (3.30.0, última revisión en que su motor sin
+// comercio 3.30 todavía ejecutaba). El recorte withoutCommerce3300 ya no produce un motor ejecutable porque
+// las capas posteriores (Polos, Océanos, INV 3.40) dependen de CONTINENT_RULES3300. El comportamiento vigente
+// del continente se prueba en atlas-v314 (18 regiones de Norteamérica), global-v3240 y commerce-v3300.
+require('./helpers/at-revision.cjs').pinFile('e0db247');
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),cp=require('node:child_process'),crypto=require('node:crypto');
 // Historical expansion contract; 3.30 progression is tested in commerce-v3300.test.cjs.
 const historicalHarness=require('./helpers/live-game.cjs').harness;

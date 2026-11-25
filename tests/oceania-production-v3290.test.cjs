@@ -17,6 +17,6 @@ test('a real 3.28 export envelope restores all progress through the 3.29 native 
  let envelope;old.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{envelope=JSON.parse(content);return{uri:'content://fixture/backup'};};await old.elements.saveDownloadBtn.fire('click');assert.equal(envelope.gameVersion,'3.28.0');
  const restored=harness({},envelope);await restored.import();const next=restored.window.__atlasTest;
  for(const field of ['money','knowledge','prestige','inventory','equipment','sightings','stages','published','currentRegion','regionUnlocked','museum','voyages'])assert.deepEqual(json(next.state[field]),json(s[field]),field);
- assert.equal(Object.keys(next.SPECIES).length,807);assert.equal(next.REGIONS.length,87);let again;
+ /* MEC-09D: la partida 3.28 se restaura en el catálogo vigente (945/113) */assert.equal(Object.keys(next.SPECIES).length,945);assert.equal(next.REGIONS.length,113);let again;
  restored.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{again=JSON.parse(content);return{uri:'content://fixture/backup329'};};await restored.elements.saveDownloadBtn.fire('click');assert.equal(again.gameVersion,require('../package.json').version) /* MEC-09D: versión vigente del sobre de exportación */;assert.equal(again.game.sightings.zorro_rojo,73);
 });

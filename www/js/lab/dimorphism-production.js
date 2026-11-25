@@ -1255,7 +1255,7 @@ const SPECIES={
   "asia_esp_0855":{"name": "Macaco rhesus", "latin": "Macaca mulatta", "rare": "Común", "kind": "primate", "color": "#aa907a", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0850":{"name": "Marta de garganta amarilla", "latin": "Martes flavigula", "rare": "Común", "kind": "mustelid", "color": "#a07a49", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0844":{"name": "Ardilla voladora gigante roja", "latin": "Petaurista petaurista", "rare": "Poco común", "kind": "small", "color": "#9b5343", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Melánico", "Notable"], "dimorphism": false},
-  "asia_esp_0523":{"name": "Oso negro asiático", "latin": "Ursus thibetanus", "rare": "Poco común", "kind": "bear", "color": "#28282b", "habitats": ["bosque", "montana", "pradera", "tundra", "estepa"], "times": ["amanecer", "atardecer", "noche"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Albino", "Notable"], "dimorphism": false},
+  "asia_esp_0523":{"name": "Oso negro asiático", "latin": "Ursus thibetanus", "rare": "Poco común", "kind": "bear", "color": "#28282b", "habitats": ["bosque", "montana", "pradera", "tundra", "estepa"], "times": ["amanecer", "atardecer", "noche"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0062":{"name": "Yak salvaje", "latin": "Bos mutus", "rare": "Raro", "kind": "bison", "color": "#514037", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": true},
   "asia_esp_0821":{"name": "Takin", "latin": "Budorcas taxicolor", "rare": "Poco común", "kind": "bison", "color": "#907357", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0240":{"name": "Tahr del Himalaya", "latin": "Hemitragus jemlahicus", "rare": "Común", "kind": "deer", "color": "#a38c6c", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Melánico", "Notable"], "dimorphism": false},
@@ -1555,16 +1555,8 @@ function normalizeEcology(){
 
 const ASIA_V23_TAXONOMY={"asia_esp_0538":{"className":"Mammalia","subClass":"Cánidos"},"asia_esp_0206":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0214":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0383":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0519":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0102":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0205":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0300":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0065":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0910":{"className":"Actinopterygii","subClass":"Peces óseos"},"asia_esp_0327":{"className":"Reptilia","subClass":"Tortugas"},"asia_esp_0873":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0246":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0182":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0218":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0227":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0534":{"className":"Mammalia","subClass":"Cánidos"},"asia_esp_0321":{"className":"Mammalia","subClass":"Roedores y lagomorfos"},"asia_esp_0183":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0404":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0442":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0347":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0319":{"className":"Mammalia","subClass":"Roedores y lagomorfos"},"asia_esp_0468":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0891":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0890":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0226":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0878":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0422":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0842":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0824":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0915":{"className":"Actinopterygii","subClass":"Peces óseos"},"asia_esp_0911":{"className":"Actinopterygii","subClass":"Peces óseos"},"asia_esp_0888":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0868":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0872":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0410":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0874":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0816":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0176":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0852":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0336":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0860":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0853":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0476":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0833":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0050":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0061":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0063":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0830":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0465":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0825":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0900":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0136":{"className":"Reptilia","subClass":"Otros reptiles"},"asia_esp_0906":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0905":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0351":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0124":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0296":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0096":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0355":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0006":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0318":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0854":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0395":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0856":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0310":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0345":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0902":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0016":{"className":"Amphibia","subClass":"Salamandras"},"asia_esp_0433":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0440":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0333":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0111":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0249":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0067":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0867":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0869":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0883":{"className":"Aves","subClass":"Rapaces"},"asia_esp_0849":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0858":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0238":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0857":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0317":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0859":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0251":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0352":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0436":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0491":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0165":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0834":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0498":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0901":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0527":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0316":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0373":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0877":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0494":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0363":{"className":"Mammalia","subClass":"Cánidos"},"asia_esp_0414":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0308":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0087":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0017":{"className":"Amphibia","subClass":"Salamandras"}};
 // Beta 3.15.4: clases y grupos uniformes para cuaderno, bestiario e investigación.
-// GM3350 BEGIN documented-classification
-const TAXONOMY_CORRECTIONS3350=Object.freeze({
- eu_esp_0159:Object.freeze({className:'Aves',subClass:'Aves terrestres',family:'Picidae'}),
- af_tiburon_blanco:Object.freeze({className:'Chondrichthyes',subClass:'Escualos y rayas',family:'Lamnidae'}),
- af_tiburon_puntas_negras:Object.freeze({className:'Chondrichthyes',subClass:'Escualos y rayas',family:'Carcharhinidae'})
-});
-// GM3350 END documented-classification
 function taxonomyInfo(id){
  const sp=SPECIES[id];if(!sp)return {className:'Animalia',subClass:'Sin clasificar'};
- if(Object.hasOwn(TAXONOMY_CORRECTIONS3350,id))return TAXONOMY_CORRECTIONS3350[id];
  const kind=sp.kind,latin=sp.latin||'',name=sp.name.toLocaleLowerCase('es');
  const genus=latin.split(' ')[0],g=(className,subClass)=>({className,subClass});
  if(kind==='amphibian'||/^(Rana|Epidalea|Strauchbufo|Conraua|Xenopus|Sclerophrys|Breviceps|Schismaderma)$/.test(genus))
@@ -1614,9 +1606,6 @@ function taxonomyText(id){
   const st=stage(id); const t=taxonomyInfo(id);
   if(st<2) return 'Clasificación: por estudiar';
   if(st<3) return `Clase: ${t.className}`;
-  if(Object.hasOwn(globalThis.AtlasGM07A04?.records||{},id)){
-   return `Clase: ${t.className} · Orden: ${t.order} · Familia: ${t.family}`;
-  }
   return `Clase: ${t.className} · Grupo: ${t.subClass}`;
 }
 // Beta 3.10.1: preservar la ecología explícita de las dos regiones nuevas.
@@ -1830,61 +1819,24 @@ const LEGENDARY_SPECIMENS=[
  ['junco','af_cocodrilo_nilo','Junco','Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.'],
  ['ancora','af_tortuga_aldabra','Áncora','Caparazón de anillos marcados y cuello extendido sobre patas columnares.'],
  ['ascua','zorro_rojo','Ascua','Un zorro de pecho marfil se sienta envuelto en su cola rojiza.'],
- ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.'],
- ['espiral','af_gran_kudu','Espiral','Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.',true],
- ['bastion','af_pangolin_gigante','Bastión','El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.',true],
- ['cienaga','af_picozapato','Ciénaga','Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.',true],
- ['alisio','frailecillo_atlantico','Alisio','Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.',true],
- ['filigrana','na_esp_ambystoma_mexicanum','Nácar','Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.',true],
- ['terracota','oc_esp_osphranter_rufus','Terracota','Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.',true],
- ['orla','mar_esp_megaptera_novaeangliae','Orla','La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.',true],
- ['marea','mar_esp_enteroctopus_dofleini','Marea','El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.',true],
- ['aconcagua','sa_esp_vultur_gryphus','Aconcagua','Un cóndor macho abre las alas y deja ver un collar blanco espeso y paneles claros en el plumaje oscuro.',true],
- ['titan','na_esp_bison_bison','Titán','Un bisonte de gran giba inclina la cabeza y apoya los cuartos delanteros bajo una melena densa.',true],
- ['boreal','polar_esp_ursus_maritimus','Boreal','Un oso de pelaje marfil levanta la cabeza al avanzar, con el cuello largo y el perfil de una oreja ligeramente mellado.',true],
- ['leviatan','mar_esp_balaenoptera_musculus','Leviatán','La ballena azul gira en diagonal y deja ver sus surcos ventrales y la cola horizontal.',true],
- ['esmeralda','oc_esp_strigops_habroptilus','Esmeralda','Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.',true],
- ['abismo','af_tiburon_blanco','Abismo','Un tiburón blanco de lomo gris acero gira hacia el observador, con cicatrices antiguas apenas visibles.',true],
- ['kraken','mar_esp_architeuthis_dux','Kraken','Un calamar gigante rojizo despliega ocho brazos y dos tentáculos de captura mucho más largos, terminados en mazas.',true],
- ['solitario','gm06_chelonoidis_porteri','Solitario','Una tortuga ficticia de Santa Cruz levanta el cuello sobre cuatro patas columnares y un caparazón abovedado de escudos marcados.',true],
- ['eterno','polar_esp_somniosus_microcephalus','Eterno','Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.',true],
- ['vertigo','na_esp_falco_peregrinus','Vértigo','Un peregrino adulto se lanza en picado con las alas plegadas hacia atrás y la cola estrecha.',true]
-].map(([id,speciesId,name,description,legendaryOnly])=>({id,speciesId,name,description,...(legendaryOnly?{legendaryOnly}:{})}));
+ ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.']
+].map(([id,speciesId,name,description])=>({id,speciesId,name,description}));
 const SPECIMEN_SELECTION={
  epico:['zorro_rojo','lobo_gris','aguila_real','reno','buho_real','jabali','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369','af_hipopotamo','af_jirafa','af_leon','af_suricata','af_secretario','af_picozapato','af_piton_africana'],
  excepcional:['zorro_rojo','lobo_gris','aguila_real','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369']
 };
 function canonicalTaxon(id){return (SPECIES[id]?.latin||'').toLowerCase().trim().split(/\s+/).slice(0,2).join(' ');}
-function indexLegendaryTaxa(){
- const index=new Map();
- for(const specimen of LEGENDARY_SPECIMENS){
-  const taxon=canonicalTaxon(specimen.speciesId);
-  if(taxon&&!index.has(taxon))index.set(taxon,specimen);
- }
- return index;
-}
-let legendaryTaxa=indexLegendaryTaxa();
-function legendaryForSpecies(id){return legendaryTaxa.get(canonicalTaxon(id));}
+function legendaryForSpecies(id){return LEGENDARY_SPECIMENS.find(l=>SPECIES[l.speciesId]&&canonicalTaxon(id)&&canonicalTaxon(l.speciesId)===canonicalTaxon(id));}
 const SPECIMEN_CATEGORIES=Object.fromEntries(Object.keys(SPECIES).map(id=>{
- const categories=[],legendary=legendaryForSpecies(id);
+ const categories=[];
  if(SPECIES[id].special.some(v=>specialVariantName(v)==='Notable'))categories.push('Notable');
- // Later additions only receive the legendary category.
- const historicalLegendary=legendary&&!legendary.legendaryOnly;
- if(SPECIMEN_SELECTION.epico.includes(id)||historicalLegendary)categories.push('Épico');
- if(SPECIMEN_SELECTION.excepcional.includes(id)||historicalLegendary)categories.push('Excepcional');
- if(historicalLegendary)categories.push('Legendario');
+ if(SPECIMEN_SELECTION.epico.includes(id)||legendaryForSpecies(id))categories.push('Épico');
+ if(SPECIMEN_SELECTION.excepcional.includes(id)||legendaryForSpecies(id))categories.push('Excepcional');
+ if(legendaryForSpecies(id))categories.push('Legendario');
  return [id,categories];
 }));
-let specimenIds;
 function configuredSpecials(sp){
- // The catalogue extensions are all loaded before this is first called.
- if(!specimenIds){
-  specimenIds=new WeakMap();
-  for(const [id,species] of Object.entries(SPECIES)){
-   if(!specimenIds.has(species))specimenIds.set(species,id);
-  }
- }
- const id=specimenIds.get(sp);
+ const id=Object.keys(SPECIES).find(id=>SPECIES[id]===sp);
  return [...new Set([...(sp.special||[]).map(specialVariantName),...(SPECIMEN_CATEGORIES[id]||[])])];
 }
 // Keep the v3.19.6 array intact: its length defines each pigmentation probability.
@@ -1924,19 +1876,6 @@ function specimenMarkup(id,variant='',category='',sex=null){
  const svg=getSpriteMarkup(id,variantToSkin(variant),!variant?sex:null);
  return category&&SPECIMEN_LEVELS[category]&&variantToSkin(variant)!==SPECIMEN_LEVELS[category].skin?decorateSpecimen(svg,category):svg;
 }
-// Presentation adapter for discovered animals. Stored encounter markup stays SVG.
-function animalMarkup(id,{variant='',category='',sex=null,size=128,eager=false,surface='plain'}={}){
- const skin=variantToSkin(variant);
- const frame=category||Object.keys(SPECIMEN_LEVELS).find(name=>SPECIMEN_LEVELS[name].skin===skin)||'Normal';
- const key=frame==='Legendario'?'legendario':
-  (skin==='normal'&&SEXUAL_DIMORPHISM[id]&&(sex==='male'||sex==='female'))?sex:
-  (skin==='albino'||skin==='melanico')?skin:'normal';
- const fallback=()=>specimenMarkup(id,variant,category,sex);
- const graphics=globalThis.AtlasNaturalistArt;
- const habitat=surface==='bestiary'?graphics?.preferredHabitat(SPECIES[id]?.habitats||[]):'';
- const region=habitat==='bosque'?REGIONS.find(zone=>zone.species.includes(id)&&zone.habitats.includes(habitat))?.id:undefined;
- return graphics?.render(id,{variant:key,category:frame,size,eager,surface,habitat,region},fallback)??fallback();
-}
 function decorateSpecimen(svg,category){
  const level=SPECIMEN_LEVELS[category];if(!level)return svg;
  return svg.replace('>',` data-specimen-category="${category}">`+specimenHalo(category));
@@ -1964,19 +1903,6 @@ function normalizeSpecialDiscoveries(snapshot){
    records[id]=unified;
   }
   snapshot.specialFound=records;
- }
- // V5.0.10: conservar el progreso de la ranura pigmentaria del oso al sustituir su variante.
- const bearId='asia_esp_0523';
- const foundBear=snapshot.specialFound?.[bearId];
- if(foundBear&&typeof foundBear==='object'&&Object.hasOwn(foundBear,'Melánico')){
-  foundBear.Albino=Boolean(foundBear.Albino||foundBear.Melánico);
-  delete foundBear.Melánico;
- }
- const countedBear=snapshot.specialCounts[bearId];
- for(const label of Object.keys(countedBear||{})){
-  if(specialVariantName(label)!=='Melánico')continue;
-  countedBear.Albino=(Number(countedBear.Albino)||0)+(Number(countedBear[label])||0);
-  delete countedBear[label];
  }
  // Historical diary text and last encounter must not expose a second category.
  const text=value=>typeof value==='string'?value.replace(/leucístic[oa]/gi,'Albino'):value;
@@ -2060,27 +1986,13 @@ function sexSpriteMarkup(id,sex){
 }
 
 const spriteCache=new Map();
-function getSpriteMarkup(id, skin='normal', sex=null, legacy=false){
-  if(skin!=='legendario'){
-   if(!legacy&&globalThis.AtlasM01Art?.has(id))return spriteMarkupM01(id,skin);
-  // GM3330 BEGIN art
-  if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
-  if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
-  // GM3330 END art
-  // GM3320 BEGIN art
-  if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
-  // GM3320 END art
-  // GM3310 BEGIN art
-  if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
-  // GM3310 END art
-  }
+function getSpriteMarkup(id, skin='normal', sex=null){
   const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
   if(category){
    const key=id+':'+skin+':base';
    if(spriteCache.has(key))return spriteCache.get(key);
    const l=legendaryForSpecies(id);
-   const historicArt=globalThis.ATLAS_LEGENDARY_ART;
-   const base=category==='Legendario'&&l&&historicArt?.ids.includes(l.id)?historicArt.render(l.id):getSpriteMarkup(id,'normal');
+   const base=category==='Legendario'&&l&&globalThis.ATLAS_LEGENDARY_ART?globalThis.ATLAS_LEGENDARY_ART.render(l.id):getSpriteMarkup(id,'normal');
    const svg=decorateSpecimen(base,category);
    spriteCache.set(key,svg);
    return svg;
@@ -2093,22 +2005,11 @@ function getSpriteMarkup(id, skin='normal', sex=null, legacy=false){
   // Specialized engines receive normal exactly once; anatomy and markings are shared.
   const pigment=skin==='albino'||skin==='melanico';
   const baseSvg=pigment?getSpriteMarkup(id,'normal'):
-    (sp.origin==='gm06'?globalThis.AtlasGM06Art.render(sp):null)||
     (validSex?sexSpriteMarkup(id,validSex):null)||spriteFor(sp.kind,sp.color,skin,id);
   const svg=skin==='melanico'?enforceMelanicColors(baseSvg):
     skin==='albino'?enforcePaleColors(baseSvg):baseSvg;
   spriteCache.set(key,svg);
   return svg;
-}
-// M01: opt-in art for exactly32 reviewed identities. Other render paths are intact.
-function spriteMarkupM01(id,skin='normal'){
- const key=id+':'+skin+':base';if(spriteCache.has(key))return spriteCache.get(key);
- const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);let svg;
- if(category)svg=decorateSpecimen(getSpriteMarkup(id,'normal'),category);
- else if(skin==='albino'||skin==='melanico'){
-  const base=getSpriteMarkup(id,'normal');svg=skin==='albino'?enforcePaleColors(base):enforceMelanicColors(base);
- }else svg=globalThis.AtlasM01Art.render(SPECIES[id],id)||getSpriteMarkup(id,'normal',null,true);
- spriteCache.set(key,svg);return svg;
 }
 function applySkin(base, skin){
   if(skin==='albino') return '#f2f3f4';

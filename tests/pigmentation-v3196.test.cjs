@@ -10,7 +10,7 @@ const base={money:4465,knowledge:390,prestige:4,currentRegion:'HX-01-09',discove
 test('canonical labels, catalog inventory and duplicate-free options preserve configured availability',()=>{
  assert.equal(api.specialVariantName('Leucístico'),'Albino');assert.equal(api.specialVariantName('Leucística'),'Albino');assert.equal(api.specialVariantName('Melánica'),'Melánico');
  assert.deepEqual(Array.from(api.configuredSpecials({special:['Leucístico','Albino','Leucística','Melánico','Notable']})),['Albino','Melánico','Notable']);
- const species=Object.values(api.SPECIES);assert.equal(species.filter(sp=>sp.special.includes('Albino')).length,251);assert.equal(species.filter(sp=>sp.special.includes('Melánico')).length,256);
+ const species=Object.values(api.SPECIES);/* MEC-09D: el oso tibetano pasó de Melánico a Albino (eaeb392): 251→252 y 256→255 */assert.equal(species.filter(sp=>sp.special.includes('Albino')).length,252);assert.equal(species.filter(sp=>sp.special.includes('Melánico')).length,255);
  for(const sp of species){assert.equal(sp.special.length,new Set(sp.special).size);for(const label of sp.special)assert.ok(['Albino','Melánico','Notable'].includes(label));}
  assert.equal(Object.keys(api.SEXUAL_DIMORPHISM).length,32);
 });
@@ -66,7 +66,7 @@ test('normalization is idempotent, retains unknown historical keys and canonical
 test('cards collapse historical aliases and display one discovered Albino',()=>{
  const badge=source.slice(source.indexOf('function specialBadges('),source.indexOf('\nfunction ',source.indexOf('function specialBadges(')+1));
  const variant=source.slice(source.indexOf('function variantToSkin('),source.indexOf('function pushLog('));
- const cards=vm.runInNewContext(source.slice(source.indexOf('function specialVariantName('),source.indexOf('Object.values(SPECIES).forEach(sp=>{sp.special='))+variant+badge+'\n;specialBadges("fox")',{SPECIES:{fox:{special:['Leucístico','Albino','Leucística','Melánico']}},state:{specialFound:{fox:{'Leucístico':true}}},getSpriteMarkup:()=>'<svg/>'});
+ const cards=vm.runInNewContext(source.slice(source.indexOf('function specialVariantName('),source.indexOf('Object.values(SPECIES).forEach(sp=>{sp.special='))+variant+badge+'\n;specialBadges("fox")',{SPECIES:{fox:{special:['Leucístico','Albino','Leucística','Melánico']}},state:{specialFound:{fox:{'Leucístico':true}}},getSpriteMarkup:()=>'<svg/>',/* MEC-09D: desde 4.0.0 las tarjetas usan animalMarkup (lámina del naturalista) y LEG-01 consulta legendaryForSpecies */animalMarkup:()=>'<svg/>',legendaryForSpecies:()=>null});
  assert.equal((cards.match(/variant-card/g)||[]).length,2);assert.equal((cards.match(/>Albino(?: · registro histórico)?</g)||[]).length,1);assert.doesNotMatch(cards,/Leucíst/);
 });
 test('historical pigmentation weights and ethology remain exact in the independent sampler',()=>{

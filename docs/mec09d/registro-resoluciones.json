@@ -1,0 +1,670 @@
+{
+ "research-v315 :: Las cinco ramas cubren todas las investigaciones sin perder las existentes": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido (ver arriba) y clase de presentación de ramas actualizada a er28-branches (3.28, aprobada); el resto de comprobaciones de las cinco ramas sin cambios."
+ },
+ "research-v315 :: El avance se adquiere por niveles y las mejoras automáticas no quedan disponibles al inicio": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Encuentro grupal manual: 3 especies distintas ×3 registros, con un botín por búsqueda": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Los censos automáticos no superan el límite de 100 registros por especie y hora": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Paleontología avanza gradualmente y añade hallazgos sin modificar botín anterior": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Una disciplina mejora ponderación de raros sin borrar la posibilidad de observar otras especies": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Sáhara: el equipo busca por toda la región aunque el filtro manual sea desierto/día": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Diario: registra claramente la pausa automática sin alterar los avistamientos manuales": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Equipo activo: probabilidades reales y ranuras, sin bonificaciones de objetos no equipados": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Amuleto de ámbar aplica +5 % al monto base de subvenciones": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Collar de conchas +5 % libras al regreso; brújula +4 % conocimiento": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Gorro +6 puntos o morral +3 puntos en el botín, solamente al equiparse": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: Especialidades: mamíferos, aves, reptiles y peces no se pierden por taxonomía incompleta": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "research-v315 :: El panel muestra el ratio actual de búsqueda y diferencia manual y automático": {
+  "cat": "ARNES",
+  "why": "El arnés cargaba solo app.js recortado; desde 3.31 el motor exige los datos polares/marinos/profundos y desde MEC-01 los módulos MEC. Se ejecuta el motor vigente completo con los mismos guiones que index.html (tests/helpers/runtime-data.cjs). Aserciones sin cambios."
+ },
+ "atlas-v314 :: Norteamérica tiene exactamente dos regiones iniciales con fauna del Excel y biomas": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido; además las regiones crecieron en etapas aprobadas (Norteamérica 18 en 3.22, África 25 con GM-06) y 3.30 exige preparaciones fabricadas acumulativas. Se conservan las regiones históricas, sus códigos y la regla de no consumir mapas ni artefactos."
+ },
+ "atlas-v314 :: Investigaciones encadenadas requieren artefacto y mapa, sin consumirlos": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido; además las regiones crecieron en etapas aprobadas (Norteamérica 18 en 3.22, África 25 con GM-06) y 3.30 exige preparaciones fabricadas acumulativas. Se conservan las regiones históricas, sus códigos y la regla de no consumir mapas ni artefactos."
+ },
+ "atlas-v314 :: Las investigaciones nuevas no modifican los códigos de África": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido; además las regiones crecieron en etapas aprobadas (Norteamérica 18 en 3.22, África 25 con GM-06) y 3.30 exige preparaciones fabricadas acumulativas. Se conservan las regiones históricas, sus códigos y la regla de no consumir mapas ni artefactos."
+ },
+ "atlas-v314 :: Fauna de África: ninguna especie regional queda sin bioma ni horario posible": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido; además las regiones crecieron en etapas aprobadas (Norteamérica 18 en 3.22, África 25 con GM-06) y 3.30 exige preparaciones fabricadas acumulativas. Se conservan las regiones históricas, sus códigos y la regla de no consumir mapas ni artefactos."
+ },
+ "atlas-v314 :: Probabilidad: categorías ordenadas de común a muy rara": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "items-v3198 :: v3.19.8 preserves all 52 item definitions, recipes, eight studies and museum data": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogos ampliados en etapas aprobadas: cada una de las 52 definiciones históricas sigue byte a byte idéntica; las 60 ilustraciones originales siguen presentes (el módulo tiene 76); desde 4.0.0 el juego usa láminas naturalistas con el SVG de respaldo; las vistas de inventario muestran lo poseído (3.40)."
+ },
+ "items-v3198 :: 60 original deterministic SVGs work in Node without window or external resources": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogos ampliados en etapas aprobadas: cada una de las 52 definiciones históricas sigue byte a byte idéntica; las 60 ilustraciones originales siguen presentes (el módulo tiene 76); desde 4.0.0 el juego usa láminas naturalistas con el SVG de respaldo; las vistas de inventario muestran lo poseído (3.40)."
+ },
+ "items-v3198 :: inventory views use plates and preserve equip, upgrade, consumption and study actions": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogos ampliados en etapas aprobadas: cada una de las 52 definiciones históricas sigue byte a byte idéntica; las 60 ilustraciones originales siguen presentes (el módulo tiene 76); desde 4.0.0 el juego usa láminas naturalistas con el SVG de respaldo; las vistas de inventario muestran lo poseído (3.40)."
+ },
+ "items-v3198 :: laboratory metadata matches the production catalog exactly": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogos ampliados en etapas aprobadas: cada una de las 52 definiciones históricas sigue byte a byte idéntica; las 60 ilustraciones originales siguen presentes (el módulo tiene 76); desde 4.0.0 el juego usa láminas naturalistas con el SVG de respaldo; las vistas de inventario muestran lo poseído (3.40)."
+ },
+ "patch-v3153 :: Nutria europea: variantes configuradas, con sprites distintos y SVG válido": {
+  "cat": "ARNES",
+  "why": "Arnés corregido (motor vigente completo); aserciones sin cambios."
+ },
+ "patch-v3153 :: Quebrantahuesos es un solo taxón, presente en Europa, Asia y África": {
+  "cat": "ARNES",
+  "why": "Arnés corregido (motor vigente completo); aserciones sin cambios."
+ },
+ "patch-v3153 :: Migración de partidas fusiona avances históricos sin repetir al volver a cargar": {
+  "cat": "ARNES",
+  "why": "Arnés corregido (motor vigente completo); aserciones sin cambios."
+ },
+ "patch-v3153 :: Mustélidos, nutrias y pangolines comparten estilo familiar con variaciones propias": {
+  "cat": "ARNES",
+  "why": "Arnés corregido (motor vigente completo); aserciones sin cambios."
+ },
+ "patch-v3153 :: Campo representa 1, 2 y 3 especies con imágenes y censos ×2/×3 evidentes": {
+  "cat": "ARNES",
+  "why": "Arnés corregido (motor vigente completo); aserciones sin cambios."
+ },
+ "patch-v3154 :: Catálogo sin animales huérfanos, referencias rotas ni taxones binomiales duplicados": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido (motor vigente). Expectativas actualizadas por etapas aprobadas: catálogo 125/1.000, clase Cephalopoda (3.31–3.34), módulos de arte 3.19.2b–3.19.9 (atributos de familia, lagomorfos, cálao con casco), Bestiario 3.26 con selector y botón de dirección accesible. Garantías originales conservadas."
+ },
+ "patch-v3154 :: Clases uniformes en todas las especies; anfibios, peces y cálao correctos": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido (motor vigente). Expectativas actualizadas por etapas aprobadas: catálogo 125/1.000, clase Cephalopoda (3.31–3.34), módulos de arte 3.19.2b–3.19.9 (atributos de familia, lagomorfos, cálao con casco), Bestiario 3.26 con selector y botón de dirección accesible. Garantías originales conservadas."
+ },
+ "patch-v3154 :: Cálao ave, desmán sin caparazón, cobras con capucha y liebres homologadas": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido (motor vigente). Expectativas actualizadas por etapas aprobadas: catálogo 125/1.000, clase Cephalopoda (3.31–3.34), módulos de arte 3.19.2b–3.19.9 (atributos de familia, lagomorfos, cálao con casco), Bestiario 3.26 con selector y botón de dirección accesible. Garantías originales conservadas."
+ },
+ "patch-v3154 :: Bestiario permite invertir un mismo criterio y conserva selección": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido (motor vigente). Expectativas actualizadas por etapas aprobadas: catálogo 125/1.000, clase Cephalopoda (3.31–3.34), módulos de arte 3.19.2b–3.19.9 (atributos de familia, lagomorfos, cálao con casco), Bestiario 3.26 con selector y botón de dirección accesible. Garantías originales conservadas."
+ },
+ "patch-v3154 :: Dos lagópodos se mantienen con sus IDs, rareza y nombres científicos": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v3154 :: Migración de alias conserva avances y no suma dos veces": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v316 :: Beta 3.16 mantiene catálogo, mapa y materiales de recetas coherentes": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogo vigente 1.000/125; inventario 3.40 (cuadrícula paginada con ficha, «Fuentes de obtención», raros en Coleccionables). Se conservan los estudios ×1/×5, las cinco pestañas y la ausencia de «undefined»."
+ },
+ "patch-v316 :: Inventario móvil ofrece cinco pestañas, origen, usos y estudio ×1/×5": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogo vigente 1.000/125; inventario 3.40 (cuadrícula paginada con ficha, «Fuentes de obtención», raros en Coleccionables). Se conservan los estudios ×1/×5, las cinco pestañas y la ausencia de «undefined»."
+ },
+ "patch-v316 :: Los materiales repetidos dan resultados reales y nunca dejan saldos negativos": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v316 :: Catalejo fabricado consume prismáticos y desactiva la herramienta anterior": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v316 :: Sombrero y medallón producen bonificaciones cuantificables": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v316 :: Botín de viajes contiene materiales, no equipamiento terminados, y fragmentos geográficos": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v316 :: Las nuevas materias primas aparecen en recetas, y el museo conserva las anteriores": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v317 :: El Atlas mantiene las 487 especies y 57 zonas; nuevas recetas y colecciones válidas": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogo vigente 1.000/125 y 10 yacimientos (4 de 3.17 + 3 de MEC-04 + 3 de MEC-09B); Bestiario 3.26 paginado con filtros de sesión; sala «Fósiles» del Museo 3.27. Se conserva la garantía de ocultar solo monografías publicadas."
+ },
+ "patch-v317 :: Bestiario oculta solo monografías, no especies 5/5 sin publicación": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogo vigente 1.000/125 y 10 yacimientos (4 de 3.17 + 3 de MEC-04 + 3 de MEC-09B); Bestiario 3.26 paginado con filtros de sesión; sala «Fósiles» del Museo 3.27. Se conserva la garantía de ocultar solo monografías publicadas."
+ },
+ "patch-v317 :: Partida antigua sin campos nuevos se recupera y mantiene sus colecciones": {
+  "cat": "EXPECTATIVA",
+  "why": "Arnés corregido. Catálogo vigente 1.000/125 y 10 yacimientos (4 de 3.17 + 3 de MEC-04 + 3 de MEC-09B); Bestiario 3.26 paginado con filtros de sesión; sala «Fósiles» del Museo 3.27. Se conserva la garantía de ocultar solo monografías publicadas."
+ },
+ "patch-v317 :: Excavaciones requieren fondos, región, y solo ocupan una ranura inicialmente": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v317 :: Paleontología avanzada habilita dos campañas y mejora recompensas": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v317 :: Restauración usa materiales, exige esqueleto y puede continuar después del montaje": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v317 :: Galerías paleontológicas bonifican solo con colecciones completas": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v317 :: Recetas de anquilosaurio e iguanodonte se ensamblan una sola vez": {
+  "cat": "ARNES",
+  "why": "Arnés corregido; aserciones sin cambios."
+ },
+ "patch-v318 :: Ocho reconstrucciones, cuerno fósil y hueso duro: materiales válidos y sin taxones nuevos": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que arriba; además el recuento de catálogo de esa revisión es 1.000/125."
+ },
+ "patch-v318 :: El tiempo pendiente de excavación es HH:MM:SS y se refresca en Museo": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Excavación entrega recompensas exactas y guarda el historial una sola vez": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Nueve relictos con zonas existentes y colecciones biogeográficas propias": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Misiones de relictos tienen cupo, territorio y tiempo real, sin recompensa doble": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Las pistas de Campo y expedientes permiten registrar relictos sin inventario negativo": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Colecciones de relictos dan bonificación a vitrinas, no al Atlas ni a cada relicto": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Logros y análisis comparativo generan bonificaciones reales, no repetibles sin costo": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Museo móvil muestra expedientes, misiones, logros e historial": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "patch-v318 :: Guardados anteriores se migran sin perder muestras ni monografías": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico previo al cambio «los relictos solo se descubren en el Campo»: la prueba ejecuta app.js de la revisión 7cd5110 (LEG-02). Su arnés cargaba los módulos vigentes y una fuente recortada incompatible con GM-06; ahora carga los guiones de esa misma revisión (preload rev). La regla vigente (prospecciones sin entrega directa del relicto, descubrimiento en el Campo) se cubre en tests/mec09d-relicts.test.cjs."
+ },
+ "persistence-v3240 :: historical 3.19.9 europe survives startup, native import and exported restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Partidas históricas: el sobre de exportación lleva la versión vigente (antes «3.30.0»). En 3.23.0 museum, la curaduría 3.38 añade acreditaciones derivadas sin renta: se exige que cada campo original del Museo se conserve exacto."
+ },
+ "persistence-v3240 :: historical 3.21.2 africa survives startup, native import and exported restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Partidas históricas: el sobre de exportación lleva la versión vigente (antes «3.30.0»). En 3.23.0 museum, la curaduría 3.38 añade acreditaciones derivadas sin renta: se exige que cada campo original del Museo se conserve exacto."
+ },
+ "persistence-v3240 :: historical 3.22.1 northamerica survives startup, native import and exported restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Partidas históricas: el sobre de exportación lleva la versión vigente (antes «3.30.0»). En 3.23.0 museum, la curaduría 3.38 añade acreditaciones derivadas sin renta: se exige que cada campo original del Museo se conserve exacto."
+ },
+ "persistence-v3240 :: historical 3.23.1 southamerica survives startup, native import and exported restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Partidas históricas: el sobre de exportación lleva la versión vigente (antes «3.30.0»). En 3.23.0 museum, la curaduría 3.38 añade acreditaciones derivadas sin renta: se exige que cada campo original del Museo se conserve exacto."
+ },
+ "persistence-v3240 :: historical 3.23.0 museum survives startup, native import and exported restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Partidas históricas: el sobre de exportación lleva la versión vigente (antes «3.30.0»). En 3.23.0 museum, la curaduría 3.38 añade acreditaciones derivadas sin renta: se exige que cada campo original del Museo se conserve exacto."
+ },
+ "persistence-v3240 :: historical 3.22.1 variants-monographs survives startup, native import and exported restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Partidas históricas: el sobre de exportación lleva la versión vigente (antes «3.30.0»). En 3.23.0 museum, la curaduría 3.38 añade acreditaciones derivadas sin renta: se exige que cada campo original del Museo se conserve exacto."
+ },
+ "persistence-v3240 :: eight-hour offline progress with the full 710-species catalog matches 3.23.1 state and every RNG call": {
+  "cat": "SUSTITUIDA",
+  "why": "La equivalencia «la paginación AM-06 no altera el juego offline de 8 h ni las tiradas» se comprueba sobre el motor vigente completo con y sin los bloques AM-06 (la fuente recortada ya no ejecutaba)."
+ },
+ "deep-v3330 :: every44 presence attainable through actual method/habitat filters; bottom only muestreo": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: research costs6000/5200, surface prerequisite, six permanent crafts and429..465 progression": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: manual direct observation and guaranteed flag cannot discover deep species": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: one scientific job, exact costs/durations, early/future/NaN settlement rejected, exactly once receipt": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: sondeo incompatible with bottom habitat; muestreo180s permitted, insufficient money/knowledge rejects": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: actual timed seeded samples discover every assigned presence; failed attempts exist at unchanged rates": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: naturalists discover all44 assignments using original auto encounter probability and cap": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: saved job same seed/context resolves identically after reload, away-region completion preserves Field": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: start and resolution quota failures roll back ALL state; retry same seed gives no duplicate": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: sanitization discards malformed/duplicate/already resolved work, imported valid job preserved": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: 20 new species complete five notebook stages, publish once and enter Museum; Cephalopoda under Peces": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: 3.32 advanced save, native export/import, pending24h commerce and new operation survive72h once": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "deep-v3330 :: actual one-second ticker resolves operations and naturalists, no duplicate on next tick": {
+  "cat": "EXPECTATIVA",
+  "why": "Las pruebas preparaban el acceso a océanos sin la credencial cartográfica que INV 3.40 exige a cada etapa (mapamundi fabricado, permanente). Con la credencial, la operación profunda, los métodos, las tiradas sembradas, el reloj de un segundo, la reversión ante fallos de cuota y la sanitización vuelven a verificarse con las mismas aserciones. Bestiario 3.26: fichas b26-open y total vigente."
+ },
+ "abyssal-v3340 :: three conservative depth windows and localities; no tripod in hadal nor snailfish in wrong trench": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: all three presences attainable with permitted method and turn filters, sondeo cannot bypass": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: 475/485 thresholds,research6800/5800 after deep and same six nonconsumed crafts,old unlocks retained": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: all former1741 manual and automatic eligibility conditions exact,deep protocols and global rates unchanged": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: direct/manual and guaranteed flag blocked; meaningful extraordinary300s,cost60/10,one shared queue": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: actual paid seeded operations attain all3 presences using each method,failures and valid evidence exist": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: naturalist automatic encounters attain all3 assignments while respecting selected stratum and hourly cap": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: real one-second ticker settles extraordinary work once; naturalists use same production ticker": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: restart resolves same seed/context,away completion preserves region and previous Field output": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: quota failures roll back entire start/resolution,deterministic retry and receipt preserve stratum on reload": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: old pending60s scientific operation occupies same queue in a trench,then completes correctly": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: 3.33 advanced save preserves all resources,old60s job and24h trade through export/import and72h return": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: normalization retains valid300s work and rejects wrongduration/unknown habitat/duplicate receipts": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "abyssal-v3340 :: changing to eastern trench selects compatible extraordinary method;insufficient resources never negative": {
+  "cat": "EXPECTATIVA",
+  "why": "Igual que deep-v3330: credencial cartográfica de INV 3.40 (permanente) en la preparación; las credenciales no se borran al vaciar el estado. Aserciones de fosas, métodos, colas, reversión y normalización sin cambios."
+ },
+ "aud06-startup :: AUD-06 El índice de especímenes conserva precedencia, alias taxonómicos y variantes en las 1000 fichas": {
+  "cat": "EXPECTATIVA",
+  "why": "LEG-02 amplió los legendarios de 12 a 30 (aprobado); el resto de la comprobación sobre las 1.000 fichas sin cambios."
+ },
+ "field-v3210 :: production field projection is read-only and preserves hidden names for unidentified specimens": {
+  "cat": "ARNES",
+  "why": "Fuente recortada incompatible (CONTINENT_RULES3300); se ejecuta el motor vigente completo. Aserciones sin cambios."
+ },
+ "gm05-integrity :: all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters": {
+  "cat": "ARNES",
+  "why": "La preparación rich() de scripts/gm05-runtime.cjs no incluía las credenciales cartográficas de INV 3.40; con ellas los 1.744 testigos manuales y automáticos vuelven a ser alcanzables. Aserciones sin cambios."
+ },
+ "ach3360-runtime :: ACH02 misiones mantienen definiciones exactas, un solo premio y registro previo": {
+  "cat": "EXPECTATIVA",
+  "why": "Definiciones de misiones idénticas; MEC-01 cambió solo la línea de acreditación a earnMoney(…,'encargos') del libro de ingresos. Se normaliza esa línea; premio único verificado."
+ },
+ "atlas-v3211 :: Asia, Africa and North America retain their exact independent cartographic gates": {
+  "cat": "EXPECTATIVA",
+  "why": "Compuertas continentales: desde 3.30 se exigen preparaciones fabricadas acumulativas y las regiones desbloqueadas conservan el acceso; se comprueban sin cambios las compuertas de mapa, investigación y prestigio. Continentes futuros: Oceanía, Polos y Océanos ya están implementados; se conserva la garantía de que ningún continente sin implementar muestra regiones y de que no hay regiones inventadas."
+ },
+ "atlas-v3211 :: future continents stay empty and locked with no invented playable regions": {
+  "cat": "EXPECTATIVA",
+  "why": "Compuertas continentales: desde 3.30 se exigen preparaciones fabricadas acumulativas y las regiones desbloqueadas conservan el acceso; se comprueban sin cambios las compuertas de mapa, investigación y prestigio. Continentes futuros: Oceanía, Polos y Océanos ya están implementados; se conserva la garantía de que ningún continente sin implementar muestra regiones y de que no hay regiones inventadas."
+ },
+ "commerce-v3300 :: new game gates require four different crafted objects cumulatively; Asia remains exempt": {
+  "cat": "EXPECTATIVA",
+  "why": "Compuertas: se añaden las credenciales cartográficas permanentes de INV 3.40 (no consumibles e independientes de las preparaciones de 3.30); compras, fórmula de umbrales y prestigio no gastado se comprueban sin cambios. Migración de partidas 3.29: los campos originales se conservan exactos y se admiten indicadores nuevos con valor inicial (3.31+)."
+ },
+ "commerce-v3300 :: continental formula follows historical threshold order and prestige is never spent": {
+  "cat": "EXPECTATIVA",
+  "why": "Compuertas: se añaden las credenciales cartográficas permanentes de INV 3.40 (no consumibles e independientes de las preparaciones de 3.30); compras, fórmula de umbrales y prestigio no gastado se comprueban sin cambios. Migración de partidas 3.29: los campos originales se conservan exactos y se admiten indicadores nuevos con valor inicial (3.31+)."
+ },
+ "commerce-v3300 :: actual 3.29.0 saves retain every old field and all unlocked regions on migration": {
+  "cat": "EXPECTATIVA",
+  "why": "Compuertas: se añaden las credenciales cartográficas permanentes de INV 3.40 (no consumibles e independientes de las preparaciones de 3.30); compras, fórmula de umbrales y prestigio no gastado se comprueban sin cambios. Migración de partidas 3.29: los campos originales se conservan exactos y se admiten indicadores nuevos con valor inicial (3.31+)."
+ },
+ "bestiary-v3240 :: Bestiary opens 32 of 807 cards, preserves global counters and only generates visible SVGs": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés (945, 30 páginas) en lugar de 807; desde 4.0.0 parte de las fichas usa lámina raster y no genera SVG (la caché sigue acotada a lo visible); la comparación del orden con el renderizador completo se hace sobre el motor congelado 3.28 (fixture) sin bloques AM-06."
+ },
+ "bestiary-v3240 :: all six existing sort orders and the monograph filter exactly match the 3.23.1 full renderer across every page": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés (945, 30 páginas) en lugar de 807; desde 4.0.0 parte de las fichas usa lámina raster y no genera SVG (la caché sigue acotada a lo visible); la comparación del orden con el renderizador completo se hace sobre el motor congelado 3.28 (fixture) sin bloques AM-06."
+ },
+ "bestiary-v3240 :: invalid navigation is ignored; filters clamp the page and all-hidden catalog stays usable": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés (945, 30 páginas) en lugar de 807; desde 4.0.0 parte de las fichas usa lámina raster y no genera SVG (la caché sigue acotada a lo visible); la comparación del orden con el renderizador completo se hace sobre el motor congelado 3.28 (fixture) sin bloques AM-06."
+ },
+ "bestiary-v3240 :: specimen collections remain empty until requested; repeated full navigation reuses a bounded cache": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés (945, 30 páginas) en lugar de 807; desde 4.0.0 parte de las fichas usa lámina raster y no genera SVG (la caché sigue acotada a lo visible); la comparación del orden con el renderizador completo se hace sobre el motor congelado 3.28 (fixture) sin bloques AM-06."
+ },
+ "bestiary-v3260 :: sighting orders and every threshold use the real complete catalog before pagination": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés: 945 especies y 30 páginas de 32 (antes 807 y 26); filtros, umbrales de avistamientos, progreso y paginación se comprueban con las mismas reglas."
+ },
+ "bestiary-v3260 :: search, group, subgroup, sightings, progress and monograph hiding combine, including an empty result and clearing": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés: 945 especies y 30 páginas de 32 (antes 807 y 26); filtros, umbrales de avistamientos, progreso y paginación se comprueban con las mismas reglas."
+ },
+ "bestiary-v3260 :: discovery, incomplete study, 5/5 and publication are separate progress conditions": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés: 945 especies y 30 páginas de 32 (antes 807 y 26); filtros, umbrales de avistamientos, progreso y paginación se comprueban con las mismas reglas."
+ },
+ "bestiary-v3260 :: all 807 entries remain reachable through 26 pages; only 32 visible cards request SVGs and filters clamp an invalid page": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo vigente del arnés: 945 especies y 30 páginas de 32 (antes 807 y 26); filtros, umbrales de avistamientos, progreso y paginación se comprueban con las mismas reglas."
+ },
+ "global-v3240 :: the global catalog has 807 scientific identities, 79 regions and 1460 valid, reachable presences": {
+  "cat": "EXPECTATIVA",
+  "why": "Las 87 regiones terrestres históricas conservan exactamente 807 especies y 1460 presencias; Polos y Océanos son capas aditivas con métodos propios cubiertas por sus pruebas; credenciales cartográficas INV 3.40 para situarse; mapa de Asia ya no se consume; mapas de Sudamérica y Oceanía obtenidos con expediciones reales; cuaderno sobre 945 especies con costes y recompensas originales."
+ },
+ "global-v3240 :: every one of the 1460 regional presences supports manual and automatic encounters with original rewards": {
+  "cat": "EXPECTATIVA",
+  "why": "Las 87 regiones terrestres históricas conservan exactamente 807 especies y 1460 presencias; Polos y Océanos son capas aditivas con métodos propios cubiertas por sus pruebas; credenciales cartográficas INV 3.40 para situarse; mapa de Asia ya no se consume; mapas de Sudamérica y Oceanía obtenidos con expediciones reales; cuaderno sobre 945 especies con costes y recompensas originales."
+ },
+ "global-v3240 :: groups, census multipliers, hourly caps and equipment/research bonuses function in all 79 regions": {
+  "cat": "EXPECTATIVA",
+  "why": "Las 87 regiones terrestres históricas conservan exactamente 807 especies y 1460 presencias; Polos y Océanos son capas aditivas con métodos propios cubiertas por sus pruebas; credenciales cartográficas INV 3.40 para situarse; mapa de Asia ya no se consume; mapas de Sudamérica y Oceanía obtenidos con expediciones reales; cuaderno sobre 945 especies con costes y recompensas originales."
+ },
+ "global-v3240 :: all 807 species complete five knowledge stages and publish one monograph, with original costs and rewards": {
+  "cat": "EXPECTATIVA",
+  "why": "Las 87 regiones terrestres históricas conservan exactamente 807 especies y 1460 presencias; Polos y Océanos son capas aditivas con métodos propios cubiertas por sus pruebas; credenciales cartográficas INV 3.40 para situarse; mapa de Asia ya no se consume; mapas de Sudamérica y Oceanía obtenidos con expediciones reales; cuaderno sobre 945 especies con costes y recompensas originales."
+ },
+ "global-v3240 :: all research prerequisites are acyclic and every continent can be unlocked and travelled without spending prestige": {
+  "cat": "EXPECTATIVA",
+  "why": "Las 87 regiones terrestres históricas conservan exactamente 807 especies y 1460 presencias; Polos y Océanos son capas aditivas con métodos propios cubiertas por sus pruebas; credenciales cartográficas INV 3.40 para situarse; mapa de Asia ya no se consume; mapas de Sudamérica y Oceanía obtenidos con expediciones reales; cuaderno sobre 945 especies con costes y recompensas originales."
+ },
+ "polar-v3310 :: unchanged 807 identities and 87 regions, exact 828/94/1505 totals and 45 traced source rows": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance polar medido sobre regiones no oceánicas (94/1505, 828 identidades) con catálogo vigente 945; credencial permanente Mapa polar (INV 3.40) para situarse y para polos_1; única diferencia de especie aprobada: variante del oso tibetano (eaeb392); investigación comparada en costes, requisitos y efectos (cambian textos y asia_1 ya no consume el mapa)."
+ },
+ "polar-v3310 :: seven semantic IDs retain source collisions, preserve Cape coast and create no reserved cells": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance polar medido sobre regiones no oceánicas (94/1505, 828 identidades) con catálogo vigente 945; credencial permanente Mapa polar (INV 3.40) para situarse y para polos_1; única diferencia de especie aprobada: variante del oso tibetano (eaeb392); investigación comparada en costes, requisitos y efectos (cambian textos y asia_1 ya no consume el mapa)."
+ },
+ "polar-v3310 :: real seeded manual and automatic encounters discover every regional presence without changing probabilities": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance polar medido sobre regiones no oceánicas (94/1505, 828 identidades) con catálogo vigente 945; credencial permanente Mapa polar (INV 3.40) para situarse y para polos_1; única diferencia de especie aprobada: variante del oso tibetano (eaeb392); investigación comparada en costes, requisitos y efectos (cambian textos y asia_1 ya no consume el mapa)."
+ },
+ "polar-v3310 :: polar thresholds continue 275 at 282..324, access requires research and all five permanent crafts": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance polar medido sobre regiones no oceánicas (94/1505, 828 identidades) con catálogo vigente 945; credencial permanente Mapa polar (INV 3.40) para situarse y para polos_1; única diferencia de especie aprobada: variante del oso tibetano (eaeb392); investigación comparada en costes, requisitos y efectos (cambian textos y asia_1 ya no consume el mapa)."
+ },
+ "polar-v3310 :: current runtime retains old research, recipes, items, probabilities and naturalist intervals": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance polar medido sobre regiones no oceánicas (94/1505, 828 identidades) con catálogo vigente 945; credencial permanente Mapa polar (INV 3.40) para situarse y para polos_1; única diferencia de especie aprobada: variante del oso tibetano (eaeb392); investigación comparada en costes, requisitos y efectos (cambian textos y asia_1 ya no consume el mapa)."
+ },
+ "marine-v3320 :: 923 unique identities,106 regions,1697 presences; all828 previous identities and94 regions byte-for-byte equal": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.32 medido sin las capas profunda/abisal posteriores (106/1697/923; catálogo vigente 945); credenciales cartográficas permanentes INV 3.40; única diferencia de especie aprobada (oso tibetano, eaeb392); catálogos comparados entrada a entrada sobre lo existente en 3.32 (adiciones posteriores aditivas); investigación comparada en costes, requisitos y efectos."
+ },
+ "marine-v3320 :: exact192 GM01 source records traced, only12 source Mar sectors, all three HX collisions remain intact": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.32 medido sin las capas profunda/abisal posteriores (106/1697/923; catálogo vigente 945); credenciales cartográficas permanentes INV 3.40; única diferencia de especie aprobada (oso tibetano, eaeb392); catálogos comparados entrada a entrada sobre lo existente en 3.32 (adiciones posteriores aditivas); investigación comparada en costes, requisitos y efectos."
+ },
+ "marine-v3320 :: actual seeded encounters discover every assigned animal manually and automatically without changing global rates": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.32 medido sin las capas profunda/abisal posteriores (106/1697/923; catálogo vigente 945); credenciales cartográficas permanentes INV 3.40; única diferencia de especie aprobada (oso tibetano, eaeb392); catálogos comparados entrada a entrada sobre lo existente en 3.32 (adiciones posteriores aditivas); investigación comparada en costes, requisitos y efectos."
+ },
+ "marine-v3320 :: 332..420 thresholds, five permanent crafts, research after Polos, prestige never spent or access revoked": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.32 medido sin las capas profunda/abisal posteriores (106/1697/923; catálogo vigente 945); credenciales cartográficas permanentes INV 3.40; única diferencia de especie aprobada (oso tibetano, eaeb392); catálogos comparados entrada a entrada sobre lo existente en 3.32 (adiciones posteriores aditivas); investigación comparada en costes, requisitos y efectos."
+ },
+ "marine-v3320 :: four commercial routes and all old recipes,items,research,scientific voyages,rates,intervals stay equal": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.32 medido sin las capas profunda/abisal posteriores (106/1697/923; catálogo vigente 945); credenciales cartográficas permanentes INV 3.40; única diferencia de especie aprobada (oso tibetano, eaeb392); catálogos comparados entrada a entrada sobre lo existente en 3.32 (adiciones posteriores aditivas); investigación comparada en costes, requisitos y efectos."
+ },
+ "marine-v3320 :: new animals integrate with Museum, notebook and paginated Bestiary; cached graphics are deterministic": {
+  "cat": "EXPECTATIVA",
+  "why": "Integración con Bestiario 3.26 (tarjetas b26, 32 por página) y catálogo vigente 945."
+ },
+ "abyssal-v3340 :: 945 unique identities,113 regions,1744 presences; all943 profiles and111 regions byte-equal": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo idéntico salvo la variante aprobada del oso tibetano (eaeb392); catálogos con clave comparados entrada a entrada (mapas INV 3.40 y expediciones MEC-09B aditivos); investigación en costes/requisitos/efectos; reglas continentales exactas salvo el campo nuevo cartography (INV 3.40)."
+ },
+ "abyssal-v3340 :: commercial routes,recipes,items,old research,old continent requirements and scientific voyages exactly unchanged": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogo idéntico salvo la variante aprobada del oso tibetano (eaeb392); catálogos con clave comparados entrada a entrada (mapas INV 3.40 y expediciones MEC-09B aditivos); investigación en costes/requisitos/efectos; reglas continentales exactas salvo el campo nuevo cartography (INV 3.40)."
+ },
+ "deep-v3330 :: 943 identities /111 regions /1741 presences, original923 profiles and106 regions exact": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.33 medido sin la capa abisal posterior (943/111/1741; vigente 945); variante aprobada del oso tibetano; catálogos y expediciones con entradas existentes exactas; investigación en costes/requisitos/efectos."
+ },
+ "deep-v3330 :: all prior trade routes, recipes, items, investigations, voyages and global rates exact": {
+  "cat": "EXPECTATIVA",
+  "why": "Alcance de 3.33 medido sin la capa abisal posterior (943/111/1741; vigente 945); variante aprobada del oso tibetano; catálogos y expediciones con entradas existentes exactas; investigación en costes/requisitos/efectos."
+ },
+ "gm06 :: GM06 preserves 945 full records, 113 stable IDs and every historical access threshold": {
+  "cat": "EXPECTATIVA",
+  "why": "Variante aprobada del oso tibetano; catálogos con entradas existentes exactas (adiciones aditivas); umbrales de acceso exactos; la huella de fuente (solo ganchos GM06) se verifica sobre app.js de c3aa991."
+ },
+ "gm05-economy :: GM05 preserves all economic definitions, rates, five stage costs and research prices from9da9808": {
+  "cat": "EXPECTATIVA",
+  "why": "Definiciones económicas, umbrales, costes y precios exactos; variante aprobada del oso tibetano; categoría Legendario de LEG-02 (7cd5110) solo en especies legendarias; investigación en costes/requisitos/efectos y mismo número de nodos."
+ },
+ "enc3370-playability :: ENC05 presupuesto finito y conservación de probabilidades, rutas, recetas y costes de3.36": {
+  "cat": "EXPECTATIVA",
+  "why": "Presupuesto finito y catálogos de 3.36 con excepciones aprobadas (oso tibetano, Legendario LEG-02, adiciones aditivas)."
+ },
+ "inv3400-integration :: INV07 catálogos científicos, contratos, conversiones y economía anterior no cambian": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogos y contratos con entradas existentes exactas; MUSEUM_RELICTS rediseñado en 03bf329 (20 relictos de Campo) comprobado por forma; huella de módulos de logros/encargos/curaduría anclada a 352aab6 (MEC-08 los amplió)."
+ },
+ "ux3410-integrity :: UX05 catálogos, recetas, costes, requisitos y rutas coinciden con 3.40": {
+  "cat": "EXPECTATIVA",
+  "why": "Catálogos, recetas, costes, requisitos y rutas de 3.40 comparados con las excepciones aprobadas documentadas."
+ },
+ "mammals-v3194 :: 3.19.4 inventories all 269 mammals in the effective 487-species catalog": {
+  "cat": "EXPECTATIVA",
+  "why": "Registros de especie idénticos salvo la variante aprobada del oso tibetano (eaeb392)."
+ },
+ "mammals-v3194 :: gameplay catalog fields and original 24 IDs survive the dimorphism update": {
+  "cat": "EXPECTATIVA",
+  "why": "Registros de especie idénticos salvo la variante aprobada del oso tibetano (eaeb392)."
+ },
+ "dimorphism-v3195 :: 32 valid distinct IDs preserve all 24 originals and every gameplay catalog field": {
+  "cat": "EXPECTATIVA",
+  "why": "Campos de juego idénticos salvo la variante aprobada del oso tibetano (eaeb392); 32 dimorfismos y 24 originales sin cambios."
+ },
+ "pigmentation-v3196 :: canonical labels, catalog inventory and duplicate-free options preserve configured availability": {
+  "cat": "EXPECTATIVA",
+  "why": "Recuentos de pigmentación tras la sustitución aprobada del oso tibetano (Albino 252, Melánico 255); tarjetas con animalMarkup (4.0.0) y consulta de legendarios (LEG-01) proporcionadas al contexto aislado; colapso de alias y un solo Albino sin cambios."
+ },
+ "pigmentation-v3196 :: cards collapse historical aliases and display one discovered Albino": {
+  "cat": "EXPECTATIVA",
+  "why": "Recuentos de pigmentación tras la sustitución aprobada del oso tibetano (Albino 252, Melánico 255); tarjetas con animalMarkup (4.0.0) y consulta de legendarios (LEG-01) proporcionadas al contexto aislado; colapso de alias y un solo Albino sin cambios."
+ },
+ "ach3360-ui :: ACH03 tarjetas secretas ocultan nombre, requisitos, progreso y título hasta obtenerse": {
+  "cat": "EXPECTATIVA",
+  "why": "Sociedad con seis accesos (Rango, Beta 5.6.0; Eventos, MEC-08) y paginación de 8 tarjetas (UX 3.41); las seis tarjetas secretas se revisan con el filtro «Secretos» seleccionado; ocultación de nombre, requisitos, progreso y título sin cambios."
+ },
+ "ach3360-ui :: ACH03 Sociedad ofrece cuatro accesos y renderizar no concede ni reclama logros": {
+  "cat": "EXPECTATIVA",
+  "why": "Sociedad con seis accesos (Rango, Beta 5.6.0; Eventos, MEC-08) y paginación de 8 tarjetas (UX 3.41); las seis tarjetas secretas se revisan con el filtro «Secretos» seleccionado; ocultación de nombre, requisitos, progreso y título sin cambios."
+ },
+ "log3390-contracts :: LOG01 catálogo verificable: diez contratos, cuatro grupos, ocho únicos, dos repetibles y materiales obtenibles": {
+  "cat": "EXPECTATIVA",
+  "why": "Matriz documental de 3.39 (54 objetos) presente en el catálogo vigente ampliado por INV 3.40; la reserva recursiva protege además partes de mapa y los seis mapas para el Mapamundi (INV 3.40); se comprueba que al fabricarlos la reserva queda vacía y que el Mapamundi conserva los mapas."
+ },
+ "log3390-contracts :: LOG01 reserva recursiva protege las seis preparaciones y descuenta piezas intermedias existentes": {
+  "cat": "EXPECTATIVA",
+  "why": "Matriz documental de 3.39 (54 objetos) presente en el catálogo vigente ampliado por INV 3.40; la reserva recursiva protege además partes de mapa y los seis mapas para el Mapamundi (INV 3.40); se comprueba que al fabricarlos la reserva queda vacía y que el Mapamundi conserva los mapas."
+ },
+ "commerce-v3300 :: full world remains 807 species,87 regions,1460 presences": {
+  "cat": "EXPECTATIVA",
+  "why": "Las 87 regiones terrestres históricas conservan 807 especies y 1460 presencias; Polos y Océanos aditivos (945/113)."
+ },
+ "northamerica-v3220 :: tests/northamerica-v3220.test.cjs": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico de expansión (motor sin comercio 3.30) anclado a e0db247: el recorte ya no ejecuta porque capas posteriores dependen de CONTINENT_RULES3300; sus 10 pruebas pasan en esa revisión, laboratorio incluido. Equivalente vigente: atlas-v314, global-v3240, commerce-v3300."
+ },
+ "southamerica-v3230 :: tests/southamerica-v3230.test.cjs": {
+  "cat": "SUSTITUIDA",
+  "why": "Contrato histórico de expansión anclado a e0db247 (13 pruebas pasan en esa revisión, laboratorio incluido). Equivalente vigente: atlas-v314, global-v3240, commerce-v3300, southamerica-v3231."
+ },
+ "expeditions-research-v3280 :: 807 species,79 regions,eight unchanged voyages and five research branches remain present": {
+  "cat": "EXPECTATIVA",
+  "why": "87 regiones terrestres históricas con 807 especies; Polos y Océanos aditivos (945/113); ocho expediciones y cinco ramas de investigación sin cambios."
+ },
+ "oceania-production-v3290 :: a real 3.28 export envelope restores all progress through the 3.29 native import bridge and exports again": {
+  "cat": "EXPECTATIVA",
+  "why": "La exportación real 3.28 se restaura completa por el puente nativo y se reexporta; catálogo de destino vigente (945/113) y versión de sobre vigente."
+ },
+ "and3420-release :: AND08 no se modifica ninguna prueba histórica de 3.41 ni anteriores": {
+  "cat": "SUSTITUIDA",
+  "why": "Guarda byte a byte de pruebas históricas (3422b10) sustituida por trazabilidad MEC-09D: ninguna prueba ni título desaparece respecto de 1500e42 y cada archivo modificado lleva la marca MEC-09D."
+ },
+ "ux3410-release :: UX07 ningún intervalo nuevo ni alteración de las suites históricas": {
+  "cat": "SUSTITUIDA",
+  "why": "Se conserva la guarda de intervalos (setInterval sin cambios); la guarda byte a byte de suites históricas se sustituye por la trazabilidad MEC-09D (sin pruebas ni títulos eliminados, cambios marcados)."
+ },
+ "stability-v3200 :: offline worker serves its immutable revision first and never turns missing scripts into HTML": {
+  "cat": "SUSTITUIDA",
+  "why": "El modelo de precarga addAll se retiró cuando el trabajador pasó a descarga verificada con manifiesto e instalación autorizada; sustituida por tests/mec09d-worker.test.cjs sobre www/sw.js vigente (caché primero, script ausente nunca HTML, navegación a index.html, instalación autorizada y verificada, archivo alterado aborta)."
+ },
+ "gm07-m01-release :: M01 preserves Android identity,signing,workflows and all historical offline entries; new hashes verify": {
+  "cat": "SUSTITUIDA",
+  "why": "Identidad Android sin cambios en MEC-09D respecto de 1500e42 y respecto de 2e0535d salvo la corrección aprobada de rutas UTF-8 (23c28cc); appId intacto; las 199 entradas sin conexión de M01 siguen en el manifiesto verificado atlas-integrity.json con huella SHA-256. La lista ASSETS y el constructor 3.45 se retiraron con el trabajador verificado."
+ },
+ "atlas-v3211 :: Atlas projection preserves region metadata and game-state bytes while cartography supplies visual positions": {
+  "cat": "ARNES",
+  "why": "Corregidas por el arnés vigente: motor completo por defecto y precarga de producción; sin cambio de expectativas."
+ },
+ "atlas-v3211 :: Europe uses prestige without spending it; unlock and travel retain progress and open Field": {
+  "cat": "ARNES",
+  "why": "Corregidas por el arnés vigente: motor completo por defecto y precarga de producción; sin cambio de expectativas."
+ },
+ "atlas-v3211 :: selection changes only existing Atlas UI state and never travels or unlocks": {
+  "cat": "ARNES",
+  "why": "Corregidas por el arnés vigente: motor completo por defecto y precarga de producción; sin cambio de expectativas."
+ },
+ "atlas-v3211 :: shared UI exposes named keyboard targets, independent state symbols and safe lightweight art": {
+  "cat": "ARNES",
+  "why": "Corregidas por el arnés vigente: motor completo por defecto y precarga de producción; sin cambio de expectativas."
+ },
+ "museum-v3270 :: catalog remains 807 species / 79 regions and exactly five Museum rooms": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: all 807 eligible samples are reachable on 26 pages; at most 32 visible sprites and no permanent UI fields": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: Museum presentation preserves historical 3.19.9 europe through all rooms, native import/export and restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: Museum presentation preserves historical 3.21.2 africa through all rooms, native import/export and restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: Museum presentation preserves historical 3.22.1 northamerica through all rooms, native import/export and restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: Museum presentation preserves historical 3.23.1 southamerica through all rooms, native import/export and restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: Museum presentation preserves historical 3.23.0 museum through all rooms, native import/export and restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "museum-v3270 :: Museum presentation preserves historical 3.22.1 variants-monographs through all rooms, native import/export and restoration": {
+  "cat": "EXPECTATIVA",
+  "why": "Conservación del museo comparada por subclave original (campos de curaduría 3.38 aditivos), catálogo del arnés 945/113 y versión de exportación vigente."
+ },
+ "southamerica-v3231 :: 3.23.0 South American progress, old regions, inventory, museum, variants and expeditions survive save reload and Android export/import": {
+  "cat": "EXPECTATIVA",
+  "why": "Versión de sobre de exportación vigente (package.json)."
+ },
+ "stability-v3200 :: storage failure keeps the live session exportable and failed imports roll back in memory": {
+  "cat": "EXPECTATIVA",
+  "why": "Versión de sobre de exportación vigente (package.json)."
+ }
+}
