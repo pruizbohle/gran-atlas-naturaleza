@@ -1609,6 +1609,13 @@ function taxonomyInfo(id){
  if(kind==='boar')return g('Mammalia','Suidos');
  return g('Mammalia','Otros mamíferos');
 }
+// MEC-09D · Consolidación de taxonomyInfo: las especies de las capas regionales (na3220, sa3230, oc3290,
+// polar3310, marine3320, deep3330, abyssal3340, gm06) traen su taxonomía en la ficha. Antes cada entrega
+// añadía una envoltura que comparaba la procedencia; ahora cada entrega registra su procedencia en este
+// conjunto, en el mismo punto de carga, y una sola capa resuelve. Las procedencias son excluyentes, así
+// que el resultado es idéntico (prueba: tests/mec09d-consolidation.test.cjs sobre las 1000 especies).
+const OWN_TAXONOMY_ORIGINS=new Set();
+{const baseTaxonomy=taxonomyInfo;taxonomyInfo=function(id){const sp=SPECIES[id];return sp&&OWN_TAXONOMY_ORIGINS.has(sp.origin)?sp.taxonomy:baseTaxonomy(id);};}
 function taxonomyText(id){
   const st=stage(id); const t=taxonomyInfo(id);
   if(st<2) return 'Clasificación: por estudiar';
@@ -2054,8 +2061,7 @@ if(northAmerica3220){
  for(const region of northAmerica3220.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Duplicate North American region: '+region.id);REGIONS.push(JSON.parse(JSON.stringify(region)));}
  Object.assign(SEXUAL_DIMORPHISM,northAmerica3220.dimorphism);
  for(const [id,categories] of Object.entries(northAmerica3220.categories))SPECIMEN_CATEGORIES[id]=categories.slice();
- const legacyTaxonomy=taxonomyInfo;
- taxonomyInfo=function(id){return SPECIES[id]?.origin==='na3220'?SPECIES[id].taxonomy:legacyTaxonomy(id);};
+ OWN_TAXONOMY_ORIGINS.add('na3220'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 }
 // END AM-02 catalog installation.
 
@@ -2066,8 +2072,7 @@ if(southAmerica3230){
  for(const region of southAmerica3230.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Duplicate South American region: '+region.id);REGIONS.push(JSON.parse(JSON.stringify(region)));}
  Object.assign(SEXUAL_DIMORPHISM,southAmerica3230.dimorphism);
  for(const [id,categories] of Object.entries(southAmerica3230.categories))SPECIMEN_CATEGORIES[id]=categories.slice();
- const previousTaxonomy=taxonomyInfo;
- taxonomyInfo=function(id){return SPECIES[id]?.origin==='sa3230'?SPECIES[id].taxonomy:previousTaxonomy(id);};
+ OWN_TAXONOMY_ORIGINS.add('sa3230'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 }
 // AM-04 END catalog
 function installUniqueTaxa(species,duplicateMessage,categories){
@@ -2086,8 +2091,7 @@ if(!oceaniaReview||(!oceaniaReview.approvedForProduction&&!false))throw Error('O
  installUniqueTaxa(oceaniaReview.species,'Oceanian collision: ');
  for(const region of oceaniaReview.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Oceanian region collision');REGIONS.push(region);}
  Object.assign(SEXUAL_DIMORPHISM,oceaniaReview.dimorphism);Object.assign(SPECIMEN_CATEGORIES,oceaniaReview.categories);
- const previousOceaniaTaxonomy=taxonomyInfo;
- taxonomyInfo=function(id){return SPECIES[id]?.origin==='oc3290'?SPECIES[id].taxonomy:previousOceaniaTaxonomy(id);};
+ OWN_TAXONOMY_ORIGINS.add('oc3290'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 
 // OC3290 END AM-04 END catalog
 
@@ -2189,8 +2193,7 @@ const polar3310=globalThis.AtlasPolar3310;
 if(!polar3310)throw Error('Faltan los datos polares 3.31.0');
 for(const[id,sp]of Object.entries(polar3310.species)){if(SPECIES[id])throw Error('Identidad polar duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
 for(const r of polar3310.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región polar duplicada');REGIONS.push(r);}
-const taxonomyBefore3310=taxonomyInfo;
-taxonomyInfo=function(id){return SPECIES[id]?.origin==='polar3310'?SPECIES[id].taxonomy:taxonomyBefore3310(id);};
+OWN_TAXONOMY_ORIGINS.add('polar3310'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 RESEARCH_NODES.push({id:'polos_1',name:'Exploración de las regiones polares',desc:'Ártico y Antártida: sectores separados. Requiere las cinco preparaciones fabricadas, sin consumirlas.',branch:'expediciones',money:4500,knowledge:4000,req:'oceania_1',once:true,effect(s){s.upgrades.polarUnlocked=1;}});
 // GM3310 END catalog
 // GM3320 BEGIN catalog
@@ -2198,8 +2201,7 @@ const marine3320=globalThis.AtlasMarine3320;
 if(!marine3320)throw Error('Faltan los datos marinos superficiales 3.32.0');
 installUniqueTaxa(marine3320.species,'Identidad marina duplicada: ',['Notable']);
 for(const r of marine3320.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región marina duplicada');REGIONS.push(r);}
-const taxonomyBefore3320=taxonomyInfo;
-taxonomyInfo=function(id){return SPECIES[id]?.origin==='marine3320'?SPECIES[id].taxonomy:taxonomyBefore3320(id);};
+OWN_TAXONOMY_ORIGINS.add('marine3320'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 RESEARCH_NODES.push({id:'mares_superficiales_1',name:'Navegación de mares superficiales',desc:'Doce sectores de superficie; requiere las cinco preparaciones acreditadas. Se reutiliza el Cuadrante transatlántico. No habilita mares profundos ni abisales.',branch:'expediciones',money:5200,knowledge:4600,req:'polos_1',once:true,effect(s){s.upgrades.surfaceSeasUnlocked=1;}});
 // GM3320 END catalog
 // GM3330 BEGIN catalog
@@ -2207,8 +2209,7 @@ const deep3330=globalThis.AtlasDeep3330;
 if(!deep3330)throw Error('Faltan datos de océanos profundos');
 installUniqueTaxa(deep3330.species,'Identidad profunda duplicada: ',['Notable']);
 for(const r of deep3330.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región profunda duplicada');REGIONS.push(r);}
-const taxonomyBefore3330=taxonomyInfo;
-taxonomyInfo=function(id){return SPECIES[id]?.origin==='deep3330'?SPECIES[id].taxonomy:taxonomyBefore3330(id);};
+OWN_TAXONOMY_ORIGINS.add('deep3330'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 RESEARCH_NODES.push({id:'exploracion_profunda_1',name:'Sondeo y muestreo de océanos profundos',desc:'Red vertical, cabo graduado y examen de muestras; no observación directa desde cubierta. Requiere equipo de sondeo fabricado.',branch:'expediciones',money:6000,knowledge:5200,req:'mares_superficiales_1',once:true,effect(s){s.upgrades.deepUnlocked=1;}});
 // GM3330 END catalog
 // GM3340 BEGIN catalog
@@ -2216,8 +2217,7 @@ const abyssal3340=globalThis.AtlasAbyssal3340;
 if(!abyssal3340)throw Error('Faltan datos de fosas 3.34.0');
 installUniqueTaxa(abyssal3340.species,'Identidad abisal duplicada: ',['Notable']);
 for(const r of abyssal3340.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región abisal duplicada');REGIONS.push(r);}
-const taxonomyBefore3340=taxonomyInfo;
-taxonomyInfo=function(id){return SPECIES[id]?.origin==='abyssal3340'?SPECIES[id].taxonomy:taxonomyBefore3340(id);};
+OWN_TAXONOMY_ORIGINS.add('abyssal3340'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 RESEARCH_NODES.push({id:'exploracion_abisal_1',name:'Sondeo extraordinario de fosas',desc:'Planicie abisal y sectores hadales separados. Reutiliza el equipo de sondeo. Las reconstrucciones hadales son una abstracción lúdica que excede las capacidades reales de 1842.',branch:'expediciones',money:6800,knowledge:5800,req:'exploracion_profunda_1',once:true,effect(s){s.upgrades.abyssalUnlocked=1;}});
 // GM3340 END catalog
 
@@ -2225,8 +2225,7 @@ RESEARCH_NODES.push({id:'exploracion_abisal_1',name:'Sondeo extraordinario de fo
 if(globalThis.AtlasGM06){
  globalThis.AtlasGM06.apply(SPECIES,REGIONS);
  for(const id of Object.keys(globalThis.AtlasGM06.species))SPECIMEN_CATEGORIES[id]=['Notable','Épico','Excepcional'];
- const taxonomyBeforeGM06=taxonomyInfo;
- taxonomyInfo=function(id){return SPECIES[id]?.origin==='gm06'?SPECIES[id].taxonomy:taxonomyBeforeGM06(id);};
+ OWN_TAXONOMY_ORIGINS.add('gm06'); // MEC-09D: antes, una envoltura de taxonomyInfo por entrega
 }
 
 const catalogA04=globalThis.AtlasGM07A04;

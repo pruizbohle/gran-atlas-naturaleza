@@ -1,0 +1,99 @@
+funcion;declaracion_original;redefiniciones;lineas_y_bloques;implementacion_efectiva;llamadas;capturas_de_version_anterior;riesgos;envolturas;reemplazos;clasificacion
+normalizeMEC01;4675;10;8057 (MEC-01) | 8208 (MEC-03) | 8787 (MEC-08) | 8928 (MEC-06) | 9135 (MEC-06) | 9218 (MEC-06) | 9656 (MEC-08) | 9856 (MEC-08) | 9898 (MEC-08) | 10204 (MEC-09B);10204 (MEC-09B);7;8199 8786 8927 9134 9217 9603 9897 10203;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;8;2;reemplazo(s) + envolturas
+atlasRegionModel;3257;9;3294 (AM-04) | 3302 (OC3290) | 7126 (EC3300) | 7156 (GM3310) | 7177 (GM3320) | 7216 (GM3330) | 7281 (GM3340) | 7375 (INV3400) | 7682 (UX3410);7682 (UX3410);0;7125 7280 7374 7681;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;4;5;reemplazo(s) + envolturas
+regionRequirementsMet;3211;8;3292 (AM-04) | 3300 (OC3290) | 7124 (EC3300) | 7154 (GM3310) | 7175 (GM3320) | 7214 (GM3330) | 7279 (GM3340) | 7365 (INV3400);7365 (INV3400);6;3291 3299 7123 7153 7174 7213 7278 7364;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;8;0;cadena de envolturas vivas
+mec02Action;4695;6;8497 (MEC-03) | 8836 (MEC-08) | 9010 (MEC-06) | 9491 (MEC-07) | 9847 (MEC-08) | 10158 (MEC-09B);10158 (MEC-09B);1;8835 9009 9490 9846 10156;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;5;1;reemplazo(s) + envolturas
+continentStatus;3218;5;3293 (AM-04) | 3301 (OC3290) | 7155 (GM3310) | 7176 (GM3320) | 7373 (INV3400);7373 (INV3400);2;7372;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;1;4;reemplazo(s) + envolturas
+renderObjects;4853;5;7139 (EC3300) | 7164 (GM3310) | 7272 (GM3330) | 7525 (INV3400) | 8150 (MEC-01);8150 (MEC-01);0;7138 7163 7271 8149;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;4;1;reemplazo(s) + envolturas
+habitatLabel;5324;4;7162 (GM3310) | 7183 (GM3320) | 7229 (GM3330) | 7285 (GM3340);7285 (GM3340);6;7161 7182 7228 7284;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;4;0;cadena de envolturas vivas
+fieldBackdropMarkup;3320;4;7166 (GM3310) | 7187 (GM3320) | 7267 (GM3330) | 7288 (GM3340);7288 (GM3340);1;7165 7186 7266 7286;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;4;0;cadena de envolturas vivas
+inventorySources3400;7447;4;7428 (INV3400) | 7952 (MEC-01) | 8879 (MEC-08) | 9533 (MEC-01);9533 (MEC-01);2;7427 7951 8878 9532;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;4;0;cadena de envolturas vivas
+renderPanel;3156;4;7728 (UX3410) | 7743 (UX3410) | 7809 (CP3430) | 8526 (MEC-03);8526 (MEC-03);105;7727 7742 8525;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;2;2;reemplazo(s) + envolturas
+resolveVoyageReward;4976;4;8261 (MEC-03) | 8600 (MEC-05) | 9386 (MEC-07) | 9921 (MEC-08);9921 (MEC-08);3;8260 8599 9385 9920;cadena larga de envolturas: el orden de carga de los bloques determina el comportamiento;4;0;cadena de envolturas vivas
+eligibleSpecies;2721;3;7159 (GM3310) | 7180 (GM3320) | 7223 (GM3330);7223 (GM3330);4;7157 7179 7217;;3;0;cadena de envolturas vivas
+automaticEligibleSpecies;2773;3;7160 (GM3310) | 7181 (GM3320) | 7224 (GM3330);7224 (GM3330);3;;;0;3;reemplazo(s) completos
+encounter;2792;3;7232 (GM3330) | 7898 (ACH3360) | 9931 (MEC-08);9931 (MEC-08);3;7231 9930;;1;2;reemplazo(s) + envolturas
+renderJournal;3365;3;7261 (GM3330) | 7296 (GM3340) | 9828 (MEC-08);9828 (MEC-08);0;7260 7295 9827;;3;0;cadena de envolturas vivas
+stageRequirements;2921;3;7265 (GM3330) | 8034 (MEC-01) | 9784 (MEC-01);9784 (MEC-01);6;7264 8033 9783;;3;0;cadena de envolturas vivas
+setRegion;2997;3;7283 (GM3340) | 7369 (INV3400) | 7900 (ACH3360);7900 (ACH3360);2;7282 7368;;2;1;reemplazo(s) + envolturas
+craftItem;4809;3;7529 (INV3400) | 7901 (ACH3360) | 9919 (MEC-08);9919 (MEC-08);6;9918;;0;3;reemplazo(s) completos
+sail;4958;3;7570 (INV3400) | 8214 (MEC-03) | 9376 (MEC-07);9376 (MEC-07);3;7569 8213 9375;;3;0;cadena de envolturas vivas
+taxonomyInfo;1564;2;1618 (MEC-09D) | 2235 (GM-06);2235 (GM-06);7;1618 2234;;2;0;cadena de envolturas vivas
+renderExpeditions;5065;2;7064 (MEC-03) | 7805 (CP3430);7805 (CP3430);0;7063 7797;;2;0;cadena de envolturas vivas
+canBuy;3020;2;7133 (EC3300) | 7371 (INV3400);7371 (INV3400);8;7132 7370;;2;0;cadena de envolturas vivas
+renderField;3364;2;7189 (GM3320) | 7270 (GM3330);7270 (GM3330);0;7188 7269;;2;0;cadena de envolturas vivas
+encounterCardMarkup;3333;2;7257 (GM3330) | 9754 (MEC-08);9754 (MEC-08);1;7256 9753;;2;0;cadena de envolturas vivas
+fieldAutomaticModel;3342;2;7263 (GM3330) | 7294 (GM3340);7294 (GM3340);2;7262 7293;;2;0;cadena de envolturas vivas
+canCraft;4805;2;7329 (INV3400) | 8292 (MEC-03);8292 (MEC-03);17;7328 8291;;2;0;cadena de envolturas vivas
+inventoryUses3400;7462;2;7338 (INV3400) | 7430 (INV3400);7430 (INV3400);3;7337 7429;;2;0;cadena de envolturas vivas
+render;3121;2;7568 (INV3400) | 8079 (MEC-04);8079 (MEC-04);29;7568 8078;;0;2;reemplazo(s) completos
+buyNode;3028;2;7576 (INV3400) | 7901 (ACH3360);7901 (ACH3360);1;7575;;1;1;reemplazo(s) + envolturas
+uxNavigate3410;7644;2;7673 (UX3410) | 7824 (CP3430);7824 (CP3430);17;7672 7823;;2;0;cadena de envolturas vivas
+inventoryDetail3400;7519;2;7689 (UX3410) | 10271 (MEC-01);10271 (MEC-01);1;7688 10270;;2;0;cadena de envolturas vivas
+persist;2458;2;7780 (UX3410) | 7839 (CP3430);7839 (CP3430);46;7779 7838;;2;0;cadena de envolturas vivas
+addInventory;4672;2;7969 (MEC-01) | 10208 (MEC-01);10208 (MEC-01);34;7968 10207;;2;0;cadena de envolturas vivas
+mec01FieldDrops;4674;2;7973 (MEC-01) | 8574 (MEC-01);8574 (MEC-01);1;8573;;1;1;reemplazo(s) + envolturas
+museumViewModel3270;4470;2;8144 (MEC-01) | 9176 (MEC-06);9176 (MEC-06);2;8143 9175;;0;2;reemplazo(s) completos
+collectExcavation;3768;2;8377 (MEC-03) | 9923 (MEC-08);9923 (MEC-08);3;8372 9922;;1;1;reemplazo(s) + envolturas
+renderSociety;3565;2;9005 (MEC-06) | 10149 (MEC-09B);10149 (MEC-09B);0;9004 10148;;1;1;reemplazo(s) + envolturas
+naturalRecordsMEC07;4703;2;9710 (MEC-01) | 9928 (MEC-08);9928 (MEC-08);1;9927;;1;1;reemplazo(s) + envolturas
+bestiaryTypeBucket;3249;1;7185 (GM3320);7185 (GM3320);6;7184;;1;0;cadena de envolturas vivas
+fieldEncounterModel;3321;1;7255 (GM3330);7255 (GM3330);2;7254;;1;0;cadena de envolturas vivas
+fieldProgressModel;3334;1;7259 (GM3330);7259 (GM3330);2;7258;;1;0;cadena de envolturas vivas
+fieldViewModel;3360;1;7290 (GM3340);7290 (GM3340);1;7289;;1;0;cadena de envolturas vivas
+renderDeepPanel3330;7268;1;7292 (GM3340);7292 (GM3340);1;7291;;1;0;cadena de envolturas vivas
+voyagePossibilities3280;5111;1;7340 (INV3400);7340 (INV3400);2;7339;;1;0;cadena de envolturas vivas
+regionAccessible;2992;1;7367 (INV3400);7367 (INV3400);17;7366;;1;0;cadena de envolturas vivas
+researchNode3280;5126;1;7378 (INV3400);7378 (INV3400);2;7377;;1;0;cadena de envolturas vivas
+supplyReserve3390;6893;1;7384 (INV3400);7384 (INV3400);5;7383;;1;0;cadena de envolturas vivas
+renderTrade3300;7044;1;7432 (INV3400);7432 (INV3400);2;7431;;1;0;cadena de envolturas vivas
+tradeAction3300;7065;1;7434 (INV3400);7434 (INV3400);1;7433;;1;0;cadena de envolturas vivas
+syncTrade3300;7077;1;7436 (INV3400);7436 (INV3400);1;7435;;1;0;cadena de envolturas vivas
+processVoyages;5035;1;7578 (INV3400);7578 (INV3400);1;7577;;1;0;cadena de envolturas vivas
+finishVoyage;5053;1;7583 (INV3400);7583 (INV3400);1;;;0;1;reemplazo(s) completos
+renderAtlas;3278;1;7642 (UX3410);7642 (UX3410);0;7641;;1;0;cadena de envolturas vivas
+supplyMaterials3390;7042;1;7697 (UX3410);7697 (UX3410);4;7696;;1;0;cadena de envolturas vivas
+inventoryAction3400;7542;1;7699 (UX3410);7699 (UX3410);1;7698;;1;0;cadena de envolturas vivas
+developmentAction3280;5157;1;7709 (UX3410);7709 (UX3410);4;7708;;1;0;cadena de envolturas vivas
+commissionAction3370;2311;1;7711 (UX3410);7711 (UX3410);1;7710;;1;0;cadena de envolturas vivas
+uxViewKey3410;7670;1;7739 (UX3410);7739 (UX3410);1;;;0;1;reemplazo(s) completos
+uxViewSnapshot3410;7671;1;7822 (CP3430);7822 (CP3430);1;7821;;1;0;cadena de envolturas vivas
+uxBack3410;7679;1;7826 (CP3430);7826 (CP3430);1;7825;;1;0;cadena de envolturas vivas
+showStorageFault;2452;1;7836 (CP3430);7836 (CP3430);4;7835;;1;0;cadena de envolturas vivas
+cpOpenDialog3430;7844;1;7889 (MEC-09C);7889 (MEC-09C);2;7888;;1;0;cadena de envolturas vivas
+recordSpecimen;1916;1;7899 (ACH3360);7899 (ACH3360);1;;;0;1;reemplazo(s) completos
+unlockRegion;2987;1;7900 (ACH3360);7900 (ACH3360);2;;;0;1;reemplazo(s) completos
+advanceSpecies;2940;1;7902 (ACH3360);7902 (ACH3360);2;;;0;1;reemplazo(s) completos
+publishMonograph;2951;1;7902 (ACH3360);7902 (ACH3360);1;;;0;1;reemplazo(s) completos
+exhibitAnimal;4349;1;7903 (ACH3360);7903 (ACH3360);2;;;0;1;reemplazo(s) completos
+catalogMuseumCollection;4051;1;7903 (ACH3360);7903 (ACH3360);3;;;0;1;reemplazo(s) completos
+craftMuseumFossil;3874;1;7904 (ACH3360);7904 (ACH3360);2;;;0;1;reemplazo(s) completos
+recordMuseumRelict;4012;1;7904 (ACH3360);7904 (ACH3360);1;;;0;1;reemplazo(s) completos
+claimScientificMission;3541;1;7912 (ENC3370);7912 (ENC3370);1;7911;;0;1;reemplazo(s) completos
+museumSampleQuery3270;4442;1;7921 (MUS3380);7921 (MUS3380);1;7920;;1;0;cadena de envolturas vivas
+renderItemArt;4830;1;7998 (MEC-03);7998 (MEC-03);11;7988;;1;0;cadena de envolturas vivas
+museumCardArt;4085;1;8003 (MEC-03);8003 (MEC-03);5;8002;;1;0;cadena de envolturas vivas
+journalViewModel3250;3432;1;8044 (MEC-01);8044 (MEC-01);2;8043;;0;1;reemplazo(s) completos
+maxVoyages;2678;1;8218 (MEC-03);8218 (MEC-03);7;8217;;1;0;cadena de envolturas vivas
+voyageDuration;2679;1;8220 (MEC-03);8220 (MEC-03);5;8219;;1;0;cadena de envolturas vivas
+tradeCanStart3300;6998;1;8275 (MEC-03);8275 (MEC-03);6;8274;;1;0;cadena de envolturas vivas
+studyBatchesMEC02;4694;1;8293 (MEC-03);8293 (MEC-03);1;;;0;1;reemplazo(s) completos
+canProcessMaterials;4778;1;8295 (MEC-03);8295 (MEC-03);4;8294;;1;0;cadena de envolturas vivas
+maxExcavations;3745;1;8347 (MEC-03);8347 (MEC-03);5;8346;;1;0;cadena de envolturas vivas
+startExcavation;3753;1;8350 (MEC-03);8350 (MEC-03);3;8349;;1;0;cadena de envolturas vivas
+maxRelictSurveys;3939;1;8402 (MEC-03);8402 (MEC-03);7;8401;;1;0;cadena de envolturas vivas
+relictSurveySpec;3930;1;8404 (MEC-03);8404 (MEC-03);5;8403;;1;0;cadena de envolturas vivas
+startRelictSurvey;3945;1;8406 (MEC-03);8406 (MEC-03);2;8405;;1;0;cadena de envolturas vivas
+collectRelictSurvey;3955;1;8410 (MEC-03);8410 (MEC-03);3;8409;;1;0;cadena de envolturas vivas
+mec03AmbientFinds;4706;1;8583 (MEC-01);8583 (MEC-01);2;;;0;1;reemplazo(s) completos
+canStartRelictSurvey;3940;1;8641 (MEC-06);8641 (MEC-06);3;8640;;1;0;cadena de envolturas vivas
+expandMuseum;4344;1;9111 (MEC-06);9111 (MEC-06);1;9110;;1;0;cadena de envolturas vivas
+regionalRecordMEC06;4701;1;9221 (MEC-06);9221 (MEC-06);1;;;0;1;reemplazo(s) completos
+museumCollectionReady;4047;1;9267 (MEC-05);9267 (MEC-05);3;9266;;1;0;cadena de envolturas vivas
+artifactIncomeMEC06;4704;1;9357 (MEC-06);9357 (MEC-06);1;;;0;1;reemplazo(s) completos
+naturalRecordsSexMEC08;2645;1;9743 (MEC-08);9743 (MEC-08);1;;;0;1;reemplazo(s) completos
+presentEncounter;2895;1;9747 (MEC-08);9747 (MEC-08);2;9746;;1;0;cadena de envolturas vivas
+bestiaryModalModel3260;5288;1;9836 (MEC-08);9836 (MEC-08);2;9835;;1;0;cadena de envolturas vivas
+achievementMark3360;2328;1;9910 (MEC-08);9910 (MEC-08);7;9909;;1;0;cadena de envolturas vivas
+recognitionHookMEC08;2661;1;9917 (MEC-08);9917 (MEC-08);1;;;0;1;reemplazo(s) completos
+platesMEC09B;2652;1;10210 (MEC-01);10210 (MEC-01);7;;;0;1;reemplazo(s) completos
