@@ -153,7 +153,7 @@ Las funciones de juego (búsquedas, monografías, investigaciones, viajes, comer
 ## 8. Galería y vista de revisión
 
 - [`galeria.html`](galeria.html): galería navegable con las capturas reales antes y después, por partida, resolución y pantalla, junto a sus medidas.
-- La galería se publicó además como página privada para revisarla desde el teléfono.
+- Una selección de la galería (132 capturas: 390×844 en las cuatro partidas; 320×568 y horizontal en la final) se publicó además como página privada autocontenida, para revisarla desde el teléfono.
 - **No fue posible publicar el juego completo como vista web aislada:** son más de 7.000 archivos y el servidor de páginas admite 256 por envío. Para revisar la interfaz real, sirve `www/` en local (por ejemplo, `npx serve www`) o despliega la rama en un entorno de prueba. El despliegue público no se tocó.
 
 ## 9. Pendientes
