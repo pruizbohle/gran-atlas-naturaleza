@@ -134,16 +134,16 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 | Sección | Estado |
 |---|---|
 | §3 línea base y commit de partida | Hecho |
-| §4 integridad de contenido | Parcial: recuentos verificados en el arnés (1000/125, 30 legendarios, 20 relictos); falta el informe |
+| §4 integridad de contenido | **Hecho** (MEC-09D.3): [integridad-contenido.md](integridad-contenido.md) |
 | §5–6 las 221 pruebas | **Hecho** (Continuación 1): 221 de 221 resueltas y trazadas una por una, 0 pendientes |
 | §7 consolidación de las funciones redefinidas | Parcial (MEC-09D.2): inventario actual de 98/185 clasificado; `taxonomyInfo` consolidada (9 envolturas → 1 capa) con equivalencia sobre 1000 especies; cadenas de acceso, modelo de Atlas y normalización fijadas por equivalencia con `1500e42` ([funciones-redefinidas.md](funciones-redefinidas.md)) |
 | §8 guardado diferido | Hecho (MEC-09D.2): [auditoria-guardado-transacciones.md](auditoria-guardado-transacciones.md) |
 | §9 auditoría transaccional | Hecho (MEC-09D.2); F10 se mantiene como política aprobada (P3) |
-| §10 fuente única de verdad | Pendiente |
+| §10 fuente única de verdad | **Hecho** (MEC-09D.3): [fuente-unica.md](fuente-unica.md) |
 | §11–13 431 piezas y 32 colecciones | Pendiente |
-| §14–15 legendarios, relictos y pistas | §15 hecho (`tests/mec09d-relicts.test.cjs`, 20 relictos uno por uno); §14 legendarios pendiente |
-| §16 récords y comportamientos | Pendiente |
-| §17 grafo de dependencias | Pendiente |
+| §14–15 legendarios, relictos y pistas | **Hecho**: §14 ([legendarios.md](legendarios.md), 30/30 por encuentro real en Campo) y §15 (`mec09d-relicts`) |
+| §16 récords y comportamientos | **Hecho** (MEC-09D.3): [records-conductas.md](records-conductas.md) |
+| §17 grafo de dependencias | **Hecho** (MEC-09D.3): [grafo-progresion.md](grafo-progresion.md) |
 | §18 rutas, expediciones y yacimientos | Pendiente |
 | §19 `AVAIL` y encargos por perfil | Pendiente |
 | §20 calendario y tiempo sin conexión | Pendiente |
@@ -180,6 +180,49 @@ La matriz está en `docs/mec09d/matriz-221.csv`, con una fila por prueba: estado
 
 **La Preview 01 sigue intacta**: rama `preview-mec09d-01`, commit `700f983`.
 
-## 8. Próximo paso propuesto (a la espera de autorización)
+## 8. MEC-09D.3 · Integridad zoológica y grafo de progresión
 
-Continuar con §4, §11–§14 y §16–§39 en orden de prioridad P0–P3.
+**Suite completa: 1293 de 1293 pruebas pasan** (141 archivos, 0 regresiones, sin tiempos agotados). `release:verify`: 302 de 302.
+
+**Pruebas nuevas:**
+
+| Archivo | Pruebas | Contenido |
+|---|---|---|
+| `mec09d-integrity` | 4 | 1000 especies, 125 regiones y recursos gráficos |
+| `mec09d-legendaries` | 33 | Una por legendario, más generales |
+| `mec09d-records` | 46 | 25 récords y 20 conductas, más una general |
+| `mec09d-graph` | 5 | Grafo de 1230 nodos |
+| `mec09d-sot` | 5 | Fuente única |
+
+**Commits:**
+
+| Commit | Contenido |
+|---|---|
+| `c43d7ff` | §4 y §14 |
+| `52d6c5c` | §16 |
+| `ee182d4` | §17 |
+| `14bb119` | §10 |
+
+**Clasificación de lo encontrado:**
+
+- **Errores funcionales:** ninguno.
+- **Observaciones de contenido (decisión del propietario, sin cambios):**
+  - **O1.** El relicto «Cocodrilo enano africano» es la misma especie que una ficha ordinaria del Bestiario en su misma región.
+  - **O2.** El Arco del mar Rojo tiene 7 especies, una menos que el mínimo histórico de 8.
+- **Observaciones artísticas:** ninguna. No faltan láminas normales, de pigmento, de sexo, legendarias ni de relicto.
+- **Reservado para BAL-01/BAL-02:**
+  - rareza efectiva de los legendarios (0,0001 por observación);
+  - récords de profundidad e inmersión con alcance del umbral entre 0,10 % y 0,90 % por medición;
+  - valores provisionales de las recompensas de MEC-07;
+  - tiempos de progresión del camino crítico (16 pasos hasta las fosas abisales).
+- **Mejora de rigor:** la fuente cartográfica del estudio «cálculo de derrotas» se resuelve a su investigación real, en lugar del seudonodo que MEC-09B daba por alcanzado.
+
+No hubo cambios en el juego en MEC-09D.3: solo pruebas, el script de análisis y documentación.
+
+## 9. Próximo paso propuesto (a la espera de autorización)
+
+Quedan:
+- **§11–§13:** 431 piezas y 32 colecciones;
+- **§18–§21:** comercio y actividades geográficas, encargos y `AVAIL`, calendario, fotografía;
+- **§22–§31:** correcciones de interfaz;
+- **§32–§39:** rendimiento, integración entre sistemas, migraciones, preparación de MEC-09E, documentación Android, etiqueta de versión y capturas.

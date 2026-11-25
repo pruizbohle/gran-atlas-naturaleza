@@ -21,7 +21,7 @@ Mejora el uso de las mecánicas existentes en teléfonos en vertical. No cambia 
 
 Informe, capturas reales antes y después, y galería: [docs/mec09c](docs/mec09c/README.md). Sin APK. No se avanza a MEC-09D.
 
-MEC-09D (en curso, rama `mec-09d/consolidation`): avance parcial para auditoría en [docs/mec09d](docs/mec09d/README.md). 221 de 221 pruebas históricas resueltas; MEC-09D.2: consolidación de `taxonomyInfo` con equivalencia, auditoría de guardado y transacciones, y prueba de los 20 relictos (suite 1200/1200), 0 regresiones, sin APK. Preview web jugable: [MEC-09D Preview 01](https://rawcdn.githack.com/pruizbohle/gran-atlas-naturaleza/700f983cf3ac5ab145eb3c1f3d3fd0cc3802ee55/index.html).
+MEC-09D (en curso, rama `mec-09d/consolidation`): avance parcial para auditoría en [docs/mec09d](docs/mec09d/README.md). 221 de 221 pruebas históricas resueltas; MEC-09D.2: consolidación de `taxonomyInfo` con equivalencia, auditoría de guardado y transacciones, prueba de los 20 relictos; MEC-09D.3: integridad de contenido, 30 legendarios, 25 récords y 20 conductas, grafo de progresión y fuente única (suite 1293/1293), 0 regresiones, sin APK. Preview web jugable: [MEC-09D Preview 01](https://rawcdn.githack.com/pruizbohle/gran-atlas-naturaleza/700f983cf3ac5ab145eb3c1f3d3fd0cc3802ee55/index.html).
 
 ## V5.6.9 Beta — MEC-09B: auditoría funcional, accesibilidad y progresión (aprobada con observaciones)
 

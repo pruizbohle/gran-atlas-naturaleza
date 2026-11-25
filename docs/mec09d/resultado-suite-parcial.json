@@ -6,10 +6,10 @@
   "fail": 221
  },
  "suite_actual": {
-  "tests": 1200,
-  "pass": 1200,
+  "tests": 1293,
+  "pass": 1293,
   "fail": 0,
-  "files": 136,
+  "files": 141,
   "timeouts": []
  },
  "regresiones": [],
@@ -34,6 +34,15 @@
    "mec09d-consolidation": 4,
    "mec09d-persistence": 5,
    "mec09d-relicts": 22
+  }
+ },
+ "mec09d_3": {
+  "nuevas": {
+   "mec09d-integrity": 4,
+   "mec09d-legendaries": 33,
+   "mec09d-records": 46,
+   "mec09d-graph": 5,
+   "mec09d-sot": 5
   }
  }
 }
