@@ -1,0 +1,317 @@
+[
+ {
+  "save": "A",
+  "saveName": "partida nueva",
+  "offline8h": false,
+  "startupMs": 501,
+  "tabs": {
+   "atlas": {
+    "switchMedianMs": 31,
+    "dom": 637
+   },
+   "field": {
+    "switchMedianMs": 32,
+    "dom": 489
+   },
+   "journal": {
+    "switchMedianMs": 32,
+    "dom": 790
+   },
+   "research": {
+    "switchMedianMs": 32,
+    "dom": 541
+   },
+   "society": {
+    "switchMedianMs": 31,
+    "dom": 474
+   },
+   "bestiary": {
+    "switchMedianMs": 30,
+    "dom": 1032
+   },
+   "expeditions": {
+    "switchMedianMs": 31,
+    "dom": 475
+   },
+   "objects": {
+    "switchMedianMs": 33,
+    "dom": 596
+   },
+   "museum": {
+    "switchMedianMs": 32,
+    "dom": 682
+   }
+  },
+  "bestiaryPageMs": 18,
+  "bestiaryCards": 128,
+  "achievementsMs": 19,
+  "achievementsDom": 198,
+  "idle": {
+   "panelRebuilds": 0,
+   "mutations": 0
+  },
+  "fieldSearch": {
+   "ms": 40,
+   "panelRebuilds": 0
+  },
+  "saved": {
+   "lastTick": 1824908412360,
+   "sightings": 0
+  },
+  "heapMB": 13,
+  "images": {
+   "total": 39,
+   "loaded": 39,
+   "lazy": 0
+  }
+ },
+ {
+  "save": "B",
+  "saveName": "intermedia (rango 7)",
+  "offline8h": false,
+  "startupMs": 542,
+  "tabs": {
+   "atlas": {
+    "switchMedianMs": 32,
+    "dom": 656
+   },
+   "field": {
+    "switchMedianMs": 31,
+    "dom": 501
+   },
+   "journal": {
+    "switchMedianMs": 32,
+    "dom": 908
+   },
+   "research": {
+    "switchMedianMs": 32,
+    "dom": 541
+   },
+   "society": {
+    "switchMedianMs": 32,
+    "dom": 474
+   },
+   "bestiary": {
+    "switchMedianMs": 34,
+    "dom": 1127
+   },
+   "expeditions": {
+    "switchMedianMs": 17,
+    "dom": 475
+   },
+   "objects": {
+    "switchMedianMs": 14,
+    "dom": 562
+   },
+   "museum": {
+    "switchMedianMs": 33,
+    "dom": 818
+   }
+  },
+  "bestiaryPageMs": 23,
+  "bestiaryCards": 128,
+  "achievementsMs": 29,
+  "achievementsDom": 202,
+  "idle": {
+   "panelRebuilds": 0,
+   "mutations": 24
+  },
+  "fieldSearch": {
+   "ms": 16,
+   "panelRebuilds": 0
+  },
+  "saved": {
+   "lastTick": 1824908412391,
+   "sightings": 670175
+  },
+  "heapMB": 21,
+  "images": {
+   "total": 40,
+   "loaded": 39,
+   "lazy": 1
+  }
+ },
+ {
+  "save": "B",
+  "saveName": "intermedia (rango 7)",
+  "offline8h": true,
+  "startupMs": 527,
+  "tabs": {},
+  "saved": {
+   "lastTick": 1824908401392,
+   "sightings": 670034
+  },
+  "heapMB": 18,
+  "images": {
+   "total": 39,
+   "loaded": 39,
+   "lazy": 0
+  }
+ },
+ {
+  "save": "C",
+  "saveName": "avanzada (Polos)",
+  "offline8h": false,
+  "startupMs": 529,
+  "tabs": {
+   "atlas": {
+    "switchMedianMs": 31,
+    "dom": 666
+   },
+   "field": {
+    "switchMedianMs": 29,
+    "dom": 509
+   },
+   "journal": {
+    "switchMedianMs": 32,
+    "dom": 812
+   },
+   "research": {
+    "switchMedianMs": 31,
+    "dom": 541
+   },
+   "society": {
+    "switchMedianMs": 31,
+    "dom": 474
+   },
+   "bestiary": {
+    "switchMedianMs": 32,
+    "dom": 1144
+   },
+   "expeditions": {
+    "switchMedianMs": 30,
+    "dom": 475
+   },
+   "objects": {
+    "switchMedianMs": 30,
+    "dom": 562
+   },
+   "museum": {
+    "switchMedianMs": 31,
+    "dom": 970
+   }
+  },
+  "bestiaryPageMs": 27,
+  "bestiaryCards": 128,
+  "achievementsMs": 38,
+  "achievementsDom": 205,
+  "idle": {
+   "panelRebuilds": 0,
+   "mutations": 24
+  },
+  "fieldSearch": {
+   "ms": 27,
+   "panelRebuilds": 0
+  },
+  "saved": {
+   "lastTick": 1824908412381,
+   "sightings": 2692063
+  },
+  "heapMB": 19,
+  "images": {
+   "total": 41,
+   "loaded": 41,
+   "lazy": 1
+  }
+ },
+ {
+  "save": "C",
+  "saveName": "avanzada (Polos)",
+  "offline8h": true,
+  "startupMs": 510,
+  "tabs": {},
+  "saved": {
+   "lastTick": 1824908401371,
+   "sightings": 2691934
+  },
+  "heapMB": 17,
+  "images": {
+   "total": 41,
+   "loaded": 40,
+   "lazy": 1
+  }
+ },
+ {
+  "save": "D",
+  "saveName": "final MEC-09B",
+  "offline8h": false,
+  "startupMs": 572,
+  "tabs": {
+   "atlas": {
+    "switchMedianMs": 30,
+    "dom": 682
+   },
+   "field": {
+    "switchMedianMs": 30,
+    "dom": 509
+   },
+   "journal": {
+    "switchMedianMs": 34,
+    "dom": 909
+   },
+   "research": {
+    "switchMedianMs": 29,
+    "dom": 541
+   },
+   "society": {
+    "switchMedianMs": 30,
+    "dom": 474
+   },
+   "bestiary": {
+    "switchMedianMs": 37,
+    "dom": 1196
+   },
+   "expeditions": {
+    "switchMedianMs": 17,
+    "dom": 475
+   },
+   "objects": {
+    "switchMedianMs": 9,
+    "dom": 562
+   },
+   "museum": {
+    "switchMedianMs": 31,
+    "dom": 979
+   }
+  },
+  "bestiaryPageMs": 26,
+  "bestiaryCards": 128,
+  "achievementsMs": 55,
+  "achievementsDom": 207,
+  "idle": {
+   "panelRebuilds": 0,
+   "mutations": 24
+  },
+  "fieldSearch": {
+   "ms": 40,
+   "panelRebuilds": 0
+  },
+  "saved": {
+   "lastTick": 1824908412406,
+   "sightings": 5680572
+  },
+  "heapMB": 25,
+  "images": {
+   "total": 41,
+   "loaded": 41,
+   "lazy": 1
+  }
+ },
+ {
+  "save": "D",
+  "saveName": "final MEC-09B",
+  "offline8h": true,
+  "startupMs": 669,
+  "tabs": {},
+  "saved": {
+   "lastTick": 1824908401456,
+   "sightings": 5680443
+  },
+  "heapMB": 21,
+  "images": {
+   "total": 41,
+   "loaded": 40,
+   "lazy": 1
+  }
+ }
+]

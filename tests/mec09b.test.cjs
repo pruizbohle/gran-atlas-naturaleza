@@ -204,9 +204,9 @@ for(const c of corpus)test('MEC-09B · 29. partida '+c.label+': carga, placas co
 // ── Versión: 5.6.9 Beta se mantiene; etiqueta de compilación MEC-09B; sin APK ─────────────────
 test('MEC-09B · V 5.6.9 Beta con etiqueta MEC-09B, mec09b en release:verify y sin APK',()=>{
  const root=path.join(__dirname,'..'),pkg=require('../package.json'),rel=require('../www/atlas-release.json');
- assert.equal(pkg.version,'5.6.9');assert.equal(rel.version,'5.6.9');assert.equal(rel.build,'MEC-09B');assert.equal(rel.v569b.apk,false);assert.equal(rel.v569.apk,false);
+ assert.equal(pkg.version,'5.6.9');assert.equal(rel.version,'5.6.9');assert.match(rel.build,/^MEC-09[BC]$/);assert.equal(rel.v569b.apk,false);assert.equal(rel.v569.apk,false);
  assert.match(pkg.scripts['release:verify'],/tests\/mec09b\.test\.cjs/);assert.match(pkg.scripts['release:verify'],/tests\/mec09b-catalog\.test\.cjs/);
- const html=fs.readFileSync(path.join(root,'www','index.html'),'utf8');assert.match(html,/MEC-09B/);assert.match(html,/js\/mec09b-geography\.js/);
+ const html=fs.readFileSync(path.join(root,'www','index.html'),'utf8');assert.match(html,/MEC-09[BC]/);assert.match(html,/js\/mec09b-geography\.js/);
  assert.match(fs.readFileSync(path.join(root,'www','sw.js'),'utf8'),/mec09b-geography\.js/);
  const apk=[];const walk=d=>{for(const e of fs.readdirSync(d,{withFileTypes:true})){if(['node_modules','.git'].includes(e.name))continue;const f=path.join(d,e.name);if(e.isDirectory())walk(f);else if(/\.apk$/i.test(e.name))apk.push(f);}};
  walk(root);assert.equal(apk.length,0,'MEC-09B no genera ni versiona ninguna APK');

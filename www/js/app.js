@@ -7872,6 +7872,23 @@ document.addEventListener('keydown',event=>{const dialog=!cpDialog3430.hidden?cp
 
 // MEC-02 · puente para que el bloque de instalaciones lea el estado del Campamento.
 campBridgeMEC02={facility:()=>cp3430.mode==='new'&&cp3430.active?cp3430.facility:null,models:()=>cpModels3430,setModels(fn){cpModels3430=fn;},refresh:()=>cpRefresh3430()};
+// MEC-09C · // Configuración del naturalista: sección reservada para MEC-09E (idioma, preferencias, guardado, versión
+// y opciones Game Master solo en compilaciones de prueba). No activa ayudas ni el modo Game Master.
+const cpMenuNav9C=cpMenu3430.querySelector('nav');
+if(cpMenuNav9C&&!cpMenuNav9C.querySelector('[data-cp-dialog="settings"]')){const b=document.createElement('button');b.type='button';b.dataset.cpDialog='settings';b.innerHTML='Configuración <span>Idioma, guardado y versión</span>';cpMenuNav9C.insertBefore(b,cpMenuNav9C.querySelector('[data-cp-dialog="about"]'));}
+function settingsHTML9C(){
+ const rel=globalThis.AtlasRelease||{},version=(cpUI3430.version||'')+'';const compass=uxCompassPreference3410();
+ return '<div class="cp3430-settings" data-settings>'+
+  '<section data-settings-section="idioma"><h3>Idioma</h3><div class="cp9c-row"><label for="cp9c-lang">Idioma del juego</label><select id="cp9c-lang" disabled aria-describedby="cp9c-lang-note"><option selected>Español</option></select></div><p id="cp9c-lang-note" class="cp9c-reserved">Inglés, portugués, francés y alemán se incorporarán en MEC-09E.</p></section>'+
+  '<section data-settings-section="preferencias"><h3>Preferencias</h3><div class="cp9c-row"><span>Brújula del naturalista</span><b>'+({visible:'Visible',collapsed:'Plegada',hidden:'Oculta'}[compass]||compass)+'</b></div><p class="cp9c-reserved">Se cambia desde la propia Brújula, en el Atlas.</p></section>'+
+  '<section data-settings-section="guardado"><h3>Guardado y respaldos</h3><p>Guardado local automático; el progreso offline se procesa hasta 8 horas.</p><button type="button" class="btn alt" data-cp-save>Guardar y restaurar</button></section>'+
+  '<section data-settings-section="version"><h3>Versión</h3><p>5.6.9 Beta · compilación MEC-09C</p><p class="cp9c-reserved">Motor del perfil: '+esc(version)+'</p></section>'+
+  '<section data-settings-section="game-master" hidden aria-hidden="true"><h3>Game Master</h3><p class="cp9c-reserved">Reservado para compilaciones de prueba (MEC-09E). No disponible.</p></section>'+
+ '</div>';
+}
+const cpOpenDialogBefore9C=cpOpenDialog3430;
+cpOpenDialog3430=function(which){if(which!=='settings')return cpOpenDialogBefore9C(which);cpOpenDialogBefore9C('about');document.getElementById('cp3430-dialog-title').textContent='Configuración';document.getElementById('cp3430-dialog-content').innerHTML=settingsHTML9C();document.getElementById('cp3430-dialog-title').focus({preventScroll:true});};
+globalThis.AtlasSettingsMEC09C=Object.freeze({html:settingsHTML9C,open:()=>cpOpenDialog3430('settings')});
 }
 // CP3430 END approved Campamento and optional naturalist profile
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
@@ -10215,6 +10232,47 @@ if(globalThis.AtlasMuseumCuration3380){
   return null;};
  globalThis.AtlasPlatesMEC09B={normalize:normalizePlates,reconcile:()=>reconcile(state),lots:()=>box(state).lots.map(l=>({...l})),available:()=>sumVirgin(box(state)),exposed:()=>platesMEC09B('exposed'),UNKNOWN};
 }
+// MEC09C BEGIN guía contextual de progresión y configuración del perfil (solo presentación)
+// Cadena de obtención: qué falta, cómo se obtiene, dónde y con qué requisito previo. Lee las mismas
+// recetas, fuentes (uxSources3410) y materiales animales (SPECIES_DROPS) que el motor; no cambia reglas.
+// No revela especies sin identificar: se nombra la región y las condiciones, no el animal.
+function guideChain9C(id,need=1,depth=0,seen=new Set()){
+ if(!ITEMS[id]||seen.has(id)||depth>5)return null;seen.add(id);
+ const have=state.inventory[id]||0,recipe=RECIPES[id],node={id,name:ITEMS[id].name,have,need,ok:have>=need,kind:recipe?'receta':'fuente',children:[],sources:[],species:[]};
+ if(recipe){for(const [m,n] of Object.entries(recipe.requires||{})){const c=guideChain9C(m,n,depth+1,new Set(seen));if(c)node.children.push(c);}}
+ else{
+  node.sources=uxSources3410(id).filter(x=>x.type!=='field'||!SPECIES_DROPS||!Object.values(SPECIES_DROPS).includes(id)).slice(0,4).map(x=>({type:x.type,id:x.id,label:x.label,available:!!x.available,research:x.research||null}));
+  for(const [sp,item] of Object.entries(SPECIES_DROPS||{}))if(item===id&&SPECIES[sp]){
+   const regions=REGIONS.filter(r=>r.species.includes(sp)),open=regions.filter(r=>regionAccessible(r));
+   node.species.push({id:sp,known:!!state.discovered[sp],name:state.discovered[sp]?SPECIES[sp].name:null,regions:(open.length?open:regions).slice(0,3).map(r=>({id:r.id,name:r.name,open:regionAccessible(r)})),
+    habitats:[...(SPECIES[sp].habitats||[])],times:[...(SPECIES[sp].times||[])],research:state.upgrades.specimenDrops?null:'gabinete_1'});
+  }
+ }
+ return node;
+}
+function guideChainHTML9C(id){
+ const root=guideChain9C(id);if(!root)return '';
+ const relevant=n=>!n.ok||n.children.some(relevant);
+ if(root.ok&&!root.children.some(relevant)&&!RECIPES[id])return '';
+ const research=r=>{const n=RESEARCH_NODES.find(x=>x.id===r);return n?' · requiere '+uxLink3410('research',r,'Investigación: '+n.name):'';};
+ const line=n=>{const st=n.ok?'<span class="ux9c-state ux9c-ok" aria-label="Disponible">✓</span>':'<span class="ux9c-state ux9c-miss" aria-label="Falta">✗</span>';
+  let h='<li>'+st+' '+uxLink3410(RECIPES[n.id]?'recipe':'item',n.id,n.name)+' <small>'+n.have+'/'+n.need+'</small>';
+  if(!n.ok||n.children.some(relevant)){
+   if(n.children.length)h+='<ol>'+n.children.map(line).join('')+'</ol>';
+   else{const parts=[];
+    for(const sp of n.species)parts.push('<li><span class="ux9c-hint">'+(sp.known?esc(sp.name):'Especie aún sin identificar')+' · '+sp.regions.map(r=>uxLink3410('atlas',r.id,r.name+(r.open?'':' (bloqueada)'))).join(', ')+'</span><span class="ux9c-hint">Hábitat: '+sp.habitats.map(habitatLabel).join(', ')+' · Horario: '+sp.times.map(timeLabel).join(', ')+(sp.research?research(sp.research):' · muestra posible en cada encuentro')+'</span></li>');
+    for(const so of n.sources)parts.push('<li><span class="ux9c-hint">'+uxLink3410(so.type,so.id,so.label)+(so.available?'':' · requisitos pendientes')+(so.research?research(so.research):'')+'</span></li>');
+    h+=parts.length?'<ol>'+parts.join('')+'</ol>':'<span class="ux9c-hint">Sin fuente directa registrada.</span>';}
+  }
+  return h+'</li>';};
+ const missing=(function count(n){return (n.ok?0:1)+n.children.reduce((t,c)=>t+count(c),0);})(root);
+ return '<details class="ux9c-chain"'+(missing?' open':'')+'><summary>Cómo se obtiene'+(missing?' · faltan '+missing:'')+'</summary><ol>'+line(root)+'</ol></details>';
+}
+const inventoryDetailBeforeGuide9C=inventoryDetail3400;
+inventoryDetail3400=function(id){const html=inventoryDetailBeforeGuide9C(id);if(!html)return html;const chain=guideChainHTML9C(id);return chain?html.replace('</section>',chain+'</section>'):html;};
+globalThis.AtlasGuideMEC09C=Object.freeze({chain:id=>JSON.parse(JSON.stringify(guideChain9C(id))),html:guideChainHTML9C,settings:()=>globalThis.AtlasSettingsMEC09C?.html()||'',openSettings:()=>globalThis.AtlasSettingsMEC09C?.open()});
+// MEC09C END
+
 render();
 })();
 

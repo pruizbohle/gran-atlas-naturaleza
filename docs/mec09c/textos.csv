@@ -1,0 +1,17 @@
+clase;pantalla;texto;tratamiento;motivo;selector_o_regla
+D;Inventario;«GABINETE DEL NATURALISTA · 1842» (rótulo);Oculto en móvil;"Decorativo; el marco ya identifica la pestaña";.inventory-v33-kicker
+D;Inventario;«Inventario y Taller» (título interno);Oculto en móvil;Repite el título de la pestaña («Inventario»);.inv340-root>header>h3
+D;Sociedad;«LONDRES · 1842» (rótulo);Oculto en móvil;Decorativo;.society-kicker
+D;Bestiario;Rótulo y título internos;Oculto en móvil;"Repiten «Bestiario»; el recuento 1000/1000 se conserva";.b26-eyebrow, .b26-heading h2/h3
+D;Investigación;Rótulo «SOCIEDAD DE NATURALISTAS · 1842»;Oculto en móvil;Decorativo;.er28-eyebrow
+D;Atlas;Rótulo «ATLAS DE EXPEDICIONES · 1842»;Oculto en móvil;Decorativo (ya oculto en V5.5.0 salvo el selector);.atlas-kicker
+D;Museo;Rótulo de la cabecera del Museo;Oculto en móvil;Decorativo;.m27-heading>span:first-child
+D;Museo;«La acreditación es permanente. El montaje vigente…» en cada tarjeta;Oculto en móvil;"Repetido en todas las exposiciones; la regla figura en «ⓘ Más información»";.cur-note
+D;Museo;«Diploma sin recompensas económicas…» en cada tarjeta;Oculto en móvil;"Repetido; la introducción ya dice que los diplomas no generan renta";texto (regla museo-diploma)
+C;Museo;«Organiza las vitrinas y los gabinetes existentes. Los diplomas no generan renta…»;Plegado tras «ⓘ Más información»;"Explicación de la mecánica; disponible al pulsar";regla museo-intro
+C;Sociedad;«Subvención disponible cada 60 s · Intercambio de libras por conocimiento…»;Plegado tras «ⓘ Más información»;"Explicación; el botón y el costo de cada canje siguen visibles";regla sociedad-subvencion
+D;Inventario;Rótulo «Buscar objetos» sobre el campo;"Visualmente oculto; nombre accesible del campo";El campo ya muestra «Nombre del objeto»;regla inventario-buscar
+D;Avisos;Línea «Ver Sociedad → Eventos» del aviso;Oculta en móvil;Todo el aviso es pulsable y lleva al mismo destino;.ach-toast-open small
+D;Bestiario;Grupo, avistamientos y orden visibles permanentemente;Plegados en «Filtros · N activos»;"Controles secundarios; el número de filtros activos queda a la vista";.ux9c-filters-toggle
+A/B;Todas;Costos, requisitos pendientes, consumos, recompensas y bloqueos;Sin cambios;Se conservan visibles por norma (sección 10);—
+B;Sociedad;«Tomos legados: N»;Se conserva (alineado a la derecha);No figura en otro lugar del marco móvil;.society-legacy

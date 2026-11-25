@@ -1,0 +1,17 @@
+acceso;estado;donde;mecanismo;prueba_o_destino
+Especie → región;Existente (V3.26) · verificado;Bestiario: ficha · «Regiones»;b26-region;—
+Región → especies;Existente (V3.21) · verificado;Atlas: ficha de región (panel compacto);atlas-region-panel;—
+Material → fuentes;Ampliado en MEC-09C;Inventario: ficha · «Cómo se obtiene» + atajos de procedencia;ux9c-chain, ux3410-sources;mec09c 3, 4
+Material → recetas (usos);Existente (V3.40);Inventario: ficha · «Usos y destinos»;inv340-link;—
+Receta → ingredientes;Ampliado en MEC-09C;Taller: ficha · cadena recursiva con cantidades;ux9c-chain;mec09c 3, 6
+Investigación → requisito pendiente;Ampliado en MEC-09C;"Cadena: «requiere Investigación: …»; Atlas: «Consultar investigación»";ux-open research|id;mec09c 3, 6
+Región bloqueada → preparación → material → especie;Nuevo en MEC-09C;Atlas → «Consultar receta» → cadena (abrigo polar → morral → escama → Gabinete → región, hábitat, horario);ux9c-chain;mec09c 3
+Rango → actividad necesaria;Existente (MEC-04);Sociedad: Rango · acceso a la actividad;mec04-go;—
+Encargo → función correspondiente;Existente (V3.37/MEC-08);Sociedad: Encargos · «Ir»;enc-go, mec08-*;—
+Artefacto → instalación compatible;Existente (MEC-06);Taller: artefacto · ubicación;mec06-place, mec06-item;—
+Coleccionable → colección;Parcial;"Inventario: «Coleccionables» agrupa por colección; sin enlace directo a la colección del Museo";—;MEC-09D
+Colección → gabinete;Parcial;"Museo: Gabinetes muestran su colección; sin enlace desde la ficha de pieza";—;MEC-09D
+Récord → especie;Parcial;"Récords: enlace a la región en el Atlas (mec07-atlas); no a la ficha de la especie";mec07-atlas;MEC-09D
+Evidencia → instrumento necesario;Parcial;"Validación muestra el instrumento requerido; sin enlace a su receta";mec07-validate;MEC-09D
+Aviso → función;Existente (V3.41);Avisos y Brújula navegan a la función;ux-compass-go, toast;—
+Regreso coherente;Existente (V3.41);Pila de regreso con filtros y posición (8 pasos);uxBack3410;mec09c 5/7

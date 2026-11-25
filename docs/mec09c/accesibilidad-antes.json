@@ -1,0 +1,701 @@
+[
+ {
+  "save": "A",
+  "tab": "atlas",
+  "tabName": "Atlas",
+  "textChecked": 12,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 32,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 32,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "field",
+  "tabName": "Campo",
+  "textChecked": 28,
+  "contrastFails": 3,
+  "contrastSamples": [
+   {
+    "text": "EL CAMPO TE ESPERA",
+    "ratio": 4.16,
+    "size": 9,
+    "need": 4.5
+   },
+   {
+    "text": "Observa para comenzar tu primer registro",
+    "ratio": 4.33,
+    "size": 12,
+    "need": 4.5
+   },
+   {
+    "text": "Contrata tu equipo en Investigación",
+    "ratio": 4.47,
+    "size": 11,
+    "need": 4.5
+   }
+  ],
+  "controls": 20,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 22,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "journal",
+  "tabName": "Cuaderno",
+  "textChecked": 76,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 52,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 62,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "research",
+  "tabName": "Investigación",
+  "textChecked": 37,
+  "contrastFails": 17,
+  "contrastSamples": [
+   {
+    "text": "Naturalismo",
+    "ratio": 4.07,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "0/11",
+    "ratio": 4.07,
+    "size": 8,
+    "need": 4.5
+   },
+   {
+    "text": "Expediciones",
+    "ratio": 4.07,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "0/15",
+    "ratio": 4.07,
+    "size": 8,
+    "need": 4.5
+   },
+   {
+    "text": "Museología",
+    "ratio": 4.07,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "0/9",
+    "ratio": 4.07,
+    "size": 8,
+    "need": 4.5
+   }
+  ],
+  "controls": 29,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "er28-branches",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 42,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "society",
+  "tabName": "Sociedad",
+  "textChecked": 20,
+  "contrastFails": 2,
+  "contrastSamples": [
+   {
+    "text": "×1 · £100 → 70 conoc.",
+    "ratio": 2.91,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "Subvención disponible cada 60 s · Interc",
+    "ratio": 4.45,
+    "size": 11,
+    "need": 4.5
+   }
+  ],
+  "controls": 28,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "society-tabs",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 23,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "bestiary",
+  "tabName": "Bestiario",
+  "textChecked": 23,
+  "contrastFails": 10,
+  "contrastSamples": [
+   {
+    "text": "Buscar por nombre conocido",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Grupo",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Avistamientos",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Orden",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Limpiar filtros",
+    "ratio": 4.06,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "progreso · subgrupo · monografías",
+    "ratio": 3.3,
+    "size": 8,
+    "need": 4.5
+   }
+  ],
+  "controls": 31,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 60,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "expeditions",
+  "tabName": "Campamento",
+  "textChecked": 11,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 22,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 22,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "objects",
+  "tabName": "Inventario",
+  "textChecked": 24,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 34,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "inventory-subtabs",
+    "aria": "true",
+    "marker": false
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 43,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "museum",
+  "tabName": "Museo",
+  "textChecked": 58,
+  "contrastFails": 1,
+  "contrastSamples": [
+   {
+    "text": "Organiza las vitrinas y los gabinetes ex",
+    "ratio": 4.48,
+    "size": 12,
+    "need": 4.5
+   }
+  ],
+  "controls": 30,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "m27-rooms",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 60,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "atlas",
+  "tabName": "Atlas",
+  "textChecked": 14,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 32,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 32,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "field",
+  "tabName": "Campo",
+  "textChecked": 25,
+  "contrastFails": 2,
+  "contrastSamples": [
+   {
+    "text": "OBSERVACIÓN REGISTRADA",
+    "ratio": 4.16,
+    "size": 9,
+    "need": 4.5
+   },
+   {
+    "text": "Registro completo · sigue explorando.",
+    "ratio": 4.33,
+    "size": 12,
+    "need": 4.5
+   }
+  ],
+  "controls": 19,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 23,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "journal",
+  "tabName": "Cuaderno",
+  "textChecked": 79,
+  "contrastFails": 1,
+  "contrastSamples": [
+   {
+    "text": "Notable · 226 encuentros desde v3.19.7",
+    "ratio": 4.43,
+    "size": 11,
+    "need": 4.5
+   }
+  ],
+  "controls": 51,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 79,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "research",
+  "tabName": "Investigación",
+  "textChecked": 39,
+  "contrastFails": 15,
+  "contrastSamples": [
+   {
+    "text": "Naturalismo",
+    "ratio": 4.07,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "11/11",
+    "ratio": 4.07,
+    "size": 8,
+    "need": 4.5
+   },
+   {
+    "text": "Expediciones",
+    "ratio": 4.07,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "15/15",
+    "ratio": 4.07,
+    "size": 8,
+    "need": 4.5
+   },
+   {
+    "text": "Museología",
+    "ratio": 4.07,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "9/9",
+    "ratio": 4.07,
+    "size": 8,
+    "need": 4.5
+   }
+  ],
+  "controls": 29,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "er28-branches",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 42,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "society",
+  "tabName": "Sociedad",
+  "textChecked": 25,
+  "contrastFails": 2,
+  "contrastSamples": [
+   {
+    "text": "×1 · £100 → 70 conoc.",
+    "ratio": 2.91,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "Subvención disponible cada 60 s · Interc",
+    "ratio": 4.45,
+    "size": 11,
+    "need": 4.5
+   }
+  ],
+  "controls": 28,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "society-tabs",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 27,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "bestiary",
+  "tabName": "Bestiario",
+  "textChecked": 25,
+  "contrastFails": 10,
+  "contrastSamples": [
+   {
+    "text": "Buscar por nombre conocido",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Grupo",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Avistamientos",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Orden",
+    "ratio": 4.5,
+    "size": 10,
+    "need": 4.5
+   },
+   {
+    "text": "Limpiar filtros",
+    "ratio": 4.06,
+    "size": 11,
+    "need": 4.5
+   },
+   {
+    "text": "progreso · subgrupo · monografías",
+    "ratio": 3.3,
+    "size": 8,
+    "need": 4.5
+   }
+  ],
+  "controls": 31,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 92,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "expeditions",
+  "tabName": "Campamento",
+  "textChecked": 13,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 22,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 22,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "objects",
+  "tabName": "Inventario",
+  "textChecked": 26,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 34,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "inventory-subtabs",
+    "aria": "true",
+    "marker": false
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 45,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "museum",
+  "tabName": "Museo",
+  "textChecked": 55,
+  "contrastFails": 1,
+  "contrastSamples": [
+   {
+    "text": "Organiza las vitrinas y los gabinetes ex",
+    "ratio": 4.48,
+    "size": 12,
+    "need": 4.5
+   }
+  ],
+  "controls": 27,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "m27-rooms",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": false
+   }
+  ],
+  "keyboard": {
+   "focusable": 113,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ }
+]

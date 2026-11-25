@@ -1,0 +1,495 @@
+[
+ {
+  "save": "A",
+  "tab": "atlas",
+  "tabName": "Atlas",
+  "textChecked": 12,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 32,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 32,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "field",
+  "tabName": "Campo",
+  "textChecked": 28,
+  "contrastFails": 1,
+  "contrastSamples": [
+   {
+    "text": "Contrata tu equipo en Investigación",
+    "ratio": 4.47,
+    "size": 11,
+    "need": 4.5
+   }
+  ],
+  "controls": 20,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 22,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "journal",
+  "tabName": "Cuaderno",
+  "textChecked": 76,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 52,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 62,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "research",
+  "tabName": "Investigación",
+  "textChecked": 38,
+  "contrastFails": 1,
+  "contrastSamples": [
+   {
+    "text": "20 conocimiento",
+    "ratio": 4.37,
+    "size": 10,
+    "need": 4.5
+   }
+  ],
+  "controls": 31,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "er28-branches",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 42,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "society",
+  "tabName": "Sociedad",
+  "textChecked": 22,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 29,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "society-tabs",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 24,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "bestiary",
+  "tabName": "Bestiario",
+  "textChecked": 16,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 26,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 52,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "expeditions",
+  "tabName": "Campamento",
+  "textChecked": 11,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 22,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 22,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "objects",
+  "tabName": "Inventario",
+  "textChecked": 29,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 36,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "inventory-subtabs",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 59,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "A",
+  "tab": "museum",
+  "tabName": "Museo",
+  "textChecked": 72,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 39,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "m27-rooms",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 61,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "atlas",
+  "tabName": "Atlas",
+  "textChecked": 14,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 32,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 32,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "field",
+  "tabName": "Campo",
+  "textChecked": 26,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 20,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 23,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "journal",
+  "tabName": "Cuaderno",
+  "textChecked": 79,
+  "contrastFails": 1,
+  "contrastSamples": [
+   {
+    "text": "Notable · 226 encuentros desde v3.19.7",
+    "ratio": 4.43,
+    "size": 11,
+    "need": 4.5
+   }
+  ],
+  "controls": 51,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 79,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "research",
+  "tabName": "Investigación",
+  "textChecked": 40,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 31,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "er28-branches",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 42,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "society",
+  "tabName": "Sociedad",
+  "textChecked": 29,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 29,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "society-tabs",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 28,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "bestiary",
+  "tabName": "Bestiario",
+  "textChecked": 18,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 26,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 84,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "expeditions",
+  "tabName": "Campamento",
+  "textChecked": 13,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 22,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 22,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "objects",
+  "tabName": "Inventario",
+  "textChecked": 31,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 36,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "inventory-subtabs",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 47,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ },
+ {
+  "save": "D",
+  "tab": "museum",
+  "tabName": "Museo",
+  "textChecked": 70,
+  "contrastFails": 0,
+  "contrastSamples": [],
+  "controls": 37,
+  "unnamed": 0,
+  "unnamedSamples": [],
+  "selected": [
+   {
+    "row": "m27-rooms",
+    "aria": "true",
+    "marker": true
+   },
+   {
+    "row": "mobile-dock",
+    "aria": "page",
+    "marker": true
+   }
+  ],
+  "keyboard": {
+   "focusable": 114,
+   "dockReachable": true,
+   "positiveTabindex": 0
+  },
+  "zoom130OverflowX": 0
+ }
+]

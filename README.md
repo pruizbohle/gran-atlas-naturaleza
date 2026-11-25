@@ -2,11 +2,26 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.9 Beta — MEC-09B** (auditoría funcional y de progresión de la versión de consolidación), canal beta (rama `mec-09b/functional-audit`, sobre MEC-09A, sin fusionar a `main`)
+**Versión publicada: 5.5.1** · **Compilación de trabajo: 5.6.9 Beta — MEC-09C** (interfaz móvil, navegación y rendimiento de la versión de consolidación), canal beta (rama `mec-09c/mobile-ux`, sobre MEC-09B, sin fusionar a producción)
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## V5.6.9 Beta — MEC-09B: auditoría funcional, accesibilidad y progresión (en revisión)
+## V5.6.9 Beta — MEC-09C: interfaz móvil, navegación y rendimiento (en revisión)
+
+Mejora el uso de las mecánicas existentes en teléfonos en vertical. No cambia reglas ni balance.
+
+- **Marco:** pasa de 212 a 200 px fijos, con áreas seguras; las cifras de recursos se muestran compactas («13,3k», «£74M») y ya no se cortan.
+- **Navegación:** los nueve accesos se conservan en el mismo orden, con marca de pestaña activa. Las subpestañas ocupan una sola fila desplazable y la seleccionada queda siempre visible.
+- **Textos:** los redundantes se retiran en el móvil y los explicativos quedan tras «ⓘ». Requisitos, costos, consumos y recompensas siguen visibles.
+- **Bestiario:** búsqueda visible y filtros plegados con recuento; filtros y posición se conservan al volver.
+- **Guía contextual:** la ficha de cada objeto incluye «Cómo se obtiene», con receta, ingredientes, fuentes, investigación, región, hábitat y horario enlazados.
+- **Ventanas:** tienen cierre visible y devuelven el foco al control que las abrió.
+- **Perfil:** nueva sección «Configuración», preparada para idiomas y para MEC-09E.
+- **Otras pantallas:** el teléfono en horizontal y el escritorio muestran el contenido desde el inicio, y el contraste cumple AA.
+
+Informe, capturas reales antes y después, y galería: [docs/mec09c](docs/mec09c/README.md). Sin APK. No se avanza a MEC-09D.
+
+## V5.6.9 Beta — MEC-09B: auditoría funcional, accesibilidad y progresión (aprobada con observaciones)
 
 Segunda etapa de consolidación. Comprueba que todo el contenido se puede usar y alcanzar con las reglas vigentes, y corrige solo bloqueos funcionales. No cambia el balance.
 
