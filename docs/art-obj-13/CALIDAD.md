@@ -31,3 +31,9 @@ Los ocho tipos monetarios emplean materiales, perfiles y motivos de su época. E
 Las piezas de civilizaciones se cotejaron por material, manufactura y procedencia. Los términos sumerio, Jōmon y misisipiano se conservan con su contexto en la ficha. Las siete maravillas se representan como modelos de gabinete, con hipótesis explícitas en las fichas de los Jardines y el Coloso. [Cronología MEC-09B](../mec09b/cientifico-historico.md) · [Bucchero etrusco](https://www.metmuseum.org/art/collection/search/246198) · [Sello aqueménida](https://www.metmuseum.org/art/collection/search/323560) · [Disco de concha](https://www.metmuseum.org/art/collection/search/312661)
 
 Se revisaron individualmente 23 láminas, 92 WebP y 26 pruebas, incluida la variante de reserva de 256 px para pantallas de alta densidad sin red. [64 px](planchas/04-64.webp) · [128 px](planchas/04-128.webp)
+
+## Lote 5 · Daguerrotipos
+
+Las veinte escenas son recreaciones sobre placas plateadas. Se conserva el nombre de cada lugar y se describe en la ficha si la vista recrea una escena compatible con la época o una copia de un grabado o dibujo. Las reservas de los casos DAG-12 a DAG-16, DAG-19 y DAG-20 siguen el informe científico e histórico. La vista del Fuji remite a la estampa japonesa de comienzos de la década de 1830. [MEC-03](../mec03/README.md) · [Cronología MEC-09B](../mec09b/cientifico-historico.md)
+
+Se cotejaron las veinte placas y las 80 variantes a partir del catálogo vigente. Se revisó la lectura de cada escena a tamaño pequeño por su composición y silueta arquitectónica. Pasaron 26 pruebas, incluida la correspondencia de las notas entre el laboratorio y el juego. [64 px](planchas/05-64.webp) · [128 px](planchas/05-128.webp)

@@ -12,7 +12,7 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 | 2 · Geología | 20 | Integrado y validado |
 | 3 · Oceanografía | 16 | Integrado y validado |
 | 4 · Historia | 23 | Integrado y validado |
-| 5 · Daguerrotipos | 20 | Pendiente |
+| 5 · Daguerrotipos | 20 | Integrado y validado |
 | 6 · Historia natural y rarezas | 19 | Pendiente |
 
 ## Lote 1 · Botánica
@@ -42,6 +42,26 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 - Nuevas e integradas NUM-09, NUM-14 a NUM-20, CIV-13 a CIV-20 y MUN-01 a MUN-07.
 - Recuperadas 0. Corregidas durante la revisión NUM-15 y MUN-06. Cobertura de 392 de 431.
 - Pasaron 26 pruebas. Revisadas las 23 piezas en ambas planchas.
-- Commit de este cierre. `git log -1 --format=%H -- docs/art-obj-13/maestras/04-dinar.png`.
+- Commit `6b54d476ed58d58516c132f550c32f93f4b6ad2c`.
 
-Próximo paso. Preparar DAG-01 a DAG-20 con sus notas cronológicas.
+## Lote 5 · Daguerrotipos
+
+- Nuevas e integradas DAG-01 a DAG-20.
+- Recuperadas y corregidas 0. Cobertura de 412 de 431.
+- Pasaron 26 pruebas y la revisión de las dos planchas.
+- Commit de este cierre. `git log -1 --format=%H -- docs/art-obj-13/maestras/05-asia.png`.
+
+Próximo paso. Preparar HUE-13 a HUE-20, RAR-01 a RAR-06 y RAR-08 a RAR-12.
+
+## Recuperar el trabajo
+
+Git conserva los WebP definitivos, las maestras PNG y la asignación de cada celda en `planchas.json`. Para reproducir un lote, extraer primero la referencia OBJ-11 como indica [ART-OBJ-12](../art-obj-12/ESTADO.md).
+
+```bash
+python scripts/prepare-art-obj-13.py /tmp/atlas-obj11 5
+node scripts/build-art-obj-12.cjs /tmp/atlas-obj11
+node scripts/build-naturalist-release.cjs --write
+python scripts/check-art-obj-12.py todos --reference /tmp/atlas-obj11
+```
+
+Para revisar la copia local en el navegador, ejecutar `python -m http.server 8000 --directory www` y abrir [el laboratorio local](http://localhost:8000/art-obj-12/?lote=coleccionables).
