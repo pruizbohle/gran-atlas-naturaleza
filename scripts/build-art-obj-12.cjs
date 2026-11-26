@@ -9,6 +9,7 @@ const docs = path.join(root, 'docs', 'art-obj-12');
 const lab = path.join(www, 'art-obj-12');
 const [source, ...options] = process.argv.slice(2);
 if (!source) throw Error('Indica el directorio extraído de OBJ-11');
+const draft = options.find(option => option.startsWith('--draft='))?.slice('--draft='.length);
 const recover = new Set(options.filter(option => option.startsWith('--recover=')).map(option => option.split('=')[1]));
 const sourceWeb = path.resolve(source, 'www');
 require(path.join(sourceWeb, 'objetos-cientificos/manifiesto.js'));
@@ -20,6 +21,19 @@ const archive = new Map(archivedRows.map(row => [row.id, row]));
 const config = JSON.parse(fs.readFileSync(path.join(docs, 'recuperacion.json')));
 const collection = JSON.parse(fs.readFileSync(path.resolve(source, 'docs/objetos-cientificos/catalogo-300.json'))).pieces;
 const originals = new Map(collection.map(row => [row.ID, row]));
+if (draft) {
+  const prior = JSON.parse(fs.readFileSync(path.resolve(draft,'www/data/atlas_coleccionables_240_manifest_v2.json')));
+  for (const {ID,Pieza} of prior.pieces) {
+    if (globalThis.AtlasMEC03Catalog.pieces[ID]?.name !== Pieza) continue;
+    const origin = path.resolve(draft,'www/assets/collectibles-draft',ID+'.svg');
+    const rel = 'art-obj-12/anteriores/' + ID + '.svg';
+    if (!fs.existsSync(origin)) throw Error('Falta boceto ART-COL-01: ' + ID);
+    const destination = path.join(www,rel);
+    fs.mkdirSync(path.dirname(destination),{recursive:true});
+    fs.copyFileSync(origin,destination);
+  }
+}
+
 const sizes = {64:'inventario',128:'inventario',256:'clasica',512:'clasica'};
 const artDir = 'objetos-cientificos/arte';
 const files = {};
@@ -29,9 +43,9 @@ function spritePaths(id) {
   return Object.fromEntries(Object.entries(sizes).map(([size, variant]) => [size, artDir + '/' + id + '/' + variant + '-' + size + '.webp']));
 }
 
-function transfer(rel) {
+function transfer(rel, target = rel) {
   const origin = path.join(sourceWeb, rel);
-  const destination = path.join(www, rel);
+  const destination = path.join(www, target);
   if (!fs.existsSync(origin)) throw Error('Falta en OBJ-11: ' + rel);
   fs.mkdirSync(path.dirname(destination), {recursive:true});
   fs.copyFileSync(origin, destination);
@@ -64,8 +78,9 @@ function comparison(id, previous, lot) {
     return {kind:'imagen',label:'Antes de la corrección de OBJ-11',paths:images,external:!Object.values(images).every(file => fs.existsSync(path.join(www,file)))};
   }
   if (previous === 'archivo') {
-    const file = archive.get(id)?.sprites.clasica[256].src;
-    if (recover.has(lot)) transfer(file);
+    const origin = archive.get(id).sprites.clasica[256].src;
+    const file = 'art-obj-12/anteriores/' + id + '-obj11.webp';
+    if (recover.has(lot)) transfer(origin,file);
     return {kind:'imagen',label:'OBJ-11 archivado: ' + archive.get(id).name,paths:{256:file},external:!fs.existsSync(path.join(www,file))};
   }
   return {kind:'imagen',label:'Iconografía de la beta',paths:{128:previous}};
@@ -101,11 +116,15 @@ const pieces = Object.values(globalThis.AtlasMEC03Catalog.pieces).map(piece => {
   const edition = original ? {origin:'OBJ-11'} : config.collectibles[id] || {};
   const paths = edition.origin && assets(id, edition, 'coleccionables');
   const previous = original && config.corrected.includes(id) ? 'revision' : archive.has(id) ? 'archivo' : 'marcador';
+  const draftFile = 'art-obj-12/anteriores/' + id + '.svg';
+  const previousArt = previous === 'marcador' && fs.existsSync(path.join(www,draftFile))
+    ? {kind:'boceto',label:'Boceto ART-COL-01',paths:{128:draftFile}}
+    : comparison(id,previous,'coleccionables');
   return {
     id,lot:'coleccionables',key:'item-' + id,name,category,
     base:'Marcador genérico',state:paths ? 'Integrada' : edition.state || (original ? 'Existente sin conexión' : 'Pendiente de ilustración'),
     origin:edition.origin || '',reference:edition.source || (original ? id : ''),paths:paths || null,
-    previous:comparison(id, previous, 'coleccionables'),
+    previous:previousArt,
     note:edition.note || (archive.has(id) ? 'El ID de la beta corresponde a otro sujeto.' : ''),
     catalog:original ? 'OBJ-11' : 'V5.6'
   };
@@ -114,18 +133,24 @@ const pieces = Object.values(globalThis.AtlasMEC03Catalog.pieces).map(piece => {
 if (workshop.length !== 73 || pieces.length !== 431 || originals.size !== 300 ||
     pieces.filter(piece => piece.catalog === 'OBJ-11').length !== 300 ||
     new Set([...workshop,...pieces].map(row => row.id)).size !== 504) throw Error('Cobertura inesperada');
+const comparisons = [...new Set([...workshop,...pieces].flatMap(row =>
+  row.previous?.external ? [] : Object.values(row.previous?.paths || {})))];
+const descriptions = {...Object.fromEntries(collection.map(row => [row.ID, row['Descripción breve']])),...config.descriptions};
 const quote = value => '"' + String(value ?? '').replaceAll('"','""') + '"';
 const csv = (name, records) => {
-  const header = ['id','lote','nombre','categoria','referencia_mec','estado_beta','estado_actual','origen','referencia_grafica','ruta_64','ruta_128','ruta_256','ruta_512','imagen_anterior','catalogo','nota'];
+  const header = ['id','lote','nombre','categoria','referencia_mec','estado_beta','estado_actual','origen','referencia_grafica','ruta_64','ruta_128','ruta_256','ruta_512','ruta_de_origen','imagen_anterior','catalogo','nota'];
   const data = records.map(row => [row.id,row.lot,row.name,row.category,row.key,row.base,row.state,row.origin,row.reference,
-    ...Object.keys(sizes).map(size => row.paths?.[size]),Object.values(row.previous?.paths || {}).join(' | '),row.catalog,row.note]);
+    ...Object.keys(sizes).map(size => row.paths?.[size]),row.origin === 'OBJ-11' && row.reference ? artDir+'/'+row.reference+'/' : '',
+    Object.values(row.previous?.paths || {}).join(' | '),row.catalog,row.note]);
   fs.writeFileSync(path.join(docs,name), '\uFEFF' + [header,...data].map(row => row.map(quote).join(';')).join('\n') + '\n');
 };
 csv('referencias-mec06.csv',workshop);
 csv('coleccionables.csv',pieces);
 csv('coleccionables-v56-pendientes.csv',pieces.filter(row => row.catalog === 'V5.6' && !row.paths));
 fs.writeFileSync(path.join(www,'js/art-obj-12-assets.js'),
-  '// Generado por scripts/build-art-obj-12.cjs.\nglobalThis.AtlasObjectArtAssets = Object.freeze(' + JSON.stringify(files) + ');\n');
+  '// Generado por scripts/build-art-obj-12.cjs.\nglobalThis.AtlasObjectArtAssets = Object.freeze(' + JSON.stringify(files) + ');\n' +
+  'globalThis.AtlasObjectArtComparisonFiles = Object.freeze(' + JSON.stringify(comparisons) + ');\n' +
+  'globalThis.AtlasObjectArtDescriptions = Object.freeze(' + JSON.stringify(descriptions) + ');\n');
 fs.writeFileSync(path.join(lab,'data.js'),
   '// Generado por scripts/build-art-obj-12.cjs.\nglobalThis.AtlasObjectArtReview = ' + JSON.stringify([...workshop,...pieces]) + ';\n');
 console.log(JSON.stringify(Object.fromEntries(Object.entries(Object.groupBy([...workshop,...pieces],row => row.lot))

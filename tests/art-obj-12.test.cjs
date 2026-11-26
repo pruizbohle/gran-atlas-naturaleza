@@ -14,8 +14,12 @@ test('ART-OBJ-12 · laboratorio, aplicación y manifiesto offline comparten los 
   const offline = JSON.parse(read('atlas-integrity.json')).files;
   assert.equal(rows.length, 504);
   assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
-  assert.equal(rows.filter(row => row.lot === 'A' && row.paths).length, 27);
-  assert.equal(rows.filter(row => row.catalog === 'OBJ-11').length, 300);
+  for (const [lot,count] of Object.entries({A:27,B:20,C:6,D:20})) {
+    assert.equal(rows.filter(row => row.lot === lot && row.paths).length,count,lot);
+  }
+  assert.equal(rows.filter(row => row.catalog === 'OBJ-11' && row.paths).length,300);
+  assert.equal(rows.filter(row => row.catalog === 'V5.6').length,131);
+  for (const file of globalThis.AtlasObjectArtComparisonFiles) assert.ok(offline[file],file);
   for (const row of rows) {
     const mapped = Object.hasOwn(globalThis.AtlasObjectArtAssets,row.id) ? globalThis.AtlasObjectArtAssets[row.id] : null;
     assert.deepEqual(row.paths,mapped,row.id);
@@ -71,4 +75,28 @@ test('ART-OBJ-12 · los estudios y las demostraciones conservan la referencia de
     assert.ok(html.includes(globalThis.AtlasObjectArtAssets[id][64]),id);
   }
   assert.ok(h.x.AtlasMEC06Actions.ficha('modulo_luminoso').includes(globalThis.AtlasObjectArtAssets.modulo_luminoso[256]));
+});
+
+
+test('ART-OBJ-12 · la ficha de coleccionable conserva el nombre breve y amplía su explicación', () => {
+  const h = make({headless:true,full:true,app:sources.map(read).join('\n')+'\n'+read('js/app.js')});
+  const id = 'RAR-07';
+  h.g.addInventory(id,1);
+  const model = h.A.detailModel(id);
+  assert.equal(model.name,'Lengua de dragón');
+  assert.match(model.description,/Glosopetra.*dientes fósiles de tiburón/);
+  assert.ok(model.art.includes(globalThis.AtlasObjectArtAssets[id][256]));
+  const reused = globalThis.AtlasObjectArtReview.find(row => row.id === 'NUM-09');
+  assert.equal(reused.name,'Estátero lidio');
+  assert.equal(reused.paths,null);
+  assert.match(reused.previous.label,/Birr etíope/);
+});
+
+test('ART-OBJ-12 · una revisión offline anterior de la misma beta necesita actualizar sus recursos', () => {
+  const {isCurrentRevision} = require('../www/js/atlas-pwa-update.js');
+  const release = require('../www/atlas-release.json');
+  assert.match(release.revision,/^gran-atlas-v5\.6\.9-naturalist-[a-f0-9]{12}$/);
+  assert.equal(isCurrentRevision({version:release.version,cache:release.revision,ready:true},release),true);
+  assert.equal(isCurrentRevision({version:release.version,cache:'gran-atlas-v5.6.9-naturalist-d4a2e359234b',ready:true},release),false);
+  assert.equal(isCurrentRevision({version:release.version,ready:true},{version:release.version}),true);
 });

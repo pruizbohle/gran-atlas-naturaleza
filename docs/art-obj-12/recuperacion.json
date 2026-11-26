@@ -327,7 +327,10 @@
   },
   "collectibles": {
     "BOT-14": {
-      "note": "El comercio de OBJ-11 muestra vainas de vainilla. La pieza pertenece al herbario y requiere la planta diagnóstica."
+      "origin": "OBJ-11",
+      "source": "com-vainilla-mexicana",
+      "state": "Existente sin conexión",
+      "note": "La lámina de vainilla de Veracruz muestra la flor diagnóstica y las vainas de la orquídea."
     },
     "NUM-09": {
       "note": "El ID de la beta es un estátero lidio. OBJ-11 archivó un birr etíope bajo la misma clave."
@@ -335,8 +338,22 @@
     "RAR-07": {
       "origin": "OBJ-11",
       "source": "FOS-05",
-      "state": "Reutilizable previa revisión",
+      "state": "Reutilizable con adaptación",
       "note": "El diente fósil de tiburón representa la identificación histórica de una glosopetra."
     }
+  },
+  "descriptions": {
+    "RAR-01": "Cálculo que se forma en el aparato digestivo de algunos animales, en particular rumiantes. Se conservó como curiosidad de gabinete y durante siglos se le atribuyó la capacidad de contrarrestar venenos.",
+    "RAR-02": "Nombre dado al supuesto cuerno de unicornio. Muchos alicornios de colecciones europeas eran colmillos de narval, reconocibles por su forma alargada y su estría helicoidal.",
+    "RAR-03": "Material céreo que puede formarse en el aparato digestivo del cachalote. Los fragmentos recogidos en el mar o en la costa se apreciaron en perfumería por su olor tras el envejecimiento.",
+    "RAR-04": "Piedra que la tradición situaba en la cabeza del sapo. Los objetos históricos llamados así suelen ser pequeños dientes fosilizados de peces, en ocasiones montados como joyas.",
+    "RAR-05": "Objeto poroso al que se atribuyó la facultad de absorber el veneno de una mordedura. Las piezas de gabinete incluyen materiales de origen y composición diversos, como hueso carbonizado.",
+    "RAR-06": "Concreción ferruginosa con un núcleo suelto capaz de sonar al agitarse. También se llamó piedra de águila por la creencia de que algunas aves la llevaban al nido.",
+    "RAR-07": "Glosopetra, nombre histórico de ciertos dientes fósiles de tiburón. Su forma triangular dio origen a interpretaciones como lenguas petrificadas de dragones y serpientes.",
+    "RAR-08": "Cápsula córnea que protege el embrión de ciertas rayas y tiburones ovíparos. Una vez vacía, puede aparecer en la orilla con sus prolongaciones todavía visibles.",
+    "RAR-09": "Muestra histórica de una sustancia aromática producida por el ciervo almizclero macho. El gabinete registra su procedencia animal y su uso histórico en perfumería.",
+    "RAR-10": "Ejemplar de gabinete atribuido al basilisco legendario. Algunas falsificaciones históricas de criaturas semejantes se hicieron a partir de rayas secas y deformadas.",
+    "RAR-11": "Resina vegetal roja del drago de Socotra. La muestra representa el material comercializado históricamente como pigmento y como ingrediente de barnices.",
+    "RAR-12": "Pieza ofrecida como colmillo de una criatura extraordinaria. Se conserva como ejemplo de atribución de gabinete con procedencia e identificación pendientes."
   }
 }

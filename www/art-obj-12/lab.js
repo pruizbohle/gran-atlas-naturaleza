@@ -11,7 +11,7 @@ const grid = get('grid');
 const viewer = get('viewer');
 const params = new URLSearchParams(location.search);
 const normalize = text => text.normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase();
-const ui = {lot:Object.hasOwn(lots, params.get('lote')) ? params.get('lote') : 'A', dark:false};
+const ui = {lot:Object.hasOwn(lots, params.get('lote')) ? params.get('lote') : 'A'};
 const marker = '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="10" width="72" height="80" rx="6" fill="#a9855a" stroke="#604a35" stroke-width="2.5"/><rect x="21" y="17" width="58" height="66" rx="3" fill="none" stroke="#604a35" stroke-dasharray="3 3"/><text x="50" y="65" text-anchor="middle" fill="#604a35" font-family="Georgia" font-size="48" font-weight="bold">?</text></svg>';
 
 function node(tag, text, className) {
@@ -70,7 +70,7 @@ function figure(label, url, resolution, size, isMarker = false) {
   const fig = node('figure');
   const caption = node('figcaption', label);
   if (url) {
-    const link = node('a','Abrir archivo de ' + resolution + ' px');
+    const link = node('a',typeof resolution === 'number' ? 'Abrir archivo de ' + resolution + ' px' : 'Abrir boceto vectorial');
     link.href = url;
     caption.append(node('br'),link);
   }
@@ -83,21 +83,28 @@ function show(row) {
   const title = node('h2',row.name);
   title.id = 'viewer-title';
   const details = node('div', '', 'views');
-  for (const pixels of [64,128,256,512]) {
-    if (!row.paths && pixels !== size) continue;
-    details.append(figure('Ilustración · ' + pixels + ' px', art.src(row.id,pixels), pixels, pixels));
-  }
+  details.append(figure('Ilustración · ' + size + ' px', art.src(row.id,size), size, size));
   if (row.previous) {
     const {kind,label,paths,external} = row.previous;
     const resolution = paths?.[size] ? size : Number(Object.keys(paths || {})[0]);
     const url = !external && paths?.[resolution] ? '../' + paths[resolution] : '';
-    if (url || kind === 'marcador') details.append(figure(label,url,resolution,size,kind === 'marcador'));
+    if (url || kind === 'marcador') {
+      details.append(figure(label,url,kind === 'boceto' ? 'SVG' : resolution,size,kind === 'marcador'));
+    }
+  }
+  const variants = node('div', '', 'views');
+  if (row.paths) {
+    for (const pixels of [64,128,256,512].filter(pixels => pixels !== size)) {
+      variants.append(figure('Ilustración · ' + pixels + ' px',art.src(row.id,pixels),pixels,pixels));
+    }
   }
   const info = node('p',[row.id,row.category,row.state,row.origin,row.reference].filter(Boolean).join(' · '),'meta');
   const section = get('viewer-content');
   section.replaceChildren(title,info);
   if (row.note) section.append(node('p',row.note));
-  section.append(details);
+  section.append(details,variants);
+  params.set('id',row.id);
+  history.replaceState(null,'','?' + params);
   if (!viewer.open) viewer.showModal();
 }
 
@@ -115,7 +122,6 @@ for (const [id,label] of Object.entries(lots)) {
   get('lots').append(button);
 }
 function background(dark) {
-  ui.dark = dark;
   document.body.dataset.background = dark ? 'dark' : 'light';
   get('light').setAttribute('aria-pressed',String(!dark));
   get('dark').setAttribute('aria-pressed',String(dark));
@@ -130,3 +136,10 @@ grid.addEventListener('click',event => {
   if (card) show(byId.get(card.dataset.id));
 });
 render();
+
+viewer.addEventListener('close',() => {
+  params.delete('id');
+  history.replaceState(null,'','?' + params);
+});
+const initial = byId.get(params.get('id'));
+if (initial?.lot === ui.lot) show(initial);

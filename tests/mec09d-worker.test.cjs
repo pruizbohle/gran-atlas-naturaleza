@@ -31,6 +31,16 @@ test('MEC09D trabajador: instalación autorizada verifica cada archivo del manif
  // Sin red: los recursos se sirven desde la revisión inmutable, sin consultar la red y sin importar la consulta.
  w.net.online=false;const before=w.requests.length;
  const js=await w.get(scope+'js/app.js?v=consulta-antigua');assert.equal(await js.text(),fs.readFileSync(path.join(WWW,'js/app.js'),'utf8'));assert.equal(w.requests.length,before);
+ // ART-OBJ-12: las láminas y la biblioteca comparten la revisión verificada.
+ const artFiles=['MAT-N03/inventario-64','globo_celeste/clasica-512','engranaje/inventario-128','induccion/clasica-256','ARM-02/inventario-64'];
+ for(const file of artFiles){
+  const rel='objetos-cientificos/arte/'+file+'.webp';
+  const response=await w.get(scope+rel);
+  assert.deepEqual(Buffer.from(await response.arrayBuffer()),fs.readFileSync(path.join(WWW,rel)),rel);
+ }
+ const lab=await w.get(scope+'art-obj-12/?lote=A','navigate');
+ assert.match(await lab.text(),/Biblioteca de ilustraciones/);
+ assert.equal(w.requests.length,before);
  // Un script inexistente nunca se convierte en HTML: devuelve error de red.
  const missing=await w.get(scope+'js/no-existe.js');assert.equal(missing.type,'error');
  // Una navegación sin red cae en index.html de la revisión.

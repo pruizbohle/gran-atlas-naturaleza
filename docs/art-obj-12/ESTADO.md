@@ -4,7 +4,7 @@
 - Referencia artística OBJ-11 en `952d9c0e9660eb1c6921bb162ef38be3d901925b`. Iconografía inicial en `a1d22c7b0fc52c71faaa955545f694a54c98a868` y lote de revisión en `3ce29ecd921b05e2d2acc48dfc09b2940a1f766b`.
 - Último lote terminado: D · Estudios y demostraciones. Los cuatro lotes reúnen las 73 referencias de MEC-06 integradas.
 - Último commit de arte: `git log -1 --format=%H -- www/objetos-cientificos/arte`.
-- Próximo trabajo inmediato: trasladar los archivos de los 300 coleccionables de OBJ-11 y de todas las incorporaciones con arte recuperable.
+- Próximo trabajo inmediato: producir los 129 coleccionables del inventario de V5.6 pendientes de lámina.
 
 ## Lote A
 
@@ -47,19 +47,20 @@ Pasaron 32 pruebas de MEC-06, persistencia MEC-09D, caché verificada, restaurac
 
 ## Auditoría y recuperación
 
-La [matriz MEC-06](referencias-mec06.csv) registra las 73 referencias comprobadas. El laboratorio de OBJ-05 está protegido por autenticación. Se cotejaron el registro, los candidatos y los archivos de OBJ-05 conservados en OBJ-11. La rama `main` remontaba a `9006b53b2cf5dcda9b0f6e3acbaa330f0e0b28b3`, cuya cabecera informa V5.6.0 Beta.
+La [matriz MEC-06](referencias-mec06.csv) registra las 73 referencias comprobadas. El laboratorio de OBJ-05 está protegido por autenticación. Se cotejaron el registro, los candidatos y los archivos de OBJ-05 conservados en OBJ-11. El [informe de calidad](CALIDAD.md) identifica las fuentes comprobadas y las pruebas. La rama `main` remontaba a `9006b53b2cf5dcda9b0f6e3acbaa330f0e0b28b3`, cuya cabecera informa V5.6.0 Beta.
 
-La [matriz de la beta](coleccionables.csv) confirma 431 IDs, con 300 coincidencias de ID y nombre con OBJ-11. Los [131 registros incorporados](coleccionables-v56-pendientes.csv) se revisaron aparte. `NUM-09` identifica el estátero lidio en la beta y un birr etíope archivado en OBJ-11.
+La [matriz de la beta](coleccionables.csv) confirma 431 IDs, con 300 coincidencias de ID y nombre con OBJ-11. Hay 302 coleccionables integrados. De los 131 incorporados se recuperaron BOT-14 y RAR-07. El [inventario de pendientes](coleccionables-v56-pendientes.csv) contiene los otros 129 IDs. `NUM-09` identifica el estátero lidio en la beta y un birr etíope archivado en OBJ-11.
 
 ## Reproducir
 
 ```bash
+git fetch origin experiment/scientific-illustration-objects
 mkdir -p /tmp/atlas-obj11
 git archive 952d9c0 docs/objetos-cientificos/catalogo-300.json docs/objetos-cientificos/preparar-arte.py docs/objetos-cientificos/materiales-futuros.tsv www/objetos-cientificos | tar -x -C /tmp/atlas-obj11
 node scripts/build-art-obj-12.cjs /tmp/atlas-obj11
 node scripts/build-naturalist-release.cjs
 ```
 
-La orden de recuperación es `node scripts/build-art-obj-12.cjs /tmp/atlas-obj11 --recover=A`. Las maestras PNG y el plan de cortes se guardan en este directorio. La exportación opcional de las once láminas usa `python scripts/prepare-art-obj-12.py /tmp/atlas-obj11 A`.
+La orden de recuperación es `node scripts/build-art-obj-12.cjs /tmp/atlas-obj11 --recover=A`. Las maestras PNG, los cortes y las capas se guardan en este directorio. La exportación de un lote usa `python scripts/prepare-art-obj-12.py /tmp/atlas-obj11 A`, con el lote correspondiente. Para volver a extraer comparaciones de ART-COL-01, se usa `git archive 451e844 www/assets/collectibles-draft www/data/atlas_coleccionables_240_manifest_v2.json` y se pasa la carpeta de extracción en `--draft=<directorio>`. Los archivos ya integrados se conservan en Git.
 
-El punto de entrada del laboratorio es `www/art-obj-12/index.html?lote=A`. El juego y el laboratorio leen el mismo manifiesto de WebP.
+El punto de entrada en el repositorio es `www/art-obj-12/index.html?lote=A`. El juego y el laboratorio leen el mismo manifiesto de WebP.

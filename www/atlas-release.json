@@ -1,6 +1,8 @@
 {
   "version": "5.6.9",
+  "revision": "gran-atlas-v5.6.9-naturalist-ce39fa4cf26a",
   "build": "MEC-09C",
+  "artObj12": {"laboratory":"art-obj-12/","workshop":73,"collectibles":302,"experimental":true},
   "label": "5.6.9 Beta — MEC-09C (interfaz móvil, navegación y rendimiento)",
   "v569c": {"mec09c": true, "beta": true, "mobileUX": true, "consolidation": "5.6.9", "presentationOnly": true, "balance": "sin cambios (BAL-01)", "apk": false},
   "v569b": {"mec09b": true, "beta": true, "functionalAudit": true, "consolidation": "5.6.9", "progressionController": true, "daguerreotypePlates": "state.mec06.plates", "geographicCoverage": {"voyages": 6, "digSites": 3, "newRegions": 0}, "balance": "BAL-01 provisional", "apk": false},

@@ -1,7 +1,7 @@
 /* El Gran Atlas · V5.6.1 Beta — MEC-01 · presentación de colecciones y gabinetes.
  * Solo genera HTML a partir de modelos que prepara app.js; no modifica la partida.
- * Sin arte definitivo: las piezas usan la lámina genérica «?» y las no descubiertas,
- * una silueta sin nombre. */
+ * Las piezas pendientes usan la lámina genérica «?». Las no descubiertas
+ * se muestran con una silueta sin nombre. */
 (function(root){'use strict';
 const esc=x=>String(x??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const fmt=n=>new Intl.NumberFormat('es-CL').format(Math.floor(Number(n)||0));

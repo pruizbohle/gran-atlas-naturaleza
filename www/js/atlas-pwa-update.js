@@ -13,6 +13,11 @@
     return difference >= 0 && next[difference] > current[difference];
   }
 
+  function isCurrentRevision(status, release) {
+    return status?.ready === true && status.version === release.version &&
+      (!release.revision || status.cache === release.revision);
+  }
+
   function backupSave(storage) {
     const raw = storage.getItem(SAVE);
     if (raw !== null) {
@@ -33,12 +38,12 @@
     try {
       const response = await fetch(endpoint, { cache: 'no-store', signal: abort.signal });
       if (!response.ok) throw Error('HTTP ' + response.status);
-      const { version, channel } = await response.json();
+      const { version, channel, revision } = await response.json();
       if (typeof version !== 'string' || !versionPattern.test(version)) throw Error('Versión inválida');
       // MEC-02: el canal (beta o estable) se informa aparte; la versión sigue siendo numérica
       // porque la caché offline y la comparación de versiones dependen de ese formato.
       releaseChannel = channel === 'beta' ? 'beta' : 'estable';
-      return version;
+      return {version, revision:typeof revision === 'string' ? revision : null};
     } catch {
       throw Error('No se pudo consultar la versión publicada. Revisa la conexión y vuelve a intentar.');
     } finally {
@@ -91,10 +96,16 @@
     });
   }
 
-  async function downloadCandidate(serviceWorkers, base, version) {
+  async function downloadCandidate(serviceWorkers, base, release) {
+    const {version, revision} = release;
     const url = new URL('sw.js', base);
     url.searchParams.set('install', version);
     const registration = await serviceWorkers.register(url, { scope: base.href, updateViaCache: 'none' });
+    if (revision && registration.active?.scriptURL === url.href && !registration.installing && !registration.waiting) {
+      const status = await ask(registration.active, 'ATLAS_UPDATE_STATUS').catch(() => null);
+      if (isCurrentRevision(status, release)) return registration.active;
+      await registration.update();
+    }
     const worker = [registration.installing, registration.waiting, registration.active]
       .find(candidate => candidate?.scriptURL === url.href);
     if (!worker) throw Error('El servidor aún no tiene lista esa versión. Vuelve a intentar.');
@@ -103,7 +114,7 @@
       return ['installed', 'activating', 'activated'].includes(worker.state);
     }, 300000, 'La descarga tardó demasiado. Comprueba la conexión antes de reintentarlo.');
     const status = await ask(worker, 'ATLAS_UPDATE_STATUS');
-    if (status.version !== version || !status.ready) throw Error('La versión descargada todavía no está completa.');
+    if (!isCurrentRevision(status, release)) throw Error('La versión descargada todavía no está completa.');
     return worker;
   }
 
@@ -116,9 +127,9 @@
       // Earlier workers answer only their own update pages. Their live cache includes the release number.
       const versions = (await caches.keys()).flatMap(key => {
         const match = /^gran-atlas-v(\d+\.\d+\.\d+)-naturalist-[a-f\d]+$/.exec(key);
-        return match ? [match[1]] : [];
-      }).sort((a, b) => a === b ? 0 : isNewer(a, b) ? 1 : -1);
-      return { version: versions[0], ready: versions.length > 0 };
+        return match ? [{version:match[1],cache:key,ready:true}] : [];
+      }).sort((a, b) => a.version === b.version ? 0 : isNewer(a.version, b.version) ? -1 : 1);
+      return versions[0];
     }
   }
 
@@ -140,7 +151,7 @@
       lastCheck = Date.now();
       inFlight ||= fetchVersion(base).finally(() => { inFlight = null; });
       try {
-        available = await inFlight;
+        available = (await inFlight).version;
         const newer = isNewer(available, installed);
         if (manualCheck) {
           statusLink.hidden = false;
@@ -200,6 +211,7 @@
     const mb = new Intl.NumberFormat('es-CL', { maximumFractionDigits: 1 });
     let version;
     let release;
+    let published;
     let prepared;
     let exact;
     let downloadURL;
@@ -241,18 +253,19 @@
       try {
         release = await currentInstallation(serviceWorkers);
         installedLabel.textContent = release?.version || 'Sin versión offline detectada';
-        version = await fetchVersion(base);
+        published = await fetchVersion(base);
+        version = published.version;
         availableLabel.textContent = version + channelLabel();
         if (release?.version && isNewer(release.version, version)) {
           announce('Este navegador tiene una versión más reciente que la publicada.');
           return;
         }
-        if (release?.version === version && release.ready) {
+        if (isCurrentRevision(release,published)) {
           announce('El juego ya está actualizado y disponible sin conexión.');
           return;
         }
-        const update = release?.version && release.version !== version;
-        announce(update ? 'Nueva versión disponible. La descarga comienza cuando la autorices.' :
+        const update = Boolean(release?.version && (release.version !== version || published.revision));
+        announce(update ? 'Nueva revisión disponible. La descarga comienza cuando la autorices.' :
           'Prepara esta versión para jugar sin conexión.');
         prepare.textContent = update ? 'Descargar actualización' : 'Descargar para jugar sin conexión';
       } catch {
@@ -271,14 +284,14 @@
       progress.hidden = true;
       try {
         const latest = await fetchVersion(base);
-        if (latest !== version) {
+        if (latest.version !== version || latest.revision !== published.revision) {
           await inspect();
           return;
         }
         preserve();
         announce(exact === null ? 'Preparando la descarga sin partida previa…' :
           'Respaldo exacto verificado. Preparando la descarga…');
-        prepared = await downloadCandidate(serviceWorkers, base, version);
+        prepared = await downloadCandidate(serviceWorkers, base, published);
         progress.hidden = true;
         prepare.hidden = true;
         install.hidden = false;
@@ -295,7 +308,7 @@
       install.disabled = true;
       try {
         const status = await ask(prepared, 'ATLAS_UPDATE_STATUS');
-        if (!status.ready || status.version !== version) throw Error('La descarga ya no está disponible. Vuelve a prepararla.');
+        if (!isCurrentRevision(status, published)) throw Error('La descarga ya no está disponible. Vuelve a prepararla.');
         if (status.otherClients) throw Error('Hay otra pestaña o ventana del Atlas abierta. Ciérrala y vuelve a pulsar Instalar.');
         if (localStorage.getItem(SAVE) !== exact || (exact !== null && localStorage.getItem(BACKUP) !== exact)) {
           preserve();
@@ -326,7 +339,7 @@
     await inspect();
   }
 
-  if (typeof module === 'object' && module.exports) module.exports = { isNewer, backupSave };
+  if (typeof module === 'object' && module.exports) module.exports = { isNewer, isCurrentRevision, backupSave };
   if (typeof document === 'undefined') return;
   const base = new URL('./', location.href);
   const native = ['android', 'ios'].includes(root.Capacitor?.getPlatform?.());

@@ -8121,8 +8121,8 @@ if(globalThis.AtlasMuseumCuration3380){
   const detailModel=id=>{
    const it=CAT.items.get(id);if(!it?.collectible)return null;
    const st=M.pieceStatus(state,CAT,id),reg=state.collectionRegistry?.pieces?.[id];
-   return {...st,name:it.name,collection:it.collection,cabinet:it.cabinet,rarity:RARITY[it.rarity],continent:it.continent,art:art(id),
-    description:'Pieza de la colección «'+it.collection+'», destinada al gabinete de '+it.cabinet+'. Ficha provisional: sin ilustración definitiva.',
+   return {...st,name:it.name,collection:it.collection,cabinet:it.cabinet,rarity:RARITY[it.rarity],continent:it.continent,art:renderItemArt(id,256),
+    description:globalThis.AtlasObjectArtDescriptions?.[id]||'Pieza de la colección «'+it.collection+'», destinada al gabinete de '+it.cabinet+'.',
     sources:sourcesText(id),
     firstSeen:reg?(reg.firstAt?'Descubierta el '+new Date(reg.firstAt).toLocaleDateString('es-CL')+'.':'Registrada al migrar una partida anterior a MEC-01.'):''};
   };
