@@ -8,8 +8,8 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 
 | Lote | Piezas | Estado |
 | --- | ---: | --- |
-| 1 · Botánica | 31 | Integrado y validado |
-| 2 · Geología | 20 | Pendiente |
+| 1 · Botánica | 31 | Integrado, validado y publicado |
+| 2 · Geología | 20 | Integrado y validado |
 | 3 · Oceanografía | 16 | Pendiente |
 | 4 · Historia | 23 | Pendiente |
 | 5 · Daguerrotipos | 20 | Pendiente |
@@ -20,7 +20,14 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 - Nuevas e integradas BOT-13, BOT-15 a BOT-20, MAD-01 a MAD-12 y HEL-01 a HEL-12.
 - Recuperadas y corregidas 0. La cobertura del catálogo llega a 333 de 431.
 - Pasaron 26 pruebas y la revisión de Chromium móvil. [Informe](CALIDAD.md)
-- Commit reproducible con `git log -1 --format=%H -- docs/art-obj-13/planchas/01-128.webp`.
+- Commit `b18d46ad16a3f1a0b2f783dd0ef2115cd0c06eb8`.
 - [Vista filtrada de Botánica](https://el-gran-atlas-art-obj-12.muddyroadrunner17.chatgpt.site/art-obj-12/?lote=coleccionables&family=Bot%C3%A1nica)
 
-Próximo paso. Publicar el Lote 1 y preparar GEM-13 a GEM-20 y MTR-01 a MTR-12.
+## Lote 2 · Geología
+
+- Nuevas e integradas GEM-13 a GEM-20 y MTR-01 a MTR-12.
+- Recuperadas y corregidas 0. Cobertura de 353 de 431.
+- Pasaron 26 pruebas. Se revisaron todas las láminas a 64 y 128 px.
+- Commit reproducible con `git log -1 --format=%H -- docs/art-obj-13/planchas/02-128.webp`.
+
+Próximo paso. Preparar CON-13 a CON-20 y COR-13 a COR-20.

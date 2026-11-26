@@ -11,3 +11,9 @@ Se cotejaron individualmente 31 láminas nuevas y sus 124 WebP. En el herbario s
 Las planchas usan los mismos archivos que Inventario y Museo. [64 px](planchas/01-64.webp) · [128 px](planchas/01-128.webp)
 
 Pasaron 26 pruebas de ART-OBJ-12, ART-OBJ-13, MEC-01 y del trabajador offline. Chromium a 390 × 844 px verificó el visor, la búsqueda, el filtro de colección, los estados, el fondo oscuro y el acceso al Lote A de ART-OBJ-12.
+
+## Lote 2 · Geología
+
+Se cotejaron 20 láminas nuevas y sus 80 WebP. La selección distingue octaedros, prismas, cabujones, nódulos, menas y metales nativos. El ojo de gato presenta una banda de luz estrecha y la piedra lunar un velo azulado difuso. El oro y la plata conservan hábitos metálicos diferenciados. Paladio, rodio, iridio y osmio aparecen como muestras de gabinete. Para la columbita y la tantalita se distinguen los especímenes y sus matrices, con rasgos visuales que por sí solos no identifican la especie mineral.
+
+Pasaron las 26 pruebas del lote. [64 px](planchas/02-64.webp) · [128 px](planchas/02-128.webp)
