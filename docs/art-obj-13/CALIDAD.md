@@ -37,3 +37,15 @@ Se revisaron individualmente 23 láminas, 92 WebP y 26 pruebas, incluida la vari
 Las veinte escenas son recreaciones sobre placas plateadas. Se conserva el nombre de cada lugar y se describe en la ficha si la vista recrea una escena compatible con la época o una copia de un grabado o dibujo. Las reservas de los casos DAG-12 a DAG-16, DAG-19 y DAG-20 siguen el informe científico e histórico. La vista del Fuji remite a la estampa japonesa de comienzos de la década de 1830. [MEC-03](../mec03/README.md) · [Cronología MEC-09B](../mec09b/cientifico-historico.md)
 
 Se cotejaron las veinte placas y las 80 variantes a partir del catálogo vigente. Se revisó la lectura de cada escena a tamaño pequeño por su composición y silueta arquitectónica. Pasaron 26 pruebas, incluida la correspondencia de las notas entre el laboratorio y el juego. [64 px](planchas/05-64.webp) · [128 px](planchas/05-128.webp)
+
+## Lote 6 · Historia natural y rarezas
+
+Se cotejaron ocho huevos y once rarezas. Los huevos se distinguen por el perfil, el brillo, las manchas, el tono y su tamaño relativo. El tamaño se ajustó para que los huevos pequeños se lean en la casilla. Las dos entradas cuyo nombre abarca varias especies muestran ejemplos de tinamú copetón y tejedor común africano. [Tinamú copetón](https://www.amnh.org/explore/ology/ology-cards/015-eudromia-elegans?view=modal) · [Huevos del tejedor africano](https://pmc.ncbi.nlm.nih.gov/articles/PMC1312405/)
+
+Se corrigió la piedra de serpiente para representar hueso carbonizado poroso, con una superficie lisa y sin grabado. El alicornio se leyó como un colmillo helicoidal de narval y el basilisco como una raya seca alterada. La Lengua de dragón conserva su lámina aprobada. Las doce fichas de Rarezas y mitos mantienen las explicaciones de ART-OBJ-12. [Referencia histórica sobre la piedra de serpiente](https://wellcomecollection.org/works/npjfg492/items?canvas=13) · [64 px](planchas/06-64.webp) · [128 px](planchas/06-128.webp)
+
+## Validación consolidada
+
+La verificación automática recorrió las 504 fichas del laboratorio y sus 2.008 WebP únicos. Comprobó dimensiones, alfa, márgenes, rutas, huellas SHA-256 y equivalencia de las láminas procedentes de OBJ-11. Se cotejó el inventario de los 129 pendientes de ART-OBJ-12 con el manifiesto integrado. La comprobación contra ART-OBJ-12 confirmó que los sprites previos y el código de juego, catálogo, taller y guardado conservan sus archivos.
+
+Chromium móvil a 390 × 844 px verificó la navegación del laboratorio y las seis familias. Una partida de prueba cargó las piezas HEL-12, MTR-12, COR-20, MUN-07, DAG-20 y RAR-12 tras recargar. El Inventario, los Gabinetes y la ficha cargaron las variantes del mismo manifiesto. En un origen local con el trabajador real se verificó la instalación offline, la ampliación consultada de RAR-12, la reserva de 256 px de BOT-13 y el visor del laboratorio al desconectar la red.

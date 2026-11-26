@@ -5,6 +5,7 @@ const test = require('node:test');
 const {make} = require('./helpers/mec01-game.cjs');
 const plan = require('../docs/art-obj-13/planchas.json');
 const notes = require('../docs/art-obj-13/notas.json');
+const historicalNotes = require('../docs/art-obj-12/recuperacion.json').descriptions;
 const read = name => fs.readFileSync('www/' + name, 'utf8');
 const runtime = ['js/art-obj-12-assets.js','js/art-obj-12.js'].map(read).join('\n');
 require('../www/art-obj-12/data.js');
@@ -15,7 +16,9 @@ test('ART-OBJ-13 · cada ficha publicada sujeta a la auditoría inicial tiene su
   const pending = new Set(raw.split('\n').slice(1).map(line => line.split('"')[1]).filter(Boolean));
   const ids = Object.values(plan).flatMap(lot => lot.flatMap(sheet => sheet.ids.filter(Boolean)));
   assert.equal(pending.size,129);
-  assert.equal(new Set(ids).size,ids.length);
+  assert.equal(new Set(ids).size,129);
+  assert.equal(ids.length,129);
+  assert.equal([...reviewed.values()].filter(row => row.lot === 'coleccionables' && row.paths).length,431);
   for (const id of ids) {
     const row = reviewed.get(id);
     assert.ok(pending.has(id),id);
@@ -53,5 +56,8 @@ test('ART-OBJ-13 · Inventario, Gabinetes y ficha usan el mismo ID artístico', 
   for (const [id,note] of Object.entries(notes)) {
     assert.equal(reviewed.get(id).note,note,id);
     assert.equal(h.A.detailModel(id).description,note,id);
+  }
+  for (const [id,note] of Object.entries(historicalNotes)) {
+    if (id.startsWith('RAR-')) assert.equal(h.A.detailModel(id).description,note,id);
   }
 });

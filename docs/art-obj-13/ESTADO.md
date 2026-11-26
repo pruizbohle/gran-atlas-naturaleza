@@ -13,7 +13,7 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 | 3 · Oceanografía | 16 | Integrado y validado |
 | 4 · Historia | 23 | Integrado y validado |
 | 5 · Daguerrotipos | 20 | Integrado y validado |
-| 6 · Historia natural y rarezas | 19 | Pendiente |
+| 6 · Historia natural y rarezas | 19 | Integrado y validado |
 
 ## Lote 1 · Botánica
 
@@ -49,9 +49,21 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 - Nuevas e integradas DAG-01 a DAG-20.
 - Recuperadas y corregidas 0. Cobertura de 412 de 431.
 - Pasaron 26 pruebas y la revisión de las dos planchas.
-- Commit de este cierre. `git log -1 --format=%H -- docs/art-obj-13/maestras/05-asia.png`.
+- Commit `2cde95e0b699fdfb7ec0dcb4b0d16664607ddc82`.
 
-Próximo paso. Preparar HUE-13 a HUE-20, RAR-01 a RAR-06 y RAR-08 a RAR-12.
+## Lote 6 · Historia natural y rarezas
+
+- Nuevas e integradas HUE-13 a HUE-20, RAR-01 a RAR-06 y RAR-08 a RAR-12.
+- Recuperadas 0. Corregida durante la revisión RAR-05. Cobertura final de 431 de 431.
+- Se conserva RAR-07 con la ilustración de diente fósil aprobada en ART-OBJ-12, compartida con FOS-05.
+- Se revisaron ambas planchas y se verificó la revisión offline en Chromium. [Informe de calidad](CALIDAD.md)
+- Commit de este cierre. `git log -1 --format=%H -- docs/art-obj-13/maestras/06-huevos-1.png`.
+
+## Entrega
+
+Último lote terminado. Historia natural y rarezas. Se integraron las 129 láminas nuevas y sus 516 WebP. Las 302 láminas ya integradas siguen usando sus archivos de ART-OBJ-12. El inventario de pendientes está vacío. [Matriz de 431 piezas](coleccionables.csv) · [Pendientes](pendientes.csv)
+
+Próximo paso. Completar la verificación de regresión y registrar el despliegue del laboratorio consolidado.
 
 ## Recuperar el trabajo
 

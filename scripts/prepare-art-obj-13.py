@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import sys
 
+from PIL import ImageOps
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs/art-obj-13'
@@ -26,6 +28,21 @@ def main():
     if len(registered) != len(set(registered)):
         sys.exit('Un ID figura en más de una celda del plan.')
     plan = plans[args.lot]
+    scales = {}
+    for sheet in plan:
+        for name, factor in sheet.get('scale', {}).items():
+            if name not in sheet['ids'] or not 0 < factor <= 1:
+                sys.exit(f'Escala de presentación inválida: {name}')
+            scales[name] = factor
+    if scales:
+        original_export = pipeline.export_sprite
+
+        def export_scaled(name, art, method):
+            padding = round(max(art.size) * (1 / scales.get(name, 1) - 1) / 2)
+            original_export(name, ImageOps.expand(art, border=padding, fill=(0, 0, 0, 0)), method)
+
+        pipeline.export_sprite = export_scaled
+
     original = json.loads((args.reference / 'docs/objetos-cientificos/catalogo-300.json').read_text(encoding='utf-8'))
     protected = {row['ID'] for row in original['pieces']} | {'BOT-14','RAR-07'}
     for sheet in plan:
