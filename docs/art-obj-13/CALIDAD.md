@@ -2,7 +2,7 @@
 
 El manifiesto vigente se genera con `scripts/build-art-obj-12.cjs` y conserva el mapa de rutas de ART-OBJ-12. [Cobertura de coleccionables](coleccionables.csv) · [Pendientes](pendientes.csv)
 
-Las variantes de 64, 128 y 256 px de la colección forman parte de la instalación offline. Las de 512 px se verifican por tamaño y SHA-256 al solicitarlas y quedan disponibles en la caché de la revisión. Las ampliaciones que todavía no se hayan consultado requieren conexión. Las pruebas del trabajador cubren ambos casos.
+Las variantes de 64, 128 y 256 px de la colección forman parte de la instalación offline. Las de 512 px se verifican por tamaño y SHA-256 al solicitarlas y quedan disponibles en la caché de la revisión. Una ampliación de 512 px que todavía no se ha abierto en el laboratorio requiere conexión. Si una pantalla de alta densidad solicita esa misma variante automáticamente en el juego, la ficha usa la de 256 px precargada cuando pierde la conexión.
 
 ## Lote 1 · Botánica
 
@@ -23,3 +23,11 @@ Pasaron las 26 pruebas del lote. [64 px](planchas/02-64.webp) · [128 px](planch
 Se cotejaron 16 láminas y 64 variantes WebP. Las conchas se distinguen por sus aperturas, espiras, costillas y contornos. La tellina violeta representa el tipo indicado en el catálogo, que no fija una especie. Los corales se distinguen por sus pólipos, ramas, láminas o tejido. El recorte conserva la integridad de los dos corales que compartían el espacio inferior de la última plancha maestra.
 
 Pasaron 26 pruebas. [64 px](planchas/03-64.webp) · [128 px](planchas/03-128.webp)
+
+## Lote 4 · Historia
+
+Los ocho tipos monetarios emplean materiales, perfiles y motivos de su época. El estátero de Creso recibe una lámina propia. El birr original permanece disponible en la comparación histórica. Se corrigió la epigrafía del dinar abasí tomando como referencia una pieza de al-Mahdi. Las monedas del lote son interpretaciones ilustradas de sus tipos. [Estátero](https://collection.powerhouse.com.au/object/137734) · [Sólido](https://www.metmuseum.org/art/collection/search/469160) · [Dinar](https://www.metmuseum.org/art/collection/search/457626) · [Ducado](https://www.museunacional.cat/en/colleccio/ducat/francesco-foscari-doge-venice/308886-000) · [Placa sueca](https://www.clevelandart.org/print/art/1916.764) · [Macuquina](https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/03/21_MACUQUINAS.pdf)
+
+Las piezas de civilizaciones se cotejaron por material, manufactura y procedencia. Los términos sumerio, Jōmon y misisipiano se conservan con su contexto en la ficha. Las siete maravillas se representan como modelos de gabinete, con hipótesis explícitas en las fichas de los Jardines y el Coloso. [Cronología MEC-09B](../mec09b/cientifico-historico.md) · [Bucchero etrusco](https://www.metmuseum.org/art/collection/search/246198) · [Sello aqueménida](https://www.metmuseum.org/art/collection/search/323560) · [Disco de concha](https://www.metmuseum.org/art/collection/search/312661)
+
+Se revisaron individualmente 23 láminas, 92 WebP y 26 pruebas, incluida la variante de reserva de 256 px para pantallas de alta densidad sin red. [64 px](planchas/04-64.webp) · [128 px](planchas/04-128.webp)

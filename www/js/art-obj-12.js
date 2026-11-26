@@ -2,6 +2,7 @@
 (function (root) {
   'use strict';
   const files = root.AtlasObjectArtAssets;
+  const largeFiles = new Set(root.AtlasObjectArtLargeFiles);
   const script = root.document?.currentScript?.src;
   const base = script ? new URL('../', script).href : './';
 
@@ -14,7 +15,8 @@
     const url = src(id, size);
     if (!url) return '';
     const retina = src(id, size * 2);
-    const srcset = retina ? ' srcset="' + url + ' 1x, ' + retina + ' 2x"' : '';
+    const fallback = largeFiles.has(files[id][size * 2]) ? '?retina=1' : '';
+    const srcset = retina ? ' srcset="' + url + ' 1x, ' + retina + fallback + ' 2x"' : '';
     return '<img class="atlas-object-art" data-object-art="' + id + '" src="' + url + '"' + srcset +
       ' width="' + size + '" height="' + size + '" alt="" loading="lazy" decoding="async">';
   }

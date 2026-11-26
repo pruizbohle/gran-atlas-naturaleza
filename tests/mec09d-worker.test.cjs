@@ -72,4 +72,8 @@ test('ART-OBJ-13 · una ampliación consultada queda offline sin precargar todas
  assert.deepEqual(Buffer.from(await offline.arrayBuffer()),fs.readFileSync(path.join(WWW,used)));
  assert.equal(w.requests.length,requests);
  await assert.rejects(w.get(scope+unused),/offline/);
+ const compact=unused.replace('clasica-512.webp','clasica-256.webp');
+ const adaptive=await w.get(scope+unused+'?retina=1');
+ assert.deepEqual(Buffer.from(await adaptive.arrayBuffer()),fs.readFileSync(path.join(WWW,compact)));
+ assert.ok(!w.stores.get(CACHE+'-collectibles').has(scope+unused));
 });

@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const test = require('node:test');
 const {make} = require('./helpers/mec01-game.cjs');
 const plan = require('../docs/art-obj-13/planchas.json');
+const notes = require('../docs/art-obj-13/notas.json');
 const read = name => fs.readFileSync('www/' + name, 'utf8');
 const runtime = ['js/art-obj-12-assets.js','js/art-obj-12.js'].map(read).join('\n');
 require('../www/art-obj-12/data.js');
@@ -45,6 +46,12 @@ test('ART-OBJ-13 · Inventario, Gabinetes y ficha usan el mismo ID artístico', 
     h.g.open('museum');
     change('input',{mec01CabQuery:row.cabinet},row.name);
     assert.match(h.elements.panel.innerHTML,new RegExp('data-object-art="'+id+'"'));
-    assert.ok(h.A.detailModel(id).art.includes(row.paths[256]),id);
+    const art = h.A.detailModel(id).art;
+    assert.ok(art.includes(row.paths[256]),id);
+    assert.ok(art.includes(row.paths[512] + '?retina=1'),id);
+  }
+  for (const [id,note] of Object.entries(notes)) {
+    assert.equal(reviewed.get(id).note,note,id);
+    assert.equal(h.A.detailModel(id).description,note,id);
   }
 });

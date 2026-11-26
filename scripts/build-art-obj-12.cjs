@@ -24,6 +24,7 @@ const originals = new Map(collection.map(row => [row.ID, row]));
 const art13 = path.join(root,'docs/art-obj-13');
 const art13Sheets = JSON.parse(fs.readFileSync(path.join(art13,'planchas.json')));
 const art13Lots = JSON.parse(fs.readFileSync(path.join(art13,'lotes.json')));
+const art13Notes = JSON.parse(fs.readFileSync(path.join(art13,'notas.json')));
 const newArt = new Set();
 for (const [lot,sheets] of Object.entries(art13Sheets)) {
   const family = art13Lots[Number(lot)-1];
@@ -35,6 +36,9 @@ for (const [lot,sheets] of Object.entries(art13Sheets)) {
     }
     newArt.add(id);
   }
+}
+for (const [id,note] of Object.entries(art13Notes)) {
+  if (!newArt.has(id) || typeof note !== 'string' || !note.trim()) throw Error('Nota artística inválida: ' + id);
 }
 
 if (draft) {
@@ -139,9 +143,9 @@ const pieces = Object.values(globalThis.AtlasMEC03Catalog.pieces).map(piece => {
   return {
     id,lot:'coleccionables',key:'item-' + id,name,category,cabinet,
     base:'Marcador genérico',state:paths ? 'Integrada' : edition.state || (original ? 'Existente sin conexión' : 'Pendiente de ilustración'),
-    origin:edition.origin || '',reference:edition.source || (original ? id : ''),paths:paths || null,
+    origin:edition.origin || '',reference:edition.source || (edition.origin ? id : ''),paths:paths || null,
     previous:previousArt,
-    note:edition.note || (archive.has(id) ? 'El ID de la beta corresponde a otro sujeto.' : ''),
+    note:art13Notes[id] || edition.note || (archive.has(id) ? 'El ID de la beta corresponde a otro sujeto.' : ''),
     catalog:original ? 'OBJ-11' : 'V5.6',
     family:!original && !config.collectibles[id]?.origin ? art13Lots.find(lot => lot.collections.includes(category))?.name : null
   };
@@ -153,19 +157,21 @@ if (workshop.length !== 73 || pieces.length !== 431 || originals.size !== 300 ||
 const comparisons = [...new Set([...workshop,...pieces].flatMap(row =>
   row.previous?.external ? [] : Object.values(row.previous?.paths || {})))];
 const large = [...new Set(pieces.map(row => row.paths?.[512]).filter(Boolean))];
-const descriptions = {...Object.fromEntries(collection.map(row => [row.ID, row['Descripción breve']])),...config.descriptions};
+const descriptions = {...Object.fromEntries(collection.map(row => [row.ID, row['Descripción breve']])),...config.descriptions,...art13Notes};
 const quote = value => '"' + String(value ?? '').replaceAll('"','""') + '"';
-const csv = (directory, name, records) => {
+const csv = (directory, name, records, includeCabinet = false) => {
   const header = ['id','lote','nombre','categoria','referencia_mec','estado_beta','estado_actual','origen','referencia_grafica','ruta_64','ruta_128','ruta_256','ruta_512','ruta_de_origen','imagen_anterior','catalogo','nota'];
+  if (includeCabinet) header.push('gabinete','familia_artistica');
   const data = records.map(row => [row.id,row.lot,row.name,row.category,row.key,row.base,row.state,row.origin,row.reference,
     ...Object.keys(sizes).map(size => row.paths?.[size]),row.origin === 'OBJ-11' && row.reference ? artDir+'/'+row.reference+'/' : '',
-    Object.values(row.previous?.paths || {}).join(' | '),row.catalog,row.note]);
+    Object.values(row.previous?.paths || {}).join(' | '),row.catalog,row.note,
+    ...(includeCabinet ? [row.cabinet,row.family] : [])]);
   fs.writeFileSync(path.join(directory,name), '\uFEFF' + [header,...data].map(row => row.map(quote).join(';')).join('\n') + '\n');
 };
 csv(docs,'referencias-mec06.csv',workshop);
-csv(art13,'coleccionables.csv',pieces);
+csv(art13,'coleccionables.csv',pieces,true);
 const pending = pieces.filter(row => row.catalog === 'V5.6' && !row.paths);
-csv(art13,'pendientes.csv',pending);
+csv(art13,'pendientes.csv',pending,true);
 fs.writeFileSync(path.join(art13,'cobertura.json'), JSON.stringify(pieces.map(({id,name,cabinet,category,family,origin,paths}) =>
   ({id,name,cabinet,category,family,origin,paths})),null,2) + '\n');
 fs.writeFileSync(path.join(www,'js/art-obj-12-assets.js'),

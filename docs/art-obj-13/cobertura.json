@@ -5157,8 +5157,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-09/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-14",
@@ -5166,8 +5171,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-14/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-14/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-14/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-14/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-15",
@@ -5175,8 +5185,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-15/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-15/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-15/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-15/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-16",
@@ -5184,8 +5199,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-16/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-16/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-16/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-16/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-17",
@@ -5193,8 +5213,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-17/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-17/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-17/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-17/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-18",
@@ -5202,8 +5227,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-18/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-18/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-18/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-18/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-19",
@@ -5211,8 +5241,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-19/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-19/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-19/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-19/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-20",
@@ -5220,8 +5255,13 @@
     "cabinet": "Historia",
     "category": "Numismática",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-20/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-20/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-20/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-20/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-13",
@@ -5229,8 +5269,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-13/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-14",
@@ -5238,8 +5283,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-14/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-14/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-14/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-14/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-15",
@@ -5247,8 +5297,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-15/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-15/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-15/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-15/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-16",
@@ -5256,8 +5311,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-16/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-16/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-16/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-16/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-17",
@@ -5265,8 +5325,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-17/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-17/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-17/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-17/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-18",
@@ -5274,8 +5339,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-18/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-18/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-18/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-18/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-19",
@@ -5283,8 +5353,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-19/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-19/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-19/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-19/clasica-512.webp"
+    }
   },
   {
     "id": "CIV-20",
@@ -5292,8 +5367,13 @@
     "cabinet": "Historia",
     "category": "Objetos de civilizaciones",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-20/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-20/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-20/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-20/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-01",
@@ -5301,8 +5381,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-01/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-02",
@@ -5310,8 +5395,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-02/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-03",
@@ -5319,8 +5409,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-03/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-04",
@@ -5328,8 +5423,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-04/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-05",
@@ -5337,8 +5437,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-05/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-06",
@@ -5346,8 +5451,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-06/clasica-512.webp"
+    }
   },
   {
     "id": "MUN-07",
@@ -5355,8 +5465,13 @@
     "cabinet": "Historia",
     "category": "Siete maravillas antiguas",
     "family": "Historia",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MUN-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MUN-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MUN-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MUN-07/clasica-512.webp"
+    }
   },
   {
     "id": "HUE-13",
