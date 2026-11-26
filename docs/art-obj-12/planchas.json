@@ -1,0 +1,7 @@
+{
+  "A": [
+    {"file":"A-plumas.png","columns":2,"ids":["MAT-N03","MAT-N04","MAT-N05","MAT-N08"]},
+    {"file":"A-fibras.png","columns":2,"ids":["MAT-N10","MAT-N11","MAT-N12","MAT-N15"]},
+    {"file":"A-rastros.png","columns":2,"ids":["MAT-N20","MAT-N22","MAT-N24",null]}
+  ]
+}

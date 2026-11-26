@@ -35,3 +35,9 @@
 .mec01-dl dt{color:var(--soft,#796d5a)}
 .mec01-dl dd{margin:0}
 .mec01-beta{display:inline-block;padding:0 5px;border-radius:2px;background:#7b4332;color:#f4e7c5;font-size:.6em;letter-spacing:1px;vertical-align:middle}
+
+
+/* Ilustraciones de objetos en fichas y listas del Taller. */
+.atlas-object-art{object-fit:contain}
+.mec06-index .atlas-object-art,.mec02-row .atlas-object-art{width:36px;height:36px;vertical-align:middle;margin-inline-end:5px}
+.mec01-dialog-art .atlas-object-art{display:block;width:min(100%,256px);height:auto;margin-inline:auto}

@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const { createHash } = require('node:crypto');
 
 require('../www/js/naturalist-assets-v400.js');
+require('../www/js/art-obj-12-assets.js');
 const assets = globalThis.AtlasNaturalistAssets;
 for (const file of new Set(Object.values(assets.routes).flatMap(route => Object.values(route)))) {
   assert.ok(assets.cutouts[file], 'La lámina de producción requiere transparencia: ' + file);
@@ -11,7 +12,7 @@ for (const file of new Set(Object.values(assets.routes).flatMap(route => Object.
 const source = fs.readFileSync('www/sw.js', 'utf8');
 const core = [...source.match(/const CORE=\[([^;]+)\];/)[1].matchAll(/['"]([^'"]+)['"]/g)]
   .map(match => match[1].slice(2));
-const files = [...new Set([...core, ...assets.files, ...assets.relictFiles].map(file =>
+const files = [...new Set([...core, ...assets.files, ...assets.relictFiles, ...Object.values(globalThis.AtlasObjectArtAssets).flatMap(Object.values)].map(file =>
   file.endsWith('/') || !file ? file + 'index.html' : file))].sort();
 const review = assets.labFiles || [];
 const withPlaceholders = source.replace(/const CACHE='[^']+'/, 'const CACHE=REVISION')

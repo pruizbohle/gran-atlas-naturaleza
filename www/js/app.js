@@ -7995,8 +7995,8 @@ if(globalThis.AtlasMuseumCuration3380){
    (it.beta?'<rect x="26" y="70" width="48" height="13" rx="2" fill="#7b4332"/><text x="50" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" font-weight="700" letter-spacing="1.5" fill="#f4e7c5">BETA</text>':'')+
    '</svg>';
  };
- renderItemArt=function(id){
-  const art=artBefore560(id);
+ renderItemArt=function(id,size=64){
+  const art=globalThis.AtlasObjectArt?.image(id,size)||artBefore560(id);
   return !art||/^<svg[^>]*><\/svg>$/.test(art)?genericArt560(id):art;
  };
  const museumArtBefore560=museumCardArt;
@@ -9462,7 +9462,8 @@ if(globalThis.AtlasMuseumCuration3380){
    const a=audit(id),st=states(id),qty=state.inventory?.[id]||0,link=x=>'<button type="button" class="btn alt" data-action="mec06-item" data-id="'+esc6(x)+'">'+esc6(name(x))+'</button>';
    const recipe=a.recipe?Object.entries(a.recipe).map(([m,n])=>link(m)+' ×'+n).join(' '):'—';
    const loc=X6.ARTIFACTS[id]?(X6.PLACES[st.location]?.label||'Sin catalogar'):st.location||'—';
-   return '<h3 id="mec01-dialog-title">'+esc6(a.name)+'</h3><p class="small">'+esc6(a.category)+' · Taller '+C.ROMAN[a.workshop]+' · <span data-art="'+esc6(a.art)+'">arte: '+esc6(a.art)+'</span></p>'+
+   const art=globalThis.AtlasObjectArt?.image(id,256);
+   return (art?'<div class="mec01-dialog-art">'+art+'</div>':'')+'<h3 id="mec01-dialog-title">'+esc6(a.name)+'</h3><p class="small">'+esc6(a.category)+' · Taller '+C.ROMAN[a.workshop]+' · <span data-art="'+esc6(a.art)+'">arte: '+esc6(a.art)+'</span></p>'+
     '<dl class="mec01-dl"><dt>Cantidad</dt><dd>'+(X6.ARTIFACTS[id]?(st.catalogued?'Catalogado (único)':'Sin catalogar'):qty)+'</dd><dt>Estado</dt><dd>'+esc6(loc)+(st.equipped?' · equipado':'')+(st.exhibited?' · exhibido':'')+'</dd>'+
     '<dt>Para qué sirve</dt><dd>'+esc6(a.benefit||a.uses.map(u=>u.label).slice(0,3).join('; ')||'Sin uso conocido')+'</dd><dt>Receta</dt><dd>'+recipe+'</dd></dl>'+
     '<details><summary>Cómo se obtiene · '+a.sources.length+'</summary><ul class="small">'+(a.sources.map(x=>'<li>'+esc6(x)+'</li>').join('')||'<li>Sin fuente registrada</li>')+'</ul></details>'+
@@ -9479,7 +9480,8 @@ if(globalThis.AtlasMuseumCuration3380){
    const studies=Object.values(X6.STUDIES).map(t=>{const c=studyCheck(t.id,now);return '<div class="mec02-row"><span>'+esc6(t.label)+(c.ok?'':' · <span class="small">'+esc6(c.reasons.slice(0,2).join(' · '))+'</span>')+'</span><button type="button" class="btn alt" data-action="mec06-study" data-id="'+t.id+'"'+(c.ok?'':' disabled')+'>Realizar</button></div>';}).join('');
    const demos=Object.values(X6.DEMOS).map(d=>{const c=demoCheck(d.id,now);return '<div class="mec02-row"><span>'+esc6(d.label)+(c.ok?'':' · <span class="small">'+esc6(c.reasons.join(' · '))+'</span>')+'</span><button type="button" class="btn alt" data-action="mec06-demo" data-id="'+d.id+'"'+(c.ok?'':' disabled')+'>Presentar</button></div>';}).join('');
    const cats={};for(const id of Object.keys(ITEMS)){if(K3()?.pieces?.[id])continue;const c=categoryOf(id);(cats[c]=cats[c]||[]).push(id);}
-   const index=Object.entries(cats).map(([c,ids])=>'<details><summary>'+esc6(c)+' · '+ids.length+'</summary><p>'+ids.map(id=>'<button type="button" class="btn alt" data-action="mec06-item" data-id="'+esc6(id)+'">'+esc6(name(id))+((state.inventory[id]||0)?' ×'+state.inventory[id]:'')+'</button>').join(' ')+'</p></details>').join('');
+   const icon=id=>globalThis.AtlasObjectArt?.image(id)||'';
+   const index=Object.entries(cats).map(([c,ids])=>'<details><summary>'+esc6(c)+' · '+ids.length+'</summary><p>'+ids.map(id=>'<button type="button" class="btn alt" data-action="mec06-item" data-id="'+esc6(id)+'">'+icon(id)+esc6(name(id))+((state.inventory[id]||0)?' ×'+state.inventory[id]:'')+'</button>').join(' ')+'</p></details>').join('');
    const pol=state.mec06.camera||'preguntar',camRow=catalogued('camara_daguerrotipos')?'<div class="mec02-row"><span>Cámara en expediciones</span><span>'+['preguntar','siempre','nunca'].map(p=>'<button type="button" class="btn alt" data-action="mec06-camera" data-id="'+p+'"'+(p===pol?' aria-pressed="true" disabled':'')+'>'+p[0].toUpperCase()+p.slice(1)+'</button>').join('')+'</span></div>':'';
    return '<details class="mec02-controls mec06-instruments"'+op('inst')+'><summary>Instrumentos y artefactos · Taller '+used('taller')+'/'+capacity('taller')+' · Campamento '+used('campamento')+'/'+capacity('campamento')+'</summary>'+camRow+(inst||'<p class="small">Cataloga artefactos para instalarlos o exponerlos.</p>')+(pending?'<details'+op('build')+'><summary>Por fabricar</summary>'+pending+'</details>':'')+'</details>'+
     '<details class="mec02-controls mec06-studies"'+op('studies')+'><summary>Estudios científicos</summary>'+studies+'</details>'+

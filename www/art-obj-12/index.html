@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Biblioteca de ilustraciones · El Gran Atlas</title>
+  <link rel="stylesheet" href="lab.css">
+  <script defer src="../js/art-obj-12-assets.js"></script>
+  <script defer src="../js/art-obj-12.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="lab.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand"><span>El Gran Atlas</span><a href="../index.html">Abrir la beta experimental</a></div>
+      <h1>Biblioteca de ilustraciones</h1>
+      <p>ART-OBJ-12 · Revisión experimental de la beta</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav id="lots" aria-label="Lotes de ilustración"></nav>
+    <section class="controls" aria-label="Controles de revisión">
+      <label class="search">Nombre o ID<input id="query" type="search" placeholder="Buscar en el lote"></label>
+      <label>Estado<select id="status"><option value="all">Todos</option><option value="pending">Pendientes</option><option value="integrated">Integradas</option></select></label>
+      <label>Tamaño<select id="size"><option value="64">64 px</option><option value="128" selected>128 px</option><option value="256">256 px</option><option value="512">512 px</option></select></label>
+      <fieldset><legend>Fondo</legend><button type="button" id="light" aria-pressed="true">Claro</button><button type="button" id="dark" aria-pressed="false">Oscuro</button></fieldset>
+    </section>
+    <div class="heading"><h2 id="title">Materiales animales</h2><p id="result" aria-live="polite"></p></div>
+    <div class="grid" id="grid"></div>
+  </main>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <form method="dialog"><button class="close" aria-label="Cerrar visor">Cerrar</button></form>
+    <div id="viewer-content"></div>
+  </dialog>
+</body>
+</html>
