@@ -17,3 +17,9 @@ Pasaron 26 pruebas de ART-OBJ-12, ART-OBJ-13, MEC-01 y del trabajador offline. C
 Se cotejaron 20 láminas nuevas y sus 80 WebP. La selección distingue octaedros, prismas, cabujones, nódulos, menas y metales nativos. El ojo de gato presenta una banda de luz estrecha y la piedra lunar un velo azulado difuso. El oro y la plata conservan hábitos metálicos diferenciados. Paladio, rodio, iridio y osmio aparecen como muestras de gabinete. Para la columbita y la tantalita se distinguen los especímenes y sus matrices, con rasgos visuales que por sí solos no identifican la especie mineral.
 
 Pasaron las 26 pruebas del lote. [64 px](planchas/02-64.webp) · [128 px](planchas/02-128.webp)
+
+## Lote 3 · Oceanografía
+
+Se cotejaron 16 láminas y 64 variantes WebP. Las conchas se distinguen por sus aperturas, espiras, costillas y contornos. La tellina violeta representa el tipo indicado en el catálogo, que no fija una especie. Los corales se distinguen por sus pólipos, ramas, láminas o tejido. El recorte conserva la integridad de los dos corales que compartían el espacio inferior de la última plancha maestra.
+
+Pasaron 26 pruebas. [64 px](planchas/03-64.webp) · [128 px](planchas/03-128.webp)

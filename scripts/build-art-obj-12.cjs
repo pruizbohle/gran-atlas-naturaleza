@@ -25,9 +25,12 @@ const art13 = path.join(root,'docs/art-obj-13');
 const art13Sheets = JSON.parse(fs.readFileSync(path.join(art13,'planchas.json')));
 const art13Lots = JSON.parse(fs.readFileSync(path.join(art13,'lotes.json')));
 const newArt = new Set();
-for (const sheet of Object.values(art13Sheets).flat()) {
-  for (const id of sheet.ids.filter(Boolean)) {
-    if (newArt.has(id) || originals.has(id) || config.collectibles[id]?.origin || !globalThis.AtlasMEC03Catalog.pieces[id]) {
+for (const [lot,sheets] of Object.entries(art13Sheets)) {
+  const family = art13Lots[Number(lot)-1];
+  if (!family) throw Error('Lote desconocido: ' + lot);
+  for (const id of sheets.flatMap(sheet => sheet.ids.filter(Boolean))) {
+    const piece = globalThis.AtlasMEC03Catalog.pieces[id];
+    if (newArt.has(id) || originals.has(id) || config.collectibles[id]?.origin || !family.collections.includes(piece?.collection)) {
       throw Error('ID inválido o ya ilustrado en ART-OBJ-13: ' + id);
     }
     newArt.add(id);

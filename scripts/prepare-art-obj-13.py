@@ -21,7 +21,11 @@ def main():
     pipeline = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(pipeline)
     pipeline.ROOT = ROOT / 'www/objetos-cientificos/arte'
-    plan = json.loads((DOCS / 'planchas.json').read_text(encoding='utf-8'))[args.lot]
+    plans = json.loads((DOCS / 'planchas.json').read_text(encoding='utf-8'))
+    registered = [id for lot in plans.values() for sheet in lot for id in sheet['ids'] if id]
+    if len(registered) != len(set(registered)):
+        sys.exit('Un ID figura en más de una celda del plan.')
+    plan = plans[args.lot]
     original = json.loads((args.reference / 'docs/objetos-cientificos/catalogo-300.json').read_text(encoding='utf-8'))
     protected = {row['ID'] for row in original['pieces']} | {'BOT-14','RAR-07'}
     for sheet in plan:

@@ -4933,8 +4933,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-13/clasica-512.webp"
+    }
   },
   {
     "id": "CON-14",
@@ -4942,8 +4947,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-14/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-14/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-14/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-14/clasica-512.webp"
+    }
   },
   {
     "id": "CON-15",
@@ -4951,8 +4961,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-15/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-15/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-15/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-15/clasica-512.webp"
+    }
   },
   {
     "id": "CON-16",
@@ -4960,8 +4975,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-16/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-16/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-16/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-16/clasica-512.webp"
+    }
   },
   {
     "id": "CON-17",
@@ -4969,8 +4989,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-17/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-17/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-17/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-17/clasica-512.webp"
+    }
   },
   {
     "id": "CON-18",
@@ -4978,8 +5003,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-18/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-18/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-18/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-18/clasica-512.webp"
+    }
   },
   {
     "id": "CON-19",
@@ -4987,8 +5017,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-19/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-19/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-19/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-19/clasica-512.webp"
+    }
   },
   {
     "id": "CON-20",
@@ -4996,8 +5031,13 @@
     "cabinet": "Oceanografía",
     "category": "Conchas de los océanos",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-20/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-20/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-20/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-20/clasica-512.webp"
+    }
   },
   {
     "id": "COR-13",
@@ -5005,8 +5045,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-13/clasica-512.webp"
+    }
   },
   {
     "id": "COR-14",
@@ -5014,8 +5059,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-14/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-14/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-14/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-14/clasica-512.webp"
+    }
   },
   {
     "id": "COR-15",
@@ -5023,8 +5073,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-15/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-15/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-15/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-15/clasica-512.webp"
+    }
   },
   {
     "id": "COR-16",
@@ -5032,8 +5087,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-16/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-16/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-16/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-16/clasica-512.webp"
+    }
   },
   {
     "id": "COR-17",
@@ -5041,8 +5101,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-17/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-17/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-17/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-17/clasica-512.webp"
+    }
   },
   {
     "id": "COR-18",
@@ -5050,8 +5115,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-18/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-18/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-18/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-18/clasica-512.webp"
+    }
   },
   {
     "id": "COR-19",
@@ -5059,8 +5129,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-19/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-19/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-19/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-19/clasica-512.webp"
+    }
   },
   {
     "id": "COR-20",
@@ -5068,8 +5143,13 @@
     "cabinet": "Oceanografía",
     "category": "Corales del mundo",
     "family": "Oceanografía",
-    "origin": "",
-    "paths": null
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-20/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-20/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-20/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-20/clasica-512.webp"
+    }
   },
   {
     "id": "NUM-09",

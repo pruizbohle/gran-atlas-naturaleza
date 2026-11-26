@@ -10,7 +10,7 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 | --- | ---: | --- |
 | 1 · Botánica | 31 | Integrado, validado y publicado |
 | 2 · Geología | 20 | Integrado y validado |
-| 3 · Oceanografía | 16 | Pendiente |
+| 3 · Oceanografía | 16 | Integrado y validado |
 | 4 · Historia | 23 | Pendiente |
 | 5 · Daguerrotipos | 20 | Pendiente |
 | 6 · Historia natural y rarezas | 19 | Pendiente |
@@ -28,6 +28,13 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 - Nuevas e integradas GEM-13 a GEM-20 y MTR-01 a MTR-12.
 - Recuperadas y corregidas 0. Cobertura de 353 de 431.
 - Pasaron 26 pruebas. Se revisaron todas las láminas a 64 y 128 px.
-- Commit reproducible con `git log -1 --format=%H -- docs/art-obj-13/planchas/02-128.webp`.
+- Commit `6ec92f96746b4da9ac8f659e654c2d8a3b072a57`.
 
-Próximo paso. Preparar CON-13 a CON-20 y COR-13 a COR-20.
+## Lote 3 · Oceanografía
+
+- Nuevas e integradas CON-13 a CON-20 y COR-13 a COR-20.
+- Recuperadas y corregidas 0. Cobertura de 369 de 431.
+- Pasaron 26 pruebas. Se revisaron ambas planchas y los recortes de los corales.
+- Commit de este cierre. `git log -1 --format=%H -- docs/art-obj-13/maestras/03-conchas-1.png`.
+
+Próximo paso. Preparar NUM-09, NUM-14 a NUM-20, CIV-13 a CIV-20 y MUN-01 a MUN-07.
