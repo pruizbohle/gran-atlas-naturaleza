@@ -56,14 +56,18 @@ La auditoría inicial cotejó los 129 IDs del inventario de ART-OBJ-12 con el ca
 - Nuevas e integradas HUE-13 a HUE-20, RAR-01 a RAR-06 y RAR-08 a RAR-12.
 - Recuperadas 0. Corregida durante la revisión RAR-05. Cobertura final de 431 de 431.
 - Se conserva RAR-07 con la ilustración de diente fósil aprobada en ART-OBJ-12, compartida con FOS-05.
-- Se revisaron ambas planchas y se verificó la revisión offline en Chromium. [Informe de calidad](CALIDAD.md)
-- Commit de este cierre. `git log -1 --format=%H -- docs/art-obj-13/maestras/06-huevos-1.png`.
+- Pasaron 26 pruebas del lote. Se revisaron ambas planchas y se verificó la revisión offline en Chromium. [Informe de calidad](CALIDAD.md)
+- Commit `beef378a30c4f2f35cd156525e4e5361fdbc6e2b`.
 
 ## Entrega
 
 Último lote terminado. Historia natural y rarezas. Se integraron las 129 láminas nuevas y sus 516 WebP. Las 302 láminas ya integradas siguen usando sus archivos de ART-OBJ-12. El inventario de pendientes está vacío. [Matriz de 431 piezas](coleccionables.csv) · [Pendientes](pendientes.csv)
 
-Próximo paso. Completar la verificación de regresión y registrar el despliegue del laboratorio consolidado.
+Despliegue privado completado. Revisión web `gran-atlas-v5.6.9-naturalist-cec44a6343ba`, versión 5 de Sites, despliegue `appgdep_6b08bd8b580081919629ff98b9fddb42`. [Laboratorio consolidado](https://el-gran-atlas-art-obj-12.muddyroadrunner17.chatgpt.site/art-obj-12/?lote=coleccionables) · [Beta experimental](https://el-gran-atlas-art-obj-12.muddyroadrunner17.chatgpt.site/) · [Rama de trabajo](https://github.com/pruizbohle/gran-atlas-naturaleza/tree/art-obj-13)
+
+La última revisión de continuidad se identifica con `git log -1 --format=%H -- docs/art-obj-13/ESTADO.md`. La punta remota de MEC-09D volvió a comprobarse al cierre.
+
+Próximo paso. Revisar la biblioteca publicada y registrar los ajustes concretos que se soliciten por ID.
 
 ## Recuperar el trabajo
 
