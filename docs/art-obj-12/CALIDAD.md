@@ -34,6 +34,8 @@ De los 131 coleccionables nuevos se recuperaron dos. BOT-14 conserva la lámina 
 
 ## Validación
 
+La suite de cierre aprobó las 136 pruebas ejecutadas.
+
 - Se comprobaron la ficha y el inventario de materiales, el Museo y sus ampliaciones, el Taller, el Campamento, los estudios y las demostraciones. Las pruebas verifican los modelos de presentación del juego y su correspondencia con el laboratorio.
 - La PWA verificó la instalación completa y sirvió offline el laboratorio y muestras de A, B, C, D y del catálogo. La revisión de caché se distingue de otra revisión de V5.6.9.
 - Se probó la lectura de partidas anteriores, la restauración, la persistencia y el comportamiento ante un fallo de escritura.

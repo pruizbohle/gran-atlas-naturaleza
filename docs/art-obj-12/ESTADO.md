@@ -3,8 +3,25 @@
 - Rama de trabajo `art-obj-12`, sobre V5.6.9 Beta en `d7cc4cb30b44656f922c2413a020ea93ee03c989`.
 - Referencia artística OBJ-11 en `952d9c0e9660eb1c6921bb162ef38be3d901925b`. Iconografía inicial en `a1d22c7b0fc52c71faaa955545f694a54c98a868` y lote de revisión en `3ce29ecd921b05e2d2acc48dfc09b2940a1f766b`.
 - Último lote terminado: D · Estudios y demostraciones. Los cuatro lotes reúnen las 73 referencias de MEC-06 integradas.
-- Último commit de arte: `git log -1 --format=%H -- www/objetos-cientificos/arte`.
+- Último commit de integración y biblioteca: `cdd3544df6bbc3588d1cd00911a11bf7ea937c32`.
+- Último commit con cambios de láminas: `9a0a2cbcc4d2c89f5a3d43947ca044428239a356`.
+- Revisión PWA: `gran-atlas-v5.6.9-naturalist-83c2e84a7c7a`.
 - Próximo trabajo inmediato: producir los 129 coleccionables del inventario de V5.6 pendientes de lámina.
+
+## Acceso y recuperación
+
+- [Biblioteca ART-OBJ-12](https://el-gran-atlas-art-obj-12.muddyroadrunner17.chatgpt.site/art-obj-12/)
+- [Beta web experimental](https://el-gran-atlas-art-obj-12.muddyroadrunner17.chatgpt.site/)
+- [Rama art-obj-12](https://github.com/pruizbohle/gran-atlas-naturaleza/tree/art-obj-12)
+
+| Entrega | Commit |
+| --- | --- |
+| Matriz inicial y Lote A | `13867aa3132c6ce838f5bf4df69e3ee45e38591a` |
+| Lote B | `8bb554fb5c1843d9c4ff81820a7bd0a8cb5b97c4` |
+| Lote C | `aac87eaf79ecf2f52dd7127f8ab4968298deda8d` |
+| Lote D | `eafe13623583f0940c8c127774aab65de85e095a` |
+| Catálogo OBJ-11 e instalación offline | `9a0a2cbcc4d2c89f5a3d43947ca044428239a356` |
+| Biblioteca portable | `cdd3544df6bbc3588d1cd00911a11bf7ea937c32` |
 
 ## Lote A
 
