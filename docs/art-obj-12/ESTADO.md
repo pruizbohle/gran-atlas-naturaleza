@@ -2,9 +2,9 @@
 
 - Rama de trabajo `art-obj-12`, sobre V5.6.9 Beta en `d7cc4cb30b44656f922c2413a020ea93ee03c989`.
 - Referencia artística OBJ-11 en `952d9c0e9660eb1c6921bb162ef38be3d901925b`. Iconografía inicial en `a1d22c7b0fc52c71faaa955545f694a54c98a868` y lote de revisión en `3ce29ecd921b05e2d2acc48dfc09b2940a1f766b`.
-- Último lote terminado: C · Componentes. A, B y C reúnen 53 referencias integradas.
+- Último lote terminado: D · Estudios y demostraciones. Los cuatro lotes reúnen las 73 referencias de MEC-06 integradas.
 - Último commit de arte: `git log -1 --format=%H -- www/objetos-cientificos/arte`.
-- Próximo trabajo inmediato: ilustrar estudios, demostraciones e instalaciones del Lote D.
+- Próximo trabajo inmediato: trasladar los archivos de los 300 coleccionables de OBJ-11 y de todas las incorporaciones con arte recuperable.
 
 ## Lote A
 
@@ -35,6 +35,15 @@ Pasaron 32 pruebas de MEC-06, persistencia MEC-09D, caché verificada, restaurac
 - Generadas e integradas seis láminas. Engranaje de latón, espejo pulido, carta estelar, placa de daguerrotipo, módulo luminoso y componente eléctrico.
 - Los 24 WebP pasaron la comprobación de resolución, transparencia, márgenes, hashes y correspondencia con el manifiesto offline.
 - Pendientes del lote C: ninguno.
+
+
+## Lote D
+
+- Integradas 20 vistas. Las 14 de estudios, cuatro de demostraciones y dos de instalaciones.
+- Generadas 11 ilustraciones de actividad. Se exportaron nueve composiciones con láminas ya revisadas de OBJ-11 y ART-OBJ-12. Los IDs y las capas constan en [planchas.json](planchas.json) y [composiciones.json](composiciones.json).
+- La cámara de fuelle de una propuesta del Campamento se descartó. La composición integrada usa la cámara de cajas deslizantes de OBJ-11.
+- Pasaron la [revisión visual de 20 fichas](lote-d-128.webp), la comprobación de 80 WebP y las pruebas de rutas para estudios, demostraciones e instalaciones.
+- Pendientes del lote D: ninguno.
 
 ## Auditoría y recuperación
 

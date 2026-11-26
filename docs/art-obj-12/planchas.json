@@ -108,5 +108,75 @@
         "componente_electrico"
       ]
     }
+  ],
+  "D": [
+    {
+      "file": "D-muestras.png",
+      "columns": 2,
+      "ids": [
+        "analisis-plumas",
+        "analisis-pelo",
+        "analisis-escamas",
+        "estudio-osteologico"
+      ],
+      "crop": {
+        "rows": [
+          0,
+          620,
+          1199
+        ],
+        "edges": [
+          [
+            0,
+            630,
+            1312
+          ],
+          [
+            0,
+            645,
+            1312
+          ]
+        ]
+      }
+    },
+    {
+      "file": "D-registros.png",
+      "columns": 2,
+      "ids": [
+        "estudio-rastros",
+        "registro-paisajistico",
+        "revelado-placas",
+        "demo-linterna"
+      ]
+    },
+    {
+      "file": "D-presentaciones.png",
+      "columns": 2,
+      "ids": [
+        "demo-electrostatica",
+        "demo-automata",
+        "installed-taller",
+        null
+      ],
+      "crop": {
+        "rows": [
+          0,
+          592,
+          1199
+        ],
+        "edges": [
+          [
+            0,
+            660,
+            1312
+          ],
+          [
+            0,
+            632,
+            1312
+          ]
+        ]
+      }
+    }
   ]
 }

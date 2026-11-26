@@ -61,3 +61,14 @@ test('ART-OBJ-12 · el Museo y el Taller muestran los mismos artefactos', () => 
   h.g.state.museum.displays['collection:' + id] = false;
   assert.ok(camp.card('shipyard').controls.includes(files[64]));
 });
+
+test('ART-OBJ-12 · los estudios y las demostraciones conservan la referencia de su ficha', () => {
+  const h = make({headless:true,full:true,app:sources.map(read).join('\n')+'\n'+read('js/app.js')});
+  const camp = h.x.AtlasCampMEC02Actions;
+  const html = camp.card('workshop').controls;
+  const ids = [...Object.keys(h.x.AtlasMEC06.STUDIES), ...Object.keys(h.x.AtlasMEC06.DEMOS), 'installed-taller'];
+  for (const id of ids) {
+    assert.ok(html.includes(globalThis.AtlasObjectArtAssets[id][64]),id);
+  }
+  assert.ok(h.x.AtlasMEC06Actions.ficha('modulo_luminoso').includes(globalThis.AtlasObjectArtAssets.modulo_luminoso[256]));
+});

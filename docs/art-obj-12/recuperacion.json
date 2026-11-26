@@ -200,10 +200,13 @@
       "origin": "ART-OBJ-12"
     },
     "installed-taller": {
-      "name": "Instrumentos instalados en el Taller"
+      "name": "Instrumentos instalados en el Taller",
+      "origin": "ART-OBJ-12"
     },
     "installed-campamento": {
-      "name": "Instrumentos instalados en el Campamento"
+      "name": "Instrumentos instalados en el Campamento",
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de la valija, la cámara de placas, el globo celeste y el pergamino."
     },
     "globo_celeste": {
       "origin": "ART-OBJ-12"
@@ -258,6 +261,68 @@
     },
     "componente_electrico": {
       "origin": "ART-OBJ-12"
+    },
+    "analisis-plumas": {
+      "origin": "ART-OBJ-12"
+    },
+    "analisis-pelo": {
+      "origin": "ART-OBJ-12"
+    },
+    "analisis-escamas": {
+      "origin": "ART-OBJ-12"
+    },
+    "estudio-osteologico": {
+      "origin": "ART-OBJ-12"
+    },
+    "estudio-rastros": {
+      "origin": "ART-OBJ-12"
+    },
+    "registro-paisajistico": {
+      "origin": "ART-OBJ-12"
+    },
+    "revelado-placas": {
+      "origin": "ART-OBJ-12"
+    },
+    "demo-linterna": {
+      "origin": "ART-OBJ-12"
+    },
+    "demo-electrostatica": {
+      "origin": "ART-OBJ-12"
+    },
+    "demo-automata": {
+      "origin": "ART-OBJ-12"
+    },
+    "copia-informes": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de automata_escribiente, parchment_scrap, old_ink."
+    },
+    "observacion-astronomica": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de idea-refractor-observatorio, carta_estelar."
+    },
+    "calculo-derrotas": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de carta_historica, carta_estelar, astrolabio_laton."
+    },
+    "experimento-electrostatico": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de maquina_electrostatica, carved_wood, componente_electrico."
+    },
+    "experimento-pila": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de pila_volta, componente_electrico."
+    },
+    "medicion-galvanica": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de pila_volta, galvanometro, river_pebble."
+    },
+    "induccion": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de pila_volta, galvanometro, induccion_farad."
+    },
+    "demo-planetario": {
+      "origin": "Composición ART-OBJ-12",
+      "note": "Se reutilizan las láminas de carta_estelar, planetario_orrery."
     }
   },
   "collectibles": {
