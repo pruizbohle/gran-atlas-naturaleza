@@ -12,6 +12,11 @@ const viewer = get('viewer');
 const params = new URLSearchParams(location.search);
 const normalize = text => text.normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase();
 const ui = {lot:Object.hasOwn(lots, params.get('lote')) ? params.get('lote') : 'A'};
+
+function syncLink() {
+  if (location.protocol !== 'file:') history.replaceState(null,'','?' + params);
+}
+
 const marker = '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="10" width="72" height="80" rx="6" fill="#a9855a" stroke="#604a35" stroke-width="2.5"/><rect x="21" y="17" width="58" height="66" rx="3" fill="none" stroke="#604a35" stroke-dasharray="3 3"/><text x="50" y="65" text-anchor="middle" fill="#604a35" font-family="Georgia" font-size="48" font-weight="bold">?</text></svg>';
 
 function node(tag, text, className) {
@@ -104,7 +109,7 @@ function show(row) {
   if (row.note) section.append(node('p',row.note));
   section.append(details,variants);
   params.set('id',row.id);
-  history.replaceState(null,'','?' + params);
+  syncLink();
   if (!viewer.open) viewer.showModal();
 }
 
@@ -115,7 +120,7 @@ for (const [id,label] of Object.entries(lots)) {
   button.addEventListener('click', () => {
     ui.lot = id;
     params.set('lote',id);
-    history.replaceState(null,'','?' + params);
+    syncLink();
     for (const other of get('lots').children) other.setAttribute('aria-pressed',String(other === button));
     render();
   });
@@ -139,7 +144,7 @@ render();
 
 viewer.addEventListener('close',() => {
   params.delete('id');
-  history.replaceState(null,'','?' + params);
+  syncLink();
 });
 const initial = byId.get(params.get('id'));
 if (initial?.lot === ui.lot) show(initial);
