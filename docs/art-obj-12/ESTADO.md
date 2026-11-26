@@ -2,9 +2,9 @@
 
 - Rama de trabajo `art-obj-12`, sobre V5.6.9 Beta en `d7cc4cb30b44656f922c2413a020ea93ee03c989`.
 - Referencia artística OBJ-11 en `952d9c0e9660eb1c6921bb162ef38be3d901925b`. Iconografía inicial en `a1d22c7b0fc52c71faaa955545f694a54c98a868` y lote de revisión en `3ce29ecd921b05e2d2acc48dfc09b2940a1f766b`.
-- Último lote terminado: B · Artefactos científicos. A y B reúnen 47 referencias integradas.
+- Último lote terminado: C · Componentes. A, B y C reúnen 53 referencias integradas.
 - Último commit de arte: `git log -1 --format=%H -- www/objetos-cientificos/arte`.
-- Próximo trabajo inmediato: ilustrar y conectar los seis componentes del Lote C.
+- Próximo trabajo inmediato: ilustrar estudios, demostraciones e instalaciones del Lote D.
 
 ## Lote A
 
@@ -28,6 +28,13 @@ Pasaron 32 pruebas de MEC-06, persistencia MEC-09D, caché verificada, restaurac
 - Integradas las 20, con miniatura del Taller, vistas del Museo, ficha ampliada y consulta de los artefactos instalados en el Campamento.
 - La [plancha comparativa](lote-b-128.webp) muestra las veinte ilustraciones en dos fondos. Se verificaron 80 WebP y las rutas de Museo, Taller y Campamento.
 - Pendientes de arte del lote B: ninguno.
+
+
+## Lote C
+
+- Generadas e integradas seis láminas. Engranaje de latón, espejo pulido, carta estelar, placa de daguerrotipo, módulo luminoso y componente eléctrico.
+- Los 24 WebP pasaron la comprobación de resolución, transparencia, márgenes, hashes y correspondencia con el manifiesto offline.
+- Pendientes del lote C: ninguno.
 
 ## Auditoría y recuperación
 

@@ -88,5 +88,25 @@
         "induccion_farad"
       ]
     }
+  ],
+  "C": [
+    {
+      "file": "C-piezas.png",
+      "columns": 2,
+      "ids": [
+        "engranaje",
+        "espejo",
+        "carta_estelar",
+        "placa_daguerrotipo"
+      ]
+    },
+    {
+      "file": "C-modulos.png",
+      "columns": 2,
+      "ids": [
+        "modulo_luminoso",
+        "componente_electrico"
+      ]
+    }
   ]
 }

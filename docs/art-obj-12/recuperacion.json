@@ -240,6 +240,24 @@
     },
     "induccion_farad": {
       "origin": "ART-OBJ-12"
+    },
+    "engranaje": {
+      "origin": "ART-OBJ-12"
+    },
+    "espejo": {
+      "origin": "ART-OBJ-12"
+    },
+    "carta_estelar": {
+      "origin": "ART-OBJ-12"
+    },
+    "placa_daguerrotipo": {
+      "origin": "ART-OBJ-12"
+    },
+    "modulo_luminoso": {
+      "origin": "ART-OBJ-12"
+    },
+    "componente_electrico": {
+      "origin": "ART-OBJ-12"
     }
   },
   "collectibles": {
