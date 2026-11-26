@@ -42,3 +42,22 @@ test('ART-OBJ-12 · un material aparece con su propia imagen en inventario y fic
   assert.ok(h.x.AtlasMEC06Actions.ficha(id).includes(files[256]));
   assert.equal(h.g.state.inventory[id] || 0,0);
 });
+
+test('ART-OBJ-12 · el Museo y el Taller muestran los mismos artefactos', () => {
+  const app = read('js/app.js').replace(/\n\}\)\(\);\s*$/,
+    '\nwindow.__objectArtViews={museumCollection3270,museumModalModel3270,MUSEUM_COLLECTIONS};\n})();');
+  const h = make({headless:true,full:true,app:sources.map(read).join('\n')+'\n'+app});
+  const views = h.window.__objectArtViews;
+  const camp = h.x.AtlasCampMEC02Actions;
+  const id = 'globo_celeste';
+  const files = globalThis.AtlasObjectArtAssets[id];
+  const collection = views.MUSEUM_COLLECTIONS.find(piece => piece.id === id);
+  h.g.state.museum.collections[id] = true;
+  const model = views.museumCollection3270(collection);
+  assert.ok(model.art.includes(files[128]));
+  assert.ok(views.museumModalModel3270(model.token).art.includes(files[256]));
+  assert.ok(camp.card('workshop').controls.includes(files[64]));
+  h.g.state.mec06.installed[id] = 'campamento';
+  h.g.state.museum.displays['collection:' + id] = false;
+  assert.ok(camp.card('shipyard').controls.includes(files[64]));
+});

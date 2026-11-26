@@ -1,7 +1,92 @@
 {
   "A": [
-    {"file":"A-plumas.png","columns":2,"ids":["MAT-N03","MAT-N04","MAT-N05","MAT-N08"]},
-    {"file":"A-fibras.png","columns":2,"ids":["MAT-N10","MAT-N11","MAT-N12","MAT-N15"]},
-    {"file":"A-rastros.png","columns":2,"ids":["MAT-N20","MAT-N22","MAT-N24",null]}
+    {
+      "file": "A-plumas.png",
+      "columns": 2,
+      "ids": [
+        "MAT-N03",
+        "MAT-N04",
+        "MAT-N05",
+        "MAT-N08"
+      ]
+    },
+    {
+      "file": "A-fibras.png",
+      "columns": 2,
+      "ids": [
+        "MAT-N10",
+        "MAT-N11",
+        "MAT-N12",
+        "MAT-N15"
+      ]
+    },
+    {
+      "file": "A-rastros.png",
+      "columns": 2,
+      "ids": [
+        "MAT-N20",
+        "MAT-N22",
+        "MAT-N24",
+        null
+      ]
+    }
+  ],
+  "B": [
+    {
+      "file": "B-optica-y-astronomia.png",
+      "columns": 2,
+      "ids": [
+        "microscopio_compuesto",
+        "globo_celeste",
+        "esfera_armilar",
+        "planetario_orrery"
+      ],
+      "crop": {
+        "rows": [
+          0,
+          600,
+          1254
+        ],
+        "edges": [
+          [
+            0,
+            627,
+            1254
+          ],
+          [
+            0,
+            627,
+            1254
+          ]
+        ]
+      }
+    },
+    {
+      "file": "B-optica-y-automatas.png",
+      "columns": 2,
+      "ids": [
+        "automata_ave",
+        "automata_escribiente",
+        "estereoscopio_espejos",
+        "linterna_magica"
+      ]
+    },
+    {
+      "file": "B-gabinete-fisico.png",
+      "columns": 2,
+      "ids": [
+        "camara_oscura",
+        "maquina_electrostatica",
+        "pila_volta",
+        "galvanometro"
+      ]
+    },
+    {
+      "file": "B-faraday.png",
+      "columns": 1,
+      "ids": [
+        "induccion_farad"
+      ]
+    }
   ]
 }

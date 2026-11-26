@@ -4067,7 +4067,7 @@ function renderMuseumCollections(tab){
   '<div class="list">'+pieces.map(p=>{
    const saved=!!state.museum?.collections?.[p.id],ready=museumCollectionReady(p);
    const materials=Object.entries(p.requires).map(([id,qty])=>itemArtInline(id)+' '+ITEMS[id].name+' '+(state.inventory?.[id]||0)+'/'+qty).join(' · ');
-   return '<div class="atlas-region"><div><strong>'+iconArt530(p.id,p.icon)+' '+p.name+'</strong><div class="small">'+
+   return '<div class="atlas-region"><div><strong>'+(globalThis.AtlasObjectArt?.image(p.id)||iconArt530(p.id,p.icon))+' '+p.name+'</strong><div class="small">'+
      p.description+'</div><div class="small">'+materials+' · Conocimiento '+state.knowledge+'/'+p.knowledge+
      '</div></div><div class="museum-v311-workactions"><button class="btn '+(saved?'alt':ready?'gold':'alt')+'" data-action="catalog-museum" data-id="'+p.id+
      '" '+(ready?'':'disabled')+'>'+(saved?'Catalogada':ready?'Catalogar':'Pendiente')+'</button>'+
@@ -4498,6 +4498,7 @@ function museumModalModel3270(token){
  if(p.kind==='collection'){const collection=MUSEUM_COLLECTIONS.find(r=>r.id===p.id);if(collection&&state.museum.collections[p.id])model=museumCollection3270(collection);}
  if(p.kind==='relict'){const relict=MUSEUM_RELICTS.find(r=>r.id===p.id);if(relict&&museumRelictOwned(p.id))model=museumRelict3270(relict);}
  if(!model)return null;
+ if(p.kind==='collection')model.art=globalThis.AtlasObjectArt?.image(p.id,256)||model.art;
  model.materials=model.referenceMaterials||model.materials||[];
  if(p.kind==='animal')model.actions.push({action:'m27-candidates',label:'Ver Muestras',alt:true});
  else if(p.kind==='recipe')model.actions.push({action:'m27-workshop',token,label:'Consultar reconstrucción',alt:true});
@@ -8000,7 +8001,9 @@ if(globalThis.AtlasMuseumCuration3380){
   return !art||/^<svg[^>]*><\/svg>$/.test(art)?genericArt560(id):art;
  };
  const museumArtBefore560=museumCardArt;
- museumCardArt=function(kind,id){return betaArtifacts560.has(id)?genericArt560(id):museumArtBefore560(kind,id);};
+ museumCardArt=function(kind,id){
+  return globalThis.AtlasObjectArt?.image(id,128)||(betaArtifacts560.has(id)?genericArt560(id):museumArtBefore560(kind,id));
+ };
 
  // MEC-01 · Hitos naturales. Estructura reutilizable para velocidad, tamaño, peso, longevidad,
  // profundidad, altitud, distancia y conductas extraordinarias. Solo existe el hito del guepardo,
@@ -9472,15 +9475,15 @@ if(globalThis.AtlasMuseumCuration3380){
   const ROMAN=C.ROMAN,fold6={};
   const op=k=>' data-mec06-fold="'+k+'"'+(fold6[k]?' open':'');
   if(typeof panel!=='undefined'&&panel?.addEventListener)panel.addEventListener('toggle',e=>{const k=e.target?.dataset?.mec06Fold;if(k)fold6[k]=e.target.open;},true);
+  const icon=id=>globalThis.AtlasObjectArt?.image(id)||'';
   const panel6=()=>{
    const now=Date.now(),arts=Object.values(X6.ARTIFACTS).filter(a=>catalogued(a.id));
-   const inst=arts.map(a=>{const loc=location(a.id);return '<div class="mec02-row"><span><button type="button" class="btn alt" data-action="mec06-item" data-id="'+a.id+'">'+esc6(name(a.id))+'</button> · '+esc6(X6.PLACES[loc].label)+'</span><span>'+
+   const inst=arts.map(a=>{const loc=location(a.id);return '<div class="mec02-row"><span><button type="button" class="btn alt" data-action="mec06-item" data-id="'+a.id+'">'+icon(a.id)+esc6(name(a.id))+'</button> · '+esc6(X6.PLACES[loc].label)+'</span><span>'+
     [...a.places,'almacen'].filter((p,i,l)=>l.indexOf(p)===i&&p!==loc).map(p=>{const full=(p==='taller'||p==='campamento')&&used(p)>=capacity(p);return '<button type="button" class="btn alt" data-action="mec06-place" data-id="'+a.id+'|'+p+'"'+(full?' disabled':'')+'>'+({museo:'Vitrina',taller:'Taller',campamento:'Campamento',almacen:'Almacén'})[p]+'</button>';}).join('')+'</span></div>';}).join('');
-   const pending=Object.values(X6.ARTIFACTS).filter(a=>!catalogued(a.id)).map(a=>{const p=planArtifact(a.id);return '<div class="mec02-row"><span>'+esc6(name(a.id))+' · Taller '+ROMAN[a.minWorkshop]+(p&&!p.ok?' · '+esc6(p.reasons.slice(0,2).join(' · ')):'')+'</span><button type="button" class="btn alt" data-action="mec06-build" data-id="'+a.id+'"'+(p&&p.ok?'':' disabled')+'>Fabricar</button></div>';}).join('');
+   const pending=Object.values(X6.ARTIFACTS).filter(a=>!catalogued(a.id)).map(a=>{const p=planArtifact(a.id);return '<div class="mec02-row"><span>'+icon(a.id)+esc6(name(a.id))+' · Taller '+ROMAN[a.minWorkshop]+(p&&!p.ok?' · '+esc6(p.reasons.slice(0,2).join(' · ')):'')+'</span><button type="button" class="btn alt" data-action="mec06-build" data-id="'+a.id+'"'+(p&&p.ok?'':' disabled')+'>Fabricar</button></div>';}).join('');
    const studies=Object.values(X6.STUDIES).map(t=>{const c=studyCheck(t.id,now);return '<div class="mec02-row"><span>'+esc6(t.label)+(c.ok?'':' · <span class="small">'+esc6(c.reasons.slice(0,2).join(' · '))+'</span>')+'</span><button type="button" class="btn alt" data-action="mec06-study" data-id="'+t.id+'"'+(c.ok?'':' disabled')+'>Realizar</button></div>';}).join('');
    const demos=Object.values(X6.DEMOS).map(d=>{const c=demoCheck(d.id,now);return '<div class="mec02-row"><span>'+esc6(d.label)+(c.ok?'':' · <span class="small">'+esc6(c.reasons.join(' · '))+'</span>')+'</span><button type="button" class="btn alt" data-action="mec06-demo" data-id="'+d.id+'"'+(c.ok?'':' disabled')+'>Presentar</button></div>';}).join('');
    const cats={};for(const id of Object.keys(ITEMS)){if(K3()?.pieces?.[id])continue;const c=categoryOf(id);(cats[c]=cats[c]||[]).push(id);}
-   const icon=id=>globalThis.AtlasObjectArt?.image(id)||'';
    const index=Object.entries(cats).map(([c,ids])=>'<details><summary>'+esc6(c)+' · '+ids.length+'</summary><p>'+ids.map(id=>'<button type="button" class="btn alt" data-action="mec06-item" data-id="'+esc6(id)+'">'+icon(id)+esc6(name(id))+((state.inventory[id]||0)?' ×'+state.inventory[id]:'')+'</button>').join(' ')+'</p></details>').join('');
    const pol=state.mec06.camera||'preguntar',camRow=catalogued('camara_daguerrotipos')?'<div class="mec02-row"><span>Cámara en expediciones</span><span>'+['preguntar','siempre','nunca'].map(p=>'<button type="button" class="btn alt" data-action="mec06-camera" data-id="'+p+'"'+(p===pol?' aria-pressed="true" disabled':'')+'>'+p[0].toUpperCase()+p.slice(1)+'</button>').join('')+'</span></div>':'';
    return '<details class="mec02-controls mec06-instruments"'+op('inst')+'><summary>Instrumentos y artefactos · Taller '+used('taller')+'/'+capacity('taller')+' · Campamento '+used('campamento')+'/'+capacity('campamento')+'</summary>'+camRow+(inst||'<p class="small">Cataloga artefactos para instalarlos o exponerlos.</p>')+(pending?'<details'+op('build')+'><summary>Por fabricar</summary>'+pending+'</details>':'')+'</details>'+
@@ -9488,7 +9491,13 @@ if(globalThis.AtlasMuseumCuration3380){
     '<details class="mec02-controls mec06-demos"'+op('demos')+'><summary>Demostraciones del Museo · atractivo £'+attractionRate().toFixed(2)+'/s</summary>'+demos+'</details>'+
     '<details class="mec02-controls mec06-index"'+op('index')+'><summary>Índice de objetos</summary>'+index+'</details>';
   };
-  globalThis.AtlasCampMEC02Hooks?.controls.push((id)=>id==='workshop'?panel6():'');
+  const campInstalled6=()=>{
+   const instruments=Object.values(X6.ARTIFACTS).filter(a=>location(a.id)==='campamento');
+   if(!instruments.length)return '';
+   return '<section class="mec02-controls"><h4>Instrumentos instalados</h4>'+
+    instruments.map(a=>'<div class="mec02-row"><button type="button" class="btn alt" data-action="mec06-item" data-id="'+a.id+'">'+icon(a.id)+esc6(name(a.id))+'</button></div>').join('')+'</section>';
+  };
+  globalThis.AtlasCampMEC02Hooks?.controls.push(id=>id==='workshop'?panel6():id==='shipyard'?campInstalled6():'');
   const actionBefore606=mec02Action;
   mec02Action=function(act,id){
    if(act==='mec06-item'){if(U)U.show(ficha(id));return;}

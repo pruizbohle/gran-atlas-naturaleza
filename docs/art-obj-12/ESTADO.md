@@ -2,9 +2,9 @@
 
 - Rama de trabajo `art-obj-12`, sobre V5.6.9 Beta en `d7cc4cb30b44656f922c2413a020ea93ee03c989`.
 - Referencia artística OBJ-11 en `952d9c0e9660eb1c6921bb162ef38be3d901925b`. Iconografía inicial en `a1d22c7b0fc52c71faaa955545f694a54c98a868` y lote de revisión en `3ce29ecd921b05e2d2acc48dfc09b2940a1f766b`.
-- Último lote de producción en revisión final: A · Materiales animales. 27 de 27 conectados, 11 láminas nuevas, 8 recuperadas y 8 históricas conservadas.
+- Último lote terminado: B · Artefactos científicos. A y B reúnen 47 referencias integradas.
 - Último commit de arte: `git log -1 --format=%H -- www/objetos-cientificos/arte`.
-- Próximo trabajo inmediato: verificar el navegador y publicar el laboratorio del Lote A. Continuar con la comparación de artefactos de OBJ-11 y del Museo.
+- Próximo trabajo inmediato: ilustrar y conectar los seis componentes del Lote C.
 
 ## Lote A
 
@@ -14,11 +14,20 @@
 | Recuperadas de OBJ-11 | MAT-N01, MAT-N02, MAT-N09, MAT-N14, MAT-N16, MAT-N18, MAT-N19, MAT-N21 |
 | Históricas mantenidas | owl_feather, heron_feather, otter_whisker, beaver_tail_scale, antler_fragment, wolf_tooth, boar_tusk, animal_trace |
 | Integradas | Los 27 IDs anteriores. Cuatro tamaños por material, incluidos los ocho archivos de 128 px ya presentes. |
-| Pendientes de arte | Ninguno del Lote A. Verificación visual de las pantallas en navegador aún en curso. |
+| Pendientes de arte | Ninguno del Lote A. |
 
 La [plancha de 64 px](lote-a-64.webp) usa los WebP de juego sobre dos fondos. Se comprobaron 108 WebP con alfa real, resolución y márgenes. Las variantes recuperadas coinciden byte por byte con OBJ-11. El plumón conserva un alfa máximo de 253 a 256 px.
 
-Pasaron 32 pruebas de MEC-06, persistencia MEC-09D, caché verificada, restauración e iconografía. La revisión del laboratorio desde el servidor de preview encontró un error de permisos al abrir el puerto del entorno.
+Pasaron 32 pruebas de MEC-06, persistencia MEC-09D, caché verificada, restauración e iconografía. El [laboratorio privado del Lote A](https://el-gran-atlas-art-obj-12.muddyroadrunner17.chatgpt.site/art-obj-12/?lote=A) quedó publicado. La sesión de navegador requiere autenticación. Las pruebas de presentación comprobaron las rutas reales del inventario y las fichas.
+
+
+## Lote B
+
+- Generadas 13 láminas. Microscopio, globo celeste, esfera armilar, planetario, autómatas cantor y escribiente, estereoscopio, linterna mágica, cámara oscura, máquina electrostática, pila de Volta, galvanómetro y demostrador de inducción.
+- Recuperadas 7 láminas de OBJ-11. Los cinco artefactos históricos, el refractor de observatorio y la cámara de cajas deslizantes de `INS-09`.
+- Integradas las 20, con miniatura del Taller, vistas del Museo, ficha ampliada y consulta de los artefactos instalados en el Campamento.
+- La [plancha comparativa](lote-b-128.webp) muestra las veinte ilustraciones en dos fondos. Se verificaron 80 WebP y las rutas de Museo, Taller y Campamento.
+- Pendientes de arte del lote B: ninguno.
 
 ## Auditoría y recuperación
 

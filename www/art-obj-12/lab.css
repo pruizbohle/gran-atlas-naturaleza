@@ -85,3 +85,7 @@ figcaption a { color: #2c503d; }
   .controls .search { flex-basis: 100%; }
   .stage { justify-items: safe center; }
 }
+.stage img { max-inline-size: 100%; height: auto; }
+@media (max-width: 560px) {
+  .stage { min-height: min(calc(var(--size, 128px) + 12px), 72vw); }
+}
