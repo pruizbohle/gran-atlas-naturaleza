@@ -57,13 +57,32 @@ function thumbnail(row, size) {
   return button;
 }
 
+const fields = {family:'Lotes',cabinet:'Gabinetes',collection:'Colecciones'};
+const selected = Object.fromEntries(Object.keys(fields).map(key => [key,params.get(key) || '']));
+function collectionFilters(lot) {
+  for (const [key,label] of Object.entries(fields)) {
+    const select = get(key);
+    select.parentElement.hidden = ui.lot !== 'coleccionables';
+    if (select.parentElement.hidden) continue;
+    const options = [...new Set(lot.filter(row => key !== 'collection' || !selected.cabinet || row.cabinet === selected.cabinet)
+      .map(row => key === 'collection' ? row.category : row[key]).filter(Boolean))].sort((a,b) => a.localeCompare(b,'es'));
+    if (!options.includes(selected[key])) selected[key] = '';
+    select.replaceChildren(new Option('Ver todos · ' + label,''), ...options.map(value => new Option(value,value)));
+    select.value = selected[key];
+  }
+}
+
 function render() {
   const size = Number(get('size').value);
   const text = normalize(get('query').value.trim());
   const status = get('status').value;
   const lot = rows.filter(row => row.lot === ui.lot);
-  const filtered = lot.filter(row => (status === 'all' || (status === 'integrated') === Boolean(row.paths)) &&
-    normalize([row.id,row.name,row.category].join(' ')).includes(text));
+  collectionFilters(lot);
+  const filtered = lot.filter(row => ui.lot !== 'coleccionables' ||
+    ((!selected.family || row.family === selected.family) &&
+     (!selected.cabinet || row.cabinet === selected.cabinet) &&
+     (!selected.collection || row.category === selected.collection))).filter(row => (status === 'all' || (status === 'integrated') === Boolean(row.paths)) &&
+    normalize([row.id,row.name,row.category,row.cabinet].join(' ')).includes(text));
   get('title').textContent = lots[ui.lot];
   get('result').textContent = filtered.length + ' de ' + lot.length + ' fichas · ' + lot.filter(row => row.paths).length + ' integradas';
   grid.style.setProperty('--column', Math.max(165,size + 14) + 'px');
@@ -103,7 +122,7 @@ function show(row) {
       variants.append(figure('Ilustración · ' + pixels + ' px',art.src(row.id,pixels),pixels,pixels));
     }
   }
-  const info = node('p',[row.id,row.category,row.state,row.origin,row.reference].filter(Boolean).join(' · '),'meta');
+  const info = node('p',[row.id,row.cabinet,row.category,row.state,row.origin,row.reference].filter(Boolean).join(' · '),'meta');
   const section = get('viewer-content');
   section.replaceChildren(title,info);
   if (row.note) section.append(node('p',row.note));
@@ -136,6 +155,17 @@ get('dark').addEventListener('click',() => background(true));
 get('query').addEventListener('input',render);
 get('status').addEventListener('change',render);
 get('size').addEventListener('change',render);
+for (const key of Object.keys(fields)) {
+  get(key).addEventListener('change',event => {
+    selected[key] = event.target.value;
+    render();
+    for (const name of Object.keys(fields)) {
+      if (selected[name]) params.set(name,selected[name]);
+      else params.delete(name);
+    }
+    syncLink();
+  });
+}
 grid.addEventListener('click',event => {
   const card = event.target.closest('[data-id]');
   if (card) show(byId.get(card.dataset.id));

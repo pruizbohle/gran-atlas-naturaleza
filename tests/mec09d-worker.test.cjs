@@ -53,3 +53,23 @@ test('MEC09D trabajador: un archivo alterado aborta la descarga y no deja una re
  const w=world({corrupt:'js/app.js',keys:['gran-atlas-v5.6.8-anterior']});await assert.rejects(w.fire('install',{}),/no coincide/);
  assert.equal(w.stores.has(CACHE),false);assert.ok(w.deleted.includes(CACHE));assert.ok(w.stores.has('gran-atlas-v5.6.8-anterior'),'la revisión anterior sigue disponible');
 });
+
+test('ART-OBJ-13 · una ampliación consultada queda offline sin precargar todas las de 512', async () => {
+ const w=world();
+ const manifest=JSON.parse(fs.readFileSync(path.join(WWW,'atlas-integrity.json'),'utf8'));
+ const used='objetos-cientificos/arte/ARM-02/clasica-512.webp';
+ const unused='objetos-cientificos/arte/ARM-11/clasica-512.webp';
+ assert.ok(manifest.onDemand[used]);
+ assert.equal(manifest.files[used],undefined);
+ await w.fire('install',{});
+ assert.ok(!w.requests.includes(scope+used));
+ assert.ok(!w.requests.includes(scope+unused));
+ const online=await w.get(scope+used);
+ assert.deepEqual(Buffer.from(await online.arrayBuffer()),fs.readFileSync(path.join(WWW,used)));
+ w.net.online=false;
+ const requests=w.requests.length;
+ const offline=await w.get(scope+used);
+ assert.deepEqual(Buffer.from(await offline.arrayBuffer()),fs.readFileSync(path.join(WWW,used)));
+ assert.equal(w.requests.length,requests);
+ await assert.rejects(w.get(scope+unused),/offline/);
+});

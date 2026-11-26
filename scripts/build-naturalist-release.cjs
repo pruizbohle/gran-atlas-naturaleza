@@ -12,8 +12,9 @@ for (const file of new Set(Object.values(assets.routes).flatMap(route => Object.
 const source = fs.readFileSync('www/sw.js', 'utf8');
 const core = [...source.match(/const CORE=\[([^;]+)\];/)[1].matchAll(/['"]([^'"]+)['"]/g)]
   .map(match => match[1].slice(2));
+const large = new Set(globalThis.AtlasObjectArtLargeFiles);
 const files = [...new Set([...core, ...assets.files, ...assets.relictFiles, ...Object.values(globalThis.AtlasObjectArtAssets).flatMap(Object.values), ...globalThis.AtlasObjectArtComparisonFiles].map(file =>
-  file.endsWith('/') || !file ? file + 'index.html' : file))].sort();
+  file.endsWith('/') || !file ? file + 'index.html' : file))].filter(file => !large.has(file)).sort();
 const review = assets.labFiles || [];
 const withPlaceholders = source.replace(/const CACHE='[^']+'/, 'const CACHE=REVISION')
   .replace(/manifestDigest:'[^']+'/, 'manifestDigest:INTEGRITY');
@@ -28,14 +29,16 @@ const index = fs.readFileSync('www/index.html', 'utf8');
 assert.ok(index.includes('name="atlas-version" content="' + version + '"'));
 const integrity = {};
 const offline = new Set(files);
-for (const file of [...files, ...review]) {
+const onDemand = {};
+for (const file of [...files, ...large, ...review]) {
   assert.ok(fs.existsSync('www/' + file), 'Falta recurso offline: ' + file);
   const bytes = fs.readFileSync('www/' + file);
   hash.update(file).update(bytes);
   if (offline.has(file)) integrity[file] = [bytes.length, createHash('sha256').update(bytes).digest('hex')];
+  if (large.has(file)) onDemand[file] = [bytes.length, createHash('sha256').update(bytes).digest('hex')];
 }
 const manifestPath = 'www/atlas-integrity.json';
-const manifest = JSON.stringify({ version, files: integrity }) + '\n';
+const manifest = JSON.stringify({ version, files: integrity, onDemand }) + '\n';
 const manifestDigest = createHash('sha256').update(manifest).digest('hex');
 const revision = 'gran-atlas-v' + version + '-naturalist-' + hash.digest('hex').slice(0, 12);
 const release = releaseSource.replace(/  "revision": "[^"]+",/, '  "revision": "' + revision + '",');

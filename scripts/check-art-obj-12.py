@@ -65,12 +65,17 @@ def main():
     parser.add_argument('lot', choices=['A','B','C','D','coleccionables','todos'])
     parser.add_argument('--reference', type=Path)
     parser.add_argument('--sheet', type=Path)
+    parser.add_argument('--family')
     parser.add_argument('--size', type=int, choices=[64,128], default=128)
     args = parser.parse_args()
     declaration = (WWW / 'art-obj-12/data.js').read_text(encoding='utf-8')
     records = json.loads(declaration.split(' = ',1)[1].strip().removesuffix(';'))
     records = [row for row in records if args.lot in ('todos',row['lot'])]
-    integrity = json.loads((WWW / 'atlas-integrity.json').read_text(encoding='utf-8'))['files']
+    if args.family:
+        records = [row for row in records if row.get('family') == args.family]
+        assert records, args.family
+    manifest = json.loads((WWW / 'atlas-integrity.json').read_text(encoding='utf-8'))
+    integrity = manifest['files'] | manifest.get('onDemand', {})
     sprites, size = check(records, integrity, args.reference)
     if args.sheet:
         sheet(records,args.sheet,args.size)

@@ -11,7 +11,8 @@ for (const source of [...sources, 'art-obj-12/data.js']) require('../www/' + sou
 
 test('ART-OBJ-12 · laboratorio, aplicación y manifiesto offline comparten los mismos WebP', () => {
   const rows = globalThis.AtlasObjectArtReview;
-  const offline = JSON.parse(read('atlas-integrity.json')).files;
+  const {files:offline, onDemand} = JSON.parse(read('atlas-integrity.json'));
+  const large = new Set(globalThis.AtlasObjectArtLargeFiles);
   assert.equal(rows.length, 504);
   assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
   for (const [lot,count] of Object.entries({A:27,B:20,C:6,D:20})) {
@@ -28,7 +29,9 @@ test('ART-OBJ-12 · laboratorio, aplicación y manifiesto offline comparten los 
       assert.equal(globalThis.AtlasObjectArt.src(row.id,size),'./' + file);
       const bytes = fs.readFileSync('www/' + file);
       assert.equal(bytes.toString('ascii',8,12),'WEBP',file);
-      assert.deepEqual(offline[file],[bytes.length,createHash('sha256').update(bytes).digest('hex')],file);
+      const optional = large.has(file);
+      if (optional) assert.equal(offline[file],undefined,file);
+      assert.deepEqual((optional ? onDemand : offline)[file],[bytes.length,createHash('sha256').update(bytes).digest('hex')],file);
     }
   }
 });
@@ -88,7 +91,7 @@ test('ART-OBJ-12 · la ficha de coleccionable conserva el nombre breve y amplía
   assert.ok(model.art.includes(globalThis.AtlasObjectArtAssets[id][256]));
   const reused = globalThis.AtlasObjectArtReview.find(row => row.id === 'NUM-09');
   assert.equal(reused.name,'Estátero lidio');
-  assert.equal(reused.paths,null);
+  assert.notEqual(reused.paths?.[256],reused.previous.paths[256]);
   assert.match(reused.previous.label,/Birr etíope/);
 });
 

@@ -21,6 +21,19 @@ const archive = new Map(archivedRows.map(row => [row.id, row]));
 const config = JSON.parse(fs.readFileSync(path.join(docs, 'recuperacion.json')));
 const collection = JSON.parse(fs.readFileSync(path.resolve(source, 'docs/objetos-cientificos/catalogo-300.json'))).pieces;
 const originals = new Map(collection.map(row => [row.ID, row]));
+const art13 = path.join(root,'docs/art-obj-13');
+const art13Sheets = JSON.parse(fs.readFileSync(path.join(art13,'planchas.json')));
+const art13Lots = JSON.parse(fs.readFileSync(path.join(art13,'lotes.json')));
+const newArt = new Set();
+for (const sheet of Object.values(art13Sheets).flat()) {
+  for (const id of sheet.ids.filter(Boolean)) {
+    if (newArt.has(id) || originals.has(id) || config.collectibles[id]?.origin || !globalThis.AtlasMEC03Catalog.pieces[id]) {
+      throw Error('ID inválido o ya ilustrado en ART-OBJ-13: ' + id);
+    }
+    newArt.add(id);
+  }
+}
+
 if (draft) {
   const prior = JSON.parse(fs.readFileSync(path.resolve(draft,'www/data/atlas_coleccionables_240_manifest_v2.json')));
   for (const {ID,Pieza} of prior.pieces) {
@@ -110,10 +123,10 @@ const workshop = document.map(line => {
 });
 
 const pieces = Object.values(globalThis.AtlasMEC03Catalog.pieces).map(piece => {
-  const {id,name,collection:category} = piece;
+  const {id,name,cabinet,collection:category} = piece;
   const original = originals.get(id);
   if (original && original.Pieza !== name) throw Error('El ID de OBJ-11 cambió de sujeto: ' + id);
-  const edition = original ? {origin:'OBJ-11'} : config.collectibles[id] || {};
+  const edition = original ? {origin:'OBJ-11'} : newArt.has(id) ? {origin:'ART-OBJ-13'} : config.collectibles[id] || {};
   const paths = edition.origin && assets(id, edition, 'coleccionables');
   const previous = original && config.corrected.includes(id) ? 'revision' : archive.has(id) ? 'archivo' : 'marcador';
   const draftFile = 'art-obj-12/anteriores/' + id + '.svg';
@@ -121,12 +134,13 @@ const pieces = Object.values(globalThis.AtlasMEC03Catalog.pieces).map(piece => {
     ? {kind:'boceto',label:'Boceto ART-COL-01',paths:{128:draftFile}}
     : comparison(id,previous,'coleccionables');
   return {
-    id,lot:'coleccionables',key:'item-' + id,name,category,
+    id,lot:'coleccionables',key:'item-' + id,name,category,cabinet,
     base:'Marcador genérico',state:paths ? 'Integrada' : edition.state || (original ? 'Existente sin conexión' : 'Pendiente de ilustración'),
     origin:edition.origin || '',reference:edition.source || (original ? id : ''),paths:paths || null,
     previous:previousArt,
     note:edition.note || (archive.has(id) ? 'El ID de la beta corresponde a otro sujeto.' : ''),
-    catalog:original ? 'OBJ-11' : 'V5.6'
+    catalog:original ? 'OBJ-11' : 'V5.6',
+    family:!original && !config.collectibles[id]?.origin ? art13Lots.find(lot => lot.collections.includes(category))?.name : null
   };
 });
 
@@ -135,20 +149,25 @@ if (workshop.length !== 73 || pieces.length !== 431 || originals.size !== 300 ||
     new Set([...workshop,...pieces].map(row => row.id)).size !== 504) throw Error('Cobertura inesperada');
 const comparisons = [...new Set([...workshop,...pieces].flatMap(row =>
   row.previous?.external ? [] : Object.values(row.previous?.paths || {})))];
+const large = [...new Set(pieces.map(row => row.paths?.[512]).filter(Boolean))];
 const descriptions = {...Object.fromEntries(collection.map(row => [row.ID, row['Descripción breve']])),...config.descriptions};
 const quote = value => '"' + String(value ?? '').replaceAll('"','""') + '"';
-const csv = (name, records) => {
+const csv = (directory, name, records) => {
   const header = ['id','lote','nombre','categoria','referencia_mec','estado_beta','estado_actual','origen','referencia_grafica','ruta_64','ruta_128','ruta_256','ruta_512','ruta_de_origen','imagen_anterior','catalogo','nota'];
   const data = records.map(row => [row.id,row.lot,row.name,row.category,row.key,row.base,row.state,row.origin,row.reference,
     ...Object.keys(sizes).map(size => row.paths?.[size]),row.origin === 'OBJ-11' && row.reference ? artDir+'/'+row.reference+'/' : '',
     Object.values(row.previous?.paths || {}).join(' | '),row.catalog,row.note]);
-  fs.writeFileSync(path.join(docs,name), '\uFEFF' + [header,...data].map(row => row.map(quote).join(';')).join('\n') + '\n');
+  fs.writeFileSync(path.join(directory,name), '\uFEFF' + [header,...data].map(row => row.map(quote).join(';')).join('\n') + '\n');
 };
-csv('referencias-mec06.csv',workshop);
-csv('coleccionables.csv',pieces);
-csv('coleccionables-v56-pendientes.csv',pieces.filter(row => row.catalog === 'V5.6' && !row.paths));
+csv(docs,'referencias-mec06.csv',workshop);
+csv(art13,'coleccionables.csv',pieces);
+const pending = pieces.filter(row => row.catalog === 'V5.6' && !row.paths);
+csv(art13,'pendientes.csv',pending);
+fs.writeFileSync(path.join(art13,'cobertura.json'), JSON.stringify(pieces.map(({id,name,cabinet,category,family,origin,paths}) =>
+  ({id,name,cabinet,category,family,origin,paths})),null,2) + '\n');
 fs.writeFileSync(path.join(www,'js/art-obj-12-assets.js'),
   '// Generado por scripts/build-art-obj-12.cjs.\nglobalThis.AtlasObjectArtAssets = Object.freeze(' + JSON.stringify(files) + ');\n' +
+  'globalThis.AtlasObjectArtLargeFiles = Object.freeze(' + JSON.stringify(large) + ');\n' +
   'globalThis.AtlasObjectArtComparisonFiles = Object.freeze(' + JSON.stringify(comparisons) + ');\n' +
   'globalThis.AtlasObjectArtDescriptions = Object.freeze(' + JSON.stringify(descriptions) + ');\n');
 fs.writeFileSync(path.join(lab,'data.js'),

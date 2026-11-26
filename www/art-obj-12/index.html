@@ -16,13 +16,16 @@
     <div class="wrap">
       <div class="brand"><span>El Gran Atlas</span><a href="../index.html">Abrir la beta experimental</a></div>
       <h1>Biblioteca de ilustraciones</h1>
-      <p>ART-OBJ-12 · Revisión experimental de la beta</p>
+      <p>ART-OBJ-13 · Revisión experimental de la beta</p>
     </div>
   </header>
   <main class="wrap">
     <nav id="lots" aria-label="Lotes de ilustración"></nav>
     <section class="controls" aria-label="Controles de revisión">
       <label class="search">Nombre o ID<input id="query" type="search" placeholder="Buscar en el lote"></label>
+      <label class="collection-filter" hidden>Lote artístico<select id="family" aria-label="Lote artístico"></select></label>
+      <label class="collection-filter" hidden>Gabinete<select id="cabinet" aria-label="Gabinete"></select></label>
+      <label class="collection-filter" hidden>Colección<select id="collection" aria-label="Colección"></select></label>
       <label>Estado<select id="status"><option value="all">Todos</option><option value="pending">Pendientes</option><option value="integrated">Integradas</option></select></label>
       <label>Tamaño<select id="size"><option value="64">64 px</option><option value="128" selected>128 px</option><option value="256">256 px</option><option value="512">512 px</option></select></label>
       <fieldset><legend>Fondo</legend><button type="button" id="light" aria-pressed="true">Claro</button><button type="button" id="dark" aria-pressed="false">Oscuro</button></fieldset>

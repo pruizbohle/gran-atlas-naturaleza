@@ -1,0 +1,5546 @@
+[
+  {
+    "id": "BOT-01",
+    "name": "Rosa silvestre",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-02",
+    "name": "Brezo común",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-03",
+    "name": "Amapola de California",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-04",
+    "name": "Lupino andino",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-05",
+    "name": "Jacarandá",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-06",
+    "name": "Protea real",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-07",
+    "name": "Flor de baobab",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-08",
+    "name": "Loto sagrado",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-09",
+    "name": "Flor de cerezo",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-10",
+    "name": "Waratah",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-11",
+    "name": "Edelweiss",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-12",
+    "name": "Rafflesia gigante",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-01",
+    "name": "Bellota de roble",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-02",
+    "name": "Piñón mediterráneo",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-03",
+    "name": "Haya europea",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-04",
+    "name": "Semilla de saguaro",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-05",
+    "name": "Cacao criollo",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-06",
+    "name": "Vaina de flamboyán",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-07",
+    "name": "Semilla de araucaria",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-08",
+    "name": "Semilla de loto",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-09",
+    "name": "Cápsula de eucalipto",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-10",
+    "name": "Semilla de baobab",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-11",
+    "name": "Sámara de arce japonés",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "SEM-12",
+    "name": "Coco de mar",
+    "cabinet": "Botánica",
+    "category": "Semillas extraordinarias",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/SEM-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/SEM-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/SEM-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/SEM-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-01",
+    "name": "Carbón vegetal negro",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-02",
+    "name": "Ocre amarillo",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-03",
+    "name": "Ocre rojo",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-04",
+    "name": "Siena natural",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-05",
+    "name": "Tierra verde",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-06",
+    "name": "Achiote rojo",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-07",
+    "name": "Índigo natural",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-08",
+    "name": "Cochinilla carmín",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-09",
+    "name": "Azul maya",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-10",
+    "name": "Malaquita molida",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-11",
+    "name": "Ultramar de lapislázuli",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "PIG-12",
+    "name": "Púrpura de Tiro",
+    "cabinet": "Botánica",
+    "category": "Pigmentos del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/PIG-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/PIG-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/PIG-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/PIG-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-01",
+    "name": "Cuarzo rosa",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-02",
+    "name": "Granate almandino",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-03",
+    "name": "Amatista",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-04",
+    "name": "Topacio imperial",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-05",
+    "name": "Aguamarina",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-06",
+    "name": "Turquesa",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-07",
+    "name": "Jade nefrita",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-08",
+    "name": "Peridoto",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-09",
+    "name": "Esmeralda colombiana",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-10",
+    "name": "Zafiro de Ceilán",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-11",
+    "name": "Rubí birmano",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-12",
+    "name": "Ópalo negro",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/GEM-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/GEM-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/GEM-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/GEM-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-01",
+    "name": "Cuarzo cristalino",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-02",
+    "name": "Calcita óptica",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-03",
+    "name": "Pirita cúbica",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-04",
+    "name": "Hematita especular",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-05",
+    "name": "Fluorita violeta",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-06",
+    "name": "Magnetita natural",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-07",
+    "name": "Azurita",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-08",
+    "name": "Malaquita bandeada",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-09",
+    "name": "Obsidiana negra",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-10",
+    "name": "Azufre cristalizado",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-11",
+    "name": "Lapislázuli",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MIN-12",
+    "name": "Vivianita cristalizada",
+    "cabinet": "Geología",
+    "category": "Minerales extraordinarios",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MIN-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MIN-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MIN-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MIN-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-01",
+    "name": "Resina de pino endurecida",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-02",
+    "name": "Copal africano",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-03",
+    "name": "Copal colombiano",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-04",
+    "name": "Ámbar miel báltico",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-05",
+    "name": "Ámbar opaco báltico",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-06",
+    "name": "Ámbar de Chiapas",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-07",
+    "name": "Ámbar de Kuji",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-08",
+    "name": "Ámbar libanés",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-09",
+    "name": "Ámbar dominicano",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-10",
+    "name": "Ámbar con hoja fósil",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-11",
+    "name": "Ámbar birmano",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "AMB-12",
+    "name": "Ámbar azul dominicano",
+    "cabinet": "Geología",
+    "category": "Ámbar y resinas fósiles",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/AMB-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/AMB-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/AMB-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/AMB-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-13",
+    "name": "Meteorito de L’Aigle",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-02",
+    "name": "Meteorito de Ensisheim",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-14",
+    "name": "Meteorito de Wold Cottage",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-14/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-14/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-14/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-14/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-15",
+    "name": "Meteorito de Benares",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-15/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-15/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-15/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-15/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-16",
+    "name": "Meteorito de Weston",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-16/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-16/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-16/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-16/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-06",
+    "name": "Meteorito de Gibeon",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-07",
+    "name": "Meteorito de Campo del Cielo",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-17",
+    "name": "Meteorito de Chassigny",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-17/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-17/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-17/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-17/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-09",
+    "name": "Meteorito de Imilac",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-18",
+    "name": "Meteorito de Krasnojarsk",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-18/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-18/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-18/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-18/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-19",
+    "name": "Meteorito de Alais",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-19/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-19/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-19/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-19/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MET-20",
+    "name": "Meteorito de Stannern",
+    "cabinet": "Geología",
+    "category": "Meteoritos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MET-20/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MET-20/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MET-20/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MET-20/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-01",
+    "name": "Ficha portuaria del Atlántico Norte",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-02",
+    "name": "Plomada de sonda del Atlántico Sur",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-03",
+    "name": "Clavo de casco del Pacífico Norte",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-04",
+    "name": "Fragmento de porcelana del Pacífico Sur",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-05",
+    "name": "Contrapeso de red del Índico",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-06",
+    "name": "Botella de mensaje del Ártico",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-07",
+    "name": "Medalla de navegante del océano Austral",
+    "cabinet": "Oceanografía",
+    "category": "Los siete mares",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-08",
+    "name": "Fragmento del plano de los anillos",
+    "cabinet": "Oceanografía",
+    "category": "Secretos de Atlántida",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-09",
+    "name": "Sello del tridente sumergido",
+    "cabinet": "Oceanografía",
+    "category": "Secretos de Atlántida",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-10",
+    "name": "Llave de las compuertas de Atlántida",
+    "cabinet": "Oceanografía",
+    "category": "Secretos de Atlántida",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-11",
+    "name": "Prisma de las mareas",
+    "cabinet": "Oceanografía",
+    "category": "Secretos de Atlántida",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAR-12",
+    "name": "Corona de oricalco",
+    "cabinet": "Oceanografía",
+    "category": "Secretos de Atlántida",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAR-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAR-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAR-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAR-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-01",
+    "name": "Vieira atlántica",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-02",
+    "name": "Lapa mediterránea",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-03",
+    "name": "Caracola turbante",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-04",
+    "name": "Oreja de mar",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-05",
+    "name": "Cauri tigre",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-06",
+    "name": "Múrex espinoso",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-07",
+    "name": "Caracola reina",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-08",
+    "name": "Cono textil",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-09",
+    "name": "Nautilo perlado",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-10",
+    "name": "Caracola tritón",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-11",
+    "name": "Almeja gigante",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CON-12",
+    "name": "Argonauta hembra",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CON-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CON-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CON-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CON-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-01",
+    "name": "Nudo de ocho",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-02",
+    "name": "Silbato de contramaestre",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-03",
+    "name": "Ficha de rancho naval",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-13",
+    "name": "Flotador pesquero de corcho",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-05",
+    "name": "Caja de agujas de vela",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-06",
+    "name": "Pipa de arcilla marinera",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-07",
+    "name": "Cuaderno de mareas",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-08",
+    "name": "Tablilla de señales",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-09",
+    "name": "Trenzado de cabo",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-10",
+    "name": "Rueda de bitácora miniatura",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-11",
+    "name": "Botella de arena oceánica",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CUR-12",
+    "name": "Maqueta de barco en botella",
+    "cabinet": "Oceanografía",
+    "category": "Curiosidades de marineros",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CUR-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CUR-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CUR-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CUR-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-01",
+    "name": "Coral cerebro",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-02",
+    "name": "Coral estrella",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-03",
+    "name": "Coral plato",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-04",
+    "name": "Coral coliflor",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-05",
+    "name": "Coral asta de ciervo",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-06",
+    "name": "Gorgonia abanico",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-07",
+    "name": "Coral azul",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-08",
+    "name": "Coral tubo de órgano",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-09",
+    "name": "Coral bambú",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-10",
+    "name": "Coral negro",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-11",
+    "name": "Coral rojo mediterráneo",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "COR-12",
+    "name": "Coral cuerno de alce",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/COR-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/COR-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/COR-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/COR-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-01",
+    "name": "Penique victoriano",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-02",
+    "name": "Denario romano",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-03",
+    "name": "Dracma griega",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-04",
+    "name": "Moneda cash china",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-05",
+    "name": "Rupia de la India británica",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-06",
+    "name": "Real brasileño antiguo",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-07",
+    "name": "Dólar de plata estadounidense",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-08",
+    "name": "Koban japonés",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-13",
+    "name": "Tálero de María Teresa",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-10",
+    "name": "Soberano británico de oro",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-11",
+    "name": "Ocho reales mexicano",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "NUM-12",
+    "name": "Doblón español de naufragio",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/NUM-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/NUM-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/NUM-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/NUM-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-01",
+    "name": "Lucerna romana",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-02",
+    "name": "Ánfora griega",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-03",
+    "name": "Fíbula nórdica",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-04",
+    "name": "Escarabeo egipcio",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-05",
+    "name": "Sello cilíndrico",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-06",
+    "name": "Figurilla del valle del Indo",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-07",
+    "name": "Cerámica pueblo ancestral",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-08",
+    "name": "Colgante de jade maya",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-09",
+    "name": "Quipu andino",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-10",
+    "name": "Textil nazca",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-11",
+    "name": "Colgante pounamu maorí",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "CIV-12",
+    "name": "Placa del Reino de Benín",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/CIV-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/CIV-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/CIV-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/CIV-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-01",
+    "name": "Khopesh egipcio",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-02",
+    "name": "Casco corintio",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-03",
+    "name": "Gladius romano",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-04",
+    "name": "Armadura samurái",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-05",
+    "name": "Jian chino",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-06",
+    "name": "Keris indonesio",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-07",
+    "name": "Cota de malla europea",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-08",
+    "name": "Espada ropera española",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-09",
+    "name": "Sable otomano ceremonial",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-10",
+    "name": "Escudo zulú",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-11",
+    "name": "Chimalli mexica",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARM-12",
+    "name": "Clava mapuche ceremonial",
+    "cabinet": "Historia",
+    "category": "Armería histórica",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARM-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARM-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARM-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARM-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-01",
+    "name": "Máscara teatral griega",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-02",
+    "name": "Máscara veneciana",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-03",
+    "name": "Kokeshi de madera",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-04",
+    "name": "Netsuke tallado",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-05",
+    "name": "Peso de oro akan",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-06",
+    "name": "Máscara gelede",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-07",
+    "name": "Figurilla olmeca",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-08",
+    "name": "Máscara maya de jade",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-09",
+    "name": "Vasija retrato moche",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-10",
+    "name": "Figurilla inca",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-11",
+    "name": "Hei-tiki maorí",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAS-12",
+    "name": "Máscara de madera baulé",
+    "cabinet": "Historia",
+    "category": "Máscaras y figurillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAS-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAS-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAS-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAS-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-01",
+    "name": "Carta portulana mediterránea",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-02",
+    "name": "Tabula Peutingeriana",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-03",
+    "name": "Mapa de Juan de la Cosa",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-04",
+    "name": "Atlas de Mercator",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-05",
+    "name": "Mapa de Piri Reis",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-06",
+    "name": "Carta de las rutas de la seda",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-07",
+    "name": "Carta de la costa suajili",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-08",
+    "name": "Mapa del valle de México",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-09",
+    "name": "Carta del estrecho de Magallanes",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-10",
+    "name": "Carta de la Gran Barrera",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-11",
+    "name": "Carta del Pacífico de Cook",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAP-12",
+    "name": "Carta de las tierras antárticas",
+    "cabinet": "Historia",
+    "category": "Cartografía antigua",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAP-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAP-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAP-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAP-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-01",
+    "name": "Huevo de codorniz",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-02",
+    "name": "Huevo de frailecillo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-03",
+    "name": "Huevo de halcón peregrino",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-04",
+    "name": "Huevo de flamenco",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-05",
+    "name": "Huevo de ñandú",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-06",
+    "name": "Huevo de emú",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-07",
+    "name": "Huevo de casuario",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-08",
+    "name": "Huevo de kiwi",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-09",
+    "name": "Huevo de colibrí",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-10",
+    "name": "Huevo de avestruz",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-11",
+    "name": "Huevo de pingüino emperador",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HUE-12",
+    "name": "Huevo de ave elefante",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HUE-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HUE-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HUE-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HUE-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-01",
+    "name": "Helecho fósil",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-02",
+    "name": "Ammonite espiral",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-03",
+    "name": "Madera petrificada",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-04",
+    "name": "Trilobite marroquí",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-05",
+    "name": "Diente de tiburón fósil",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-06",
+    "name": "Pez fósil",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-07",
+    "name": "Hoja fósil",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-08",
+    "name": "Cangrejo herradura fósil",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-09",
+    "name": "Huellas de dinosaurio",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-10",
+    "name": "Gastrólito fósil documentado",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-11",
+    "name": "Pluma fósil de Solnhofen",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "FOS-12",
+    "name": "Diente de reptil marino",
+    "cabinet": "Historia natural y exploración",
+    "category": "Fósiles menores",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-01",
+    "name": "Lupa de naturalista",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-02",
+    "name": "Brújula de bolsillo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-03",
+    "name": "Prensa botánica",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-04",
+    "name": "Plomada cartográfica",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-13",
+    "name": "Barómetro de mercurio de gabinete",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-06",
+    "name": "Cuaderno de campo impermeable",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-07",
+    "name": "Teodolito antiguo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-08",
+    "name": "Catalejo de latón",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-09",
+    "name": "Cámara de placas",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-10",
+    "name": "Sextante náutico",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-11",
+    "name": "Microscopio de campo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "INS-12",
+    "name": "Cronómetro marino",
+    "cabinet": "Historia natural y exploración",
+    "category": "Instrumentos de exploración",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/INS-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/INS-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/INS-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/INS-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-01",
+    "name": "Piedra de río perforada",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-02",
+    "name": "Rosa del desierto",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-03",
+    "name": "Concreción esférica",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-04",
+    "name": "Ventifacto",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-05",
+    "name": "Vidrio volcánico iridiscente",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-06",
+    "name": "Geoda de cuarzo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-07",
+    "name": "Piedra solar de calcita",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-08",
+    "name": "Perla barroca",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-09",
+    "name": "Fulgurita",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-10",
+    "name": "Geoda de amatista gigante",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-11",
+    "name": "Vidrio del desierto libio",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MARV-12",
+    "name": "Copo de nieve antártico",
+    "cabinet": "Historia natural y exploración",
+    "category": "Gabinete de maravillas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MARV-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MARV-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MARV-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MARV-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-01",
+    "name": "Hoja de ginkgo",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-02",
+    "name": "Hoja de arce azucarero",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-03",
+    "name": "Hoja de higuera común",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-04",
+    "name": "Fronda de culantrillo",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-05",
+    "name": "Hoja de eucalipto azul",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-06",
+    "name": "Hoja de tulípero",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-07",
+    "name": "Fronda de helecho arborescente plateado",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-08",
+    "name": "Hoja de nenúfar gigante amazónico",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-09",
+    "name": "Hoja de gneto africano",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-10",
+    "name": "Fronda de helecho lengua de ciervo",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-11",
+    "name": "Hoja de planta jarro de Raffles",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HOJ-12",
+    "name": "Hoja de palma viajera",
+    "cabinet": "Botánica",
+    "category": "Hojas y frondas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/HOJ-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HOJ-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HOJ-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HOJ-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-01",
+    "name": "Basalto columnar de Antrim",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-02",
+    "name": "Granito de Cornualles",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-03",
+    "name": "Pizarra de Gales",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-04",
+    "name": "Pumita del Vesubio",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-05",
+    "name": "Arenisca de las Blue Mountains",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-06",
+    "name": "Travertino de Pamukkale",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-07",
+    "name": "Toba volcánica de Capadocia",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-08",
+    "name": "Conglomerado de los Andes",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-09",
+    "name": "Gneis de Lewis",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-10",
+    "name": "Diatomita lacustre",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-11",
+    "name": "Hierro bandeado de Hamersley",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ROC-13",
+    "name": "Basalto olivínico escocés",
+    "cabinet": "Geología",
+    "category": "Rocas y formaciones geológicas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ROC-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ROC-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ROC-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ROC-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-01",
+    "name": "Sargazo",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-02",
+    "name": "Lechuga de mar",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-03",
+    "name": "Musgo de Irlanda",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-04",
+    "name": "Cochayuyo",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-05",
+    "name": "Alga coralina articulada",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-06",
+    "name": "Kelpo gigante",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-07",
+    "name": "Wakame",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-08",
+    "name": "Alga uva del Indo-Pacífico",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-09",
+    "name": "Dulse atlántico",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-10",
+    "name": "Alga abanico de pavo",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-11",
+    "name": "Verde de cordón",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ALG-12",
+    "name": "Alga arcoíris australiana",
+    "cabinet": "Oceanografía",
+    "category": "Algas del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ALG-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ALG-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ALG-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ALG-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-01",
+    "name": "Medalla histórica de Waterloo",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-02",
+    "name": "Medalla de campaña de Seringapatam",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-03",
+    "name": "Insignia del Águila Blanca",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-04",
+    "name": "Cruz de la Legión de Honor",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-05",
+    "name": "Medalla de la Reconquista de Buenos Aires",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-06",
+    "name": "Medalla de proclamación de Pedro I",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-07",
+    "name": "Cruz de la Orden de Guadalupe",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-13",
+    "name": "Insignia civil de la Orden de Leopoldo",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-09",
+    "name": "Cruz de San Jorge rusa",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-10",
+    "name": "Medalla de oro de la Real Sociedad Geográfica",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-11",
+    "name": "Medalla de Trafalgar de Boulton",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MED-12",
+    "name": "Orden del Sol del Perú",
+    "cabinet": "Historia",
+    "category": "Medallas y condecoraciones históricas",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/MED-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MED-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MED-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MED-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-01",
+    "name": "Nido de ave tejedora",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-02",
+    "name": "Nido de hornero",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-03",
+    "name": "Nido de golondrina común",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-04",
+    "name": "Celda de avispa alfarera",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-05",
+    "name": "Panal de abeja gigante",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-06",
+    "name": "Dique de castor canadiense",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-07",
+    "name": "Pérgola de ave jardinera satinada",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-08",
+    "name": "Nido de pájaro sastre",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-09",
+    "name": "Termitero catedral",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-10",
+    "name": "Rueda de telaraña de seda dorada",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-11",
+    "name": "Refugio de tricóptero de grava",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "ARQ-12",
+    "name": "Madriguera de perrito de la pradera",
+    "cabinet": "Historia natural y exploración",
+    "category": "Arquitecturas animales",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/ARQ-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/ARQ-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/ARQ-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/ARQ-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-13",
+    "name": "Copihue",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-13/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-13/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-13/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-13/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-14",
+    "name": "Orquídea vainilla",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/com-vainilla-mexicana/inventario-64.webp",
+      "128": "objetos-cientificos/arte/com-vainilla-mexicana/inventario-128.webp",
+      "256": "objetos-cientificos/arte/com-vainilla-mexicana/clasica-256.webp",
+      "512": "objetos-cientificos/arte/com-vainilla-mexicana/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-15",
+    "name": "Pasiflora azul",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-15/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-15/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-15/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-15/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-16",
+    "name": "Ave del paraíso",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-16/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-16/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-16/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-16/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-17",
+    "name": "Camelia japonesa",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-17/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-17/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-17/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-17/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-18",
+    "name": "Frangipani",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-18/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-18/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-18/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-18/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-19",
+    "name": "Rododendro himalayo",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-19/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-19/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-19/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-19/clasica-512.webp"
+    }
+  },
+  {
+    "id": "BOT-20",
+    "name": "Magnolia americana",
+    "cabinet": "Botánica",
+    "category": "Herbario del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/BOT-20/inventario-64.webp",
+      "128": "objetos-cientificos/arte/BOT-20/inventario-128.webp",
+      "256": "objetos-cientificos/arte/BOT-20/clasica-256.webp",
+      "512": "objetos-cientificos/arte/BOT-20/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-01",
+    "name": "Caoba cubana",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-02",
+    "name": "Caoba hondureña",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-03",
+    "name": "Ébano africano",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-04",
+    "name": "Ébano de Ceilán",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-05",
+    "name": "Palo de rosa brasileño",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-06",
+    "name": "Palo de rosa indio",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-07",
+    "name": "Teca birmana",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-08",
+    "name": "Nogal europeo",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-09",
+    "name": "Cocobolo",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-10",
+    "name": "Sándalo rojo",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-11",
+    "name": "Guayacán",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "MAD-12",
+    "name": "Roble de turbera",
+    "cabinet": "Botánica",
+    "category": "Maderas del mundo",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/MAD-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/MAD-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/MAD-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/MAD-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-01",
+    "name": "Helecho macho",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-01/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-01/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-01/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-01/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-02",
+    "name": "Helecho hembra",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-02/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-02/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-02/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-02/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-03",
+    "name": "Helecho real",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-03/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-03/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-03/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-03/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-04",
+    "name": "Helecho águila",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-04/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-04/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-04/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-04/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-05",
+    "name": "Helecho nido de ave",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-06",
+    "name": "Helecho cuerno de alce",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-06/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-06/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-06/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-06/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-07",
+    "name": "Helecho espada",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-07/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-07/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-07/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-07/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-08",
+    "name": "Helecho botón",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-08/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-08/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-08/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-08/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-09",
+    "name": "Helecho película",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-09/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-09/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-09/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-09/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-10",
+    "name": "Azolla",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-10/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-10/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-10/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-10/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-11",
+    "name": "Salvinia",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-11/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-11/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-11/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-11/clasica-512.webp"
+    }
+  },
+  {
+    "id": "HEL-12",
+    "name": "Mamaku",
+    "cabinet": "Botánica",
+    "category": "Pteridomanía",
+    "family": "Botánica",
+    "origin": "ART-OBJ-13",
+    "paths": {
+      "64": "objetos-cientificos/arte/HEL-12/inventario-64.webp",
+      "128": "objetos-cientificos/arte/HEL-12/inventario-128.webp",
+      "256": "objetos-cientificos/arte/HEL-12/clasica-256.webp",
+      "512": "objetos-cientificos/arte/HEL-12/clasica-512.webp"
+    }
+  },
+  {
+    "id": "GEM-13",
+    "name": "Diamante",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-14",
+    "name": "Turmalina bicolor",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-15",
+    "name": "Espinela roja",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-16",
+    "name": "Ojo de gato",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-17",
+    "name": "Citrino",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-18",
+    "name": "Circón miel",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-19",
+    "name": "Ópalo de fuego",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "GEM-20",
+    "name": "Piedra lunar",
+    "cabinet": "Geología",
+    "category": "Piedras preciosas",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-01",
+    "name": "Platino nativo",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-02",
+    "name": "Paladio",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-03",
+    "name": "Rodio",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-04",
+    "name": "Iridio",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-05",
+    "name": "Osmio",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-06",
+    "name": "Oro nativo",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-07",
+    "name": "Plata nativa",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-08",
+    "name": "Bismuto",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-09",
+    "name": "Wolframita",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-10",
+    "name": "Vanadinita",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-11",
+    "name": "Columbita",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MTR-12",
+    "name": "Tantalita",
+    "cabinet": "Geología",
+    "category": "Metales raros",
+    "family": "Geología",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-13",
+    "name": "Concha arpa",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-14",
+    "name": "Mitra episcopal",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-15",
+    "name": "Caracola araña",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-16",
+    "name": "Caracol oliva",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-17",
+    "name": "Cauri moneda",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-18",
+    "name": "Caracola melón",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-19",
+    "name": "Peine de Venus",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CON-20",
+    "name": "Tellina violeta",
+    "cabinet": "Oceanografía",
+    "category": "Conchas de los océanos",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-13",
+    "name": "Coral hongo",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-14",
+    "name": "Coral burbuja",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-15",
+    "name": "Coral sol",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-16",
+    "name": "Coral látigo",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-17",
+    "name": "Coral de encaje",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-18",
+    "name": "Coral hoja",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-19",
+    "name": "Coral de cuero",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "COR-20",
+    "name": "Coral hidnóforo",
+    "cabinet": "Oceanografía",
+    "category": "Corales del mundo",
+    "family": "Oceanografía",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-09",
+    "name": "Estátero lidio",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-14",
+    "name": "Sólido bizantino",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-15",
+    "name": "Dinar abasí",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-16",
+    "name": "Ducado veneciano",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-17",
+    "name": "Placa sueca",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-18",
+    "name": "Rublo imperial",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-19",
+    "name": "Akçe otomano",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "NUM-20",
+    "name": "Macuquina de Potosí",
+    "cabinet": "Historia",
+    "category": "Numismática",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-13",
+    "name": "Tablilla sumeria",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-14",
+    "name": "Vasija etrusca",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-15",
+    "name": "Amuleto fenicio",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-16",
+    "name": "Sello aqueménida",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-17",
+    "name": "Cerámica Jōmon",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-18",
+    "name": "Tapa polinesia",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-19",
+    "name": "Disco misisipiano",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "CIV-20",
+    "name": "Relieve jemer",
+    "cabinet": "Historia",
+    "category": "Objetos de civilizaciones",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-01",
+    "name": "Gran Pirámide",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-02",
+    "name": "Jardines de Babilonia",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-03",
+    "name": "Zeus de Olimpia",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-04",
+    "name": "Templo de Artemisa",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-05",
+    "name": "Mausoleo de Halicarnaso",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-06",
+    "name": "Coloso de Rodas",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "MUN-07",
+    "name": "Faro de Alejandría",
+    "cabinet": "Historia",
+    "category": "Siete maravillas antiguas",
+    "family": "Historia",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-13",
+    "name": "Cisne cantor",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-14",
+    "name": "Alcatraz atlántico",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-15",
+    "name": "Arao común",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-16",
+    "name": "Albatros viajero",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-17",
+    "name": "Tinamú",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-18",
+    "name": "Ave tejedora",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-19",
+    "name": "Cálao rinoceronte",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "HUE-20",
+    "name": "Guacamayo azul",
+    "cabinet": "Historia natural y exploración",
+    "category": "Huevos de aves",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-01",
+    "name": "Westminster",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-02",
+    "name": "Notre-Dame",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-03",
+    "name": "Coliseo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-04",
+    "name": "Acrópolis",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-05",
+    "name": "Alhambra",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-06",
+    "name": "San Basilio",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-07",
+    "name": "Pirámides de Guiza",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-08",
+    "name": "Karnak",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-09",
+    "name": "Cabo de Buena Esperanza",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-10",
+    "name": "Santa Sofía",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-11",
+    "name": "Petra",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-12",
+    "name": "Taj Mahal",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-13",
+    "name": "Gran Muralla",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-14",
+    "name": "Ciudad Prohibida",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-15",
+    "name": "Monte Fuji",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-16",
+    "name": "Angkor Wat",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-17",
+    "name": "Teotihuacán",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-18",
+    "name": "Chichén Itzá",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-19",
+    "name": "Cusco histórico",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "DAG-20",
+    "name": "Moáis de Rapa Nui",
+    "cabinet": "Historia natural y exploración",
+    "category": "Imágenes daguerrotipadas",
+    "family": "Daguerrotipos",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-01",
+    "name": "Bezoar",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-02",
+    "name": "Alicornio",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-03",
+    "name": "Ámbar gris",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-04",
+    "name": "Piedra de sapo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-05",
+    "name": "Piedra de serpiente",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-06",
+    "name": "Aetita",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-07",
+    "name": "Lengua de dragón",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": null,
+    "origin": "OBJ-11",
+    "paths": {
+      "64": "objetos-cientificos/arte/FOS-05/inventario-64.webp",
+      "128": "objetos-cientificos/arte/FOS-05/inventario-128.webp",
+      "256": "objetos-cientificos/arte/FOS-05/clasica-256.webp",
+      "512": "objetos-cientificos/arte/FOS-05/clasica-512.webp"
+    }
+  },
+  {
+    "id": "RAR-08",
+    "name": "Huevo de sirena",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-09",
+    "name": "Almizcle",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-10",
+    "name": "Basilisco",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-11",
+    "name": "Sangre de dragón",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  },
+  {
+    "id": "RAR-12",
+    "name": "Colmillo apócrifo",
+    "cabinet": "Historia natural y exploración",
+    "category": "Rarezas y mitos",
+    "family": "Historia natural y rarezas",
+    "origin": "",
+    "paths": null
+  }
+]

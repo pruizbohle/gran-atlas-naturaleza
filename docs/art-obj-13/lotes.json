@@ -1,0 +1,8 @@
+[
+  {"name":"Botánica","collections":["Herbario del mundo","Maderas del mundo","Pteridomanía"]},
+  {"name":"Geología","collections":["Piedras preciosas","Metales raros"]},
+  {"name":"Oceanografía","collections":["Conchas de los océanos","Corales del mundo"]},
+  {"name":"Historia","collections":["Numismática","Objetos de civilizaciones","Siete maravillas antiguas"]},
+  {"name":"Daguerrotipos","collections":["Imágenes daguerrotipadas"]},
+  {"name":"Historia natural y rarezas","collections":["Huevos de aves","Rarezas y mitos"]}
+]
