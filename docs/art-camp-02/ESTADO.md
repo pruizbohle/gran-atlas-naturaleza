@@ -61,3 +61,9 @@ Los recortes y escalas se reproducen con `python scripts/prepare-art-camp-02.py 
 - Revisión beta `gran-atlas-v5.6.9-naturalist-521343d9e6e7`. Huellas verificadas para los 42 WebP de instalaciones y el fondo de referencia.
 - 216 pruebas aprobadas entre ART-CAMP-02, ART-OBJ-12, ART-OBJ-13, MEC-02, MEC-09D, actualización PWA y respaldos. Se mantuvieron los archivos de reglas MEC-02 y del sistema de guardado.
 - Despliegue privado de revisión 2 de Sites `appgdep_6b09ca8812e48191998ff566915ed7eb`. [Abrir laboratorio](https://el-gran-atlas-art-camp-02.muddyroadrunner17.chatgpt.site/art-camp-02/)
+
+## Revisión en Chromium local
+
+La revisión local se completó a 390 y 1280 px con los archivos de la beta. Se verificaron las 30 posiciones del catálogo, la ampliación de Caravana V, una combinación mixta, los modos móvil y escritorio, el zoom al 150 % y la restauración a nivel I. El plano y la ficha del Taller III mostraron el mismo WebP después de recargar una partida de prueba. El plano de la beta mantuvo Fogón como única etapa del Campamento central.
+
+El usuario indicó que adjuntará los diez originales. La revisión de encaje del fondo, los muelles y las etapas iniciales de Caravana se realizará con esos archivos.
