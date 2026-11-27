@@ -54,3 +54,10 @@ Integradas `central-camp-1` a `central-camp-5` en el laboratorio. El fogón y lo
 Cobertura de esta revisión. 21 etapas nuevas, 42 WebP, nueve ranuras reservadas y un fondo provisional. Pasaron las 30 selecciones de nivel del catálogo, incluida la combinación mixta, y las comprobaciones de alfa, dimensiones, márgenes, caminos y huellas para las 21 imágenes disponibles. El [plano de revisión](encaje-v.webp) muestra las cinco etapas V disponibles juntas. La conexión real de los muelles al lago y la comparación definitiva de las terrazas requieren los originales. El navegador compartido pidió iniciar sesión en Sites.
 
 Los recortes y escalas se reproducen con `python scripts/prepare-art-camp-02.py <sector>`. Cada maestra y su asignación quedan en `maestras/` y `planchas.json`. Tras actualizar los archivos en el manifiesto, reconstruir la revisión con `node scripts/build-naturalist-release.cjs --write`.
+
+## Verificación de esta revisión
+
+- Commit artístico más reciente `a6fe8fff1165c7df27be48e1e1e4ebd402db02b8`.
+- Revisión beta `gran-atlas-v5.6.9-naturalist-521343d9e6e7`. Huellas verificadas para los 42 WebP de instalaciones y el fondo de referencia.
+- 216 pruebas aprobadas entre ART-CAMP-02, ART-OBJ-12, ART-OBJ-13, MEC-02, MEC-09D, actualización PWA y respaldos. Se mantuvieron los archivos de reglas MEC-02 y del sistema de guardado.
+- Despliegue privado de revisión 2 de Sites `appgdep_6b09ca8812e48191998ff566915ed7eb`. [Abrir laboratorio](https://el-gran-atlas-art-camp-02.muddyroadrunner17.chatgpt.site/art-camp-02/)
