@@ -1,1 +1,58 @@
-{"caravan":[{"id":"caravan-5","file":"caravan-5.png"}]}
+{
+  "caravan": [
+    {
+      "id": "caravan-5",
+      "file": "caravan-5.png"
+    }
+  ],
+  "workshop": [
+    {
+      "id": "workshop-1",
+      "file": "workshop-1-4.png",
+      "box": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "fill": 0.52
+    },
+    {
+      "id": "workshop-2",
+      "file": "workshop-1-4.png",
+      "box": [
+        768,
+        0,
+        1536,
+        512
+      ],
+      "fill": 0.65
+    },
+    {
+      "id": "workshop-3",
+      "file": "workshop-1-4.png",
+      "box": [
+        0,
+        512,
+        744,
+        1024
+      ],
+      "fill": 0.77
+    },
+    {
+      "id": "workshop-4",
+      "file": "workshop-1-4.png",
+      "box": [
+        744,
+        512,
+        1536,
+        1024
+      ],
+      "fill": 0.89
+    },
+    {
+      "id": "workshop-5",
+      "file": "workshop-5.png"
+    }
+  ]
+}

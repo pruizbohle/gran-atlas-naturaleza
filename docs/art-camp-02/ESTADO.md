@@ -21,8 +21,18 @@ La carpeta compartida no contiene adjuntos de esta tanda. Los 48 PNG accesibles 
 
 El catálogo y el mapa leen el mismo manifiesto. Las seis anclas se ajustaron al fondo de la beta. La validación contra el fondo y los originales nuevos requiere esos archivos. El laboratorio local se abre en [http://localhost:8000/art-camp-02/](http://localhost:8000/art-camp-02/) al ejecutar `python -m http.server 8000 --directory www`.
 
-Próximo paso. Producir Caravana V y comprobar su encaje con el fondo provisional. Registrar cada recurso nuevo en el manifiesto y guardar los grupos por instalación.
+Próximo paso. Producir y encajar Excavaciones I–V en las terrazas del lateral derecho.
 
 ## Caravana V
 
 Se generó y conectó `caravan-5` en el catálogo, la composición, el mapa de la beta y la ficha de instalación. La maestra es `maestras/caravan-5.png`, con WebP de 384 y 768 px. La casa mercantil mantiene el carro cubierto y añade un depósito con rampa. El encaje con Caravana IV queda pendiente de recuperar esa lámina.
+
+## Taller I–V
+
+Integradas las cinco etapas `workshop-1` a `workshop-5`. El banco de roble, el frente abierto y la cubierta a dos aguas se mantienen en la evolución. El microscopio caracteriza el nivel III, la bancada óptica el IV y las dos estaciones visibles el V. Dos maestras PNG, diez WebP y dos pruebas de correspondencia y caché aprobadas.
+
+## Publicación inicial
+
+La revisión inicial de Sites incluye el fondo provisional, la matriz y Caravana V. [Laboratorio privado](https://el-gran-atlas-art-camp-02.muddyroadrunner17.chatgpt.site/art-camp-02/)
+
+Commits de arranque `22e31cb5` (laboratorio), `9acb66da` (conexión a beta y caché) y `09dad7b2` (Caravana V).
