@@ -23,7 +23,12 @@
     "excavations-2": "excavations-2",
     "excavations-3": "excavations-3",
     "excavations-4": "excavations-4",
-    "excavations-5": "excavations-5"
+    "excavations-5": "excavations-5",
+    "surveys-1": "surveys-1",
+    "surveys-2": "surveys-2",
+    "surveys-3": "surveys-3",
+    "surveys-4": "surveys-4",
+    "surveys-5": "surveys-5"
   };
   const entries = Object.fromEntries(zones.flatMap(zone => zone.stages.map((name,index) => {
     const level = index + 1;
@@ -35,7 +40,10 @@
   const stage = (sector, level) => entries[sector + '-' + level];
   const src = (entry, resolution = 768) => entry?.file ? url('arte/' + entry.file + '-' + resolution + '.webp') : '';
   const picture = entry => entry?.file ? '<img src="' + src(entry,384) + '" srcset="' + src(entry,768) + ' 2x" alt="" loading="lazy" decoding="async">' : '';
-  const files = Object.values(artwork).flatMap(file => [384,768].map(size=>'art-camp-02/arte/' + file + '-' + size + '.webp'));
+  const files = [
+    new URL(backdrop.file,'https://assets.invalid/art-camp-02/').pathname.slice(1),
+    ...Object.values(artwork).flatMap(file => [384,768].map(size=>'art-camp-02/arte/' + file + '-' + size + '.webp'))
+  ];
   const placement = zone => '--x:' + zone.x + '%;--y:' + zone.y + '%;--w:' + zone.width + '%';
   root.AtlasCampArt = Object.freeze({backdrop, zones, entries, stage, src, picture, files, placement, url});
 })(globalThis);

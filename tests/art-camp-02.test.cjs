@@ -49,3 +49,43 @@ test('ART-CAMP-02 muestra en el plano y la ficha la misma variante del nivel vig
     assert.ok(map.includes('data-cp-shop'));
   }
 });
+
+test('ART-CAMP-02 permite una combinación mixta y restaura cada selector', () => {
+  const vm = require('node:vm');
+  const nodes = new Map();
+  const create = tag => ({
+    tag, children:[], events:{}, dataset:{}, attributes:{}, value:'1', style:{setProperty(key,value){this[key]=value;}},
+    append(...items){this.children.push(...items);},
+    replaceChildren(...items){this.children=items;},
+    add(item){this.children.push(item);},
+    addEventListener(name,fn){this.events[name]=fn;},
+    setAttribute(name,value){this.attributes[name]=value;}
+  });
+  const document = {
+    createElement:create,
+    getElementById(id){
+      if(!nodes.has(id))nodes.set(id,create(id));
+      return nodes.get(id);
+    }
+  };
+  function Option(text,value) { Object.assign(this,{text,value:String(value)}); }
+  vm.runInNewContext(fs.readFileSync('www/art-camp-02/lab.js','utf8'),{document,Option,AtlasCampArt:art});
+  const get = id => document.getElementById(id);
+  assert.equal(get('matrix').children.flatMap(group=>group.children[1].children).length,30);
+  get('map-tab').events.click();
+  assert.equal(get('composition').hidden,false);
+  const values = ['5','2','3','1','4','5'];
+  const selects = get('levels').children.map(label=>label.children[0]);
+  for(const [index,select] of selects.entries()){
+    select.value=values[index];
+    select.events.change();
+  }
+  assert.deepEqual(get('map').children.map(layer=>layer.dataset.ref),art.zones.map((z,i)=>z.id+'-'+values[i]));
+  get('viewport').events.change({target:{value:'mobile'}});
+  assert.equal(get('map').dataset.viewport,'mobile');
+  get('scale').events.input({target:{value:'150'}});
+  assert.equal(get('map').style['--zoom'],1.5);
+  get('reset').events.click();
+  assert.ok(selects.every(select=>select.value==='1'));
+  assert.deepEqual(get('map').children.map(layer=>layer.dataset.ref),art.zones.map(z=>z.id+'-1'));
+});

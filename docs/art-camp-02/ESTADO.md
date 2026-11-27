@@ -11,17 +11,17 @@ La carpeta compartida no contiene adjuntos de esta tanda. Los 48 PNG accesibles 
 | Fondo | Fondo de la nueva tanda | Falta el archivo original |
 | Astillero I–V | `shipyard-1` a `shipyard-5` | Faltan los cinco originales |
 | Caravana I–IV | `caravan-1` a `caravan-4` | Faltan los cuatro originales |
-| Caravana V | `caravan-5` | Por producir |
-| Taller I–V | `workshop-1` a `workshop-5` | Por producir |
-| Excavaciones I–V | `excavations-1` a `excavations-5` | Por producir |
-| Prospecciones I–V | `surveys-1` a `surveys-5` | Por producir |
+| Caravana V | `caravan-5` | Generada e integrada |
+| Taller I–V | `workshop-1` a `workshop-5` | Generadas e integradas · `17182a32` |
+| Excavaciones I–V | `excavations-1` a `excavations-5` | Generadas e integradas · `1f55d33d` |
+| Prospecciones I–V | `surveys-1` a `surveys-5` | Generadas e integradas |
 | Campamento central I–V | `central-camp-1` a `central-camp-5` | Por producir, etapa visual independiente |
 
 ## Laboratorio
 
 El catálogo y el mapa leen el mismo manifiesto. Las seis anclas se ajustaron al fondo de la beta. La validación contra el fondo y los originales nuevos requiere esos archivos. El laboratorio local se abre en [http://localhost:8000/art-camp-02/](http://localhost:8000/art-camp-02/) al ejecutar `python -m http.server 8000 --directory www`.
 
-Próximo paso. Producir y encajar Prospecciones I–V en el claro inferior izquierdo.
+Próximo paso. Producir el Campamento central I–V y comprobar el conjunto.
 
 ## Caravana V
 
@@ -40,3 +40,7 @@ Commits de arranque `22e31cb5` (laboratorio), `9acb66da` (conexión a beta y cac
 ## Excavaciones I–V
 
 Integradas `excavations-1` a `excavations-5`. La fosa conserva sus estratos conforme se añaden escalera, tamiz, andamios, clasificación e instituto. Dos maestras y diez WebP. Se limpió la neblina de alfa de la plancha sin recortar las terrazas visibles. El nivel V se revisó en la composición provisional, donde la terraza pintada sigue visible detrás.
+
+## Prospecciones I–V
+
+Integradas `surveys-1` a `surveys-5` con dos maestras y diez WebP. Los trípodes y la mesa de mapas evolucionan a la estación topográfica y al gabinete mineralógico. Se ajustó el recorte entre las etapas III y IV alrededor de las cuerdas y el alero. Se unificó la posición de las etiquetas del juego con las anclas del laboratorio y se aprobó la prueba de combinación mixta.
