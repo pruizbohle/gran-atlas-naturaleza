@@ -21,7 +21,7 @@ La carpeta compartida no contiene adjuntos de esta tanda. Los 48 PNG accesibles 
 
 El catálogo y el mapa leen el mismo manifiesto. Las seis anclas se ajustaron al fondo de la beta. La validación contra el fondo y los originales nuevos requiere esos archivos. El laboratorio local se abre en [http://localhost:8000/art-camp-02/](http://localhost:8000/art-camp-02/) al ejecutar `python -m http.server 8000 --directory www`.
 
-Próximo paso. Producir y encajar Excavaciones I–V en las terrazas del lateral derecho.
+Próximo paso. Producir y encajar Prospecciones I–V en el claro inferior izquierdo.
 
 ## Caravana V
 
@@ -36,3 +36,7 @@ Integradas las cinco etapas `workshop-1` a `workshop-5`. El banco de roble, el f
 La revisión inicial de Sites incluye el fondo provisional, la matriz y Caravana V. [Laboratorio privado](https://el-gran-atlas-art-camp-02.muddyroadrunner17.chatgpt.site/art-camp-02/)
 
 Commits de arranque `22e31cb5` (laboratorio), `9acb66da` (conexión a beta y caché) y `09dad7b2` (Caravana V).
+
+## Excavaciones I–V
+
+Integradas `excavations-1` a `excavations-5`. La fosa conserva sus estratos conforme se añaden escalera, tamiz, andamios, clasificación e instituto. Dos maestras y diez WebP. Se limpió la neblina de alfa de la plancha sin recortar las terrazas visibles. El nivel V se revisó en la composición provisional, donde la terraza pintada sigue visible detrás.

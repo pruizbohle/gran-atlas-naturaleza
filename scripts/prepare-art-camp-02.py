@@ -4,14 +4,14 @@ import argparse
 import json
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageChops
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs/art-camp-02'
 DESTINATION = ROOT / 'www/art-camp-02/arte'
 
 
-def export(key, source, box, fill):
+def export(key, source, box, fill, alpha_floor, feather):
     with Image.open(source) as original:
         if 'A' not in original.getbands():
             raise ValueError(f'{key}: la maestra requiere alfa')
@@ -19,6 +19,17 @@ def export(key, source, box, fill):
     if box:
         art = art.crop(box)
     alpha = art.getchannel('A')
+    if alpha_floor:
+        alpha = alpha.point(lambda value: max(0, round((value - alpha_floor) * 255 / (255 - alpha_floor))))
+    if feather:
+        width, height = art.size
+        fades = Image.new('L', (width, height))
+        fades.putdata([
+            round(255 * min(1, x / feather, y / feather, (width - 1 - x) / feather, (height - 1 - y) / feather))
+            for y in range(height) for x in range(width)
+        ])
+        alpha = ImageChops.multiply(alpha, fades)
+    art.putalpha(alpha)
     extent = alpha.point(lambda value: 255 if value >= 18 else 0).getbbox()
     if not extent or extent[0] == 0 or extent[1] == 0 or extent[2] == art.width or extent[3] == art.height:
         raise ValueError(f'{key}: revisar recorte o borde de la maestra')
@@ -39,7 +50,8 @@ def main():
     plans = json.loads((DOCS / 'planchas.json').read_text(encoding='utf-8'))
     DESTINATION.mkdir(parents=True, exist_ok=True)
     for plan in plans[sector]:
-        export(plan['id'], DOCS / 'maestras' / plan['file'], plan.get('box'), plan.get('fill', 1))
+        export(plan['id'], DOCS / 'maestras' / plan['file'], plan.get('box'), plan.get('fill', 1),
+               plan.get('alphaFloor', 0), plan.get('feather', 0))
 
 
 if __name__ == '__main__':

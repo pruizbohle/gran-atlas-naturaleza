@@ -54,5 +54,65 @@
       "id": "workshop-5",
       "file": "workshop-5.png"
     }
+  ],
+  "excavations": [
+    {
+      "id": "excavations-1",
+      "file": "excavations-1-4.png",
+      "box": [
+        0,
+        0,
+        750,
+        480
+      ],
+      "fill": 0.52,
+      "alphaFloor": 57,
+      "feather": 28
+    },
+    {
+      "id": "excavations-2",
+      "file": "excavations-1-4.png",
+      "box": [
+        750,
+        0,
+        1536,
+        480
+      ],
+      "fill": 0.65,
+      "alphaFloor": 57,
+      "feather": 28
+    },
+    {
+      "id": "excavations-3",
+      "file": "excavations-1-4.png",
+      "box": [
+        0,
+        480,
+        730,
+        1024
+      ],
+      "fill": 0.77,
+      "alphaFloor": 57,
+      "feather": 28
+    },
+    {
+      "id": "excavations-4",
+      "file": "excavations-1-4.png",
+      "box": [
+        730,
+        480,
+        1536,
+        1024
+      ],
+      "fill": 0.89,
+      "alphaFloor": 57,
+      "feather": 28
+    },
+    {
+      "id": "excavations-5",
+      "file": "excavations-5.png",
+      "alphaFloor": 38,
+      "feather": 20
+    }
   ]
 }

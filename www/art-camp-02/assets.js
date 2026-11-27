@@ -18,7 +18,12 @@
     "workshop-2": "workshop-2",
     "workshop-3": "workshop-3",
     "workshop-4": "workshop-4",
-    "workshop-5": "workshop-5"
+    "workshop-5": "workshop-5",
+    "excavations-1": "excavations-1",
+    "excavations-2": "excavations-2",
+    "excavations-3": "excavations-3",
+    "excavations-4": "excavations-4",
+    "excavations-5": "excavations-5"
   };
   const entries = Object.fromEntries(zones.flatMap(zone => zone.stages.map((name,index) => {
     const level = index + 1;
