@@ -1,0 +1,27 @@
+/* ART-CAMP-02. El catálogo gráfico no forma parte del estado del juego. */
+(function (root) {
+  'use strict';
+  const base = root.document?.currentScript?.src;
+  const url = file => base ? new URL(file, base).href : './art-camp-02/' + file;
+  const backdrop = {file:'../img/campamento-fondo.webp', status:'provisional'};
+  const zones = [
+    {id:'shipyard', name:'Astillero', x:6, y:31, width:39, stages:['Embarcadero','Muelle','Astillero','Dársena','Puerto científico']},
+    {id:'caravan', name:'Caravana', x:59, y:35, width:36, stages:['Carreta','Caravana equipada','Convoy','Estación comercial','Central comercial']},
+    {id:'workshop', name:'Taller', x:10, y:60, width:34, stages:['Mesa de trabajo','Taller artesanal','Taller científico','Taller especializado','Laboratorio']},
+    {id:'excavations', name:'Excavaciones', x:57, y:55, width:39, stages:['Pozo exploratorio','Excavación','Yacimiento','Complejo paleontológico','Instituto paleontológico']},
+    {id:'surveys', name:'Prospecciones', x:10, y:90, width:32, stages:['Reconocimiento','Estación de reconocimiento','Estación topográfica','Centro de estudios','Centro de prospección']},
+    {id:'central-camp', name:'Campamento central', x:56, y:90, width:39, stages:['Fogón','Refugio','Campamento organizado','Base de expediciones','Sede de la expedición']}
+  ];
+  const artwork = {};
+  const entries = Object.fromEntries(zones.flatMap(zone => zone.stages.map((name,index) => {
+    const level = index + 1;
+    const id = zone.id + '-' + level;
+    const awaiting = zone.id === 'shipyard' || (zone.id === 'caravan' && level < 5);
+    return [id, {id, level, name, sector:zone.id, file:artwork[id] || null,
+      status:artwork[id] ? 'Disponible' : awaiting ? 'Falta el original' : 'Pendiente de ilustración'}];
+  })));
+  const stage = (sector, level) => entries[sector + '-' + level];
+  const src = entry => entry?.file ? url('arte/' + entry.file) : '';
+  const placement = zone => '--x:' + zone.x + '%;--y:' + zone.y + '%;--w:' + zone.width + '%';
+  root.AtlasCampArt = Object.freeze({backdrop, zones, entries, stage, src, placement, url});
+})(globalThis);

@@ -1,0 +1,2 @@
+.camp-art-layer{position:absolute;left:var(--x);top:var(--y);width:var(--w);transform:translateY(-100%);pointer-events:none}
+.camp-art-layer img{display:block;width:100%;height:auto}

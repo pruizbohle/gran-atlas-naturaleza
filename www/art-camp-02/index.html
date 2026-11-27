@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Campamento · Laboratorio de El Gran Atlas</title>
+  <link rel="stylesheet" href="lab.css">
+  <script src="assets.js" defer></script>
+  <script src="lab.js" defer></script>
+</head>
+<body>
+  <header><div class="wrap"><p>El Gran Atlas · 1842</p><h1>Campamento evolutivo</h1><p>Laboratorio experimental ART-CAMP-02</p></div></header>
+  <main class="wrap">
+    <nav aria-label="Vistas del laboratorio">
+      <button id="catalog-tab" aria-pressed="true" aria-controls="catalog">Catálogo</button>
+      <button id="map-tab" aria-pressed="false" aria-controls="composition">Campamento completo</button>
+    </nav>
+    <section id="catalog" aria-label="Catálogo por nivel"><p id="coverage"></p><div id="matrix"></div></section>
+    <section id="composition" hidden aria-label="Composición del campamento">
+      <div class="layout">
+        <aside>
+          <div id="levels"></div>
+          <div class="toolbar">
+            <label>Vista<select id="viewport"><option value="auto">Adaptable</option><option value="mobile">Móvil</option><option value="desktop">Escritorio</option></select></label>
+            <label>Acercamiento <output id="scale-value">100 %</output><input id="scale" type="range" min="75" max="200" value="100" step="25"></label>
+            <button id="reset">Restaurar niveles</button>
+          </div>
+          <p id="backdrop-status"></p>
+          <p id="missing" aria-live="polite"></p>
+        </aside>
+        <div id="map-scroll" tabindex="0" aria-label="Plano desplazable">
+          <div id="map" role="group" aria-label="Fondo e instalaciones del campamento"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title"><form method="dialog"><button>Cerrar</button></form><h2 id="detail-title"></h2><div id="detail-image"></div></dialog>
+</body>
+</html>
