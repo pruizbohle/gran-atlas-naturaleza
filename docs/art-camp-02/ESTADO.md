@@ -22,3 +22,7 @@ La carpeta compartida no contiene adjuntos de esta tanda. Los 48 PNG accesibles 
 El catálogo y el mapa leen el mismo manifiesto. Las seis anclas se ajustaron al fondo de la beta. La validación contra el fondo y los originales nuevos requiere esos archivos. El laboratorio local se abre en [http://localhost:8000/art-camp-02/](http://localhost:8000/art-camp-02/) al ejecutar `python -m http.server 8000 --directory www`.
 
 Próximo paso. Producir Caravana V y comprobar su encaje con el fondo provisional. Registrar cada recurso nuevo en el manifiesto y guardar los grupos por instalación.
+
+## Caravana V
+
+Se generó y conectó `caravan-5` en el catálogo, la composición, el mapa de la beta y la ficha de instalación. La maestra es `maestras/caravan-5.png`, con WebP de 384 y 768 px. La casa mercantil mantiene el carro cubierto y añade un depósito con rampa. El encaje con Caravana IV queda pendiente de recuperar esa lámina.

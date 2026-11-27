@@ -12,7 +12,7 @@
     {id:'surveys', name:'Prospecciones', x:10, y:90, width:32, stages:['Reconocimiento','Estación de reconocimiento','Estación topográfica','Centro de estudios','Centro de prospección']},
     {id:'central-camp', name:'Campamento central', x:56, y:90, width:39, stages:['Fogón','Refugio','Campamento organizado','Base de expediciones','Sede de la expedición']}
   ];
-  const artwork = {};
+  const artwork = {"caravan-5":"caravan-5"};
   const entries = Object.fromEntries(zones.flatMap(zone => zone.stages.map((name,index) => {
     const level = index + 1;
     const id = zone.id + '-' + level;
