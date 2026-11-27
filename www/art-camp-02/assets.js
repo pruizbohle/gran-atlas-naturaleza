@@ -10,7 +10,7 @@
     {id:'workshop', name:'Taller', x:10, y:60, width:34, stages:['Mesa de trabajo','Taller artesanal','Taller científico','Taller especializado','Laboratorio']},
     {id:'excavations', name:'Excavaciones', x:57, y:55, width:39, stages:['Pozo exploratorio','Excavación','Yacimiento','Complejo paleontológico','Instituto paleontológico']},
     {id:'surveys', name:'Prospecciones', x:10, y:90, width:32, stages:['Reconocimiento','Estación de reconocimiento','Estación topográfica','Centro de estudios','Centro de prospección']},
-    {id:'central-camp', name:'Campamento central', x:56, y:90, width:39, stages:['Fogón','Refugio','Campamento organizado','Base de expediciones','Sede de la expedición']}
+    {id:'central-camp', name:'Campamento central', x:56, y:87, width:39, stages:['Fogón','Refugio','Campamento organizado','Base de expediciones','Sede de la expedición']}
   ];
   const artwork = {
     "caravan-5": "caravan-5",
@@ -28,7 +28,12 @@
     "surveys-2": "surveys-2",
     "surveys-3": "surveys-3",
     "surveys-4": "surveys-4",
-    "surveys-5": "surveys-5"
+    "surveys-5": "surveys-5",
+    "central-camp-1": "central-camp-1",
+    "central-camp-2": "central-camp-2",
+    "central-camp-3": "central-camp-3",
+    "central-camp-4": "central-camp-4",
+    "central-camp-5": "central-camp-5"
   };
   const entries = Object.fromEntries(zones.flatMap(zone => zone.stages.map((name,index) => {
     const level = index + 1;

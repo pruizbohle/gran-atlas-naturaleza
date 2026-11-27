@@ -228,5 +228,55 @@
       "id": "surveys-5",
       "file": "surveys-5.png"
     }
+  ],
+  "central-camp": [
+    {
+      "id": "central-camp-1",
+      "file": "central-camp-1-4.png",
+      "box": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "fill": 0.52
+    },
+    {
+      "id": "central-camp-2",
+      "file": "central-camp-1-4.png",
+      "box": [
+        768,
+        0,
+        1536,
+        512
+      ],
+      "fill": 0.65
+    },
+    {
+      "id": "central-camp-3",
+      "file": "central-camp-1-4.png",
+      "box": [
+        0,
+        512,
+        768,
+        1024
+      ],
+      "fill": 0.77
+    },
+    {
+      "id": "central-camp-4",
+      "file": "central-camp-1-4.png",
+      "box": [
+        768,
+        512,
+        1536,
+        1024
+      ],
+      "fill": 0.89
+    },
+    {
+      "id": "central-camp-5",
+      "file": "central-camp-5.png"
+    }
   ]
 }

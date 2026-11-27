@@ -14,14 +14,14 @@ La carpeta compartida no contiene adjuntos de esta tanda. Los 48 PNG accesibles 
 | Caravana V | `caravan-5` | Generada e integrada |
 | Taller I–V | `workshop-1` a `workshop-5` | Generadas e integradas · `17182a32` |
 | Excavaciones I–V | `excavations-1` a `excavations-5` | Generadas e integradas · `1f55d33d` |
-| Prospecciones I–V | `surveys-1` a `surveys-5` | Generadas e integradas |
-| Campamento central I–V | `central-camp-1` a `central-camp-5` | Por producir, etapa visual independiente |
+| Prospecciones I–V | `surveys-1` a `surveys-5` | Generadas e integradas · `7abd255d` |
+| Campamento central I–V | `central-camp-1` a `central-camp-5` | Generadas e integradas como etapas visuales |
 
 ## Laboratorio
 
 El catálogo y el mapa leen el mismo manifiesto. Las seis anclas se ajustaron al fondo de la beta. La validación contra el fondo y los originales nuevos requiere esos archivos. El laboratorio local se abre en [http://localhost:8000/art-camp-02/](http://localhost:8000/art-camp-02/) al ejecutar `python -m http.server 8000 --directory www`.
 
-Próximo paso. Producir el Campamento central I–V y comprobar el conjunto.
+Próximo paso. Recuperar el fondo de la tanda y los nueve originales reservados. Cotejar sus anclas con las 21 etapas nuevas antes del cierre.
 
 ## Caravana V
 
@@ -44,3 +44,13 @@ Integradas `excavations-1` a `excavations-5`. La fosa conserva sus estratos conf
 ## Prospecciones I–V
 
 Integradas `surveys-1` a `surveys-5` con dos maestras y diez WebP. Los trípodes y la mesa de mapas evolucionan a la estación topográfica y al gabinete mineralógico. Se ajustó el recorte entre las etapas III y IV alrededor de las cuerdas y el alero. Se unificó la posición de las etiquetas del juego con las anclas del laboratorio y se aprobó la prueba de combinación mixta.
+
+## Campamento central I–V
+
+Integradas `central-camp-1` a `central-camp-5` en el laboratorio. El fogón y los troncos pasan del refugio a la sede con mesa cartográfica y biblioteca. El juego muestra Fogón como etapa visual fija. Las cinco opciones del laboratorio viven en memoria. Dos maestras y diez WebP.
+
+## Estado de encaje
+
+Cobertura de esta revisión. 21 etapas nuevas, 42 WebP, nueve ranuras reservadas y un fondo provisional. Pasaron las 30 selecciones de nivel del catálogo, incluida la combinación mixta, y las comprobaciones de alfa, dimensiones, márgenes, caminos y huellas para las 21 imágenes disponibles. El [plano de revisión](encaje-v.webp) muestra las cinco etapas V disponibles juntas. La conexión real de los muelles al lago y la comparación definitiva de las terrazas requieren los originales. El navegador compartido pidió iniciar sesión en Sites.
+
+Los recortes y escalas se reproducen con `python scripts/prepare-art-camp-02.py <sector>`. Cada maestra y su asignación quedan en `maestras/` y `planchas.json`. Tras actualizar los archivos en el manifiesto, reconstruir la revisión con `node scripts/build-naturalist-release.cjs --write`.

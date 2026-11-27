@@ -8516,12 +8516,12 @@ if(globalThis.AtlasMuseumCuration3380){
     const base=modelsBefore602();
     for(const id of Object.keys(base)){
      if(!C.facility(id))continue;
-     const a=activities602(id),parts=[C.ROMAN[C.level(state,id)]+'/V'];
+     const a=activities602(id),artLevel=C.level(state,id),parts=[C.ROMAN[artLevel]+'/V'];
      if(a&&a.running)parts.push(a.running+' en curso');
      if(a&&a.finished)parts.push(a.finished+(a.finished===1?' terminada':' terminadas'));
      if(!a||(!a.running&&!a.finished))parts.push(base[id].label);
      if(C.check(state,id).ok)parts.push('↑ mejora');
-     base[id]={...base[id],artLevel:C.level(state,id),label:parts.join(' · ')};
+     base[id]={...base[id],artLevel,label:parts.join(' · ')};
     }
     return base;
    });

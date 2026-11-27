@@ -81,6 +81,21 @@ test('ART-CAMP-02 permite una combinación mixta y restaura cada selector', () =
     select.events.change();
   }
   assert.deepEqual(get('map').children.map(layer=>layer.dataset.ref),art.zones.map((z,i)=>z.id+'-'+values[i]));
+  const mapLayers = [...get('map').children];
+  for (const [index,select] of selects.entries()) {
+    for (let level = 1; level <= 5; level++) {
+      const before = mapLayers.map(layer=>layer.children[0]);
+      select.value = String(level);
+      select.events.change();
+      assert.deepEqual(get('map').children,mapLayers);
+      const entry = art.stage(art.zones[index].id,level);
+      assert.equal(mapLayers[index].dataset.ref,entry.id);
+      assert.equal(mapLayers[index].children[0].tag,entry.file?'img':'span');
+      for (const [other,layer] of mapLayers.entries()) {
+        if (other !== index) assert.equal(layer.children[0],before[other]);
+      }
+    }
+  }
   get('viewport').events.change({target:{value:'mobile'}});
   assert.equal(get('map').dataset.viewport,'mobile');
   get('scale').events.input({target:{value:'150'}});
