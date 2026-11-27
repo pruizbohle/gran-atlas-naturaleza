@@ -8521,7 +8521,7 @@ if(globalThis.AtlasMuseumCuration3380){
      if(a&&a.finished)parts.push(a.finished+(a.finished===1?' terminada':' terminadas'));
      if(!a||(!a.running&&!a.finished))parts.push(base[id].label);
      if(C.check(state,id).ok)parts.push('↑ mejora');
-     base[id]={...base[id],label:parts.join(' · ')};
+     base[id]={...base[id],artLevel:C.level(state,id),label:parts.join(' · ')};
     }
     return base;
    });

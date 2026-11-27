@@ -1,2 +1,12 @@
 .camp-art-layer{position:absolute;left:var(--x);top:var(--y);width:var(--w);transform:translateY(-100%);pointer-events:none}
 .camp-art-layer img{display:block;width:100%;height:auto}
+.cp3430-plan .camp-art-layer{z-index:1}
+.cp3430-plan .cp3430-facility,.cp3430-plan .cp3430-shop{z-index:2}
+.cp3430-plan .cp3430-illustrated{grid-template-columns:minmax(0,1fr);padding:.25rem .45rem;width:auto;max-width:42%;height:auto;min-height:0;top:auto}
+.cp3430-plan .cp3430-illustrated .cp3430-state{grid-column:1}
+.cp3430-plan .cp3430-caravan.cp3430-illustrated{top:35%}
+.cp3430-plan .cp3430-workshop.cp3430-illustrated{top:60%}
+.cp3430-plan .cp3430-excavations.cp3430-illustrated{top:55%}
+.cp3430-plan .cp3430-surveys.cp3430-illustrated{top:90%}
+.cp3430-plan .cp3430-shipyard.cp3430-illustrated{top:31%}
+.mec02-art img{object-fit:contain}

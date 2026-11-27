@@ -21,7 +21,9 @@
       status:artwork[id] ? 'Disponible' : awaiting ? 'Falta el original' : 'Pendiente de ilustración'}];
   })));
   const stage = (sector, level) => entries[sector + '-' + level];
-  const src = entry => entry?.file ? url('arte/' + entry.file) : '';
+  const src = (entry, resolution = 768) => entry?.file ? url('arte/' + entry.file + '-' + resolution + '.webp') : '';
+  const picture = entry => entry?.file ? '<img src="' + src(entry,384) + '" srcset="' + src(entry,768) + ' 2x" alt="" loading="lazy" decoding="async">' : '';
+  const files = Object.values(artwork).flatMap(file => [384,768].map(size=>'art-camp-02/arte/' + file + '-' + size + '.webp'));
   const placement = zone => '--x:' + zone.x + '%;--y:' + zone.y + '%;--w:' + zone.width + '%';
-  root.AtlasCampArt = Object.freeze({backdrop, zones, entries, stage, src, placement, url});
+  root.AtlasCampArt = Object.freeze({backdrop, zones, entries, stage, src, picture, files, placement, url});
 })(globalThis);
