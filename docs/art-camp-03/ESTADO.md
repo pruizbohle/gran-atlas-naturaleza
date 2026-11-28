@@ -29,3 +29,7 @@ La prueba simultánea de los niveles I, III y V utiliza el fondo anterior como r
 Las seis huellas de nivel V caben simultáneamente. Se comprobaron todos los pares de etapas de sectores distintos y se reservó el corredor central entre el 45 % y el 55 % del ancho. El fondo antiguo deja el Astillero sobre el suelo y ya contiene muelle, excavación y fogón propios. La guía situa la ribera bajo los muelles y reserva claros libres para las piezas superpuestas.
 
 Próximo paso. Generar el nuevo paisaje a partir de estas huellas y cotejar la ribera y los claros con la composición.
+
+## Fondo definitivo
+
+El paisaje se produjo después de la prueba de las seis etapas V. Maestra `maestras/campamento-terreno.png`, 1024 × 1536 px, y WebP `www/img/campamento-art-camp-03.webp`. La curva de la ribera sostiene la capitanía en tierra mientras los pilotes y las embarcaciones ocupan el agua. La franja de tierra natural detrás de Excavaciones reserva espacio para todas las fosas. El camino y los tres cruces conectan los seis claros. [Niveles I, III y V](comparativa-definitiva.webp) · [Plano de nivel V](campamento-v.webp)
