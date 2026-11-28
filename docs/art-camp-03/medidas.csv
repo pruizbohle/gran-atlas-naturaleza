@@ -1,0 +1,31 @@
+id,referencia,px_384,metros
+workshop-1,Altura del banco abierto junto al tornillo,65,0.88
+workshop-2,Altura del banco bajo el torno,43,0.88
+workshop-3,Altura del banco del microscopio,42,0.88
+workshop-4,Altura de la mesa de precisión frontal,47,0.90
+workshop-5,Altura de la puerta de madera,62,2.02
+excavations-1,Altura proyectada de la pala inclinada,53,1.05
+excavations-2,Desnivel vertical de la escalera,65,1.65
+excavations-3,Desnivel del tramo superior de la escalera,43,1.30
+excavations-4,Luz vertical del primer vano del cobertizo,45,2.05
+excavations-5,Altura de la puerta frontal del pabellón,36,2.07
+surveys-1,Altura del trípode hasta la brújula,101,1.43
+surveys-2,Altura del trípode hasta la brújula,104,1.43
+surveys-3,Altura del teodolito sobre trípode,152,1.60
+surveys-4,Altura del trípode hasta el eje del instrumento,134,1.60
+surveys-5,Altura de la puerta de madera de la estación,67,2.02
+central-camp-1,Diámetro mayor del aro de piedra,85,1.23
+central-camp-2,Altura libre del poste delantero bajo la cubierta,89,1.80
+central-camp-3,Altura libre bajo el alero del comedor,72,1.86
+central-camp-4,Altura de la puerta de entrada,61,2.05
+central-camp-5,Altura de la puerta bajo el hastial,60,2.10
+shipyard-1,Eslora proyectada del bote de remos,49,2.80
+shipyard-2,Altura de la barandilla trasera del muelle,18,0.95
+shipyard-3,Luz vertical del vano del cobertizo naval,72,3.25
+shipyard-4,Altura de la puerta del almacén,50,2.05
+shipyard-5,Altura de la puerta de capitanía,42,2.06
+caravan-1,Diámetro vertical de la rueda delantera,49,1.13
+caravan-2,Diámetro vertical de la rueda delantera,58,1.15
+caravan-3,Diámetro vertical de la rueda del carro abierto,40,1.12
+caravan-4,Altura de la puerta del depósito,77,2.05
+caravan-5,Altura de la puerta de la casa mercantil,62,2.05

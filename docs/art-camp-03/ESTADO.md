@@ -9,3 +9,9 @@ Próximo paso. Integrar los nueve recortes, medir las 30 instalaciones y probar 
 ## Nueve etapas recuperadas por producción
 
 Maestras nuevas `shipyard-1-4.png`, `shipyard-5.png` y `caravan-1-4.png`. Las 30 etapas ya tienen archivo. La secuencia naval conserva el acceso por la derecha y amplía muelles, grúa, cobertizo y embarcaciones. La secuencia comercial conserva el carro y añade toldo, convoy y depósito. Dieciocho WebP nuevos, registrados en la PWA. Pasaron las tres pruebas ART-CAMP-02.
+
+## Auditoría de proporciones
+
+Se registró una medida por etapa en [medidas.csv](medidas.csv). Las lecturas se hicieron sobre la variante de 384 px. Las dimensiones físicas son referencias de diseño estimadas a partir de vanos, mobiliario, herramientas, ruedas y aparejos visibles. No se dispone de planos verificados de las edificaciones ilustradas.
+
+Las 21 láminas de ART-CAMP-02 conservan sus píxeles y sus maestras. Las correcciones se aplican al encuadre de cada etapa en la composición. Puertas de unos 2 m, bancos de unos 0,9 m y ruedas de unos 1,1 m ayudan a comprobar que el crecimiento responde a naves, terrazas y equipamiento.
