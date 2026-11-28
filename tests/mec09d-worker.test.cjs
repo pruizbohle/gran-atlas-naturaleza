@@ -40,6 +40,16 @@ test('MEC09D trabajador: instalación autorizada verifica cada archivo del manif
  }
  const lab=await w.get(scope+'art-obj-12/?lote=A','navigate');
  assert.match(await lab.text(),/Biblioteca de ilustraciones/);
+ // ART-CAMP-03: las treinta etapas, sus dos resoluciones y el fondo se entregan desde la caché.
+ require('../www/art-camp-02/assets.js');
+ const campFiles=globalThis.AtlasCampArt.files;
+ assert.equal(campFiles.length,61);
+ for(const file of campFiles){
+  const response=await w.get(scope+file);
+  assert.deepEqual(Buffer.from(await response.arrayBuffer()),fs.readFileSync(path.join(WWW,file)),file);
+ }
+ const campLab=await w.get(scope+'art-camp-02/','navigate');
+ assert.match(await campLab.text(),/ART-CAMP-03/);
  assert.equal(w.requests.length,before);
  // Un script inexistente nunca se convierte en HTML: devuelve error de red.
  const missing=await w.get(scope+'js/no-existe.js');assert.equal(missing.type,'error');

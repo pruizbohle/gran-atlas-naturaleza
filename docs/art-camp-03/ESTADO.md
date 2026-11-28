@@ -4,9 +4,7 @@ Rama `art-camp-03` desde ART-CAMP-02 `d3deb113ea0a0b5b3c546e65cd555f5e5c8751c3`.
 
 La revisión de los adjuntos, la carpeta compartida, la biblioteca y las imágenes generadas en el espacio encontró el encargo ART-CAMP-03 y las maestras entregadas de las fases anteriores. Los originales de Astillero I–V y Caravana I–IV no estaban disponibles. El encargo autoriza ilustrar estos nueve IDs.
 
-Próximo paso. Integrar los nueve recortes, medir las 30 instalaciones y probar la composición completa antes de generar el fondo.
-
-## Nueve etapas recuperadas por producción
+## Nueve etapas nuevas
 
 Maestras nuevas `shipyard-1-4.png`, `shipyard-5.png` y `caravan-1-4.png`. Las 30 etapas ya tienen archivo. La secuencia naval conserva el acceso por la derecha y amplía muelles, grúa, cobertizo y embarcaciones. La secuencia comercial conserva el carro y añade toldo, convoy y depósito. Dieciocho WebP nuevos, registrados en la PWA. Pasaron las tres pruebas ART-CAMP-02.
 
@@ -26,9 +24,7 @@ Se reproducen las medidas y huellas en el manifiesto con `python scripts/build-a
 
 La prueba simultánea de los niveles I, III y V utiliza el fondo anterior como referencia. [Comparativa provisional](composicion-provisional.webp) · [Guía de terreno](guia-terreno.png)
 
-Las seis huellas de nivel V caben simultáneamente. Se comprobaron todos los pares de etapas de sectores distintos y se reservó el corredor central entre el 45 % y el 55 % del ancho. El fondo antiguo deja el Astillero sobre el suelo y ya contiene muelle, excavación y fogón propios. La guía situa la ribera bajo los muelles y reserva claros libres para las piezas superpuestas.
-
-Próximo paso. Generar el nuevo paisaje a partir de estas huellas y cotejar la ribera y los claros con la composición.
+Las seis huellas de nivel V caben simultáneamente. Se comprobaron todos los pares de etapas de sectores distintos y se reservó el corredor central entre el 45 % y el 55 % del ancho. El fondo antiguo deja el Astillero sobre el suelo y ya contiene muelle, excavación y fogón propios. La guía sitúa la ribera bajo los muelles y reserva claros libres para las piezas superpuestas.
 
 ## Fondo definitivo
 
@@ -38,4 +34,24 @@ El paisaje se produjo después de la prueba de las seis etapas V. Maestra `maest
 
 El juego y el laboratorio usan el fondo definitivo y el mismo manifiesto de las 30 etapas. Se conserva la URL de ART-CAMP-02. El catálogo compara el tamaño inicial y homologado con el mismo recorte. La comparativa presenta I, III y V con el mismo encuadre. La vista de encaje marca huellas alfa, anclas, corredor y colisiones. El Campamento central sigue siendo visual y muestra Fogón en el juego.
 
-Próximo paso. Ejecutar la verificación de imágenes, PWA, regresión y navegador sobre esta revisión.
+
+## Verificación y publicación
+
+- Cobertura de 30 de 30 etapas, 60 variantes WebP con alfa y un fondo de 1024 × 1536 px. Se verificaron dimensiones, márgenes y huellas SHA-256. Las 21 imágenes ya integradas conservan sus archivos.
+- Las 375 parejas de niveles de sectores distintos mantienen sus huellas separadas. Las seis etapas V caben dentro del plano y las 30 huellas dejan libre el corredor central.
+- Pasaron 217 pruebas de integración y regresión, incluidas ART-CAMP-02, ART-OBJ-12/13, MEC-02, MEC-09D, PWA y guardado. La prueba del trabajador devolvió los 61 archivos directamente desde la caché con la red desconectada.
+- Chromium local a 390 y 1280 px verificó el catálogo, las comparativas, las marcas de huella, la combinación mixta, el zoom y la restauración. Tras recargar una partida de prueba, el mapa y la ficha del Taller III cargaron el mismo WebP. El juego conservó el Campamento central en su etapa visual I.
+- Versión 3 de Sites con el catálogo de 30 etapas, despliegue `appgdep_6b0acc482da88191949a2423d3257f0c`. Versión 4 con el fondo definitivo y las comparativas, despliegue `appgdep_6b0acd9ef4d48191ba7714f113548d93`. [Laboratorio privado](https://el-gran-atlas-art-camp-02.muddyroadrunner17.chatgpt.site/art-camp-02/)
+
+El HTML, el manifiesto, el fondo y Puerto científico de 768 px publicados coinciden byte por byte con la revisión de la beta.
+
+| Entrega | Commit |
+| --- | --- |
+| Nueve etapas | `7f189f78` |
+| Auditoría | `0a4580b3` |
+| Escala y anclas | `e5b5666a` |
+| Composición provisional | `6647c47a` |
+| Fondo definitivo | `19652422` |
+| Integración y laboratorio | `4e0e1e41` |
+
+La última revisión de continuidad se identifica con `git log -1 --format=%H -- docs/art-camp-03/ESTADO.md`. Próximo paso. Revisar con el usuario el laboratorio publicado y registrar por ID cualquier ajuste artístico solicitado.
