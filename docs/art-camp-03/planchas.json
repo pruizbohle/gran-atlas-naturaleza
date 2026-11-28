@@ -1,0 +1,98 @@
+{
+  "caravan": [
+    {
+      "id": "caravan-1",
+      "file": "caravan-1-4.png",
+      "box": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "fill": 0.52
+    },
+    {
+      "id": "caravan-2",
+      "file": "caravan-1-4.png",
+      "box": [
+        768,
+        0,
+        1536,
+        512
+      ],
+      "fill": 0.65
+    },
+    {
+      "id": "caravan-3",
+      "file": "caravan-1-4.png",
+      "box": [
+        0,
+        512,
+        767,
+        1024
+      ],
+      "fill": 0.77
+    },
+    {
+      "id": "caravan-4",
+      "file": "caravan-1-4.png",
+      "box": [
+        767,
+        512,
+        1536,
+        1024
+      ],
+      "fill": 0.89
+    }
+  ],
+  "shipyard": [
+    {
+      "id": "shipyard-1",
+      "file": "shipyard-1-4.png",
+      "box": [
+        0,
+        0,
+        728,
+        512
+      ],
+      "fill": 0.52
+    },
+    {
+      "id": "shipyard-2",
+      "file": "shipyard-1-4.png",
+      "box": [
+        728,
+        0,
+        1536,
+        512
+      ],
+      "fill": 0.65
+    },
+    {
+      "id": "shipyard-3",
+      "file": "shipyard-1-4.png",
+      "box": [
+        0,
+        512,
+        768,
+        1024
+      ],
+      "fill": 0.77
+    },
+    {
+      "id": "shipyard-4",
+      "file": "shipyard-1-4.png",
+      "box": [
+        768,
+        512,
+        1536,
+        1024
+      ],
+      "fill": 0.89
+    },
+    {
+      "id": "shipyard-5",
+      "file": "shipyard-5.png"
+    }
+  ]
+}

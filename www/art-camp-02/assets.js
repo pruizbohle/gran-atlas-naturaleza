@@ -13,6 +13,15 @@
     {id:'central-camp', name:'Campamento central', x:56, y:87, width:39, stages:['Fogón','Refugio','Campamento organizado','Base de expediciones','Sede de la expedición']}
   ];
   const artwork = {
+    "caravan-1": "caravan-1",
+    "caravan-2": "caravan-2",
+    "caravan-3": "caravan-3",
+    "caravan-4": "caravan-4",
+    "shipyard-1": "shipyard-1",
+    "shipyard-2": "shipyard-2",
+    "shipyard-3": "shipyard-3",
+    "shipyard-4": "shipyard-4",
+    "shipyard-5": "shipyard-5",
     "caravan-5": "caravan-5",
     "workshop-1": "workshop-1",
     "workshop-2": "workshop-2",

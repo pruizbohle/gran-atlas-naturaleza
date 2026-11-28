@@ -50,11 +50,12 @@ def export(key, source, box, polygon, fill, alpha_floor, feather):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('sector')
-    sector = parser.parse_args().sector
-    plans = json.loads((DOCS / 'planchas.json').read_text(encoding='utf-8'))
+    parser.add_argument('--plans', type=Path, default=DOCS / 'planchas.json')
+    args = parser.parse_args()
+    plans = json.loads(args.plans.read_text(encoding='utf-8'))
     DESTINATION.mkdir(parents=True, exist_ok=True)
-    for plan in plans[sector]:
-        export(plan['id'], DOCS / 'maestras' / plan['file'], plan.get('box'), plan.get('polygon'), plan.get('fill', 1),
+    for plan in plans[args.sector]:
+        export(plan['id'], args.plans.parent / 'maestras' / plan['file'], plan.get('box'), plan.get('polygon'), plan.get('fill', 1),
                plan.get('alphaFloor', 0), plan.get('feather', 0))
 
 

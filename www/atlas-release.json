@@ -1,6 +1,6 @@
 {
   "version": "5.6.9",
-  "revision": "gran-atlas-v5.6.9-naturalist-521343d9e6e7",
+  "revision": "gran-atlas-v5.6.9-naturalist-c0b25a34ef93",
   "build": "MEC-09C",
   "artObj12": {"laboratory":"art-obj-12/","workshop":73,"collectibles":302,"experimental":true},
   "label": "5.6.9 Beta — MEC-09C (interfaz móvil, navegación y rendimiento)",
