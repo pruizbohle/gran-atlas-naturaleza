@@ -21,3 +21,11 @@ Las 21 láminas de ART-CAMP-02 conservan sus píxeles y sus maestras. Las correc
 El mapa de 900 px de referencia usa 14,5 px por metro en la fila central y aplica una corrección de profundidad de 0,94, 1 y 1,06 por fila. Cada etapa calcula su tamaño a partir de su propia medida. Las huellas se toman del canal alfa y comparten los puntos de apoyo con el juego. En Astillero el ancla es el punto de llegada del muelle a tierra. Los otros recortes se apoyan en su base central. [Anclas y escala](anclas.json)
 
 Se reproducen las medidas y huellas en el manifiesto con `python scripts/build-art-camp-03.py`.
+
+## Composición provisional
+
+La prueba simultánea de los niveles I, III y V utiliza el fondo anterior como referencia. [Comparativa provisional](composicion-provisional.webp) · [Guía de terreno](guia-terreno.png)
+
+Las seis huellas de nivel V caben simultáneamente. Se comprobaron todos los pares de etapas de sectores distintos y se reservó el corredor central entre el 45 % y el 55 % del ancho. El fondo antiguo deja el Astillero sobre el suelo y ya contiene muelle, excavación y fogón propios. La guía situa la ribera bajo los muelles y reserva claros libres para las piezas superpuestas.
+
+Próximo paso. Generar el nuevo paisaje a partir de estas huellas y cotejar la ribera y los claros con la composición.
