@@ -3,7 +3,7 @@
   'use strict';
   const base = root.document?.currentScript?.src;
   const url = file => base ? new URL(file, base).href : './art-camp-02/' + file;
-  const backdrop = {file:'../img/campamento-fondo.webp', status:'provisional'};
+  const backdrop = {file:'../img/campamento-art-camp-03.webp', status:'definitivo'};
   // Inicio de medidas auditadas.
   const layout = {
     "sceneWidth": 900,

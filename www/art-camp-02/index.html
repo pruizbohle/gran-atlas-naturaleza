@@ -15,6 +15,7 @@
     <nav aria-label="Vistas del laboratorio">
       <button id="catalog-tab" aria-pressed="true" aria-controls="catalog">Catálogo</button>
       <button id="map-tab" aria-pressed="false" aria-controls="composition">Campamento completo</button>
+      <button id="comparison-tab" aria-pressed="false" aria-controls="comparison">Comparativa de escalas</button>
     </nav>
     <section id="catalog" aria-label="Catálogo por nivel"><p id="coverage"></p><div id="matrix"></div></section>
     <section id="composition" hidden aria-label="Composición del campamento">
@@ -25,6 +26,7 @@
             <label>Vista<select id="viewport"><option value="auto">Adaptable</option><option value="mobile">Móvil</option><option value="desktop">Escritorio</option></select></label>
             <label>Acercamiento <output id="scale-value">100 %</output><input id="scale" type="range" min="75" max="200" value="100" step="25"></label>
             <button id="reset">Restaurar niveles</button>
+            <label class="check"><input id="fit" type="checkbox"> Mostrar huellas y anclas</label>
           </div>
           <p id="backdrop-status"></p>
           <p id="missing" aria-live="polite"></p>
@@ -33,6 +35,10 @@
           <div id="map" role="group" aria-label="Fondo e instalaciones del campamento"></div>
         </div>
       </div>
+    </section>
+    <section id="comparison" hidden aria-label="Comparativa de escalas">
+      <p>Las seis instalaciones en los niveles I, III y V con el mismo encuadre.</p>
+      <div id="comparative-scenes"></div>
     </section>
   </main>
   <dialog id="detail" aria-labelledby="detail-title"><form method="dialog"><button>Cerrar</button></form><h2 id="detail-title"></h2><div id="detail-image"></div></dialog>

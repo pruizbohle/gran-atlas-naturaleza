@@ -33,3 +33,9 @@ Próximo paso. Generar el nuevo paisaje a partir de estas huellas y cotejar la r
 ## Fondo definitivo
 
 El paisaje se produjo después de la prueba de las seis etapas V. Maestra `maestras/campamento-terreno.png`, 1024 × 1536 px, y WebP `www/img/campamento-art-camp-03.webp`. La curva de la ribera sostiene la capitanía en tierra mientras los pilotes y las embarcaciones ocupan el agua. La franja de tierra natural detrás de Excavaciones reserva espacio para todas las fosas. El camino y los tres cruces conectan los seis claros. [Niveles I, III y V](comparativa-definitiva.webp) · [Plano de nivel V](campamento-v.webp)
+
+## Integración
+
+El juego y el laboratorio usan el fondo definitivo y el mismo manifiesto de las 30 etapas. Se conserva la URL de ART-CAMP-02. El catálogo compara el tamaño inicial y homologado con el mismo recorte. La comparativa presenta I, III y V con el mismo encuadre. La vista de encaje marca huellas alfa, anclas, corredor y colisiones. El Campamento central sigue siendo visual y muestra Fogón en el juego.
+
+Próximo paso. Ejecutar la verificación de imágenes, PWA, regresión y navegador sobre esta revisión.

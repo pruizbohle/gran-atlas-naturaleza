@@ -104,3 +104,30 @@ test('ART-CAMP-02 permite una combinación mixta y restaura cada selector', () =
   assert.ok(selects.every(select=>select.value==='1'));
   assert.deepEqual(get('map').children.map(layer=>layer.dataset.ref),art.zones.map(z=>z.id+'-1'));
 });
+
+test('ART-CAMP-03 mide y encaja las treinta etapas junto a cualquier nivel de los otros sectores', () => {
+  const stages = Object.values(art.entries);
+  const integrity = require('../www/atlas-integrity.json').files;
+  assert.equal(art.backdrop.status,'definitivo');
+  assert.ok(integrity['img/campamento-art-camp-03.webp']);
+  const boxes = stages.map(entry=>{
+    const zone = art.zones.find(item=>item.id===entry.sector);
+    const measure = art.layout.measures[entry.id];
+    const anchor = art.layout.zones[zone.id];
+    const f = art.frame(zone,entry);
+    assert.ok(entry.file && measure.label && measure.metres>0 && measure.pixels>0,entry.id);
+    const pixelsPerMetre = f.width * art.layout.sceneWidth / 100 * measure.pixels / 384 / measure.metres;
+    assert.ok(Math.abs(pixelsPerMetre-art.layout.pixelsPerMetre*anchor.depth)<.0001,entry.id);
+    const b = art.footprint(zone,entry);
+    assert.ok(b.left>=0 && b.top>=0 && b.right<=100 && b.bottom<=100,entry.id);
+    assert.ok(b.right<=45 || b.left>=55,entry.id+' invade el camino');
+    return {entry,b};
+  });
+  for (const [i,{entry,b}] of boxes.entries()) {
+    for (const other of boxes.slice(i+1)) {
+      if (entry.sector===other.entry.sector) continue;
+      const c=other.b;
+      assert.ok(b.right<=c.left || c.right<=b.left || b.bottom<=c.top || c.bottom<=b.top,entry.id+' vs. '+other.entry.id);
+    }
+  }
+});
