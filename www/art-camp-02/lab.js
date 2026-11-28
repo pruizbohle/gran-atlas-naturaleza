@@ -70,6 +70,7 @@ function refresh() {
       continue;
     }
     layer.dataset.ref = entry.id;
+    layer.style.cssText = art.placement(zone,entry);
     layer.replaceChildren(entry.file ? stageImage(entry) : element('span',zone.name + ' ' + roman[entry.level],'unavailable'));
     if (!entry.file) missing.push(zone.name + ' ' + roman[entry.level]);
   }
